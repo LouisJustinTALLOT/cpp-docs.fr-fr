@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2976'
 title: Erreur du compilateur C2976
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 645b4437bba022e53d018aec18d81b5f108d4d93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281897"
 ---
 # <a name="compiler-error-c2976"></a>Erreur du compilateur C2976
 
@@ -19,7 +20,7 @@ ms.locfileid: "74751792"
 
 Un ou plusieurs arguments réels sont manquants dans un générique ou un modèle. Vérifiez la déclaration du générique ou du modèle pour connaître le nombre de paramètres approprié.
 
-Cette erreur peut être due à l’absence d’arguments C++ template dans les composants de la bibliothèque standard.
+Cette erreur peut être due à l’absence d’arguments template dans les composants de la bibliothèque standard C++.
 
 L’exemple suivant génère l’C2976 :
 

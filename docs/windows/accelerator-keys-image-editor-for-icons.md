@@ -1,23 +1,24 @@
 ---
+description: 'En savoir plus sur : touches accélérateur (éditeur d’images C++ pour les icônes)'
 title: Touches accélérateur (éditeur d’images C++ pour les icônes)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 74062789a7fc6ff6b3b15364d1379861f7bea1c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280285"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Touches accélérateur (éditeur d’images C++ pour les icônes)
 
-Vous trouverez ci-dessous les touches accélérateur pour les commandes de l’éditeur d’images qui sont liées aux clés par défaut. Pour modifier les touches d’accès rapide, accédez à **Outils**de menu  >  **options** et choisissez **clavier** dans le dossier **environnement** . Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Vous trouverez ci-dessous les touches accélérateur pour les commandes de l’éditeur d’images qui sont liées aux clés par défaut. Pour modifier les touches d’accès rapide, accédez à **Outils** de menu  >  **options** et choisissez **clavier** dans le dossier **environnement** . Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, accédez à **Outils**de menu  >  **Importer et exporter les paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, accédez à **Outils** de menu  >  **Importer et exporter les paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Commande|Keys|Description|
 |-------------|----------|-----------------|
@@ -53,15 +54,15 @@ Vous trouverez ci-dessous les touches accélérateur pour les commandes de l’�
 |Image.ShowGrid|**CTRL**  +  **ALT**  +  **S**|Active ou désactive l’option **grille** de pixels dans la [boîte de dialogue Paramètres](./image-editor-for-icons.md)de la grille.|
 |Image.ShowTileGrid|**CTRL**  +  **MAJ**  +  **ALT**  +  **S**|Active/désactive la grille de mosaïques (active ou désactive l’option **grille mosaïque** dans la [boîte de dialogue Paramètres](./image-editor-for-icons.md)de la grille).|
 |Image.SmallBrush|**CTRL**  +  **.** (point)|Réduit la taille du **pinceau** à un pixel. (Consultez également Image.LargerBrush et Image.SmallerBrush dans ce tableau.)|
-|Image.SmallerBrush|**Ctrl**  +  CTRL **-** levant|Réduit la taille du pinceau d'un pixel dans chaque direction. Pour développer de nouveau la taille du pinceau, consultez Image.LargerBrush dans ce tableau.|
+|Image.SmallerBrush|  +  CTRL **-** levant|Réduit la taille du pinceau d'un pixel dans chaque direction. Pour développer de nouveau la taille du pinceau, consultez Image.LargerBrush dans ce tableau.|
 |Image.TextTool|**CTRL**  +  **T**|Ouvre la [boîte de dialogue outil texte](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**CTRL**  +  **U**|Dessine à l'aide de la sélection actuelle comme pinceau.|
 |Image.ZoomIn|**CTRL**  +  **MAJ**  +  **.** (point)<br /><br /> - ou -<br /><br /> **CTRL**  +  **Flèche haut**|Augmente le facteur d'agrandissement de l'affichage actuel.|
 |Image.ZoomOut|**CTRL**  +  **,** (virgule)<br /><br /> - ou -<br /><br /> **CTRL**  +  **Flèche bas**|Réduit le facteur d'agrandissement de l'affichage actuel.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

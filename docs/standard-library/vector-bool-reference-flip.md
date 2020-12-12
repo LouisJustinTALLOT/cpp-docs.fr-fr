@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Vector &lt; bool &gt; :: Reference :: Flip'
 title: vector&lt;bool&gt;::reference::flip
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fc07fada718e440d6e2ae76c75e7e5b24c6644d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280415"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 
-Inverse la valeur booléenne d’un élément [vector\<bool>](../standard-library/vector-bool-class.md) référencé.
+Inverse la valeur booléenne d’un élément de [vecteur \<bool> ](../standard-library/vector-bool-class.md) référencé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 The vector is:
@@ -64,13 +65,13 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<vector>
+**En-tête :**\<vector>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[vector\<bool>::reference, classe](../standard-library/vector-bool-reference-class.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Vector \<bool> :: Reference, classe](../standard-library/vector-bool-reference-class.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

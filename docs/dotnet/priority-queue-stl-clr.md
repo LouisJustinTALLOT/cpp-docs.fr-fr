@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : priority_queue (STL/CLR)'
 title: priority_queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 666efbc634ae962836fce4fa12ca762ab7085d92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282495"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -83,7 +84,7 @@ Type d'un élément dans la séquence contrôlée.
 *Conteneur*<br/>
 Type du conteneur sous-jacent.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/queue>
 
@@ -131,7 +132,7 @@ Type du conteneur sous-jacent.
 |<xref:System.ICloneable>|Dupliquer un objet.|
 |IPriorityQueue\<Value, Container>|Gérer l’adaptateur de conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container` , qui stocke des `Value` éléments et se développe à la demande. Elle conserve la séquence ordonnée comme un segment de mémoire, avec l’élément dont la priorité est la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en envoyant de nouveaux éléments et en dépilant simplement l’élément dont la priorité est la plus élevée, en implémentant une file d’attente de priorité.
 
@@ -176,7 +177,7 @@ void assign(priority_queue<Value, Container>% right);
 *Oui*<br/>
 Adaptateur de conteneur à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre est assignée `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
 
@@ -590,7 +591,7 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 *Oui*<br/>
 Adaptateur de conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -716,7 +717,7 @@ Prédicat de classement pour la séquence contrôlée.
 *Oui*<br/>
 Objet ou plage à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -728,7 +729,7 @@ Le constructeur :
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-crée un conteneur encapsulé qui est une copie de `right.get_container()` , avec le prédicat de classement `right.value_comp()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de file d’attente, avec le même prédicat de classement.
+crée un conteneur encapsulé qui est une copie de `right.get_container()` , avec le prédicat de classement `right.value_comp()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit* de l’objet de file d’attente, avec le même prédicat de classement.
 
 Le constructeur :
 
@@ -1335,7 +1336,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *valeur*de paramètre de modèle.
+Le type est un synonyme de la *valeur* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 

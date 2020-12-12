@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les déclarations de tableau
 title: Déclarations de tableau
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ab44c1121fde7371591967a9f5860442674abda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279999"
 ---
 # <a name="array-declarations"></a>Déclarations de tableau
 
@@ -33,7 +34,7 @@ Une « déclaration de tableau » nomme le tableau et spécifie le type de ses
 *déclarateur*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator*:/ \* un déclarateur de fonction\*/<br/>
+*direct-declarator*:/ \* un déclarateur de fonction \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constante-expression*<sub>OPT</sub> **]**
 
 Étant donné que *constant-expression* est facultatif, la syntaxe a deux formes :

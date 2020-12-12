@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4584'
 title: Avertissement du compilateur (niveau 1) C4584
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-ms.openlocfilehash: fa736e8dbab775fcd6cdffc467aee1312004fa60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32a6b797f7fb0cf2c1a087999c8172e11686e27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281624"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Avertissement du compilateur (niveau 1) C4584
 

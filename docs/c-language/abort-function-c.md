@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : fonction Abort (C)'
 title: abort, fonction (C)
 ms.date: 10/24/2018
 helpviewer_keywords:
 - abort function
 ms.assetid: caa62d67-ffc4-4481-87a4-0c1e2b0f537c
-ms.openlocfilehash: c4fe22916388eead98ac70fc81a6731b7db95ae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6be911d82a5113ed331635d9cc5ca795cc020475
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280259"
 ---
 # <a name="abort-function-c"></a>abort, fonction (C)
 

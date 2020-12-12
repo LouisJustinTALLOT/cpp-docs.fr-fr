@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Cd2dpathgeometry,'
 title: CD2DPathGeometry, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 91460e3435130530ecc57bdcc09d1c7301333a3b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: eb33d498436c887eb038b3312e2b98ca04d6620b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280532"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry, classe
 
-Un emballage pour ID2D1PathGeometry.
+Wrapper pour ID2D1PathGeometry.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,44 +50,44 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Construit un objet CD2DPathGeometry.|
+|[Cd2dpathgeometry, :: Cd2dpathgeometry,](#cd2dpathgeometry)|Construit un objet Cd2dpathgeometry,.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DPathGeometry::Attach](#attach)|Attache l’interface de ressources existante à l’objet|
-|[CD2DPathGeometry::Créer](#create)|Crée un CD2DPathGeometry. (Overrides [CD2DResource::Créer](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DPathGeometry::Destroy](#destroy)|Détruit un objet CD2DPathGeometry. (Overrides [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
-|[CD2DPathGeometry::Detach](#detach)|Détache l’interface des ressources de l’objet|
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Récupère le nombre de figures dans la géométrie du chemin.|
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Récupère le nombre de segments dans la géométrie du chemin.|
-|[CD2DPathGeometry::Ouvert](#open)|Récupère l’évier de géométrie qui est utilisé pour peupler la géométrie du chemin avec des figures et des segments.|
-|[CD2DPathGeometry::Stream](#stream)|Copie le contenu de la géométrie du chemin à l’ID2D1GeometrySink spécifié.|
+|[Cd2dpathgeometry, :: Attach](#attach)|Attache une interface de ressource existante à l’objet.|
+|[Cd2dpathgeometry, :: Create](#create)|Crée un Cd2dpathgeometry,. (Substitue [CD2DResource, :: Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[Cd2dpathgeometry, ::D estroy](#destroy)|Détruit un objet Cd2dpathgeometry,. (Substitue [CD2DGeometry, ::D estroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[Cd2dpathgeometry, ::D Etach](#detach)|Détache l’interface de ressource de l’objet|
+|[Cd2dpathgeometry, :: GetFigureCount](#getfigurecount)|Récupère le nombre de figures dans la géométrie de tracé.|
+|[Cd2dpathgeometry, :: GetSegmentCount](#getsegmentcount)|Récupère le nombre de segments dans la géométrie de tracé.|
+|[Cd2dpathgeometry, :: Open](#open)|Récupère le récepteur de géométrie utilisé pour remplir la géométrie de tracé avec des figures et des segments.|
+|[Cd2dpathgeometry, :: Stream](#stream)|Copie le contenu de la géométrie du tracé dans le ID2D1GeometrySink spécifié.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Un pointeur à un ID2D1PathGeometry.|
+|[Cd2dpathgeometry, :: m_pPathGeometry](#m_ppathgeometry)|Pointeur vers un ID2D1PathGeometry.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource (en anglais)](../../mfc/reference/cd2dresource-class.md)
+[Cd2dresource,](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DGeometry (en anglais)](../../mfc/reference/cd2dgeometry-class.md)
+[Cd2dgeometry,](../../mfc/reference/cd2dgeometry-class.md)
 
 `CD2DPathGeometry`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxrendertarget.h
+**En-tête :** afxrendertarget. h
 
-## <a name="cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Attach
+## <a name="cd2dpathgeometryattach"></a><a name="attach"></a> Cd2dpathgeometry, :: Attach
 
-Attache l’interface de ressources existante à l’objet
+Attache une interface de ressource existante à l’objet.
 
 ```cpp
 void Attach(ID2D1PathGeometry* pResource);
@@ -94,12 +95,12 @@ void Attach(ID2D1PathGeometry* pResource);
 
 ### <a name="parameters"></a>Paramètres
 
-*pResource (en)*<br/>
-Interface de ressources existante. Impossible d’être NULL
+*Préversion*<br/>
+Interface de ressource existante. Ne peut pas être NULL
 
-## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry
+## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a> Cd2dpathgeometry, :: Cd2dpathgeometry,
 
-Construit un objet CD2DPathGeometry.
+Construit un objet Cd2dpathgeometry,.
 
 ```
 CD2DPathGeometry(
@@ -110,14 +111,14 @@ CD2DPathGeometry(
 ### <a name="parameters"></a>Paramètres
 
 *pParentTarget*<br/>
-Un pointeur à la cible de rendu.
+Pointeur vers la cible de rendu.
 
 *bAutoDestroy*<br/>
 Indique que l’objet sera détruit par le propriétaire (pParentTarget).
 
-## <a name="cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Créer
+## <a name="cd2dpathgeometrycreate"></a><a name="create"></a> Cd2dpathgeometry, :: Create
 
-Crée un CD2DPathGeometry.
+Crée un Cd2dpathgeometry,.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -126,79 +127,79 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Paramètres
 
 *pRenderTarget*<br/>
-Un pointeur à la cible de rendu.
+Pointeur vers la cible de rendu.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la méthode réussit, retourne S_OK. Sinon, il renvoie un code d’erreur HRESULT.
+Si la méthode réussit, retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.
 
-## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy
+## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a> Cd2dpathgeometry, ::D estroy
 
-Détruit un objet CD2DPathGeometry.
+Détruit un objet Cd2dpathgeometry,.
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry::Detach
+## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a> Cd2dpathgeometry, ::D Etach
 
-Détache l’interface des ressources de l’objet
+Détache l’interface de ressource de l’objet
 
 ```
 ID2D1PathGeometry* Detach();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Pointeur à l’interface de ressource détachée.
+Pointeur vers une interface de ressource détachée.
 
-## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount
+## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a> Cd2dpathgeometry, :: GetFigureCount
 
-Récupère le nombre de figures dans la géométrie du chemin.
+Récupère le nombre de figures dans la géométrie de tracé.
 
 ```
 int GetFigureCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne le nombre de chiffres dans la géométrie du chemin.
+Retourne le nombre de figures dans la géométrie du tracé.
 
-## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount
+## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a> Cd2dpathgeometry, :: GetSegmentCount
 
-Récupère le nombre de segments dans la géométrie du chemin.
+Récupère le nombre de segments dans la géométrie de tracé.
 
 ```
 int GetSegmentCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne le nombre de segments dans la géométrie du chemin.
+Retourne le nombre de segments dans la géométrie du tracé.
 
-## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry
+## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a> Cd2dpathgeometry, :: m_pPathGeometry
 
-Un pointeur à un ID2D1PathGeometry.
+Pointeur vers un ID2D1PathGeometry.
 
 ```
 ID2D1PathGeometry* m_pPathGeometry;
 ```
 
-## <a name="cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Ouvert
+## <a name="cd2dpathgeometryopen"></a><a name="open"></a> Cd2dpathgeometry, :: Open
 
-Récupère l’évier de géométrie qui est utilisé pour peupler la géométrie du chemin avec des figures et des segments.
+Récupère le récepteur de géométrie utilisé pour remplir la géométrie de tracé avec des figures et des segments.
 
 ```
 ID2D1GeometrySink* Open();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur à l’ID2D1GeometrySink qui est utilisé pour peupler la géométrie du chemin avec des chiffres et des segments.
+Pointeur vers le ID2D1GeometrySink utilisé pour remplir la géométrie de tracé avec des figures et des segments.
 
-## <a name="cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Stream
+## <a name="cd2dpathgeometrystream"></a><a name="stream"></a> Cd2dpathgeometry, :: Stream
 
-Copie le contenu de la géométrie du chemin à l’ID2D1GeometrySink spécifié.
+Copie le contenu de la géométrie du tracé dans le ID2D1GeometrySink spécifié.
 
 ```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
@@ -206,12 +207,12 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 ### <a name="parameters"></a>Paramètres
 
-*géométrieSink*<br/>
-L’évier auquel le contenu de la géométrie du chemin est copié. Modifier cet évier ne modifie pas le contenu de cette géométrie de chemin.
+*geometrySink*<br/>
+Récepteur dans lequel le contenu de la géométrie du chemin d’accès est copié. La modification de ce récepteur ne modifie pas le contenu de cette géométrie de tracé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la méthode réussit, elle revient VRAI. Sinon, il retourne FALSE.
+Si la méthode est réussie, elle retourne TRUE. Sinon, elle retourne FALSe.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : concepts de base de l’utilisation des exceptions managées'
 title: Concepts de base dans l'utilisation des exceptions managées
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 4eeec5db00ceca5429f4a3a270e1b249a8955249
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1c6e405de2a82e32375092007dcc1f0fd8f654c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282599"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concepts de base dans l'utilisation des exceptions managées
 
@@ -35,7 +36,7 @@ L’interception des types d’exception dérivés d’une interface n’est pas
 
 Pour plus d’informations sur les différences de gestion des exceptions dans les applications managées et non managées, consultez [différences dans le comportement de gestion des exceptions sous extensions managées pour C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
 
-## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Levée d’exceptions sous/CLR
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Levée d’exceptions sous/CLR
 
 L’expression Throw C++ est étendue pour lever un handle vers un type CLR. L’exemple suivant crée un type d’exception personnalisé, puis lève une instance de ce type :
 
@@ -68,7 +69,7 @@ void GlobalFunction() {
 }
 ```
 
-## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Blocs try/catch pour les extensions CLR
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Blocs try/catch pour les extensions CLR
 
 La même **`try`** / **`catch`** structure de bloc peut être utilisée pour intercepter les exceptions CLR et natives :
 

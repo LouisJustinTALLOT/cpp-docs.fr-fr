@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : &lt; ostream &gt;'
 title: '&lt;ostream&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb99b713db4c29fe42b45858588181536aec4f5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280519"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt;, fonctions
 

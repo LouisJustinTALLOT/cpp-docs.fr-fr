@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : éditeur d’accélérateurs (C++)'
 title: Éditeur d’accélérateurs (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: d6324b86a6e30f7169899a535012f4347f92bcf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280298"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
 
@@ -60,31 +61,31 @@ Vous pouvez définir des propriétés d’accélérateur dans le [fenêtre Propr
 
 La propriété **ID** fait référence à chaque entrée de table d’accélérateurs dans le code de programme. Cette entrée est la valeur de commande que le programme reçoit lorsqu’un utilisateur appuie sur la touche accélérateur ou sur une combinaison de touches. Pour rendre un accélérateur identique à un élément de menu, définissez l' **ID** de la même manière, tant que l' **ID** de la table d’accélérateurs est identique à l' **ID** de la ressource de menu.
 
-Chaque **ID** d’accélérateur a trois propriétés : **modifier**, **clé**et **type**
+Chaque **ID** d’accélérateur a trois propriétés : **modifier**, **clé** et **type**
 
 La propriété de **modificateur** définit des combinaisons de touches de contrôle pour l’accélérateur.
 
 > [!NOTE]
-> Dans la **fenêtre Propriétés** , la propriété **modifier** apparaît sous la forme de trois propriétés **booléennes** distinctes, qui peuvent toutes être contrôlées indépendamment : **ALT**, **CTRL**et **MAJ**.
+> Dans la **fenêtre Propriétés** , la propriété **modifier** apparaît sous la forme de trois propriétés **booléennes** distinctes, qui peuvent toutes être contrôlées indépendamment : **ALT**, **CTRL** et **MAJ**.
 
 Les éléments suivants sont des entrées légales pour la propriété de **modificateur** dans la table d’accélérateurs :
 
-   |Value|Description|
+   |Valeur|Description|
    |-----------|-----------------|
    |**Aucun**|L’utilisateur appuie uniquement sur la valeur de **clé** .<br/><br/>Cette valeur est utilisée le plus efficacement avec les valeurs ASCII/ANSI 001 à 026, qui est interprétée comme ^ A à ^ Z (**Ctrl + A** à **Ctrl + Z**).|
    |**Appuyez**|L’utilisateur doit appuyer sur **ALT** avant la valeur de la **clé** .|
    |**Clavier**|L’utilisateur doit appuyer sur **CTRL** avant la valeur de **clé** , non valide avec le type ASCII.|
-   |**Majuscule**|L’utilisateur doit appuyer sur **MAJ** avant la valeur de **clé** .|
+   |**Shift**|L’utilisateur doit appuyer sur **MAJ** avant la valeur de **clé** .|
    |**Ctrl + Alt**|L’utilisateur doit appuyer sur **CTRL** et **ALT** avant la valeur de **clé** , non valide avec le type ASCII.|
    |**Ctrl + Maj**|L’utilisateur doit appuyer sur **CTRL** et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
    |**Alt + Maj**|L’utilisateur doit appuyer sur **ALT** et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
-   |**Ctrl + Alt + Maj**|L’utilisateur doit appuyer sur **CTRL**, **ALT**et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
+   |**Ctrl + Alt + Maj**|L’utilisateur doit appuyer sur **CTRL**, **ALT** et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
 
 La propriété **Key** définit la clé réelle à utiliser comme accélérateur.
 
 Les éléments suivants sont des entrées légales pour la propriété de **clé** dans la table d’accélérateurs :
 
-   |Value|Description|
+   |Valeur|Description|
    |-----------|-----------------|
    |Entier compris entre 0 et 255 au format décimal.|La valeur détermine si la valeur est traitée comme ASCII ou ANSI comme suit :<br/><br/>   -Les nombres à un chiffre sont toujours interprétés comme la clé correspondante, plutôt que comme valeurs ASCII ou ANSI.<br/>   -Les valeurs comprises entre 1 et 26, quand elles sont précédées de zéros, sont interprétées comme ^ A à ^ Z, ce qui représente la valeur ASCII des lettres de l’alphabet quand vous appuyez sur la touche **CTRL** enfoncée.<br/>   -Les valeurs de 27-32 sont toujours interprétées comme des valeurs décimales à trois chiffres de 027 à 032.<br/>   -Les valeurs comprises entre 033 et 255, qu’elles soient précédées de 0 ou non, sont interprétées comme des valeurs ANSI.|
    |Caractère de clavier unique.|Les lettres A à Z ou les nombres 0-9 peuvent être des valeurs de clé virtuelle ou ASCII. Tout autre caractère est ASCII uniquement.|
@@ -146,7 +147,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 1. Sélectionnez un **ID** dans la liste déroulante de la zone **ID** ou tapez un nouvel *ID* dans la zone **ID** .
 
-1. Tapez la *clé* que vous souhaitez utiliser comme accélérateur, ou cliquez avec le bouton droit et choisissez **clé suivante tapée** pour définir une combinaison de touches, ou accédez à menu **modifier**la  >  **touche suivante tapée**.
+1. Tapez la *clé* que vous souhaitez utiliser comme accélérateur, ou cliquez avec le bouton droit et choisissez **clé suivante tapée** pour définir une combinaison de touches, ou accédez à menu **modifier** la  >  **touche suivante tapée**.
 
 1. Modifiez le **modificateur** et le **type**, si nécessaire, puis appuyez sur **entrée**.
 
