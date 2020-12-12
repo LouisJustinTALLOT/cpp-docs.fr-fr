@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1309'
 title: Erreur irrécupérable C1309
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1309
 ms.assetid: a95363d6-a4f3-45fb-9690-aa7e552093b7
-ms.openlocfilehash: cdea2f855a99282d06c2a1f29a59b63defe1dda8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: db9223ed7b6a1b5daee588141e8af1a81a27b69a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177833"
 ---
 # <a name="fatal-error-c1309"></a>Erreur irrécupérable C1309
 
-Versions incompatibles de C2. DLL et PGODB\<version >. DLL
+Versions incompatibles de C2.DLL et PGODB \<version> . DLL
 
 L’ensemble d’outils que vous utilisez pour générer et utiliser des [optimisations guidées par profil](../../build/profile-guided-optimizations.md) contient des composants qui ne correspondent pas.  Si vous ne pouvez pas résoudre cette erreur manuellement, réinstallez Visual C++.

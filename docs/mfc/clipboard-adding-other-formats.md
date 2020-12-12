@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : presse-papiers : ajout d’autres formats'
 title: "Presse-papiers : ajout d'autres formats"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 52089364a6be423c69a7031cd0d99e1924de1444
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3259660725f324436cc606574eb36499f74e7054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176637"
 ---
 # <a name="clipboard-adding-other-formats"></a>Presse-papiers : ajout d'autres formats
 
-Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [presse-papiers : copier-coller des données](clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge la copie et le collage à partir du presse-papiers. S’il s’agit de tout ce que vous implémentez, les seuls formats placés dans le presse-papiers sont **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**et éventuellement **CF_LINKSOURCE**. La plupart des applications ont besoin d’un plus grand nombre de formats dans le presse-papiers que ces trois.
+Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [presse-papiers : copier-coller des données](clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge la copie et le collage à partir du presse-papiers. S’il s’agit de tout ce que vous implémentez, les seuls formats placés dans le presse-papiers sont **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR** et éventuellement **CF_LINKSOURCE**. La plupart des applications ont besoin d’un plus grand nombre de formats dans le presse-papiers que ces trois.
 
-## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>Inscription des formats personnalisés
+## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a> Inscription des formats personnalisés
 
 Pour créer vos propres formats personnalisés, suivez la même procédure que celle utilisée lors de l’inscription d’un format de presse-papiers personnalisé : transmettez le nom du format à la fonction **RegisterClipboardFormat** et utilisez sa valeur de retour comme ID de format.
 
-## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Placement de formats dans le presse-papiers
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a> Placement de formats dans le presse-papiers
 
 Pour ajouter d’autres formats à ceux placés dans le presse-papiers, vous devez substituer la `OnGetClipboardData` fonction dans la classe que vous avez dérivée de `COleClientItem` ou `COleServerItem` (selon que les données à copier sont natives ou non). Dans cette fonction, vous devez utiliser la procédure suivante.
 
@@ -48,4 +49,4 @@ Cette technique est utilisée dans l’exemple de programme OLE MFC [HIERSVR](..
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers : utilisation du mécanisme de Presse-papiers OLE](clipboard-using-the-ole-clipboard-mechanism.md)
+[Presse-papiers : utilisation du mécanisme de presse-papiers OLE](clipboard-using-the-ole-clipboard-mechanism.md)

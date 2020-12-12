@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : partage de constantes'
 title: Partage de constantes
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 7cda55d16a9b59c30e9fdbce47c565552839e792
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176169"
 ---
 # <a name="sharing-constants"></a>Partage de constantes
 
@@ -37,7 +38,7 @@ Constantes pour les modes de partage de fichiers.
 #include <share.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’argument *shflag* détermine le mode de partage, qui se compose d’une ou plusieurs des constantes manifestes. Elles peuvent être combinées avec les arguments *oflag* (voir [Constantes de fichier](../c-runtime-library/file-constants.md)).
 

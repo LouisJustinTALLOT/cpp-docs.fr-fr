@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l'
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 ms.date: 5/28/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176195"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -124,7 +125,7 @@ Mémoire tampon de chaîne source se terminant par null.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ; erreur dans un autre cas.
 
@@ -140,7 +141,7 @@ Zéro en cas de réussite ; erreur dans un autre cas.
 
 La fonction **strcpy_s** copie le contenu de l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
-**wcscpy_s** est la version à caractères larges de **strcpy_s**et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des chaînes à caractères larges ; celles de **_mbscpy_s** et **_mbscpy_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** , sauf qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** est la version à caractères larges de **strcpy_s** et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des chaînes à caractères larges ; celles de **_mbscpy_s** et **_mbscpy_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** , sauf qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Si *dest* ou *src* est un pointeur null, ou si la taille de la chaîne de destination *dest_size* est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL** lorsque *dest* ou *src* est un pointeur null, et ils retournent **ERANGE** et attribuent à **errno** la valeur **ERANGE** lorsque la chaîne de destination est trop petite.
 

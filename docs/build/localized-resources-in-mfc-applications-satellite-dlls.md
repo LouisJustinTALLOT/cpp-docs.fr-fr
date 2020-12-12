@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ressources localisées dans les applications MFC : dll satellites'
 title: 'Ressources localisées dans des applications MFC : DLL satellites'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4af771999c97af40ffe50399c77e91aec1af992a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176468"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Ressources localisées dans des applications MFC : DLL satellites
 
@@ -39,17 +40,17 @@ MFC tente de charger la DLL de ressource pour chacune des langues suivantes dans
 
 Si MFC ne trouve pas de dll satellites, elle utilise toutes les ressources contenues dans l’application elle-même.
 
-Par exemple, supposons qu’une application LangExample. exe utilise MFC et s’exécute sur un système à plusieurs interfaces utilisateur ; la langue de l’interface utilisateur système est fra [États-Unis] et la langue de l’interface utilisateur actuelle de l’utilisateur est définie sur FRC [canadien français]. MFC recherche les dll suivantes dans l’ordre suivant :
+Par exemple, supposons qu’une application LangExample.exe utilise MFC et s’exécute sur un système à plusieurs interfaces utilisateur ; la langue de l’interface utilisateur système est fra [États-Unis] et la langue de l’interface utilisateur actuelle de l’utilisateur est définie sur FRC [canadien français]. MFC recherche les dll suivantes dans l’ordre suivant :
 
-1. LangExampleFRC. dll (langue de l’interface utilisateur de l’utilisateur).
+1. LangExampleFRC.dll (langue de l’interface utilisateur de l’utilisateur).
 
-1. LangExampleFRA. dll (langue de l’interface utilisateur sans sous-langue, dans cet exemple français (France).
+1. LangExampleFRA.dll (langue de l’interface utilisateur sans la sous-langue, dans cet exemple français (France).
 
-1. LangExampleENU. dll (langue de l’interface utilisateur du système).
+1. LangExampleENU.dll (langue de l’interface utilisateur du système).
 
-1. LangExampleLOC. dll.
+1. LangExampleLOC.dll.
 
-Si aucune de ces dll n’est trouvée, MFC utilise les ressources dans LangExample. exe.
+Si aucune de ces dll n’est trouvée, MFC utilise les ressources de LangExample.exe.
 
 ## <a name="see-also"></a>Voir aussi
 

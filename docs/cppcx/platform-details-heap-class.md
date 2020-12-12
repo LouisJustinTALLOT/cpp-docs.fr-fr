@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme ::D étails :: Heap, classe'
 title: Platform::Details::Heap (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::Heap Class
 ms.assetid: d6dcf9c0-8036-433f-9eb8-c53ec49b0993
-ms.openlocfilehash: 26d576bfb2c079c383f7951a362c69f1cef0f6f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf347ca19092b69604b4e0a9035543374b2f6cb7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175948"
 ---
 # <a name="platformdetailsheap-class"></a>Platform::Details::Heap (classe)
 
@@ -32,12 +33,12 @@ Cette classe est fournie uniquement par souci d’exhaustivité, car elle peut �
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-**Espace de noms :** Platform::Details
+**Espace de noms :** Platform::Details
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

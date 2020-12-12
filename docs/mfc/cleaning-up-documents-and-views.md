@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : nettoyage des documents et des vues'
 title: Nettoyage des documents et vues
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - documents [MFC], cleaning up
 - documents [MFC], closing
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
-ms.openlocfilehash: 8cb6e9337b69daf78286f57898c9badf513c7921
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 73d7dcb94068499998ac05d76dd023b7274c6588
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176651"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Nettoyage des documents et vues
 
@@ -24,4 +25,4 @@ Vous pouvez substituer le destructeur d’une vue pour libérer la mémoire que 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Initialisation et nettoyage des documents et vues](initializing-and-cleaning-up-documents-and-views.md)
+[Initialisation et nettoyage des documents et des vues](initializing-and-cleaning-up-documents-and-views.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge du compilateur pour les traits de type (C++/CLI et C++/CX)'
 title: Prise en charge du compilateur pour les traits de type (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: 16c79e05c6ba6f50a3e6c0d6dd5f48963be40fa8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec9efe1305a844779b4848cbae155d2946488d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176923"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Prise en charge du compilateur pour les traits de type (C++/CLI et C++/CX)
 
@@ -522,7 +523,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
 
 ### <a name="remarks"></a>Notes
 
-Le `__has_finalizer(` *type* `)` trait de type type n’est pas pris en charge, car cette plateforme ne prend pas en charge les finaliseurs.
+Le `__has_finalizer(`  `)` trait de type type n’est pas pris en charge, car cette plateforme ne prend pas en charge les finaliseurs.
 
 ### <a name="requirements"></a>Spécifications
 

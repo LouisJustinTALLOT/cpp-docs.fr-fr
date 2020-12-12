@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les listes d’arguments de variable (...) (C++/CLI)'
 title: Listes d'arguments de variable (...) (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,19 +7,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: fec05a2ce397a0991a4bfd0a5aeb6a8b16d986ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176845"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d'arguments de variable (...) (C++/CLI)
 
 Cet exemple montre comment utiliser la syntaxe `...` dans C++/CLI pour implémenter des fonctions qui ont un nombre variable d’arguments.
 
 > [!NOTE]
-> Cette rubrique concerne C++/CLI. Pour plus d’informations sur l’utilisation de l’ISO `...` Standard C, voir [Ellipsis et modèles variadic](../cpp/ellipses-and-variadic-templates.md) et Ellipsis et arguments par défaut dans les expressions [Postfix](../cpp/postfix-expressions.md).
+> Cette rubrique concerne C++/CLI. Pour plus d’informations sur l’utilisation `...` de dans la norme ISO C++, consultez les points de suspension [et](../cpp/ellipses-and-variadic-templates.md) les arguments variadiques et les points de suspension et les arguments par défaut dans les [expressions suffixées](../cpp/postfix-expressions.md).
 
 Le paramètre qui utilise `...` doit être le dernier paramètre dans la liste de paramètres.
 

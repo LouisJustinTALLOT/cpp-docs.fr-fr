@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de prise en charge des applications et des threads'
 title: Classes de prise en charge des applications et des threads
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 7e64cc50a121f457b7e32e0ed549db2fa9950843
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 89ab6e324a777c272dcbcfabc746c03cb6731589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176741"
 ---
 # <a name="application-and-thread-support-classes"></a>Classes de prise en charge des applications et des threads
 
@@ -24,7 +25,7 @@ Chaque application a un seul et unique objet d’application ; cet objet coordo
 
 La bibliothèque MFC (Microsoft Foundation Class) prend en charge plusieurs threads d’exécution au sein d’une application. Toutes les applications doivent avoir au moins un thread. le thread utilisé par votre `CWinApp` objet est ce thread principal.
 
-`CWinThread`encapsule une partie des fonctionnalités de thread du système d’exploitation. Pour faciliter l’utilisation de plusieurs threads, MFC fournit également des classes d’objet de synchronisation pour fournir une interface C++ aux objets de synchronisation Win32.
+`CWinThread` encapsule une partie des fonctionnalités de thread du système d’exploitation. Pour faciliter l’utilisation de plusieurs threads, MFC fournit également des classes d’objet de synchronisation pour fournir une interface C++ aux objets de synchronisation Win32.
 
 ## <a name="application-and-thread-classes"></a>Classes d’application et de thread
 

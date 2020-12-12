@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3023'
 title: Erreur du compilateur C3023
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3023
 ms.assetid: 89dcce98-3cd7-4931-a50f-87df1d2ebc9b
-ms.openlocfilehash: 546f8bafb4e30919600dfce84d6c84ffa819367e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e9cd560610327afe1dabc2b6899d1e0290779ded
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97174336"
 ---
 # <a name="compiler-error-c3023"></a>Erreur du compilateur C3023
 

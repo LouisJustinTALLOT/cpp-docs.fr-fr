@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2584'
 title: Erreur du compilateur C2584
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7820019c3ec49928f59980adbd9ec814d67c3499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177677"
 ---
 # <a name="compiler-error-c2584"></a>Erreur du compilateur C2584
 
 'Classe' : la base directe’base2 'est inaccessible ; une base de’Base1 'est déjà
 
-`Class` dérive déjà directement à partir de `Base1`. `Base2` dérive également de `Base1`. `Class` ne peut pas dériver de `Base2`, car cela signifierait hériter (indirectement) de `Base1`, ce qui n’est pas légal, car `Base1` est déjà une classe de base directe.
+`Class` dérive déjà directement de `Base1` . `Base2` dérive également de `Base1` . `Class` Impossible de dériver de `Base2` car cela signifierait hériter (indirectement) de `Base1` nouveau, ce qui n’est pas légal, car `Base1` est déjà une classe de base directe.
 
 ## <a name="example"></a>Exemple
 

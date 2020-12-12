@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : définir et utiliser des délégués (C++/CLI)'
 title: 'Comment : définir et utiliser des délégués (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4229af2015db3a9a77722e9e4cc24b80aa05a49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175753"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Comment : définir et utiliser des délégués (C++/CLI)
 
@@ -271,7 +272,7 @@ Voici comment déclarer, instancier et appeler des délégués liés et indépen
 |------------|---------------------|-----------------------|
 |Declare|La signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler par le biais du délégué.|Le premier paramètre de la signature du délégué est le type de **`this`** pour l’objet que vous souhaitez appeler.<br /><br /> Après le premier paramètre, la signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler par le biais du délégué.|
 |Créées|Quand vous instanciez un délégué lié, vous pouvez spécifier une fonction d’instance, ou une fonction membre globale ou statique.<br /><br /> Pour spécifier une fonction d’instance, le premier paramètre est une instance du type dont vous souhaitez appeler la fonction et le deuxième paramètre est l’adresse de la fonction que vous souhaitez appeler.<br /><br /> Si vous souhaitez appeler une fonction membre globale ou statique, il vous suffit de transmettre le nom d’une fonction globale ou le nom de la fonction membre statique.|Quand vous instanciez un délégué indépendant, il vous suffit de transmettre l’adresse de la fonction que vous souhaitez appeler.|
-|Appeler|Quand vous appelez un délégué lié, il vous suffit de passer les paramètres requis par la signature du délégué.|Identique à un délégué lié, mais n’oubliez pas que le premier paramètre doit être une instance de l’objet qui contient la fonction que vous souhaitez appeler.|
+|Call|Quand vous appelez un délégué lié, il vous suffit de passer les paramètres requis par la signature du délégué.|Identique à un délégué lié, mais n’oubliez pas que le premier paramètre doit être une instance de l’objet qui contient la fonction que vous souhaitez appeler.|
 
 Cet exemple montre comment déclarer, instancier et appeler des délégués indépendants :
 

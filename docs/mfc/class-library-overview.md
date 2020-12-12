@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble de la bibliothèque de classes'
 title: Vue d'ensemble de la bibliothèque de classes
 ms.date: 09/17/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: bf30f1b0aa83ef002337b76601f04c7103963441
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 458fc06aa8e13a2f2f7024c11a822496bccefbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176689"
 ---
 # <a name="class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes
 
@@ -25,7 +26,7 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
 - [Classe racine : CObject](root-class-cobject.md)
 
-- [Classes d’architecture des applications MFC](mfc-application-architecture-classes.md)
+- [Classes d’architecture d’application MFC](mfc-application-architecture-classes.md)
 
   - [Classes de prise en charge des applications et des threads](application-and-thread-support-classes.md)
 
@@ -35,13 +36,13 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
   - [Classes d’affichage (architecture)](view-classes-architecture.md)
 
-  - [Classes de fenêtre frame (architecture)](frame-window-classes-architecture.md)
+  - [Classes de fenêtres frames (architecture)](frame-window-classes-architecture.md)
 
   - [Classes de modèle de document](document-template-classes.md)
 
 - [Classes de fenêtre, de boîte de dialogue et de contrôle](window-dialog-and-control-classes.md)
 
-  - [Classes de fenêtre frame (Fenêtres)](frame-window-classes-windows.md)
+  - [Classes de fenêtre frame (Windows)](frame-window-classes-windows.md)
 
   - [Classes d’affichage (Windows)](view-classes-windows.md)
 
@@ -61,7 +62,7 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
 - [Classes de tableau, de liste et de table](array-list-and-map-classes.md)
 
-  - [Classes de modèle pour les tableaux, listes et tables](template-classes-for-arrays-lists-and-maps.md)
+  - [Classes de modèle pour les tableaux, listes et mappages](template-classes-for-arrays-lists-and-maps.md)
 
   - [Classes de tableau prêtes à l’emploi](ready-to-use-array-classes.md)
 
@@ -71,17 +72,17 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
 - [Classes de fichiers et de bases de données](file-and-database-classes.md)
 
-  - [Classes d'E/S de fichier](file-i-o-classes.md)
+  - [Classes d’e/s de fichier](file-i-o-classes.md)
 
   - [Classes DAO](dao-classes.md)
 
   - [Classes ODBC](odbc-classes.md)
 
-  - [Classes OLE DB](ole-db-classes.md)
+  - [Classes OLE DB](ole-db-classes.md)
 
-- [Internet et classes réseau](internet-and-networking-classes.md)
+- [Classes Internet et de mise en réseau](internet-and-networking-classes.md)
 
-  - [Windows Sockets, classes (C++)](windows-sockets-classes.md)
+  - [Classes Windows Sockets](windows-sockets-classes.md)
 
   - [Classes Internet Win32](win32-internet-classes.md)
 
@@ -91,7 +92,7 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
   - [Classes de serveur OLE](ole-server-classes.md)
 
-  - [Classes de glisser-déplacer OLE et de transfert de données](ole-drag-and-drop-and-data-transfer-classes.md)
+  - [Classes de Transfert de données et de glisser-déplacer OLE](ole-drag-and-drop-and-data-transfer-classes.md)
 
   - [Classes de boîtes de dialogue communes OLE](ole-common-dialog-classes.md)
 
@@ -103,7 +104,7 @@ Les classes de la bibliothèque sont présentées ici dans les catégories suiva
 
   - [Classes liées à OLE](ole-related-classes.md)
 
-- [Débogage et classes d’exceptions](debugging-and-exception-classes.md)
+- [Classes de débogage et d’exception](debugging-and-exception-classes.md)
 
   - [Classes de prise en charge du débogage](debugging-support-classes.md)
 
@@ -119,4 +120,4 @@ En plus des classes listées dans cette vue d’ensemble, la bibliothèque MFC c
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC, applications de bureau](mfc-desktop-applications.md)
+[Applications de bureau MFC](mfc-desktop-applications.md)

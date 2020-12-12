@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : extensions de composant pour .NET et UWP'
 title: Extensions de composants pour .NET et UWP
 ms.date: 10/12/2018
 ms.topic: overview
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5ba82479db4229db5f6b962955641f75e3b42e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176910"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensions de composants pour .NET et UWP
 
@@ -37,7 +38,7 @@ Les extensions incluent également des mots clés *contextuels*. Un mot clé est
 
 Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|Non|Déclare une classe.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|Non|Déclare une classe de valeur.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
@@ -51,7 +52,7 @@ Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
 Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le **`new`** mot clé ne soit pas une extension de C++, il est répertorié ici, car il peut être utilisé dans un contexte supplémentaire. Certains spécificateurs sont également valides pour la programmation native. Pour plus d’informations, consultez [Comment : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**abstraction**|Oui|Indique que les fonctions ou classes sont abstraites.|[abstraction](abstract-cpp-component-extensions.md)|
 |**`new`**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -71,7 +72,7 @@ Les mots clés suivants ont été ajoutés pour prendre en charge des types gén
 
 Les mots clés suivants ont été ajoutés aux extensions C++.
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**suivie**|Oui|Indique le comportement de gestion des exceptions par défaut.|[Gestion des exceptions](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Non|Énumère les éléments d’une collection.|[for each, in](../dotnet/for-each-in.md)|
@@ -85,7 +86,7 @@ Les mots clés suivants ont été ajoutés aux extensions C++.
 
 Les constructions de langage suivantes sont implémentées comme modèles, plutôt que comme mots clés. Si vous spécifiez l'option de compilateur `/ZW`, elles sont définies dans l'espace de noms `lang`. Si vous spécifiez l'option de compilateur `/clr`, elles sont définies dans l'espace de noms `cli`.
 
-|Mot clé|Objectif|Référence|
+|Mot clé|Objectif|Informations de référence|
 |-------------|-------------|---------------|
 |**array**|Déclare un tableau.|[Tableaux](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR uniquement) Pointe vers des données dans un type de référence.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +98,7 @@ Les constructions de langage suivantes sont implémentées comme modèles, plut�
 
 Les déclarateurs de type suivants demandent au runtime de gérer automatiquement la durée de vie et la suppression des objets alloués.
 
-|Opérateur|Objectif|Référence|
+|Opérateur|Objectif|Informations de référence|
 |--------------|-------------|---------------|
 |`^`|Déclare un handle à un objet ; autrement dit, un pointeur vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Descripteur to Object, opérateur (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Déclare une référence de suivi ; autrement dit, une référence vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Opérateur de référence de suivi](tracking-reference-operator-cpp-component-extensions.md)|

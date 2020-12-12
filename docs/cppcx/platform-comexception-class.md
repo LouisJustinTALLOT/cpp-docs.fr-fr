@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme :: COMException, classe'
 title: Platform::COMException (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71f6c3fa6d29a884627f2bf5aae07fbc0349ec9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176117"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -55,20 +56,20 @@ La classe COMException a les propriétés ci-dessous.
 
 Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles diffèrent de COMException uniquement au niveau de leur nom, du nom de leur constructeur et de leur valeur HRESULT sous-jacente.
 
-|Name|HRESULT sous-jacent|Description|
+|Nom|HRESULT sous-jacent|Description|
 |----------|------------------------|-----------------|
-|COMException|*hresult défini par l’utilisateur*|Levée quand un HRESULT non reconnu est retourné à partir d'un appel de méthode COM.|
-|AccessDeniedException|E_ACCESSDENIED|Levée quand l'accès à une ressource ou à une fonctionnalité est refusé.|
+|COMException|*hresult défini par l’utilisateur*|Levée lorsqu'un HRESULT non reconnu est retourné d'un appel de méthode COM.|
+|AccessDeniedException|E_ACCESSDENIED|Levée lorsque l'accès est refusé à une ressource ou à une fonctionnalité.|
 |ChangedStateException|E_CHANGED_STATE|Levée lorsque les méthodes d'un itérateur de collection ou d'une vue de collection sont appelées après la modification d'une collection parente, invalidant les résultats de la méthode.|
-|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Levée quand une classe COM n'a pas été inscrite.|
-|DisconnectedException|RPC_E_DISCONNECTED|Levée quand un objet est déconnecté de ses clients.|
-|FailureException|E_FAIL|Levée quand une opération échoue.|
+|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Levée lorsqu'une classe COM n'a pas été inscrite.|
+|DisconnectedException|RPC_E_DISCONNECTED|Levée lorsqu'un objet est déconnecté de ses clients.|
+|FailureException|E_FAIL|Levée lorsqu'une opération échoue.|
 |InvalidArgumentException|E_INVALIDARG|Levée lorsque l'un des arguments fournis à une méthode n'est pas valide.|
-|InvalidCastException|E_NOINTERFACE|Levée quand un type ne peut pas être casté en un autre type.|
+|InvalidCastException|E_NOINTERFACE|Levée lorsqu'un type ne peut pas être casté en un autre type.|
 |NotImplementedException|E_NOTIMPL|Levée si une méthode d'interface n'a pas été implémentée pour une classe.|
 |NullReferenceException|E_POINTER|Levée lors d'une tentative de suppression de la référence à une référence d'objet null.|
-|OperationCanceledException|E_ABORT|Levée quand une opération est abandonnée.|
-|OutOfBoundsException|E_BOUNDS|Levée quand une opération tente d'accéder à des données en dehors de la plage valide.|
+|OperationCanceledException|E_ABORT|Levée lorsqu'une opération est abandonnée.|
+|OutOfBoundsException|E_BOUNDS|Levée lorsqu'une opération tente d'accéder aux données en dehors de la plage valide.|
 |OutOfMemoryException|E_OUTOFMEMORY|Levée en cas de mémoire insuffisante pour terminer l'opération.|
 
 ### <a name="requirements"></a>Spécifications
@@ -79,9 +80,9 @@ Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles di
 
 **Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-## <a name="ctor"></a>COMException :: COMException, constructeur
+## <a name="comexceptioncomexception-constructor"></a><a name="ctor"></a> COMException :: COMException, constructeur
 
 Initialise une nouvelle instance de la classe COMException.
 
@@ -96,7 +97,7 @@ COMException( int hresult )
 *signé*<br/>
 Erreur HRESULT qui est représentée par l'exception.
 
-## <a name="hresult"></a>COMException :: HResult, propriété
+## <a name="comexceptionhresult-property"></a><a name="hresult"></a> COMException :: HResult, propriété
 
 HRESULT qui correspond à l'exception.
 
@@ -115,7 +116,7 @@ Valeur HRESULT qui spécifie l'erreur.
 
 Pour plus d’informations sur la façon d’interpréter la valeur HRESULT, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a>COMException :: message, propriété
+## <a name="comexceptionmessage-property"></a><a name="message"></a> COMException :: message, propriété
 
 Message décrivant l'exception.
 

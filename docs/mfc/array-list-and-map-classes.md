@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les classes de tableau, de liste et de table
 title: Classes de tableaux, listes et mappages
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 9583d8263901c4a135a3ba1f560856b2a8915168
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4b35aa879aa7f73f34c35232356cbc9e049f4ced
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176702"
 ---
 # <a name="array-list-and-map-classes"></a>Classes de tableaux, listes et mappages
 

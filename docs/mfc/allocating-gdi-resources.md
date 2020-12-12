@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : allouer des ressources GDI'
 title: Allocation de ressources GDI
 ms.date: 06/03/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: f0cadac5320a8c6e91eb3b1989d1fb3c0c701eb0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 348f1ca1eadc22dfc8ca6faa6c31bb2f8d81e51e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176806"
 ---
 # <a name="allocating-gdi-resources"></a>Allocation de ressources GDI
 
@@ -31,4 +32,4 @@ Pour libérer ces objets GDI, substituez la fonction membre [OnEndPrinting](refe
 ## <a name="see-also"></a>Voir aussi
 
 [Impression](printing.md)<br/>
-[Impression par défaut](how-default-printing-is-done.md)
+[Comment l’impression par défaut est effectuée](how-default-printing-is-done.md)
