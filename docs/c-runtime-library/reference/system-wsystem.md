@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : système, _wsystem'
 title: system, _wsystem
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3fb2045b932347669a756be1c8bc2f87694bd50d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326237"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -94,7 +95,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem**|**système**|**système**|**_wsystem**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -125,7 +126,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Line one.

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : en-têtes et pieds de page'
 title: En-têtes et pieds de page
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - printing [MFC], headers and footers
 - page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
-ms.openlocfilehash: 7024c57dbe41a579582d409d0536db0ca0bc46d6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8b2b6c3278e512d5e8ceff63b003ed05a99d78bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325903"
 ---
 # <a name="headers-and-footers"></a>En-têtes et pieds de page
 

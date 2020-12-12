@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : fonctions membres du flux de fichier de sortie'
 title: Fonctions membres de flux de fichiers de sortie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2e9bde7bcac8ebccc668c68f222b495b53e0889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327564"
 ---
 # <a name="output-file-stream-member-functions"></a>Fonctions membres de flux de fichiers de sortie
 
@@ -104,14 +105,14 @@ Utilisez les fonctions membres ci-après pour tester les erreurs lors de l'écri
 
 |Fonction|Valeur retournée|
 |--------------|------------------|
-|[incorrecte](basic-ios-class.md#bad)|Retourne **`true`** s’il existe une erreur irrécupérable.|
+|[incorrect](basic-ios-class.md#bad)|Retourne **`true`** s’il existe une erreur irrécupérable.|
 |[incident](basic-ios-class.md#fail)|Retourne **`true`** s’il existe une erreur irrécupérable ou une condition « attendue », telle qu’une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à `clear` avec un argument égal à zéro.|
-|[État](basic-ios-class.md#good)|Retourne **`true`** s’il n’y a aucune condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|
+|[good](basic-ios-class.md#good)|Retourne **`true`** s’il n’y a aucune condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|
 |[EOF](basic-ios-class.md#eof)|Retourne **`true`** à la condition de fin de fichier.|
 |[clear](basic-ios-class.md#clear)|Définit l'état d'erreur interne. Si la fonction est appelée avec les arguments par défaut, elle efface tous les bits d’erreur.|
 |rdstate (de base-iOS-Class. MD # rdstate|Retourne l'état d'erreur actuel.|
 
-Le **!** l’opérateur est surchargé pour exécuter la même fonction que la `fail` fonction. Ainsi, l'expression :
+L’opérateur **!** l’opérateur est surchargé pour exécuter la même fonction que la `fail` fonction. Ainsi, l'expression :
 
 ```cpp
 if(!cout)...

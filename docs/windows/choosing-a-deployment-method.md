@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : choix d’une méthode de déploiement'
 title: Choix d'une méthode de déploiement
 ms.date: 03/14/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 633b76458fdc24ef9ba551d8209c5c99720df37e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1ae942ff189bf9073059a55a195860bd3efc26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327172"
 ---
 # <a name="choosing-a-deployment-method"></a>Choix d'une méthode de déploiement
 
@@ -34,9 +35,9 @@ Les bibliothèques Visual C++ étant installées dans le répertoire %windir%\sy
 
 Dans vos déploiements, vous pouvez redistribuer n'importe quelle version d'une bibliothèque Visual C++ dont la redistribution est autorisée. Voici trois manières de les déployer :
 
-- Le déploiement centralisé, à l’aide de packages redistribuables, qui installe les bibliothèques Visual C++ sous forme de DLL partagées dans %windir%\system32\\. (L’installation dans ce dossier nécessite des droits d’administrateur.) Vous pouvez créer un script ou un programme de configuration qui exécute le paquet redistributable avant d’installer votre application sur l’ordinateur cible. Il existe des packages redistribuables pour les plateformes x86, x64 et ARM (VCRedist_x86.exe, VCRedist_x64.exe, ou VCRedist_arm.exe). Visual Studio inclut ces packages dans %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Vous pouvez également les télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download). (Utilisez la zone de recherche dans le Centre de téléchargement pour rechercher le package redistribuable « Visual C++ Redistributable Package *version et mise à jour de Visual Studio* » qui correspond à votre application. Par exemple, si vous avez utilisé la mise à jour 3 de Visual Studio 2015 pour créer votre application, recherchez la mise à jour 3 du « Paquet Redistributable Visual CMD 2015 ). Pour plus d’informations sur la façon d’utiliser un paquet redistributable, voir [Procédure pas à pas : Déployer une application visuelle CMD en utilisant le paquet redistributable Visual CMMD](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+- Le déploiement centralisé, à l’aide de packages redistribuables, qui installe les bibliothèques Visual C++ sous forme de DLL partagées dans %windir%\system32\\. (L’installation dans ce dossier requiert des droits d’administrateur.) Vous pouvez créer un script ou un programme d’installation qui exécute le package redistribuable avant d’installer votre application sur l’ordinateur cible. Il existe des packages redistribuables pour les plateformes x86, x64 et ARM (VCRedist_x86.exe, VCRedist_x64.exe, ou VCRedist_arm.exe). Visual Studio inclut ces packages dans %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Vous pouvez également les télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download). (Utilisez la zone de recherche dans le Centre de téléchargement pour rechercher le package redistribuable « Visual C++ Redistributable Package *version et mise à jour de Visual Studio* » qui correspond à votre application. Par exemple, si vous avez utilisé Visual Studio 2015 Update 3 pour générer votre application, recherchez « Visual C++ package redistribuable 2015 Update 3 ».) Pour plus d’informations sur l’utilisation d’un package redistribuable, consultez [procédure pas à pas : déploiement d’une Application Visual C++ à l’aide du package redistribuable Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
-- Le déploiement centralisé à l’aide des modules de fusion, chacun installant une bibliothèque Visual C++ particulière sous forme de DLL partagée dans %windir%\system32\\. (L’installation à ce dossier nécessite des droits d’administrateur.) Les modules de fusion font partie du fichier d’installateur .msi pour votre application. Les modules de fusion redistribuables Visual C++ sont inclus dans Visual Studio, dans \Program Files (x86)\Common Files\Merge Modules\\. Pour plus d’informations, consultez [Redistribution à l’aide de modules de fusion](redistributing-components-by-using-merge-modules.md).
+- Le déploiement centralisé à l’aide des modules de fusion, chacun installant une bibliothèque Visual C++ particulière sous forme de DLL partagée dans %windir%\system32\\. (L’installation dans ce dossier requiert des droits d’administrateur.) Les modules de fusion font partie du fichier d’installation. msi de votre application. Les modules de fusion redistribuables Visual C++ sont inclus dans Visual Studio, dans \Program Files (x86)\Common Files\Merge Modules\\. Pour plus d’informations, consultez [Redistribution à l’aide de modules de fusion](redistributing-components-by-using-merge-modules.md).
 
 - Le déploiement local, qui consiste à copier certaines DLL Visual C++ de votre installation Visual Studio, généralement dans \Program Files (x86)\Microsoft Visual Studio `version`\VC\Redist\\`platform`\\`library`\, et à les installer ensuite sur les ordinateurs cibles dans le même dossier que le fichier exécutable de l’application. Vous pouvez utiliser cette méthode de déploiement pour permettre l'installation par des utilisateurs ne possédant pas de droits d'administrateur, ou pour les applications exécutables à partir d'un partage réseau.
 
@@ -51,5 +52,5 @@ Nous vous recommandons d’éviter la liaison statique quand vous redistribuez d
 ## <a name="see-also"></a>Voir aussi
 
 [Déploiement des applications de bureau](deploying-native-desktop-applications-visual-cpp.md)<br>
-[ClickOnce Sécurité et déploiement](/visualstudio/deployment/clickonce-security-and-deployment)<br>
+[Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>
 [Exemples de déploiement](deployment-examples.md)

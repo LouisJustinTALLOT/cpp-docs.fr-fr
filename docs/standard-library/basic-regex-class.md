@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_regex'
 title: basic_regex, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 4348941e065680a54f9bd0c9f5b7ab2ff1af5e56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 450f3945faeb088c975bb1657d69496bcf078ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325624"
 ---
 # <a name="basic_regex-class"></a>basic_regex, classe
 
@@ -40,7 +41,7 @@ L’argument de modèle *RXtraits* décrit diverses propriétés importantes de 
 
 Certaines fonctions acceptent une séquence d’opérande qui définit une expression régulière. Vous pouvez spécifier cette séquence d'opérande de plusieurs façons :
 
-`ptr`--une séquence se terminant par un caractère null (telle qu’une chaîne C, pour *elem* de type **`char`** ) commençant à `ptr` (qui ne doit pas être un pointeur null), où l’élément de fin est la valeur `value_type()` et ne fait pas partie de la séquence d’opérande
+`ptr` --une séquence se terminant par un caractère null (telle qu’une chaîne C, pour *elem* de type **`char`** ) commençant à `ptr` (qui ne doit pas être un pointeur null), où l’élément de fin est la valeur `value_type()` et ne fait pas partie de la séquence d’opérande
 
 `ptr`, `count` -- une séquence d'éléments `count` commençant à `ptr` (qui ne doit pas être un pointeur null).
 
@@ -196,7 +197,7 @@ getloc == imbued == true
 match("abc") == true
 ```
 
-## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex :: assign
+## <a name="basic_regexassign"></a><a name="assign"></a> basic_regex :: assign
 
 Assigne une valeur à l’objet d’expression régulière.
 
@@ -267,7 +268,7 @@ Initializer_list à copier.
 
 Les fonctions membres remplacent chacune l’expression régulière détenue par par **`*this`** l’expression régulière décrite par la séquence d’opérande, puis retournent **`*this`** .
 
-## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex :: basic_regex
+## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a> basic_regex :: basic_regex
 
 Construit l'objet d'expression régulière.
 
@@ -345,7 +346,7 @@ Le premier constructeur construit un objet `basic_regex` vide. Les autres constr
 
 Un `basic_regex` objet vide ne correspond à aucune séquence de caractères lorsqu’il est passé à [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)ou [regex_replace](../standard-library/regex-functions.md#regex_replace).
 
-## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex :: flag_type
+## <a name="basic_regexflag_type"></a><a name="flag_type"></a> basic_regex :: flag_type
 
 Type des indicateurs d’option de syntaxe.
 
@@ -357,7 +358,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 Le type est un synonyme de [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
-## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex :: flags
+## <a name="basic_regexflags"></a><a name="flags"></a> basic_regex :: flags
 
 Retourne des indicateurs d’option de syntaxe.
 
@@ -369,7 +370,7 @@ flag_type flags() const;
 
 La fonction membre retourne la valeur de l’argument `flag_type` passé à l’appel le plus récent des fonctions membres [basic_regex::assign](#assign) ou, si aucun appel n’a été effectué, la valeur passée au constructeur.
 
-## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex :: getloc
+## <a name="basic_regexgetloc"></a><a name="getloc"></a> basic_regex :: getloc
 
 Retourne l’objet des paramètres régionaux stockés.
 
@@ -381,7 +382,7 @@ locale_type getloc() const;
 
 La fonction membre retourne `traits.` [regex_traits :: getloc](../standard-library/regex-traits-class.md#getloc) `()` .
 
-## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex :: imbue
+## <a name="basic_regeximbue"></a><a name="imbue"></a> basic_regex :: imbue
 
 Modifie l’objet des paramètres régionaux stocké.
 
@@ -398,7 +399,7 @@ Objet de paramètres régionaux à stocker.
 
 La fonction membre vide **`*this`** et retourne `traits.` [regex_traits :: imbue](../standard-library/regex-traits-class.md#imbue) `(loc)` .
 
-## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex :: locale_type
+## <a name="basic_regexlocale_type"></a><a name="locale_type"></a> basic_regex :: locale_type
 
 Type de l’objet de paramètres régionaux stocké.
 
@@ -410,7 +411,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 Le type est un synonyme de [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
 
-## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex :: mark_count
+## <a name="basic_regexmark_count"></a><a name="mark_count"></a> basic_regex :: mark_count
 
 Retourne le nombre de sous-expressions en correspondance.
 
@@ -422,7 +423,7 @@ unsigned mark_count() const;
 
 La fonction membre retourne le nombre de groupes de capture dans l’expression régulière.
 
-## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex :: Operator =
+## <a name="basic_regexoperator"></a><a name="op_eq"></a> basic_regex :: Operator =
 
 Assigne une valeur à l’objet d’expression régulière.
 
@@ -453,7 +454,7 @@ Chaîne à copier.
 
 Les opérateurs remplacent chacun l’expression régulière détenue par par **`*this`** l’expression régulière décrite par la séquence d’opérande, puis retournent **`*this`** .
 
-## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex :: swap
+## <a name="basic_regexswap"></a><a name="swap"></a> basic_regex :: swap
 
 Échange deux objets d’expression régulière.
 
@@ -470,7 +471,7 @@ Objet d’expression régulière à échanger.
 
 La fonction membre échange les expressions régulières entre **`*this`** et *Right*. Elle le fait dans un cadre de temps fixe, et ne lève aucune exception.
 
-## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex :: value_type
+## <a name="basic_regexvalue_type"></a><a name="value_type"></a> basic_regex :: value_type
 
 Type de l’élément.
 

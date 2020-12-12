@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : UUID (attributs C++)'
 title: uuid (attributs C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 9ff8888c26945d7f118e71002e3b3290217b463c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25c84b435fe86af1e56b17568301752a4795a0ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327224"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributs C++)
 
@@ -36,20 +37,20 @@ Si vous ne spécifiez pas `uuid` , le compilateur génère le même GUID pour le
 
 Vous pouvez utiliser Uuidgen.exe ou Guidgen.exe pour générer vos propres ID uniques. (Pour exécuter l’un de ces outils, cliquez sur **Démarrer** , puis sur **exécuter** dans le menu. Entrez ensuite le nom de l’outil requis.)
 
-Lorsqu’il est utilisé dans un projet qui n’utilise pas également ATL, la spécification de l' `uuid` attribut revient à [uuid](../../cpp/uuid-cpp.md) spécifier le **`__declspec`** modificateur UUID. Pour récupérer le `uuid` d’une classe, vous pouvez utiliser [__uuidof](../../cpp/uuidof-operator.md)
+Lorsqu’il est utilisé dans un projet qui n’utilise pas également ATL, la spécification de l' `uuid` attribut revient à [](../../cpp/uuid-cpp.md) spécifier le **`__declspec`** modificateur UUID. Pour récupérer le `uuid` d’une classe, vous pouvez utiliser [__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de, consultez l’exemple [pouvant être lié](bindable.md) `uuid` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|`class`, `struct`, `interface`, `union`, `enum`|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

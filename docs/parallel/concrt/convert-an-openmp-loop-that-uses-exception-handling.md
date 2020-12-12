@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : convertir une boucle OpenMP qui utilise la gestion des exceptions pour utiliser le runtime d’accès concurrentiel'
 title: "Comment : convertir une boucle OpenMP qui a recours à la gestion des exceptions pour utiliser le runtime d'accès concurrentiel"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: ca2ee42d48d8fe9f66025b8f0d5eeb493fc91d10
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8258506cfce76361eea151fe6b7f934a04f3a0aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325730"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à la gestion des exceptions pour utiliser le runtime d'accès concurrentiel
 

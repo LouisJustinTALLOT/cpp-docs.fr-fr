@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Catan, catanf, catanl'
 title: catan, catanf, catanl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c17b4344b60c9e9ba7b79edd911ac85a7ba4d5c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326322"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
@@ -62,25 +63,25 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 *z*<br/>
 Nombre complexe qui représente un angle, en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Arctangente de *z*, en radians. Le résultat est illimité le long de l’axe imaginaire, et dans l’intervalle [-π/2 ; + π/2] le long de l’axe réel.
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Catan** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Catan** accepte et retourne toujours une valeur **_Dcomplex** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Catan** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Catan** accepte et retourne toujours une valeur **_Dcomplex** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**catan**,               **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+|**Catan**,               **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>

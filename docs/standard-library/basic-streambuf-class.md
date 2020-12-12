@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_streambuf'
 title: basic_streambuf, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7600c60c501c1922deeabca11d41c89bc37548a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325611"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf, classe
 
@@ -267,7 +268,7 @@ Une fonction protégée qui retourne un pointeur vers le début de la mémoire t
 char_type *eback() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le début de la mémoire tampon d’entrée.
 
@@ -279,7 +280,7 @@ Une fonction protégée qui retourne un pointeur qui pointe juste après la fin 
 char_type *egptr() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur juste après la fin de la mémoire tampon d’entrée.
 
@@ -291,7 +292,7 @@ Une fonction protégée qui retourne un pointeur qui pointe juste après la fin 
 char_type *epptr() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur juste après la fin de la mémoire tampon de sortie.
 
@@ -316,7 +317,7 @@ Obtient les paramètres régionaux de l’objet basic_streambuf.
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de paramètres régionaux stocké.
 
@@ -350,7 +351,7 @@ Une fonction protégée qui retourne un pointeur vers l'élément suivant de la 
 char_type *gptr() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’élément suivant de la mémoire tampon d’entrée.
 
@@ -379,7 +380,7 @@ Retourne le nombre d'éléments qui sont prêts à être lus dans la mémoire ta
 streamsize in_avail();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments prêts à être lus dans la mémoire tampon.
 
@@ -451,13 +452,13 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 *_Meta*\
 Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève une exception. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). Le comportement par défaut consiste à retourner **traits_type::eof**.
 
 ### <a name="remarks"></a>Notes
 
-Si * \_ meta* n’est pas égal à **traits_type :: EOF**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(* \_ meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
+Si *\_ meta* n’est pas égal à **traits_type :: EOF**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_ meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
 
 - Si une `write position` est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
@@ -486,13 +487,13 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 *_Meta*\
 Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève une exception. Sinon, elle retourne une autre valeur. Le comportement par défaut consiste à retourner **traits_type::eof**.
 
 ### <a name="remarks"></a>Notes
 
-Si les * \_ métadonnées de métadonnées* sont égales à **traits_type :: EOF**, l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La fonction peut replacer un élément de différentes manières :
+Si les *\_ métadonnées de métadonnées* sont égales à **traits_type :: EOF**, l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La fonction peut replacer un élément de différentes manières :
 
 - Si une position où remettre l’élément est disponible, elle peut stocker l’élément dans cette position et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
@@ -508,7 +509,7 @@ Une fonction protégée qui retourne un pointeur vers le début de la mémoire t
 char_type *pbase() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le début de la mémoire tampon de sortie.
 
@@ -541,7 +542,7 @@ Une fonction protégée qui retourne un pointeur vers l'élément suivant de la 
 char_type *pptr() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’élément suivant de la mémoire tampon de sortie.
 
@@ -558,7 +559,7 @@ locale pubimbue(const locale& _Loc);
 *_Loc*\
 Référence à des paramètres régionaux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur précédente stockée dans l’objet de paramètres régionaux.
 
@@ -591,7 +592,7 @@ Point de départ des opérations de décalage. Consultez [seekdir](../standard-l
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la nouvelle position ou une position de flux non valide ( [seekoff](#seekoff)(_ *off*, `_Way` , `_Which` )).
 
@@ -615,7 +616,7 @@ Position à rechercher.
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nouvelle position ou position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
@@ -641,7 +642,7 @@ Pointeur vers `char_type` pour cette instanciation.
 *saut*\
 Taille de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne [setbuf](#setbuf)( `_Buffer` , `count` ).
 
@@ -653,7 +654,7 @@ Appelle [Sync](#sync), une fonction virtuelle protégée qui est substituée dan
 int pubsync();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la [synchronisation](#sync) ou-1 en cas d’échec.
 
@@ -665,7 +666,7 @@ Lit et retourne l'élément actuel, en déplaçant le pointeur du flux.
 int_type sbumpc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément actuel.
 
@@ -720,7 +721,7 @@ Point de départ des opérations de décalage. Consultez [seekdir](../standard-l
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la nouvelle position ou une position de flux non valide ( `seekoff` (_ *off*, `_Way` , `_Which` )).
 
@@ -754,7 +755,7 @@ Position à rechercher.
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nouvelle position ou position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
@@ -784,7 +785,7 @@ Pointeur vers une mémoire tampon.
 *saut*\
 Taille de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le comportement par défaut consiste à retourner **`this`** .
 
@@ -837,7 +838,7 @@ Retourne l'élément actuel sans changer la position dans le flux.
 int_type sgetc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément actuel.
 
@@ -867,7 +868,7 @@ int main( )
 
 ## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf :: sgetn
 
-Extrait jusqu’à *Count* caractères de la mémoire tampon d’entrée et les stocke dans le *pointeur*de mémoire tampon fourni.
+Extrait jusqu’à *Count* caractères de la mémoire tampon d’entrée et les stocke dans le *pointeur* de mémoire tampon fourni.
 
 Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes.
 
@@ -885,7 +886,7 @@ Mémoire tampon qui contient les caractères extraits.
 *saut*\
 Nombre d’éléments à lire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments lus. Pour plus d’informations, consultez [streamsize](../standard-library/ios-typedefs.md#streamsize).
 
@@ -928,7 +929,7 @@ Fonction membre virtuelle protégée qui retourne le nombre de caractères qui p
 virtual streamsize showmanyc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le comportement par défaut consiste à retourner zéro.
 
@@ -940,7 +941,7 @@ Lit l'élément actuel et retourne l'élément suivant.
 int_type snextc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément suivant dans le flux.
 
@@ -985,7 +986,7 @@ int_type sputbackc(char_type _Ch);
 *_Ch*\
 Le caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le caractère ou un échec.
 
@@ -1033,7 +1034,7 @@ int_type sputc(char_type _Ch);
 *_Ch*\
 Le caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le caractère, en cas de réussite.
 
@@ -1079,7 +1080,7 @@ La chaîne de caractères.
 *saut*\
 Le nombre de caractères.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères réellement insérés dans le flux.
 
@@ -1148,7 +1149,7 @@ Obtient un caractère du flux.
 int_type sungetc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le caractère ou un échec.
 
@@ -1215,7 +1216,7 @@ Une fonction virtuelle protégée qui tente de synchroniser les flux contrôlés
 virtual int sync();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne -1. Le comportement par défaut consiste à retourner zéro.
 
@@ -1239,7 +1240,7 @@ Une fonction virtuelle protégée qui extrait l'élément actuel du flux d'entr�
 virtual int_type uflow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément actuel.
 
@@ -1263,7 +1264,7 @@ Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément actuel.
 
@@ -1305,7 +1306,7 @@ Mémoire tampon qui contient les caractères extraits.
 *saut*\
 Nombre d’éléments à extraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments extraits.
 
@@ -1329,7 +1330,7 @@ Pointeur vers les éléments à insérer.
 *saut*\
 Nombre d’éléments à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments réellement insérés dans le flux.
 

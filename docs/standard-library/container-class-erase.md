@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : conteneur Class :: Erase'
 title: Conteneur Class::erase
 ms.date: 11/04/2016
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-ms.openlocfilehash: 1fa3fe7dee10f3033b84a671fdc35c193cd6ec3c
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7e9d7747237a38c42bfb7a39c5d5e66cc8a44608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324865"
 ---
 # <a name="container-classerase"></a>Conteneur Class::erase
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Efface un élément.
 

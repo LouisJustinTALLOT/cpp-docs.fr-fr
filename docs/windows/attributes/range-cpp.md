@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Range (C++)'
 title: Range (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c1a45ac1f4e968de52c9ed2bffb89ac2cf5fd04
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327357"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -28,7 +29,7 @@ Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont
 *entrée*<br/>
 Valeur de plage inférieure.
 
-*rapide*<br/>
+*high*<br/>
 Valeur de plage supérieure.
 
 ## <a name="remarks"></a>Notes
@@ -51,14 +52,14 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Méthode d’interface, paramètre d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

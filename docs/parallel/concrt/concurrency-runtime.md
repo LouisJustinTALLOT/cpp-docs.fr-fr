@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : runtime d’accès concurrentiel'
 title: Concurrency Runtime
 ms.date: 07/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: ce75d7a78fec69922c08479f6c130c6b6ccec566
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1bc161e8c70f98fe469feffa1c472ecaf6a7f161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325782"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -39,7 +40,7 @@ Pour obtenir de la documentation de référence, consultez [référence](../../p
 |-|-|
 |[Parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Comment : utiliser parallel_invoke pour exécuter des opérations parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Comment : créer une tâche qui se termine après un certain délai](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Décrit les tâches et les groupes de tâches, qui peuvent vous aider à écrire du code asynchrone et à découper le travail parallèle en plus petits morceaux.|
 |[Procédure pas à pas : implémentation de futures](../../parallel/concrt/walkthrough-implementing-futures.md)|Montre comment combiner les fonctionnalités du runtime d’accès concurrentiel pour aller plus loin.|
-|[Procédure pas à pas : suppression de travail d’un thread d’interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Montre comment déplacer le travail qui est effectué par l'IU thread dans une application MFC sur un thread de travail.|
+|[Procédure pas à pas : suppression de travail d’un thread de User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Montre comment déplacer le travail qui est effectué par l'IU thread dans une application MFC sur un thread de travail.|
 |[Meilleures pratiques dans la bibliothèque de modèles parallèles](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Meilleures pratiques générales dans le runtime d’accès concurrentiel](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Donne les astuces et meilleures pratiques pour utiliser la bibliothèque de modèles parallèles.|
 
 ## <a name="data-parallelism-in-the-ppl"></a>Parallélisme des données dans la bibliothèque PPL
@@ -69,9 +70,9 @@ Pour obtenir de la documentation de référence, consultez [référence](../../p
 
 |Article|Description|
 |-|-|
-|[Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Comment : implémenter divers modèles de producteur-consommateur](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Comment : fournir des fonctions de travail aux classes Call et transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Comment : utiliser le transformateur dans un pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Comment : effectuer une sélection parmi les tâches terminées](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Comment : envoyer un message à intervalles réguliers](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Comment : utiliser un filtre de bloc de message](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Décrit les agents asynchrones, les blocs de messages et les fonctions de transmission de messages qui sont les blocs de base pour réaliser des opérations de flux de données dans le runtime d'accès concurrentiel.|
-|[Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Procédure pas à pas : création d’un agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Indique comment créer des applications basées sur les agents de base.|
-|[Procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d'image.|
+|[Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Comment : implémenter divers modèles de Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Comment : fournir des fonctions de travail aux classes Call et transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Comment : utiliser le transformateur dans un pipeline de données](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Comment : effectuer une sélection parmi les tâches terminées](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Comment : envoyer un message à intervalles réguliers](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Comment : utiliser un filtre de bloc de message](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Décrit les agents asynchrones, les blocs de messages et les fonctions de transmission de messages qui sont les blocs de base pour réaliser des opérations de flux de données dans le runtime d'accès concurrentiel.|
+|[Procédure pas à pas : création d’une application Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Procédure pas à pas : création d’un agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Indique comment créer des applications basées sur les agents de base.|
+|[Procédure pas à pas : création d’un réseau Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d'image.|
 |[Procédure pas à pas : utilisation de Join pour empêcher un blocage](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|Utilisez le problème du dîner des philosophes pour illustrer comment utiliser le runtime d'accès concurrentiel pour empêcher tout interblocage dans votre application.|
 |[Procédure pas à pas : création d’un bloc de message personnalisé](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|Décrit comment créer un type de bloc de message personnalisé qui classe les messages entrants par priorité.|
 |[Meilleures pratiques dans la bibliothèque des agents asynchrones](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br /><br /> [Meilleures pratiques générales dans le runtime d’accès concurrentiel](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Donne les astuces et meilleures pratiques pour travailler avec les agents.|

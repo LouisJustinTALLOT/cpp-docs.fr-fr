@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3724'
 title: Erreur du compilateur C3724
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
-ms.openlocfilehash: b107137652c4efde43fdfe9c991240767eb5ced7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 509467b964f8b4db35d3823ff9f89be0223061f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326586"
 ---
 # <a name="compiler-error-c3724"></a>Erreur du compilateur C3724
 
-doit #include \<Windows. h > pour utiliser le Multi-Threading avec les événements
+doit #include \<windows.h> pour utiliser le Multi-Threading avec les événements
 
 Le fichier Windows. h est requis si vous utilisez le multithreading avec des événements. Pour corriger cette erreur, ajoutez `#include <windows.h>` au début du fichier dans lequel les sources d’événements et les récepteurs d’événements sont définis.
 

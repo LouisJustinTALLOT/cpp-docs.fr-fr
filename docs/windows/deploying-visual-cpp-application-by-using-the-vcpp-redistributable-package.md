@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : déploiement d’une application Visual C++ à l’aide du package redistribuable Visual C++'
 title: Déployer une application à l’aide du package redistribuable (C++)
 ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: d2bd0794a67cf70b9da0499e3d2cafa553531fe1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d14de3bf7400af9580570f783dc16ed4082bf1b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327100"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Procédure pas à pas : déploiement d'une application Visual C++ à l'aide de Visual C++ Redistributable Package
 
@@ -54,7 +55,7 @@ Pour effectuer cette procédure pas à pas, vous devez avoir les composants suiv
 
       - Votre application MFC (fichier .exe).
 
-      - vcredist_x86.exe. Dans Visual Studio 2015, ce fichier est situé en *%VCINSTALLDIR%redist\\1033\\*. Dans Visual Studio 2017 et Visual Studio 2019, ce fichier est situé en *%VCToolsRedistDir%*. Vous pouvez également [télécharger le dernier fichier rediste pris en charge de Microsoft](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
+      - vcredist_x86.exe. Dans Visual Studio 2015, ce fichier se trouve dans *% VCINSTALLDIR% Redist \\ 1033 \\*. Dans Visual Studio 2017 et Visual Studio 2019, ce fichier se trouve dans *% VCToolsRedistDir%*. Vous pouvez également [Télécharger le dernier fichier Redist pris en charge à partir de Microsoft](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
 
       - Le fichier setup.bat que vous avez créé à l’étape précédente.
 
@@ -83,7 +84,7 @@ Pour effectuer cette procédure pas à pas, vous devez avoir les composants suiv
       Le fichier d’installation à extraction automatique installe l’application MFC qui se trouve dans le dossier que vous avez spécifié à l’étape 2. L’application s’exécute correctement, car le programme d’installation du package redistribuable Visual C++ est inclus dans le fichier d’installation à extraction automatique.
 
       > [!IMPORTANT]
-      > Pour déterminer quelle version du temps d’exécution est \\installée,\\\\l’installateur vérifie la clé du registre HKLM\\SOFTWARE Microsoft\\VisualStudio_version_\\VC Runtimes version version Version VC Runtimes version Version Version VC Runtimes version Version Version VC Runtimes version Version Version VC\\Runtimes\\_version_\\Version Version. Si la version actuellement installée est plus récente que la version que le programme d’installation tente d’installer, le programme d’installation aboutit sans installer la version antérieure et laisse une entrée supplémentaire dans la page des programmes installés dans le Panneau de configuration.
+      > Pour déterminer quelle version du runtime est installée, le programme d’installation vérifie la clé de Registre \\ HKLM \\ Software \\ Microsoft \\ VisualStudio version de la \\  \\ \\ plateforme runtimes VC \\  \\ . Si la version actuellement installée est plus récente que la version que le programme d’installation tente d’installer, le programme d’installation aboutit sans installer la version antérieure et laisse une entrée supplémentaire dans la page des programmes installés dans le Panneau de configuration.
 
 ## <a name="see-also"></a>Voir aussi
 

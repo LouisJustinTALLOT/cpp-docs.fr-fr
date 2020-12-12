@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCCmdUsageCount'
 title: CMFCCmdUsageCount, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 40d09e96672cafb022baab98787fe10b1258048b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327727"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount, classe
 
@@ -79,7 +80,7 @@ Vous pouvez conserver `CMFCCmdUsageCount` les données de classe entre les exéc
 
 [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmdusagecount. h
 

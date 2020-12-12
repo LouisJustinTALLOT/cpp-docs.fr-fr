@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCColorBar'
 title: CMFCColorBar, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: ca28f8a07938e787fcf2d91d714c9dc82092194f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 5a2935c71a5579dddb2133f2ac6589a6bd447ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327708"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar, classe
 
@@ -251,11 +252,11 @@ Indique si l’étiquette de texte des boutons de couleur peut changer.
 virtual BOOL AllowChangeTextLabels() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours FALSE.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Par défaut, cette méthode retourne toujours FALSe, ce qui signifie que les étiquettes de texte ne peuvent pas être modifiées. Substituez cette méthode pour permettre la modification des étiquettes de texte.
 
@@ -267,11 +268,11 @@ Indique si l’objet de contrôle de la barre de couleurs peut apparaître dans 
 virtual BOOL AllowShowOnList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours TRUE.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Par défaut, cette méthode retourne toujours la valeur TRUE, ce qui signifie que l’infrastructure peut afficher le contrôle de la barre de couleurs pendant le processus de personnalisation. Substituez cette méthode pour implémenter un comportement différent.
 
@@ -288,7 +289,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 *bVertDock*<br/>
 dans TRUE pour spécifier que le contrôle de la barre de couleurs est ancré verticalement ; FALSe pour spécifier que le contrôle de la barre de couleurs est ancré horizontalement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille du tableau de boutons de couleur dans un contrôle de barre de couleurs.
 
@@ -434,7 +435,7 @@ dans Nombre de lignes dans le contrôle de la barre de couleurs lorsqu’il est 
 *nColDockVert*<br/>
 dans Nombre de colonnes dans le contrôle de la barre de couleurs lorsqu’il est ancré verticalement. La valeur par défaut est 0.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -472,13 +473,13 @@ dans Nombre idéal de colonnes dans le contrôle de la barre de couleurs. Cette 
 *pPalette*<br/>
 dans Pointeur vers une palette de couleurs, ou NULL. Si ce paramètre a la valeur NULL, cette méthode calcule la taille du contrôle de barre de couleurs comme si 20 couleurs étaient spécifiées. La valeur par défaut est NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode est réussie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise les paramètres *Rect*, *nColumns*et *pPalette* pour calculer le nombre approprié de lignes et de colonnes dans le contrôle de la barre de couleurs, puis appelle la méthode [CMFCColorBar :: Create](#create) .
+Cette méthode utilise les paramètres *Rect*, *nColumns* et *pPalette* pour calculer le nombre approprié de lignes et de colonnes dans le contrôle de la barre de couleurs, puis appelle la méthode [CMFCColorBar :: Create](#create) .
 
 ## <a name="cmfccolorbarcreatepalette"></a><a name="createpalette"></a> CMFCColorBar::CreatePalette
 
@@ -498,7 +499,7 @@ dans Tableau de couleurs.
 *palette*\
 dans Palette de couleurs.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -562,7 +563,7 @@ Récupère la couleur actuellement sélectionnée.
 COLORREF GetColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur actuellement sélectionnée.
 
@@ -579,7 +580,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 *bVertDock*\
 dans TRUE pour effectuer le calcul pour un contrôle de barre de couleurs ancré verticalement ; Sinon, effectuez le calcul pour un contrôle ancré horizontalement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) dont `cx` le composant contient le nombre de colonnes et dont `cy` le composant contient le nombre de lignes.
 
@@ -591,7 +592,7 @@ Récupère l’ID de commande du contrôle de barre de couleurs actuel.
 UINT GetCommandID() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ID de commande.
 
@@ -612,7 +613,7 @@ int GetExtraHeight(int nNumColumns) const;
 *nNumColumns*\
 dans Si le contrôle de barre de couleurs contient des couleurs de document, le nombre de colonnes à afficher dans la grille des couleurs de document. Dans le cas contraire, cette valeur n’est pas utilisée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur supplémentaire calculée requise.
 
@@ -624,7 +625,7 @@ Récupère la couleur qui signifie qu’un bouton de couleur a le focus ; autre
 COLORREF GetHighlightedColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur RVB.
 
@@ -638,7 +639,7 @@ Récupère la marge horizontale, qui est l’espace entre la cellule de couleur 
 int GetHorzMargin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Marge horizontale.
 
@@ -650,7 +651,7 @@ Récupère la marge verticale, qui est l’espace entre la cellule de couleur su
 int GetVertMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Marge verticale.
 
@@ -672,7 +673,7 @@ dans Pointeur vers un objet palette, ou NULL. Si ce paramètre a la valeur NULL,
 *arColors*\
 dans Tableau de couleurs.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans le tableau de couleurs.
 
@@ -684,7 +685,7 @@ Indique si la barre de couleurs actuelle est Ancrable.
 BOOL IsTearOff() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le contrôle de barre de couleurs actuel est Ancrable ; Sinon, FALSe.
 
@@ -705,7 +706,7 @@ virtual BOOL OnKey(UINT nChar);
 *nChar*<br/>
 dans Code de la touche virtuelle pour la touche sur laquelle un utilisateur a appuyé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode traite la clé spécifiée ; Sinon, FALSe.
 
@@ -722,7 +723,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 *pButton*\
 dans Pointeur vers un contrôle qui se trouve dans une barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -766,7 +767,7 @@ dans Couleur sélectionnée par défaut lorsque la boîte de dialogue couleur s�
 *colorRes*<br/>
 à Couleur sélectionnée par un utilisateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’utilisateur a sélectionné une couleur ; FALSe si l’utilisateur a annulé la boîte de dialogue couleur.
 
@@ -793,7 +794,7 @@ CPalette* SelectPalette(CDC* pDC);
 *Maîtres*\
 dans Pointeur vers le contexte de périphérique du bouton parent du contrôle de barre de couleurs actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la palette qui est remplacée par la palette du bouton parent du contrôle de barre de couleurs actuel.
 

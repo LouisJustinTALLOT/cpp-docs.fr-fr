@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ctype_base'
 title: ctype_base, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 430e6fbf77842e61e662fd3024a54b418f487748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324680"
 ---
 # <a name="ctype_base-class"></a>ctype_base, classe
 
@@ -45,7 +46,7 @@ struct ctype_base : public locale::facet
 
 ## <a name="remarks"></a>Notes
 
-Elle définit un masque d’énumération. Chaque constante d’énumération caractérise une méthode de classification des caractères, comme défini par les fonctions avec des noms similaires déclarées dans l’en-tête \<ctype.h>. Les constantes sont :
+Elle définit un masque d’énumération. Chaque constante d’énumération caractérise un autre moyen de classer des caractères, comme défini par les fonctions avec des noms similaires déclarés dans l’en-tête \<ctype.h> . Les constantes sont :
 
 - **space** (fonction [isspace](../standard-library/locale-functions.md#isspace))
 
@@ -69,14 +70,14 @@ Elle définit un masque d’énumération. Chaque constante d’énumération ca
 
 - **graph** (fonction [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours vrai que **alnum** = = ( &#124; **chiffre** alpha \) et **graphique** \= \= \( **alnum** &#124; **punct**).
+Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours vrai que **alnum** = = ( **alpha** &#124; **digit** \) et **Graph** \= \= \( **alnum** &#124; **punct**).
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :**\<locale>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

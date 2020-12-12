@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs BitSet'
 title: '&lt;bitset&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5157b3e8a8fa94152a4a2446b1d9a4c124677ddd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325449"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 
-## <a name="op_amp"></a>, opérateur&amp;
+## <a name="operatoramp"></a><a name="op_amp"></a> and&amp;
 
 Exécute une opération `AND` au niveau du bit entre deux bitsets.
 
@@ -35,15 +36,15 @@ operator&(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
-\ *droit*
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-BitSet dont les éléments résultent de l’exécution de l’opération `AND` sur les éléments correspondants de *gauche* et de *droite*.
+BitSet dont les éléments sont le résultat de l’exécution de l' `AND` opération sur les éléments correspondants de *gauche* et de *droite*.
 
 ### <a name="example"></a>Exemple
 
@@ -73,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>&lt;d’opérateur &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> and&lt;&lt;
 
 Insère une représentation textuelle de la séquence de bits dans le flux de sortie.
 
@@ -86,16 +87,16 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
-Objet de type **bitset\<N>** qui doit être inséré dans le flux de sortie sous forme de chaîne.
+*Oui*\
+Objet de type **BitSet \<N>** qui doit être inséré dans le flux de sortie en tant que chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Représentation textuelle de la séquence de bits dans `ostr`.
+Représentation textuelle de la séquence de bits dans `ostr` .
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge `operator<<`, ce qui permet l’écriture d’un BitSet sans le convertir au préalable en chaîne. La fonction de modèle est exécutée :
+La fonction de modèle surcharge `operator<<` , ce qui permet l’écriture d’un BitSet sans le convertir au préalable en chaîne. La fonction de modèle est exécutée :
 
 `ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
@@ -130,7 +131,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>&gt;d’opérateur &gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> and&gt;&gt;
 
 Lit une chaîne de bits dans un bitset.
 
@@ -146,16 +147,16 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 Chaîne entrée dans le flux d’entrée à insérer dans le bitset.
 
-\ *droit*
+*Oui*\
 Bitset qui reçoit les bits du flux d’entrée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction de modèle retourne la chaîne *i_str*.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge `operator>>` pour stocker dans BitSet *Right* la valeur `bitset(str)`, où `str` est un objet de type [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extrait de *i_str*.
+La fonction de modèle surcharge `operator>>` pour stocker dans le BitSet de *droite* la valeur `bitset(str)` , où `str` est un objet de type [basic_string](basic-string-class.md) `< CharType, Traits, allocator< CharType > >&` extrait de *i_str*.
 
 La fonction de modèle extrait des éléments de *i_str* et les insère dans BitSet jusqu’à ce que :
 
@@ -214,7 +215,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>opérateur ^
+## <a name="operator"></a><a name="op_xor"></a> opérateur ^
 
 Exécute une opération `EXCLUSIVE-OR` au niveau du bit entre deux bitsets.
 
@@ -228,15 +229,15 @@ operator^(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
-\ *droit*
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-BitSet dont les éléments résultent de l’exécution de l’opération `EXCLUSIVE-OR` sur les éléments correspondants de *gauche* et de *droite*.
+BitSet dont les éléments sont le résultat de l’exécution de l' `EXCLUSIVE-OR` opération sur les éléments correspondants de *gauche* et de *droite*.
 
 ### <a name="example"></a>Exemple
 
@@ -266,7 +267,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>and&#124;
+## <a name="operator124"></a><a name="op_or"></a>&#124; d’opérateur
 
 Exécute une opération `OR` au niveau du bit entre deux bitsets.
 
@@ -280,15 +281,15 @@ operator|(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
-\ *droit*
+*Oui*\
 Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-BitSet dont les éléments résultent de l’exécution de l’opération `OR` sur les éléments correspondants de *gauche* et de *droite*.
+BitSet dont les éléments sont le résultat de l’exécution de l' `OR` opération sur les éléments correspondants de *gauche* et de *droite*.
 
 ### <a name="example"></a>Exemple
 

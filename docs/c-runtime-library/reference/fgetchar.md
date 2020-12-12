@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fgetchar'
 title: fgetchar
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
-ms.openlocfilehash: 66cd0747205402073ef276df7fa39eeaa9900c1e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b8b9931f302f233d3a4f40c9c5eb898740ccaa9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326989"
 ---
 # <a name="fgetchar"></a>fgetchar
 

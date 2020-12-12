@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : source (C++)'
 title: source (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 493795f41571fd9c940147eda3b8dd6dd543f18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327293"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -68,14 +69,14 @@ class NN : public b
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , **interface**|
-|**Repeatable Read**|Non|
+|**Renouvelable**|Non|
 |**Attributs requis**|`coclass` (en cas d’application à une classe ou à un struct)|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

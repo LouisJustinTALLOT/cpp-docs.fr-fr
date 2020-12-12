@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l'
 title: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 3ab3f978d4162f968f518272612c18767247f2fb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce49d725673e909cd2befb322bbd90450bfba2e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326263"
 ---
 # <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -93,11 +94,11 @@ Nombre maximal de caractères à placer dans *strDest*.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la longueur de la chaîne transformée, sans compter le caractère null de fin. Si la valeur de retour est supérieure ou égale à *Count*, le contenu de *strDest* est imprévisible. En cas d’erreur, chaque fonction définit **errno** et retourne **INT_MAX**. Pour un caractère non valide, **errno** a la valeur **EILSEQ**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strxfrm** transforme la chaîne pointée par *strSource* en un nouveau formulaire assemblé qui est stocké dans *strDest*. Au plus, le *nombre* de caractères, y compris le caractère null, sont transformés et placés dans la chaîne résultante. La transformation s’effectue à l’aide du paramètre de catégorie **LC_COLLATE** des paramètres régionaux. Pour plus d’informations sur les **LC_COLLATE**, consultez [setlocale](setlocale-wsetlocale.md). **strxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_strxfrm_l** est identique, à ceci près qu’il utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -116,7 +117,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, dans certains paramètres régionaux européens, le caractère « a » (valeur 0x61) précède le caractère « &\#x00E4 ; » (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » vue lexicographique.
+Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, dans certains paramètres régionaux européens, le caractère « a » (valeur 0x61) précède le caractère « &\# x00E4 ; » (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » vue lexicographique.
 
 Dans les paramètres régionaux pour lesquels le jeu de caractères et l’ordre des caractères lexicographique diffèrent, utilisez **strxfrm** sur les chaînes d’origine, puis **strcmp** sur les chaînes résultantes pour produire une comparaison de chaînes lexicographique en fonction du paramètre de catégorie **LC_COLLATE** des paramètres régionaux actuels. Ainsi, pour comparer deux chaînes vue lexicographique dans les paramètres régionaux ci-dessus, utilisez **strxfrm** sur les chaînes d’origine, puis **strcmp** sur les chaînes résultantes. Vous pouvez également utiliser **strcoll** plutôt que **strcmp** sur les chaînes d’origine.
 

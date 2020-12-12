@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : créer une icône ou une autre image'
 title: 'Comment : créer une icône ou une autre image'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -79,12 +80,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fee71fdfa073365b0ba63b1a789e0928bb1557ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327131"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Comment : créer une icône ou une autre image
 
@@ -125,7 +126,7 @@ Lorsque vous ouvrez la ressource icône ou curseur dans l' [éditeur d’images]
 > [!NOTE]
 > Si votre projet ne contient pas déjà un fichier. RC, consultez [création d’un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
-La boîte de dialogue **nouveau &lt; type d' &gt; image d’appareil** vous permet de créer une nouvelle image d’appareil d’un type spécifié. Pour ouvrir la boîte de dialogue **nouvelle \<Device> image** , accédez à **image**du menu  >  **nouveau type d’image**. Les propriétés suivantes sont incluses : **type d’image cible** et **personnalisé**.
+La boîte de dialogue **nouveau &lt; type d' &gt; image d’appareil** vous permet de créer une nouvelle image d’appareil d’un type spécifié. Pour ouvrir la boîte de dialogue **nouvelle \<Device> image** , accédez à **image** du menu  >  **nouveau type d’image**. Les propriétés suivantes sont incluses : **type d’image cible** et **personnalisé**.
 
 La propriété **type d’image cible** répertorie les types d’images disponibles dans lesquels vous sélectionnez le type d’image que vous souhaitez ouvrir :
 
@@ -182,13 +183,13 @@ Utilisez la boîte de dialogue **ouvrir l' &lt; &gt; image** de l’appareil pou
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Pour ajouter une image pour un autre périphérique d’affichage
 
-1. Accédez à **image**  >  du menu**nouvelle image**de l’appareil, ou cliquez avec le bouton droit dans le volet de l' **éditeur d’images** et choisissez **nouvelle image**de l’appareil.
+1. Accédez à **image**  >  du menu **nouvelle image** de l’appareil, ou cliquez avec le bouton droit dans le volet de l' **éditeur d’images** et choisissez **nouvelle image** de l’appareil.
 
 1. Sélectionnez le type d’image que vous souhaitez ajouter. Vous pouvez également sélectionner **personnalisé** pour créer une icône dont la taille n’est pas disponible dans la liste par défaut.
 
 ### <a name="to-copy-a-device-image"></a>Pour copier une image d’appareil
 
-1. Accédez à **image**  >  du menu**ouvrir l’image** de l’appareil et choisissez une image dans la liste images actuelles. Par exemple, choisissez la version 32 × 32, 16 couleurs d’une icône.
+1. Accédez à **image**  >  du menu **ouvrir l’image** de l’appareil et choisissez une image dans la liste images actuelles. Par exemple, choisissez la version 32 × 32, 16 couleurs d’une icône.
 
 1. Copiez l’image de l’icône actuellement affichée (**CTRL** + **C**).
 
@@ -198,7 +199,7 @@ Utilisez la boîte de dialogue **ouvrir l' &lt; &gt; image** de l’appareil pou
 
 ### <a name="to-delete-a-device-image"></a>Pour supprimer une image d’appareil
 
-Lorsque l’image de l’icône s’affiche dans l' **éditeur d’images**, accédez à **image**du menu supprimer l’image de l'  >  **appareil**. Lorsque vous supprimez la dernière image d’icône de la ressource, la ressource est également supprimée.
+Lorsque l’image de l’icône s’affiche dans l' **éditeur d’images**, accédez à **image** du menu supprimer l’image de l'  >  **appareil**. Lorsque vous supprimez la dernière image d’icône de la ressource, la ressource est également supprimée.
 
 > [!NOTE]
 > Lorsque vous appuyez sur la touche **Suppr** , les images et les couleurs que vous avez dessinées sur une icône sont supprimées, mais l’icône est conservée et vous pouvez maintenant la reconcevoir. Si vous appuyez sur la touche **Suppr** par erreur, appuyez sur **CTRL** + **Z** pour annuler l’action.
@@ -210,7 +211,7 @@ Dans l' [éditeur d’images](../windows/image-editor-for-icons.md), l’icône 
 L’écran et les couleurs inversées que vous appliquez aux icônes et aux curseurs se forment et colorent l’image dérivée ou affectent les régions inversées. Les couleurs indiquent les parties de l’image qui ont ces attributs. Vous pouvez modifier les couleurs qui représentent les attributs de couleur d’écran et de couleur inverse lors de la modification. Ces modifications n’affectent pas l’apparence de l’icône ou du curseur dans votre application.
 
 > [!NOTE]
-> Les boîtes de dialogue et les commandes de menu affichées peuvent différer de celles décrites dans **l’aide** en fonction de vos paramètres actifs ou de l’édition. Pour modifier vos paramètres, accédez à **Outils**de menu  >  **Importer et exporter les paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Les boîtes de dialogue et les commandes de menu affichées peuvent différer de celles décrites dans **l’aide** en fonction de vos paramètres actifs ou de l’édition. Pour modifier vos paramètres, accédez à **Outils** de menu  >  **Importer et exporter les paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Pour créer des régions transparentes ou inversées
 
@@ -239,7 +240,7 @@ L’écran et les couleurs inversées que vous appliquez aux icônes et aux curs
 
 1. Dans la [boîte de dialogue Insérer une ressource](./how-to-create-a-resource-script-file.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**.
 
-1. Accédez à **image**  >  du menu**nouvelle image** de l’appareil et sélectionnez le style d’image 256 de couleur de votre choix.
+1. Accédez à **image**  >  du menu **nouvelle image** de l’appareil et sélectionnez le style d’image 256 de couleur de votre choix.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Pour choisir une couleur dans la palette de couleurs 256 pour les grandes icônes
 
@@ -294,7 +295,7 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les
 
 1. Ouvrez l’image dans l' **éditeur d’images**.
 
-1. Accédez à **fichier**menu  >  **enregistrer le *nom* de fichier sous**.
+1. Accédez à **fichier** menu  >  **enregistrer le *nom* de fichier sous**.
 
 1. Dans la boîte de dialogue **enregistrer le fichier sous** , dans la zone **nom de fichier** , tapez le nom de fichier et l’extension qui désignent le format souhaité.
 
@@ -320,9 +321,9 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les
 
    La ressource est ajoutée à votre projet dans **Explorateur de solutions** et la ressource s’ouvre dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Vous pouvez maintenant utiliser tous les outils disponibles dans l' **éditeur d’images** pour modifier votre image. Pour plus d’informations sur l’ajout d’images à un projet managé, consultez [chargement d’une image au moment du design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

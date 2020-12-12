@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : définir l’accès aux contrôles et les valeurs (C++)'
 title: 'Comment : définir l’accès aux contrôles et les valeurs (C++)'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cedaa5c455dc5810c78158bec628f57c7f6e52b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327117"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Comment : définir l’accès aux contrôles et les valeurs (C++)
 
@@ -40,15 +41,15 @@ Même les contrôles dont la propriété **TabStop** n’a pas la valeur **true*
 > [!NOTE]
 > Si votre boîte de dialogue contient des contrôles qui se chevauchent, la modification de l’ordre de tabulation peut modifier le mode d’affichage des contrôles. Les contrôles qui arrivent plus tard dans l’ordre de tabulation sont toujours affichés en plus des contrôles qui se chevauchent qui les précèdent dans l’ordre de tabulation.
 
-- Pour afficher l’ordre de tabulation en cours pour tous les contrôles, **Format**accédez à l’option  >  **ordre des onglets**format ou appuyez sur **CTRL**  +  **D**.
+- Pour afficher l’ordre de tabulation en cours pour tous les contrôles, accédez à l’option  >  **ordre des onglets** format ou appuyez sur **CTRL**  +  **D**.
 
    Un nombre situé dans le coin supérieur gauche de chaque contrôle montre son emplacement dans l’ordre de tabulation actuel.
 
-- Pour modifier l’ordre des tabulations pour tous les contrôles, accédez à l’option ordre des onglets de **format**de menu  >  **Tab Order** et définissez l’ordre de tabulation en sélectionnant chaque contrôle dans l’ordre de la touche **Tab** .
+- Pour modifier l’ordre des tabulations pour tous les contrôles, accédez à l’option ordre des onglets de **format** de menu  >   et définissez l’ordre de tabulation en sélectionnant chaque contrôle dans l’ordre de la touche **Tab** .
 
-- Pour modifier l’ordre de tabulation d’au moins deux contrôles, accédez à menu **format**de l'  >  **onglet ordre**. Maintenez la touche **CTRL** enfoncée et sélectionnez le contrôle où commencera la modification, puis relâchez la touche **CTRL** et sélectionnez les contrôles dans l’ordre dans lequel vous souhaitez que la touche **Tab** suive à partir de ce point.
+- Pour modifier l’ordre de tabulation d’au moins deux contrôles, accédez à menu **format** de l'  >  **onglet ordre**. Maintenez la touche **CTRL** enfoncée et sélectionnez le contrôle où commencera la modification, puis relâchez la touche **CTRL** et sélectionnez les contrôles dans l’ordre dans lequel vous souhaitez que la touche **Tab** suive à partir de ce point.
 
-   Par exemple, si vous souhaitez modifier l’ordre des contrôles `7` par le biais de, maintenez la touche CTRL enfoncée `9` , puis sélectionnez contrôle en **Ctrl** `6` premier.
+   Par exemple, si vous souhaitez modifier l’ordre des contrôles `7` par le biais de, maintenez la touche CTRL enfoncée `9` , puis sélectionnez contrôle en  `6` premier.
 
 - Pour définir un contrôle spécifique sur un nombre `1` ou un premier dans l’ordre de tabulation, double-cliquez sur le contrôle.
 
@@ -63,11 +64,11 @@ Normalement, les utilisateurs du clavier déplacent le focus d’entrée d’un 
 
 1. Sélectionnez le contrôle dans la boîte de dialogue.
 
-1. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans la propriété **légende** , tapez un nouveau nom pour le contrôle, en tapant une esperluette ( `&` ) devant la lettre que vous souhaitez comme clé d’accès pour ce contrôle. Par exemple : `&Radio1`.
+1. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans la propriété **légende** , tapez un nouveau nom pour le contrôle, en tapant une esperluette ( `&` ) devant la lettre que vous souhaitez comme clé d’accès pour ce contrôle. Par exemple, `&Radio1`.
 
 1. Appuyez sur **Entrée**.
 
-   Un trait de soulignement apparaît dans la légende affichée pour indiquer la touche d’accès, par exemple **R**adio1.
+   Un trait de soulignement apparaît dans la légende affichée pour indiquer la touche d’accès, par exemple **R** adio1.
 
 ### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Pour définir une touche d’accès pour un contrôle sans légende visible
 
@@ -103,7 +104,7 @@ Vous pouvez ajouter des valeurs à un contrôle zone de liste déroulante tant q
 
 1. Appuyez sur **entrée** lorsque vous avez fini d’ajouter des valeurs.
 
-Pour plus d’informations sur l’agrandissement de la partie déroulante d’une zone de liste déroulante, consultez [définition de la taille de la zone de liste déroulante et de sa liste déroulante](./arrangement-of-controls-on-dialog-boxes.md).
+Pour plus d’informations sur l’agrandissement de la partie déroulante d’une zone de liste déroulante, consultez [définition de la taille de la zone de liste déroulante et de sa liste de Drop-Down](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Vous ne pouvez pas ajouter de valeurs aux projets Win32 à l’aide de cette procédure (la propriété de **données** est grisée pour les projets Win32). Étant donné que les projets Win32 n’ont pas de bibliothèques qui ajoutent cette fonctionnalité, vous devez ajouter par programme des valeurs à une zone de liste déroulante avec un projet Win32.
@@ -128,7 +129,7 @@ Vous pouvez avoir plusieurs groupes de cases d’option dans une boîte de dialo
 
 1. Répétez l’étape ci-dessus pour ajouter autant de cases d’option que vous le souhaitez. Assurez-vous que les cases d’option du groupe se suivent dans l’ordre de tabulation.
 
-1. Dans la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window), affectez la valeur **True** à la propriété *Groupe* de la **première**case d’option dans l’ordre de tabulation.
+1. Dans la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window), affectez la valeur **True** à la propriété *Groupe* de la **première** case d’option dans l’ordre de tabulation.
 
    La modification de la propriété de **groupe** en **true** ajoute le style de WS_GROUP à l’entrée du bouton dans l’objet de boîte de dialogue du script de ressources et empêche l’utilisateur de sélectionner plusieurs cases d’option à la fois dans le groupe de boutons (si l’utilisateur sélectionne une case d’option, les autres cases à cocher sont désactivées).
 
@@ -147,7 +148,7 @@ Vous pouvez avoir plusieurs groupes de cases d’option dans une boîte de dialo
 
    Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne la première case d’option du groupe.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

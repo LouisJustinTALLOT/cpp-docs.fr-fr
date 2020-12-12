@@ -1,5 +1,6 @@
 ---
-title: Création de document-vue
+description: En savoir plus sur la création d’un document/d’une vue
+title: Création de Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], creating
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 128b68eb53bd596ba2e4b4df4f2c5e865452fe2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326433"
 ---
 # <a name="documentview-creation"></a>Création d'un document/d'une vue
 
@@ -35,6 +36,6 @@ Le Framework fournit des implémentations des commandes **nouvelles** et **ouver
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles de document et processus de création de document/vue](document-templates-and-the-document-view-creation-process.md)<br/>
-[Création de modèle de document](document-template-creation.md)<br/>
+[Création d’un modèle de document](document-template-creation.md)<br/>
 [Relations entre les objets MFC](relationships-among-mfc-objects.md)<br/>
 [Création de documents, fenêtres et vues](creating-new-documents-windows-and-views.md)

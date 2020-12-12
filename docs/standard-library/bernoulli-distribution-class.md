@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe bernoulli_distribution'
 title: bernoulli_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45c63c59aaed3e2c9a5aa7251880767042523763
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325570"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution, classe
 
@@ -150,7 +151,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

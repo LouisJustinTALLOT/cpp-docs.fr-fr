@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4005'
 title: Avertissement du compilateur (niveau 1) C4005
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-ms.openlocfilehash: 4e95f8deeb61c5a4d56e0643beb6a746f848e33e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8de4974d87eb5d8396085bb79dfbfe14a177602
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325985"
 ---
 # <a name="compiler-warning-level-1-c4005"></a>Avertissement du compilateur (niveau 1) C4005
 
@@ -21,7 +22,7 @@ L’identificateur de macro est défini deux fois. Le compilateur utilise la deu
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Définition d’une macro sur la ligne de commande et dans le code à l’aide d’une directive `#define`.
+1. Définition d’une macro sur la ligne de commande et dans le code à l’aide d’une `#define` directive.
 
 1. Macros importées à partir de fichiers include.
 

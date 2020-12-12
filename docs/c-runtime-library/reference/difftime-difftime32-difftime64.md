@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : difftime, _difftime32, _difftime64'
 title: difftime, _difftime32, _difftime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3f2c4f713f5e4dd667bd4e0a557170e9d23e6700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327018"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -65,11 +66,11 @@ Heure de fin
 *timeStart*<br/>
 Heure de début
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **difftime** retourne le temps écoulé en secondes, de *timeStart* à *timeEnd*. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **difftime** calcule la différence entre les deux valeurs d’heure fournies *timeStart* et *timeEnd*.
 

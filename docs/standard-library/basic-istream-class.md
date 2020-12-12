@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_istream'
 title: basic_istream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: da53db594e057449f2d227f57c902d26396000b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 103777c5a4a590fbbfac95e690329b621497d087
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325691"
 ---
 # <a name="basic_istream-class"></a>basic_istream, classe
 
@@ -150,7 +151,7 @@ Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifst
 |[en lecture](#read)|Lit un nombre spécifié de caractères dans le flux et les stocke dans un tableau.|
 |[readsome](#readsome)|Lire seulement dans la mémoire tampon.|
 |[seekg](#seekg)|Déplace la position de lecture dans un flux.|
-|[sentry](#sentry)|La classe imbriquée décrit un objet dont la déclaration structure les fonctions d'entrée mise en forme et les fonctions d'entrée non mise en forme.|
+|[Sentry](#sentry)|La classe imbriquée décrit un objet dont la déclaration structure les fonctions d'entrée mise en forme et les fonctions d'entrée non mise en forme.|
 |[swap](#swap)|Échange cet objet `basic_istream` pour le paramètre d'objet `basic_istream` fourni.|
 |[synchronisation](#sync)|Synchronise le périphérique d’entrée associé au flux avec la mémoire tampon du flux.|
 |[tellg](#tellg)|Indique la position de lecture actuelle dans le flux.|
@@ -160,7 +161,7 @@ Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifst
 
 |Opérateur|Description|
 |-|-|
-|[>>d’opérateur](#op_gt_gt)|Appelle une fonction sur le flux d'entrée ou lit les données mises en forme dans le flux d'entrée.|
+|[>>d’opérateur ](#op_gt_gt)|Appelle une fonction sur le flux d'entrée ou lit les données mises en forme dans le flux d'entrée.|
 |[opérateur =](#op_eq)|Affecte le `basic_istream` du côté droit de l'opérateur à cet objet. Il s’agit d’une assignation de déplacement qui implique une `rvalue` référence qui ne laisse pas de copie.|
 
 ## <a name="requirements"></a>Spécifications
@@ -169,7 +170,7 @@ Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifst
 
 **Espace de noms :** std
 
-## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>basic_istream :: basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a> basic_istream :: basic_istream
 
 Construit un objet de type `basic_istream`.
 
@@ -202,7 +203,7 @@ Le deuxième constructeur initialise la classe de base en appelant `move(right)`
 
 Consultez l’exemple de [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) pour en savoir plus sur les flux d’entrée.
 
-## <a name="basic_istreamgcount"></a><a name="gcount"></a>basic_istream :: gCount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a> basic_istream :: gCount
 
 Retourne le nombre de caractères lus au cours de la dernière entrée non mise en forme.
 
@@ -210,7 +211,7 @@ Retourne le nombre de caractères lus au cours de la dernière entrée non mise 
 streamsize gcount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’extractions.
 
@@ -249,7 +250,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="basic_istreamget"></a><a name="get"></a>basic_istream :: obtient
+## <a name="basic_istreamget"></a><a name="get"></a> basic_istream :: obtient
 
 Lit un ou plusieurs caractères dans le flux d'entrée.
 
@@ -269,7 +270,7 @@ basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delim
 *saut*\
 Nombre de caractères à lire à partir de *strbuf*.
 
-*limite*\
+*delimiter*\
 Caractère qui doit mettre fin à la lecture si elle est rencontrée avant le *nombre*.
 
 *Str*\
@@ -281,7 +282,7 @@ Caractère à obtenir.
 *strbuf*\
 Mémoire tampon dans laquelle écrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La forme sans paramètre de get retourne l’élément lu comme un entier ou la fin du fichier. Les autres formulaires retournent le flux (* **`this`** ).
 
@@ -332,7 +333,7 @@ int main( )
 1111
 ```
 
-## <a name="basic_istreamgetline"></a><a name="getline"></a>basic_istream :: getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a> basic_istream :: getline
 
 Obtient une ligne du flux d’entrée.
 
@@ -352,13 +353,13 @@ basic_istream<Char_T, Tr>& getline(
 *saut*\
 Nombre de caractères à lire à partir de *strbuf*.
 
-*limite*\
+*delimiter*\
 Caractère qui doit mettre fin à la lecture si elle est rencontrée avant le *nombre*.
 
 *Str*\
 Chaîne dans laquelle écrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 
@@ -397,7 +398,7 @@ int main( )
 121
 ```
 
-## <a name="basic_istreamignore"></a><a name="ignore"></a>basic_istream :: ignorer
+## <a name="basic_istreamignore"></a><a name="ignore"></a> basic_istream :: ignorer
 
 Ignore un certain nombre d'éléments à partir de la position de lecture actuelle.
 
@@ -412,10 +413,10 @@ basic_istream<Char_T, Tr>& ignore(
 *saut*\
 Nombre d’éléments à ignorer à partir de la position de lecture actuelle.
 
-*limite*\
+*delimiter*\
 Élément qui, s’il est rencontré avant le nombre, provoque le `ignore` retour de et l’autorisation de tous les éléments après la lecture du *délimiteur* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 
@@ -475,12 +476,12 @@ basic_istream& operator>>(long double& val);
 Pointeur de fonction.
 
 *strbuf*\
-Objet de type `stream_buf`.
+Objet de type `stream_buf`.
 
 *multiples*\
 Valeur à lire à partir du flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 
@@ -574,7 +575,7 @@ int main( )
 }
 ```
 
-## <a name="basic_istreamoperator"></a><a name="op_eq"></a>basic_istream :: Operator =
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a> basic_istream :: Operator =
 
 Affecte le `basic_istream` du côté droit de l'opérateur à cet objet. Il s’agit d’une assignation de déplacement qui implique une `rvalue` référence qui ne laisse pas de copie.
 
@@ -587,7 +588,7 @@ basic_istream& operator=(basic_istream&& right);
 *Oui*\
 Référence `rvalue` à un objet `basic_ifstream`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne __* This__.
 
@@ -595,7 +596,7 @@ Retourne __* This__.
 
 L’opérateur membre appelle `swap(right)` .
 
-## <a name="basic_istreampeek"></a><a name="peek"></a>basic_istream ::p EEK
+## <a name="basic_istreampeek"></a><a name="peek"></a> basic_istream ::p EEK
 
 Retourne le caractère suivant à lire.
 
@@ -603,7 +604,7 @@ Retourne le caractère suivant à lire.
 int_type peek();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère suivant à lire.
 
@@ -640,7 +641,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="basic_istreamputback"></a><a name="putback"></a>basic_istream ::p utback
+## <a name="basic_istreamputback"></a><a name="putback"></a> basic_istream ::p utback
 
 Place un caractère spécifié dans le flux.
 
@@ -654,7 +655,7 @@ basic_istream<Char_T, Tr>& putback(
 *Cascade*\
 Caractère à remettre dans le flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 
@@ -686,7 +687,7 @@ int main( )
 qwq
 ```
 
-## <a name="basic_istreamread"></a><a name="read"></a>basic_istream :: lecture
+## <a name="basic_istreamread"></a><a name="read"></a> basic_istream :: lecture
 
 Lit un nombre spécifié de caractères dans le flux et les stocke dans un tableau.
 
@@ -706,7 +707,7 @@ Tableau dans lequel lire les caractères.
 *saut*\
 Nombre de caractères à lire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux ( **`*this`** ).
 
@@ -747,7 +748,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="basic_istreamreadsome"></a><a name="readsome"></a>basic_istream :: readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a> basic_istream :: readsome
 
 Lit le nombre spécifié de valeurs de caractère.
 
@@ -767,7 +768,7 @@ Tableau dans lequel `readsome` stocke les caractères qu’il lit.
 *saut*\
 Nombre de caractères à lire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères réellement lus, [`gcount`](#gcount) .
 
@@ -806,7 +807,7 @@ int main( )
 }
 ```
 
-## <a name="basic_istreamseekg"></a><a name="seekg"></a>basic_istream :: seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a> basic_istream :: seekg
 
 Déplace la position de lecture dans un flux.
 
@@ -827,7 +828,7 @@ Décalage pour déplacer le pointeur de lecture par rapport à la *méthode*.
 *voie*\
 Une des énumérations [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 
@@ -863,7 +864,7 @@ int main ( )
 }
 ```
 
-## <a name="basic_istreamsentry"></a><a name="sentry"></a>basic_istream :: Sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a> basic_istream :: Sentry
 
 La classe imbriquée décrit un objet dont la déclaration structure les fonctions d’entrée avec et sans mise en forme.
 
@@ -887,7 +888,7 @@ Si `_Istr.` [`good`](../standard-library/basic-ios-class.md#good) a la valeur tr
 
 Si, après une telle préparation, `_Istr.good` est false, le constructeur appelle `_Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . Dans tous les cas, le constructeur stocke la valeur retournée par `_Istr.good` dans `status` . Un appel ultérieur à `operator bool` remet cette valeur stockée.
 
-## <a name="basic_istreamswap"></a><a name="swap"></a>basic_istream :: swap
+## <a name="basic_istreamswap"></a><a name="swap"></a> basic_istream :: swap
 
 Échange le contenu de deux objets `basic_istream`.
 
@@ -904,7 +905,7 @@ Référence lvalue à un objet `basic_istream`.
 
 La fonction membre appelle [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) `(right)` . Elle échange également le nombre d’extractions avec le nombre d’extractions pour *Right*.
 
-## <a name="basic_istreamsync"></a><a name="sync"></a>basic_istream :: Sync
+## <a name="basic_istreamsync"></a><a name="sync"></a> basic_istream :: Sync
 
 Synchronise le périphérique d’entrée associé au flux avec la mémoire tampon du flux.
 
@@ -912,11 +913,11 @@ Synchronise le périphérique d’entrée associé au flux avec la mémoire tamp
 int sync();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) est un pointeur null, la fonction retourne-1. Sinon, elle appelle `rdbuf->` [`pubsync`](../standard-library/basic-streambuf-class.md#pubsync) . Si cet appel retourne-1, la fonction appelle [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` et retourne-1. Sinon, la fonction retourne zéro.
 
-## <a name="basic_istreamtellg"></a><a name="tellg"></a>basic_istream :: tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a> basic_istream :: tellg
 
 Indique la position de lecture actuelle dans le flux.
 
@@ -924,7 +925,7 @@ Indique la position de lecture actuelle dans le flux.
 pos_type tellg();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position actuelle dans le flux.
 
@@ -958,7 +959,7 @@ int main()
 }
 ```
 
-## <a name="basic_istreamunget"></a><a name="unget"></a>basic_istream :: unget
+## <a name="basic_istreamunget"></a><a name="unget"></a> basic_istream :: unget
 
 Replace le dernier caractère lu dans le flux.
 
@@ -966,7 +967,7 @@ Replace le dernier caractère lu dans le flux.
 basic_istream<Char_T, Tr>& unget();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux (__* This__).
 

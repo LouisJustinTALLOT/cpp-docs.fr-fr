@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : getpid'
 title: getpid
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - getpid function
 ms.assetid: 4eaabab4-362b-429f-854e-ae4941919824
-ms.openlocfilehash: 22ae4d0f5d9da6157d204aee89c3f60544580b97
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2bdc404734473aafe740fb6029e2447a7e8c632d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326959"
 ---
 # <a name="getpid"></a>getpid
 
-Le nom de fonction POSIX implémenté par Microsoft `getpid` est un alias déconseillé pour la fonction [_getpid](getpid.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+Le nom de fonction POSIX implémenté `getpid` par Microsoft est un alias déconseillé pour la fonction [_getpid](getpid.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
 
 Nous vous recommandons d’utiliser [_getpid](getpid.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.
 

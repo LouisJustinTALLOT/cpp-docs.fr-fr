@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions : to'
 title: to, fonctions
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4e2e8993bfe3ecc85071ab53bcd38c38c9da3370
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326865"
 ---
 # <a name="to-functions"></a>to, fonctions
 
@@ -47,10 +48,10 @@ Les fonctions **to** et les conversions de macro sont les suivantes.
 |`__toascii`|`__toascii`|Convertit `c` en caractère ASCII|
 |`tolower`|`tolower`|Convertit `c` en minuscules si besoin|
 |`_tolower`|`_tolower`|Convertit `c` en minuscules|
-|`towlower`|Aucun|Convertit `c` en lettre minuscule à caractères larges correspondante|
+|`towlower`|None|Convertit `c` en lettre minuscule à caractères larges correspondante|
 |`toupper`|`toupper`|Convertit `c` en majuscules si besoin|
 |`_toupper`|`_toupper`|Convertit `c` en majuscules|
-|`towupper`|Aucun|Convertit c en lettre majuscule à caractères larges correspondante|
+|`towupper`|None|Convertit c en lettre majuscule à caractères larges correspondante|
 
 Pour utiliser les versions de fonction des routines **to** également définies en tant que macros, supprimez les définitions de macro avec des directives `#undef` ou n’incluez pas CTYPE.H. Si vous utilisez l’option de compilateur /Za, le compilateur utilise la version de fonction `toupper` ou `tolower`. Les déclarations des fonctions `toupper` et `tolower` sont dans STDLIB.H.
 

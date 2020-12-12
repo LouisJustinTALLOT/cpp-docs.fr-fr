@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _dup, _dup2'
 title: _dup, _dup2
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e9801cc11b6d7a8d4250f61780c5c9b23dd3e1ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327004"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
@@ -60,17 +61,17 @@ Descripteurs de fichier qui font référence à un fichier ouvert.
 *fd2*<br/>
 Un descripteur de fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_dup** retourne un nouveau descripteur de fichier. **_dup2** retourne 0 pour indiquer la réussite. Si une erreur se produit, chaque fonction retourne-1 et définit **errno** sur **EBADF** si le descripteur de fichier n’est pas valide ou **EMFILE** si aucun descripteur de fichier n’est disponible. En cas de descripteur de fichier non valide, la fonction appelle également le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_dup** et **_dup2** associent un deuxième descripteur de fichier à un fichier actuellement ouvert. Ces fonctions peuvent être utilisées pour associer un descripteur de fichier prédéfini, tel que pour **stdout**, à un fichier différent. Les opérations sur le fichier peuvent être effectuées à l’aide de l’un des descripteurs de fichier. Le type d’accès autorisé pour le fichier n’est pas affecté par la création d’un descripteur. **_dup** retourne le descripteur de fichier disponible suivant pour le fichier donné. **_dup2** force *FD2* à faire référence au même fichier que *FD1 en*. Si *FD2* est associé à un fichier ouvert au moment de l’appel, ce fichier est fermé.
 
-Les **_dup** et **_dup2** accepter les descripteurs de fichiers en tant que paramètres. Pour passer un flux (`FILE *`) à l’une de ces fonctions, utilisez [_fileno](fileno.md). La routine **Fileno** retourne le descripteur de fichier actuellement associé au flux donné. L’exemple suivant montre comment associer **stderr** (défini comme `FILE *` dans stdio. h) à un descripteur de fichier :
+Les **_dup** et **_dup2** accepter les descripteurs de fichiers en tant que paramètres. Pour passer un flux ( `FILE *` ) à l’une de ces fonctions, utilisez [_fileno](fileno.md). La routine **Fileno** retourne le descripteur de fichier actuellement associé au flux donné. L’exemple suivant montre comment associer **stderr** (défini comme `FILE *` dans stdio. h) à un descripteur de fichier :
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -85,7 +86,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -150,7 +151,7 @@ This goes to file 'data'
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

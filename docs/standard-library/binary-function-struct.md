@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct binary_function'
 title: binary_function, struct
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3a38579cc5026903dc7c3b7743afd81773b895b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325543"
 ---
-# <a name="binaryfunction-struct"></a>binary_function, struct
+# <a name="binary_function-struct"></a>binary_function, struct
 
-Struct de base vide qui définit des types qui peuvent être hérités par des classes dérivées qui fournissent un objet de fonction binaire. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
+Struct de base vide qui définit des types qui peuvent être hérités par des classes dérivées qui fournissent un objet de fonction binaire. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +32,7 @@ struct binary_function {
 
 Le struct de modèle sert de base pour les classes qui définissent une fonction membre de la forme :
 
-> *RESULT_TYPE* ** operator() (const ** <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
+> *result_type* * *, opérateur () (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
 
 Toutes ces fonctions binaires peuvent référencer leur premier type d’argument comme *first_argument_type*, leur deuxième type d’argument comme *second_argument_type* et leur type de retour comme *result_type*.
 

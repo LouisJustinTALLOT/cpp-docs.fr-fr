@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : Container Class :: max_size'
 title: Conteneur Class::max_size
 ms.date: 11/04/2016
 helpviewer_keywords:
 - max_size method
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
-ms.openlocfilehash: e03311c0fb279c0f9fdb69b30d3631470ee5bd4a
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: c85c0b02a8e0c1d237ef860e19dc557ddba859ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324852"
 ---
 # <a name="container-classmax_size"></a>Conteneur Class::max_size
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Retourne la longueur de la séquence la plus longue que l’objet peut contrôler, en temps constant, quelle que soit la longueur de la séquence contrôlée.
 

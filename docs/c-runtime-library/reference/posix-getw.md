@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : getw'
 title: getw
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - getw function
 ms.assetid: d3c347a4-3ff1-403b-8d02-2dd3b429bb5f
-ms.openlocfilehash: adca9d13a3d835bdb247bff984803b3396c67f1e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 596380f73e11c05bb8a28dce9963562456d5f6f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326945"
 ---
 # <a name="getw"></a>getw
 

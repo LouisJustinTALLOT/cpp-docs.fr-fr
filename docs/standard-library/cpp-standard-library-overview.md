@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble de la bibliothèque standard C++'
 title: Vue d'ensemble de la bibliothèque standard C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: e4d49b01f9602d5e6d7316a3a258ffa69bbcc369
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25cc206c6990e3dbe75c0a3b703766ab0c0e34ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324759"
 ---
 # <a name="c-standard-library-overview"></a>Vue d'ensemble de la bibliothèque standard C++
 

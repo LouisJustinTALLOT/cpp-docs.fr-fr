@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe binary_negate'
 title: binary_negate, classe
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f97b1ec31623ece91c76b1195c87f75e8cdfd2eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325530"
 ---
 # <a name="binary_negate-class"></a>binary_negate, classe
 
@@ -33,22 +34,22 @@ class binary_negate
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *Func*
+*Func*\
 Fonction binaire à rendre négative.
 
-\ *gauche*
+*gauche*\
 Opérande de gauche de la fonction binaire à rendre négative.
 
-\ *droit*
+*Oui*\
 Opérande de droite de la fonction binaire à rendre négative.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Négation de la fonction binaire.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe stocke une copie d’un objet de fonction binaire *Func*. Elle définit sa fonction membre `operator()` comme retournant `!Func(left, right)`.
+Le modèle de classe stocke une copie d’un objet de fonction binaire *Func*. Elle définit sa fonction membre `operator()` comme retournant `!Func(left, right)` .
 
 Le constructeur de `binary_negate` est rarement utilisé directement. La fonction d’assistance [not2](../standard-library/functional-functions.md#not2) est généralement utilisée en priorité pour déclarer et utiliser le prédicat d’adaptateur **binary_negator**.
 

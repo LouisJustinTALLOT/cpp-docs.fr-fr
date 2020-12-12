@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe binomial_distribution'
 title: binomial_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2cdb55fe312cd19c944ee6279286fe48e515b8a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325476"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution, classe
 
@@ -223,7 +224,7 @@ Histogram for 100 samples:
     21 :
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

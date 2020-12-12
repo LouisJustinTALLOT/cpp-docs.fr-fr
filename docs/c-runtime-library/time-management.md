@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion du temps'
 title: Gestion du temps
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 096207465b1be2eba70e95cff2c226924fc91bd7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8a5b65c66ab89506149c92bd32999be3503c700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326906"
 ---
 # <a name="time-management"></a>Gestion du temps
 
@@ -25,7 +26,7 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 |Fonction|Utilisation|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertit une heure du type **struct tm** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
-|[horloge](../c-runtime-library/reference/clock.md)|Retourne le temps horloge écoulé pour le processus.|
+|[24x7](../c-runtime-library/reference/clock.md)|Retourne le temps horloge écoulé pour le processus.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Convertit une heure de type **time_t**, **__time32_t** ou **__time64_t** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcule la différence entre deux heures.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Stocke l’heure système actuelle dans une variable de type **struct _timeb** ou **struct __timeb64**. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|

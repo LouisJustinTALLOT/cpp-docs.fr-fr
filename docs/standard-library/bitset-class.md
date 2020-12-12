@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe BitSet'
 title: bitset, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 061bbe77a701e2161b3a33ffa94d3b8231b9f541
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325463"
 ---
 # <a name="bitset-class"></a>bitset, classe
 
@@ -59,7 +60,7 @@ Spécifie le nombre de bits dans l’objet BitSet avec un entier différent de z
 
 ## <a name="remarks"></a>Notes
 
-Contrairement à la [ \<bool> classe Vector](../standard-library/vector-bool-class.md)similaire, la classe BitSet n’a pas d’itérateurs et n’est pas un conteneur de bibliothèque standard C++. Elle diffère également de Vector \<bool> par une taille spécifique qui est fixée au moment de la compilation conformément à la taille spécifiée par le paramètre de modèle *N* lorsque le **BitSet \<N\> ** est déclaré.
+Contrairement à la [ \<bool> classe Vector](../standard-library/vector-bool-class.md)similaire, la classe BitSet n’a pas d’itérateurs et n’est pas un conteneur de bibliothèque standard C++. Elle diffère également de Vector \<bool> par une taille spécifique qui est fixée au moment de la compilation conformément à la taille spécifiée par le paramètre de modèle *N* lorsque le **BitSet \<N\>** est déclaré.
 
 Un bit est défini si sa valeur est 1, et est réinitialisé si sa valeur est 0. Basculer ou inverser un bit consiste à passer sa valeur de 1 à 0 ou de 0 à 1. Les *N* bits d’un bitset sont indexés par des valeurs entières allant de 0 à *N* - 1, où 0 indexe la position du premier bit et *N* - 1 la position du bit final.
 
@@ -77,7 +78,7 @@ Un bit est défini si sa valeur est 1, et est réinitialisé si sa valeur est 0.
 |-|-|
 |[element_type](#element_type)|Type qui est un synonyme du type de données **`bool`** et qui peut être utilisé pour référencer les bits d’élément dans un `bitset` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -472,7 +473,7 @@ Copie du bitset modifié pour lequel la fonction membre a été appelée.
 
 #### <a name="remarks"></a>Notes
 
-La deuxième fonction membre lève une exception [out_of_range](../standard-library/out-of-range-class.md) si la position spécifiée comme paramètre est supérieure à la taille *N* du **BitSet \<** *N* **> ** dont le bit a été inversé.
+La deuxième fonction membre lève une exception [out_of_range](../standard-library/out-of-range-class.md) si la position spécifiée comme paramètre est supérieure à la taille *N* du **BitSet \<** *N* **>** dont le bit a été inversé.
 
 #### <a name="example"></a>Exemple
 
@@ -737,7 +738,7 @@ Bitset modifié avec les bits décalés vers la gauche du nombre nécessaire de 
 
 #### <a name="remarks"></a>Notes
 
-La fonction d’opérateur membre retourne **BitSet**( ** \* This**) **<<= POS,** où [<<=](#op_lshift_eq) décale les bits d’un BitSet vers la gauche d’un nombre spécifié de positions et retourne le résultat dans le BitSet ciblé.
+La fonction d’opérateur membre retourne **BitSet**( **\* This**) **<<= POS,** où [<<=](#op_lshift_eq) décale les bits d’un BitSet vers la gauche d’un nombre spécifié de positions et retourne le résultat dans le BitSet ciblé.
 
 #### <a name="example"></a>Exemple
 
@@ -1231,7 +1232,7 @@ Référence au bit dans le BitSet spécifié par la position d’argument pour l
 
 #### <a name="remarks"></a>Notes
 
-La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. Supposons que *b* soit un objet de type **`bool`** , des objets *x* et *y* de type **BitSet \<** *N* **> **et des positions valides *i* et *j* dans ce type d’objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :
+La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. Supposons que *b* soit un objet de type **`bool`** , des objets *x* et *y* de type **BitSet \<** *N* **>** et des positions valides *i* et *j* dans ce type d’objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :
 
 |Opération|Définition|
 |---------------|----------------|
@@ -1521,7 +1522,7 @@ template <class charT = char, class traits = char_traits<charT>, class Allocator
    basic_string<charT, traits, Allocator> to_string(charT zero = charT('0'), charT one = charT('1')) const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur retournée
 
 Objet String de la classe `basic_string` , où chaque bit défini dans le BitSet a un caractère correspondant de 1, et un caractère égal à 0 si le bit n’est pas défini.
 
@@ -1568,7 +1569,7 @@ Retourne une **`unsigned long long`** valeur qui contient les mêmes bits que le
 unsigned long long to_ullong() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur retournée
 
 Retourne la somme des valeurs de bit de la séquence de bits sous forme de **`unsigned long long`** . Cette **`unsigned long long`** valeur recrée les mêmes bits de jeu s’ils sont utilisés pour initialiser un BitSet.
 
@@ -1588,7 +1589,7 @@ Convertit un objet BitSet en un entier qui générerait la séquence de bits con
 unsigned long to_ulong( ) const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur retournée
 
 Entier qui générerait les bits dans un BitSet s’ils sont utilisés dans l’initialisation du BitSet.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : démarrage et arrêt d’un programme C++'
 title: C++, démarrage et terminaison de programme
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 644be6d4392f8e41b1d1cf7d45b484ed9903d463
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324785"
 ---
 # <a name="c-program-startup-and-termination"></a>C++, démarrage et terminaison de programme
 
@@ -37,4 +38,4 @@ Comme avec C, le retour de `main` ou l’appel de `exit` appelle toutes les fonc
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

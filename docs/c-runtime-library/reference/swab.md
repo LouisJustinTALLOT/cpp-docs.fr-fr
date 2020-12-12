@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _swab'
 title: _swab
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 178189ede5330d467e8ec263a4558bb55108f354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326250"
 ---
 # <a name="_swab"></a>_swab
 
@@ -69,9 +70,9 @@ La fonction **écouvillon** ne retourne pas de valeur. La fonction définit **er
 
 Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Si *n* est pair, la fonction **_swab** copie *n* octets de *src*, échange chaque paire d’octets adjacents et stocke le résultat à la *destination*. Si *n* est impair, **_swab** copie et permute les *n*premiers octets de *src*, et l’octet final n’est pas copié. La fonction **_swab** est généralement utilisée pour préparer des données binaires pour le transfert vers un ordinateur qui utilise un ordre d’octet différent.
+Si *n* est pair, la fonction **_swab** copie *n* octets de *src*, échange chaque paire d’octets adjacents et stocke le résultat à la *destination*. Si *n* est impair, **_swab** copie et permute les *n* premiers octets de *src*, et l’octet final n’est pas copié. La fonction **_swab** est généralement utilisée pour préparer des données binaires pour le transfert vers un ordinateur qui utilise un ordre d’octet différent.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

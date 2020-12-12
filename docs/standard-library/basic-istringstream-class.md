@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_istringstream'
 title: basic_istringstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34073c660b5ede3d7df54e9e067ef5c3963671f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325678"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream, classe
 
@@ -64,7 +65,7 @@ Le modèle de classe décrit un objet qui contrôle l’extraction d’élément
 |Fonction membre|Description|
 |-|-|
 |[rdbuf](#rdbuf)|Retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` , `Tr` , `Alloc`>.|
-|[Str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
+|[str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
 |[swap](#swap)|Échange les valeurs de cet objet `basic_istringstream` avec celles de l'objet fourni.|
 
 ### <a name="operators"></a>Opérateurs
@@ -147,7 +148,7 @@ Retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Adresse de la mémoire tampon de flux stockée de type `pointer` à basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
@@ -171,9 +172,9 @@ void str(
 *_Newstr*\
 La nouvelle chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR**, `Alloc`>, dont la séquence contrôlée est une copie de la séquence contrôlée par ** \* ce**.
+Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR**, `Alloc`>, dont la séquence contrôlée est une copie de la séquence contrôlée par **\* ce**.
 
 ### <a name="remarks"></a>Notes
 

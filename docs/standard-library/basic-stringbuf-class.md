@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_stringbuf'
 title: basic_stringbuf, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 578d0e31e08f3e077a908c4344f77da5495df40d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b39c1808a896c79d5c9e938a0a9cc03251c11cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325597"
 ---
 # <a name="basic_stringbuf-class"></a>basic_stringbuf, classe
 
@@ -51,13 +52,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Alloc*\
+*Utilis*\
 Classe allocator.
 
 *Elem*\
 Type de l'élément de base de la chaîne.
 
-*Tr*\
+*TR*\
 Caractéristique spécialisée sur l'élément de base de la chaîne.
 
 ## <a name="remarks"></a>Notes
@@ -80,40 +81,40 @@ Un objet de classe basic_stringbuf < `Elem`, `Tr`, `Alloc`> stocke une copie de 
 
 |Nom de type|Description|
 |-|-|
-|[allocator_type](#allocator_type)|Le type est synonyme du paramètre du modèle *Alloc*.|
+|[allocator_type](#allocator_type)|Le type est un synonyme du paramètre de modèle *Alloc*.|
 |[char_type](#char_type)|Associe un nom de type au paramètre de modèle *Elem*.|
-|[int_type](#int_type)|Rend ce `basic_filebuf`type dans la portée de 's équivalent au type du même nom dans la portée *Tr.*|
-|[off_type](#off_type)|Rend ce `basic_filebuf`type dans la portée de 's équivalent au type du même nom dans la portée *Tr.*|
-|[pos_type](#pos_type)|Rend ce `basic_filebuf`type dans la portée de 's équivalent au type du même nom dans la portée *Tr.*|
+|[int_type](#int_type)|Rend ce type dans la `basic_filebuf` portée de l’équivalent au type du même nom dans l’étendue *TR* .|
+|[off_type](#off_type)|Rend ce type dans la `basic_filebuf` portée de l’équivalent au type du même nom dans l’étendue *TR* .|
+|[pos_type](#pos_type)|Rend ce type dans la `basic_filebuf` portée de l’équivalent au type du même nom dans l’étendue *TR* .|
 |[traits_type](#traits_type)|Associe un nom de type au paramètre de modèle *Tr*.|
 
 ### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[Débordement](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|
+|[surcharge](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|
 |[pbackfail](#pbackfail)|La fonction membre virtuelle protégée tente de remettre un élément dans la mémoire tampon d'entrée, puis en fait l'élément actif (vers lequel pointe le pointeur suivant).|
 |[seekoff](#seekoff)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|
 |[seekpos](#seekpos)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|
-|[Str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
+|[str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
 |swap||
 |[underflow](#underflow)|Fonction membre virtuelle protégée pour extraire l'élément actif du flux d'entrée.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<sstream>
+**En-tête :**\<sstream>
 
 **Espace de noms :** std
 
-## <a name="basic_stringbufallocator_type"></a><a name="allocator_type"></a>basic_stringbuf::allocator_type
+## <a name="basic_stringbufallocator_type"></a><a name="allocator_type"></a> basic_stringbuf :: allocator_type
 
-Le type est synonyme du paramètre du modèle *Alloc*.
+Le type est un synonyme du paramètre de modèle *Alloc*.
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_stringbufbasic_stringbuf"></a><a name="basic_stringbuf"></a>basic_stringbuf::basic_stringbuf
+## <a name="basic_stringbufbasic_stringbuf"></a><a name="basic_stringbuf"></a> basic_stringbuf :: basic_stringbuf
 
 Construit un objet de type `basic_stringbuf`.
 
@@ -136,11 +137,11 @@ Objet de type [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur stocke un pointeur null dans tous les pointeurs contrôlant la mémoire tampon d’entrée et la mémoire tampon de sortie. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-streambuf-class.md). Il stocke également *_Mode* comme mode stringbuf. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-stringbuf-class.md).
+Le premier constructeur stocke un pointeur null dans tous les pointeurs contrôlant la mémoire tampon d’entrée et la mémoire tampon de sortie. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-streambuf-class.md). Il stocke également *_MODE* en tant que mode stringbuf. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-stringbuf-class.md).
 
-Le deuxième constructeur alloue une copie de la séquence contrôlée par *l’objet*à chaîne str . Si `_Mode & ios_base::in` est différent de zéro, elle définit la mémoire tampon d’entrée pour commencer la lecture au début de la séquence. Si `_Mode & ios_base::out` est différent de zéro, elle définit la mémoire tampon de sortie pour commencer l’écriture au début de la séquence. Il stocke également *_Mode* comme mode stringbuf. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-stringbuf-class.md).
+Le deuxième constructeur alloue une copie de la séquence contrôlée par l’objet chaîne *Str*. Si `_Mode & ios_base::in` est différent de zéro, elle définit la mémoire tampon d’entrée pour commencer la lecture au début de la séquence. Si `_Mode & ios_base::out` est différent de zéro, elle définit la mémoire tampon de sortie pour commencer l’écriture au début de la séquence. Il stocke également *_MODE* en tant que mode stringbuf. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-stringbuf-class.md).
 
-## <a name="basic_stringbufchar_type"></a><a name="char_type"></a>basic_stringbuf::char_type
+## <a name="basic_stringbufchar_type"></a><a name="char_type"></a> basic_stringbuf :: char_type
 
 Associe un nom de type au paramètre de modèle *Elem*.
 
@@ -148,23 +149,23 @@ Associe un nom de type au paramètre de modèle *Elem*.
 typedef Elem char_type;
 ```
 
-## <a name="basic_stringbufint_type"></a><a name="int_type"></a>basic_stringbuf::int_type
+## <a name="basic_stringbufint_type"></a><a name="int_type"></a> basic_stringbuf :: int_type
 
-Rend ce type dans la portée de basic_filebuf équivalent au `Tr` type du même nom dans la portée.
+Rend ce type dans la portée de basic_filebuf équivalent au type du même nom dans l' `Tr` étendue.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_stringbufoff_type"></a><a name="off_type"></a>basic_stringbuf::off_type
+## <a name="basic_stringbufoff_type"></a><a name="off_type"></a> basic_stringbuf :: off_type
 
-Rend ce type dans la portée de basic_filebuf équivalent au `Tr` type du même nom dans la portée.
+Rend ce type dans la portée de basic_filebuf équivalent au type du même nom dans l' `Tr` étendue.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_stringbufoverflow"></a><a name="overflow"></a>basic_stringbuf::débordement
+## <a name="basic_stringbufoverflow"></a><a name="overflow"></a> basic_stringbuf :: overflow
 
 Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.
 
@@ -177,19 +178,19 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne `traits_type::eof`. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Notes
 
-Si * \_Meta* ne compare pas égal à **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la fonction de membre virtuel protégé tente d’insérer l’élément **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) dans le tampon de sortie. Elle peut le faire de différentes manières :
+Si *\_ meta* n’est pas égal à **traits_type ::**[EOF](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée tente d’insérer l’élément **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_ meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
 - Elle peut rendre disponible une position d’écriture en allouant du stockage nouveau ou supplémentaire à la mémoire tampon de sortie. Cette façon d’étendre la mémoire tampon de sortie permet également d’étendre les mémoires tampons d’entrée associées.
 
-## <a name="basic_stringbufpbackfail"></a><a name="pbackfail"></a>basic_stringbuf::pbackfail
+## <a name="basic_stringbufpbackfail"></a><a name="pbackfail"></a> basic_stringbuf : échec de la :p
 
 La fonction membre virtuelle protégée tente de replacer un élément dans la mémoire tampon d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
@@ -202,27 +203,27 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne `traits_type::eof`. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Notes
 
-Si *_Meta* compare égale à **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l’élément à repousser est effectivement celui déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par**le traits_type byte::** **byte** = [to_char_type](../standard-library/char-traits-struct.md#to_char_type) *(Meta*). La fonction peut replacer un élément de différentes manières :
+Si *_Meta* est égal à **traits_type ::**[EOF](../standard-library/char-traits-struct.md#eof), l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Dans le cas contraire, cet élément est remplacé par **Byte**  =  **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *meta*). La fonction peut replacer un élément de différentes manières :
 
 - Si une position de remise est disponible et que la valeur de l’élément stocké est égale à byte, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
 - Si une position de remise est disponible et si le mode stringbuf permet de modifier la séquence ( **mode & ios_base::out** différent de zéro), elle peut stocker byte dans la position de remise et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
-## <a name="basic_stringbufpos_type"></a><a name="pos_type"></a>basic_stringbuf::pos-type
+## <a name="basic_stringbufpos_type"></a><a name="pos_type"></a> basic_stringbuf ::p os_type
 
-Rend ce type dans la portée de basic_filebuf équivalent au `Tr` type du même nom dans la portée.
+Rend ce type dans la portée de basic_filebuf équivalent au type du même nom dans l' `Tr` étendue.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_stringbufseekoff"></a><a name="seekoff"></a>basic_stringbuf::seekoff
+## <a name="basic_stringbufseekoff"></a><a name="seekoff"></a> basic_stringbuf :: seekoff
 
 La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.
 
@@ -236,7 +237,7 @@ virtual pos_type seekoff(
 ### <a name="parameters"></a>Paramètres
 
 *_Off*\
-La position à rechercher par rapport à *_Way*. Pour plus d’informations, consultez [basic_stringbuf::off_type](#off_type).
+Position à rechercher relative à *_Way*. Pour plus d’informations, consultez [basic_stringbuf::off_type](#off_type).
 
 *_Way*\
 Point de départ des opérations de décalage. Consultez [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
@@ -244,7 +245,7 @@ Point de départ des opérations de décalage. Consultez [ios_base::seekdir](../
 *_Mode*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture. Pour plus d’informations, consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la nouvelle position ou une position de flux non valide.
 
@@ -254,17 +255,17 @@ Pour un objet de classe `basic_stringbuf<Elem, Tr, Alloc>`, une position de flux
 
 La nouvelle position est déterminée comme suit :
 
-- `_Way`  == Si `ios_base::beg`, la nouvelle position est le début du flux plus *_Off*.
+- Si `_Way`  ==  `ios_base::beg` , la nouvelle position est le début du flux plus *_OFF*.
 
-- `_Way`  == Si `ios_base::cur`, la nouvelle position est la position actuelle du flux plus *_Off*.
+- Si `_Way`  ==  `ios_base::cur` , la nouvelle position est la position actuelle du flux plus *_OFF*.
 
-- `_Way`  == Si `ios_base::end`, la nouvelle position est la fin du flux plus *_Off*.
+- Si `_Way`  ==  `ios_base::end` , la nouvelle position est la fin du flux plus *_OFF*.
 
-Si `_Mode & ios_base::in` est différent de zéro, la fonction modifie la position suivante à lire dans la mémoire tampon d’entrée. Si `_Mode & ios_base::out` est différent de zéro, la fonction modifie la position suivante à écrire dans la mémoire tampon de sortie. Pour qu’un flux soit affecté, sa mémoire tampon doit exister. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée. Si la fonction affecte les deux positions `ios_base::beg` du `ios_base::end` flux, *_Way* doit être ou et les deux flux sont positionnés au même élément. Sinon (ou si aucune position n’est affectée), l’opération de positionnement échoue.
+Si `_Mode & ios_base::in` est différent de zéro, la fonction modifie la position suivante à lire dans la mémoire tampon d’entrée. Si `_Mode & ios_base::out` est différent de zéro, la fonction modifie la position suivante à écrire dans la mémoire tampon de sortie. Pour qu’un flux soit affecté, sa mémoire tampon doit exister. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée. Si la fonction affecte les deux positions de flux, *_Way* doit être `ios_base::beg` ou `ios_base::end` et les deux flux sont positionnés au même élément. Sinon (ou si aucune position n’est affectée), l’opération de positionnement échoue.
 
 Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide.
 
-## <a name="basic_stringbufseekpos"></a><a name="seekpos"></a>basic_stringbuf::seekpos
+## <a name="basic_stringbufseekpos"></a><a name="seekpos"></a> basic_stringbuf :: seekpos
 
 La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.
 
@@ -280,7 +281,7 @@ Position à rechercher.
 *_Mode*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
@@ -290,7 +291,7 @@ Pour un objet de classe basic_stringbuf<**Elem**, **Tr**, `Alloc`>, une position
 
 Si **mode & ios_base::in** est différent de zéro, la fonction modifie la position suivante à lire dans la mémoire tampon d’entrée. Si **mode & ios_base::out** est différent de zéro, la fonction modifie la position suivante à écrire dans la mémoire tampon de sortie. Pour qu’un flux soit affecté, sa mémoire tampon doit exister. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée. Sinon (ou si aucune position n’est affectée), l’opération de positionnement échoue.
 
-## <a name="basic_stringbufstr"></a><a name="str"></a>basic_stringbuf::str
+## <a name="basic_stringbufstr"></a><a name="str"></a> basic_stringbuf :: Str
 
 Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.
 
@@ -305,9 +306,9 @@ void str(
 *_Newstr*\
 La nouvelle chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md)\< **Elem**, **Tr**, Alloc **>,** dont la séquence contrôlée est une copie de la séquence contrôlée par **\*this**.
+Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md) \< **Elem**, **Tr**, Alloc **> , * * dont la séquence contrôlée est une copie de la séquence contrôlée par **\* ce**.
 
 ### <a name="remarks"></a>Notes
 
@@ -319,7 +320,7 @@ La première fonction membre retourne un objet de classe basic_string< **Elem**,
 
 - Sinon, la séquence copiée est vide.
 
-La deuxième fonction de membre traite toute ** \*** séquence actuellement contrôlée par ceci . Il alloue ensuite une copie de la séquence contrôlée par *_Newstr*. Si **mode & ios_base::in** est différent de zéro, elle définit la mémoire tampon d’entrée pour commencer la lecture au début de la séquence. Si **mode & ios_base::out** est différent de zéro, elle définit la mémoire tampon de sortie pour commencer l’écriture au début de la séquence.
+La deuxième fonction membre libère toute séquence actuellement contrôlée par **\* ce**. Elle alloue ensuite une copie de la séquence contrôlée par *_Newstr*. Si **mode & ios_base::in** est différent de zéro, elle définit la mémoire tampon d’entrée pour commencer la lecture au début de la séquence. Si **mode & ios_base::out** est différent de zéro, elle définit la mémoire tampon de sortie pour commencer l’écriture au début de la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -353,7 +354,7 @@ zest
 be
 ```
 
-## <a name="basic_stringbuftraits_type"></a><a name="traits_type"></a>basic_stringbuf::traits_type
+## <a name="basic_stringbuftraits_type"></a><a name="traits_type"></a> basic_stringbuf :: traits_type
 
 Associe un nom de type au paramètre de modèle *Tr*.
 
@@ -365,7 +366,7 @@ typedef Tr traits_type;
 
 Le type est un synonyme du paramètre de modèle *Tr*.
 
-## <a name="basic_stringbufunderflow"></a><a name="underflow"></a>basic_stringbuf::underflow
+## <a name="basic_stringbufunderflow"></a><a name="underflow"></a> basic_stringbuf :: dépassement de capacité négatif
 
 Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.
 
@@ -373,15 +374,15 @@ Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la fonction ne peut pas réussir, elle revient **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Sinon, elle retourne l’élément actuel dans le flux d’entrée, qui est converti.
+Si la fonction ne peut pas être exécutée correctement, elle retourne **traits_type ::**[EOF](../standard-library/char-traits-struct.md#eof). Sinon, elle retourne l’élément actuel dans le flux d’entrée, qui est converti.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de membre virtuel protégée `byte` tente d’extraire l’élément actuel du tampon d’entrée, de faire progresser la position actuelle du flux et de retourner l’élément comme **traits_type : :**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**). Il peut le faire d’une manière: Si `byte` une position de lecture est disponible, il prend comme l’élément stocké dans la position de lecture et avance le pointeur suivant pour le tampon d’entrée.
+La fonction membre virtuelle protégée essaie d’extraire l’élément actuel `byte` de la mémoire tampon d’entrée, d’avancer la position actuelle du flux et de retourner l’élément comme **traits_type ::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**). Elle peut le faire d’une façon : si une position de lecture est disponible, elle prend `byte` comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf::swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf :: swap
 
 Permute le contenu de cette mémoire tampon de chaîne avec une autre mémoire tampon de chaîne.
 
@@ -391,12 +392,12 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres*\
+*autres*\
 basic_stringbuf dont le contenu sera permuté avec ce basic_stringbuf.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="basic_stringbufoperator"></a><a name="op_eq"></a>basic_stringbuf::opérateur
+## <a name="basic_stringbufoperator"></a><a name="op_eq"></a> basic_stringbuf :: Operator =
 
 Assigne le contenu de basic_stringbuf à droite de l’opérateur à basic_stringbuf à gauche.
 
@@ -406,13 +407,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Paramètres
 
-*Autres*\
+*autres*\
 Un basic_stringbuf dont le contenu, y compris les caractéristiques des paramètres régionaux, sera assigné au stringbuf à gauche de l'opérateur.
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programmation iostream](../standard-library/iostream-programming.md)\
-[iostreams, conventions](../standard-library/iostreams-conventions.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[Conventions iostreams](../standard-library/iostreams-conventions.md)

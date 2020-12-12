@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure short_vector'
 title: short_vector Structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54879df686210606c99a1ae5b9ccc7a31f7fca25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327605"
 ---
 # <a name="short_vector-structure"></a>short_vector Structure
 
-short_vector fournit des définitions de métaprogrammation qui sont utiles pour la programmation de courts vecteurs génériquement.
+short_vector fournit des définitions de la surprogrammation qui sont utiles pour la programmation de vecteurs courts de façon générique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -101,11 +102,11 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace nom:** Concordrency::graphiques
+**Espace de noms :** Concurrency :: Graphics
 
-## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector::short_vector Constructeur
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a> short_vector :: short_vector, constructeur
 
 ```cpp
 short_vector();

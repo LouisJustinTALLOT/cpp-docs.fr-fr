@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : créer des ressources (C++)'
 title: 'Comment : créer des ressources (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 88618a5b1184ce9774a58f575a3fbff2d5e63ba4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 812e67dce80eedf17bb137af0b1d5e74f3dbcb66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327060"
 ---
 # <a name="how-to-create-resources-c"></a>Comment : créer des ressources (C++)
 
@@ -96,7 +97,7 @@ Vous pouvez afficher les ressources dans un fichier de script de ressources sans
 
 Lorsque vous générez une application MFC (Microsoft Foundation Class) pour Windows à l’aide de l' [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’Assistant génère un ensemble de fichiers de base, y compris un fichier de script de ressources (. RC), qui contient les fonctionnalités de base de MFC. Toutefois, ces fonctionnalités spécifiques à MFC ne sont pas disponibles lors de la modification d’un fichier. RC pour les applications Windows qui ne sont pas basées sur MFC. Cela comprend les assistants code, les chaînes d’invite de menu, le contenu de liste pour les contrôles de zone de liste déroulante et l’hébergement de contrôles ActiveX.
 
-- Pour ajouter la prise en charge MFC, avec le fichier de script de ressources ouvert, dans **affichage des ressources**, mettez en surbrillance le dossier ressources (par exemple, *MFC. RC*). Ensuite, dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), affectez la valeur **true**au **mode MFC** .
+- Pour ajouter la prise en charge MFC, avec le fichier de script de ressources ouvert, dans **affichage des ressources**, mettez en surbrillance le dossier ressources (par exemple, *MFC. RC*). Ensuite, dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), affectez la valeur **true** au **mode MFC** .
 
   > [!NOTE]
   > En plus de définir le **mode MFC**, le fichier. RC doit faire partie d’un projet MFC. L’affectation de la **valeur true** au **mode MFC** sur un fichier. rc dans un projet Win32 n’offre pas de fonctionnalités MFC.
@@ -154,7 +155,7 @@ Après la personnalisation d’un modèle de ressource, enregistrez vos modifica
 > [!NOTE]
 > Placez les fichiers modèles spécifiques à une langue dans les sous-répertoires du répertoire principal du modèle. Par exemple, les fichiers de modèles en anglais sont placés dans *.. \\<répertoire de modèles de ressources \> \ 1033*.
 >
-> Visual Studio recherche de nouveaux fichiers. RCT dans *\Program Files\Microsoft Visual Studio \<version\> \VC\VCResourceTemplates*, *\Program files\microsoft Visual Studio \<version> \VC\VCResourceTemplates \\<LCID \> * (comme un LCID de 1033 pour l’anglais) ou n’importe où sur le [chemin d’accès include](./how-to-include-resources-at-compile-time.md). Si vous préférez stocker vos fichiers. RCT dans un autre emplacement, vous devez ajouter l’emplacement au chemin d’accès include.
+> Visual Studio recherche de nouveaux fichiers. RCT dans *\Program Files\Microsoft Visual Studio \<version\> \VC\VCResourceTemplates*, *\Program files\microsoft Visual Studio \<version> \VC\VCResourceTemplates \\<LCID \>* (comme un LCID de 1033 pour l’anglais) ou n’importe où sur le [chemin d’accès include](./how-to-include-resources-at-compile-time.md). Si vous préférez stocker vos fichiers. RCT dans un autre emplacement, vous devez ajouter l’emplacement au chemin d’accès include.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Pour créer et utiliser un modèle de ressource
 
@@ -182,7 +183,7 @@ Après la personnalisation d’un modèle de ressource, enregistrez vos modifica
 
 Une fois le fichier de script de ressources ouvert, dans le menu, accédez à **fichier**  >  **Enregistrer \<*filename*> sous**. Spécifiez un emplacement, puis choisissez **OK**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

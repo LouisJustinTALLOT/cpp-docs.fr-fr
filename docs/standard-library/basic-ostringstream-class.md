@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_ostringstream'
 title: basic_ostringstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - std::basic_ostringstream [C++], rdbuf
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
-ms.openlocfilehash: 9e10474d3e4fb2a37e8ab52f77495758c37e8a5b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b745f6b733d093b620e15d0aa22593713988caf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325639"
 ---
 # <a name="basic_ostringstream-class"></a>basic_ostringstream, classe
 
-Décrit un objet qui contrôle l’insertion d’éléments et d’objets codés dans `Alloc` un tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>.
+Décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,18 +33,18 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-*Alloc*\
+*Utilis*\
 Classe allocator.
 
 *Elem*\
 Type de l'élément de base de la chaîne.
 
-*Tr*\
+*TR*\
 Caractéristique spécialisée sur l'élément de base de la chaîne.
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un objet qui contrôle l’insertion d’éléments et d’objets codés dans un tampon de flux, avec des éléments de type, `Elem`dont les traits de caractère sont déterminés par la classe `Tr`, et dont les éléments sont attribués par un allocateur de classe `Alloc`. L’objet stocke un objet de classe basic_stringbuf<**Elem**, **Tr**, `Alloc`>.
+La classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux, avec des éléments de type `Elem` , dont les caractéristiques sont déterminées par la classe `Tr` , et dont les éléments sont alloués par un allocateur de classe `Alloc` . L’objet stocke un objet de classe basic_stringbuf<**Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -55,30 +56,30 @@ La classe décrit un objet qui contrôle l’insertion d’éléments et d’obj
 
 |Nom de type|Description|
 |-|-|
-|[allocator_type](#allocator_type)|Le type est synonyme du paramètre du modèle *Alloc*.|
+|[allocator_type](#allocator_type)|Le type est un synonyme du paramètre de modèle *Alloc*.|
 
 ### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[rdbuf](#rdbuf)|Retourne l’adresse du tampon `pointer` de flux stocké de `Alloc` type à [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`>.|
-|[Str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
+|[rdbuf](#rdbuf)|Retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` , `Tr` , `Alloc`>.|
+|[str](#str)|Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<sstream>
+**En-tête :**\<sstream>
 
 **Espace de noms :** std
 
-## <a name="basic_ostringstreamallocator_type"></a><a name="allocator_type"></a>basic_ostringstream::allocator_type
+## <a name="basic_ostringstreamallocator_type"></a><a name="allocator_type"></a> basic_ostringstream :: allocator_type
 
-Le type est synonyme du paramètre du modèle *Alloc*.
+Le type est un synonyme du paramètre de modèle *Alloc*.
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_ostringstreambasic_ostringstream"></a><a name="basic_ostringstream"></a>basic_ostringstream::basic_ostringstream
+## <a name="basic_ostringstreambasic_ostringstream"></a><a name="basic_ostringstream"></a> basic_ostringstream :: basic_ostringstream
 
 Construit un objet de type basic_ostringstream.
 
@@ -94,35 +95,35 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *Str*\
-Objet de type `basic_string`.
+Objet de type `basic_string`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la classe de base en appelant `sb` [basic_ostream](../standard-library/basic-ostream-class.md)( sb ), où est `Alloc` **l’objet**stocké de la classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>. Il initialise également **sb** en appelant basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
+Le premier constructeur initialise la classe de base en appelant [basic_ostream](../standard-library/basic-ostream-class.md)( **SB**), où `sb` est l’objet stocké de la classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>. Il initialise également **sb** en appelant basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
 
-Le deuxième constructeur initialise la classe de base en appelant basic_ostream( **sb**). Il est également `sb` parasémis en appelant basic_stringbuf< `Alloc` **Elem**, *Str* **Tr** `_Mode` ,> `ios_base::out`, &#124; ).
+Le deuxième constructeur initialise la classe de base en appelant basic_ostream( **sb**). Elle s’initialise également `sb` en appelant basic_stringbuf< **elem**, **TR**, `Alloc`> (_ *Str*, `_Mode` &#124; `ios_base::out` ).
 
-## <a name="basic_ostringstreamrdbuf"></a><a name="rdbuf"></a>basic_ostringstream::rdbuf
+## <a name="basic_ostringstreamrdbuf"></a><a name="rdbuf"></a> basic_ostringstream :: rdbuf
 
-Retourne l’adresse du tampon `pointer` de flux stocké de type `Alloc` à [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>.
+Retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-L’adresse du tampon de `pointer` flux stocké, de type pour basic_stringbuf `Alloc`< **Elem**, **Tr**,>.
+Adresse de la mémoire tampon de flux stockée, de type `pointer` à basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie l’adresse `pointer` du tampon de flux stocké de type `Alloc` à basic_stringbuf< **Elem**, **Tr**,>.
+La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type `pointer` à basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
 ### <a name="example"></a>Exemple
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 
-## <a name="basic_ostringstreamstr"></a><a name="str"></a>basic_ostringstream::str
+## <a name="basic_ostringstreamstr"></a><a name="str"></a> basic_ostringstream :: Str
 
 Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier la position d'écriture.
 
@@ -138,20 +139,20 @@ void str(
 *_Newstr*\
 La nouvelle chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, dont la séquence contrôlée est une copie de la séquence contrôlée par ** \*ce**.
+Retourne un objet de classe [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR**, `Alloc`>, dont la séquence contrôlée est une copie de la séquence contrôlée par **\* ce**.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). La deuxième fonction `rdbuf`  -> de `_Newstr`membre appelle **str**( ).
+La première fonction membre retourne [rdbuf](#rdbuf)  ->  [Str](../standard-library/basic-stringbuf-class.md#str). La deuxième fonction membre appelle `rdbuf`  ->  **Str**( `_Newstr` ).
 
 ### <a name="example"></a>Exemple
 
-Voir [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) par exemple qui `str`utilise .
+Consultez [basic_stringbuf :: Str](../standard-library/basic-stringbuf-class.md#str) pour obtenir un exemple qui utilise `str` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programmation iostream](../standard-library/iostream-programming.md)\
-[iostreams, conventions](../standard-library/iostreams-conventions.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream, programmation](../standard-library/iostream-programming.md)\
+[Conventions iostreams](../standard-library/iostreams-conventions.md)

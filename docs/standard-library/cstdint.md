@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : &lt; cstdint&gt;'
 title: '&lt;cstdint&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: 142ea2b341dad307dea98d1406803a1e7eca5e78
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3edaadf3a5f10e379d943460d24c75fbb0eb091e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324707"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
-Inclut l’en-tête \<stdint.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<stdint.h> et ajoute les noms associés à l' `std` espace de noms. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,5 +72,5 @@ SIZE_MAX
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)

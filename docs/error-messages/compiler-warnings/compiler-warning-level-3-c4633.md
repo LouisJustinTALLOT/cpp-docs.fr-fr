@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 3) C4633'
 title: Avertissement du compilateur (niveau 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: 91a1f2a646adca7cf121528779bf0ded4d37024e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3818d0a54f9ebc43b5686eefa73f10f9036a6373
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325944"
 ---
 # <a name="compiler-warning-level-3-c4633"></a>Avertissement du compilateur (niveau 3) C4633
 
 Cible de commentaire de document XML : erreur : raison
 
-Un nom passé à la balise [\<param >](../../build/reference/param-visual-cpp.md) est introuvable par le compilateur.
+Le compilateur n’a pas trouvé de nom passé à la [\<param>](../../build/reference/param-visual-cpp.md) balise.
 
 L’exemple suivant génère l’C4633 :
 

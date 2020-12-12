@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_ofstream'
 title: basic_ofstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: d825dbbe278325e755af6fdffe01a34ac0a4080d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10bb7ee14ea6b126ee907cbb8b56b3b3c31188a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325665"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream, classe
 
@@ -80,7 +81,7 @@ int main(int argc, char **argv)
 
 |Fonction membre|Description|
 |-|-|
-|[plus](#close)|Ferme un fichier.|
+|[close](#close)|Ferme un fichier.|
 |[is_open](#is_open)|Détermine si un fichier est ouvert.|
 |[open](#open)|Ouvre un fichier.|
 |[rdbuf](#rdbuf)|Retourne l'adresse de la mémoire tampon de flux stockée.|
@@ -98,7 +99,7 @@ int main(int argc, char **argv)
 
 **Espace de noms :** std
 
-## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream :: basic_ofstream
+## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a> basic_ofstream :: basic_ofstream
 
 Crée un objet de type `basic_ofstream`.
 
@@ -163,7 +164,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream :: Close
+## <a name="basic_ofstreamclose"></a><a name="close"></a> basic_ofstream :: Close
 
 Ferme un fichier.
 
@@ -179,7 +180,7 @@ La fonction membre appelle [rdbuf](../standard-library/basic-ifstream-class.md#r
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `close`.
 
-## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream :: is_open
+## <a name="basic_ofstreamis_open"></a><a name="is_open"></a> basic_ofstream :: is_open
 
 Indique si un fichier est ouvert.
 
@@ -187,7 +188,7 @@ Indique si un fichier est ouvert.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le fichier est ouvert ; **`false`** sinon,.
 
@@ -217,7 +218,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream :: Open
+## <a name="basic_ofstreamopen"></a><a name="open"></a> basic_ofstream :: Open
 
 Ouvre un fichier.
 
@@ -260,7 +261,7 @@ La fonction membre appelle [rdbuf](#rdbuf) **->** [Open](../standard-library/bas
 
 Consultez [basic_filebuf :: Open](../standard-library/basic-filebuf-class.md#open) pour obtenir un exemple qui utilise `open` .
 
-## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream :: Operator =
+## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a> basic_ofstream :: Operator =
 
 Assigne le contenu de cet objet de flux. Il s'agit d'une assignation de déplacement impliquant une `rvalue reference` qui ne laisse pas de copie.
 
@@ -273,7 +274,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 *Oui*\
 Référence rvalue à un objet `basic_ofstream`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`*this`** .
 
@@ -281,7 +282,7 @@ Retourne **`*this`** .
 
 L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue.
 
-## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream :: rdbuf
+## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a> basic_ofstream :: rdbuf
 
 Retourne l'adresse de la mémoire tampon de flux stockée.
 
@@ -289,7 +290,7 @@ Retourne l'adresse de la mémoire tampon de flux stockée.
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l'adresse de la mémoire tampon de flux stockée.
 
@@ -297,7 +298,7 @@ Retourne l'adresse de la mémoire tampon de flux stockée.
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 
-## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream :: swap
+## <a name="basic_ofstreamswap"></a><a name="swap"></a> basic_ofstream :: swap
 
 Échange le contenu de deux objets `basic_ofstream`.
 

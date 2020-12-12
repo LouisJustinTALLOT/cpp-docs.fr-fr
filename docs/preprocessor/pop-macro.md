@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma pop_macro'
 title: pop_macro, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325704"
 ---
 # <a name="pop_macro-pragma"></a>pop_macro, pragma
 
@@ -25,7 +26,7 @@ Affecte à la valeur de la macro de *nom de macro* la valeur en haut de la pile 
 
 ## <a name="remarks"></a>Notes
 
-Un [push_macro](../preprocessor/push-macro.md) pour la *macro-Name* doit être émis pour que vous puissiez effectuer un **pop_macro**.
+Vous devez émettre une [push_macro](../preprocessor/push-macro.md) pour *macro-Name* pour pouvoir effectuer une **pop_macro**.
 
 ## <a name="example"></a>Exemple
 
@@ -63,4 +64,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

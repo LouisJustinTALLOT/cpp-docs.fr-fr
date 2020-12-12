@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCColorButton'
 title: CMFCColorButton, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b3f3e40f1e52c1a387563fde2aa1027046d557f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327692"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton, classe
 
@@ -110,9 +111,9 @@ class CMFCColorButton : public CMFCButton
 |`m_nColumns`|Entier. Contient le nombre de colonnes à afficher dans la grille de couleurs dans un menu de sélection de couleurs.|
 |`m_pPalette`|Pointeur vers un [cpalette](../../mfc/reference/cpalette-class.md). Contient les couleurs qui sont disponibles dans le menu de sélection de la couleur actuelle.|
 |`m_pPopup`|Pointeur vers un objet de [classe CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md) . Menu de sélection de couleur qui s’affiche lorsque vous cliquez sur le bouton couleur.|
-|`m_strAutoColorText`|Chaîne. Étiquette du bouton « automatique » dans un menu de sélection de couleurs.|
-|`m_strDocColorsText`|Chaîne. Étiquette du bouton dans un menu de sélection de couleur qui affiche les couleurs du document.|
-|`m_strOtherText`|Chaîne. Étiquette du bouton « autre » dans un menu de sélection de couleurs.|
+|`m_strAutoColorText`|Une chaîne. Étiquette du bouton « automatique » dans un menu de sélection de couleurs.|
+|`m_strDocColorsText`|Une chaîne. Étiquette du bouton dans un menu de sélection de couleur qui affiche les couleurs du document.|
+|`m_strOtherText`|Une chaîne. Étiquette du bouton « autre » dans un menu de sélection de couleurs.|
 
 ## <a name="remarks"></a>Notes
 
@@ -201,7 +202,7 @@ Récupère la couleur automatique (par défaut) actuelle.
 COLORREF GetAutomaticColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur RVB représentant la couleur automatique actuelle.
 
@@ -217,7 +218,7 @@ Récupère la couleur actuellement sélectionnée.
 COLORREF GetColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur RVB.
 
@@ -231,7 +232,7 @@ Indique si le bouton de couleur actuel est affiché dans le style visuel de Wind
 BOOL IsDrawXPTheme() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les styles visuels sont pris en charge et que le bouton de couleur actuel est affiché dans le style visuel de Windows XP ; Sinon, FALSe.
 
@@ -448,7 +449,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 *bCalcOnly*<br/>
 dans Si la valeur est différente de zéro, la nouvelle taille du contrôle bouton est calculée, mais la taille réelle n’est pas modifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CSize`Objet qui spécifie une nouvelle taille de contrôle bouton.
 

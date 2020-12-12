@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : classe de norme'
 title: norm, classe
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: b5740f33dea6aad79770f77f179803023432248a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29e376e5e42212c87ae244c7a606a38d6a07ddf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327649"
 ---
 # <a name="norm-class"></a>norm, classe
 
@@ -26,22 +27,22 @@ class norm;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur normal](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0.0 f.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |normal :: Operator-||
 |normal :: Operator--||
 |normal :: operator float|Opérateur de conversion. Convertit le nombre normal en valeur à virgule flottante.|
-|norm::operator*=||
+|normal :: Operator * =||
 |normal :: Operator/=||
-|norm::operator++||
-|norm::operator+=||
-|norm::operator=||
+|norme :: Operator + +||
+|norme :: Operator + =||
+|norme :: Operator =||
 |normal :: Operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
@@ -54,7 +55,7 @@ class norm;
 
 **Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a>rendement
+## <a name="norm"></a><a name="ctor"></a> rendement
 
 Constructeur par défaut. Initialiser à 0.0 f.
 

@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : conteneur Class :: Size'
 title: Conteneur Class::size
 ms.date: 11/04/2016
 helpviewer_keywords:
 - size method
 ms.assetid: 67073661-2699-4534-ad3b-31a906658dc5
-ms.openlocfilehash: 473d179bf8fbb45d843fab75db1aeb2ea1df225c
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 4cdf3dff9160efdb60221a413486dd0be56d31f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324813"
 ---
 # <a name="container-classsize"></a>Conteneur Class::size
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 Retourne la longueur de la séquence contrôlée en temps constant, quelle qu’elle soit.
 

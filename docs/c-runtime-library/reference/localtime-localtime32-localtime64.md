@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : localtime, _localtime32, _localtime64'
 title: localtime, _localtime32, _localtime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e19e419be52788bfd0e4f4a67c72ef8a6737993e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326293"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -62,7 +63,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 *sourceTime*<br/>
 Pointeur désignant la valeur de temps stockée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers le résultat de la structure, ou **null** si la date passée à la fonction est :
 
@@ -74,7 +75,7 @@ Retourne un pointeur vers le résultat de la structure, ou **null** si la date p
 
 **_localtime64**, qui utilise la structure **__time64_t** , permet d’exprimer les dates 23:59:59 jusqu’au 31 décembre 3000, à savoir le temps universel coordonné (UTC), tandis que **_localtime32** représente les dates 23:59:59 jusqu’au 18 janvier 2038, heure UTC.
 
-**localtime** est une fonction inline qui prend la valeur **_localtime64**et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **localtime** est évalué à **_localtime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**localtime** est une fonction inline qui prend la valeur **_localtime64** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t** 32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **localtime** est évalué à **_localtime32**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 Les champs de la structure type [TM](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant **`int`** :
 
@@ -98,7 +99,7 @@ La fonction **localtime** convertit une heure stockée en tant que valeur [time_
 
 Les versions 32 bits et 64 bits de [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)et **localtime** utilisent toutes les deux une seule structure **TM** par thread pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
 
-**localtime** corrige le fuseau horaire local si l’utilisateur définit d’abord la variable d’environnement globale **TZ**. Quand **TZ** est défini, trois autres variables d’environnement (**_timezone**, **_daylight**et **_tzname**) sont automatiquement définies. Si la variable **TZ** n’est pas définie, le port **localtime** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application date/heure du panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition ANSI standard de **localtime**.
+**localtime** corrige le fuseau horaire local si l’utilisateur définit d’abord la variable d’environnement globale **TZ**. Quand **TZ** est défini, trois autres variables d’environnement (**_timezone**, **_daylight** et **_tzname**) sont automatiquement définies. Si la variable **TZ** n’est pas définie, le port **localtime** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application date/heure du panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition ANSI standard de **localtime**.
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur.

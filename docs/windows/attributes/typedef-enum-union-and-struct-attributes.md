@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les attributs typedef, enum, Union et struct
 title: Attributs typedef, enum, Union et struct (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f72f5ff45709287d31aa4da05b2569a0b37baff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327237"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributs Typedef, Enum, Union et Struct
 
@@ -20,7 +21,7 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 
 |Attribut|Description|
 |---------------|-----------------|
-|[études](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans un **`union`** .|
+|[case](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans un **`union`** .|
 |[propre](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[exporter](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau à transmettre.|
@@ -82,7 +83,7 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 |[db_param](db-param.md)|Associe la variable de membre spécifiée à un paramètre d’entrée ou de sortie et délimite la variable.|
 |[db_source](db-source.md)|Crée une connexion à une source de données.|
 |[db_table](db-table.md)|Ouvre une table OLE DB.|
-|[valeurs](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
+|[default](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
 |[defaultvtable](defaultvtable.md)|Définit une interface comme interface vtable par défaut pour un contrôle.|
 |[event_receiver](event-receiver.md)|Crée un récepteur d’événements.|
 |[event_source](event-source.md)|Crée une source d'événement.|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : alignement des données'
 title: Alignement des données
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - data alignment [C++]
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
-ms.openlocfilehash: 92b8df81751e01e655e348d5f090705e5194312b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cd942d0ec9c4cdfbedf473bf005123061dece669
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326348"
 ---
 # <a name="data-alignment"></a>Alignement des données
 
@@ -19,7 +20,7 @@ Les fonctions Runtime C suivantes prennent en charge l’alignement des données
 
 ## <a name="data-alignment-routines"></a>Routines d’alignement des données
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_aligned_free](../c-runtime-library/reference/aligned-free.md)|Libère un bloc de mémoire qui a été alloué avec [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../c-runtime-library/reference/aligned-offset-malloc.md).|
 |[_aligned_free_dbg](../c-runtime-library/reference/aligned-free-dbg.md)|Libère un bloc de mémoire qui a été alloué avec [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../c-runtime-library/reference/aligned-offset-malloc.md) (version de débogage uniquement).|

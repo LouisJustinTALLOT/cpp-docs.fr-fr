@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : éditeur binaire (C++)'
 title: Éditeur binaire (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8abe63f662d25b5e8108d0671dd17490143a07fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327211"
 ---
 # <a name="binary-editor-c"></a>Éditeur binaire (C++)
 
@@ -35,9 +36,9 @@ ms.locfileid: "91503530"
 
 L' **Éditeur binaire** vous permet de modifier n’importe quelle ressource au niveau binaire au format hexadécimal ou ASCII. Vous pouvez également utiliser la [commande Rechercher](/visualstudio/ide/reference/find-command) pour rechercher des chaînes ASCII ou des octets hexadécimaux. Utilisez l' **Éditeur binaire** uniquement lorsque vous avez besoin d’afficher ou d’apporter des modifications mineures à des ressources personnalisées ou à des types de ressources non pris en charge par l’environnement Visual Studio. L' **Éditeur binaire** n’est pas disponible dans les éditions Express.
 
-- Pour ouvrir l' **Éditeur binaire** sur un nouveau fichier, accédez à menu **fichier**  >  **nouveau**  >  **fichier**, sélectionnez le type de fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec**l'  >  **Éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un nouveau fichier, accédez à menu **fichier**  >  **nouveau**  >  **fichier**, sélectionnez le type de fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** l'  >  **Éditeur binaire**.
 
-- Pour ouvrir l' **Éditeur binaire** sur un fichier existant, accédez à menu **fichier**  >  **ouvrir**un  >  **fichier**, sélectionnez le fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec**l'  >  **Éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un fichier existant, accédez à menu **fichier**  >  **ouvrir** un  >  **fichier**, sélectionnez le fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** l'  >  **Éditeur binaire**.
 
    ![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Données binaires pour une boîte de dialogue affichée dans l' **Éditeur binaire**
@@ -45,7 +46,7 @@ L' **Éditeur binaire** vous permet de modifier n’importe quelle ressource au 
 Seules certaines valeurs ASCII sont représentées dans l' **Éditeur binaire** (0X20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section valeur ASCII du volet droit de l' **Éditeur binaire**. Les caractères imprimables sont des valeurs ASCII 32 à 126.
 
 > [!TIP]
-> Lorsque vous utilisez l' **Éditeur binaire**, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Les commandes disponibles varient selon la cible du pointeur. Par exemple, si vous cliquez avec le bouton droit de la souris en pointant sur l' **Éditeur binaire** avec des valeurs hexadécimales sélectionnées, le menu contextuel affiche les commandes **couper**, **copier**et **coller** .
+> Lorsque vous utilisez l' **Éditeur binaire**, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Les commandes disponibles varient selon la cible du pointeur. Par exemple, si vous cliquez avec le bouton droit de la souris en pointant sur l' **Éditeur binaire** avec des valeurs hexadécimales sélectionnées, le menu contextuel affiche les commandes **couper**, **copier** et **coller** .
 
 ## <a name="how-to"></a>Procédure
 
@@ -90,7 +91,7 @@ Si vous souhaitez utiliser l' **Éditeur binaire** sur une ressource déjà en c
 
 Vous pouvez rechercher des chaînes ASCII ou des octets hexadécimaux. Par exemple, pour rechercher *Hello*, vous pouvez rechercher la chaîne *Hello* ou sa valeur hexadécimale, *48 65 6C 6C 6F*.
 
-1. Accédez au menu **modifier**la  >  [recherche](/visualstudio/ide/reference/find-command).
+1. Accédez au menu **modifier** la  >  [recherche](/visualstudio/ide/reference/find-command).
 
 1. Dans la zone **Rechercher** , sélectionnez une chaîne de recherche précédente dans la liste déroulante ou tapez les données que vous souhaitez rechercher.
 
@@ -121,9 +122,9 @@ Une autre façon de créer une ressource personnalisée consiste à importer un 
 > [!NOTE]
 > La création de nouvelles ressources personnalisées ou de données requiert Win32.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

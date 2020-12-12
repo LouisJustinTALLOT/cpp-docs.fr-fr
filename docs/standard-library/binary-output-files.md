@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fichiers de sortie binaires'
 title: Fichiers de sortie binaires
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: acbefe8eb7f091bf3d323f25ff00464068d9b1f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325516"
 ---
 # <a name="binary-output-files"></a>Fichiers de sortie binaires
 
@@ -30,7 +31,7 @@ int main( )
 }
 ```
 
-Vous pouvez vous attendre à ce que ce programme génère la séquence d’octets {99, 0, 10, 0} ; au lieu de cela, il génère {99, 0, 13, 10, 0}, ce qui entraîne des problèmes pour un programme qui attend une entrée binaire. Si vous avez besoin d’une vraie sortie binaire, dans laquelle les caractères sont écrits non traduits, vous pouvez spécifier une sortie binaire `openmode` à l’aide de l’argument du constructeur [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
+Vous pouvez vous attendre à ce que ce programme génère la séquence d’octets {99, 0, 10, 0} ; au lieu de cela, il génère {99, 0, 13, 10, 0}, ce qui entraîne des problèmes pour un programme qui attend une entrée binaire. Si vous avez besoin d’une vraie sortie binaire, dans laquelle les caractères sont écrits non traduits, vous pouvez spécifier une sortie binaire à l’aide de l’argument du constructeur [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) `openmode` :
 
 ```cpp
 // binary_output_files2.cpp

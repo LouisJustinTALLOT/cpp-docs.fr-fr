@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôle header et contrôle List'
 title: Contrôle Header et contrôle List
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d2301f82a76516a008de0a72e1c9288580b8f545
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325917"
 ---
 # <a name="header-control-and-list-control"></a>Contrôle Header et contrôle List
 
@@ -33,9 +34,9 @@ L’objet de contrôle d’en-tête incorporé est accessible à partir de `CLis
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Utilisation de listes d’images avec des contrôles Header](using-image-lists-with-header-controls.md)
+- [Utilisation de listes d'images avec des contrôles d’en-tête](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CHeaderCtrl](using-cheaderctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : satype'
 title: satype (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dab0f866eba5501a9a83d531d9cbdf50501dcff0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327322"
 ---
 # <a name="satype"></a>satype
 
@@ -28,13 +29,13 @@ Spécifie le type de données de la `SAFEARRAY` structure.
 *data_type*<br/>
 Type de données pour la `SAFEARRAY` structure de données qui est passée en tant que paramètre à une méthode d’interface.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Paramètre d’interface, méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
 |**Attributs non valides**|None|
 
 ## <a name="remarks"></a>Notes

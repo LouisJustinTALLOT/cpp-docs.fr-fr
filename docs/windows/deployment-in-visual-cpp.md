@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : déploiement dans Visual C++'
 title: Déploiement dans Visual C++
 ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 5c4b75a65fcfb34a4988b176ffcb5b2afcb7ea13
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2510350fa45a6f249d61040f374878ce20e68f67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327086"
 ---
 # <a name="deployment-in-visual-c"></a>Déploiement dans Visual C++
 
@@ -26,7 +27,7 @@ Pour déployer de façon centralisée des bibliothèques Visual C++, vous pouvez
 
 - Les fichiers du *package redistribuable*, qui sont des exécutables autonomes de ligne de commande contenant toutes les bibliothèques redistribuables Visual C++ sous une forme compressée.
 
-- *Modules de fusion redistributables* (.fichiers msm), que vous pouvez utiliser pour déployer des bibliothèques spécifiques, et que vous incluez dans le fichier Windows Install (.msi) de votre application.
+- *Modules de fusion redistribuables* (fichiers. msm), que vous pouvez utiliser pour déployer des bibliothèques spécifiques et que vous incluez dans le fichier Windows Installer (. msi) de votre application.
 
 Un fichier de package redistribuable installe toutes les bibliothèques Visual C++ pour une architecture système particulière. Par exemple, si votre application est générée pour x64, vous pouvez utiliser le package redistribuable vcredist_x64.exe pour installer toutes les bibliothèques Visual C++ utilisées par votre application. Vous pouvez faire en sorte que votre programme d’installation d’application exécute le package redistribuable comme prérequis à l’installation de l’application.
 
@@ -53,4 +54,4 @@ L’ordre de chargement des bibliothèques Visual C++ dépend du système. Pour 
 ## <a name="see-also"></a>Voir aussi
 
 - [Déploiement des applications de bureau](deploying-native-desktop-applications-visual-cpp.md)
-- [Déploiement universel de CRT](universal-crt-deployment.md)
+- [Déploiement du CRT universel](universal-crt-deployment.md)

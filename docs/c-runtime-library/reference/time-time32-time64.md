@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : heure, _time32, _time64'
 title: time, _time32, _time64
 ms.date: 11/06/2018
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8602e485c15b11b8f4e740ceead382aa88f8f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326152"
 ---
 # <a name="time-_time32-_time64"></a>time, _time32, _time64
 
@@ -60,7 +61,7 @@ __time64_t _time64( __time64_t *destTime );
 *destTime*<br/>
 Pointeur vers l’emplacement de stockage pour le moment.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la durée en secondes écoulées depuis le 1er janvier 1970 à minuit, ou-1 en cas d’erreur.
 
@@ -68,13 +69,13 @@ Retourne la durée en secondes écoulées depuis le 1er janvier 1970 à minuit, 
 
 La fonction **Time** retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, le temps universel coordonné (UTC, Coordinated Universal Time), en fonction de l’horloge système. La valeur de retour est stockée dans l’emplacement donné par *destTime*. Ce paramètre peut être **null**, auquel cas la valeur de retour n’est pas stockée.
 
-l' **heure** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalent à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
+l' **heure** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalent à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t** 32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > ou \<Time. h >|
+|**Time**, **\_ time32**, **\_ time64**|\<time.h>|\<ctime> ou \<time.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

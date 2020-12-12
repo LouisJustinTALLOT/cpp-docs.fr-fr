@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : éditeur de boîtes de dialogue (C++)'
 title: Éditeur de boîtes de dialogue (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 6a83640bd50d4af40be3cdb7a47b29ae5ffb3f09
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 547d00208cc2a05814a9820e219cdfc5c7163436
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327159"
 ---
 # <a name="dialog-editor-c"></a>Éditeur de boîtes de dialogue (C++)
 
 L' **éditeur de boîtes de dialogue** vous permet de créer ou de modifier des ressources de boîte de dialogue.
 
-- Pour ouvrir l’éditeur, double-cliquez sur le fichier. RC d’une boîte de dialogue dans la fenêtre **affichage des ressources** ou accédez à menu **Afficher**  >  **autres**  >  **affichage des ressources**Windows.
+- Pour ouvrir l’éditeur, double-cliquez sur le fichier. RC d’une boîte de dialogue dans la fenêtre **affichage des ressources** ou accédez à menu **Afficher**  >  **autres**  >  **affichage des ressources** Windows.
 
 L’une des premières étapes de création d’un nouveau modèle de boîte de dialogue ou de boîte de dialogue consiste à ajouter des contrôles. Dans l' **éditeur de boîtes de dialogue**, vous pouvez organiser les contrôles en fonction d’une taille, d’une forme ou d’un alignement spécifique, ou vous pouvez les déplacer pour travailler dans la boîte de dialogue. Vous pouvez aussi facilement supprimer un contrôle.
 
@@ -65,7 +66,7 @@ La barre d’outils de l' **éditeur de boîtes de dialogue** contient des bouto
 |![Bouton Centrer verticalement](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Bouton Activer/Désactiver la grille](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Activer/Désactiver la grille|
 |![Bouton Centrer horizontalement](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Bouton Activer/Désactiver les repères](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Activer/Désactiver les repères|
 
-- Pour afficher ou masquer la barre d’outils de l' **éditeur de boîtes de dialogue** , accédez à menu **Afficher**les  >  **barres d’outils**  >  **éditeur de boîtes de dialogue**.
+- Pour afficher ou masquer la barre d’outils de l' **éditeur de boîtes de dialogue** , accédez à menu **Afficher** les  >  **barres d’outils**  >  **éditeur de boîtes de dialogue**.
 
 Quand vous ouvrez l' **éditeur de boîtes de dialogue** dans un projet C++, la barre d’outils de l' **éditeur de boîtes de dialogue** apparaît automatiquement en haut de votre solution. Toutefois, si vous fermez explicitement la barre d’outils, vous devez l’appeler la prochaine fois que vous ouvrez l’éditeur de boîtes de **dialogue**. Vous pouvez basculer son affichage en le sélectionnant dans la liste des barres d’outils et des fenêtres disponibles.
 
@@ -112,15 +113,15 @@ Vous trouverez ci-dessous les touches d’accès rapide par défaut pour les com
 |Format.TestDialog|**CTRL**  +  **T**|Exécute la boîte de dialogue pour tester l’apparence et le comportement.|
 |Format.ToggleGuides|**CTRL**  +  **G**|Effectue un cycle entre aucune grille, instruction et grille pour la modification de la boîte de dialogue.|
 
-- Pour modifier les touches de raccourci, accédez à **Outils**de menu  >  **options**, puis choisissez **clavier** dans le dossier **environnement** .
+- Pour modifier les touches de raccourci, accédez à **Outils** de menu  >  **options**, puis choisissez **clavier** dans le dossier **environnement** .
 
    Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Pour modifier vos paramètres, accédez à **Outils**de menu  >  **Importer et exporter les paramètres**.
+- Pour modifier vos paramètres, accédez à **Outils** de menu  >  **Importer et exporter les paramètres**.
 
    Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans **l’aide** en fonction de vos paramètres actifs ou de l’édition.  Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

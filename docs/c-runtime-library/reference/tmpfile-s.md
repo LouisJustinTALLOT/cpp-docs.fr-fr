@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : tmpfile_s'
 title: tmpfile_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b5830375644cdcdd3d0c400d00735319b3af671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326138"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -52,7 +53,7 @@ errno_t tmpfile_s(
 *pFilePtr*<br/>
 Adresse d’un pointeur pour stocker l’adresse du pointeur généré désignant un flux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
@@ -60,11 +61,11 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 |*pFilePtr*|**Valeur de retour**|**Contenu de**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**NUL**|**EINVAL**|inchangé|
+|**NULL**|**EINVAL**|inchangé|
 
 Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la valeur de retour est **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **tmpfile_s** crée un fichier temporaire et place un pointeur vers ce flux dans l’argument *pFilePtr* . Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
@@ -82,7 +83,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 > [!NOTE]
 > Cet exemple peut nécessiter des privilèges d’administrateur pour s’exécuter sur Windows.
