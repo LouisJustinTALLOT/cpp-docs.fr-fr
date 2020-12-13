@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable NMAKE NMAKE U1083'
 title: Erreur irrécupérable NMAKE U1083
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1083
 ms.assetid: b09bc34d-35d5-4676-b000-fd7d434400d9
-ms.openlocfilehash: e005142e40e1e7e2fc4a75ffd45e0d3aa4a164ce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 88c3a05e6b292c1092d18211e485a556dba4a522
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345392"
 ---
 # <a name="nmake-fatal-error-u1083"></a>Erreur irrécupérable NMAKE U1083
 
