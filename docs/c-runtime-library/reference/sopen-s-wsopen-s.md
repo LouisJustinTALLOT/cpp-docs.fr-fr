@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _sopen_s, _wsopen_s'
 title: _sopen_s, _wsopen_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14a15f78ad452873813f9a6eb4f65de93cd055b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136992"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -72,7 +73,7 @@ errno_t _wsopen_s(
 *pfh*<br/>
 Handle de fichier ou -1 en cas d'erreur.
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier.
 
 *oflag*<br/>
@@ -84,7 +85,7 @@ Type de partage autorisé.
 *pmode*<br/>
 Paramètre d'autorisation.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Une valeur de retour différente de zéro indique une erreur ; dans ce cas, **errno** est défini sur l’une des valeurs suivantes.
 
@@ -92,7 +93,7 @@ Une valeur de retour différente de zéro indique une erreur ; dans ce cas, **e
 |-|-|
 | **EACCES** |  Le chemin d'accès donné est un répertoire, ou le fichier est en lecture seule, mais une opération de type « ouvert en écriture » a été tentée. |
 | **EEXIST** |  Les indicateurs **_O_CREAT** et **_O_EXCL** ont été spécifiés, mais le *nom de fichier* existe déjà. |
-| **EINVAL** |  Argument *Oflag*, *shflag*ou *PMODE* non valide, ou *PFH* ou *filename* était un pointeur null. |
+| **EINVAL** |  Argument *Oflag*, *shflag* ou *PMODE* non valide, ou *PFH* ou *filename* était un pointeur null. |
 | **EMFILE** | Plus aucun descripteur de fichier disponible. |
 | **ENOENT** | Fichier ou chemin d’accès introuvable. |
 
@@ -123,7 +124,7 @@ L’expression entière *Oflag* est formée en combinant une ou plusieurs consta
 | **_O_CREAT** | Crée un fichier et l'ouvre pour l'accès en écriture. N’a aucun effet si le fichier spécifié par *filename* existe. L’argument *PMODE* est obligatoire lorsque **_O_CREAT** est spécifié. |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crée un fichier temporaire et, dans la mesure du possible, n'effectue pas de vidage sur disque. L’argument *PMODE* est obligatoire lorsque **_O_CREAT** est spécifié. |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Crée un fichier temporaire ; le fichier est supprimé quand le dernier descripteur de fichier est fermé. L’argument *PMODE* est obligatoire lorsque **_O_CREAT** est spécifié. |
-| **_O_CREAT** &#124;`_O_EXCL` | Retourne une valeur d’erreur s’il existe un fichier spécifié par *filename* . S’applique uniquement lorsqu’il est utilisé avec **_O_CREAT**. |
+| **_O_CREAT** &#124; `_O_EXCL` | Retourne une valeur d’erreur s’il existe un fichier spécifié par *filename* . S’applique uniquement lorsqu’il est utilisé avec **_O_CREAT**. |
 | **_O_NOINHERIT** | Empêche la création d'un descripteur de fichier partagé. |
 | **_O_RANDOM** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
 | **_O_RDONLY** | Ouvre un fichier pour l'accès en lecture uniquement. Ne peut pas être spécifié avec **_O_RDWR** ou **_O_WRONLY**. |
@@ -136,11 +137,11 @@ L’expression entière *Oflag* est formée en combinant une ou plusieurs consta
 | **_O_U8TEXT** | Ouvre un fichier en mode Unicode UTF-8. |
 | **_O_WTEXT** | Ouvre un fichier en mode Unicode. |
 
-Pour spécifier le mode d’accès au fichier, vous devez spécifier **_O_RDONLY**, **_O_RDWR**ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
+Pour spécifier le mode d’accès au fichier, vous devez spécifier **_O_RDONLY**, **_O_RDWR** ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
 
-Lorsqu’un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **`wchar_t`** . Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **`wchar_t`** . Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
+Lorsqu’un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT** ou **_O_U16TEXT**, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **`wchar_t`** . Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **`wchar_t`** . Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
 
-Si **_sopen_s** est appelé avec **_O_WRONLY**  |  **_O_APPEND** (mode Append) et **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour la lecture et l’écriture, de lire la nomenclature, puis de la rouvrir en écriture. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
+Si **_sopen_s** est appelé avec **_O_WRONLY**  |  **_O_APPEND** (mode Append) et **_O_WTEXT**, **_O_U16TEXT** ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour la lecture et l’écriture, de lire la nomenclature, puis de la rouvrir en écriture. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
 
 L’argument *shflag* est une expression constante qui se compose de l’une des constantes manifestes suivantes, qui sont définies dans \<share.h> .
 

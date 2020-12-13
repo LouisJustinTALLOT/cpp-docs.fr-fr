@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécification du modèle de thread pour un projet (ATL)'
 title: Spécification du modèle de thread pour un projet (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,34 +9,34 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81bf8413a2118797ec0e0c177a06468b8e3c7ba0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138474"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Spécification du modèle de thread pour un projet (ATL)
 
 Les macros suivantes sont disponibles pour spécifier le modèle de thread d’un projet ATL :
 
-|Macro|Instructions d’utilisation|
+|Macro|Instructions pour l’utilisation de|
 |-----------|--------------------------|
-|_ATL_SINGLE_THREADED|Définir si tous vos objets utilisent le modèle de thread unique.|
-|_ATL_APARTMENT_THREADED|Définir si un ou plusieurs de vos objets utilisent le cloisonnement des threads.|
-|_ATL_FREE_THREADED|Définir si un ou plusieurs de vos objets utilisent de thread libre ou neutre. Code existant peut contenir des références à la macro équivalente [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
+|_ATL_SINGLE_THREADED|Définissez si tous vos objets utilisent le modèle de thread unique.|
+|_ATL_APARTMENT_THREADED|Définissez si un ou plusieurs de vos objets utilisent le thread cloisonné.|
+|_ATL_FREE_THREADED|Définissez si un ou plusieurs de vos objets utilisent le Threading libre ou neutre. Le code existant peut contenir des références à la macro [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)équivalente.|
 
-Si vous ne définissez pas une de ces macros pour votre projet, _ATL_FREE_THREADED sera appliquée.
+Si vous ne définissez pas l’une de ces macros pour votre projet, _ATL_FREE_THREADED sera appliqué.
 
-Les macros affectent les performances d’exécution comme suit :
+Les macros affectent les performances au moment de l’exécution comme suit :
 
-- Spécification de la macro qui correspond aux objets dans votre projet peut améliorer les performances de l’exécution.
+- La spécification de la macro qui correspond aux objets de votre projet peut améliorer les performances d’exécution.
 
-- Spécification d’un niveau supérieur de la macro, par exemple si vous spécifiez _ATL_APARTMENT_THREADED lorsque tous les objets sont seul thread, dégradera légèrement les performances au moment de l’exécution.
+- Si vous spécifiez un niveau de macro supérieur, par exemple si vous spécifiez _ATL_APARTMENT_THREADED lorsque tous vos objets sont à thread unique, les performances d’exécution seront légèrement dégradées.
 
-- Spécification d’un niveau inférieur de la macro, par exemple, si vous spécifiez _ATL_SINGLE_THREADED lorsqu’un ou plusieurs de vos objets utilisent thread cloisonné ou libre, peut entraîner de votre application échoue au moment de l’exécution.
+- Si vous spécifiez un niveau de macro inférieur, par exemple, si vous spécifiez _ATL_SINGLE_THREADED quand un ou plusieurs de vos objets utilisent le thread cloisonné ou le Threading libre, peut provoquer l’échec de votre application au moment de l’exécution.
 
-Consultez [Options, Assistant objet Simple ATL](../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description de la thread les modèles disponibles pour un objet ATL.
+Consultez [options, Assistant objet simple ATL](../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description des modèles de thread disponibles pour un objet ATL.
 
 ## <a name="see-also"></a>Voir aussi
 

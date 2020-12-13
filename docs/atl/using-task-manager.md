@@ -1,21 +1,22 @@
 ---
-title: À l’aide du Gestionnaire des tâches
+description: 'En savoir plus sur : utilisation du gestionnaire des tâches'
+title: Utilisation du Gestionnaire de tâches
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Task Manager
 - breakpoints, Task Manager
 - debugging [ATL], using Task Manager
 ms.assetid: 773fccd5-308d-42c2-a17f-60ae94989062
-ms.openlocfilehash: cba3abb98136c78530150a66e91004dcc9614d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18f2ad803379fc2266699245f5f336194f106d2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138136"
 ---
-# <a name="using-task-manager"></a>À l’aide du Gestionnaire des tâches
+# <a name="using-task-manager"></a>Utilisation du Gestionnaire de tâches
 
-Une des manières plus simples pour déboguer un service est en utilisant le Gestionnaire des tâches. Alors que le service est en cours d’exécution, démarrez le Gestionnaire des tâches et cliquez sur le **processus** onglet. Cliquez sur le nom du fichier EXE, puis **déboguer**. Cette action lance Visual C++ associé à ce processus en cours d’exécution. Maintenant, cliquez sur **rompre** sur le **déboguer** menu pour vous permettre de définir des points d’arrêt dans votre code. Cliquez sur **exécuter** à exécuter sur vos points d’arrêt sélectionnés.
+L’une des méthodes les plus simples pour déboguer un service consiste à utiliser le gestionnaire des tâches. Pendant que le service est en cours d’exécution, démarrez le gestionnaire des tâches et cliquez sur l’onglet **processus** . Cliquez avec le bouton droit sur le nom de l’EXE, puis cliquez sur **Déboguer**. Cela lance Visual C++ attaché à ce processus en cours d’exécution. Maintenant, cliquez sur **arrêter** dans le menu **Déboguer** pour vous permettre de définir des points d’arrêt dans votre code. Cliquez sur **exécuter** pour exécuter jusqu’aux points d’arrêt sélectionnés.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _controlfp_s'
 title: _controlfp_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 0e734a0286ac21ed0883cc10b0cd4ee5857ba448
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2fed3263374df4bdac012c6d41d89adf9232c338
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146469"
 ---
 # <a name="_controlfp_s"></a>_controlfp_s
 
@@ -60,20 +61,20 @@ Valeur en bits du mot de contrôle actuelle.
 *newControl*<br/>
 Nouvelles valeurs en bits du mot de contrôle.
 
-*masque*<br/>
+*filtrage*<br/>
 Masque des bits du nouveau mot de contrôle à définir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, ou un code d’erreur de valeur **errno** .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_controlfp_s** est une version indépendante de la plateforme et plus sécurisée de **_control87**, qui obtient le mot de contrôle à virgule flottante dans l’adresse stockée dans *currentControl* et la définit à l’aide de *newControl*. Les bits contenus dans les valeurs indiquent l’état de contrôle à virgule flottante. L’état de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante, selon la plateforme. Vous pouvez également utiliser **_controlfp_s** pour masquer ou démasquer les exceptions de virgule flottante.
 
 Si la valeur du *masque* est égale à 0, **_controlfp_s** obtient le mot de contrôle à virgule flottante et stocke la valeur récupérée dans *currentControl*.
 
-Si *Mask* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : pour tout bit défini (autrement dit, égal à 1) dans le *masque*, le bit correspondant dans *New* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes, *fpcntrl* = ((*fpcntrl* &*~ Mask*) &#124; (*masque**newControl* & )) où *fpcntrl* est le mot de contrôle à virgule flottante. Dans ce scénario, *currentControl* est défini sur la valeur après la fin de la modification ; il ne s’agit pas de l’ancienne valeur de bit de mot de passe.
+Si *Mask* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : pour tout bit défini (autrement dit, égal à 1) dans le *masque*, le bit correspondant dans *New* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes, *fpcntrl* = ((*fpcntrl* & ~*Mask*) &#124; (masque *newControl*  &  )) où *fpcntrl* est le mot de contrôle à virgule flottante. Dans ce scénario, *currentControl* est défini sur la valeur après la fin de la modification ; il ne s’agit pas de l’ancienne valeur de bit de mot de passe.
 
 > [!NOTE]
 > Par défaut, les bibliothèques d’exécution masquent toutes les exceptions de virgule flottante.
@@ -92,7 +93,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 
 Les valeurs possibles pour les constantes de masque (*masque*) et les nouvelles valeurs de contrôle (*newControl*) sont indiquées dans le tableau des valeurs hexadécimales suivant. Utilisez les constantes portables listées ci-dessous (**_MCW_EM**, **_EM_INVALID**, etc.) en tant qu’arguments de ces fonctions, au lieu de fournir les valeurs hexadécimales explicitement.
 
-Les plateformes dérivées d’Intel (x86) prennent en charge les valeurs d’entrée et de sortie DENORMAL dans le matériel. Le comportement x86 consiste à conserver les valeurs DENORMAL. La plateforme ARM et les plateformes x64 qui disposent de la prise en charge de SSE2 autorisent le vidage des opérandes et des résultats dénormalisés, ou la mise à zéro forcée. Les fonctions **_controlfp_s**, **_controlfp**et **_control87** fournissent un masque pour modifier ce comportement. L’exemple suivant illustre l’utilisation de ce masque :
+Les plateformes dérivées d’Intel (x86) prennent en charge les valeurs d’entrée et de sortie DENORMAL dans le matériel. Le comportement x86 consiste à conserver les valeurs DENORMAL. La plateforme ARM et les plateformes x64 qui disposent de la prise en charge de SSE2 autorisent le vidage des opérandes et des résultats dénormalisés, ou la mise à zéro forcée. Les fonctions **_controlfp_s**, **_controlfp** et **_control87** fournissent un masque pour modifier ce comportement. L’exemple suivant illustre l’utilisation de ce masque :
 
 ```C
 unsigned int current_word = 0;
@@ -118,7 +119,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour le masque de **_MCW_EM** , l’effacement définit l’exception, ce qui permet l’exception matérielle. sa définition masque l’exception. Si une **_EM_UNDERFLOW** ou **_EM_OVERFLOW** se produit, aucune exception matérielle n’est levée tant que l’instruction à virgule flottante suivante n’est pas exécutée. Pour générer une exception matérielle immédiatement après **_EM_UNDERFLOW** ou **_EM_OVERFLOW**, appelez l’instruction MASM FWAIT.
 
-|Mask|Valeur hexadécimale|Constant|Valeur hexadécimale|
+|Mask|Valeur hexadécimale|Constante|Valeur hexadécimale|
 |----------|---------------|--------------|---------------|
 |**_MCW_DN** (contrôle dénormal)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
 |**_MCW_EM** (masque d’exception d’interruption)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
@@ -190,4 +191,4 @@ Default:  0x9001f
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp \_ _control87_2](control87-controlfp-control87-2.md)<br/>

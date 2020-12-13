@@ -1,5 +1,6 @@
 ---
-title: Classes partagées ATL-MFC
+description: En savoir plus sur les classes partagées ATL/MFC
+title: ATL-classes partagées MFC
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,29 +24,29 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-ms.openlocfilehash: 5632de3d248ded83c1db2c0b469de165e676bf9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5927436b5f5c7bd31b21ec6dd7f187e2eb4e83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142583"
 ---
 # <a name="atlmfc-shared-classes"></a>Classes partagées ATL/MFC
 
-Ces classes de l’utilitaire peuvent être utilisées dans n’importe quel projet C++ natif sans nécessiter de n’importe quelle DLL MFC.
+Ces classes utilitaires peuvent être utilisées dans n’importe quel projet C++ natif sans nécessiter de DLL MFC.
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [Classes partagées entre MFC et ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 Fournit des liens vers les classes partagées entre MFC et ATL.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
-[Référence Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
+[Référence ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
 Fournit les documents de référence pour l'ATL Library, un jeu de classes C++ basées sur modèle qui simplifient la programmation d'objets COM.
 
-[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)<br/>
-Fournit des documents de référence pour la bibliothèque MFC, un ensemble de classes qui constituent une infrastructure d’application, qui est l’infrastructure d’une application écrite pour l’API Windows.
+[Référence de bibliothèque MFC (Microsoft Foundation Class) (MFC)](../mfc/mfc-desktop-applications.md)<br/>
+Fournit des documents de référence pour la bibliothèque MFC, un ensemble de classes dans qui constituent une infrastructure d’application, qui est le Framework d’une application écrite pour l’API Windows.
 
 [Débogage](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Fournit des liens vers l'utilisation du débogueur Visual Studio pour corriger des erreurs de logique dans vos application ou procédures stockées.

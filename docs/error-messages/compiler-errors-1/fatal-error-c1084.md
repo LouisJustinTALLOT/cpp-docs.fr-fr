@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1084'
 title: Erreur irrécupérable C1084
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a3221bb894c0b320642a923d9552a207a2ff9ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145312"
 ---
 # <a name="fatal-error-c1084"></a>Erreur irrécupérable C1084
 
@@ -25,7 +26,7 @@ La procédure ci-dessous peut aider à résoudre l'erreur C1084 :
 
 - Assurez-vous que les autorisations appropriées sont définies afin de pouvoir accéder au fichier spécifié.
 
-- Vérifiez que la syntaxe de la ligne de commande respecte les règles décrites dans [syntaxe de la ligne de commande du compilateur](../../build/reference/compiler-command-line-syntax.md).
+- Assurez-vous que la syntaxe de la ligne de commande respecte les règles décrites dans [syntaxe de Command-Line du compilateur](../../build/reference/compiler-command-line-syntax.md).
 
 - Assurez-vous que les variables d’environnement **tmp** et **temp** sont correctement définies, ainsi que les autorisations appropriées pour accéder aux répertoires auxquels ces variables d’environnement font référence. Assurez-vous également que les lecteurs référencés par les variables d’environnement **tmp** et **temp** contiennent une quantité d’espace libre suffisante.
 

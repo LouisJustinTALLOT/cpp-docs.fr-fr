@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2396'
 title: Erreur du compilateur C2396
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2396
 ms.assetid: 1b515ef6-7af4-400f-b4ed-564313ea15f6
-ms.openlocfilehash: 5020732ce5186ee1c6e9d2ea13f452fe9988bdfa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 654b812fbd152a6effb60e6f0919f99bf5039a1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74744834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145390"
 ---
 # <a name="compiler-error-c2396"></a>Erreur du compilateur C2396
 
-'your_type :: operator’type' ' : le CLR ou la conversion définie par l’utilisateur WinRT functionnot est valide. Vous devez convertir ou convertir en : 't ^ ', 't ^% ', 't ^ & ', où T = 'your_type'
+'your_type :: operator’type' ' : le CLR ou la conversion définie par l’utilisateur WinRT functionnot est valide. Vous devez convertir ou convertir en : 't ^ ', 't ^% ', 't ^& ', où T = 'your_type'
 
 Une fonction de conversion dans un type managé ou Windows Runtime ne disposait pas d'au moins un paramètre dont le type est le même que le type qui contient la fonction de conversion.
 

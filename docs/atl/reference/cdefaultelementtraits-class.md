@@ -1,5 +1,6 @@
 ---
-title: Cdefaultelementtraits, classe
+description: 'En savoir plus sur : classe CDefaultElementTraits'
+title: CDefaultElementTraits, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultElementTraits
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-ms.openlocfilehash: 0ee076af5fc4a1c2145162ac510b3a4460e251e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd1bae67ef626ef793ecee946d88879a07f194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141893"
 ---
-# <a name="cdefaultelementtraits-class"></a>Cdefaultelementtraits, classe
+# <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits, classe
 
-Cette classe fournit des fonctions et des méthodes par défaut pour une classe de collection.
+Cette classe fournit des méthodes et des fonctions par défaut pour une classe de collection.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +31,18 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de données à stocker dans la collection.
+Type de données à stocker dans la collection.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des méthodes et des fonctions statiques par défaut pour le déplacement, la copie, la comparaison et de hachage des éléments stockés dans un objet de classe de collection. Cette classe est dérivée de ses fonctions et des méthodes de [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), et [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)et est utilisé par [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), et [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
+Cette classe fournit des fonctions et des méthodes statiques par défaut pour déplacer, copier, comparer et hacher des éléments stockés dans un objet de classe de collection. Cette classe dérive ses fonctions et méthodes de [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)et [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md), et est utilisée par [CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)et [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête :** atlcoll. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

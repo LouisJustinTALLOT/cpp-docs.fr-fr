@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDialogImpl'
 title: CDialogImpl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 228a63edde7eb66960a0acad5d60088d909946a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834724"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141854"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -95,7 +96,7 @@ où `MyDlg` est le **nom abrégé** entré dans la page **noms** de l’Assistan
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|
 |Boîtes de dialogue|[Boîtes de dialogue](/windows/win32/dlgbox/dialog-boxes) et rubriques suivantes de la SDK Windows|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 

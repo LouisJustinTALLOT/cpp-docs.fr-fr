@@ -1,28 +1,29 @@
 ---
+description: 'En savoir plus sur : entrées de Registre'
 title: Entrées de Registre (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-ms.openlocfilehash: 7a89bc5d510d493f557b7ea74b8eabe5dfd87ac1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c89c8f64a91c09f16333c3381a33d792332543d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138578"
 ---
 # <a name="registry-entries"></a>Entrées de Registre
 
-DCOM a introduit le concept d’ID d’Application (appid), lequel regrouper les options de configuration pour un ou plusieurs objets DCOM dans un emplacement centralisé dans le Registre. Vous spécifiez un AppID en indiquant sa valeur dans la valeur nommée AppID sous CLSID de l’objet.
+DCOM a introduit le concept d’ID d’application (appid), qui regroupent les options de configuration pour un ou plusieurs objets DCOM dans un emplacement centralisé dans le registre. Vous spécifiez une AppID en indiquant sa valeur dans la valeur nommée AppID sous le CLSID de l’objet.
 
-Par défaut, un service généré par ATL utilise son CLSID comme GUID pour son AppID. Sous `HKEY_CLASSES_ROOT\AppID`, vous pouvez spécifier des entrées spécifiques à DCOM. Initialement, il existe deux entrées :
+Par défaut, un service généré par ATL utilise son CLSID comme GUID pour son AppID. Sous `HKEY_CLASSES_ROOT\AppID` , vous pouvez spécifier des entrées spécifiques à DCOM. Au départ, il existe deux entrées :
 
-- `LocalService`, avec une valeur égale au nom du service. Si cette valeur existe, elle est utilisée au lieu du `LocalServer32` clé sous le CLSID.
+- `LocalService`, avec une valeur égale au nom du service. Si cette valeur existe, elle est utilisée à la place de la `LocalServer32` clé sous le CLSID.
 
-- `ServiceParameters`, avec une valeur égale à `-Service`. Cette valeur spécifie les paramètres qui seront transmis au service lorsqu’il est démarré. Notez que ces paramètres sont passés à du service `ServiceMain` fonction non `WinMain`.
+- `ServiceParameters`, avec une valeur égale à `-Service` . Cette valeur spécifie les paramètres qui seront passés au service au démarrage. Notez que ces paramètres sont passés à la fonction du service `ServiceMain` , et non à `WinMain` .
 
-N’importe quel service DCOM doit également créer une autre clé sous `HKEY_CLASSES_ROOT\AppID`. Cette clé est égale au nom du fichier EXE et agit comme une référence croisée, car elle contient une valeur AppID qui pointe vers les entrées AppID.
+Tout service DCOM doit également créer une autre clé sous `HKEY_CLASSES_ROOT\AppID` . Cette clé est égale au nom de l’EXE et agit comme une référence croisée, car elle contient une valeur AppID qui pointe vers les entrées AppID.
 
 ## <a name="see-also"></a>Voir aussi
 

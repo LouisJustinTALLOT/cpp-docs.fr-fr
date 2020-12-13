@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de conversion de chaînes
 title: Macros de conversion de chaînes
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a7717f7876d9dbe23c0b95fd68b4bcd971e81267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138773"
 ---
 # <a name="string-conversion-macros"></a>Macros de conversion de chaînes
 
@@ -59,7 +60,7 @@ Le comportement des `DEVMODE` `TEXTMETRIC` macros de conversion de chaînes et d
 |aucun|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|** \_ Unicode** et **OLE2ANSI**|**W**|**A**|
+|**\_ Unicode** et **OLE2ANSI**|**W**|**A**|
 
 Le tableau suivant répertorie `DEVMODE` les `TEXTMETRIC` macros et les macros de conversion de chaînes.
 

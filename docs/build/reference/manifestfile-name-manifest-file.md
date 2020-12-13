@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/MANIFESTFILE (nom du fichier manifeste)
 title: /MANIFESTFILE (Nommer le fichier manifeste)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0d3a4ba1d17c4aa8c97cb09cc768e614e46c864
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138019"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Nommer le fichier manifeste)
 
@@ -23,21 +24,21 @@ ms.locfileid: "62321616"
 
 ## <a name="remarks"></a>Notes
 
-/MANIFESTFILE vous permet de modifier le nom par défaut du fichier manifeste.  Le nom par défaut du fichier manifeste est le nom de fichier avec l’extension .manifest ajoutée.
+/MANIFESTFILE vous permet de modifier le nom par défaut du fichier manifeste.  Le nom par défaut du fichier manifeste est le nom de fichier avec. manifest ajouté.
 
-/MANIFESTFILE n’a aucun effet si vous ne liez pas également avec [de manifeste](manifest-create-side-by-side-assembly-manifest.md).
+/MANIFESTFILE n’aura aucun effet si vous n’effectuez pas de liaison avec [/Manifest](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 
-1. Développez le **l’éditeur de liens** nœud.
+1. Développez le nœud **Éditeur de liens**.
 
-1. Sélectionnez le **le fichier manifeste** page de propriétés.
+1. Sélectionnez la page de propriétés **fichier manifeste** .
 
-1. Modifier le **le fichier manifeste** propriété.
+1. Modifiez la propriété **fichier manifeste** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

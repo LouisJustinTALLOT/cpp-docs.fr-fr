@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2395'
 title: Erreur du compilateur C2395
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2395
 ms.assetid: 2d9e3b28-8c2c-4f41-a57f-61ef88fc2af0
-ms.openlocfilehash: 2ac59856770b04dd3c4ea14360e0a83dd99f2150
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 86b6123646ca91945a861e9b9822076877421ac8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74744938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145468"
 ---
 # <a name="compiler-error-c2395"></a>Erreur du compilateur C2395
 
-'your_type::operator'op'' : opérateur CLR ou WinRT non valide. Au moins un paramètre doit être de l’un des types suivants : 't', 't% ', 't & ', 't ^ ', 't ^% ', 't ^ & ', où T = 'your_type'
+'your_type::operator'op'' : opérateur CLR ou WinRT non valide. Au moins un paramètre doit être de l’un des types suivants : 't', 't% ', 't& ', 't ^ ', 't ^% ', 't ^& ', où T = 'your_type'
 
 Un opérateur dans un type managé ou Windows Runtime ne disposait pas d'au moins un paramètre dont le type est le même que le type de la valeur de retour de l'opérateur.
 

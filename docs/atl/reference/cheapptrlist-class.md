@@ -1,5 +1,6 @@
 ---
-title: Classe CHeapPtrList
+description: 'En savoir plus sur : classe CHeapPtrList'
+title: CHeapPtrList, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrList
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e3a97280f7abcd4b7efebf6726ac062215912d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141594"
 ---
-# <a name="cheapptrlist-class"></a>Classe CHeapPtrList
+# <a name="cheapptrlist-class"></a>CHeapPtrList, classe
 
 Cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs de tas.
 
@@ -34,10 +35,10 @@ class CHeapPtrList
 #### <a name="parameters"></a>Paramètres
 
 *E*<br/>
-Le type d’objet à stocker dans la classe de collecte.
+Type d’objet à stocker dans la classe de collection.
 
-*Allocator*<br/>
-La classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
+*Allocateur*<br/>
+Classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Membres
 
@@ -49,7 +50,7 @@ La classe d’allocation de mémoire à utiliser. La valeur par défaut est [CCR
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et dérive des méthodes de [CAtlList](../../atl/reference/catllist-class.md) et [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) pour aider à la création d’un objet de classe de collecte stockant des pointeurs de tas.
+Cette classe fournit un constructeur et dérive les méthodes de [CAtlList](../../atl/reference/catllist-class.md) et [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) pour faciliter la création d’un objet de classe de collection qui stocke des pointeurs de tas.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,9 +60,9 @@ Cette classe fournit un constructeur et dérive des méthodes de [CAtlList](../.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcoll.h
+**En-tête :** atlcoll. h
 
-## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a> CHeapPtrList::CHeapPtrList
 
 Constructeur.
 
@@ -71,16 +72,16 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize (en)*<br/>
+*nBlockSize*<br/>
 Taille du bloc.
 
 ### <a name="remarks"></a>Notes
 
-La taille du bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est nécessaire. De plus grandes tailles de blocs réduisent les appels aux routines d’allocation de mémoire, mais utilisent plus de ressources.
+La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Les tailles de bloc plus volumineuses réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
-[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
-[Classe CHeapPtrElraits](../../atl/reference/cheapptrelementtraits-class.md)<br/>
+[CAtlList, classe](../../atl/reference/catllist-class.md)<br/>
+[CHeapPtr, classe](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits, classe](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

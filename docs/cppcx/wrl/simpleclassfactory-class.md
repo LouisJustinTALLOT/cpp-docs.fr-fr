@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe SimpleClassFactory'
 title: SimpleClassFactory (classe)
 ms.date: 09/7/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd771909790f80048d8fee678b842f820e2f7be2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135198"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 
@@ -78,7 +79,7 @@ L’exemple de code suivant montre comment utiliser `SimpleClassFactory` avec la
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory :: CreateInstance, méthode
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a> SimpleClassFactory :: CreateInstance, méthode
 
 Crée une instance de l’interface spécifiée.
 
@@ -103,7 +104,7 @@ ID d’interface de l’objet à créer.
 *ppvObject*<br/>
 Lorsque cette opération est terminée, pointeur vers une instance de l’objet spécifié par le paramètre *riid* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 

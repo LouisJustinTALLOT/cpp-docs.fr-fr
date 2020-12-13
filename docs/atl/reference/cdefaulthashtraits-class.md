@@ -1,5 +1,6 @@
 ---
-title: Classe CDefaultHashTraits
+description: 'En savoir plus sur : classe CDefaultHashTraits'
+title: CDefaultHashTraits, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultHashTraits
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: 43932092621d44cfc8b07270df92e2765665f23f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 85cc881466be03931d435d91a48548456d74305b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141880"
 ---
-# <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
+# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits, classe
 
-Cette classe fournit une fonction statique pour calculer les valeurs de hachage.
+Cette classe fournit une fonction statique pour le calcul des valeurs de hachage.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +30,7 @@ class CDefaultHashTraits
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de données à stocker dans la collection.
+Type de données à stocker dans la collection.
 
 ## <a name="members"></a>Membres
 
@@ -37,19 +38,19 @@ Le type de données à stocker dans la collection.
 
 |Nom|Description|
 |----------|-----------------|
-|[CDefaultHashTraits::Hash](#hash)|(Statique) Appelez cette fonction pour calculer une valeur de hachage pour un élément donné.|
+|[CDefaultHashTraits :: Hash](#hash)|Statique Appelez cette fonction pour calculer une valeur de hachage pour un élément donné.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe contient une seule fonction statique qui renvoie une valeur de hachage pour un élément donné. Cette classe est utilisée par la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
+Cette classe contient une fonction statique unique qui retourne une valeur de hachage pour un élément donné. Cette classe est utilisée par la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
 
-Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
+Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcoll.h
+**En-tête :** atlcoll. h
 
-## <a name="cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash
+## <a name="cdefaulthashtraitshash"></a><a name="hash"></a> CDefaultHashTraits :: Hash
 
 Appelez cette fonction pour calculer une valeur de hachage pour un élément donné.
 
@@ -59,16 +60,16 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*<br/>
+*appartient*<br/>
 Élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne la valeur du hachage.
+Retourne la valeur de hachage.
 
 ### <a name="remarks"></a>Notes
 
-L’algorithme de hachage par défaut est très simple : la valeur de retour est le numéro d’élément. Remplacer cette fonction si un algorithme plus compliqué est nécessaire.
+L’algorithme de hachage par défaut est très simple : la valeur de retour est le numéro de l’élément. Substituez cette fonction si un algorithme plus complexe est requis.
 
 ## <a name="see-also"></a>Voir aussi
 
