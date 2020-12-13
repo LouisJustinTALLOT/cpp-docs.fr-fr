@@ -1,18 +1,19 @@
 ---
-title: bad_optional_access, classe
+description: 'En savoir plus sur : classe bad_optional_access'
+title: Classe bad_optional_access
 ms.date: 08/06/2019
 f1_keywords:
 - optional/std::bad_optional_access
-ms.openlocfilehash: 043b0360c7e0be48267c8f406dbfea50eeb5a8e3
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: e3439c53766a1890592bde8ed449f5ff2779f347
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132754"
 ---
-# <a name="bad_optional_access-class"></a>bad_optional_access, classe
+# <a name="bad_optional_access-class"></a>Classe bad_optional_access
 
-Définit le type des objets levés en tant qu’exceptions pour signaler la situation dans laquelle une tentative est faite pour accéder `optional` à la valeur d’un objet qui ne contient pas de valeur.
+Définit le type des objets levés en tant qu’exceptions pour signaler la situation dans laquelle une tentative est faite pour accéder à la valeur d’un `optional` objet qui ne contient pas de valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,5 +30,5 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<> facultative](optional.md)\
-[classe facultative](optional-class.md)
+[\<optional>](optional.md)\
+[optional, classe](optional-class.md)

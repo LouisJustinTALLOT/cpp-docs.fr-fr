@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Concurrency :: Graphics, espace de noms'
 title: Concurrency::graphics, espace de noms
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-ms.openlocfilehash: 942b3bbace85fa297bba6cd4b509f67006a4aed3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f4ab25a6bc6e7bfd318ea58bb6a7efe403c51a89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132832"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
 
