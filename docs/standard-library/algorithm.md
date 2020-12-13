@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; algorithme&gt;'
 title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42f03372d01ac2d3218ce5844b86e92526055bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163767"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -96,7 +97,7 @@ Les algorithmes numériques de la bibliothèque standard C++ fournis pour le tra
 |[move_backward](algorithm-functions.md#move_backward)|Déplace les éléments d'un itérateur vers un autre. Le déplacement commence par le dernier élément d'une plage spécifiée, et se termine par le premier élément de cette plage.|
 |[next_permutation](algorithm-functions.md#next_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
 |[none_of](algorithm-functions.md#none_of)|Retourne **`true`** lorsqu’une condition n’est jamais présente parmi les éléments d’une plage donnée.|
-|[nth_element](algorithm-functions.md#nth_element)|Partitionne une plage d’éléments, en localisant correctement le *n*ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent dans la séquence soient supérieurs ou égaux.|
+|[nth_element](algorithm-functions.md#nth_element)|Partitionne une plage d’éléments, en localisant correctement le *n* ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent dans la séquence soient supérieurs ou égaux.|
 |[partial_sort](algorithm-functions.md#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.|
 |[partition](algorithm-functions.md#partition)|Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.|
