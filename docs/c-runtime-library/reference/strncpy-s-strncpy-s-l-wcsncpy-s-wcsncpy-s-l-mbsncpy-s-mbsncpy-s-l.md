@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l'
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb4ea7c5f7b288640fe0797d9f6c5428fe28e0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336485"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -168,13 +169,13 @@ Nombre de caractères à copier, ou [_TRUNCATE](../../c-runtime-library/truncate
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, **STRUNCATE** si la troncation s’est produite, sinon un code d’erreur.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*strDest*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDest*|
+|*strDest*|*numberOfElements*|*strSource*|Valeur retournée|Contenu de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
 |n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|*strDest*[0] a la valeur 0|
@@ -187,7 +188,7 @@ Ces fonctions essaient de copier les premiers caractères *d* de *strSource* dan
 
 Il existe une exception au paragraphe ci-dessus. Si le *nombre* est **_TRUNCATE**, la plupart des *strSource* en fonction de la taille de *strDest* sont copiés tout en laissant de l’espace pour la valeur null de fin qui est toujours ajoutée.
 
-Par exemple,
+Par exemple :
 
 ```C
 char dst[5];
@@ -229,7 +230,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 > [!NOTE]
 > **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance des paramètres régionaux et sont fournis uniquement pour les **_tcsncpy_s_l** et ne sont pas destinés à être appelés directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

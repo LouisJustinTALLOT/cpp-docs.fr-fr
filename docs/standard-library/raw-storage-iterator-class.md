@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe raw_storage_iterator'
 title: raw_storage_iterator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fd397de39118a5aa47ea45a8da0052937958bd17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337920"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator, classe
 
@@ -38,7 +39,7 @@ Type d'objet pour lequel le stockage est alloué.
 
 ## <a name="remarks"></a>Notes
 
-La classe décrit un itérateur de sortie qui construit des objets de type `Type` dans la séquence qu’il génère. Un objet de classe `raw_storage_iterator` \< **ForwardIterator**, **Type**> accède au stockage via un objet itérateur vers l’avant, de classe `ForwardIterator` , que vous spécifiez lorsque vous construisez l’objet. Pour un objet d’abord de classe `ForwardIterator` , l’expression doit ** & \* tout d’abord** désigner un stockage non construit pour l’objet suivant (de type `Type` ) dans la séquence générée.
+La classe décrit un itérateur de sortie qui construit des objets de type `Type` dans la séquence qu’il génère. Un objet de classe `raw_storage_iterator` \< **ForwardIterator**, **Type**> accède au stockage via un objet itérateur vers l’avant, de classe `ForwardIterator` , que vous spécifiez lorsque vous construisez l’objet. Pour un objet d’abord de classe `ForwardIterator` , l’expression doit **& \* tout d’abord** désigner un stockage non construit pour l’objet suivant (de type `Type` ) dans la séquence générée.
 
 Cette classe d'adaptateur est utilisée quand il est nécessaire de séparer l'allocation de mémoire de la construction d'objet. Le `raw_storage_iterator` peut être utilisé pour copier des objets dans le stockage non initialisé, comme la mémoire allouée à l'aide de la fonction `malloc`.
 
@@ -103,7 +104,7 @@ Référence à l’itérateur de stockage brut
 
 #### <a name="remarks"></a>Notes
 
-La configuration requise pour un `ForwardIterator` est que l’itérateur de stockage brut doit satisfaire uniquement l’expression \* *II*  =  *t* est valide et qu’il n’indique rien sur le **`operator`** ou `operator=` sur le. Les opérateurs membres de cette implémentation retourne ** \* This**, donc [operator =](#op_eq)(**constType**&) peut exécuter le magasin réel dans une expression, telle que \* *ptr*  =  `val` .
+La configuration requise pour un `ForwardIterator` est que l’itérateur de stockage brut doit satisfaire uniquement l’expression \* *II*  =  *t* est valide et qu’il n’indique rien sur le **`operator`** ou `operator=` sur le. Les opérateurs membres de cette implémentation retourne **\* This**, donc [operator =](#op_eq)(**constType**&) peut exécuter le magasin réel dans une expression, telle que \* *ptr*  =  `val` .
 
 #### <a name="example"></a>Exemple
 
@@ -249,9 +250,9 @@ Itérateur de stockage brut ou référence à un itérateur de stockage brut.
 
 Le premier opérateur tente finalement d’extraire et de stocker un objet de type `CharType` à partir du flux d’entrée associé. Le deuxième opérateur effectue une copie de l’objet, incrémente l’objet, puis retourne la copie.
 
-Le premier opérateur de préincrémentation incrémente l’objet itérateur de sortie stocké, puis retourne ** \* This**.
+Le premier opérateur de préincrémentation incrémente l’objet itérateur de sortie stocké, puis retourne **\* This**.
 
-Le deuxième opérateur postincrémentation effectue une copie de ** \* ce**, incrémente l’objet itérateur de sortie stocké, puis retourne la copie.
+Le deuxième opérateur postincrémentation effectue une copie de **\* ce**, incrémente l’objet itérateur de sortie stocké, puis retourne la copie.
 
 Le constructeur stocke `first` comme objet itérateur de sortie.
 

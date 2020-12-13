@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __indwordstring'
 title: __indwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 18d18a8981a2dd58c0f7bcd366faaf46629647c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336908"
 ---
 # <a name="__indwordstring"></a>__indwordstring
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Lit les données à partir du port spécifié `rep insd` à l’aide de l’instruction.
+Lit les données à partir du port spécifié à l’aide de l' `rep insd` instruction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,19 +43,19 @@ dans Port à partir duquel effectuer la lecture.
 *Saut*\
 dans Nombre d’octets de données à lire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

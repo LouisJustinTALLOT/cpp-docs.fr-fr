@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe reference_wrapper'
 title: reference_wrapper, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5d3550a6ff579ea1e4174459d3ab1eab07b8a5d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337867"
 ---
 # <a name="reference_wrapper-class"></a>reference_wrapper, classe
 
@@ -70,7 +71,7 @@ Les fonctions d’assistance [std::ref](functional-functions.md#ref) et [std::cr
 |[result_type](#result_type)|Type de résultat faible de la référence encapsulée.|
 |[type](#type)|Type de la référence encapsulée.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

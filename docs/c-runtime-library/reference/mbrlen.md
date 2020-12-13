@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbrlen'
 title: mbrlen
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1a485090c056cb1e5f075bfd226ac7d4717ec0ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336492"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,7 +50,7 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Pointeur vers l'octet suivant à examiner dans une chaîne de caractères multioctets.
 
 *count*<br/>
@@ -85,7 +86,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |Non applicable|Non applicable|**mbrlen**|Non applicable|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

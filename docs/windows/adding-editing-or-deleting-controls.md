@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : ajouter, modifier ou supprimer des contrôles (C++)'
 title: 'Comment : ajouter, modifier ou supprimer des contrôles (C++)'
 ms.date: 02/15/2019
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4ff0f3bdf7e4da935cba3437900e2319218de771
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337819"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Comment : ajouter, modifier ou supprimer des contrôles (C++)
 
@@ -123,7 +124,7 @@ Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sél
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Pour définir une variable membre pour un contrôle de boîte de dialogue (à l'exception d'un bouton)
 
 > [!NOTE]
-> Ce processus s’applique uniquement aux contrôles de boîte de dialogue dans un projet MFC. Les projets ATL doivent utiliser la boîte de dialogue **nouveaux messages et gestionnaires d’événements Windows** . Pour plus d’informations, consultez [types de messages associés à des objets d’interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)et [définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> Ce processus s’applique uniquement aux contrôles de boîte de dialogue dans un projet MFC. Les projets ATL doivent utiliser la boîte de dialogue **nouveaux messages et gestionnaires d’événements Windows** . Pour plus d’informations, consultez [types de messages associés à des objets User-Interface](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)et [définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
 1. Dans l' [éditeur de boîtes de dialogue](dialog-editor.md), sélectionnez un contrôle.
 
@@ -234,14 +235,14 @@ La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer
 
 Les contrôles ActiveX fournis par des fournisseurs indépendants peuvent être dotés de leurs propres propriétés et caractéristiques. Ces propriétés sont affichées dans la fenêtre **Propriétés** . Toutes les pages de propriétés créées par les enregistreurs du contrôle ActiveX s’affichent dans la boîte de dialogue **pages de propriétés** . (Pour afficher la **page de propriétés** d’un contrôle ActiveX spécifique, sélectionnez le bouton **page de propriétés** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).
 
-- Sélectionnez le contrôle **ActiveX** et accédez à **View**  >  la page de**Propriétés** de la vue de menu pour afficher les propriétés. Apportez les modifications nécessaires dans la page de propriétés.
+- Sélectionnez le contrôle **ActiveX** et accédez à   >  la page de **Propriétés** de la vue de menu pour afficher les propriétés. Apportez les modifications nécessaires dans la page de propriétés.
 
    Différents onglets s’affichent dans la page de propriétés d’un contrôle ActiveX, selon les feuilles de propriétés qui font partie du contrôle ActiveX.
 
 > [!NOTE]
 > Cette procédure s’applique à l’utilisation de la page de propriétés pour modifier les contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans la nouvelle fenêtre **Propriétés** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

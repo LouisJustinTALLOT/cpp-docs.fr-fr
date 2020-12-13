@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _disable'
 title: _disable
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 94be850e1d494ff62df84922b46f28481be68314
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c118315a4fea2dad401cc5c6f3621a8ec3b1794c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337096"
 ---
 # <a name="_disable"></a>_disable
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Désactive les interruptions.
 
@@ -28,13 +29,13 @@ Désactive les interruptions.
 void _disable(void);
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_disable`|x86, ARM, x64, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -44,7 +45,7 @@ Cette fonction est disponible uniquement en mode noyau. Si vous l'utilisez en mo
 
 Sur les plateformes ARM et ARM64, cette routine est uniquement disponible en tant qu’intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

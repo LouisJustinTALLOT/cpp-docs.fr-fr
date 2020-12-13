@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __inbyte'
 title: __inbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 77cc1cfb792ffa2f6aef9879820e644372895193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337022"
 ---
 # <a name="__inbyte"></a>__inbyte
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère l' `in` instruction, en retournant un seul octet lu à partir du `Port`port spécifié par.
+Génère l' `in` instruction, en retournant un seul octet lu à partir du port spécifié par `Port` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,19 +35,19 @@ unsigned char __inbyte(
 *Importer*\
 dans Port à partir duquel effectuer la lecture.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Octet lu à partir du port spécifié.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__inbyte`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="remarks"></a>Notes
 

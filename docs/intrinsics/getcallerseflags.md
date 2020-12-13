@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __getcallerseflags'
 title: __getcallerseflags
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc73ca965f61ee4b5291c48f9680d4aa2f1774a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337007"
 ---
 # <a name="__getcallerseflags"></a>__getcallerseflags
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Retourne la valeur EFLAGS du contexte de l’appelant.
 
@@ -30,13 +31,13 @@ unsigned int __getcallerseflags(void);
 
 Valeur EFLAGS du contexte de l’appelant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__getcallerseflags`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -78,7 +79,7 @@ EFLAGS 0x202
 EFLAGS 0x206
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : personnalisation du clavier et de la souris'
 title: Personnalisation du clavier et de la souris
 ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 262555b060f226a86438a2189eda44d83c55d5a2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2ff54b2092bb6db52d5b780f4e64e51e05d8b402
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336817"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personnalisation du clavier et de la souris
 

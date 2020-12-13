@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _bittestandset, _bittestandset64'
 title: _bittestandset, _bittestandset64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 69d1c8569a228ed4994343e12ef769710bd06ad5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337149"
 ---
 # <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Générer une instruction pour examiner le `b` bit de l' `a`adresse, retourner sa valeur actuelle et définir le bit sur 1.
+Générer une instruction pour examiner `b` le bit de l’adresse `a` , retourner sa valeur actuelle et définir le bit sur 1.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,24 +46,24 @@ unsigned char _bittestandset64(
 *p*\
 dans Position de bit à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Bit à la position spécifiée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_bittestandset`|x86, ARM, x64, ARM64|
 |`_bittestandset64`|x64, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // bittestandset.cpp
@@ -147,7 +148,7 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

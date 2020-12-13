@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : intrinsèques du compilateur'
 title: Intrinsèques du compilateur
 ms.date: 09/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 7438c90eec8b1f88a4c1608953ce21772254f02c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c81608af1021919691b6241e14b1fefbe03643f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337164"
 ---
 # <a name="compiler-intrinsics"></a>Intrinsèques du compilateur
 

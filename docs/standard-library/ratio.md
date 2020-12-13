@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; ratio&gt;'
 title: '&lt;ratio&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,16 +32,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8fab74cde47e4078781b665044bc2becd0a9dac3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337938"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
-La structure ratio fournit l’en-tête standard \<ratio> qui permet de définir les constantes et les modèles qui sont utilisés pour stocker et manipuler des nombres rationnels au moment de la compilation.
+Incluez l’en-tête standard \<ratio> pour définir les constantes et les modèles utilisés pour stocker et manipuler les nombres rationnels au moment de la compilation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,17 +61,17 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Le modèle `ratio` définit les constantes statiques `num` et `den` telles que `num`  /  `den` = = numérateur/dénominateur et `num` et `den` n’ont aucun facteur commun. `num`  /  `den` est la valeur représentée par le modèle de classe. Par conséquent, `type` désigne le `ratio<num, den>` d’instanciation.
+Le modèle `ratio` définit les constantes statiques `num` et `den` , par exemple, `num`  /  `den` = = numérateur/dénominateur et n' `num` `den` a aucun facteur commun. `num` / `den` est la valeur représentée par le modèle de classe. Par conséquent, `type` désigne l’instanciation `ratio<num, den>` .
 
 ### <a name="specializations"></a>Spécialisations
 
-\<ratio> définit également des spécialisations de `ratio` qui ont la forme suivante.
+\<ratio> définit également les spécialisations de `ratio` qui se présentent sous la forme suivante.
 
 `template <class R1, class R2> struct ratio_specialization`
 
 Chaque spécialisation prend deux paramètres de modèle qui doivent également être des spécialisations de `ratio`. La valeur de `type` est déterminée par une opération logique associée.
 
-|Name|Valeur `type`|
+|Nom|Valeur `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

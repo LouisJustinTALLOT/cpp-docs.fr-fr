@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe recursive_mutex'
 title: recursive_mutex, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8a9c9322407871984c83135eecd2e26ac475d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337894"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex, classe
 
@@ -54,7 +55,7 @@ class recursive_mutex;
 
 **Espace de noms :** std
 
-## <a name="lock"></a><a name="lock"></a>Lock
+## <a name="lock"></a><a name="lock"></a> Lock
 
 Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.
 
@@ -66,7 +67,7 @@ void lock();
 
 Si le thread appelant possède déjà le `mutex`, la méthode est retournée immédiatement, et le verrou précédent reste en vigueur.
 
-## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a> recursive_mutex
 
 Construit un objet `recursive_mutex` qui n’est pas verrouillé.
 
@@ -86,7 +87,7 @@ Libère les ressources utilisées par l’objet.
 
 Si l'objet est verrouillé lorsque le destructeur s'exécute, le comportement est indéfini.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -94,7 +95,7 @@ Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 bool try_lock() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la méthode réussit à obtenir la propriété du `mutex` ou si le thread appelant possède déjà le `mutex**; otherwise, **false` .
 
@@ -102,7 +103,7 @@ bool try_lock() noexcept;
 
 Si le thread appelant possède déjà le `mutex` , la fonction retourne immédiatement **`true`** , et le verrou précédent reste en vigueur.
 
-## <a name="unlock"></a><a name="unlock"></a>bloquer
+## <a name="unlock"></a><a name="unlock"></a> bloquer
 
 Libère la propriété du mutex.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : mettre en page des contrôles (C++)'
 title: 'Comment : mettre en page des contrôles (C++) | Microsoft Docs'
 ms.date: 02/15/2019
 f1_keywords:
@@ -80,12 +81,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75fef5d47df163e1b21b9dd2861ec652179d9eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337832"
 ---
 # <a name="how-to-layout-controls-c"></a>Comment : mettre en page des contrôles (C++)
 
@@ -107,7 +108,7 @@ Vous pouvez organiser les contrôles des boîtes de dialogue avec l' **éditeur 
 
 La [barre d’outils](./dialog-editor.md) de l’éditeur de boîtes de dialogue contient des boutons qui contrôlent l’État.
 
-- Pour modifier l’État, sélectionnez l’icône appropriée ou accédez à menu paramètres du Guide de **format**  >  **Guide Settings**.
+- Pour modifier l’État, sélectionnez l’icône appropriée ou accédez à menu paramètres du Guide de **format**  >  .
 
 La boîte de dialogue **paramètres du repère** a les propriétés suivantes :
 
@@ -145,7 +146,7 @@ Les repères apparaissent sous forme de lignes en pointillés bleus dans la boî
 
 Les graduations des règles qui déterminent l’espacement des repères et des contrôles sont définies par les unités de boîte de dialogue (DLU). Un DLU est basé sur la taille de la police de la boîte de dialogue, en général 8 points MS Shell Dlg. Un DLU horizontal est la largeur moyenne de la police de la boîte de dialogue divisée par quatre. Une DLU verticale est la hauteur moyenne de la police divisée par 8.
 
-- Pour modifier l’intervalle des graduations, accédez à menu paramètres du Guide de **format**  >  **Guide Settings**, puis, dans le champ **espacement** de la grille, spécifiez une nouvelle largeur et une nouvelle hauteur dans la variable dlu.
+- Pour modifier l’intervalle des graduations, accédez à menu paramètres du Guide de **format**  >  , puis, dans le champ **espacement** de la grille, spécifiez une nouvelle largeur et une nouvelle hauteur dans la variable dlu.
 
 ### <a name="layout-grid"></a>Grille de disposition
 
@@ -168,7 +169,7 @@ Vous pouvez utiliser des touches spéciales conjointement avec la souris pour d�
 - Pour désactiver les repères, accédez à menu **format**  >  **paramètres du guide**. Ensuite, sous **repères de mise en page**, sélectionnez **aucun**.
 
    > [!TIP]
-   > Vous pouvez également utiliser le raccourci dans le menu **mise en forme**des  >  **repères**.
+   > Vous pouvez également utiliser le raccourci dans le menu **mise en forme** des  >  **repères**.
 
 ## <a name="select-controls"></a>Sélectionner des contrôles
 
@@ -190,9 +191,9 @@ Lorsqu’un contrôle est sélectionné, il est entouré d’une bordure grise a
 
 Lorsque vous dimensionnez ou Alignez plusieurs contrôles, l' **éditeur de boîtes de dialogue** utilise le contrôle dominant pour déterminer comment les autres contrôles sont dimensionnés ou alignés. Par défaut, le contrôle dominant est le premier contrôle sélectionné.
 
-- Pour spécifier le contrôle dominant, maintenez la touche **CTRL** enfoncée et sélectionnez le contrôle que vous souhaitez utiliser pour influencer d' *abord*la taille ou l’emplacement des autres contrôles. Si vous maintenez la touche **CTRL** enfoncée et que vous sélectionnez un contrôle dans une sélection, cela permet également de contrôler le contrôle dominant dans cette sélection.
+- Pour spécifier le contrôle dominant, maintenez la touche **CTRL** enfoncée et sélectionnez le contrôle que vous souhaitez utiliser pour influencer d' *abord* la taille ou l’emplacement des autres contrôles. Si vous maintenez la touche **CTRL** enfoncée et que vous sélectionnez un contrôle dans une sélection, cela permet également de contrôler le contrôle dominant dans cette sélection.
 
-- Pour modifier le contrôle dominant, effacez la sélection actuelle en sélectionnant l’extérieur de tous les contrôles actuellement sélectionnés et répétez la procédure ci-dessus, en sélectionnant d' *abord*un autre contrôle.
+- Pour modifier le contrôle dominant, effacez la sélection actuelle en sélectionnant l’extérieur de tous les contrôles actuellement sélectionnés et répétez la procédure ci-dessus, en sélectionnant d' *abord* un autre contrôle.
 
 > [!NOTE]
 > Les poignées de redimensionnement du contrôle dominant sont solides, tandis que les poignées des contrôles subordonnés sont vides. Tout redimensionnement ou alignement supplémentaire est basé sur le contrôle dominant.
@@ -212,7 +213,7 @@ Utilisez les poignées de redimensionnement pour redimensionner un contrôle. Lo
 
 - Pour dimensionner automatiquement un contrôle en fonction du texte qu’il contient, accédez à menu **format** ou cliquez avec le bouton droit sur le contrôle, puis choisissez **taille du contenu**.
 
-- Pour que les contrôles aient la même taille, sélectionnez les contrôles que vous souhaitez redimensionner et accédez à **format**de menu  >  , définissez la**même taille**, puis sélectionnez **les deux**, la **hauteur**ou la **largeur**.
+- Pour que les contrôles aient la même taille, sélectionnez les contrôles que vous souhaitez redimensionner et accédez à **format** de menu  >  , définissez la **même taille**, puis sélectionnez **les deux**, la **hauteur** ou la **largeur**.
 
    Vous redimensionnez un groupe de contrôles en fonction de la taille du contrôle dominant, qui est le contrôle sélectionné en premier dans la série. La taille finale des contrôles dans le groupe dépend de la taille du contrôle dominant.
 
@@ -243,7 +244,7 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
 
 ## <a name="align-controls"></a>Aligner les contrôles
 
-- Pour aligner les contrôles, sélectionnez les contrôles que vous souhaitez aligner. Accédez à **format**du menu  >  **Aligner** et choisissez l’un des alignements suivants :
+- Pour aligner les contrôles, sélectionnez les contrôles que vous souhaitez aligner. Accédez à **format** du menu  >  **Aligner** et choisissez l’un des alignements suivants :
 
    |Alignment|Description|
    |-----|-----------|
@@ -256,7 +257,7 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
 
    Veillez à sélectionner le contrôle à dominer en premier ou à le définir comme étant le contrôle dominant avant d’exécuter la commande d’alignement ou de dimensionnement, car la position finale du groupe de contrôles dépend de la position du contrôle dominant.
 
-- Pour espacer uniformément les contrôles, sélectionnez les contrôles que vous souhaitez réorganiser. Accédez à l’espace de **format**de menu  >  **uniformément** et choisissez l’un des alignements suivants :
+- Pour espacer uniformément les contrôles, sélectionnez les contrôles que vous souhaitez réorganiser. Accédez à l’espace de **format** de menu  >  **uniformément** et choisissez l’un des alignements suivants :
 
    |Espacement|Description|
    |---|---|
@@ -270,16 +271,16 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
    |**Vertical**|Centrer les contrôles verticalement dans la boîte de dialogue.|
    |**Horizontal**|Centrer les contrôles horizontalement dans la boîte de dialogue.|
 
-- Pour aligner les boutons de commande, sélectionnez un ou plusieurs boutons de commande. Accédez au menu **format**  >  des**boutons**, puis choisissez l’une des options suivantes :
+- Pour aligner les boutons de commande, sélectionnez un ou plusieurs boutons de commande. Accédez au menu **format**  >  des **boutons**, puis choisissez l’une des options suivantes :
 
    |Disposition|Description|
    |---|---|
    |**Right**|Aligne les boutons de commande le long du bord droit de la boîte de dialogue.|
-   |**Ballon**|Aligne les boutons de commande le long du bord inférieur de la boîte de dialogue.|
+   |**Bas**|Aligne les boutons de commande le long du bord inférieur de la boîte de dialogue.|
 
    Si vous sélectionnez un contrôle autre qu’un bouton de commande, sa position n’est pas affectée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

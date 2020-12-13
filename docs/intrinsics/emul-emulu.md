@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __emul, __emulu'
 title: __emul, __emulu
 ms.date: 09/02/2019
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cdcbd14e4e72bcaf7d2c7fd5f098a291e32227cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337062"
 ---
 # <a name="__emul-__emulu"></a>__emul, __emulu
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Effectue des multiplications qui dépassent ce qu’un entier 32 bits peut contenir.
 
@@ -44,24 +45,24 @@ dans Premier opérande entier de la multiplication.
 *p*\
 dans Deuxième opérande entier de la multiplication.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Résultat de la multiplication.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-`__emul`prend des valeurs signées 2 32 bits et retourne le résultat de la multiplication sous la forme d’une valeur entière signée 64 bits.
+`__emul` prend des valeurs signées 2 32 bits et retourne le résultat de la multiplication sous la forme d’une valeur entière signée 64 bits.
 
-`__emulu`prend des valeurs entières non signées 2 32 bits et retourne le résultat de la multiplication sous la forme d’une valeur entière non signée 64 bits.
+`__emulu` prend des valeurs entières non signées 2 32 bits et retourne le résultat de la multiplication sous la forme d’une valeur entière non signée 64 bits.
 
 ## <a name="example"></a>Exemple
 
@@ -95,14 +96,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

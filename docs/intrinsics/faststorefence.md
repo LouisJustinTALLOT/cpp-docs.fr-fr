@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __faststorefence'
 title: __faststorefence
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f12d16232e034c562f564d851da08c62cb59c34f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337029"
 ---
 # <a name="__faststorefence"></a>__faststorefence
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Garantit que chaque référence mémoire précédente, y compris les références mémoire de charge et de stockage, est globalement visible avant toute référence mémoire suivante.
 
@@ -27,13 +28,13 @@ Garantit que chaque référence mémoire précédente, y compris les référence
 void __faststorefence();
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__faststorefence`|X64|
+|`__faststorefence`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -43,7 +44,7 @@ Sur la plateforme AMD64, cette routine génère une instruction qui est une dél
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

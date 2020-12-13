@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l'
 title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 ms.date: 4/2/2020
 api_name:
@@ -66,19 +67,19 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: be13a67d51b0296d91355c970e5e37ad227812ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2f38ba18647b232e19e2ecda94519a8a0e55a444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336455"
 ---
 # <a name="strnlen-strnlen_s-wcsnlen-wcsnlen_s-_mbsnlen-_mbsnlen_l-_mbstrnlen-_mbstrnlen_l"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
 Obtient la longueur d'une chaîne en utilisant les paramètres régionaux actuels ou ceux qui ont été passés. Il s’agit de versions plus sécurisées de [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).
 
 > [!IMPORTANT]
-> **_mbsnlen**, **_mbsnlen_l**, **_mbstrnlen**et **_mbstrnlen_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnlen**, **_mbsnlen_l**, **_mbstrnlen** et **_mbstrnlen_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -121,7 +122,7 @@ size_t _mbstrnlen_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par un caractère Null.
 
 *numberOfElements*<br/>
@@ -130,20 +131,20 @@ Taille de la mémoire tampon de chaîne.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces fonctions retournent le nombre de caractères dans la chaîne, sans le caractère Null de fin. S’il n’existe aucune marque de fin null dans les premiers octets *NumberOfElements* de la chaîne (ou des caractères larges pour **wcsnlen**), *NumberOfElements* est retourné pour indiquer la condition d’erreur ; les chaînes terminées par le caractère null ont des longueurs qui sont strictement inférieures à *NumberOfElements*.
 
 **_mbstrnlen** et **_mbstrnlen_l** retournent-1 si la chaîne contient un caractère multioctet non valide.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 > [!NOTE]
-> **strnlen** n’est pas un substitut pour **strlen**; **strnlen** est destiné à être utilisé uniquement pour calculer la taille des données entrantes non fiables dans une mémoire tampon de taille connue, par exemple un paquet réseau. **strnlen** calcule la longueur mais ne se termine pas au-delà de la fin de la mémoire tampon si la chaîne n’est pas terminée. Pour d’autres situations, utilisez **strlen**. (Il en va de même pour **wcsnlen**, **_mbsnlen**et **_mbstrnlen**.)
+> **strnlen** n’est pas un substitut pour **strlen**; **strnlen** est destiné à être utilisé uniquement pour calculer la taille des données entrantes non fiables dans une mémoire tampon de taille connue, par exemple un paquet réseau. **strnlen** calcule la longueur mais ne se termine pas au-delà de la fin de la mémoire tampon si la chaîne n’est pas terminée. Pour d’autres situations, utilisez **strlen**. (Il en va de même pour **wcsnlen**, **_mbsnlen** et **_mbstrnlen**.)
 
 Chacune de ces fonctions retourne le nombre de caractères de *Str*, à l’exclusion du caractère null de fin. Toutefois, **strnlen** et **strnlen_s** interprètent la chaîne comme une chaîne de caractères codés sur un octet et, par conséquent, la valeur de retour est toujours égale au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcsnlen** et **wcsnlen_s** sont des versions à caractères larges de **strnlen** et de **strnlen_s** respectivement ; les arguments pour **wcsnlen** et **wcsnlen_s** sont des chaînes à caractères larges et le nombre de caractères est en unités à caractères larges. Dans le cas contraire, **wcsnlen** et **strnlen** se comportent de la même façon, tout comme les **strnlen_s** et les **wcsnlen_s**.
 
-**strnlen**, **wcsnlen**et **_mbsnlen** ne valident pas leurs paramètres. Si *Str* a la **valeur null**, une violation d’accès se produit.
+**strnlen**, **wcsnlen** et **_mbsnlen** ne valident pas leurs paramètres. Si *Str* a la **valeur null**, une violation d’accès se produit.
 
 **strnlen_s** et **wcsnlen_s** valider leurs paramètres. Si *Str* a la **valeur null**, les fonctions retournent 0.
 
@@ -216,7 +217,7 @@ Length: 100
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

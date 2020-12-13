@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _bittest, _bittest64'
 title: _bittest, _bittest64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 50c0f1637fefab9bd39fcbca2cd18571c7769bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337199"
 ---
 # <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère l'instruction `bt`, qui examine le bit à la position `b` de l'adresse `a` et retourne la valeur de ce bit.
 
@@ -45,13 +46,13 @@ dans Pointeur vers la mémoire à examiner.
 *p*\
 dans Position de bit à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Bit à la position spécifiée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_bittest64`|ARM64, x64|\<intrin.h>|
@@ -100,7 +101,7 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

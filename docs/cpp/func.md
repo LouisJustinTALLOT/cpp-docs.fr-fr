@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : __Func__'
 title: __func__
 ms.date: 10/19/2017
 f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-ms.openlocfilehash: 8e94caffe120c325478d8b4f24c1915a516d69f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e075d0f566bb8c3eb72e62a30a36ef80528647b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337702"
 ---
 # <a name="__func__"></a>__func__
 
-**(C++ 11)** L’identificateur &#95; &#95;prédéfini Func&#95; &#95; est défini implicitement comme une chaîne qui contient le nom non qualifié et sans ornement de la fonction englobante. &#95;&#95;Func&#95; &#95; est mandaté par la C++ norme et n’est pas une extension Microsoft.
+**(C++ 11)** L’identificateur prédéfini &#95;&#95;Func&#95;&#95; est implicitement défini comme une chaîne qui contient le nom non qualifié et sans ornement de la fonction englobante. &#95;&#95;Func&#95;&#95; est imposé par la norme C++ et n’est pas une extension Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 

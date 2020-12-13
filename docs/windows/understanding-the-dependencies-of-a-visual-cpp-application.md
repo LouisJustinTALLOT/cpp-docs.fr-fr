@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : présentation des dépendances d’une application Visual C++'
 title: Fonctionnement des dépendances d'une application Visual C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 92db11778de7d31bbab67e649cd58e264da331e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff18d594edf6d35541655075de6f6e951ea42b88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336557"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Fonctionnement des dépendances d'une application Visual C++
 
-Pour déterminer les bibliothèques Visual C++ dont dépend une application, vous pouvez voir les propriétés du projet. (Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **Pages de propriétés**.) Sur Windows 8 et versions antérieures, vous pouvez également utiliser le Dependency Walker (depends.exe), ce qui donne une image plus complète des dépendances. Pour les versions plus récentes de Windows le [lucasg/dépendances](https://github.com/lucasg/Dependencies) outil fournit une fonctionnalité similaire (c’est un outil tiers ne pas garanti par Microsoft).
+Pour déterminer les bibliothèques Visual C++ dont dépend une application, vous pouvez voir les propriétés du projet. (Dans Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **pages de propriétés** .) Sur Windows 8 et les versions antérieures, vous pouvez également utiliser l’Explorateur de dépendances (depends.exe), qui offre une image plus complète des dépendances. Pour les versions plus récentes de Windows, l’outil [lucasg/Dependencies](https://github.com/lucasg/Dependencies) offre des fonctionnalités similaires (il s’agit d’un outil tiers non garanti par Microsoft).
 
-Dans la boîte de dialogue **Pages de propriétés**, vous pouvez examiner différentes pages sous **Propriétés de configuration** pour comprendre les dépendances. Par exemple, si votre projet utilise les bibliothèques MFC et que vous choisissez **Utilisation des MFC**, **Utiliser les MFC dans une DLL partagée** dans la page **Propriétés de configuration**, **Général**, votre application au moment de l’exécution dépend d’une DLL MFC comme mfc\<version>.dll. Si votre application n’utilise pas MFC, elle peut encore dépendre de la bibliothèque CRT si vous choisissez pour la **Bibliothèque Runtime** la valeur **DLL de débogage multithread (/MDd)** ou **DLL multithread (/MD)** dans la page **Propriétés de configuration**, **C/C++**, **Génération de code**.
+Dans la boîte de dialogue **Pages de propriétés**, vous pouvez examiner différentes pages sous **Propriétés de configuration** pour comprendre les dépendances. Par exemple, si votre projet utilise les bibliothèques MFC et que vous choisissez l' **utilisation de MFC**, **utilisez MFC dans une DLL partagée** sur la page **Propriétés de configuration**, **général** , votre application au moment de l’exécution dépend de DLL MFC telles que MFC \<version> . dll. Si votre application n’utilise pas MFC, elle peut encore dépendre de la bibliothèque CRT si vous choisissez pour la **Bibliothèque Runtime** la valeur **DLL de débogage multithread (/MDd)** ou **DLL multithread (/MD)** dans la page **Propriétés de configuration**, **C/C++**, **Génération de code**.
 
 À l'aide de depends.exe, vous pouvez examiner la liste des DLL qui sont liées à l'application au moment du chargement, ainsi qu'une liste de ses DLL à chargement différé. Si vous souhaitez obtenir la liste complète des DLL qui sont chargées dynamiquement au moment de l'exécution, vous pouvez utiliser la fonctionnalité de profilage dans depends.exe pour tester l'application jusqu'à ce que vous soyez certain que tous les chemins de code ont été testés. Une fois la session de profilage terminée, depends.exe indique quelles DLL ont été chargées dynamiquement au moment de l'exécution.
 

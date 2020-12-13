@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2195'
 title: Erreur du compilateur C2195
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2195
 ms.assetid: 9f9f035c-9c51-4173-a8ea-c6f907fc5c63
-ms.openlocfilehash: 748516dbcdf5e135964e720d6215f31091bfed9e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dbae1b48b5dc8d7c04e103dc15ca66f0183f0dbb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337629"
 ---
 # <a name="compiler-error-c2195"></a>Erreur du compilateur C2195
 
 'identificateur' : segment de données
 
-Le pragma `code_seg` utilise un nom de segment utilisé avec le pragma `data_seg`.
+Le `code_seg` pragma utilise un nom de segment utilisé avec le `data_seg` pragma.
 
 L’exemple suivant génère l’C2195 :
 

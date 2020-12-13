@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : atof, _atof_l, _wtof, _wtof_l'
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b583b4d443264d82fa83124f4dacd597fe8829b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337780"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -92,7 +93,7 @@ Chaîne à convertir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne la **`double`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
@@ -108,7 +109,7 @@ L’argument *Str* de **atof** et **_wtof** se présente sous la forme suivante�
 
 [*espace blanc*] [*signe*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **e** } [*signe*]*chiffres*]
 
-Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e**ou **e**) et d’un entier décimal éventuellement signé.
+Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier décimal éventuellement signé.
 
 Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des lettres d’exposant de style Fortran (**d** ou **d**). Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
 
@@ -127,8 +128,8 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine(s)|En-tête requis|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib> , \<stdlib.h> \<cmath> ou\<math.h>|
-|**_wtof**, **_wtof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib> , \<stdlib.h> ou\<wchar.h>|
+|**atof**, **_atof_l**|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib> , \<stdlib.h> \<cmath> ou \<math.h>|
+|**_wtof**, **_wtof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib> , \<stdlib.h> ou \<wchar.h>|
 
 ## <a name="example"></a>Exemple
 

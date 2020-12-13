@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedAdd'
 title: _InterlockedAdd fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: b467cc855e674a50899999c6e945321390735b00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336892"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd fonctions intrinsèques
 
@@ -84,11 +85,11 @@ __int64 _InterlockedAdd64_rel(
 *Value*\
 dans Valeur à ajouter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Ces deux fonctions renvoient le résultat de l'addition.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Spécifications
 
 |Intrinsic|Architecture|
 |---------------|------------------|
@@ -103,7 +104,7 @@ Ces deux fonctions renvoient le résultat de l'addition.
 
 **Fichier d’en-tête** \<intrin.h>
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. L’acquisition de la *sémantique* signifie que le résultat de l’opération est rendu visible par tous les threads et processeurs avant les lectures et écritures de mémoire ultérieures. Elle est utile lors de l'entrée d'une section critique. La *sémantique Release* signifie que toutes les lectures et écritures en mémoire sont forcées à être rendues visibles à tous les threads et les processeurs avant que le résultat de l’opération soit rendu visible. Elle est utile quand vous quittez une section critique. Les intrinsèques avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 

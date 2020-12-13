@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : isnormal'
 title: isnormal
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3afae5196a7a6b2b149028ad347f95baa27b1544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337761"
 ---
 # <a name="isnormal"></a>isnormal
 
@@ -55,6 +56,6 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf,](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

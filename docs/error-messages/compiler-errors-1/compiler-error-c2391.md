@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2391'
 title: Erreur du compilateur C2391
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
-ms.openlocfilehash: f000287c5934a39d56342bce0f6c9ca2c69e2297
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3161cd6ade15817142cc24f38c61fd3e09eb8857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337571"
 ---
 # <a name="compiler-error-c2391"></a>Erreur du compilateur C2391
 

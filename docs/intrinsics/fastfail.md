@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : __fastfail'
 title: __fastfail
 ms.date: 09/02/2019
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: 34198409c6a57eb494bfe819b367b71405a84e64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c7521f10dee7602fae3de5b2ac6fcc0245214bec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336989"
 ---
 # <a name="__fastfail"></a>__fastfail
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Arrête immédiatement le processus appelant avec une surcharge minimale.
 
@@ -24,9 +25,9 @@ void __fastfail(unsigned int code);
 ### <a name="parameters"></a>Paramètres
 
 *code*\
-dans Constante `FAST_FAIL_<description>` symbolique de Winnt. h ou WDM. h qui indique la raison de l’arrêt du processus.
+dans `FAST_FAIL_<description>` Constante symbolique de Winnt. h ou WDM. h qui indique la raison de l’arrêt du processus.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Le `__fastfail` intrinsèque ne retourne pas.
 
@@ -39,13 +40,13 @@ En interne, `__fastfail` est implémentée à l'aide de plusieurs mécanismes sp
 |Architecture|Instruction|Emplacement de l’argument de code|
 |------------------|-----------------|-------------------------------|
 |x86|int 0x29|`ecx`|
-|X64|int 0x29|`rcx`|
+|x64|int 0x29|`rcx`|
 |ARM|Opcode 0xDEFB|`r0`|
 |ARM64|Opcode 0xF003|`x0`|
 
 Une demande de basculement rapide est autonome et son exécution ne nécessite généralement que deux instructions. Après l’exécution d’une demande de basculement rapide, le noyau prend l’action appropriée. Dans le code en mode utilisateur, il n'existe aucune dépendance de mémoire au-delà du pointeur d'instruction proprement dit quand un événement de basculement rapide est déclenché. Cela optimise sa fiabilité, même en cas d’altération importante de la mémoire.
 
-L' `code` argument, l’une `FAST_FAIL_<description>` des constantes symboliques de Winnt. h ou WDM. h, décrit le type de condition d’échec. Il est intégré aux rapports d’échec d’une manière spécifique à l’environnement.
+L' `code` argument, l’une des `FAST_FAIL_<description>` constantes symboliques de Winnt. h ou WDM. h, décrit le type de condition d’échec. Il est intégré aux rapports d’échec d’une manière spécifique à l’environnement.
 
 Les demandes de basculement rapide en mode utilisateur apparaissent en tant qu’exception non continuable de seconde chance avec code d’exception 0xC0000409 et avec au moins un paramètre d’exception. Le premier paramètre de l'exception est la valeur `code`. Ce code d’exception indique au Rapport d’erreurs Windows (WER) et à l’infrastructure de débogage que le processus est endommagé, et que des actions minimales en cours de traitement doivent être effectuées en réponse à l’échec. Les demandes de basculement rapide en mode noyau sont implémentées à l'aide d'un code de vérification d'erreur dédié, `KERNEL_SECURITY_CHECK_FAILURE` (0x139). Dans les deux cas, aucun gestionnaire d'exceptions n'est appelé car le programme est censé être dans un état endommagé. Si un débogueur est présent, il a la possibilité d’examiner l’état du programme avant son arrêt.
 
@@ -53,15 +54,15 @@ La prise en charge du mécanisme de basculement rapide natif est apparue dans Wi
 
 `__fastfail` est uniquement disponible en tant qu'intrinsèque.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__fastfail`|x86, x64, ARM, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

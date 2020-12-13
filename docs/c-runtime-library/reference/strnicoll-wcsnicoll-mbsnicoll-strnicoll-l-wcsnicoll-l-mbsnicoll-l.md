@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l'
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7fbbf44747bdcd0b95ccb603d735fc2ac0ecf6b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336471"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -133,7 +134,7 @@ Nombre de caractères à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne une valeur indiquant la relation des sous-chaînes de *Chaîne1* et *Chaîne2*, comme suit.
 
@@ -143,9 +144,9 @@ Chacune de ces fonctions retourne une valeur indiquant la relation des sous-cha�
 |0|*Chaîne1* identique à *Chaîne2*|
 |> 0|*Chaîne1* supérieure à *Chaîne2*|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez l’une ou l’autre chaîne. H ou MBSTRING. Manutention. **_wcsnicoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsnicoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsnicoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après l’appel de **_wcsnicoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez l’une ou l’autre chaîne. H ou MBSTRING. H. **_wcsnicoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsnicoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsnicoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après l’appel de **_wcsnicoll**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions effectue une comparaison ne respectant pas la casse des premiers caractères de *nombre* dans *Chaîne1* et *Chaîne2* , en fonction de la page de codes. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux et la page de codes actuels. Les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

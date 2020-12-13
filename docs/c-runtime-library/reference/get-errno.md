@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_errno'
 title: _get_errno
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6df162974494a29d55af9e27eb7a2b526a27cf45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336512"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -52,17 +53,17 @@ errno_t _get_errno(
 *pValue*<br/>
 Pointeur vers un entier à remplir avec la valeur actuelle de la variable **errno** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les valeurs possibles de **errno** sont définies dans errno. h. Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_get_errno.c

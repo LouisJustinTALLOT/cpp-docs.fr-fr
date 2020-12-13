@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2857'
 title: Erreur du compilateur C2857
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
-ms.openlocfilehash: 11b620f9748ac85e731d79b0652c0392375b2ea4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f2a9cffc8a96998a102d9e8219d9656cb3386f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337521"
 ---
 # <a name="compiler-error-c2857"></a>Erreur du compilateur C2857
 
-> l’instruction' #include’spécifiée avec l’option de ligne de commande/YC*filename* est introuvable dans le fichier source
+> l’instruction' #include’spécifiée avec l’option de ligne de commande/YC *filename* est introuvable dans le fichier source
 
 L’option [/Yc](../../build/reference/yc-create-precompiled-header-file.md) spécifie le nom d’un fichier include qui n’est pas inclus dans le fichier source en cours de compilation.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez l’option **/Yc**<em>filename</em> sur un fichier source pour créer un fichier d’en-tête précompilé (PCH), ce fichier source doit inclure le fichier d’en-tête de *nom* de fichier. Chaque fichier inclus dans le fichier source, jusqu’à et y compris le *nom*de fichier spécifié, est inclus dans le fichier PCH. Dans les autres fichiers sources compilés à l’aide de l’option **/Yu**<em>filename</em> pour utiliser le fichier PCH, un include de *filename* doit être la première ligne sans commentaire dans le fichier. Le compilateur ignore tout ce qui se trouve dans le fichier source avant que celle-ci soit incluse.
+Lorsque vous utilisez l’option **/Yc**<em>filename</em> sur un fichier source pour créer un fichier d’en-tête précompilé (PCH), ce fichier source doit inclure le fichier d’en-tête de *nom* de fichier. Chaque fichier inclus dans le fichier source, jusqu’à et y compris le *nom* de fichier spécifié, est inclus dans le fichier PCH. Dans les autres fichiers sources compilés à l’aide de l’option **/Yu**<em>filename</em> pour utiliser le fichier PCH, un include de *filename* doit être la première ligne sans commentaire dans le fichier. Le compilateur ignore tout ce qui se trouve dans le fichier source avant que celle-ci soit incluse.
 
-Cette erreur peut être causée par une instruction `#include "filename"` dans un bloc de compilation conditionnelle qui n’est pas compilé dans votre fichier source PCH.
+Cette erreur peut être causée par une `#include "filename"` instruction dans un bloc de compilation conditionnelle qui n’est pas compilé dans votre fichier source pch.
 
 ## <a name="example"></a>Exemple
 
