@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur delete (C++)'
 title: delete, opérateur (C++)
 ms.date: 08/12/2019
 f1_keywords:
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a66fc3af12c08cc019569c1fc1db25a539dcb089
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339447"
 ---
 # <a name="delete-operator-c"></a>delete, opérateur (C++)
 
 Libère un bloc de mémoire.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 > [ `::` ] `delete` *expression cast*\
 > [ `::` ] `delete []` *expression cast*
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’argument *Cast-expression* doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec l' [opérateur New](../cpp/new-operator-cpp.md). L' **`delete`** opérateur a un résultat de type **`void`** et, par conséquent, ne retourne pas de valeur. Par exemple :
 

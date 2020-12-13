@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct not_equal_to'
 title: not_equal_to (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - not_equal_to function
 - not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
-ms.openlocfilehash: 5ee1ce120490b91a5f904109f49bf36d88e6261f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fabcfe2df6f0e4676d558eb9f7c47e1e9c356d62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338118"
 ---
-# <a name="notequalto-struct"></a>not_equal_to (struct)
+# <a name="not_equal_to-struct"></a>not_equal_to (struct)
 
-Un prédicat binaire qui effectue l’opération d’inégalité (`operator!=`) sur ses arguments.
+Prédicat binaire qui effectue l’opération d’inégalité ( `operator!=` ) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +44,18 @@ struct not_equal_to<void>
 Tout type qui prend en charge un `operator!=` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération d’inégalité. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left != Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator!=`.
 
 ## <a name="remarks"></a>Notes
 
-Les objets de type *Type* doit être comparable pour l’égalité. `operator!=` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.
+Les objets *de type type doivent être* comparables en égalité. `operator!=` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.
 
 ## <a name="example"></a>Exemple
 

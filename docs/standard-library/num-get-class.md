@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe num_get'
 title: num_get, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: d5a88e904c437e79eabfa854a196aa48dbad955e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0236aac2e7c7859f966430bd276b4dffc42820b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338083"
 ---
 # <a name="num_get-class"></a>num_get, classe
 
@@ -70,7 +71,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 **Espace de noms :** std
 
-## <a name="num_getchar_type"></a><a name="char_type"></a>num_get :: char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a> num_get :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -82,7 +83,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle **CharType**.
 
-## <a name="num_getdo_get"></a><a name="do_get"></a>num_get ::d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a> num_get ::d o_get
 
 Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.
 
@@ -182,7 +183,7 @@ Fin de la plage de caractères à partir de laquelle lire le nombre.
 *multiples*\
 Valeur qui a été lue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur une fois que la valeur a été lue.
 
@@ -329,7 +330,7 @@ Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags() & ios_
 
 Consultez l’exemple relatif à [get](#get), où la fonction membre virtuelle est appelée par `do_get`.
 
-## <a name="num_getget"></a><a name="get"></a>num_get :: obtient
+## <a name="num_getget"></a><a name="get"></a> num_get :: obtient
 
 Extrait une valeur numérique ou booléenne d'une séquence de caractères.
 
@@ -429,7 +430,7 @@ Fin de la plage de caractères à partir de laquelle lire le nombre.
 *multiples*\
 Valeur qui a été lue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur une fois que la valeur a été lue.
 
@@ -551,7 +552,7 @@ int main( )
 }
 ```
 
-## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get :: iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a> num_get :: iter_type
 
 Type qui décrit un itérateur d'entrée.
 
@@ -563,7 +564,7 @@ typedef InputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `InputIterator`.
 
-## <a name="num_getnum_get"></a><a name="num_get"></a>num_get :: num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a> num_get :: num_get
 
 Constructeur des objets de type `num_get` utilisés pour extraire des valeurs numériques depuis des séquences.
 
@@ -584,7 +585,7 @@ Les valeurs possibles pour le paramètre *REFS* et leur signification sont les s
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _atoi64, _atoi64_l, _wtoi64, _wtoi64_l'
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4980206a13baccdd510ee2532d37cf3556bd46db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338994"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -92,7 +93,7 @@ Chaîne à convertir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne la **`__int64`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **_atoi64** si l’entrée ne peut pas être convertie en valeur de ce type.
 

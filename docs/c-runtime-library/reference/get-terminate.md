@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_terminate'
 title: _get_terminate
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 958ecb51620497c459b0505431036d5e9d546862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338986"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
@@ -51,7 +52,7 @@ terminate_function _get_terminate( void );
 
 Retourne un pointeur désignant la fonction enregistrée par [set_terminate](set-terminate-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

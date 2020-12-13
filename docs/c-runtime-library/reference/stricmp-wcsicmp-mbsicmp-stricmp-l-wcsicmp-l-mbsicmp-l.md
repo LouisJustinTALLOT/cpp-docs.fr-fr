@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l'
 title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 07ec1b2f53ae299c1c9622422cdf22e7f07ad330
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338879"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -120,7 +121,7 @@ Chaîne terminée par Null à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour indique la relation de *Chaîne1* à *Chaîne2* comme suit.
 
@@ -130,9 +131,9 @@ La valeur de retour indique la relation de *Chaîne1* à *Chaîne2* comme suit.
 |0|*Chaîne1* identique à *Chaîne2*|
 |> 0|*Chaîne1* supérieure à *Chaîne2*|
 
-En cas d’erreur, **_mbsicmp** retourne **_NLSCMPERROR**, qui est défini \<dans String. h> \<et mbstring. h>.
+En cas d’erreur, **_mbsicmp** retourne **_NLSCMPERROR**, qui est défini dans \<string.h> et \<mbstring.h> .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_stricmp** compare de façon ordinale *Chaîne1* et *Chaîne2* après la conversion de chaque caractère en minuscules, et retourne une valeur indiquant leur relation. **_stricmp** diffère de **_stricoll** dans le fait que la comparaison **_stricmp** est uniquement affectée par la **LC_CTYPE**, qui détermine quels caractères sont supérieurs et en minuscules. La fonction **_stricoll** compare les chaînes en fonction des catégories **LC_CTYPE** et **LC_COLLATE** des paramètres régionaux, qui incluent à la fois le cas et l’ordre de classement. Pour plus d’informations sur la catégorie **LC_COLLATE** , consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. Les versions avec le suffixe sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés en entrée. Si les paramètres régionaux n'ont pas été définis, les paramètres régionaux C sont utilisés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

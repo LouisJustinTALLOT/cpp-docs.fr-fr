@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : conteneurs de contrôles ActiveX'
 title: Conteneurs de contrôles ActiveX
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 42fa18c41ebd960aa8de080df00556ad5c909d40
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6de379cc152ff35e16366c1b5e920bf3548f4cd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339111"
 ---
 # <a name="activex-control-containers"></a>Conteneurs de contrôles ActiveX
 
@@ -35,17 +36,17 @@ D'autres articles décrivent plusieurs rubriques, allant de la création d'un pr
 
 - [Conteneurs de contrôles ActiveX : activation manuelle d’une relation contenant-contenu de contrôle ActiveX](activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [Conteneurs de contrôles ActiveX : insertion d'un contrôle dans une application de conteneur de contrôle](inserting-a-control-into-a-control-container-application.md)
+- [Conteneurs de contrôles ActiveX : insertion d’un contrôle dans une application de conteneur de contrôle](inserting-a-control-into-a-control-container-application.md)
 
-- [Conteneurs de contrôles ActiveX : association d’un contrôle ActiveX à une variable membre](activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Conteneurs de contrôles ActiveX : connexion d’un contrôle ActiveX à une variable membre](activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
 - [Conteneurs de contrôles ActiveX : gestion des événements à partir d’un contrôle ActiveX](activex-control-containers-handling-events-from-an-activex-control.md)
 
-- [Conteneurs de contrôles ActiveX : consultation et modification des propriétés de contrôle](activex-control-containers-viewing-and-modifying-control-properties.md)
+- [Conteneurs de contrôles ActiveX : affichage et modification des propriétés de contrôle](activex-control-containers-viewing-and-modifying-control-properties.md)
 
 - [Conteneurs de contrôles ActiveX : programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX](programming-activex-controls-in-a-activex-control-container.md)
 
-- [Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur autre que de boîte de dialogue](activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur sans boîte de dialogue](activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Pour plus d’informations sur l’utilisation des contrôles ActiveX dans une boîte de dialogue, consultez les rubriques de l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md) .
 

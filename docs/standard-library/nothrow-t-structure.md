@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure nothrow_t'
 title: nothrow_t, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 974fbe3a1e27da41c6366c62d748426293a54437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338094"
 ---
-# <a name="nothrowt-structure"></a>nothrow_t, structure
+# <a name="nothrow_t-structure"></a>nothrow_t, structure
 
 Le struct est utilisé comme paramètre de fonction de l’opérateur new pour indiquer que la fonction doit retourner un pointeur null pour signaler un échec d’allocation, au lieu de lever une exception.
 

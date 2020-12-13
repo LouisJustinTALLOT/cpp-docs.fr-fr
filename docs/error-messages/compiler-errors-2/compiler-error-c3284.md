@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3284'
 title: Erreur du compilateur C3284
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3284
 ms.assetid: e582f316-e9db-4d27-9c70-fdfa737a9d5f
-ms.openlocfilehash: 9606ff5916e4c6971ec44a9d277bb980701ed169
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1c899a3c6fff539dc2676ca685d892b906269253
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339246"
 ---
 # <a name="compiler-error-c3284"></a>Erreur du compilateur C3284
 

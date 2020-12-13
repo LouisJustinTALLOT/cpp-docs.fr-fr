@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe numeric_limits'
 title: numeric_limits (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0f3532b80eb2cba03a7c230d7b16aa8d3c6b616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338060"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits (classe)
 

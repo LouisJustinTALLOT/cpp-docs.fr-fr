@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajout de contrôles à la main'
 title: Ajout de contrôles manuellement
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-ms.openlocfilehash: 4efd1c23c7e4d6f7d8e6fa9fe046f8de11c825a6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f6dfa65baa037aa168697aa7abcd3eedc76cc4d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339079"
 ---
 # <a name="adding-controls-by-hand"></a>Ajout de contrôles manuellement
 
@@ -36,5 +37,5 @@ Après avoir créé l’objet de modification, vous pouvez également définir l
 ## <a name="see-also"></a>Voir aussi
 
 [Création et utilisation de contrôles](making-and-using-controls.md)<br/>
-[Commandes](controls-mfc.md)<br/>
+[Contrôles](controls-mfc.md)<br/>
 [CDialog :: OnInitDialog](reference/cdialog-class.md#oninitdialog)

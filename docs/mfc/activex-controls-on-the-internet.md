@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX sur Internet'
 title: Contrôles ActiveX sur Internet
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5f186d74ff0b448d1cef6a956a6495f6a8890798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339131"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 
@@ -111,13 +112,13 @@ Lors de la création d'un contrôle avec l'Assistant Application, vous pouvez ch
 
    [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
-1. Substituez `OnProgress` Dans `OnProgress`, il vous est renvoyé un nombre qui indique la plage maximale et un nombre indiquant l'avancement du téléchargement en cours. Vous pouvez utiliser ces nombres pour afficher l'état, comme le pourcentage de progression.
+1. Remplacez `OnProgress`. Dans `OnProgress`, il vous est renvoyé un nombre qui indique la plage maximale et un nombre indiquant l'avancement du téléchargement en cours. Vous pouvez utiliser ces nombres pour afficher l'état, comme le pourcentage de progression.
 
 La procédure suivante ajoute une propriété au contrôle pour utiliser uniquement la classe qui vient d'être dérivée.
 
 #### <a name="to-add-a-property"></a>Pour ajouter une propriété
 
-1. Dans **affichage de classes**, cliquez avec le bouton droit sur l’interface sous le nœud de bibliothèque, sélectionnez **Ajouter**, puis **Ajouter une propriété**. L' **Assistant Ajouter une propriété**s’affiche.
+1. Dans **affichage de classes**, cliquez avec le bouton droit sur l’interface sous le nœud de bibliothèque, sélectionnez **Ajouter**, puis **Ajouter une propriété**. L' **Assistant Ajouter une propriété** s’affiche.
 
 1. Dans l' **Assistant Ajouter une propriété**, sélectionnez la case d’option **définir/obtenir des méthodes** , tapez le nom de la **propriété**, par exemple, EditControlText, puis sélectionnez BSTR comme **type de propriété**.
 

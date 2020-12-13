@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme :: Metadata :: attribute (attribut)'
 title: Platform::Metadata::Attribute Attribute
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::Attribute Attribute
 ms.assetid: 0e69727f-429b-4f7d-85c6-eea614f14dd7
-ms.openlocfilehash: 1020982ef79c77bacf920f94dd4bf43fee21424e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48b099e05dec40ad48f023ba6abf34eb26080594
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338824"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Platform::Metadata::Attribute Attribute
 
@@ -30,16 +31,16 @@ public ref class Attribute abstract : Object
 
 [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Platform::Metadata
+**Espace de noms :** Platform::Metadata
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
 ## <a name="see-also"></a>Voir aussi
 
-[Platform::Metadata (espace de noms)](../cppcx/platform-metadata-namespace.md)
+[Platform :: Metadata (espace de noms)](../cppcx/platform-metadata-namespace.md)

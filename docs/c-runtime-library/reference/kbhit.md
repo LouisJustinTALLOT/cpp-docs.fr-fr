@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _kbhit'
 title: _kbhit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 439c3ef6a738bdd7802580eeef1056d0ea02ed58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338893"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -59,7 +60,7 @@ int _kbhit( void );
 
 **_kbhit** retourne une valeur différente de zéro si une touche a été enfoncée. Sinon, retourne 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_kbhit** recherche une séquence de touches récente dans la console. Si la fonction retourne une valeur différente de zéro, une frappe est en attente dans la mémoire tampon. Le programme peut ensuite appeler **_getch** ou **_getche** pour recevoir la séquence de touches.
 
@@ -77,7 +78,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_kbhit.c

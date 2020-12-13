@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe WeakRef'
 title: WeakRef, classe
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 715a823784aaa75f9abe349ef0a7ddc9e5d607d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c1c3edf7589dfd08e0ebab5389d2ca108d8e73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339408"
 ---
 # <a name="weakref-class"></a>WeakRef, classe
 
@@ -105,7 +106,7 @@ if (strongRef == nullptr)
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>WeakRef :: ~ WeakRef, destructeur
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a> WeakRef :: ~ WeakRef, destructeur
 
 Désinitialise l’instance actuelle de la `WeakRef` classe.
 
@@ -113,7 +114,7 @@ Désinitialise l’instance actuelle de la `WeakRef` classe.
 ~WeakRef();
 ```
 
-## <a name="weakrefas-method"></a><a name="as"></a>WeakRef :: As, méthode
+## <a name="weakrefas-method"></a><a name="as"></a> WeakRef :: As, méthode
 
 Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’interface spécifiée.
 
@@ -137,7 +138,7 @@ ID d’interface.
 *ptr*<br/>
 Lorsque cette opération est terminée, objet qui représente le paramètre *U*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 - S_OK si cette opération a échoué ; Sinon, HRESULT qui indique la raison de l’échec de l’opération, et *ptr* a la valeur **`nullptr`** .
 
@@ -153,7 +154,7 @@ Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le
 
 À partir du kit de développement logiciel (SDK) Windows 10, cette méthode ne définit pas l' `WeakRef` instance sur **`nullptr`** si la référence faible n’a pas pu être obtenue. vous devez donc éviter le code de vérification des erreurs qui vérifie le `WeakRef` pour **`nullptr`** . Au lieu de cela, vérifiez *ptr* pour **`nullptr`** .
 
-## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef :: Asiid,, méthode
+## <a name="weakrefasiid-method"></a><a name="asiid"></a> WeakRef :: Asiid,, méthode
 
 Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’ID d’interface spécifié.
 
@@ -172,7 +173,7 @@ ID d’interface.
 *ptr*<br/>
 Lorsque cette opération est terminée, objet qui représente le paramètre *riid*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 - S_OK si cette opération a échoué ; Sinon, HRESULT qui indique la raison de l’échec de l’opération, et *ptr* a la valeur **`nullptr`** .
 
@@ -188,7 +189,7 @@ Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le
 
 À partir du kit de développement logiciel (SDK) Windows 10, cette méthode ne définit pas l' `WeakRef` instance sur **`nullptr`** si la référence faible n’a pas pu être obtenue. vous devez donc éviter le code de vérification des erreurs qui vérifie le `WeakRef` pour **`nullptr`** . Au lieu de cela, vérifiez *ptr* pour **`nullptr`** .
 
-## <a name="weakrefcopyto-method"></a><a name="copyto"></a>WeakRef :: CopyTo, méthode
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a> WeakRef :: CopyTo, méthode
 
 Assigne un pointeur vers une interface, si disponible, à la variable pointeur spécifiée.
 
@@ -219,7 +220,7 @@ ID d’interface. Une erreur est émise si *riid* n’est pas dérivé de `IWeak
 *ptr*<br/>
 Pointeur doublement indirect vers `IInspectable` ou `IWeakReference` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur. Pour plus d’informations, consultez la **section Notes**.
 
@@ -229,7 +230,7 @@ La valeur de retour S_OK signifie que cette opération a réussi, mais elle n’
 
 À partir du kit de développement logiciel (SDK) Windows 10, cette méthode ne définit pas l' `WeakRef` instance sur **`nullptr`** si la référence faible n’a pas pu être obtenue. vous devez donc éviter le code de vérification des erreurs qui vérifie le `WeakRef` pour **`nullptr`** . Au lieu de cela, vérifiez *ptr* pour **`nullptr`** .
 
-## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef :: Operator, &amp; opérateur
+## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a> WeakRef :: Operator, &amp; opérateur
 
 Retourne un `ComPtrRef` objet qui représente l' `WeakRef` objet actuel.
 
@@ -237,7 +238,7 @@ Retourne un `ComPtrRef` objet qui représente l' `WeakRef` objet actuel.
 Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `ComPtrRef`Objet qui représente l’objet actuel `WeakRef` .
 
@@ -245,7 +246,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 Il s’agit d’un opérateur d’assistance interne qui n’est pas destiné à être utilisé dans votre code.
 
-## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef :: WeakRef, constructeur
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a> WeakRef :: WeakRef, constructeur
 
 Initialise une nouvelle instance de la classe `WeakRef`.
 

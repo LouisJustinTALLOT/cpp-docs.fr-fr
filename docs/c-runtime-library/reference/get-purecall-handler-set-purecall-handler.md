@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_purecall_handler, _set_purecall_handler'
 title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7971847c4ce0861db272ea3c722666b0ba0318d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339014"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -63,9 +64,9 @@ _purecall_handler __cdecl _set_purecall_handler(
 *function*<br/>
 Fonction à appeler quand une fonction virtuelle pure est appelée. Une fonction **_purecall_handler** doit avoir un type de retour void.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_Purecall_handler**précédent. Retourne **`nullptr`** s’il n’y avait pas de gestionnaire précédent.
+**_Purecall_handler** précédent. Retourne **`nullptr`** s’il n’y avait pas de gestionnaire précédent.
 
 ## <a name="remarks"></a>Notes
 

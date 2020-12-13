@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : marshaler des chaînes COM à l’aide de l’interopérabilité C++'
 title: "Comment : marshaler des chaînes COM à l'aide de l'interopérabilité C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 3113f0bd04fc8433dc4c7f443914fca9245a54f4
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: d903a3c69407e6ea34779d8c335ec322ab38156a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339369"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Comment : marshaler des chaînes COM à l'aide de l'interopérabilité C++
 

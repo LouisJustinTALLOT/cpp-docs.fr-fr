@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_timezone'
 title: _get_timezone
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fb42603d0b7d63cbbb18c4904c221cd2edeb0e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338968"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -50,14 +51,14 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Paramètres
 
-*seconds*<br/>
+*secondes*<br/>
 Différence en secondes entre l’heure UTC et l’heure locale.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_get_timezone** récupère la différence en secondes entre l’heure UTC et l’heure locale sous la forme d’un entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).
 

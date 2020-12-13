@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_tzname'
 title: _get_tzname
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b98a068d6f2d2643df43078c5a274fd761ac8e95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338950"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -73,7 +74,7 @@ Index d’un des deux noms de fuseaux horaires à récupérer.
 
 À moins que les valeurs soient explicitement modifiées pendant l’exécution, les valeurs par défaut sont respectivement « PST » et « PDT ».
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, sinon une valeur de type **errno** .
 
@@ -83,19 +84,19 @@ Si *timeZoneName* a la **valeur null**, si *sizeInBytes* est égal à zéro ou i
 
 |*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valeur retournée|Contenu de *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|Taille du nom du fuseau horaire|**NUL**|0|0 ou 1|0|non modifié|
+|Taille du nom du fuseau horaire|**NULL**|0|0 ou 1|0|non modifié|
 |Taille du nom du fuseau horaire|n'importe laquelle|> 0|0 ou 1|0|Nom du fuseau horaire|
-|non modifié|**NUL**|> 0|n'importe laquelle|**EINVAL**|non modifié|
+|non modifié|**NULL**|> 0|n'importe laquelle|**EINVAL**|non modifié|
 |non modifié|n'importe laquelle|zéro|n'importe laquelle|**EINVAL**|non modifié|
 |non modifié|n'importe laquelle|> 0|> 1|**EINVAL**|non modifié|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_get_tzname** récupère la représentation sous forme de chaîne de caractères du nom du fuseau horaire actuel ou du nom du fuseau horaire de l’heure d’été (DST) dans l’adresse de *timeZoneName* en fonction de la valeur d’index, ainsi que de la taille de la chaîne dans *pReturnValue*. Si *timeZoneName* a la **valeur null** et que *sizeInBytes* est égal à zéro, la taille de la chaîne requise pour contenir le fuseau horaire spécifié et une valeur null de fin en octets est retournée dans *pReturnValue*. Les valeurs d’index doivent être 0 pour le fuseau horaire standard ou 1 pour le fuseau horaire de l’heure d’été ; toutes les autres valeurs de l' *index* ont des résultats indéterminés.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple appelle **_get_tzname** pour obtenir la taille de mémoire tampon requise pour afficher le nom du fuseau horaire d’hiver actuel, alloue une mémoire tampon de cette taille, appelle à nouveau **_get_tzname** pour charger le nom dans la mémoire tampon, puis l’imprime sur la console.
 

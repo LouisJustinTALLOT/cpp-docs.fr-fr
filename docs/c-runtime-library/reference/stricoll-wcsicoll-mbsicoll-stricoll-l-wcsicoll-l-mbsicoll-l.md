@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l'
 title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0ed1d883d39ba679b00840267ea404de14072ed9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338837"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -115,7 +116,7 @@ Chaîne terminée par Null à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne une valeur indiquant la relation de *Chaîne1* à *Chaîne2*, comme suit.
 
@@ -126,9 +127,9 @@ Chacune de ces fonctions retourne une valeur indiquant la relation de *Chaîne1*
 |> 0|*Chaîne1* supérieure à *Chaîne2*|
 |**_NLSCMPERROR**|Une erreur est survenue.|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez \<String. h> ou \<mbstring. h>. **_wcsicoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsicoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsicoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après l’appel de **_wcsicoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez \<string.h> ou \<mbstring.h> . **_wcsicoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsicoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsicoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après l’appel de **_wcsicoll**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions effectue une comparaison qui ne respecte pas la casse de *string1* et *string2* , en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
 

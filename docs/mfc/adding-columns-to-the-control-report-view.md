@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajout de colonnes au contrôle (vue rapport)'
 title: Ajout de colonnes au contrôle (vue Rapport)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: 119f0f9cb92d724058ce97fbf477143739ec111e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 62e874f77d326b80a362791888e75df0a92781d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339098"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Ajout de colonnes au contrôle (vue Rapport)
 
@@ -34,4 +35,4 @@ Si votre contrôle de liste prend en charge une vue rapport, vous devez ajouter 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

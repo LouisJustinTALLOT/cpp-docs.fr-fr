@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _lfind_s'
 title: _lfind_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 589a413c9f1fb49fbfe8cd1b5eacb9d452716523
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b495f8f6f6f39a07b6fa193ede45b5cb875528ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338864"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -76,7 +77,7 @@ Pointeur désignant la routine de comparaison. Le premier paramètre est le poin
 *context*<br/>
 Pointeur désignant un objet accessible dans la fonction de comparaison.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la clé est trouvée, **_lfind_s** retourne un pointeur vers l’élément du tableau au niveau de *base* qui correspond à la *clé*. Si la clé est introuvable, **_lfind_s** retourne la **valeur null**.
 
@@ -84,14 +85,14 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|key|base|compare|num|taille|errno|
+|key|base|compare|num|est|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
-|n'importe laquelle|**NUL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NULL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|zéro|**EINVAL**|
-|n'importe laquelle|n'importe laquelle|**NUL**|an|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|**NULL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_lfind_s** effectue une recherche linéaire sur la *clé* de valeur dans un tableau d’éléments *Number* , chacun d’octets de *largeur* . Contrairement à **bsearch_s**, **_lfind_s** ne nécessite pas le tri du tableau. L’argument de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche. L’argument de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments de tableau, puis retourne une valeur spécifiant leur relation. **_lfind_s** appelle la routine de *comparaison* une ou plusieurs fois pendant la recherche, en passant le pointeur de *contexte* et les pointeurs à deux éléments de tableau à chaque appel. La routine de *comparaison* doit comparer les éléments, puis retourner une valeur différente de zéro (ce qui signifie que les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
 
