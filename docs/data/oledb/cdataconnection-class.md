@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDataConnection'
 title: CDataConnection, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -61,24 +62,24 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7cdcb681c40d1ef4e93baee5dc4e4395e6ea9c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328806"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 
 Gère la connexion à la source de données.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDataConnection
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -89,7 +90,7 @@ class CDataConnection
 | Nom | Description |
 |-|-|
 |[CDataConnection](#cdataconnection)|Constructeur. Instancie et initialise un `CDataConnection` objet.|
-|[Copier](#copy)|Crée une copie d’une connexion de données existante.|
+|[Copy](#copy)|Crée une copie d’une connexion de données existante.|
 |[Ouvrir](#open)|Ouvre une connexion à une source de données à l’aide d’une chaîne d’initialisation.|
 |[OpenNewSession](#opennewsession)|Ouvre une nouvelle session sur la connexion actuelle.|
 
@@ -104,7 +105,7 @@ class CDataConnection
 |[&opérateur CSession ](#op_csession_amp)|Retourne une référence à l' `CSession` objet contenu.|
 |[opérateur CSession*](#op_csession_star)|Retourne un pointeur vers l' `CSession` objet contenu.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `CDataConnection` est une classe utile pour créer des clients, car elle encapsule des objets nécessaires (source de données et session) et une partie du travail que vous devez effectuer lors de la connexion à une source de données
 
@@ -131,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 *SD*<br/>
 dans Référence à une connexion de données existante.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première substitution crée un nouvel `CDataConnection` objet avec les paramètres par défaut.
 
@@ -186,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *session*<br/>
 [in/out] Référence au nouvel objet de session.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La nouvelle session utilise l’objet de source de données contenu de l’objet de connexion en cours comme parent et peut accéder à toutes les mêmes informations que la source de données.
 

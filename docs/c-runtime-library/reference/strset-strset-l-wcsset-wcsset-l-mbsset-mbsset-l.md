@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l'
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f8c3e0d9f6cb9cdb372ad5eac9a0f5d2c6d8cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329173"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -118,13 +119,13 @@ unsigned char *_mbsset_l(
 *str*<br/>
 Chaîne se terminant par un caractère Null à définir.
 
-*secteur*<br/>
+*c*<br/>
 Paramètre de caractère.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la chaîne modifiée.
 
@@ -188,7 +189,7 @@ After:  *******************************
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

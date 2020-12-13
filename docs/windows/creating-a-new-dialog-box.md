@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : créer une boîte de dialogue (C++)'
 title: 'Comment : créer une boîte de dialogue (C++)'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 0d5e4836933f1ce32f28c7fd03c81be5b7d09fd9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c02d0d85d20b51c867b3f3ba0e5f945595ed130
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329491"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Comment : créer une boîte de dialogue (C++)
 
@@ -92,7 +93,7 @@ Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son co
 
 Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la propriété **Absolute align** de la boîte de dialogue sur **true**, la boîte de dialogue s’affiche à une position relative au coin supérieur gauche de l’écran.
 
-1. Lorsque l' **éditeur de boîtes de dialogue** est la fenêtre active, accédez à menu tester le **format**de la  >  **boîte de dialogue**.
+1. Lorsque l' **éditeur de boîtes de dialogue** est la fenêtre active, accédez à menu tester le **format** de la  >  **boîte de dialogue**.
 
 1. Pour mettre fin à la simulation, appuyez sur **Échap** ou sélectionnez le bouton **Fermer** dans la boîte de dialogue que vous testez.
 

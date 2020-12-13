@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : déploiement d’applications de bureau natives (Visual C++)'
 title: Déploiement des applications de bureau natives (Visual C++)
 ms.date: 05/11/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c3da460266eb630e7ac243f523fa6e89a79fa1f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329441"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Déploiement des applications de bureau natives (Visual C++)
 
@@ -35,13 +36,13 @@ Les articles de cette section de la documentation expliquent comment vous assure
 
 - [Concepts relatifs au déploiement](deployment-concepts.md)
 
-- [Fonctionnement des dépendances d’une application Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
+- [Fonctionnement des dépendances d'une application Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
 
 - [Détermination des DLL à redistribuer](determining-which-dlls-to-redistribute.md)
 
 - [Choix d’une méthode de déploiement](choosing-a-deployment-method.md)
 
-- [Déploiement de Universal CRT](universal-crt-deployment.md).
+- [Déploiement du CRT universel](universal-crt-deployment.md).
 
 - [Redistribution des fichiers Visual C++](redistributing-visual-cpp-files.md)
 
@@ -49,14 +50,14 @@ Les articles de cette section de la documentation expliquent comment vous assure
 
 - [Redistribution d’applications clientes web](redistributing-web-client-applications.md)
 
-- [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)
+- [Déploiement ClickOnce pour les applications Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Exécution d’une application C++ /clr sur une version antérieure du runtime](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Exécution d'une application C++ /clr sur une version antérieure du runtime](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Sections connexes
 
-- [Génération d’applications isolées et d’assemblys côte à côte C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+- [Génération d’applications isolées C/C++ et d’assemblys côte à côte](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 - [Déploiement](/dotnet/framework/deployment/index)
 
-- [Dépannage d’applications isolées et d’assemblys côte à côte C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+- [Résolution des problèmes d’applications isolées C/C++ et d’assemblys côte à côte](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

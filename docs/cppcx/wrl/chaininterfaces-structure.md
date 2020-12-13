@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure ChainInterfaces'
 title: ChainInterfaces (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc943b16d587a3b542e49d72e6bdc24ba2546e16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328866"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (structure)
 
@@ -138,7 +139,7 @@ Nom                                   | Description
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces :: CanCastTo,
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a> ChainInterfaces :: CanCastTo,
 
 Indique si l’ID d’interface spécifié peut être casté en chacune des spécialisations définies par les paramètres de modèle non définis par défaut.
 
@@ -157,11 +158,11 @@ ID d’interface.
 *ppv*<br/>
 Pointeur vers le dernier ID d’interface qui a été correctement converti.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si toutes les opérations de conversion réussissent ; Sinon, **`false`** .
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces :: Casttounknown,
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a> ChainInterfaces :: Casttounknown,
 
 Convertit le pointeur d’interface du type défini par le paramètre de modèle *I0* en pointeur vers `IUnknown` .
 
@@ -169,11 +170,11 @@ Convertit le pointeur d’interface du type défini par le paramètre de modèle
 __forceinline IUnknown* CastToUnknown();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers `IUnknown`.
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces :: Fillarraywithiid,
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a> ChainInterfaces :: Fillarraywithiid,
 
 Stocke l’ID d’interface défini par le paramètre de modèle *I0* dans un emplacement spécifié dans un tableau d’ID d’interface spécifié.
 
@@ -192,7 +193,7 @@ Pointeur vers une valeur d’index dans le tableau *IID* .
 *IID*<br/>
 Tableau d’ID d’interface.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces :: Iidcount,
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a> ChainInterfaces :: Iidcount,
 
 Nombre total d’ID d’interface contenus dans les interfaces spécifiées par les paramètres de modèle *I0* à *i9*.
 
@@ -200,7 +201,7 @@ Nombre total d’ID d’interface contenus dans les interfaces spécifiées par 
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre total d’ID d’interface.
 
@@ -208,7 +209,7 @@ Nombre total d’ID d’interface.
 
 Les paramètres de modèle *I0* et *I1* sont requis, et les paramètres *I2* à *i9* sont facultatifs. Le nombre d’IID de chaque interface est généralement 1.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces :: Verify
+## <a name="chaininterfacesverify"></a><a name="verify"></a> ChainInterfaces :: Verify
 
 Vérifie que chaque interface définie par les paramètres de modèle *I0* via *i9* hérite de `IUnknown` et/ou `IInspectable` , et que *I0* hérite de *I1* à *i9*.
 

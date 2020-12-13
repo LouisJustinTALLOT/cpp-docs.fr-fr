@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : public (attributs C++)'
 title: public (attributs C++) (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6a19a9a2718ad5f0e7ac59c71e9b4df6a7e92dd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ee6fb641dc122c7d31c25d3433e2a427710ef40a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329658"
 ---
 # <a name="public-c-attributes"></a>public (attributs C++)
 
@@ -45,14 +46,14 @@ __interface IFireTabCtrl : IDispatch
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`typedef`**|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

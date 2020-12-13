@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des boîtes de dialogue dans MFC'
 title: Utilisation des boîtes de dialogue dans MFC
 ms.date: 09/27/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5e88d34ab26f8abd24923aacafa02c3c62ec7f06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327791"
 ---
 # <a name="working-with-dialog-boxes-in-mfc"></a>Utilisation des boîtes de dialogue dans MFC
 
@@ -39,7 +40,7 @@ Pour les boîtes de dialogue non modales, vous pouvez souvent extraire des donn�
 
 - [Gestion des messages Windows dans votre boîte de dialogue](handling-windows-messages-in-your-dialog-box.md)
 
-- [Récupération de données de l’objet Dialog](retrieving-data-from-the-dialog-object.md)
+- [Récupération des données d'un objet de la boîte de dialogue](retrieving-data-from-the-dialog-object.md)
 
 - [Fermeture de la boîte de dialogue](closing-the-dialog-box.md)
 

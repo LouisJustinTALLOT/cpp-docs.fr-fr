@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : usesgetlasterror'
 title: usesgetlasterror (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: e3d3c292554350d85296971a9bd3620909ef47c7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f43ae005e2f888f4318900cbde58f449011bd15e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329515"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -31,14 +32,14 @@ L’attribut C++ **usesgetlasterror** a les mêmes fonctionnalités que l’attr
 
 Pour obtenir un exemple d’utilisation de **usesgetlasterror**, consultez l’exemple de [idl_module](idl-module.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|attribut de **module**|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

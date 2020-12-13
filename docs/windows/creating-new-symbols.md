@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : créer des symboles (C++)'
 title: 'Comment : créer des symboles (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 961c186796e239471507b83dc301186d05004800
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329469"
 ---
 # <a name="how-to-create-symbols-c"></a>Comment : créer des symboles (C++)
 
@@ -82,7 +83,7 @@ Lorsque vous parcourez les symboles des **ressources**, vous pouvez avoir besoin
 
    La ressource s'affiche dans la fenêtre d'éditeur appropriée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

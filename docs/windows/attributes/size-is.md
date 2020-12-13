@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : size_is'
 title: size_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f61124dc286de1c8893f093454c921b4d6e46037
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329612"
 ---
 # <a name="size_is"></a>size_is
 
@@ -36,13 +37,13 @@ L’attribut C++ **size_is** a les mêmes fonctionnalités que l’attribut MIDL
 
 Consultez l’exemple de [first_is](first-is.md) pour obtenir un exemple de spécification d’une section d’un tableau.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Champ dans **`struct`** ou **`union`** , paramètre d’interface, méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
 |**Attributs non valides**|`max_is`|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

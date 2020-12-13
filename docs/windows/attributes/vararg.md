@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vararg'
 title: vararg (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: edfcfdb32abeaff487134eac35033117b470d7d2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7eb2df5f0a2be212bc49c69f329f875f02bf408d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329495"
 ---
 # <a name="vararg"></a>vararg
 
@@ -45,14 +46,14 @@ __interface X : public IUnknown
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

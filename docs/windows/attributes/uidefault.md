@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : UIDefault'
 title: UIDefault (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 70f54c9d3e6aaa46aef08d109e8682989e382120
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a173679ebdecf31b475fb276741a5ac217cab410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329533"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -48,14 +49,14 @@ __interface ICustom{
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

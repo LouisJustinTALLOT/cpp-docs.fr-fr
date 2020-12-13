@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CImageList, classe'
 title: CImageList (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 28693aaa32ab5f4baaf773a7bac64c491d55cf78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 039f4e307727970b6236af6ad51bf658c44bae0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327774"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -166,7 +167,7 @@ Pour plus d’informations sur l’utilisation de `CImageList` , consultez [cont
 
 **En-tête :** afxcmn.h
 
-## <a name="cimagelistadd"></a><a name="add"></a>CImageList :: Add
+## <a name="cimagelistadd"></a><a name="add"></a> CImageList :: Add
 
 Appelez cette fonction pour ajouter une ou plusieurs images ou une icône à une liste d’images.
 
@@ -196,7 +197,7 @@ Couleur utilisée pour générer le masque. Chaque pixel de cette couleur dans l
 *hIcon*<br/>
 Handle de l’icône qui contient la bitmap et le masque de la nouvelle image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la première nouvelle image en cas de réussite ; sinon-1.
 
@@ -208,7 +209,7 @@ Vous êtes responsable de la libération du descripteur d’icône lorsque vous 
 
 [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]
 
-## <a name="cimagelistattach"></a><a name="attach"></a>CImageList :: Attach
+## <a name="cimagelistattach"></a><a name="attach"></a> CImageList :: Attach
 
 Appelez cette fonction pour attacher une liste d’images à un `CImageList` objet.
 
@@ -221,7 +222,7 @@ BOOL Attach(HIMAGELIST hImageList);
 *hImageList*<br/>
 Handle d’un objet de liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la pièce jointe a abouti ; Sinon, 0.
 
@@ -229,7 +230,7 @@ Différent de zéro si la pièce jointe a abouti ; Sinon, 0.
 
 [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]
 
-## <a name="cimagelistbegindrag"></a><a name="begindrag"></a>CImageList :: BeginDrag
+## <a name="cimagelistbegindrag"></a><a name="begindrag"></a> CImageList :: BeginDrag
 
 Appelez cette fonction pour commencer à faire glisser une image.
 
@@ -247,7 +248,7 @@ Index de base zéro de l’image à faire glisser.
 *ptHotSpot*<br/>
 Coordonnées de la position de départ du glissement (en général, la position du curseur). Les coordonnées sont relatives au coin supérieur gauche de l’image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -259,7 +260,7 @@ Cette fonction crée une liste d’images temporaire qui est utilisée pour le g
 
 [!code-cpp[NVC_MFC_CImageList#3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]
 
-## <a name="cimagelistcimagelist"></a><a name="cimagelist"></a>CImageList :: CImageList
+## <a name="cimagelistcimagelist"></a><a name="cimagelist"></a> CImageList :: CImageList
 
 Construit un objet `CImageList`.
 
@@ -267,7 +268,7 @@ Construit un objet `CImageList`.
 CImageList();
 ```
 
-## <a name="cimagelistcopy"></a><a name="copy"></a>CImageList :: Copy
+## <a name="cimagelistcopy"></a><a name="copy"></a> CImageList :: Copy
 
 Cette fonction membre implémente le comportement de la fonction Win32 [ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy), comme décrit dans le SDK Windows.
 
@@ -303,7 +304,7 @@ Valeur de l’indicateur binaire qui spécifie le type d’opération de copie �
 *pSrc*<br/>
 Pointeur vers un `CImageList` objet qui est la cible de l’opération de copie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -311,7 +312,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]
 
-## <a name="cimagelistcreate"></a><a name="create"></a>CImageList :: Create
+## <a name="cimagelistcreate"></a><a name="create"></a> CImageList :: Create
 
 Initialise une liste d’images et l’attache à un objet [CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -404,7 +405,7 @@ Décalage de l’axe y de la deuxième image par rapport à la première image, 
 *pImageList*<br/>
 Pointeur vers un objet `CImageList`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -416,7 +417,7 @@ Vous construisez un `CImageList` en deux étapes. Tout d’abord, appelez le con
 
 [!code-cpp[NVC_MFC_CImageList#7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]
 
-## <a name="cimagelistdeleteimagelist"></a><a name="deleteimagelist"></a>CImageList ::D eleteImageList
+## <a name="cimagelistdeleteimagelist"></a><a name="deleteimagelist"></a> CImageList ::D eleteImageList
 
 Appelez cette fonction pour supprimer une liste d’images.
 
@@ -424,7 +425,7 @@ Appelez cette fonction pour supprimer une liste d’images.
 BOOL DeleteImageList();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -432,7 +433,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 [!code-cpp[NVC_MFC_CImageList#8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]
 
-## <a name="cimagelistdeletetempmap"></a><a name="deletetempmap"></a>CImageList ::D eleteTempMap
+## <a name="cimagelistdeletetempmap"></a><a name="deletetempmap"></a> CImageList ::D eleteTempMap
 
 Appelée automatiquement par le `CWinApp` Gestionnaire de temps d’inactivité, `DeleteTempMap` supprime tous les `CImageList` objets temporaires créés par [FromHandle](#fromhandle), mais ne détruit pas les handles ( `hImageList` ) qui sont temporairement associés aux `ImageList` objets.
 
@@ -444,7 +445,7 @@ static void PASCAL DeleteTempMap();
 
 [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]
 
-## <a name="cimagelistdetach"></a><a name="detach"></a>CImageList ::D Etach
+## <a name="cimagelistdetach"></a><a name="detach"></a> CImageList ::D Etach
 
 Appelez cette fonction pour détacher un objet de liste d’images d’un `CImageList` objet.
 
@@ -452,7 +453,7 @@ Appelez cette fonction pour détacher un objet de liste d’images d’un `CImag
 HIMAGELIST Detach();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’un objet de liste d’images.
 
@@ -464,7 +465,7 @@ Cette fonction retourne un handle vers l’objet de liste d’images.
 
   Consultez l’exemple pour [CImageList :: Attach](#attach).
 
-## <a name="cimagelistdragenter"></a><a name="dragenter"></a>CImageList ::D ragEnter
+## <a name="cimagelistdragenter"></a><a name="dragenter"></a> CImageList ::D ragEnter
 
 Pendant une opération glisser, verrouille les mises à jour de la fenêtre spécifiée par *pWndLock* et affiche l’image de glissement à la position spécifiée par *point*.
 
@@ -482,7 +483,7 @@ Pointeur vers la fenêtre qui possède l’image de glissement.
 *point*<br/>
 Position à laquelle afficher l’image de glissement. Les coordonnées sont relatives au coin supérieur gauche de la fenêtre (et non à la zone cliente).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -498,7 +499,7 @@ Cette fonction verrouille toutes les autres mises à jour de la fenêtre donnée
 
   Consultez l’exemple pour [CImageList :: BeginDrag](#begindrag).
 
-## <a name="cimagelistdragleave"></a><a name="dragleave"></a>CImageList ::D ragLeave
+## <a name="cimagelistdragleave"></a><a name="dragleave"></a> CImageList ::D ragLeave
 
 Déverrouille la fenêtre spécifiée par *pWndLock* et masque l’image de glissement, ce qui permet la mise à jour de la fenêtre.
 
@@ -511,7 +512,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 *pWndLock*<br/>
 Pointeur vers la fenêtre qui possède l’image de glissement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -519,7 +520,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
   Consultez l’exemple pour [CImageList :: EndDrag](#enddrag).
 
-## <a name="cimagelistdragmove"></a><a name="dragmove"></a>CImageList ::D ragMove
+## <a name="cimagelistdragmove"></a><a name="dragmove"></a> CImageList ::D ragMove
 
 Appelez cette fonction pour déplacer l’image glissée pendant une opération de glisser-déplacer.
 
@@ -532,7 +533,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 *pt*<br/>
 Nouvelle position de glissement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -544,7 +545,7 @@ Cette fonction est généralement appelée en réponse à un message de WM_MOUSE
 
 [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]
 
-## <a name="cimagelistdragshownolock"></a><a name="dragshownolock"></a>CImageList ::D ragShowNolock
+## <a name="cimagelistdragshownolock"></a><a name="dragshownolock"></a> CImageList ::D ragShowNolock
 
 Affiche ou masque l’image de glissement pendant une opération glisser, sans verrouiller la fenêtre.
 
@@ -557,7 +558,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 *bShow*<br/>
 Spécifie si l’image de glissement doit être affichée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -565,7 +566,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 La fonction [CImageList ::D ragenter](#dragenter) verrouille toutes les mises à jour de la fenêtre pendant une opération glisser. Toutefois, cette fonction ne verrouille pas la fenêtre.
 
-## <a name="cimagelistdraw"></a><a name="draw"></a>CImageList ::D RAW
+## <a name="cimagelistdraw"></a><a name="draw"></a> CImageList ::D RAW
 
 Appelez cette fonction pour dessiner l’image glissée pendant une opération de glisser-déplacer.
 
@@ -599,7 +600,7 @@ Indicateur spécifiant le style de dessin. Il peut s’agir d’une ou plusieurs
 |ILD_NORMAL|Dessine l’image à l’aide de la couleur d’arrière-plan de la liste d’images. Si la couleur d’arrière-plan est la valeur CLR_NONE, l’image est dessinée de manière transparente à l’aide du masque.|
 |ILD_TRANSPARENT|Dessine l’image de manière transparente à l’aide du masque, quelle que soit la couleur d’arrière-plan.|
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -607,7 +608,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
   Consultez l’exemple pour [CImageList :: SetOverlayImage](#setoverlayimage).
 
-## <a name="cimagelistdrawex"></a><a name="drawex"></a>CImageList ::D rawEx
+## <a name="cimagelistdrawex"></a><a name="drawex"></a> CImageList ::D rawEx
 
 Dessine un élément de liste d’images dans le contexte de périphérique spécifié.
 
@@ -645,7 +646,7 @@ Couleur de premier plan de l’image. Consultez *rgbFg* dans [ImageList_DrawEx](
 *nStyle*<br/>
 Indicateur spécifiant le style de dessin. Consultez *fStyle* dans [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -657,7 +658,7 @@ La fonction utilise le style de dessin spécifié et fusionne l’image avec la 
 
 [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]
 
-## <a name="cimagelistdrawindirect"></a><a name="drawindirect"></a>CImageList ::D rawIndirect
+## <a name="cimagelistdrawindirect"></a><a name="drawindirect"></a> CImageList ::D rawIndirect
 
 Appelez cette fonction membre pour dessiner une image à partir d’une liste d’images.
 
@@ -740,7 +741,7 @@ Lorsqu’il est utilisé avec ILS_APLHA, ce membre contient la valeur du canal a
 *crEffect*<br/>
 Valeur [COLORREF](/windows/win32/gdi/colorref) utilisée pour les effets de lumière et d’ombre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’image est correctement dessinée ; Sinon, FALSe.
 
@@ -754,7 +755,7 @@ Une image de superposition est une image dessinée au-dessus de l’image princi
 
 [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]
 
-## <a name="cimagelistenddrag"></a><a name="enddrag"></a>CImageList :: EndDrag
+## <a name="cimagelistenddrag"></a><a name="enddrag"></a> CImageList :: EndDrag
 
 Appelez cette fonction pour terminer une opération glisser.
 
@@ -770,7 +771,7 @@ Pour commencer une opération glisser, utilisez la `BeginDrag` fonction membre.
 
 [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]
 
-## <a name="cimagelistextracticon"></a><a name="extracticon"></a>CImageList :: ExtractIcon
+## <a name="cimagelistextracticon"></a><a name="extracticon"></a> CImageList :: ExtractIcon
 
 Appelez cette fonction pour créer une icône basée sur une image et son masque associé dans une liste d’images.
 
@@ -783,7 +784,7 @@ HICON ExtractIcon(int nImage);
 *nImage*<br/>
 Index de base zéro de l’image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’icône en cas de réussite ; Sinon, NULL.
 
@@ -795,7 +796,7 @@ Cette méthode s’appuie sur le comportement de la macro [ImageList_ExtractIcon
 
 [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]
 
-## <a name="cimagelistfromhandle"></a><a name="fromhandle"></a>CImageList :: FromHandle
+## <a name="cimagelistfromhandle"></a><a name="fromhandle"></a> CImageList :: FromHandle
 
 Retourne un pointeur vers un `CImageList` objet en fonction d’un handle vers une liste d’images.
 
@@ -808,7 +809,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 *hImageList*<br/>
 Spécifie la liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CImageList` objet en cas de réussite ; sinon, null.
 
@@ -820,7 +821,7 @@ Si un `CImageList` n’est pas déjà attaché au handle, un `CImageList` objet 
 
 [!code-cpp[NVC_MFC_CImageList#13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]
 
-## <a name="cimagelistfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CImageList :: FromHandlePermanent
+## <a name="cimagelistfromhandlepermanent"></a><a name="fromhandlepermanent"></a> CImageList :: FromHandlePermanent
 
 Retourne un pointeur vers un `CImageList` objet en fonction d’un handle vers une liste d’images.
 
@@ -833,7 +834,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 *hImageList*<br/>
 Spécifie la liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CImageList` objet en cas de réussite ; sinon, null.
 
@@ -845,7 +846,7 @@ Si un `CImageList` objet n’est pas attaché au handle, la valeur null est reto
 
 [!code-cpp[NVC_MFC_CImageList#14](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]
 
-## <a name="cimagelistgetbkcolor"></a><a name="getbkcolor"></a>CImageList :: GetBkColor
+## <a name="cimagelistgetbkcolor"></a><a name="getbkcolor"></a> CImageList :: GetBkColor
 
 Appelez cette fonction pour récupérer la couleur d’arrière-plan actuelle d’une liste d’images.
 
@@ -853,7 +854,7 @@ Appelez cette fonction pour récupérer la couleur d’arrière-plan actuelle d�
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de couleur RVB de la `CImageList` couleur d’arrière-plan de l’objet.
 
@@ -861,7 +862,7 @@ Valeur de couleur RVB de la `CImageList` couleur d’arrière-plan de l’objet.
 
   Consultez l’exemple pour [CImageList :: SetBkColor](#setbkcolor).
 
-## <a name="cimagelistgetdragimage"></a><a name="getdragimage"></a>CImageList :: GetDragImage
+## <a name="cimagelistgetdragimage"></a><a name="getdragimage"></a> CImageList :: GetDragImage
 
 Obtient la liste d’images temporaires utilisée pour le déplacement.
 
@@ -879,11 +880,11 @@ Adresse d’une structure de [point](/windows/win32/api/windef/ns-windef-point) 
 *lpPointHotSpot*<br/>
 Adresse d’une `POINT` structure qui reçoit le décalage de l’image de glissement par rapport à la position de glissement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers la liste d’images temporaires utilisée pour le déplacement ; Sinon, NULL.
 
-## <a name="cimagelistgetimagecount"></a><a name="getimagecount"></a>CImageList :: GetImageCount
+## <a name="cimagelistgetimagecount"></a><a name="getimagecount"></a> CImageList :: GetImageCount
 
 Appelez cette fonction pour récupérer le nombre d’images dans une liste d’images.
 
@@ -891,7 +892,7 @@ Appelez cette fonction pour récupérer le nombre d’images dans une liste d’
 int GetImageCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’images.
 
@@ -899,7 +900,7 @@ Nombre d’images.
 
   Consultez l’exemple pour [CImageList :: ExtractIcon](#extracticon).
 
-## <a name="cimagelistgetimageinfo"></a><a name="getimageinfo"></a>CImageList :: GetImageInfo
+## <a name="cimagelistgetimageinfo"></a><a name="getimageinfo"></a> CImageList :: GetImageInfo
 
 Appelez cette fonction pour récupérer les informations relatives à une image.
 
@@ -917,7 +918,7 @@ Index de base zéro de l’image.
 *pImageInfo*<br/>
 Pointeur vers une structure [IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo) qui reçoit des informations sur l’image. Les informations de cette structure peuvent être utilisées pour manipuler directement les bitmaps de l’image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -925,7 +926,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 La `IMAGEINFO` structure contient des informations sur une image dans une liste d’images.
 
-## <a name="cimagelistgetsafehandle"></a><a name="getsafehandle"></a>CImageList :: GetSafeHandle
+## <a name="cimagelistgetsafehandle"></a><a name="getsafehandle"></a> CImageList :: GetSafeHandle
 
 Appelez cette fonction pour récupérer le `m_hImageList` membre de données.
 
@@ -933,7 +934,7 @@ Appelez cette fonction pour récupérer le `m_hImageList` membre de données.
 HIMAGELIST GetSafeHandle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de la liste d’images attachée ; Sinon, la valeur est NULL si aucun objet n’est attaché.
 
@@ -941,7 +942,7 @@ Handle de la liste d’images attachée ; Sinon, la valeur est NULL si aucun ob
 
 [!code-cpp[NVC_MFC_CImageList#15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]
 
-## <a name="cimagelistm_himagelist"></a><a name="m_himagelist"></a>CImageList :: m_hImageList
+## <a name="cimagelistm_himagelist"></a><a name="m_himagelist"></a> CImageList :: m_hImageList
 
 Handle de la liste d’images jointe à cet objet.
 
@@ -955,7 +956,7 @@ Le `m_hImageList` membre de données est une variable publique de type HIMAGELIS
 
 [!code-cpp[NVC_MFC_CImageList#23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]
 
-## <a name="cimagelistoperator-himagelist"></a><a name="operator_himagelist"></a>CImageList :: Operator HIMAGELIST
+## <a name="cimagelistoperator-himagelist"></a><a name="operator_himagelist"></a> CImageList :: Operator HIMAGELIST
 
 Utilisez cet opérateur pour recevoir le handle attaché de l' `CImageList` objet.
 
@@ -963,7 +964,7 @@ Utilisez cet opérateur pour recevoir le handle attaché de l' `CImageList` obje
 operator HIMAGELIST() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, handle vers la liste d’images représentée par l' `CImageList` objet ; sinon, null.
 
@@ -975,7 +976,7 @@ Cet opérateur est un opérateur de cast qui prend en charge l’utilisation dir
 
 [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]
 
-## <a name="cimagelistread"></a><a name="read"></a>CImageList :: Read
+## <a name="cimagelistread"></a><a name="read"></a> CImageList :: Read
 
 Appelez cette fonction pour lire une liste d’images à partir d’une archive.
 
@@ -988,7 +989,7 @@ BOOL Read(CArchive* pArchive);
 *pArchive*<br/>
 Pointeur vers un `CArchive` objet à partir duquel la liste d’images doit être lue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -996,7 +997,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]
 
-## <a name="cimagelistremove"></a><a name="remove"></a>CImageList :: Remove
+## <a name="cimagelistremove"></a><a name="remove"></a> CImageList :: Remove
 
 Appelez cette fonction pour supprimer une image d’un objet de liste d’images.
 
@@ -1009,7 +1010,7 @@ BOOL Remove(int nImage);
 *nImage*<br/>
 Index de base zéro de l’image à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1021,7 +1022,7 @@ Tous les éléments suivants *nimage* descendent d’une position. Par exemple, 
 
 [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]
 
-## <a name="cimagelistreplace"></a><a name="replace"></a>CImageList :: replace
+## <a name="cimagelistreplace"></a><a name="replace"></a> CImageList :: replace
 
 Appelez cette fonction pour remplacer une image dans une liste d’images par une nouvelle image.
 
@@ -1050,7 +1051,7 @@ Pointeur vers l’image bitmap qui contient le masque. Si aucun masque n’est u
 *hIcon*<br/>
 Handle vers l’icône qui contient l’image bitmap et le masque de la nouvelle image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La version qui retourne BOOL retourne une valeur différente de zéro en cas de réussite ; Sinon, 0.
 
@@ -1064,7 +1065,7 @@ Appelez cette fonction membre après avoir appelé [SetImageCount](#setimagecoun
 
   Consultez l’exemple pour [CImageList :: SetImageCount](#setimagecount).
 
-## <a name="cimagelistsetbkcolor"></a><a name="setbkcolor"></a>CImageList :: SetBkColor
+## <a name="cimagelistsetbkcolor"></a><a name="setbkcolor"></a> CImageList :: SetBkColor
 
 Appelez cette fonction pour définir la couleur d’arrière-plan d’une liste d’images.
 
@@ -1074,10 +1075,10 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Couleur d’arrière-plan à définir. Il peut être CLR_NONE. Dans ce cas, les images sont dessinées en toute transparence à l’aide du masque.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La couleur d’arrière-plan précédente en cas de réussite ; sinon CLR_NONE.
 
@@ -1085,7 +1086,7 @@ La couleur d’arrière-plan précédente en cas de réussite ; sinon CLR_NONE.
 
 [!code-cpp[NVC_MFC_CImageList#20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]
 
-## <a name="cimagelistsetdragcursorimage"></a><a name="setdragcursorimage"></a>CImageList :: SetDragCursorImage
+## <a name="cimagelistsetdragcursorimage"></a><a name="setdragcursorimage"></a> CImageList :: SetDragCursorImage
 
 Crée une image de glissement en combinant l’image donnée (généralement une image de curseur de la souris) avec l’image de glissement actuelle.
 
@@ -1103,7 +1104,7 @@ Index de la nouvelle image à combiner avec l’image de glissement.
 *ptHotSpot*<br/>
 Position de la zone réactive dans la nouvelle image.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1111,7 +1112,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Étant donné que les fonctions de glissement utilisent la nouvelle image pendant une opération de glissement, vous devez utiliser la fonction [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) de Windows pour masquer le curseur de la souris réel après l’appel de `CImageList::SetDragCursorImage` . Sinon, le système peut sembler être composé de deux curseurs de souris pour la durée de l'opération Glisser-déplacer.
 
-## <a name="cimagelistsetimagecount"></a><a name="setimagecount"></a>CImageList :: SetImageCount
+## <a name="cimagelistsetimagecount"></a><a name="setimagecount"></a> CImageList :: SetImageCount
 
 Appelez cette fonction membre pour réinitialiser le nombre d’images dans un `CImageList` objet.
 
@@ -1124,7 +1125,7 @@ BOOL SetImageCount(UINT uNewCount);
 *uNewCount*<br/>
 Valeur qui spécifie le nouveau nombre total d’images dans la liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1138,7 +1139,7 @@ Si vous réduisez la taille d’une liste d’images à l’aide de cette foncti
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
-## <a name="cimagelistsetoverlayimage"></a><a name="setoverlayimage"></a>CImageList :: SetOverlayImage
+## <a name="cimagelistsetoverlayimage"></a><a name="setoverlayimage"></a> CImageList :: SetOverlayImage
 
 Appelez cette fonction pour ajouter l’index de base zéro d’une image à la liste d’images à utiliser comme masques de superposition.
 
@@ -1156,7 +1157,7 @@ Index de base zéro de l’image à utiliser comme masque de superposition.
 *nOverlay*<br/>
 Index de base un du masque de superposition.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1170,7 +1171,7 @@ Un masque de superposition est une image dessinée de manière transparente sur 
 
 [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]
 
-## <a name="cimagelistwrite"></a><a name="write"></a>CImageList :: Write
+## <a name="cimagelistwrite"></a><a name="write"></a> CImageList :: Write
 
 Appelez cette fonction pour écrire un objet de liste d’images dans une archive.
 
@@ -1183,7 +1184,7 @@ BOOL Write(CArchive* pArchive);
 *pArchive*<br/>
 Pointeur vers un `CArchive` objet dans lequel la liste d’images doit être stockée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 

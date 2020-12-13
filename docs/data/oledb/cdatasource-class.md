@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDataSource, classe'
 title: CDataSource, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,24 +57,24 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0fc764341c0077b305b8a0ad23f66b8691f1e520
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328759"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
 Correspond à un objet de source de données OLE DB, qui représente une connexion via un fournisseur à une source de données.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDataSource
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -93,7 +94,7 @@ class CDataSource
 |[OpenWithPromptFileName](#openwithpromptfilename)|Permet à l’utilisateur de sélectionner un fichier de liaison de données créé précédemment pour ouvrir la source de données correspondante.|
 |[OpenWithServiceComponents](#openwithservicecomponents)|Ouvre un objet source de données à l’aide de la boîte de dialogue liaison de données.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une ou plusieurs sessions de base de données peuvent être créées pour une seule connexion. Ces sessions sont représentées par `CSession` . Vous devez appeler [CDataSource :: Open](#open) pour ouvrir la connexion avant de créer une session avec `CSession::Open` .
 
@@ -103,7 +104,7 @@ Pour obtenir un exemple d’utilisation de `CDataSource` , consultez l’exemple
 
 Ferme la connexion en relâchant le `m_spInit` pointeur.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 void Close() throw();
@@ -132,7 +133,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La chaîne d’initialisation résultante peut être utilisée pour rouvrir ultérieurement cette connexion à la source de données.
 
@@ -157,7 +158,7 @@ Consultez [IDBProperties :: GetProperties](/previous-versions/windows/desktop/m
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour obtenir une seule propriété, utilisez [GetProperty](#getproperty).
 
@@ -188,7 +189,7 @@ dans ID de propriété de la propriété à retourner.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour afficher plusieurs propriétés, utilisez [GetProperties](#getproperties).
 
@@ -276,7 +277,7 @@ dans Objet [CEnumerator](../../data/oledb/cenumerator-class.md) utilisé pour ob
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La surcharge de méthode qui utilise le paramètre *HWND* ouvre un objet source de données avec les composants de service dans oledb32.dll ; Cette DLL contient l’implémentation de fonctionnalités de composants de service, telles que le regroupement de ressources, l’inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -309,7 +310,7 @@ Pour plus d’informations sur les fichiers de liaison de données (fichiers. ud
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -338,7 +339,7 @@ La valeur par défaut est **`false`** , qui spécifie que l’utilisateur n’es
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.
 
@@ -369,7 +370,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -407,7 +408,7 @@ dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms71436
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 

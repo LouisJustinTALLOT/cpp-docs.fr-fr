@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : destruction d’objets fenêtres'
 title: Destruction d'objets fenêtres
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c2837ba6b9f568d7f6ab0175ae3ad99c31ccdc7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327818"
 ---
 # <a name="destroying-window-objects"></a>Destruction d'objets fenêtres
 
@@ -22,9 +23,9 @@ Vous devez veiller à ce que vos propres fenêtres enfants détruisent l’objet
 
 - [Séquence de destruction de fenêtres](window-destruction-sequence.md)
 
-- [Allocation et libération de la mémoire Windows](allocating-and-deallocating-window-memory.md)
+- [Allocation et libération de la mémoire de fenêtre](allocating-and-deallocating-window-memory.md)
 
-- [Détachement d’un CWnd de son HWND](detaching-a-cwnd-from-its-hwnd.md)
+- [Détachement d'un objet CWnd de son HWND](detaching-a-cwnd-from-its-hwnd.md)
 
 - [Séquence de création de fenêtre générale](general-window-creation-sequence.md)
 
@@ -32,4 +33,4 @@ Vous devez veiller à ce que vos propres fenêtres enfants détruisent l’objet
 
 ## <a name="see-also"></a>Voir aussi
 
-[Objets fenêtres](window-objects.md)
+[Objets de fenêtre](window-objects.md)

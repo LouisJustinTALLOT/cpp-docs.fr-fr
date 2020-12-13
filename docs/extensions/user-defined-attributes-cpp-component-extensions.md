@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les attributs suivants : User-Defined (C++/CLI et C++/CX)'
 title: Attributs définis par l’utilisateur (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fab2cc1317522b43cd4bddbb56ae174907607d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171890"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327900"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Attributs définis par l’utilisateur (C++/CLI et C++/CX)
 
@@ -35,7 +36,7 @@ Pour plus d'informations, consultez les pages suivantes :
 
 - [Cibles d’attribut](attribute-targets-cpp-component-extensions.md)
 
-- [Types de paramètre d'attribut](attribute-parameter-types-cpp-component-extensions.md)
+- [Types de paramètres d’attribut](attribute-parameter-types-cpp-component-extensions.md)
 
 Pour plus d’informations sur la signature d’assemblys dans Visual C++, consultez [Assemblys de nom fort (signature d’assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -194,4 +195,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

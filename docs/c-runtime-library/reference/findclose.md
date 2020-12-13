@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _findclose'
 title: _findclose
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 389a8aaf55605a1d9e3193c86ce500bf313fd631
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329202"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -52,17 +53,17 @@ int _findclose(
 *traitée*<br/>
 Handle de recherche retourné par un appel précédent à **_findfirst**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **_findclose** retourne 0. Sinon, elle retourne-1 et affecte à **errno** la valeur **ENOENT**, ce qui indique qu’aucun autre fichier correspondant n’a été trouvé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 

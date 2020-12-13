@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : length_is'
 title: length_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 4e6256c4fb7f7742be52d582fc57316da5e773a6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b3f913819b88958f294aee42f4cbda07827fa990
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329844"
 ---
 # <a name="length_is"></a>length_is
 
@@ -36,14 +37,14 @@ L’attribut C++ **length_is** a les mêmes fonctionnalités que l’attribut MI
 
 Consultez [first_is](first-is.md) pour obtenir un exemple de spécification d’une section d’un tableau.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Champ dans **`struct`** ou **`union`** , paramètre d’interface, méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

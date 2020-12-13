@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : RDX'
 title: RDX (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f61eaf535102c8885e828176434acf221dfe2457
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31e33bcc1883bfb787b21ec8f5c1f8bed60208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329649"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,14 +41,14 @@ L’attribut C++ **RDX** crée ou modifie une clé de Registre existante pour un
 
 Cet attribut peut être utilisé conjointement avec les attributs [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) ou d’autres attributs qui impliquent l’un de ces attributs.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`****`struct`** membre ou|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
