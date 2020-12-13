@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de contrôle composite
 title: Macros de contrôle composite
 ms.date: 05/06/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0107f91350516bd0f7e35cf82a49f79ff3c5797e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141191"
 ---
 # <a name="composite-control-macros"></a>Macros de contrôle composite
 
@@ -29,7 +30,7 @@ Ces macros définissent les entrées et les mappages de récepteurs d’événem
 |[SINK_ENTRY_INFO](#sink_entry_info)|Entrée dans le mappage du récepteur d’événements avec les informations de type fournies manuellement pour une utilisation avec [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Semblable à SINK_ENTRY_INFO sauf qu’il prend un pointeur vers iid.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -157,7 +158,7 @@ dans DISPID identifiant l’événement spécifié.
 *FN*<br/>
 dans Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser la `_stdcall` Convention d’appel et avoir la signature de style dispinterface appropriée.
 
-*méta*<br/>
+*info*<br/>
 dans Informations de type pour la fonction de gestionnaire d’événements. Ces informations de type sont fournies sous la forme d’un pointeur vers une `_ATL_FUNC_INFO` structure. CC_CDECL est la seule option prise en charge dans Windows CE pour le champ CALLCONV de la `_ATL_FUNC_INFO` structure. Tout autre valeur n’est pas prise en charge, donc son comportement n’est pas défini.
 
 ### <a name="remarks"></a>Notes

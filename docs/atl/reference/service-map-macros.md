@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de Service Map
 title: Macros Service Map
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 1fa163098d89dd949c17ee7cd5e4ddc46cd2a091
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 08a26ac4043b62f8377ca9b4728eb262494f1aa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138825"
 ---
 # <a name="service-map-macros"></a>Macros Service Map
 
@@ -25,7 +26,7 @@ Ces macros définissent les cartes de service et les entrées.
 |[SERVICE_ENTRY](#service_entry)|Indique que l’objet prend en charge un ID de service spécifique.|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Ordonne à [IServiceProviderImpl :: QueryService](#queryservice) de se lier à l’objet spécifié.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -126,7 +127,7 @@ dans Identificateur de l’interface à laquelle l’appelant doit accéder.
 
 La valeur HRESULT retournée est l’un des éléments suivants :
 
-|Valeur de retour|Signification|
+|Valeur retournée|Signification|
 |------------------|-------------|
 |S_OK|Le service a été correctement créé ou récupéré.|
 |E_INVALIDARG|Un ou plusieurs arguments ne sont pas valides.|

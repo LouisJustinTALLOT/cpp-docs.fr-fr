@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe SimpleActivationFactory'
 title: SimpleActivationFactory (classe)
 ms.date: 09/07/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83643c69977b887e58e430bbd500fcf7c2e81ca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135211"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (classe)
 
@@ -34,13 +35,13 @@ class SimpleActivationFactory : public ActivationFactory<>;
 ### <a name="parameters"></a>Paramètres
 
 *Base*<br/>
-Une classe de base.
+Classe de base.
 
 ## <a name="remarks"></a>Notes
 
 La classe de base doit fournir un constructeur par défaut.
 
-L’exemple de code suivant montre comment utiliser SimpleActivationFactory avec la macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
+L’exemple de code suivant montre comment utiliser SimpleActivationFactory avec la macro [ActivatableClassWithFactoryEx](activatableclass-macros.md) .
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -51,8 +52,8 @@ L’exemple de code suivant montre comment utiliser SimpleActivationFactory avec
 |Nom|Description|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance, méthode](#activateinstance)|Crée une instance de l’interface spécifiée.|
-|[SimpleActivationFactory::GetRuntimeClassName, méthode](#getruntimeclassname)|Obtient le nom de classe de temps d’exécution d’une instance de la classe spécifiée par le paramètre de modèle de classe *de base.*|
-|[SimpleActivationFactory::GetTrustLevel, méthode](#gettrustlevel)|Obtient le niveau de confiance d’une instance de la classe spécifiée par le paramètre du modèle de classe *de base.*|
+|[SimpleActivationFactory::GetRuntimeClassName, méthode](#getruntimeclassname)|Obtient le nom de la classe d’exécution d’une instance de la classe spécifiée par le paramètre de modèle de classe de *base* .|
+|[SimpleActivationFactory::GetTrustLevel, méthode](#gettrustlevel)|Obtient le niveau de confiance d’une instance de la classe spécifiée par le paramètre de modèle de classe de *base* .|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -80,11 +81,11 @@ L’exemple de code suivant montre comment utiliser SimpleActivationFactory avec
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** module.h
+**En-tête :** module. h
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>SimpleActivationFactory::ActivateInstance Method
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a> SimpleActivationFactory :: Activateinstance,, méthode
 
 Crée une instance de l’interface spécifiée.
 
@@ -97,19 +98,19 @@ STDMETHOD( ActivateInstance )(
 #### <a name="parameters"></a>Paramètres
 
 *ppvObject*<br/>
-Lorsque cette opération se termine, indiquez une `Base` instance de l’objet spécifiée par le paramètre du modèle de classe.
+Lorsque cette opération est terminée, pointeur vers une instance de l’objet spécifié par le `Base` paramètre de modèle de classe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Si `__WRL_STRICT__` elle est définie, une erreur d’affirmation est émise si la classe de base spécifiée dans le paramètre du modèle de classe n’est pas dérivée de [RuntimeClass](runtimeclass-class.md), ou n’est pas configurée avec la valeur d’énumération WinRt ou WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Si `__WRL_STRICT__` est défini, une erreur d’assertion est émise si la classe de base spécifiée dans le paramètre de modèle de classe n’est pas dérivée de [RuntimeClass](runtimeclass-class.md), ou n’est pas configurée avec la valeur d’énumération [RuntimeClassType](runtimeclasstype-enumeration.md) WinRt ou WinRtClassicComMix.
 
-## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>SimpleActivationFactory::GetRuntimeClassName Méthode
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a> SimpleActivationFactory :: Getruntimeclassname,, méthode
 
-Obtient le nom de classe de temps d’exécution d’une instance de la classe spécifiée par le paramètre de `Base` modèle de classe.
+Obtient le nom de la classe d’exécution d’une instance de la classe spécifiée par le `Base` paramètre de modèle de classe.
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -119,20 +120,20 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Paramètres
 
-*runtimeName runtimeName runtimeName runtime*<br/>
-Lorsque cette opération se termine, le nom de classe de temps d’exécution.
+*runtimeName*<br/>
+Lorsque cette opération est terminée, le nom de la classe d’exécution.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Si `__WRL_STRICT__` elle est définie, une erreur d’affirmation `Base` est émise si la classe spécifiée par le paramètre du modèle de classe n’est pas dérivée de [RuntimeClass](runtimeclass-class.md), ou n’est pas configurée avec la valeur d’énumération WinRt ou WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Si `__WRL_STRICT__` est défini, une erreur d’assertion est émise si la classe spécifiée par le `Base` paramètre de modèle de classe n’est pas dérivée de [RuntimeClass](runtimeclass-class.md)ou n’est pas configurée avec la valeur d’énumération [RuntimeClassType](runtimeclasstype-enumeration.md) WinRt ou WinRtClassicComMix.
 
-## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>SimpleActivationFactory::GetTrustLevel Méthode
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a> SimpleActivationFactory :: Gettrustlevel,, méthode
 
-Obtient le niveau de confiance d’une `Base` instance de la classe spécifiée par le paramètre du modèle de classe.
+Obtient le niveau de confiance d’une instance de la classe spécifiée par le `Base` paramètre de modèle de classe.
 
 ```cpp
 STDMETHOD(
@@ -142,9 +143,9 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Paramètres
 
-*trustLvl (en anglais)*<br/>
-Lorsque cette opération se termine, le niveau de confiance de l’objet de classe actuel.
+*trustLvl*<br/>
+Lorsque cette opération est terminée, le niveau de confiance de l’objet de classe actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours S_OK.

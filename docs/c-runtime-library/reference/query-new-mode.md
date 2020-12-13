@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _query_new_mode'
 title: _query_new_mode
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 26fabc71337f1554b63909697b601a0bd9e86638
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90c7355f4babc4726c8b52d61309eb1ceb23c9a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137135"
 ---
 # <a name="_query_new_mode"></a>_query_new_mode
 
@@ -70,6 +71,6 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>

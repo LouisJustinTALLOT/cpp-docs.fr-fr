@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure SemaphoreTraits'
 title: SemaphoreTraits (structure)
 ms.date: 09/27/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5779a30d22fd2d32e57f96f752bb52e2bf469cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135224"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits (structure)
 
-Définit les caractéristiques `Semaphore` communes d’un objet.
+Définit les caractéristiques communes d’un `Semaphore` objet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +33,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 Nom                               | Description
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | Communiqués de contrôle d’une ressource partagée.
+[SemaphoreTraits :: Unlock](#unlock) | Libère le contrôle d’une ressource partagée.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -42,13 +43,13 @@ Nom                               | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace nom:** Microsoft::WRL::Wrappers::HandleTraits
+**Espace de noms :** Microsoft :: WRL :: wrappers :: HandleTraits
 
-## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a> SemaphoreTraits :: Unlock
 
-Communiqués de contrôle d’une ressource partagée.
+Libère le contrôle d’une ressource partagée.
 
 ```cpp
 inline static void Unlock(
@@ -59,8 +60,8 @@ inline static void Unlock(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Manipuler à `Semaphore` un objet.
+Handle vers un `Semaphore` objet.
 
 ### <a name="remarks"></a>Notes
 
-Si l’opération de `Unlock()` déverrouillage est infructueuse, émet une erreur qui indique la cause de la défaillance.
+Si l’opération de déverrouillage échoue, `Unlock()` émet une erreur qui indique la cause de l’échec.

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/MANIFESTUAC (incorpore les informations de contrôle de compte d’utilisateur dans le manifeste)
 title: /MANIFESTUAC (Incorporer des informations sur le contrôle de compte d'utilisateur dans le manifeste)
 ms.date: 06/12/2020
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 96719c6f6f5359afb03b967524b1f65db6dc664a
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: 165f543dab087ca32c91002811d99b9048fa392b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137889"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incorporer des informations sur le contrôle de compte d'utilisateur dans le manifeste)
 
@@ -43,7 +44,7 @@ L’éditeur de liens n’incorpore pas les informations de contrôle de compte 
 *`fragment`*<br/>
 Chaîne qui contient les *`level`* valeurs et *`uiAccess`* . Peut éventuellement être placé entre des guillemets doubles. Pour plus d’informations, consultez la section [Notes](#remarks) .
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Si vous spécifiez plusieurs **`/MANIFESTUAC`** options sur la ligne de commande, la dernière entrée est prioritaire.
 
@@ -59,7 +60,7 @@ Vous pouvez spécifier les *`level`* valeurs et *`uiAccess`* en une seule étape
 
 > **`/MANIFESTUAC:`** \[ **`"`** ] **`level=`** { **`'asInvoker'`** | **`'highestAvailable'`** | **`'requireAdministrator'`** } **`uiAccess=`** { **`'true'`** | **`'false'`** } \[ **`"`** ]
 
-Par exemple :
+Par exemple :
 
 **`/MANIFESTUAC:"level='highestAvailable' uiAccess='true'"`**
 
@@ -67,9 +68,9 @@ Par exemple :
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la **Configuration Properties**page de propriétés  >  **Linker**  >  **fichier manifeste** de l’éditeur de liens propriétés de configuration.
+1. Sélectionnez la page de propriétés  >    >  **fichier manifeste** de l’éditeur de liens propriétés de configuration.
 
-1. Modifiez les propriétés **activer le contrôle de compte d’utilisateur (UAC)**, le niveau d' **exécution UAC**et **contourner l’interface utilisateur** .
+1. Modifiez les propriétés **activer le contrôle de compte d’utilisateur (UAC)**, le niveau d' **exécution UAC** et **contourner l’interface utilisateur** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

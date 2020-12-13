@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Assistant Windows Desktop'
 title: Assistant Windows Desktop
 ms.date: 03/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 47984b4c4416bf129efb226381fe778659aa16ca
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b80a5fb23bd9ce2428bee17b9c4ca6fd9401d1e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135926"
 ---
 # <a name="windows-desktop-wizard"></a>Assistant Windows Desktop
 
@@ -76,7 +77,7 @@ Ajoutez la prise en charge de l’une des bibliothèques fournies dans Visual C+
 |**ATL**|S’appuie sur la prise en charge du projet pour les classes dans le Active Template Library (ATL). Pour les applications console Win32 uniquement.<br /><br /> **Remarque** Cette option n’indique pas la prise en charge de l’ajout d’objets ATL à l’aide des assistants code ATL. Vous pouvez ajouter des objets ATL uniquement aux projets ATL ou aux projets MFC avec la prise en charge ATL.|
 |**MFC**|S’appuie sur la prise en charge du projet pour la bibliothèque MFC (Microsoft Foundation Class). Pour les applications console Win32 et les bibliothèques statiques uniquement.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une fois que vous avez créé une application de bureau Windows, vous pouvez ajouter des classes C++ génériques à l’aide de l’ [Assistant Classe C++ générique](../ide/adding-a-generic-cpp-class.md#generic-c-class-wizard) . Vous pouvez ajouter d’autres éléments, tels que des fichiers HTML, des fichiers d’en-tête, des ressources ou des fichiers texte.
 

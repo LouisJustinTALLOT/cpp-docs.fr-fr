@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros du Registre
 title: Macros de Registre
 ms.date: 08/19/2019
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: dac1c187bae0eb55b954fc02cd4fb4c981f272f4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e1f85e43f64dd34455cb9ec453ab3719b07f67f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138882"
 ---
 # <a name="registry-macros"></a>Macros de Registre
 
@@ -33,7 +34,7 @@ Ces macros définissent une bibliothèque de types et des fonctions de registre 
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Recherche la ressource nommée et y exécute le script de registre.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Recherche la ressource identifiée par un numéro d’identification et y exécute le script de registre.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 

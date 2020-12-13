@@ -1,5 +1,6 @@
 ---
-title: Classe CInterfaceList
+description: 'En savoir plus sur : classe CInterfaceList'
+title: CInterfaceList, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceList
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2612ba4700466bb877f84978c55bfd018f1dd286
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141529"
 ---
-# <a name="cinterfacelist-class"></a>Classe CInterfaceList
+# <a name="cinterfacelist-class"></a>CInterfaceList, classe
 
 Cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs d’interface COM.
 
@@ -30,11 +31,11 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Paramètres
 
-*Ⅰ*<br/>
-Une interface COM spécifiant le type de pointeur à stocker.
+*Cliqu*<br/>
+Interface COM spécifiant le type de pointeur à stocker.
 
 *piid*<br/>
-Un pointeur à l’IID de *I*.
+Pointeur vers l’IID de *I*.
 
 ## <a name="members"></a>Membres
 
@@ -42,13 +43,13 @@ Un pointeur à l’IID de *I*.
 
 |Nom|Description|
 |----------|-----------------|
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Le constructeur de la liste d’interfaces.|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Constructeur de la liste d’interfaces.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et des méthodes dérivées pour créer une liste de pointeurs d’interface COM. Utilisez [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) lorsqu’un tableau est nécessaire.
+Cette classe fournit un constructeur et des méthodes dérivées pour la création d’une liste de pointeurs d’interface COM. Utilisez [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) lorsqu’un tableau est requis.
 
-Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
+Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -58,11 +59,11 @@ Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collectio
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcoll.h
+**En-tête :** atlcoll. h
 
-## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a> CInterfaceList::CInterfaceList
 
-Le constructeur de la liste d’interfaces.
+Constructeur de la liste d’interfaces.
 
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -70,16 +71,16 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize (en)*<br/>
-La taille du bloc, avec un défaut de 10.
+*nBlockSize*<br/>
+Taille de bloc, avec 10 comme valeur par défaut.
 
 ### <a name="remarks"></a>Notes
 
-La taille du bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est nécessaire. De plus grandes tailles de blocs réduisent les appels aux routines d’allocation de mémoire, mais utilisent plus de ressources.
+La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Les tailles de bloc plus volumineuses réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
-[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
-[Classe CComQIPtrElraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[CAtlList, classe](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

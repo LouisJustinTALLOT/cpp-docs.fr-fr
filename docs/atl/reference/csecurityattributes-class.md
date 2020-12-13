@@ -1,5 +1,6 @@
 ---
-title: Classe CSecurityAttributes
+description: 'En savoir plus sur : classe vue'
+title: Vue, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: e0ac813008a028bb233adfb4c7409a0ad62a6b78
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8cb772e574aef4ad941feef1cb838fb91d937576
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140814"
 ---
-# <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
+# <a name="csecurityattributes-class"></a>Vue, classe
 
-Cette classe est un emballage mince pour la structure des attributs de sécurité.
+Cette classe est un wrapper léger pour la structure des attributs de sécurité.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -35,19 +36,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Constructeur.|
+|[Vue :: vue](#csecurityattributes)|Constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Appelez cette méthode pour définir `CSecurityAttributes` les attributs de l’objet.|
+|[Vue :: Set](#set)|Appelez cette méthode pour définir les attributs de l' `CSecurityAttributes` objet.|
 
 ## <a name="remarks"></a>Notes
 
-La `SECURITY_ATTRIBUTES` structure contient un [descripteur de sécurité](/windows/win32/api/winnt/ns-winnt-security_descriptor) utilisé pour la création d’un objet et précise si la poignée récupérée en spécifiant cette structure est héréditaire.
+La `SECURITY_ATTRIBUTES` structure contient un [descripteur de sécurité](/windows/win32/api/winnt/ns-winnt-security_descriptor) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.
 
-Pour une introduction au modèle de contrôle d’accès dans Windows, voir [Contrôle d’accès](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -57,9 +58,9 @@ Pour une introduction au modèle de contrôle d’accès dans Windows, voir [Con
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlsecurity.h
+**En-tête :** ATLSecurity. h
 
-## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes
+## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a> Vue :: vue
 
 Constructeur.
 
@@ -70,15 +71,15 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Paramètres
 
-*rSecurityDescriptor (en anglais)*<br/>
+*rSecurityDescriptor*<br/>
 Référence à un descripteur de sécurité.
 
 *bInheritsHandle*<br/>
 Spécifie si le handle retourné est hérité quand un nouveau processus est créé. Si ce membre a la valeur true, le nouveau processus hérite du handle.
 
-## <a name="csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set
+## <a name="csecurityattributesset"></a><a name="set"></a> Vue :: Set
 
-Appelez cette méthode pour définir `CSecurityAttributes` les attributs de l’objet.
+Appelez cette méthode pour définir les attributs de l' `CSecurityAttributes` objet.
 
 ```cpp
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -86,7 +87,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Paramètres
 
-*rSecurityDescriptor (en anglais)*<br/>
+*rSecurityDescriptor*<br/>
 Référence à un descripteur de sécurité.
 
 *bInheritHandle*<br/>
@@ -94,11 +95,11 @@ Spécifie si le handle retourné est hérité quand un nouveau processus est cr�
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est utilisée par le `CSecurityAttributes` constructeur pour initialiser l’objet.
+Cette méthode est utilisée par le constructeur pour initialiser l' `CSecurityAttributes` objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échantillon de sécurité](../../overview/visual-cpp-samples.md)<br/>
+[Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
 [descripteur de sécurité](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)<br/>

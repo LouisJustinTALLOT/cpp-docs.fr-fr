@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les fonctions globales du Registre et de TypeLib'
 title: Fonctions globales du Registre et de TypeLib
 ms.date: 03/27/2019
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7420dbbb472f1fc8b01329e9ded4c887e2bd71d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138881"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 
@@ -52,7 +53,7 @@ Ces fonctions contrôlent le nœud du registre utilisé par le programme pour st
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Récupère si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** ( **HKCU**).|
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|Définit si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** ( **HKCU**).|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -77,11 +78,11 @@ S_OK si la méthode est réussie, sinon le code d’erreur HRESULT si une erreur
 
 ### <a name="remarks"></a>Notes
 
-La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER \Software\Classes**.
+La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.
 
 La redirection n’est pas globale. Seules les infrastructures MFC et ATL sont affectées par cette redirection du Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -113,7 +114,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -142,7 +143,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -167,7 +168,7 @@ Spécifie l’identificateur de programme (ProgID) du gestionnaire.
 *lpszFilterExt*<br/>
 Spécifie l’extension de fichier inscrite auprès de ce gestionnaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -195,7 +196,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Cette fonction d’assistance est utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule :: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -227,7 +228,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -265,7 +266,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -284,7 +285,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 *lpszCLSID*<br/>
 Spécifie le CLSID du gestionnaire dont l’inscription doit être annulée.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -309,11 +310,11 @@ S_OK si la méthode est réussie, sinon le code d’erreur HRESULT si une erreur
 
 ### <a name="remarks"></a>Notes
 
-La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER \Software\Classes**.
+La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.
 
 La redirection n’est pas globale. Seules les infrastructures MFC et ATL sont affectées par cette redirection du Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -345,7 +346,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Cette fonction d’assistance est utilisée par [CAtlComModule :: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -433,7 +434,7 @@ Les valeurs d’énumération possibles qui indiquent l’opération que la fonc
 |eWriteToReg|Écrire des données dans le registre.|
 |eDeleteFromReg|Supprimez la clé du Registre.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
