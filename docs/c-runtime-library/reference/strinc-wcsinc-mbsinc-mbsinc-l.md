@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strinc, _wcsinc, _mbsinc, _mbsinc_l'
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: df42c06b0fd8ec71c56cc25b12f769906b8ee0a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344859"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -88,11 +89,11 @@ Pointeur de caractère.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne un pointeur vers le caractère qui suit immédiatement le *actuel*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsinc** retourne un pointeur vers le premier octet du caractère multioctet qui suit immédiatement le *actuel*. **_mbsinc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation ; **_mbsinc_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

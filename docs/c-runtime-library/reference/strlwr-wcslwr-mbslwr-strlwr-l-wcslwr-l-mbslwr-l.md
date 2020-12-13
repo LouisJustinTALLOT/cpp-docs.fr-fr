@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l'
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7d0d103185494d26890fc62061ebd16c168fc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344807"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -136,17 +137,17 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne se terminant par un caractère Null à convertir en minuscules.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur désignant la chaîne convertie. Sachant que la modification est effectuée sur place, le pointeur retourné est le même que celui passé comme argument d’entrée. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_strlwr** convertit toutes les lettres majuscules de *Str* en minuscules, comme déterminé par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur les **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

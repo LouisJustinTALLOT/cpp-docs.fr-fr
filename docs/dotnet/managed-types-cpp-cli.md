@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : types managés (C++/CLI)'
 title: Types managés (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccf126152216cfddb9a78cb5abc608f23cc3ba80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344456"
 ---
 # <a name="managed-types-ccli"></a>Types managés (C++/CLI)
 
 Visual C++ permet d’accéder aux fonctionnalités .NET par le biais de types managés, qui assurent la prise en charge des fonctionnalités du common language runtime et sont soumis aux avantages et aux restrictions du Runtime.
 
-## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>Types managés et fonction main
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a> Types managés et fonction main
 
 Lors de l’écriture d’une application à l’aide **`/clr`** de, les arguments de la fonction **main ()** ne peuvent pas être d’un type managé.
 
@@ -40,7 +41,7 @@ Voici un exemple de signature correcte :
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework équivalents aux types natifs C++
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a> .NET Framework équivalents aux types natifs C++
 
 Le tableau suivant présente les mots clés des types de Visual C++ intégrés, qui sont des alias de types prédéfinis dans l’espace de noms **System** .
 
@@ -51,18 +52,18 @@ Le tableau suivant présente les mots clés des types de Visual C++ intégrés, 
 |**`signed char`** |<xref:System.SByte?displayProperty=nameWithType>|
 |**`unsigned char`**|<xref:System.Byte?displayProperty=nameWithType>|
 |**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
-|**`short`** les**`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
+|**`short`** les **`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
 |**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**`int`**, **`signed int`** , **`long`** et**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
-|**`unsigned int`** les**`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**`__int64`** les**`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
+|**`int`**, **`signed int`** , **`long`** et **`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`unsigned int`** les **`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**`__int64`** les **`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
 |**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
 |**`float`**|<xref:System.Single?displayProperty=nameWithType>|
-|**`double`** les**`long double`**|<xref:System.Double?displayProperty=nameWithType>|
+|**`double`** les **`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
 Pour plus d’informations sur l’option de compilateur pour la valeur par défaut **`signed char`** ou **`unsigned char`** , consultez [ `/J` (type par défaut : **`char`** **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md).
 
-## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>Problèmes de version pour les types valeur imbriqués dans les types natifs
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a> Problèmes de version pour les types valeur imbriqués dans les types natifs
 
 Prenons l’exemple d’un composant d’assembly signé (nom fort) utilisé pour générer un assembly client. Le composant contient un type valeur qui est utilisé dans le client comme type pour un membre d’une Union native, une classe ou un tableau. Si une version ultérieure du composant modifie la taille ou la disposition du type de valeur, le client doit être recompilé.
 
@@ -127,7 +128,7 @@ S.i = 11
 
 Toutefois, si vous ajoutez un autre membre à `struct S` dans nested_value_types. cpp, (par exemple, `double d;` ) et que vous recompilez le composant sans recompiler le client, le résultat est une exception non gérée (de type <xref:System.IO.FileLoadException?displayProperty=fullName> ).
 
-## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>Comment : tester l’égalité
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a> Comment : tester l’égalité
 
 Dans l’exemple suivant, un test d’égalité qui utilise Extensions managées pour C++ est basé sur ce à quoi les handles font référence.
 
@@ -152,7 +153,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>Comment : diagnostiquer et résoudre les problèmes de compatibilité des assemblys
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a> Comment : diagnostiquer et résoudre les problèmes de compatibilité des assemblys
 
 Cette rubrique explique ce qui peut se produire lorsque la version d’un assembly référencé au moment de la compilation ne correspond pas à la version de l’assembly référencée au moment de l’exécution et comment éviter le problème.
 

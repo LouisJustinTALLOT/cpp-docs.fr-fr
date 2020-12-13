@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __readcr8'
 title: __readcr8
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr8 intrinsic
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
-ms.openlocfilehash: 525775fde4cb96cecfcabef878780d5a2aa6743a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1961f00575956c8377131cd0871e59f79db5dc1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341020"
 ---
 # <a name="__readcr8"></a>__readcr8
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Lit le registre CR8 et retourne sa valeur.
 
@@ -29,19 +30,19 @@ unsigned __int64 __readcr8(void);
 
 Valeur dans le registre CR8.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__readcr8`|X64|
+|`__readcr8`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 L’intrinsèque est disponible uniquement en mode noyau et la routine n’est disponible qu’en tant qu’intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

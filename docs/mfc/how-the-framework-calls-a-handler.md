@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : comment le Framework appelle un gestionnaire'
 title: Méthode d'appel d'un gestionnaire par le Framework
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 97bdf47d239c4b4d9cb4ca7ad26d4f688f864168
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343553"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Méthode d'appel d'un gestionnaire par le Framework
 
@@ -20,7 +21,7 @@ Les rubriques suivantes examinent d’abord la façon dont l’infrastructure ro
 
 - [Envoi et réception de messages](message-sending-and-receiving.md)
 
-- [Comment les messages non-commande atteignent leurs gestionnaires](how-noncommand-messages-reach-their-handlers.md)
+- [Comment les messages noncommand parviennent à leurs gestionnaires](how-noncommand-messages-reach-their-handlers.md)
 
 - [Routage des commandes](command-routing.md)
 
@@ -28,7 +29,7 @@ Les rubriques suivantes examinent d’abord la façon dont l’infrastructure ro
 
 - [Gestionnaire OnCmdMsg](oncmdmsg-handler.md)
 
-- [Substitution du routage des commandes standard](overriding-the-standard-command-routing.md)
+- [Remplacement du routage des commandes standard](overriding-the-standard-command-routing.md)
 
 ## <a name="see-also"></a>Voir aussi
 

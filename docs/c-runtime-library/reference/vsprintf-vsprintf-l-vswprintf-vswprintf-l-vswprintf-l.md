@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l'
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 ms.date: 09/03/2019
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342112"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
@@ -138,7 +139,7 @@ Pointeur vers la liste d'arguments.
 *paramètres régionaux*\
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **vsprintf** et **vswprintf** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si la *mémoire tampon* ou le *format* est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -155,7 +156,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 
 **vswprintf** est conforme à la norme ISO C, qui exige le deuxième paramètre, *Count*, de type **size_t**. Pour forcer l’ancien comportement non standard, définissez **_CRT_NON_CONFORMING_SWPRINTFS**. L’ancien comportement n’est peut-être pas dans une version ultérieure. par conséquent, le code doit être modifié pour utiliser le nouveau comportement conforme.
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -164,14 +165,14 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_vstprintf**|**vsprintf**|**vsprintf**|**vswprintf**|
 |**_vstprintf_l**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**vsprintf**, **_vsprintf_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
-|**vswprintf**, **_vswprintf_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**, **_vswprintf_l**|\<stdio.h> ou \<wchar.h> , et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\* Requis pour la compatibilité UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -226,10 +227,10 @@ This is a string
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de flux](../../c-runtime-library/stream-i-o.md)\
+[E/s de flux](../../c-runtime-library/stream-i-o.md)\
 [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)\
 [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

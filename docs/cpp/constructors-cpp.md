@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : constructeurs (C++)'
 title: Constructeurs (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: b8373eda52967db881d7d58477fcd2a9181ac3ee
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bd93053d63e76aef9f2284e18f7748334a3fc6ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344625"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
-Pour personnaliser la façon dont les membres de classe sont initialisés, ou pour appeler des fonctions quand un objet de votre classe est créé, définissez un *constructeur* . Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. Vous pouvez définir autant de constructeurs surchargés que nécessaire pour personnaliser l’initialisation de différentes façons. En règle générale, les constructeurs ont une accessibilité publique afin que le code en dehors de la définition de classe ou de la hiérarchie d’héritage puisse créer des objets de la classe. Toutefois, vous pouvez également déclarer un constructeur en tant que **`protected`** ou **`private`** .
+Pour personnaliser la façon dont les membres de classe sont initialisés, ou pour appeler des fonctions quand un objet de votre classe est créé, définissez un *constructeur*. Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. Vous pouvez définir autant de constructeurs surchargés que nécessaire pour personnaliser l’initialisation de différentes façons. En règle générale, les constructeurs ont une accessibilité publique afin que le code en dehors de la définition de classe ou de la hiérarchie d’héritage puisse créer des objets de la classe. Toutefois, vous pouvez également déclarer un constructeur en tant que **`protected`** ou **`private`** .
 
 Les constructeurs peuvent éventuellement prendre une liste init de membre. Il s’agit d’un moyen plus efficace d’initialiser les membres de classe que d’assigner des valeurs dans le corps du constructeur. L’exemple suivant montre une classe `Box` avec trois constructeurs surchargés. Les deux derniers utilisent les listes init des membres :
 
@@ -202,7 +203,7 @@ Vous pouvez empêcher la copie de votre objet en définissant le constructeur de
     Box (const Box& other) = delete;
 ```
 
-La tentative de copie de l’objet génère *une erreur C2280 : tentative de référencement d’une fonction supprimée* .
+La tentative de copie de l’objet génère *une erreur C2280 : tentative de référencement d’une fonction supprimée*.
 
 ## <a name="move-constructors"></a><a name="move_constructors"></a> Constructeurs de déplacement
 
@@ -643,7 +644,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=msvc-150"
 
-**Visual Studio 2017 et versions ultérieures** : l' **`using`** instruction dans **/std : mode c++ 17** met en portée tous les constructeurs de la classe de base, à l’exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.
+**Visual Studio 2017 et versions ultérieures**: l' **`using`** instruction dans **/std : mode c++ 17** met en portée tous les constructeurs de la classe de base, à l’exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.
 
 ::: moniker-end
 
@@ -661,7 +662,7 @@ Une classe dérivée ne peut pas hériter de plusieurs classes de base si ces cl
 
 ## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> Constructeurs et classes composites
 
-Les classes qui contiennent des membres de type classe sont appelées *classes composites* . Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe. Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite. Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :
+Les classes qui contiennent des membres de type classe sont appelées *classes composites*. Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe. Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite. Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :
 
 ```cpp
 class Label {

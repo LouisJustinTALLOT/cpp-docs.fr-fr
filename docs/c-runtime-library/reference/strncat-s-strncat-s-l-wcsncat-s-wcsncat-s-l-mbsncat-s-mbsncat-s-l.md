@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l'
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c260c1a77908962441dba094686578e61db0e386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344781"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -170,7 +171,7 @@ Nombre de caractères à ajouter ou [_TRUNCATE](../../c-runtime-library/truncate
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
@@ -179,16 +180,16 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 |*strDestination*|*numberOfElements*|*strSource*|Valeur retournée|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Null** ou inachevé|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
-|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|non modifié|
+|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|non modifié|
 |n'importe laquelle|0 ou trop petit|n'importe laquelle|**ERANGE**|non modifié|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions essaient d’ajouter les premiers caractères *d* de *strSource* à la fin de *strDest*, où *D* est le plus petit de *Count* et la longueur de *strSource*. Si le fait d’ajouter ces caractères *D* correspond à *strDest* (dont la taille est indiquée en tant que *NumberOfElements*) tout en laissant de l’espace pour une marque de fin null, ces caractères sont ajoutés, à partir de la valeur null de fin d’origine de *strDest*, et une nouvelle valeur null de fin est ajoutée ; Sinon, *strDest*[0] est défini sur le caractère null et le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Il existe une exception au paragraphe ci-dessus. Si le *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md) , la plupart des *strSource* , en fonction des besoins, sont ajoutés à *strDest* tout en laissant de la place pour ajouter une valeur null de fin.
 
-Par exemple,
+Par exemple :
 
 ```C
 char dst[5];
@@ -204,7 +205,7 @@ Si le comportement de troncation est nécessaire, utilisez **_TRUNCATE** ou ajus
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-or
+ou
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -384,7 +385,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

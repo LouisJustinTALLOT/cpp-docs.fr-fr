@@ -1,25 +1,26 @@
 ---
+description: 'En savoir plus sur les éléments suivants : interface du programme d’application C et C++ OpenMP'
 title: API OpenMP C et C++
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a06c2640c78a48b88a243a4d11153ec808f83208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342450"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>API OpenMP C et C++
 
-Traite des OpenMP C et C++, API, comme décrit dans la spécification de version 2.0 à partir du tableau de révision d’Architecture OpenMP.
+Présente l’API C et C++ OpenMP, comme indiqué dans la spécification de la version 2,0 du tableau de révision de l’architecture OpenMP.
 
-Version 2.0 mars 2002
+Version 2,0 mars 2002
 
-Copyright 1997-2002 OpenMP Architecture Review Board.
+Copyright 1997-2002 le tableau d’examen de l’architecture OpenMP.
 
-L’autorisation de copier sans frais toutes ou partie de ce document est accordée, fourni la mention de copyright du comité de révision d’Architecture OpenMP et le titre de ce document s’affichent. Notez qu’est étant donné que la copie est avec l’autorisation de OpenMP Architecture Review Board.
+L’autorisation de copie sans frais tout ou partie de ce document est accordée, à condition que la mention des droits d’auteur du tableau d’examen de l’architecture OpenMP et le titre de ce document apparaissent. Notez que la copie est autorisée par l’autorisation du tableau de révision de l’architecture OpenMP.
 
-## <a name="contents"></a>Sommaire
+## <a name="contents"></a>Contenu
 
 1. [Introduction](1-introduction.md)
 
@@ -31,7 +32,7 @@ L’autorisation de copier sans frais toutes ou partie de ce document est accord
 
 ### <a name="appendices"></a>Annexes
 
-Un fichier . [Exemples](a-examples.md)
+R. [Exemples](a-examples.md)
 
 B. [Stubs pour les fonctions de la bibliothèque du runtime](b-stubs-for-run-time-library-functions.md)
 

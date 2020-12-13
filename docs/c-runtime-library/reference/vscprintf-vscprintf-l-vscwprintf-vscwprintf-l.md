@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l'
 title: _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: e7448c7f3313165009de15bbdf4c1bd9baaba3d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 434a444b7b2c8a552c148c7c369a63b0c4a9acf2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342164"
 ---
 # <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -90,9 +91,9 @@ Pointeur vers la liste d'arguments.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_vscprintf** retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle pointe la liste d’arguments a été imprimée ou envoyée à un fichier ou une mémoire tampon à l’aide des codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
 
@@ -114,7 +115,7 @@ Chaque *argument* (le cas échéant) est converti selon la spécification de for
 |**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
 |**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

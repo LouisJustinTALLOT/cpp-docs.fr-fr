@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CSimpleException'
 title: CSimpleException, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: afd83c1ddd6f68b10c5cc8c47c0e939bbd01b6c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8070604e05fa59f7fcdfef6dcaad12ab0497da9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342816"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException, classe
 
@@ -65,7 +66,7 @@ Pour plus d’informations, consultez la rubrique relative à la [classe CExcept
 
 `CSimpleException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 

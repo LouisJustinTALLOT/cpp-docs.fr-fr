@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sealed (C++/CLI et C++/CX)'
 title: sealed (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1ec201f9b03d1f2cf4d11eb71ba166f48bc6cea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341046"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI et C++/CX)
 
@@ -36,7 +37,7 @@ virtual return-type identifier() sealed {...};
 *identifier*<br/>
 Nom de la fonction ou de la classe.
 
-*return-type*<br/>
+*type de retour*<br/>
 Type retourné par une fonction.
 
 ## <a name="remarks"></a>Notes
@@ -45,7 +46,7 @@ Dans le premier exemple de syntaxe, une classe est sealed. Dans le deuxième exe
 
 Utilisez le mot clé **sealed** pour les classes de référence et leurs fonctions membres virtuelles. Pour plus d’informations, consultez [Spécificateurs de substitution et compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la caractéristique de type `__is_sealed(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la caractéristique de type `__is_sealed(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 **sealed** est un mot clé contextuel.  Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
@@ -140,4 +141,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

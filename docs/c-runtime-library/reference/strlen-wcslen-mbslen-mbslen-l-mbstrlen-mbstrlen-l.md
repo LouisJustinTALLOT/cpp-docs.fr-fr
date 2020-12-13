@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l'
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 4/2/2020
 api_name:
@@ -57,19 +58,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54001a90003ff3a6931f43687fc08366607caf2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344833"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Obtient la longueur d'une chaîne en utilisant les paramètres régionaux actifs ou des paramètres régionaux spécifiés. Il existe des versions plus sécurisées de ces fonctions. Consultez [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**et **_mbstrlen_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen** et **_mbstrlen_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,17 +99,17 @@ size_t _mbstrlen_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par un caractère Null.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Chacune de ces fonctions retourne le nombre de caractères dans *Str*, à l’exclusion du terminal null. Aucune valeur de retour n’est réservée pour indiquer une erreur **_mbstrlen** , à l’exception de _mbstrlen `((size_t)(-1))` et **_mbstrlen_l**, qui retournent si la chaîne contient un caractère multioctet non valide.
+Chacune de ces fonctions retourne le nombre de caractères dans *Str*, à l’exclusion du terminal null. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **strlen** interprète la chaîne comme une chaîne de caractères codés sur un octet, donc sa valeur de retour est toujours égale au nombre d’octets, même si la chaîne contient des caractères multioctets. **wcslen** est une version à caractères larges de **strlen**; l’argument de **wcslen** est une chaîne de caractères larges et le nombre de caractères est en caractères larges (sur deux octets). dans le cas contraire, **wcslen** et **strlen** se comportent de la même façon.
 
@@ -205,7 +206,7 @@ Bytes in 'ABCァD' : 6
 ## <a name="see-also"></a>Voir aussi
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

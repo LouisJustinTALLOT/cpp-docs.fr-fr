@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vscanf, vwscanf'
 title: vscanf, vwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0205a32418ea35a6f5d5b4c1f4bc7977ae7191ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342190"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -56,7 +57,7 @@ Format de la chaîne de contrôle.
 *arglist*<br/>
 Liste d’arguments de variable.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné.
 
@@ -69,7 +70,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 La fonction **vscanf** lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans les emplacements fournis par la liste d’arguments *arglist* . Chaque argument de la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Quand vous utilisez **vscanf** pour lire une chaîne, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »** ); dans le cas contraire, une entrée incorrectement mise en forme peut provoquer un dépassement de mémoire tampon. En guise d’alternative, vous pouvez utiliser [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
+> Quand vous utilisez **vscanf** pour lire une chaîne, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »**); dans le cas contraire, une entrée incorrectement mise en forme peut provoquer un dépassement de mémoire tampon. En guise d’alternative, vous pouvez utiliser [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
 
 **vwscanf** est une version à caractères larges de **vscanf**; l’argument *format* de **vwscanf** est une chaîne de caractères larges. **vwscanf** et **vscanf** se comportent de la même manière si le flux est ouvert en mode ANSI. **vscanf** ne prend pas en charge l’entrée d’un flux Unicode.
 
@@ -81,14 +82,14 @@ La fonction **vscanf** lit les données à partir du flux d’entrée standard *
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -152,6 +153,6 @@ The contents are: 36 92.300003 y n Wide characters
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md)<br/>

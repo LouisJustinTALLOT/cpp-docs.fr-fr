@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : liste (STL/CLR)'
 title: list (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b23bc3f53cc13338e09ee8a6171d3da3b0b75d67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344508"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -141,7 +142,7 @@ template<typename Value>
 *Valeur*<br/>
 Type d'un élément dans la séquence contrôlée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/list>
 
@@ -221,7 +222,7 @@ Type d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
 |IList\<Value>|Conserver le conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste de liens bidirectionnelle. Elle réorganise les éléments en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants. Par conséquent, une liste est un bon candidat pour le conteneur sous-jacent pour la file d’attente de classe de modèle [(STL/CLR)](../dotnet/queue-stl-clr.md) ou la pile de classes de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
@@ -265,13 +266,13 @@ Fin de la plage à insérer.
 *multiples*<br/>
 Valeur de l’élément à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre remplace la séquence contrôlée par une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
 
 Si `InIt` est un type entier, la deuxième fonction membre se comporte de la même façon que `assign((size_type)first, (value_type)last)` . Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [ `first` , `last` ). Vous l’utilisez pour faire en sorte que la séquence contrôlée copie une autre séquence.
 
-La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
+La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit* de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -841,9 +842,9 @@ Fin de la plage à effacer.
 *where*<br/>
 Élément à effacer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle* pointe. Vous l’utilisez pour supprimer un seul élément.
 
 La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
@@ -1272,7 +1273,7 @@ Valeur de l’élément à insérer.
 *where*<br/>
 Où insérer dans le conteneur.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Chacune des fonctions membres insère, avant l’élément vers *lequel* pointe, dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.
 
@@ -1438,7 +1439,7 @@ Objet ou plage à insérer.
 *multiples*<br/>
 Valeur de l’élément à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -1450,7 +1451,7 @@ Le constructeur :
 
 `list(list<Value>% right);`
 
-Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de liste.
+Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit* de l’objet de liste.
 
 Le constructeur :
 
@@ -1482,7 +1483,7 @@ Le constructeur :
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -1569,7 +1570,7 @@ Comparateur pour les paires d’éléments.
 *Oui*<br/>
 Conteneur dans lequel effectuer la fusion.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre supprime tous les éléments de la séquence contrôlée par *Right* et les insère dans la séquence contrôlée. Les deux séquences doivent être triées précédemment par `operator<` --les éléments ne doivent pas diminuer la valeur à mesure que vous progressez dans l’une ou l’autre séquence. La séquence résultante est également triée par `operator<` . Vous utilisez cette fonction membre pour fusionner deux séquences qui augmentent la valeur dans une séquence qui augmente également la valeur.
 
@@ -1661,7 +1662,7 @@ list<Value>% operator=(list<Value>% right);
 *Oui*<br/>
 Conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -1998,7 +1999,7 @@ void remove(value_type val);
 *multiples*<br/>
 Valeur de l’élément à supprimer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre supprime un élément dans la séquence contrôlée pour laquelle `((System::Object^)val)->Equals((System::Object^)x)` a la valeur true (le cas échéant). Vous l’utilisez pour effacer un élément arbitraire avec la valeur spécifiée.
 
@@ -2058,7 +2059,7 @@ template<typename Pred1>
 *prédit*<br/>
 Test des éléments à supprimer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre supprime de la séquence contrôlée (efface) tous les éléments `X` pour lesquels `pred(X)` a la valeur true. Vous l’utilisez pour supprimer tous les éléments qui répondent à une condition que vous spécifiez en tant que fonction ou délégué.
 
@@ -2181,7 +2182,7 @@ Nouvelle taille de la séquence contrôlée.
 *multiples*<br/>
 Valeur de l’élément de remplissage.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les fonctions membres garantissent que [List :: Size (STL/CLR)](#size) `()` retourne désormais *NEW_SIZE*. Si la séquence contrôlée doit être plus longue, la première fonction membre ajoute des éléments avec `value_type()` la valeur, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *Val*. Pour rendre la séquence contrôlée plus concise, les deux fonctions membres effacent efficacement le dernier élément [List :: Size (STL/CLR)](#size) `() -` `new_size` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée a une taille *NEW_SIZE*, en découpant ou en remplissant la séquence contrôlée actuelle.
 
@@ -2436,7 +2437,7 @@ template<typename Pred2>
 *prédit*<br/>
 Comparateur pour les paires d’éléments.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre réorganise les éléments dans la séquence contrôlée afin qu’ils soient classés par `operator<` --les éléments ne diminuent pas la valeur à mesure que vous progressez dans la séquence. Vous utilisez cette fonction membre pour trier la séquence dans l’ordre de plus en plus important.
 
@@ -2512,13 +2513,13 @@ Conteneur à partir duquel effectuer l’épissure.
 *where*<br/>
 Où se trouve dans le conteneur à épisser.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La première fonction membre insère la séquence contrôlée par *juste* avant l’élément de la séquence contrôlée vers *lequel*pointe. Elle supprime également tous les éléments de *Right*. ( `%right` ne doit pas être égal à **`this`** .) Vous l’utilisez pour épisser la totalité d’une liste dans une autre.
+La première fonction membre insère la séquence contrôlée par *juste* avant l’élément de la séquence contrôlée vers *lequel* pointe. Elle supprime également tous les éléments de *Right*. ( `%right` ne doit pas être égal à **`this`** .) Vous l’utilisez pour épisser la totalité d’une liste dans une autre.
 
-La deuxième fonction membre supprime l’élément désigné par d' *abord* dans la séquence contrôlée par *Right* et l’insère avant l’élément de la séquence contrôlée vers *lequel*pointe. (Si `where` `==` `first` `||` `where` `== ++first`, aucune modification ne se produit.) Vous l’utilisez pour épisser un élément unique d’une liste dans une autre.
+La deuxième fonction membre supprime l’élément désigné par d' *abord* dans la séquence contrôlée par *Right* et l’insère avant l’élément de la séquence contrôlée vers *lequel* pointe. (Si `where` `==` `first` `||` `where` `== ++first`, aucune modification ne se produit.) Vous l’utilisez pour épisser un élément unique d’une liste dans une autre.
 
-La troisième fonction membre insère la sous-plage désignée par [ `first` , `last` ) à partir de la séquence contrôlée par le *droit* avant l’élément de la séquence contrôlée vers *lequel*pointe. Elle supprime également la sous-plage d’origine de la séquence contrôlée par *Right*. (Si `right == this` la valeur est, la plage [ `first` , `last` ) ne doit pas inclure l’élément vers *lequel*pointe.) Vous l’utilisez pour épisser une sous-séquence de zéro ou plusieurs éléments d’une liste dans une autre.
+La troisième fonction membre insère la sous-plage désignée par [ `first` , `last` ) à partir de la séquence contrôlée par le *droit* avant l’élément de la séquence contrôlée vers *lequel* pointe. Elle supprime également la sous-plage d’origine de la séquence contrôlée par *Right*. (Si `right == this` la valeur est, la plage [ `first` , `last` ) ne doit pas inclure l’élément vers *lequel* pointe.) Vous l’utilisez pour épisser une sous-séquence de zéro ou plusieurs éléments d’une liste dans une autre.
 
 ### <a name="example"></a>Exemple
 
@@ -2592,7 +2593,7 @@ void swap(list<Value>% right);
 *Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les séquences contrôlées entre **`*this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
@@ -2707,7 +2708,7 @@ template<typename Pred2>
 *prédit*<br/>
 Comparateur pour les paires d’éléments.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre supprime de la séquence contrôlée (efface) chaque élément qui correspond à l’élément précédent, si `X` l’élément précède `Y` l’élément et `X == Y` , la fonction membre supprime `Y` . Vous l’utilisez pour supprimer toutes les copies, sauf une, de chaque sous-séquence d’éléments adjacents dont la comparaison est égale. Notez que si la séquence contrôlée est ordonnée, par exemple en appelant [List :: sort (STL/CLR)](#sort) `()` , la fonction membre conserve uniquement les éléments avec des valeurs uniques. (D’où leur nom.)
 
@@ -2768,7 +2769,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *valeur*de paramètre de modèle.
+Le type est un synonyme de la *valeur* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -2821,7 +2822,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux listes sont comparées élément par élément.
 
@@ -2890,9 +2891,9 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si *right* *Left* est trié avant le moment où les deux listes sont comparées élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si  *Left* est trié avant le moment où les deux listes sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2959,7 +2960,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux listes sont comparées élément par élément.
 
@@ -3028,7 +3029,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour vérifier si *Left* est *ordonné de la même manière que* si les deux listes sont comparées élément par élément.
 
@@ -3097,7 +3098,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour vérifier si *Left* est trié après *Right* lorsque les deux listes sont comparées élément par élément.
 
@@ -3166,7 +3167,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left` `<` `right)` . Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux listes sont comparées élément par élément.
 

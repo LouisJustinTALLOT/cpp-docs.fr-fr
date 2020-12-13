@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __vmx_vmresume'
 title: __vmx_vmresume
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 34d0e6814dd00da07076e644513400bd5be36bd3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 35c1ca7eeca847b14d16c451752a186c63a59749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343776"
 ---
 # <a name="__vmx_vmresume"></a>__vmx_vmresume
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Reprend l’opération non racine VMX à l’aide de la structure de contrôle de machine virtuelle actuelle (VMCS, Virtual Machine Control Structure).
 
@@ -29,7 +30,7 @@ unsigned char __vmx_vmresume(
 
 ## <a name="return-value"></a>Valeur de retour
 
-|`Value`|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0|L’opération a réussi.|
 |1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|
@@ -41,15 +42,15 @@ Une application peut effectuer une opération VM-enter à l’aide de la fonctio
 
 La fonction `__vmx_vmresume` est équivalente à l’instruction machine `VMRESUME` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document PDF « Intel Virtualization Technical Specification for the IA-32 Intel Architecture », dont le numéro de document est C97063-002, sur le site d’ [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__vmx_vmresume`|X64|
+|`__vmx_vmresume`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

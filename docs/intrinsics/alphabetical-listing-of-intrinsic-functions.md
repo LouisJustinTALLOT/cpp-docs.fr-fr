@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : la liste alphabétique des fonctions intrinsèques'
 title: Liste alphabétique des intrinsèques
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: ac2f005554cb8548c24368c2a0b245906bd1ca45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4c9af3b863a930d0b1f8ecd6ea3b7960b135e768
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343789"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Liste alphabétique des intrinsèques
 
-Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Pour obtenir des liens vers la documentation du fabricant, consultez les sections [ARM Intrinsic](../intrinsics/arm-intrinsics.md), fonctions intrinsèques, intrinsèques de [ARM64](../intrinsics/arm64-intrinsics.md), [intrinsèques x86](../intrinsics/x86-intrinsics-list.md)et [fonctions intrinsèques x64](../intrinsics/x64-amd64-intrinsics-list.md) . Les fonctions de bibliothèque Runtime C (CRT) dont les fonctions intrinsèques sont implémentées ne sont pas documentées ici ; ces fonctions sont documentées dans la référence de la [bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md).
+Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Microsoft disponibles sur toutes les architectures ou sur certaines d'entre elles. D'autres fonctions intrinsèques prises en charge sont documentées par les fabricants de processeurs dans les fichiers d'en-tête ou sur leurs sites web. Pour obtenir des liens vers la documentation du fabricant, consultez les sections [ARM Intrinsic](../intrinsics/arm-intrinsics.md), fonctions intrinsèques, intrinsèques de [ARM64](../intrinsics/arm64-intrinsics.md), [intrinsèques x86](../intrinsics/x86-intrinsics-list.md)et [fonctions intrinsèques x64](../intrinsics/x64-amd64-intrinsics-list.md) . Les fonctions de bibliothèque Runtime C (CRT) dont les fonctions intrinsèques sont implémentées ne sont pas documentées ici ; ces fonctions sont documentées dans la référence de la [bibliothèque C Run-Time](../c-runtime-library/c-run-time-library-reference.md).
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte, \_ _addfsword \_ _addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte, \_ _addgsword, \_ _addgsdword, \_ _addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,13 +38,13 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid, \_ _cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[__emul, \__emulu](../intrinsics/emul-emulu.md)
+[__emul, \_ _emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +60,9 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__incfsbyte, \_ _incfsword \_ _incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte, \_ _incgsword, \_ _incgsdword, \_ _incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -111,7 +112,7 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16, \_ _lzcnt \_ _lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -157,7 +158,7 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__popcnt16, \__popcnt, \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16, \_ _popcnt \_ _popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +180,9 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte, \_ _readfsdword, \_ _readfsqword, \_ _readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte, \_ _readgsdword, \_ _readgsqword, \_ _readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,9 +268,9 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte, \_ _writefsdword, \_ _writefsqword, \_ _writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte, \_ _writegsdword, \_ _writegsqword, \_ _writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 

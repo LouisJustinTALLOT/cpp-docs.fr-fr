@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l'
 title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 ms.date: 09/12/2019
 api_name:
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 84e85885acf671b49e1e3226234a1d3337577768
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 725962d2bb08515f60bf3b2ce3342534daaadfa7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342125"
 ---
 # <a name="vsprintf_s-_vsprintf_s_l-vswprintf_s-_vswprintf_s_l"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
-Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Ces fonctions sont des versions de [vsprintf, _vsprintf_l, vswprintf, _vswprintf_l \_, _vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Ces fonctions sont des versions de [vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \_ _vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,7 +96,7 @@ int vswprintf_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour la sortie.
 
 *numberOfElements*<br/>
@@ -110,7 +111,7 @@ Pointeur vers la liste d'arguments.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **vsprintf_s** et **vswprintf_s** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si la *mémoire tampon* ou le *format* est un pointeur null, si *NumberOfElements* est égal à zéro, ou si la chaîne de format contient des caractères de mise en forme non valides, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -126,7 +127,7 @@ Ces fonctions se distinguent des versions non sécurisées uniquement par le fai
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-Dans C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Ils peuvent remplacer automatiquement les fonctions non sécurisées par leurs équivalents sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Ils peuvent remplacer automatiquement les fonctions non sécurisées par leurs équivalents sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -135,14 +136,14 @@ Dans C++, l’utilisation de ces fonctions est simplifiée par les surcharges de
 |**_vstprintf_s**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
 |**_vstprintf_s_l**|**_vsprintf_s_l**|**_vsprintf_s_l**|**_vswprintf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**vsprintf_s**, **_vsprintf_s_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
-|**vswprintf_s**, **_vswprintf_s_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
+|**vswprintf_s**, **_vswprintf_s_l**|\<stdio.h> ou \<wchar.h> , et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\* Requis pour la compatibilité UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -196,5 +197,5 @@ This is a string
 [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

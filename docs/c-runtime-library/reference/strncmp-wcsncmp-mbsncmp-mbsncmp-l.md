@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strncmp, wcsncmp, _mbsncmp, _mbsncmp_l'
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 4/2/2020
 api_name:
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91f7351f844425369ccae4bba6d13d177e75910f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344755"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -110,7 +111,7 @@ Nombre de caractères à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2* comme suit.
 
@@ -120,11 +121,11 @@ La valeur de retour indique la relation des sous-chaînes de *Chaîne1* et *Cha�
 |0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2*|
 |> 0|*Chaîne1* sous-chaîne supérieure à la sous-chaîne *Chaîne2*|
 
-Dans le cas d’une erreur de validation de paramètre, **_mbsncmp** et **_mbsncmp_l** retournent **_NLSCMPERROR**, qui est défini dans \<string. h> et \<mbstring. h>.
+Dans le cas d’une erreur de validation de paramètre, **_mbsncmp** et **_mbsncmp_l** retournent **_NLSCMPERROR**, qui est défini dans \<string.h> et \<mbstring.h> .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **strncmp** effectue une comparaison ordinale d’au plus les *premiers caractères* dans *Chaîne1* et *Chaîne2* et retourne une valeur indiquant la relation entre les sous-chaînes. **strncmp** est une version de **_strnicmp**qui respecte la casse. **wcsncmp** et **_mbsncmp** sont des versions de **_wcsnicmp** et **_mbsnicmp**qui respectent la casse.
+La fonction **strncmp** effectue une comparaison ordinale d’au plus les *premiers caractères* dans *Chaîne1* et *Chaîne2* et retourne une valeur indiquant la relation entre les sous-chaînes. **strncmp** est une version de **_strnicmp** qui respecte la casse. **wcsncmp** et **_mbsncmp** sont des versions de **_wcsnicmp** et **_mbsnicmp** qui respectent la casse.
 
 **wcsncmp** et **_mbsncmp** sont des versions à caractères larges et à caractères multioctets de **strncmp**. Les arguments de **wcsncmp** sont des chaînes à caractères larges ; ceux de **_mbsncmp** sont des chaînes de caractères multioctets. **_mbsncmp** reconnaît les séquences de caractères multioctets en fonction d’une page de codes multioctets et retourne **_NLSCMPERROR** en cas d’erreur.
 
@@ -206,7 +207,7 @@ Result:      String 1 is equal to string 2
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

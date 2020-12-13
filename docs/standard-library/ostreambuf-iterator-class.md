@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ostreambuf_iterator'
 title: ostreambuf_iterator
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: e4e21bd0c1323afdc2c81a0e581c3557b8040193
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b492c3de8cce296f7828c25947711b3666ee891
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342268"
 ---
 # <a name="ostreambuf_iterator-class"></a>ostreambuf_iterator
 
@@ -80,7 +81,7 @@ La classe ostreambuf_iterator doit être conforme aux exigences d’un itérateu
 
 **Espace de noms :** std
 
-## <a name="ostreambuf_iteratorchar_type"></a><a name="char_type"></a>ostreambuf_iterator :: char_type
+## <a name="ostreambuf_iteratorchar_type"></a><a name="char_type"></a> ostreambuf_iterator :: char_type
 
 Type qui fournit le type de caractère de `ostreambuf_iterator`.
 
@@ -130,7 +131,7 @@ by charOutBuf are: OUT.
 */
 ```
 
-## <a name="ostreambuf_iteratorfailed"></a><a name="failed"></a>ostreambuf_iterator :: échec
+## <a name="ostreambuf_iteratorfailed"></a><a name="failed"></a> ostreambuf_iterator :: échec
 
 Teste l'échec d'une insertion dans la mémoire tampon du flux de sortie.
 
@@ -138,13 +139,13 @@ Teste l'échec d'une insertion dans la mémoire tampon du flux de sortie.
 bool failed() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si aucune insertion dans la mémoire tampon du flux de sortie n’a échoué précédemment ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne **`true`** si, dans toute utilisation antérieure du membre `operator=` , l’appel à **subf**_-> `sputc` a retourné **EOF**.
+La fonction membre retourne **`true`** si, dans toute utilisation antérieure du membre `operator=` , l’appel à **subf** _-> `sputc` a retourné **EOF**.
 
 ### <a name="example"></a>Exemple
 
@@ -181,7 +182,7 @@ No insertions failed.
 */
 ```
 
-## <a name="ostreambuf_iteratoroperator"></a><a name="op_star"></a>ostreambuf_iterator ::, opérateur\*
+## <a name="ostreambuf_iteratoroperator"></a><a name="op_star"></a> ostreambuf_iterator ::, opérateur\*
 
 Opérateur de déréférencement non fonctionnel utilisé pour implémenter l’expression d’itérateur de sortie \* *i*  =  *x*.
 
@@ -189,13 +190,13 @@ Opérateur de déréférencement non fonctionnel utilisé pour implémenter l’
 ostreambuf_iterator<CharType, Traits>& operator*();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet itérateur ostreambuf.
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur fonctionne uniquement dans l’expression d’itérateur de sortie \* *i*  =  *x* pour sortir les caractères de la mémoire tampon de flux. Appliqué à un itérateur ostreambuf, il retourne l’itérateur ; ** \* ITER** retourne **ITER**,
+Cet opérateur fonctionne uniquement dans l’expression d’itérateur de sortie \* *i*  =  *x* pour sortir les caractères de la mémoire tampon de flux. Appliqué à un itérateur ostreambuf, il retourne l’itérateur ; **\* ITER** retourne **ITER**,
 
 ### <a name="example"></a>Exemple
 
@@ -228,7 +229,7 @@ OUT
 */
 ```
 
-## <a name="ostreambuf_iteratoroperator"></a><a name="op_add_add"></a>ostreambuf_iterator :: Operator + +
+## <a name="ostreambuf_iteratoroperator"></a><a name="op_add_add"></a> ostreambuf_iterator :: Operator + +
 
 Opérateur d’incrémentation non fonctionnel qui retourne un itérateur ostream au même caractère qu’il a traité avant l’appel de l’opération.
 
@@ -237,7 +238,7 @@ ostreambuf_iterator<CharType, Traits>& operator++();
 ostreambuf_iterator<CharType, Traits>& operator++(int);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au caractère initialement traité ou à un objet défini par l’implémentation convertible en `ostreambuf_iterator` \< **CharType**, **Traits**> .
 
@@ -276,7 +277,7 @@ OUT
 */
 ```
 
-## <a name="ostreambuf_iteratoroperator"></a><a name="op_eq"></a>ostreambuf_iterator :: Operator =
+## <a name="ostreambuf_iteratoroperator"></a><a name="op_eq"></a> ostreambuf_iterator :: Operator =
 
 L'opérateur insère un caractère dans la mémoire tampon du flux associé.
 
@@ -289,7 +290,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 *_Char*\
 Caractère à insérer dans la mémoire tampon du flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au caractère inséré dans la mémoire tampon du flux.
 
@@ -328,7 +329,7 @@ OUT
 */
 ```
 
-## <a name="ostreambuf_iteratorostreambuf_iterator"></a><a name="ostreambuf_iterator_ostreambuf_iterator"></a>ostreambuf_iterator :: ostreambuf_iterator
+## <a name="ostreambuf_iteratorostreambuf_iterator"></a><a name="ostreambuf_iterator_ostreambuf_iterator"></a> ostreambuf_iterator :: ostreambuf_iterator
 
 Construit un objet `ostreambuf_iterator` initialisé pour enregistrer des caractères dans le flux de sortie.
 
@@ -384,7 +385,7 @@ These characters are being written to the output stream.
 */
 ```
 
-## <a name="ostreambuf_iteratorostream_type"></a><a name="ostreambuf_iterator_ostream_type"></a>ostreambuf_iterator :: ostream_type
+## <a name="ostreambuf_iteratorostream_type"></a><a name="ostreambuf_iterator_ostream_type"></a> ostreambuf_iterator :: ostream_type
 
 Type qui fournit le type de flux de `ostream_iterator`.
 
@@ -394,13 +395,13 @@ typedef basicOstream<CharType, Traits> ostream_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de`basicOstream`\< **CharType**, **Traits**>
+Le type est un synonyme de `basicOstream`\< **CharType**, **Traits**>
 
 ### <a name="example"></a>Exemple
 
 Pour savoir comment déclarer et utiliser `ostream_type`, consultez l’exemple [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator).
 
-## <a name="ostreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>ostreambuf_iterator :: streambuf_type
+## <a name="ostreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a> ostreambuf_iterator :: streambuf_type
 
 Type qui fournit le type de flux de `ostreambuf_iterator`.
 
@@ -416,7 +417,7 @@ Le type est un synonyme de `basic_streambuf` \< **CharType**, **Traits**> , une 
 
 Pour savoir comment déclarer et utiliser `streambuf_type`, consultez l’exemple [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator).
 
-## <a name="ostreambuf_iteratortraits_type"></a><a name="traits_type"></a>ostreambuf_iterator :: traits_type
+## <a name="ostreambuf_iteratortraits_type"></a><a name="traits_type"></a> ostreambuf_iterator :: traits_type
 
 Type qui fournit le type de caractéristique de `ostream_iterator`.
 

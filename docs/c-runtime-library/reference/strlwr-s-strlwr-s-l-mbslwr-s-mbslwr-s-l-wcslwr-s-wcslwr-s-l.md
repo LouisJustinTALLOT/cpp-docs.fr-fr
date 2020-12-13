@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l'
 title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2a5b0ba3fb8868a4f88c8ee96ecc5fad69c9114
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344820"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -145,7 +146,7 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne se terminant par un caractère Null à convertir en minuscules.
 
 *numberOfElements*<br/>
@@ -154,13 +155,13 @@ Taille de la mémoire tampon.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ; code d’erreur différent de zéro en cas d’échec.
 
 Ces fonctions valident leurs paramètres. Si *Str* n’est pas une chaîne terminée par le caractère null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**. Si *NumberOfElements* est inférieur à la longueur de la chaîne, les fonctions retournent également **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_strlwr_s** convertit, en place, toutes les lettres majuscules de *Str* en minuscules. **_mbslwr_s** est une version à caractères multioctets de **_strlwr_s**. **_wcslwr_s** est une version à caractères larges de **_strlwr_s**.
 
@@ -231,5 +232,5 @@ Upper: THE STRING TO END ALL STRINGS!
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>

@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : 2. Directives'
 title: 2. Directives
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 66b4ee4cdf3fec1740ed9b471c1c57cffebad6d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342567"
 ---
 # <a name="2-directives"></a>2. Directives
 
@@ -182,10 +183,10 @@ Celui-ci peut avoir l'une des valeurs suivantes :
 - `>`
 - `>=`
 
-*lb*, *b*et *incr*<br>
+*lb*, *b* et *incr*<br>
 Expressions d’entiers invariants de boucle. Aucune synchronisation n’est effectuée pendant l’évaluation de ces expressions, de sorte que tous les effets secondaires évalués produisent des résultats indéterminés.
 
-La forme canonique permet de calculer le nombre d’itérations de boucle lors de l’entrée dans la boucle. Ce calcul est effectué avec des valeurs dans le type *var*, après les promotions intégrales. En particulier, si la valeur de l’incr. *b* `-` *lb* `+` *incr* ne peut pas être représentée dans ce type, le résultat est indéterminé. En outre, si *Logical-op* est `<` ou `<=` , *incr-expr* doit entraîner l’augmentation de *var* à chaque itération de la boucle.   Si *Logical-op* est `>` ou `>=` , *incr-expr* doit faire en sorte que *var* soit plus petit sur chaque itération de la boucle.
+La forme canonique permet de calculer le nombre d’itérations de boucle lors de l’entrée dans la boucle. Ce calcul est effectué avec des valeurs dans le type *var*, après les promotions intégrales. En particulier, si la valeur de l’incr. *b* `-` *lb* `+`  ne peut pas être représentée dans ce type, le résultat est indéterminé. En outre, si *Logical-op* est `<` ou `<=` , *incr-expr* doit entraîner l’augmentation de *var* à chaque itération de la boucle.   Si *Logical-op* est `>` ou `>=` , *incr-expr* doit faire en sorte que *var* soit plus petit sur chaque itération de la boucle.
 
 La `schedule` clause spécifie comment les itérations de la `for` boucle sont réparties entre les threads de l’équipe. L’exactitude d’un programme ne doit pas dépendre du thread qui exécute une itération particulière. La valeur de *chunk_size*, si elle est spécifiée, doit être une expression entière d’invariant de boucle avec une valeur positive. Il n’existe aucune synchronisation pendant l’évaluation de cette expression, donc tous les effets secondaires évalués produisent des résultats indéterminés. Le *genre* de planification peut être l’une des valeurs suivantes :
 
@@ -220,7 +221,7 @@ Les restrictions à la `for` directive sont les suivantes :
 
 - Une seule `nowait` clause peut apparaître sur une `for` directive.
 
-- Il n’est pas spécifié si ou la fréquence à laquelle les effets secondaires dans les expressions *chunk_size*, *lb*, *b*ou *incr* se produisent.
+- Il n’est pas spécifié si ou la fréquence à laquelle les effets secondaires dans les expressions *chunk_size*, *lb*, *b* ou *incr* se produisent.
 
 - La valeur de l’expression de *chunk_size* doit être la même pour tous les threads de l’équipe.
 
@@ -420,7 +421,7 @@ Dans les expressions précédentes :
 
 - *binop* n’est pas un opérateur surchargé et est l’un des opérateurs,,,,,, `+` `*` `-` `/` `&` `^` `|` , `<<` ou `>>` .
 
-Bien qu’elle soit définie par l’implémentation si une implémentation remplace toutes les `atomic` directives par des `critical` directives portant le même *nom*unique, la `atomic` directive permet une meilleure optimisation. Des instructions matérielles sont souvent disponibles pour effectuer la mise à jour atomique avec la surcharge la plus faible.
+Bien qu’elle soit définie par l’implémentation si une implémentation remplace toutes les `atomic` directives par des `critical` directives portant le même *nom* unique, la `atomic` directive permet une meilleure optimisation. Des instructions matérielles sont souvent disponibles pour effectuer la mise à jour atomique avec la surcharge la plus faible.
 
 Seule la charge et le magasin de l’objet désigné par *x* sont atomiques ; l’évaluation de *expr* n’est pas atomique. Pour éviter les conditions de concurrence, toutes les mises à jour de l’emplacement en parallèle doivent être protégées par la `atomic` directive, à l’exception de celles qui sont connues comme étant exemptes de conditions de concurrence.
 
@@ -457,7 +458,7 @@ La syntaxe de la `flush` directive est la suivante :
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-Si les objets qui nécessitent une synchronisation peuvent tous être désignés par des variables, ces variables peuvent être spécifiées dans la *liste*de variables facultative. Si un pointeur est présent dans la *liste de variables*, le pointeur lui-même est vidé, et non l’objet auquel le pointeur fait référence.
+Si les objets qui nécessitent une synchronisation peuvent tous être désignés par des variables, ces variables peuvent être spécifiées dans la *liste* de variables facultative. Si un pointeur est présent dans la *liste de variables*, le pointeur lui-même est vidé, et non l’objet auquel le pointeur fait référence.
 
 Une `flush` directive sans *liste de variables* synchronise tous les objets partagés, à l’exception des objets inaccessibles avec une durée de stockage automatique. (Cela peut avoir plus de surcharge qu’un `flush` avec une *liste de variables*.) Une `flush` directive sans *liste de variables* est implicite pour les directives suivantes :
 

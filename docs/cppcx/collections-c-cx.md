@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Collections (C++/CX)'
 title: Collections (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 4843441b5d5091bea36ff8c74bd84bddd5f7fa4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342047"
 ---
 # <a name="collections-ccx"></a>Collections (C++/CX)
 
@@ -57,7 +58,7 @@ Tout élément à stocker dans [Platform::Collections::Vector](../cppcx/platform
 
 ## <a name="vectorproxy-elements"></a>Éléments VectorProxy
 
-[Platform :: Collections :: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) et [Platform :: Collections :: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) permettent d’utiliser des `range for` boucles et des algorithmes comme [std :: sort](../standard-library/algorithm-functions.md#sort) avec un conteneur [IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1) . Toutefois, les éléments `IVector` ne sont pas accessibles par l’intermédiaire du déréférencement de pointeur C++. Ils sont accessibles uniquement avec les méthodes [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) et [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Par conséquent, ces itérateurs utilisent les classes proxy `Platform::Details::VectorProxy<T>` et `Platform::Details::ArrowProxy<T>` pour fournir l’accès aux éléments individuels par le biais des __\*__ __->__ opérateurs, et __ \[ ]__ , comme requis par la bibliothèque standard. À proprement parler, avec un `IVector<Person^> vec`, le type de `*begin(vec)` est `VectorProxy<Person^>`. Toutefois, l'objet proxy est presque toujours transparent pour votre code. Ces objets proxy ne sont pas documentés car ils servent uniquement à un usage interne par les itérateurs, mais il est utile de savoir comment le mécanisme fonctionne.
+[Platform :: Collections :: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) et [Platform :: Collections :: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) permettent d’utiliser des `range for` boucles et des algorithmes comme [std :: sort](../standard-library/algorithm-functions.md#sort) avec un conteneur [IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1) . Toutefois, les éléments `IVector` ne sont pas accessibles par l’intermédiaire du déréférencement de pointeur C++. Ils sont accessibles uniquement avec les méthodes [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) et [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Par conséquent, ces itérateurs utilisent les classes proxy `Platform::Details::VectorProxy<T>` et `Platform::Details::ArrowProxy<T>` pour fournir l’accès aux éléments individuels par le biais des __\*__ __->__ opérateurs, et __\[ ]__ , comme requis par la bibliothèque standard. À proprement parler, avec un `IVector<Person^> vec`, le type de `*begin(vec)` est `VectorProxy<Person^>`. Toutefois, l'objet proxy est presque toujours transparent pour votre code. Ces objets proxy ne sont pas documentés car ils servent uniquement à un usage interne par les itérateurs, mais il est utile de savoir comment le mécanisme fonctionne.
 
 Lorsque vous utilisez une boucle `range for` sur les conteneurs `IVector` , utilisez `auto&&` pour permettre à la variable d'itérateur d'effectuer une liaison correcte avec les éléments `VectorProxy` . Si vous utilisez **`auto`** ou `auto&` , l’avertissement du compilateur C4239 est déclenché et `VectoryProxy` est mentionné dans le texte d’avertissement.
 
@@ -129,7 +130,7 @@ Pour simplifier l’utilisation de la bibliothèque STL pour traiter les `Vector
 
 Le tableau ci-dessous répertorie les itérateurs et fonctions disponibles.
 
-|Iterators|Functions|
+|Iterators|Fonctions|
 |---------------|---------------|
 |[Platform :: Collections :: VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows :: Foundation :: Collections :: \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1) et int.)|[commencer](../cppcx/begin-function.md) /  [end](../cppcx/end-function.md)([Windows :: Foundation :: Collections :: IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1))|
 |[Platform :: Collections :: VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en [interne \<T> IVectorView](/uwp/api/windows.foundation.collections.ivectorview-1)^ et int.)|[commencer](../cppcx/begin-function.md) /  [fin](../cppcx/end-function.md) ([IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^)|

@@ -1,21 +1,22 @@
 ---
-title: Un fichier . Exemples
+description: 'En savoir plus sur : A. exemples'
+title: R. Exemples
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52b59f9f83cf791c03fb49ca726273a2c977e58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342541"
 ---
-# <a name="a-examples"></a>Un fichier . Exemples
+# <a name="a-examples"></a>R. Exemples
 
-Voici quelques exemples de constructions définies dans ce document. Une instruction qui suit une directive est composée uniquement lorsque cela est nécessaire, et une instruction non composées est décalé par rapport à une directive qui la précède.
+Voici quelques exemples des constructions définies dans ce document. Une instruction qui suit une directive est composée uniquement lorsque cela est nécessaire, et une instruction non composée est mise en retrait d’une directive qui la précède.
 
-## <a name="a1-a-simple-loop-in-parallel"></a>A.1 une simple boucle en parallèle
+## <a name="a1-a-simple-loop-in-parallel"></a>A. 1 une boucle simple en parallèle
 
-L’exemple suivant montre comment paralléliser une boucle à l’aide de la [parallèles pour](2-directives.md#251-parallel-for-construct) la directive. La variable d’itération de boucle est privée par défaut, donc il n’est pas nécessaire de spécifier explicitement dans une clause privée.
+L’exemple suivant montre comment paralléliser une boucle à l’aide de la directive [Parallel for](2-directives.md#251-parallel-for-construct) . La variable d’itération de la boucle est privée par défaut. il n’est donc pas nécessaire de la spécifier explicitement dans une clause Private.
 
 ```cpp
 #pragma omp parallel for
@@ -23,9 +24,9 @@ L’exemple suivant montre comment paralléliser une boucle à l’aide de la [p
         b[i] = (a[i] + a[i-1]) / 2.0;
 ```
 
-## <a name="a2-conditional-compilation"></a>Compilation conditionnelle A.2
+## <a name="a2-conditional-compilation"></a>A. 2 compilation conditionnelle
 
-Les exemples suivants illustrent l’utilisation de la compilation conditionnelle à l’aide de la macro OpenMP [_OPENMP](2-directives.md#22-conditional-compilation). Avec la compilation de OpenMP, le `_OPENMP` macro est définie.
+Les exemples suivants illustrent l’utilisation de la compilation conditionnelle à l’aide de la [_OPENMP](2-directives.md#22-conditional-compilation)de macro OpenMP. Avec la compilation OpenMP, la `_OPENMP` macro devient définie.
 
 ```cpp
 # ifdef _OPENMP
@@ -33,7 +34,7 @@ Les exemples suivants illustrent l’utilisation de la compilation conditionnell
 # endif
 ```
 
-L’opérateur de préprocesseur défini permet plusieurs macros à tester dans une directive unique.
+L’opérateur de préprocesseur défini permet à plusieurs macros d’être testées dans une seule directive.
 
 ```cpp
 # if defined(_OPENMP) && defined(VERBOSE)
@@ -41,9 +42,9 @@ L’opérateur de préprocesseur défini permet plusieurs macros à tester dans 
 # endif
 ```
 
-## <a name="a3-parallel-regions"></a>A.3 des régions parallèles
+## <a name="a3-parallel-regions"></a>A. 3 régions parallèles
 
-Le [parallèles](2-directives.md#23-parallel-construct) directive peut être utilisée dans les programmes parallèles de granularité grossière. Dans l’exemple suivant, chaque thread dans la région parallèle décide quelle partie du tableau global `x` travailler, en fonction du nombre de threads :
+La directive [Parallel](2-directives.md#23-parallel-construct) peut être utilisée dans des programmes parallèles de granularité grossière. Dans l’exemple suivant, chaque thread de la région parallèle détermine la partie du tableau global `x` à utiliser, en fonction du numéro de thread :
 
 ```cpp
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)
@@ -55,9 +56,9 @@ Le [parallèles](2-directives.md#23-parallel-construct) directive peut être uti
 }
 ```
 
-## <a name="a4-the-nowait-clause"></a>A.4 la clause nowait
+## <a name="a4-the-nowait-clause"></a>A. 4 la clause NOWAIT
 
-S’il existe de nombreuses boucles indépendants dans une région parallèle, vous pouvez utiliser la [nowait](2-directives.md#241-for-construct) clause afin d’éviter la barrière implicite à la fin de la `for` directive, comme suit :
+S’il existe de nombreuses boucles indépendantes dans une région parallèle, vous pouvez utiliser la clause [NOWAIT](2-directives.md#241-for-construct) pour éviter le cloisonnement implicite à la fin de la `for` directive, comme suit :
 
 ```cpp
 #pragma omp parallel
@@ -71,9 +72,9 @@ S’il existe de nombreuses boucles indépendants dans une région parallèle, v
 }
 ```
 
-## <a name="a5-the-critical-directive"></a>A.5 la directive critical
+## <a name="a5-the-critical-directive"></a>A. 5 la directive critique
 
-L’exemple suivant inclut plusieurs [critique](2-directives.md#262-critical-construct) directives. L’exemple illustre un modèle de file d’attente dans laquelle une tâche est dépilée et a travaillé sur. Pour vous protéger contre le nombre de threads du retrait de la même tâche, l’opération de retrait doit être dans un `critical` section. Étant donné que les deux files d’attente dans cet exemple sont indépendantes, qu’elles sont protégées par `critical` directives avec des noms différents, *xaxis* et *yaxis*.
+L’exemple suivant comprend plusieurs directives [critiques](2-directives.md#262-critical-construct) . L’exemple illustre un modèle de mise en file d’attente dans lequel une tâche est déplacée dans la file d’attente et utilisée. Pour se protéger contre de nombreux threads qui défilent la même tâche, l’opération de défile d’attente doit être dans une `critical` section. Étant donné que les deux files d’attente de cet exemple sont indépendantes, elles sont protégées par des `critical` directives avec des noms différents, *XAXIS* et *YAxis*.
 
 ```cpp
 #pragma omp parallel shared(x, y) private(x_next, y_next)
@@ -87,9 +88,9 @@ L’exemple suivant inclut plusieurs [critique](2-directives.md#262-critical-con
 }
 ```
 
-## <a name="a6-the-lastprivate-clause"></a>A.6 la clause lastprivate
+## <a name="a6-the-lastprivate-clause"></a>A. 6 la clause lastprivate
 
-Exécution correcte parfois dépend de la valeur de la dernière itération d’une boucle assigne à une variable. Ces programmes doivent répertorier toutes les variables de ce type en tant qu’arguments à un [lastprivate](2-directives.md#2723-lastprivate) clause afin que les valeurs des variables sont les mêmes que lorsque la boucle est exécutée de manière séquentielle.
+Une exécution correcte dépend parfois de la valeur que la dernière itération d’une boucle affecte à une variable. Ces programmes doivent répertorier toutes les variables de ce type comme arguments d’une clause [lastprivate](2-directives.md#2723-lastprivate) afin que les valeurs des variables soient les mêmes que lorsque la boucle est exécutée de manière séquentielle.
 
 ```cpp
 #pragma omp parallel
@@ -101,11 +102,11 @@ Exécution correcte parfois dépend de la valeur de la dernière itération d’
 a[i]=b[i];
 ```
 
-Dans l’exemple précédent, la valeur de `i` à la fin de la région parallèle est égal à `n-1`, comme dans le cas séquentiel.
+Dans l’exemple précédent, la valeur de `i` à la fin de la région parallèle est égale à `n-1` , comme dans le cas séquentiel.
 
-## <a name="a7-the-reduction-clause"></a>A.7 la clause reduction
+## <a name="a7-the-reduction-clause"></a>A. 7 la clause Reduction
 
-L’exemple suivant montre le [réduction](2-directives.md#2726-reduction) clause :
+L’exemple suivant illustre la clause [Reduction](2-directives.md#2726-reduction) :
 
 ```cpp
 #pragma omp parallel for private(i) shared(x, y, n) \
@@ -116,9 +117,9 @@ L’exemple suivant montre le [réduction](2-directives.md#2726-reduction) claus
     }
 ```
 
-## <a name="a8-parallel-sections"></a>A.8 des sections Parallel
+## <a name="a8-parallel-sections"></a>A. 8 sections parallèles
 
-Dans l’exemple suivant (pour [section 2.4.2](2-directives.md#242-sections-construct)), fonctions *xaxis*, *yaxis*, et *zaxis* peuvent être exécutées simultanément. Le premier `section` directive est facultative.  Tous les `section` directives doivent apparaître dans l’étendue lexicale de la `parallel sections` construire.
+Dans l’exemple suivant (pour la [section 2.4.2](2-directives.md#242-sections-construct)), les fonctions *XAXIS*, *YAxis* et *Zaxis* peuvent être exécutées simultanément. La première `section` directive est facultative.  Toutes les `section` directives doivent apparaître dans l’étendue lexicale de la `parallel sections` construction.
 
 ```cpp
 #pragma omp parallel sections
@@ -132,9 +133,9 @@ Dans l’exemple suivant (pour [section 2.4.2](2-directives.md#242-sections-cons
 }
 ```
 
-## <a name="a9-single-directives"></a>A.9 de directives simples
+## <a name="a9-single-directives"></a>A. 9 directives uniques
 
-L’exemple suivant montre le [unique](2-directives.md#243-single-construct) directive. Dans l’exemple, un seul thread (généralement le premier thread qui rencontre le `single` directive) imprime le message de progression. L’utilisateur ne doit pas faire d’hypothèses comme pour le thread qui exécutera le `single` section. Tous les autres threads ignorera la `single` section et arrêter à la barrière à la fin de la `single` construire. Si les autres threads puissent poursuivre sans attendre que le thread s’exécutant le `single` section, un `nowait` clause peut être spécifiée sur la `single` directive.
+L’exemple suivant illustre la directive [unique](2-directives.md#243-single-construct) . Dans l’exemple, un seul thread (généralement le premier thread qui rencontre la `single` directive) imprime le message de progression. L’utilisateur ne doit pas faire d’hypothèses quant au thread qui exécutera la `single` section. Tous les autres threads ignoreront la `single` section et s’arrêteront au niveau du cloisonnement à la fin de la `single` construction. Si d’autres threads peuvent continuer sans attendre que le thread exécute la `single` section, une `nowait` clause peut être spécifiée dans la `single` directive.
 
 ```cpp
 #pragma omp parallel
@@ -150,9 +151,9 @@ L’exemple suivant montre le [unique](2-directives.md#243-single-construct) dir
 }
 ```
 
-## <a name="a10-sequential-ordering"></a>Ordre séquentiel A.10
+## <a name="a10-sequential-ordering"></a>A. 10 ordre séquentiel
 
-[Classés sections](2-directives.md#266-ordered-construct) sont utiles pour le classement de manière séquentielle la sortie de travail qui a effectué en parallèle. Le programme suivant imprime les index dans un ordre séquentiel :
+Les [sections ordonnées](2-directives.md#266-ordered-construct) sont utiles pour classer séquentiellement la sortie du travail effectué en parallèle. Le programme suivant imprime les index dans l’ordre séquentiel :
 
 ```cpp
 #pragma omp for ordered schedule(dynamic)
@@ -165,9 +166,9 @@ void work(int k)
 }
 ```
 
-## <a name="a11-a-fixed-number-of-threads"></a>A.11 A fixe le nombre de threads
+## <a name="a11-a-fixed-number-of-threads"></a>A. 11 un nombre fixe de threads
 
-Certains programmes s’appuient sur un nombre fixe, spécifiée à l’avance de threads pour exécuter correctement.  Étant donné que le paramètre par défaut pour l’ajustement dynamique du nombre de threads est défini par l’implémentation, ces programmes peuvent choisir de désactiver la fonctionnalité de threads dynamiques et de définir le nombre de threads explicitement pour conserver la portabilité. L’exemple suivant montre comment effectuer cette opération à l’aide de [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function), et [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
+Certains programmes s’appuient sur un nombre fixe de threads prédéfinis pour s’exécuter correctement.  Étant donné que le paramètre par défaut pour l’ajustement dynamique du nombre de threads est défini par l’implémentation, ces programmes peuvent choisir de désactiver la fonctionnalité threads dynamiques et de définir le nombre de threads de manière explicite pour assurer la portabilité. L’exemple suivant montre comment effectuer cette opération à l’aide de [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function), et [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
 
 ```cpp
 omp_set_dynamic(0);
@@ -182,13 +183,13 @@ omp_set_num_threads(16);
 }
 ```
 
-Dans cet exemple, le programme s’exécute correctement uniquement si elle est exécutée par 16 threads. Si l’implémentation n’est pas capable de prendre en charge 16 threads, le comportement de cet exemple est défini par l’implémentation.
+Dans cet exemple, le programme s’exécute correctement uniquement s’il est exécuté par 16 threads. Si l’implémentation ne peut pas prendre en charge 16 threads, le comportement de cet exemple est défini par l’implémentation.
 
-Le nombre de threads de l’exécution d’une région parallèle reste constante pendant une région parallèle, quel que soit les paramètre de threads dynamiques. Le mécanisme de threads dynamiques détermine le nombre de threads à utiliser au début de la région parallèle et les conserve à la constante pendant la durée de la région.
+Le nombre de threads qui exécutent une région parallèle reste constant pendant une région parallèle, quel que soit le paramètre threads dynamiques. Le mécanisme de threads dynamiques détermine le nombre de threads à utiliser au début de la région parallèle et la maintient constante pour la durée de la région.
 
-## <a name="a12-the-atomic-directive"></a>A.12 la directive atomic
+## <a name="a12-the-atomic-directive"></a>A. 12 la directive Atomic
 
-L’exemple suivant permet d’éviter des conditions de concurrence (mises à jour simultanées d’un élément de *x* par nombreux threads) à l’aide de la [atomique](2-directives.md#264-atomic-construct) directive :
+L’exemple suivant évite les conditions de concurrence critique (mises à jour simultanées d’un élément *x* par de nombreux threads) à l’aide de la directive [Atomic](2-directives.md#264-atomic-construct) :
 
 ```cpp
 #pragma omp parallel for shared(x, y, index, n)
@@ -200,13 +201,13 @@ L’exemple suivant permet d’éviter des conditions de concurrence (mises à j
     }
 ```
 
-L’avantage d’utiliser le `atomic` directive dans cet exemple est qu’elle autorise les mises à jour de deux éléments différents de x être exécutées en parallèle. Si un [critique](2-directives.md#262-critical-construct) directive est utilisée à la place, puis toutes les mises à jour aux éléments de *x* sont exécutées en série (bien que non dans des garanties ordre).
+L’avantage de l’utilisation de la `atomic` directive dans cet exemple est qu’elle permet d’effectuer des mises à jour de deux éléments différents de x en parallèle. Si une directive [critique](2-directives.md#262-critical-construct) est utilisée à la place, toutes les mises à jour des éléments de *x* sont exécutées en série (mais pas dans un ordre garanti).
 
-Le `atomic` directive s’applique uniquement à l’instruction C ou C++, il suit immédiatement.  Par conséquent, les éléments de *y* ne sont pas mis à jour atomiquement dans cet exemple.
+La `atomic` directive s’applique uniquement à l’instruction C ou C++ qui la suit immédiatement.  Par conséquent, les éléments de *y* ne sont pas mis à jour atomiquement dans cet exemple.
 
-## <a name="a13-a-flush-directive-with-a-list"></a>A.13 A la directive flush avec une liste
+## <a name="a13-a-flush-directive-with-a-list"></a>A. 13 une directive Flush avec une liste
 
-L’exemple suivant utilise la `flush` directive pour la synchronisation de point à point des objets spécifiques entre les paires de threads :
+L’exemple suivant utilise la `flush` directive pour la synchronisation point-à-point d’objets spécifiques entre des paires de threads :
 
 ```cpp
 int   sync[NUMBER_OF_THREADS];
@@ -240,9 +241,9 @@ float work[NUMBER_OF_THREADS];
 }
 ```
 
-## <a name="a14-a-flush-directive-without-a-list"></a>A.14 A la directive flush sans liste
+## <a name="a14-a-flush-directive-without-a-list"></a>A. 14 une directive Flush sans liste
 
-L’exemple suivant (pour [section 2.6.5](2-directives.md#265-flush-directive)) permet de distinguer les objets partagés affectés par un `flush` directive avec aucune liste à partir des objets partagés qui ne sont pas affectés :
+L’exemple suivant (pour la [section 2.6.5](2-directives.md#265-flush-directive)) distingue les objets partagés affectés par une `flush` directive sans liste des objets partagés qui ne sont pas affectés :
 
 ```cpp
 // omp_flush_without_list.c
@@ -297,9 +298,9 @@ int main()
 }
 ```
 
-## <a name="a15-the-number-of-threads-used"></a>A.15 le nombre de threads utilisés
+## <a name="a15-the-number-of-threads-used"></a>A. 15 le nombre de threads utilisés
 
-Prenons l’exemple suivant incorrecte (pour [section 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)) :
+Prenons l’exemple incorrect suivant (pour la [section 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)) :
 
 ```cpp
 np = omp_get_num_threads(); // misplaced
@@ -308,7 +309,7 @@ np = omp_get_num_threads(); // misplaced
         work(i);
 ```
 
-Le `omp_get_num_threads()` appeler retourne 1 dans la section de série du code, par conséquent, *np* sera toujours égal à 1 dans l’exemple précédent. Pour déterminer le nombre de threads qui seront déployées pour la région parallèle, l’appel doit être à l’intérieur de la région parallèle.
+L' `omp_get_num_threads()` appel retourne 1 dans la section série du code, de sorte que *NP* sera toujours égal à 1 dans l’exemple précédent. Pour déterminer le nombre de threads qui seront déployés pour la région parallèle, l’appel doit être à l’intérieur de la région parallèle.
 
 L’exemple suivant montre comment réécrire ce programme sans inclure une requête pour le nombre de threads :
 
@@ -320,9 +321,9 @@ L’exemple suivant montre comment réécrire ce programme sans inclure une requ
 }
 ```
 
-## <a name="a16-locks"></a>A.16 verrous
+## <a name="a16-locks"></a>Verrous A. 16
 
-Dans l’exemple suivant (pour [section 3.2](3-run-time-library-functions.md#32-lock-functions)), l’argument pour les fonctions de verrouillage doit avoir le type `omp_lock_t`, et qu’il n’est pas nécessaire de le videz.  Les fonctions de verrouillage entraînent les threads pour être inactif en attendant d’entrée à la première section critique, mais pour effectuer d’autres tâches en attendant d’entrée à la seconde.  Le `omp_set_lock` blocs de fonction, mais la `omp_test_lock` fonction ne, ce qui permet le travail en `skip()` à faire.
+Dans l’exemple suivant (pour la [section 3,2](3-run-time-library-functions.md#32-lock-functions)), l’argument des fonctions de verrouillage doit avoir le type `omp_lock_t` et il n’est pas nécessaire de le vider.  Les fonctions de verrouillage entraînent l’inactivité des threads lors de l’attente de l’entrée dans la première section critique, mais pour effectuer d’autres tâches en attendant une entrée pour la seconde.  La `omp_set_lock` fonction bloque, mais la `omp_test_lock` fonction ne permet pas d’effectuer le travail dans `skip()` .
 
 ```cpp
 // omp_using_locks.c
@@ -360,9 +361,9 @@ int main() {
 }
 ```
 
-## <a name="a17-nestable-locks"></a>Verrous pouvant être imbriqués A.17
+## <a name="a17-nestable-locks"></a>A. 17 verrous imbriqués
 
-L’exemple suivant (pour [section 3.2](3-run-time-library-functions.md#32-lock-functions)) montre comment un verrou pouvant être peut être utilisé pour synchroniser les mises à jour à la fois à un ensemble de la structure et de ses membres.
+L’exemple suivant (pour la [section 3,2](3-run-time-library-functions.md#32-lock-functions)) montre comment un verrou imbriqué peut être utilisé pour synchroniser les mises à jour à la fois dans une structure entière et dans l’un de ses membres.
 
 ```cpp
 #include <omp.h>
@@ -405,9 +406,9 @@ void f(pair *p)
 }
 ```
 
-## <a name="a18-nested-for-directives"></a>Nested A.18 directives for
+## <a name="a18-nested-for-directives"></a>A. 18 directives for imbriquées
 
-L’exemple suivant de `for` [imbrication de directives](2-directives.md#29-directive-nesting) est conforme, car intérieurs et extérieurs `for` directives lier à différentes régions parallèles :
+L’exemple suivant d' `for` [imbrication](2-directives.md#29-directive-nesting) de directives est conforme, car les directives Inner et Outer sont `for` liées à différentes régions parallèles :
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -425,7 +426,7 @@ L’exemple suivant de `for` [imbrication de directives](2-directives.md#29-dire
 }
 ```
 
-Une variante suivante de l’exemple précédent est également conforme :
+La variante suivante de l’exemple précédent est également conforme :
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -448,11 +449,11 @@ void work1(int i, int n)
 }
 ```
 
-## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 exemples illustrant l’imbrication incorrecte de partage de travail directives
+## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A. 19 exemples illustrant l’imbrication incorrecte de directives de partage de travail
 
-Les exemples de cette section illustrent la [imbrication de directives](2-directives.md#29-directive-nesting) règles.
+Les exemples de cette section illustrent les règles d' [imbrication de directives](2-directives.md#29-directive-nesting) .
 
-L’exemple suivant n’est pas conforme, car les intérieurs et extérieurs `for` directives sont imbriqués et les lier au même `parallel` directive :
+L’exemple suivant n’est pas conforme car les directives Inner et Outer `for` sont imbriquées et sont liées à la même `parallel` directive :
 
 ```cpp
 void wrong1(int n)
@@ -470,7 +471,7 @@ void wrong1(int n)
 }
 ```
 
-La version dynamiquement imbriquée suivante de l’exemple précédent est également non conforme :
+La version imbriquée dynamiquement suivante de l’exemple précédent est également non conforme :
 
 ```cpp
 void wrong2(int n)
@@ -493,7 +494,7 @@ void work1(int i, int n)
 }
 ```
 
-L’exemple suivant n’est pas conforme, car le `for` et `single` directives sont imbriqués, et ils sont liés à la même région parallèle :
+L’exemple suivant n’est pas conforme, car `for` les `single` directives et sont imbriquées, et elles sont liées à la même région parallèle :
 
 ```cpp
 void wrong3(int n)
@@ -510,7 +511,7 @@ void wrong3(int n)
 }
 ```
 
-L’exemple suivant n’est pas conforme, car un `barrier` directive à l’intérieur d’un `for` peut entraîner un blocage :
+L’exemple suivant n’est pas conforme, car une `barrier` directive à l’intérieur d’une `for` peut entraîner un interblocage :
 
 ```cpp
 void wrong4(int n)
@@ -528,7 +529,7 @@ void wrong4(int n)
 }
 ```
 
-L’exemple suivant n’est pas conforme, car le `barrier` entraîne un blocage dû au fait que qu’un seul thread à la fois peut entrer dans la section critique :
+L’exemple suivant n’est pas conforme car le `barrier` provoque un interblocage en raison du fait qu’un seul thread à la fois peut accéder à la section critique :
 
 ```cpp
 void wrong5()
@@ -545,7 +546,7 @@ void wrong5()
 }
 ```
 
-L’exemple suivant n’est pas conforme, car le `barrier` entraîne un blocage dû au fait que seul un thread exécute le `single` section :
+L’exemple suivant n’est pas conforme car le `barrier` provoque un interblocage en raison du fait qu’un seul thread exécute `single` la section :
 
 ```cpp
 void wrong6()
@@ -564,11 +565,11 @@ void wrong6()
 }
 ```
 
-## <a name="a20-bind-barrier-directives"></a>Directives A.20 liaison barrier
+## <a name="a20-bind-barrier-directives"></a>A. 20 directives de cloisonnement de liaison
 
-La liaison de directives règles d’appel pour un `barrier` directive à lier à la forme plus proche `parallel` directive. Pour plus d’informations sur la liaison de directives, consultez [section 2.8](2-directives.md#28-directive-binding).
+Les règles de liaison de directive appellent pour `barrier` qu’une directive soit liée à la directive englobante la plus proche `parallel` . Pour plus d’informations sur la liaison de directive, consultez la [section 2,8](2-directives.md#28-directive-binding).
 
-Dans l’exemple suivant, l’appel de *principal* à *sub2* est conforme, car le `barrier` (dans *sub3*) est lié à la région parallèle dans *sub2* . L’appel de *principal* à *sub1* est conforme, car le `barrier` lie à la région parallèle de la sous-routine *sub2*.  L’appel de *principal* à *sub3* est conforme, car le `barrier` ne lier à n’importe quelle région parallèle et est ignoré. En outre, le `barrier` synchronise uniquement l’équipe de threads dans la région parallèle englobante et pas tous les threads créés dans *sub1*.
+Dans l’exemple suivant, l’appel de *main* à *Sub2* est conforme, car `barrier` (dans *SUB3*) est lié à la région parallèle dans *Sub2*. L’appel de *main* à *Sub1* est conforme, car le `barrier` lie à la région parallèle dans la sous-routine *Sub2*.  L’appel de *main* à *SUB3* est conforme, car le `barrier` n’est pas lié à une région parallèle et est ignoré. En outre, le `barrier` synchronise uniquement l’équipe de threads dans la région parallèle englobante, et non pas tous les threads créés dans *Sub1*.
 
 ```cpp
 int main()
@@ -603,9 +604,9 @@ void sub3(int n)
 }
 ```
 
-## <a name="a21-scope-variables-with-the-private-clause"></a>A.21 des variables de portée avec la clause private
+## <a name="a21-scope-variables-with-the-private-clause"></a>A. 21 variables de portée avec la clause Private
 
-Les valeurs de `i` et `j` dans l’exemple suivant ne sont pas définies à la sortie à partir de la région parallèle :
+Les valeurs de `i` et `j` dans l’exemple suivant ne sont pas définies à la sortie de la région parallèle :
 
 ```cpp
 int i, j;
@@ -619,11 +620,11 @@ j = 2;
 printf_s("%d %d\n", i, j);
 ```
 
-Pour plus d’informations sur la `private` clause, consultez [section 2.7.2.1](2-directives.md#2721-private).
+Pour plus d’informations sur la `private` clause, consultez la [section 2.7.2.1](2-directives.md#2721-private).
 
-## <a name="a22-the-defaultnone-clause"></a>A.22 la clause default (None)
+## <a name="a22-the-defaultnone-clause"></a>A. 22 la clause par défaut (None)
 
-L’exemple suivant permet de distinguer les variables qui sont affectés par la `default(none)` clause à partir de variables qui ne sont pas :
+L’exemple suivant distingue les variables qui sont affectées par la `default(none)` clause des variables qui ne sont pas :
 
 ```cpp
 // openmp_using_clausedefault.c
@@ -658,13 +659,13 @@ void fun(int a) {
 }
 ```
 
-Pour plus d’informations sur la `default` clause, consultez [section 2.7.2.5](2-directives.md#2725-default).
+Pour plus d’informations sur la `default` clause, consultez la [section 2.7.2.5](2-directives.md#2725-default).
 
-## <a name="a23-examples-of-the-ordered-directive"></a>A.23 exemples de directive ordered
+## <a name="a23-examples-of-the-ordered-directive"></a>A. 23 exemples de la directive ordered
 
-Il est possible d’avoir de nombreuses sections ordonnées avec un `for` spécifié avec le `ordered` clause. Le premier exemple n’est pas conforme, car l’API spécifie la règle suivante :
+Il est possible d’avoir plusieurs sections ordonnées avec un `for` spécifié avec la `ordered` clause. Le premier exemple est non conforme, car l’API spécifie la règle suivante :
 
-« Une itération d’une boucle avec une `for` construction ne doit pas exécuter le même `ordered` directive plus qu’une seule fois et il ne doivent pas exécuter plusieurs `ordered` directive. » (Consultez [section 2.6.6](2-directives.md#266-ordered-construct).)
+« Une itération d’une boucle avec une `for` construction ne doit pas exécuter la même `ordered` directive plus d’une fois, et elle ne doit pas exécuter plus d’une `ordered` directive. » (Voir la [section 2.6.6](2-directives.md#266-ordered-construct).)
 
 Dans cet exemple non conforme, toutes les itérations exécutent deux sections ordonnées :
 
@@ -682,7 +683,7 @@ for (i=0; i<n; i++)
 }
 ```
 
-L’exemple conforme suivant un `for` avec plus d’une section classée :
+L’exemple conforme suivant illustre un `for` avec plusieurs sections ordonnées :
 
 ```cpp
 #pragma omp for ordered
@@ -706,9 +707,9 @@ for (i=0; i<n; i++)
 }
 ```
 
-## <a name="a24-example-of-the-private-clause"></a>A.24 exemple de la clause private
+## <a name="a24-example-of-the-private-clause"></a>A. 24 exemple de la clause Private
 
-Le [privé](2-directives.md#2721-private) clause d’une région parallèle n’est en vigueur pour l’étendue lexicale de la région, mais pas pour l’étendue dynamique de la région.  Par conséquent, dans l’exemple qui suit, toutes les utilisations de la variable *un* au sein de la `for` boucle dans la routine *f* fait référence à une copie privée de *un*, tandis que d’une utilisation dans routine *g* fait référence au modèle global *un*.
+La clause [Private](2-directives.md#2721-private) d’une région parallèle est uniquement en vigueur pour l’étendue lexicale de la région, et non pour l’étendue dynamique de la région.  Par conséquent, dans l’exemple qui suit, toute utilisation de la variable *a* dans `for` la boucle de la routine *f* fait référence à une copie privée d' *un*, alors qu’une utilisation dans la routine *g* fait référence au global *a*.
 
 ```cpp
 int a;
@@ -733,9 +734,9 @@ void g(int k, int n)
 }
 ```
 
-## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 exemples de la clause d’attribut de données copyprivate
+## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A. 25 exemples de la clause d’attribut de données copyprivate
 
-**Exemple 1 :** Le [copyprivate](2-directives.md#2728-copyprivate) clause peut être utilisée pour diffuser des valeurs acquis par un seul thread directement à toutes les instances des variables privées dans les autres threads.
+**Exemple 1 :** La clause [copyprivate](2-directives.md#2728-copyprivate) peut être utilisée pour diffuser les valeurs acquises par un seul thread directement à toutes les instances des variables privées dans les autres threads.
 
 ```cpp
 float x, y;
@@ -755,9 +756,9 @@ void init( )
 }
 ```
 
-Si la routine *init* est appelée à partir d’une région de série, son comportement n’est pas affecté par la présence des directives. Après l’appel à la *get_values* routine a été exécutée par un thread, aucun thread ne quitte la construction jusqu'à ce que les objets privés désignés par *un*, *b*, *x*, et *y* dans tous les threads ont deviennent définis avec les valeurs lues.
+Si routine *init* est appelé à partir d’une région de série, son comportement n’est pas affecté par la présence des directives. Une fois que l’appel à la routine *get_values* a été exécuté par un thread, aucun thread ne quitte la construction jusqu’à ce que les objets privés désignés par *a*, *b*, *x* et *y* dans tous les threads aient été définis avec les valeurs lues.
 
-**Exemple 2 :** Contrairement à l’exemple précédent, supposons que la lecture doit être effectuée par un thread particulier, par exemple le thread principal. Dans ce cas, le `copyprivate` clause ne peut pas être utilisée pour effectuer la diffusion directement, mais il peut être utilisé pour fournir l’accès à un objet partagé temporaire.
+**Exemple 2 :** Par opposition à l’exemple précédent, supposons que la lecture doit être effectuée par un thread particulier, par exemple le thread principal. Dans ce cas, la `copyprivate` clause ne peut pas être utilisée pour effectuer la diffusion directement, mais elle peut être utilisée pour fournir l’accès à un objet partagé temporaire.
 
 ```cpp
 float read_next( )
@@ -788,7 +789,7 @@ float read_next( )
 }
 ```
 
-**Exemple 3 :** Supposons que le nombre d’objets de verrou requis dans une région parallèle ne peut pas être déterminé facilement avant de l’indiquer. Le `copyprivate` clause peut être utilisée pour fournir l’accès aux objets de verrou partagé sont alloués dans cette région parallèle.
+**Exemple 3 :** Supposons que le nombre d’objets Lock requis dans une région parallèle ne puisse pas être facilement déterminé avant son entrée. La `copyprivate` clause peut être utilisée pour fournir l’accès aux objets Lock partagés qui sont alloués dans cette région parallèle.
 
 ```cpp
 #include <omp.h>
@@ -807,9 +808,9 @@ omp_lock_t *new_lock()
 }
 ```
 
-## <a name="a26-the-threadprivate-directive"></a>A.26 la directive threadprivate
+## <a name="a26-the-threadprivate-directive"></a>A. 26 la directive threadprivate
 
-Les exemples suivants montrent comment utiliser le [threadprivate](2-directives.md#271-threadprivate-directive) directive pour donner un compteur distinct à chaque thread.
+Les exemples suivants montrent comment utiliser la directive [threadprivate](2-directives.md#271-threadprivate-directive) pour attribuer à chaque thread un compteur séparé.
 
 ### <a name="example-1"></a>Exemple 1
 
@@ -836,12 +837,12 @@ int sub()
 }
 ```
 
-## <a name="a27-c99-variable-length-arrays"></a>Tableaux de longueur variable C99 A.27
+## <a name="a27-c99-variable-length-arrays"></a>A. 27 tableaux de longueur variable C99
 
-L’exemple suivant montre comment utiliser des tableaux de longueur Variable C99 (en) dans un [firstprivate](2-directives.md#2722-firstprivate) directive.
+L’exemple suivant montre comment utiliser des tableaux de longueur variable C99 (VLAs) dans une directive [firstprivate](2-directives.md#2722-firstprivate) .
 
 > [!NOTE]
-> Tableaux de longueur variable ne sont pas actuellement pris en charge dans Visual C++.
+> Les tableaux de longueur variable ne sont actuellement pas pris en charge dans Visual C++.
 
 ```cpp
 void f(int m, int C[m][m])
@@ -853,9 +854,9 @@ void f(int m, int C[m][m])
 }
 ```
 
-## <a name="a28-the-numthreads-clause"></a>A.28 la clause num_threads
+## <a name="a28-the-num_threads-clause"></a>A. 28 la clause num_threads
 
-L’exemple suivant montre le [num_threads](2-directives.md#23-parallel-construct) clause. La région parallèle est exécutée avec un maximum de 10 threads.
+L’exemple suivant illustre la clause [num_threads](2-directives.md#23-parallel-construct) . La région parallèle est exécutée avec un maximum de 10 threads.
 
 ```cpp
 #include <omp.h>
@@ -870,9 +871,9 @@ main()
 }
 ```
 
-## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A.29 les constructions de partage de travail à l’intérieur d’une construction critical
+## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A. 29 constructions de partage de travail à l’intérieur d’une construction critique
 
-L’exemple suivant montre à l’aide d’une construction de partage de travail à l’intérieur d’un `critical` construire. Cet exemple est conforme, car le partage de travail construire et `critical` construction ne liez pas à la même région parallèle.
+L’exemple suivant illustre l’utilisation d’une construction de partage de travail à l’intérieur d’une `critical` construction. Cet exemple est conforme, car la construction de partage de travail et la `critical` construction ne sont pas liées à la même région parallèle.
 
 ```cpp
 void f()
@@ -897,9 +898,9 @@ void f()
 }
 ```
 
-## <a name="a30-reprivatization"></a>Reprivatisation A.30
+## <a name="a30-reprivatization"></a>A. 30 reprivatisation
 
-L’exemple suivant montre la reprivatisation des variables. Variables privées peuvent être marqués `private` dans une directive imbriquée. Vous n’avez pas besoin de partager ces variables dans la région parallèle englobante.
+L’exemple suivant illustre la reprivatisation des variables. Les variables privées peuvent être marquées `private` à nouveau dans une directive imbriquée. Vous n’avez pas besoin de partager ces variables dans la région parallèle englobante.
 
 ```cpp
 int i, a;
@@ -915,9 +916,9 @@ int i, a;
 }
 ```
 
-## <a name="a31-thread-safe-lock-functions"></a>A.31 fonctions de verrouillage Thread-safe
+## <a name="a31-thread-safe-lock-functions"></a>A. 31 fonctions de verrouillage thread-safe
 
-Ce qui suit C++ exemple montre comment initialiser un tableau de verrous dans une région parallèle à l’aide de [fonctions omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
+L’exemple C++ suivant montre comment initialiser un tableau de verrous dans une région parallèle à l’aide de [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
 ```cpp
 // A_13_omp_init_lock.cpp

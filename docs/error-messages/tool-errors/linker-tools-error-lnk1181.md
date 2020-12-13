@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1181'
 title: Erreur des outils Éditeur de liens LNK1181
 ms.date: 08/22/2018
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: d2b28af52a2ca2263a7bad77c8c69242396ff2b4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bda05d15597d6ed82b12145d380bbe40483d7623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341683"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Erreur des outils Éditeur de liens LNK1181
 
 Impossible d’ouvrir le fichier d’entrée’nom_fichier'
 
-L’éditeur de liens n’a pas pu trouver `filename`, car il n’existe pas ou le chemin d’accès est introuvable.
+L’éditeur de liens n’a pas pu trouver `filename` , car il n’existe pas ou le chemin d’accès est introuvable.
 
 Voici quelques causes courantes de l’erreur LNK1181 :
 
-- `filename` est référencée en tant que dépendance supplémentaire sur la ligne de l’éditeur de liens, mais ce fichier n’existe pas.
+- `filename` est référencé comme dépendance supplémentaire sur la ligne de l’éditeur de liens, mais ce fichier n’existe pas.
 
-- Une instruction **/LIBPATH** qui spécifie le répertoire contenant `filename` est manquante.
+- Une instruction **/LIBPATH** spécifiant que le répertoire contenant `filename` est manquant.
 
 Pour résoudre les problèmes ci-dessus, assurez-vous que tous les fichiers référencés sur la ligne de l’éditeur de liens sont présents sur le système.  Vérifiez également qu’il existe une instruction **/LIBPATH** pour chaque répertoire contenant un fichier dépendant de l’éditeur de liens.
 
@@ -35,4 +36,4 @@ La compilation avec l’option [/p (Prétraiter dans un fichier)](../../build/re
 
 ## <a name="see-also"></a>Voir aussi
 
-[/LIBPATH (Autre chemin de bibliothèque)](../../build/reference/libpath-additional-libpath.md)
+[/LIBPATH (autre chemin d’accès)](../../build/reference/libpath-additional-libpath.md)

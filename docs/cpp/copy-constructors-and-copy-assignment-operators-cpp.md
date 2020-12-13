@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : constructeurs de copie et opérateurs d’assignation de copie (C++)'
 title: Constructeurs de copie et opérateurs d'assignation de copie (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-ms.openlocfilehash: faf1a94e27f5a0a435d0a906661444f67709628e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 881470c92e0261dc5c4cd63876d7cb59fcc68fef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344573"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructeurs de copie et opérateurs d'assignation de copie (C++)
 
@@ -70,7 +71,7 @@ int main()
 ```
 
 > [!NOTE]
-> Définissez le type de la classe d’argument du constructeur de copie **`const`** <em>class-name</em> <strong>&</strong> chaque fois que possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également la copie à partir d' **`const`** objets.
+> Définissez le type de la classe d’argument du constructeur de copie **`const`** <em></em> <strong>&</strong> chaque fois que possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également la copie à partir d' **`const`** objets.
 
 ## <a name="compiler-generated-copy-constructors"></a>Constructeurs de copie générés par le compilateur
 

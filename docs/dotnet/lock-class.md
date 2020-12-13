@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Lock'
 title: lock, classe
 ms.date: 01/16/2019
 ms.topic: reference
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d00614e814d171664a75ec61b9227942806b8cca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344495"
 ---
 # <a name="lock-class"></a>lock, classe
 
@@ -63,7 +64,7 @@ En interne, la classe Lock utilise <xref:System.Threading.Monitor> pour synchron
 |[lock::operator==](#operator-equality)|Opérateur d’égalité.|
 |[Lock :: Operator ! =](#operator-inequality)|Opérateur d’inégalité.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Fichier d’en-tête** \<msclr\lock.h>
 
@@ -103,7 +104,7 @@ Valeur du délai d’attente en millisecondes ou <xref:System.TimeSpan> .
 
 Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les trois premières formes du constructeur essaient d’acquérir un verrou dans le délai d' `_object` attente spécifié (ou <xref:System.Threading.Timeout.Infinite> si aucun n’est spécifié).
 
@@ -211,7 +212,7 @@ Détruit un `lock` objet.
 ~lock();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le destructeur appelle [Lock :: Release](#release).
 
@@ -328,7 +329,7 @@ Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSp
 
 Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si une valeur de délai d’attente n’est pas fournie, le délai d’attente par défaut est <xref:System.Threading.Timeout.Infinite> .
 
@@ -432,7 +433,7 @@ Indique si un verrou est maintenu.
 bool is_locked();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 **`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
@@ -535,11 +536,11 @@ Opérateur à utiliser `lock` dans une expression conditionnelle.
 operator bool();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 **`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cet opérateur convertit en fait `_detail_class::_safe_bool` la valeur qui est plus sûre que **`bool`** parce qu’il ne peut pas être converti en type intégral.
 
@@ -642,7 +643,7 @@ Libère un verrou.
 void release();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si aucun verrou n’est maintenu, `release` ne fait rien.
 
@@ -756,11 +757,11 @@ bool try_acquire(
 *_timeout*<br/>
 Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSpan> .
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 **`true`** Si le verrou a été acquis ; **`false`** sinon,.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si un verrou a déjà été acquis, cette fonction ne fait rien.
 
@@ -869,7 +870,7 @@ template<class T> bool operator==(
 *t*<br/>
 Objet dont l'égalité doit être comparée.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Retourne **`true`** si `t` est identique à l’objet du verrou ; **`false`** sinon,.
 
@@ -912,7 +913,7 @@ template<class T> bool operator!=(
 *t*<br/>
 Objet à comparer pour déterminer s’il est inégal.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Retourne **`true`** si `t` diffère de l’objet du verrou ; **`false`** sinon,.
 

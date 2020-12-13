@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l'
 title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342151"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -144,7 +145,7 @@ Pour plus d’informations, consultez [Spécifications de format](../../c-runtim
 
 * Si *Count* est égal à ou dépasse *sizeOfBuffer* mais que le nombre de caractères de données est inférieur à *sizeOfBuffer*, toutes les données sont écrites (avec une valeur null de fin) et le nombre de caractères est retourné.
 
-* Si *le nombre et* le nombre de caractères des données sont égaux ou supérieurs à *sizeOfBuffer*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le gestionnaire de paramètres non valides, ces fonctions définissent la *mémoire tampon* sur une chaîne vide, attribuent à **errno** la valeur **ERANGE**et retournent-1.
+* Si *le nombre et* le nombre de caractères des données sont égaux ou supérieurs à *sizeOfBuffer*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le gestionnaire de paramètres non valides, ces fonctions définissent la *mémoire tampon* sur une chaîne vide, attribuent à **errno** la valeur **ERANGE** et retournent-1.
 
 * Si la *mémoire tampon* ou le *format* est un pointeur **null** , ou si *Count* est inférieur ou égal à zéro, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1.
 
@@ -157,7 +158,7 @@ Pour plus d’informations, consultez [Spécifications de format](../../c-runtim
 |*nombre* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* trop petit (et *count* ! = **_TRUNCATE**)|-1 (et la *mémoire tampon* est définie sur une chaîne vide)|**ERANGE**|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **vsnprintf_s** est identique à **_vsnprintf_s**. **vsnprintf_s** est inclus pour la conformité à la norme ANSI. **_vnsprintf** est conservé pour la compatibilité descendante.
 
@@ -182,7 +183,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
 |**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

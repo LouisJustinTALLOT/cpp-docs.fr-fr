@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ConvertBSTRToString'
 title: ConvertBSTRToString
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72d6033003f186f358d9b4143498df65858ee354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344612"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Convertit une valeur `BSTR` en `char *`.
 
@@ -60,11 +61,11 @@ BSTR text: Test
 char * text: Test
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<comutil. h >
+**En-tête :**\<comutil.h>
 
 **Lib :** comsuppw. lib ou comsuppwd. lib (consultez [/Zc : Wchar_t (Wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)
 

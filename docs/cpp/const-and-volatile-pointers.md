@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les pointeurs const et volatile'
 title: Pointeurs const et volatile
 ms.date: 11/19/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: a8fd25777d1169ba281fbee173c1c8f5673c8b56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142c6b83c242af969c5f6e1494a56e9598cf537d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344677"
 ---
 # <a name="const-and-volatile-pointers"></a>Pointeurs const et volatile
 
@@ -43,7 +44,7 @@ const char cch = 'A';
 char ch = 'B';
 ```
 
-Étant donné les déclarations précédentes de deux objets ( `cch` , de type **const char**et `ch` , de type **Char)**, les déclarations/initialisations suivantes sont valides :
+Étant donné les déclarations précédentes de deux objets ( `cch` , de type **const char** et `ch` , de type **Char)**, les déclarations/initialisations suivantes sont valides :
 
 ```cpp
 const char *pch1 = &cch;

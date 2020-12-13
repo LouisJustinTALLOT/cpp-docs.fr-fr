@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _setmbcp'
 title: _setmbcp
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: fe69360de2e6e0ebdea8c700ab398d56e669f022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342216"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -50,10 +51,10 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Paramètres
 
-*courante*<br/>
+*codepage*<br/>
 Nouveau paramètre de page de codes pour les routines multioctets indépendantes des paramètres régionaux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si la page de codes est correctement définie. Si une valeur de page de codes non valide est fournie pour *codepage*, retourne-1 et le paramètre de la page de codes est inchangé. Définit **errno** sur **EINVAL** si un échec d’allocation de mémoire se produit.
 

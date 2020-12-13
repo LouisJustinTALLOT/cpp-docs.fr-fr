@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vsscanf_s, vswscanf_s'
 title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3be22d5ea1399c426159bcd006e89585128cee55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342099"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -61,7 +62,7 @@ Chaîne de contrôle de format. Pour plus d’informations, consultez [Champs de
 *arglist*<br/>
 Liste d’arguments de variable.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
@@ -71,7 +72,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **vsscanf_s** lit les données de la *mémoire tampon* dans les emplacements fournis par chaque argument dans la liste d’arguments *arglist* . Les arguments de la liste d’arguments spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de champs de type **c**, **c**, **s**, **s**ou String-Control qui sont placés dans **[]**. La taille de mémoire tampon des caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
+La fonction **vsscanf_s** lit les données de la *mémoire tampon* dans les emplacements fournis par chaque argument dans la liste d’arguments *arglist* . Les arguments de la liste d’arguments spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de champs de type **c**, **c**, **s**, **s** ou String-Control qui sont placés dans **[]**. La taille de mémoire tampon des caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
 
 La taille de la mémoire tampon inclut le caractère Null de fin. Un champ de spécification de largeur peut être utilisé pour faire en sorte que le jeton lu tiendra dans la mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.
 

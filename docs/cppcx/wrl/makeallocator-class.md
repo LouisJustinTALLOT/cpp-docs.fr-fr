@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe MakeAllocator'
 title: MakeAllocator (classe)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: 19d3ab294df8adc059424c97e5733ae9ebb75c9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c4e550dec37096a5ff6a41eccd4eb41968721a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344521"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (classe)
 
@@ -58,7 +59,7 @@ Alloue de la mémoire pour une classe activable, avec ou sans prise en charge de
 
 Substituez la `MakeAllocator` classe pour implémenter un modèle d’allocation de mémoire défini par l’utilisateur.
 
-`MakeAllocator`est généralement utilisé pour empêcher les fuites de mémoire si un objet lève une exception pendant la construction.
+`MakeAllocator` est généralement utilisé pour empêcher les fuites de mémoire si un objet lève une exception pendant la construction.
 
 ## <a name="members"></a>Membres
 
@@ -86,7 +87,7 @@ Nom                                 | Description
 
 **Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="makeallocatorallocate"></a><a name="allocate"></a>MakeAllocator :: Allocate
+## <a name="makeallocatorallocate"></a><a name="allocate"></a> MakeAllocator :: Allocate
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -94,7 +95,7 @@ Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé
 __forceinline void* Allocate();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers la mémoire allouée ; Sinon, **`nullptr`** .
 
@@ -106,7 +107,7 @@ La taille de la mémoire allouée correspond à la taille du type spécifié par
 
 Un développeur doit remplacer uniquement la `Allocate()` méthode pour implémenter un modèle d’allocation de mémoire différent.
 
-## <a name="makeallocatordetach"></a><a name="detach"></a>MakeAllocator ::D Etach
+## <a name="makeallocatordetach"></a><a name="detach"></a> MakeAllocator ::D Etach
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -120,7 +121,7 @@ Dissocie la mémoire allouée par la méthode [allocate](#allocate) à partir de
 
 Si vous appelez `Detach()` , vous êtes responsable de la suppression de la mémoire fournie par la `Allocate` méthode.
 
-## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>MakeAllocator :: MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a> MakeAllocator :: MakeAllocator
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -132,7 +133,7 @@ MakeAllocator();
 
 Initialise une nouvelle instance de la classe `MakeAllocator`.
 
-## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>MakeAllocator :: ~ MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a> MakeAllocator :: ~ MakeAllocator
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

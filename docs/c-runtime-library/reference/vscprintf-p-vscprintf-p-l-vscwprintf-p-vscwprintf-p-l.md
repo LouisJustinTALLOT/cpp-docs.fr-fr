@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l'
 title: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 102ec617e42061e673cd14aea9c96916c907cf58
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fea3af0efc6940adcde6c5ab4ff2f8ae49c79cf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342177"
 ---
 # <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -89,15 +90,15 @@ Pointeur vers la liste d'arguments.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_vscprintf_p** retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle pointe la liste d’arguments a été imprimée ou envoyée à un fichier ou une mémoire tampon à l’aide des codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf_p** effectue la même fonction pour les caractères larges.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions diffèrent uniquement de **_vscprintf** et **_vscwprintf** dans le sens où elles prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions diffèrent de **_vscprintf** et **_vscwprintf** uniquement dans la mesure où elles prennent en charge la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
@@ -113,7 +114,7 @@ Si *format* est un pointeur null, le gestionnaire de paramètres non valides est
 |**_vsctprintf_p**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
 |**_vsctprintf_p_l**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

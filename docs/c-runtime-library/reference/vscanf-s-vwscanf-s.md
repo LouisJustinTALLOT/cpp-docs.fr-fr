@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vscanf_s, vwscanf_s'
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bd44b3e89ec1358482ed6161907fd30f13e062d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342203"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -56,7 +57,7 @@ Format de la chaîne de contrôle.
 *arglist*<br/>
 Liste d’arguments de variable.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n'inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est rencontré lors de la première tentative de lecture d’un caractère. Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **vscanf_s** et **vwscanf_s** retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
@@ -68,7 +69,7 @@ La fonction **vscanf_s** lit les données à partir du flux d’entrée standard
 
 **vwscanf_s** est une version à caractères larges de **vscanf_s**; l’argument de *format* de **vwscanf_s** est une chaîne de caractères larges. **vwscanf_s** et **vscanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **vscanf_s** ne prend pas en charge l’entrée d’un flux Unicode.
 
-Contrairement à **vscanf** et **vwscanf**, **vscanf_s** et **vwscanf_s** requièrent que la taille de la mémoire tampon soit spécifiée pour tous les paramètres d’entrée de type **c**, **c**, **s**, **s**ou jeux de contrôle de chaîne placés dans **[]**. La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire immédiatement après le pointeur vers la mémoire tampon ou la variable. La taille de la mémoire tampon en caractères pour une **`wchar_t`** chaîne n’est pas la même que la taille en octets.
+Contrairement à **vscanf** et **vwscanf**, **vscanf_s** et **vwscanf_s** requièrent que la taille de la mémoire tampon soit spécifiée pour tous les paramètres d’entrée de type **c**, **c**, **s**, **s** ou jeux de contrôle de chaîne placés dans **[]**. La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire immédiatement après le pointeur vers la mémoire tampon ou la variable. La taille de la mémoire tampon en caractères pour une **`wchar_t`** chaîne n’est pas la même que la taille en octets.
 
 La taille de la mémoire tampon inclut le caractère Null de fin. Vous pouvez utiliser un champ de spécification de largeur pour être certain que le jeton lu tiendra dans la mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.
 
@@ -92,7 +93,7 @@ Pour plus d’informations, consultez [Champs de spécification de format : fon
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

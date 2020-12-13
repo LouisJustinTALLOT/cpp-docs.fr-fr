@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : clauses OpenMP'
 title: Clauses OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3bdcb496238b2f8acef85819c43348c095293287
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342411"
 ---
 # <a name="openmp-clauses"></a>Clauses OpenMP
 
@@ -81,11 +82,11 @@ copyin(var)
 *var*<br/>
 `threadprivate`Variable qui sera initialisée avec la valeur de la variable dans le thread principal, telle qu’elle existe avant la construction parallèle.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `copyin` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
@@ -108,7 +109,7 @@ copyprivate(var)
 *var*<br/>
 Une ou plusieurs variables à partager. Si plusieurs variables sont spécifiées, séparez les noms des variables par une virgule.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `copyprivate` s’applique à la directive [unique](openmp-directives.md#single) .
 
@@ -188,13 +189,13 @@ Spécifie le comportement des variables non délimitées dans une région parall
 default(shared | none)
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `shared`, qui est en vigueur si la `default` clause n’est pas spécifiée, signifie que toute variable dans une région parallèle sera traitée comme si elle était spécifiée avec la clause [Shared](#shared-openmp) . `none` signifie que toutes les variables utilisées dans une région parallèle qui ne sont pas délimitées par la clause [Private](#private-openmp), [Shared](#shared-openmp), [Reduction](#reduction), [firstprivate](#firstprivate)ou [lastprivate](#lastprivate) entraînent une erreur du compilateur.
 
 `default` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
@@ -217,12 +218,12 @@ firstprivate(var)
 *var*<br/>
 Variable qui doit avoir des instances dans chaque thread et qui sera initialisée avec la valeur de la variable, car elle existe avant la construction parallèle. Si plusieurs variables sont spécifiées, séparez les noms des variables par une virgule.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `firstprivate` s’applique aux directives suivantes :
 
 - [for](openmp-directives.md#for-openmp)
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
@@ -245,11 +246,11 @@ if(expression)
 *expression*<br/>
 Expression intégrale qui, si elle prend la valeur true (différente de zéro), provoque l’exécution en parallèle du code dans la région parallèle. Si l’expression prend la valeur false (zéro), la région parallèle est exécutée en série (par un seul thread).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `if` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
@@ -304,7 +305,7 @@ lastprivate(var)
 *var*<br/>
 Variable qui est définie comme étant égale à la version privée de quel thread exécute la dernière itération (construction de boucle) ou dernière section (#pragma sections).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `lastprivate` s’applique aux directives suivantes :
 
@@ -315,7 +316,7 @@ Pour plus d’informations, consultez [2.7.2.3 lastprivate](../2-directives.md#2
 
 ### <a name="example"></a>Exemple
 
-Pour [schedule](#schedule) obtenir un exemple d’utilisation de la `lastprivate` clause, consultez Schedule.
+Pour [](#schedule) obtenir un exemple d’utilisation de la `lastprivate` clause, consultez Schedule.
 
 ## <a name="nowait"></a><a name="nowait"></a> NOWAIT
 
@@ -325,7 +326,7 @@ Remplace la barrière implicite dans une directive.
 nowait
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `nowait` s’applique aux directives suivantes :
 
@@ -395,13 +396,13 @@ num_threads(num)
 *num*<br/>
 Nombre de threads
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `num_threads` clause a les mêmes fonctionnalités que la fonction [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) .
 
 `num_threads` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
@@ -409,7 +410,7 @@ Pour plus d’informations, consultez [2,3 construction parallèle](../2-directi
 
 ### <a name="example"></a>Exemple
 
-Pour [parallel](openmp-directives.md#parallel) obtenir un exemple d’utilisation de la `num_threads` clause, consultez Parallel.
+Pour [](openmp-directives.md#parallel) obtenir un exemple d’utilisation de la `num_threads` clause, consultez Parallel.
 
 ## <a name="ordered"></a><a name="ordered-openmp-clauses"></a> substitué
 
@@ -419,7 +420,7 @@ Obligatoire sur une instruction Parallel [for](openmp-directives.md#for-openmp) 
 ordered
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `ordered` s’applique à la directive [for](openmp-directives.md#for-openmp) .
 
@@ -442,12 +443,12 @@ private(var)
 *var*<br/>
 Variable qui doit avoir des instances dans chaque thread.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `private` s’applique aux directives suivantes :
 
 - [for](openmp-directives.md#for-openmp)
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
@@ -647,11 +648,11 @@ Opérateur pour l’opération à effectuer sur les variables *var* à la fin de
 *var*<br/>
 Une ou plusieurs variables sur lesquelles la réduction scalaire doit être effectuée. Si plusieurs variables sont spécifiées, séparez les noms des variables par une virgule.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `reduction` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
@@ -786,7 +787,7 @@ Type de planification,, `dynamic` `guided` `runtime` ou `static` .
 *size*<br/>
 Facultatif Spécifie la taille des itérations. la *taille* doit être un entier. Non valide lorsque le *type* est `runtime` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [2.4.1 for Construct](../2-directives.md#241-for-construct).
 
@@ -917,13 +918,13 @@ shared(var)
 *var*<br/>
 Une ou plusieurs variables à partager. Si plusieurs variables sont spécifiées, séparez les noms des variables par une virgule.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Une autre façon de partager des variables entre les threads est d’utiliser la clause [copyprivate](#copyprivate) .
 
 `shared` s’applique aux directives suivantes :
 
-- [égal](openmp-directives.md#parallel)
+- [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l'
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 4/2/2020
 api_name:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 509afe42e4fbf4cec9f0a7a077f0bf4ce0a1423e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344768"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -143,11 +144,11 @@ Nombre de caractères à ajouter.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur désignant la chaîne de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strncat** ajoute, au plus, les *premiers caractères de* *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère NULL apparaît dans *strSource* avant que le *nombre* de caractères soit ajouté, **strncat** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisée à la place de *Count*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
@@ -183,7 +184,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_strncat.c
@@ -246,4 +247,4 @@ Notez que **BadAppend** a provoqué un dépassement de mémoire tampon.
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

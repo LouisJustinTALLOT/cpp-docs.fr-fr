@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CReversalTransition,'
 title: CReversalTransition, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: 73d12fb6bbaefcfac1437248ebe11f3a5c24c45b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1d16562751e93ccf6df7ca3f70dac08bda8423d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343005"
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition, classe
 
@@ -35,23 +36,23 @@ class CReversalTransition : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Construit un objet de transition d’inversion et initialise sa durée.|
+|[CReversalTransition, :: CReversalTransition,](#creversaltransition)|Construit un objet de transition inverse et initialise sa durée.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CReversalTransition::Créer](#create)|Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé. (Overrides [CBaseTransition::Créer](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CReversalTransition, :: Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition :: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CReversalTransition::m_duration](#m_duration)|La durée de la transition.|
+|[CReversalTransition, :: m_duration](#m_duration)|Durée de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Une transition d’inversion change en douceur de direction sur une durée donnée. La valeur finale sera la même que la valeur initiale et la vitesse finale sera la négative de la vitesse initiale. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les répartir à l’aide de l’opérateur nouveau. L’objet IUIAnimationTransition COM encapsulé est créé par CAnimationController::AnimateGroup, jusque-là c’est NULL. Changer les variables des membres après la création de cet objet COM n’a aucun effet.
+Une transition de contrepassation change en douceur le sens sur une durée donnée. La valeur finale sera la même que la valeur initiale et la vélocité finale sera la valeur négative de la rapidité initiale. Étant donné que toutes les transitions sont automatiquement désactivées, il est recommandé de les allouer à l’aide de operator new. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController :: AnimateGroup, jusqu’à ce qu’il soit NULL. La modification des variables membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,15 +60,15 @@ Une transition d’inversion change en douceur de direction sur une durée donn�
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+[CReversalTransition,](../../mfc/reference/creversaltransition-class.md)
 
 ## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-## <a name="creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Créer
+## <a name="creversaltransitioncreate"></a><a name="create"></a> CReversalTransition, :: Create
 
-Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé.
+Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
 
 ```
 virtual BOOL Create(
@@ -77,16 +78,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*pLibraire*<br/>
-Un pointeur vers la bibliothèque de transition, qui est responsable de la création de transitions standard.
+*pLibrary*<br/>
+Pointeur vers la bibliothèque de transitions, qui est responsable de la création de transitions standard.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la transition est créée avec succès; autrement FALSE.
+TRUE si la transition est créée avec succès ; Sinon, FALSe.
 
-## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition
+## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a> CReversalTransition, :: CReversalTransition,
 
-Construit un objet de transition d’inversion et initialise sa durée.
+Construit un objet de transition inverse et initialise sa durée.
 
 ```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
@@ -94,12 +95,12 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Paramètres
 
-*Durée*<br/>
-La durée de la transition.
+*duration*<br/>
+Durée de la transition.
 
-## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a>CReversalTransition::m_duration
+## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a> CReversalTransition, :: m_duration
 
-La durée de la transition.
+Durée de la transition.
 
 ```
 UI_ANIMATION_SECONDS m_duration;

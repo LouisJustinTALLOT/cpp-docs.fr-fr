@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wcsicoll'
 title: wcsicoll
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - wcsicoll function
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
-ms.openlocfilehash: 37a2ded6e6c28bb850dbdb225a8c64fc613f86d5
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 22f7d30c1d1fdf37bfd54f12ec97d4b04f3ca212
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342060"
 ---
 # <a name="wcsicoll"></a>wcsicoll
 

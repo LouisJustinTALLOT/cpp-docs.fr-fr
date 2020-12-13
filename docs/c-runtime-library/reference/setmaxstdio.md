@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _setmaxstdio'
 title: _setmaxstdio
 ms.date: 05/21/2019
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef34c3cf69f9664e5af593e4f0fa1e1046faff9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342229"
 ---
 # <a name="_setmaxstdio"></a>_setmaxstdio
 
@@ -52,7 +53,7 @@ int _setmaxstdio(
 *new_max*<br/>
 Nouveau nombre maximal de fichiers ouverts simultanément au niveau des E/S de flux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne *new_max* en cas de réussite ; sinon -1.
 
@@ -71,13 +72,13 @@ Sachant que les fonctions du niveau E/S de flux, comme **fopen** s’appuient su
 > [!NOTE]
 > Il est possible que cette limite supérieure soit au-delà de ce qu’une plateforme et une configuration Win32 particulières peuvent prendre en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_setmaxstdio**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

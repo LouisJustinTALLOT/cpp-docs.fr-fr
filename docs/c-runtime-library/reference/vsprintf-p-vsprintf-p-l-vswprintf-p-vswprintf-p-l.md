@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l'
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 02277b9f69aaecfe378bf9e6fd4f004feb741c79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342138"
 ---
 # <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -87,7 +88,7 @@ int _vswprintf_p_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour la sortie.
 
 *sizeInBytes*<br/>
@@ -105,7 +106,7 @@ Pointeur vers la liste d'arguments.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_vsprintf_p** et **_vswprintf_p** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit.
 
@@ -113,7 +114,7 @@ Paramètres régionaux à utiliser.
 
 Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans la mémoire vers laquelle pointe la *mémoire tampon*.
 
-Ces fonctions diffèrent uniquement de **vsprintf_s** et **vswprintf_s** , car elles prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions diffèrent du **vsprintf_s** et **vswprintf_s** uniquement dans la mesure où elles prennent en charge les paramètres positionnels. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
@@ -126,18 +127,18 @@ Si les paramètres de mise en *mémoire tampon* ou de *format* sont des pointeur
 |**_vstprintf_p**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
 |**_vstprintf_p_l**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
-|**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
+|**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h> ou \<wchar.h> , et \<stdarg.h>|\<varargs.h>*|
 
-\*Nécessaire pour la compatibilité avec UNIX V.
+\* Requis pour la compatibilité UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt__vsprintf_p.c
@@ -193,5 +194,5 @@ This is a string
 [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
