@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ML d’erreur non irrécupérable A2008'
 title: Erreur ML non fatale A2008
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-ms.openlocfilehash: 79448f9358ffd422b8b25a69ac2b83693e58560e
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 4482304de3238954a01a0242bd84712012d691f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129296"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Erreur ML non fatale A2008
 
@@ -28,7 +29,7 @@ L’une des conditions suivantes peut se produire :
 
 - Une instruction qui n’était pas disponible avec le processeur ou la sélection de coprocesseur en cours a été utilisée.
 
-- Un opérateur d’exécution de comparaison (tel que `==`) a été utilisé dans une instruction d’assembly conditionnel au lieu d’un opérateur relationnel (tel que [EQ](operator-eq.md)).
+- Un opérateur d’exécution de comparaison (tel que `==` ) a été utilisé dans une instruction d’assembly conditionnel au lieu d’un opérateur relationnel (tel que [EQ](operator-eq.md)).
 
 - Une instruction ou une directive a donné un nombre insuffisant d’opérandes.
 
@@ -36,4 +37,4 @@ L’une des conditions suivantes peut se produire :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Messages d’erreur ML](ml-error-messages.md)
+[Messages d'erreur ML](ml-error-messages.md)

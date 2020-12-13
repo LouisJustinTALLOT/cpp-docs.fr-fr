@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fgetpos'
 title: fgetpos
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72ee6e683d568de1650d5a046050230fa86dee24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151760"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -52,14 +53,14 @@ int fgetpos(
 *train*<br/>
 Flux cible.
 
-*imprim*<br/>
+*pos*<br/>
 Stockage de l’indicateur de position.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur l’une des constantes manifestes suivantes (définies dans stdio. H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que la valeur de *flux* ou la valeur de *pos* n’est pas valide, par exemple si est un pointeur null. Si *Stream* ou *pos* est un pointeur **null** , la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **fgetpos** obtient la valeur actuelle de l’indicateur de position de fichier de l’argument de *flux* et la stocke dans l’objet désigné par *pos*. La fonction **fsetpos** peut utiliser ultérieurement les informations stockées dans *pos* pour réinitialiser le pointeur de l’argument de *flux* à sa position au moment de l’appel de **fgetpos** . La valeur *pos* est stockée dans un format interne et est destinée à être utilisée uniquement par **fgetpos** et **fsetpos**.
 
@@ -67,13 +68,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fgetpos.c

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fgetchar, _fgetwchar'
 title: _fgetchar, _fgetwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316948485e0ef024bc726da7f333fd4ee329c7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151812"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,7 +59,7 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-** \_ fgetchar** retourne le caractère lu en tant que **`int`** ou retourne `EOF` pour indiquer une erreur ou la fin du fichier. ** \_ fgetwchar** retourne, en tant que [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu ou retourne `WEOF` pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez feof **ou un** **feof** pour faire la distinction entre une erreur et une condition de fin de fichier.
+**\_ fgetchar** retourne le caractère lu en tant que **`int`** ou retourne `EOF` pour indiquer une erreur ou la fin du fichier. **\_ fgetwchar** retourne, en tant que [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu ou retourne `WEOF` pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez feof **ou un**  pour faire la distinction entre une erreur et une condition de fin de fichier.
 
 ## <a name="remarks"></a>Notes
 
@@ -83,7 +84,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout**et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout** et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

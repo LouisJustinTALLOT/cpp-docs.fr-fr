@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ML d’erreur irrécupérable A1008'
 title: Erreur ML irrécupérable A1008
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A1008
 ms.assetid: fe592f9d-c37b-4cd8-a51d-e3c15ddcab83
-ms.openlocfilehash: 3535bb07768678c5c2ab9eabacf61dfe2b791274
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: c25f6733d20fb30fcdcf5ea27d5366669ecbed75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129530"
 ---
 # <a name="ml-fatal-error-a1008"></a>Erreur ML irrécupérable A1008
 
@@ -24,4 +25,4 @@ L’une des causes de cette erreur est l’omission du point avant [. RÉPÉTez]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Messages d’erreur ML](ml-error-messages.md)
+[Messages d'erreur ML](ml-error-messages.md)

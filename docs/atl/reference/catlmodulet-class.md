@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlModuleT'
 title: CAtlModuleT, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: b07e60265570e66337a2d13007e9ad57c6f369e4
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 841d4a41b7df818d9e966af1050fd9e376d89447
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147223"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT, classe
 
@@ -35,7 +36,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Classe dérivée de `CAtlModuleT`.
+Classe dérivée de `CAtlModuleT` .
 
 ## <a name="members"></a>Membres
 
@@ -60,7 +61,7 @@ Classe dérivée de `CAtlModuleT`.
 
 `CAtlModuleT`, dérivé de [CAtlModule](../../atl/reference/catlmodule-class.md), implémente un module exécutable (exe) ou un module ATL de service (exe). Un module exécutable est un serveur local, hors processus, alors qu’un module de service est une application Windows qui s’exécute en arrière-plan au démarrage de Windows.
 
-`CAtlModuleT`fournit la prise en charge de l’initialisation, de l’inscription et de l’annulation de l’inscription du module.
+`CAtlModuleT` fournit la prise en charge de l’initialisation, de l’inscription et de l’annulation de l’inscription du module.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -74,7 +75,7 @@ Classe dérivée de `CAtlModuleT`.
 
 **En-tête :** atlbase. h
 
-## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT
+## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a> CAtlModuleT::CAtlModuleT
 
 Constructeur.
 
@@ -86,7 +87,7 @@ CAtlModuleT() throw();
 
 Appelle [CAtlModuleT :: InitLibId](#initlibid).
 
-## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId
+## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a> CAtlModuleT::InitLibId
 
 Initialise les données membres contenant le GUID du module en cours.
 
@@ -98,7 +99,7 @@ static void InitLibId() throw();
 
 Appelée par le constructeur [CAtlModuleT :: CAtlModuleT](#catlmodulet).
 
-## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId
+## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a> CAtlModuleT::RegisterAppId
 
 Ajoute l’EXE au registre.
 
@@ -106,11 +107,11 @@ Ajoute l’EXE au registre.
 HRESULT RegisterAppId() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
-## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer
+## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a> CAtlModuleT::RegisterServer
 
 Ajoute le service au registre.
 
@@ -128,11 +129,11 @@ TRUE si la bibliothèque de types doit être inscrite. La valeur par défaut est
 *pCLSID*<br/>
 Pointe vers le CLSID de l’objet à inscrire. Si la valeur est NULL (valeur par défaut), tous les objets dans le mappage d’objets sont inscrits.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
-## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a> CAtlModuleT::UnregisterAppId
 
 Supprime le fichier EXE du Registre.
 
@@ -140,11 +141,11 @@ Supprime le fichier EXE du Registre.
 HRESULT UnregisterAppId() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
-## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a> CAtlModuleT::UnregisterServer
 
 Supprime le service du Registre.
 
@@ -162,11 +163,11 @@ TRUE si l’inscription de la bibliothèque de types doit également être annul
 *pCLSID*<br/>
 Pointe vers le CLSID de l’objet dont l’inscription doit être annulée. Si la valeur est NULL (valeur par défaut), tous les objets dans le mappage d’objets sont désinscrits.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
-## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId
+## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a> CAtlModuleT::UpdateRegistryAppId
 
 Met à jour les informations de l’EXE dans le registre.
 
@@ -179,7 +180,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 *bRegister*<br/>
 Réservé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 

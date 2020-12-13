@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Recordset : fonctionnement d’AddNew, Edit et Delete (ODBC)'
 title: "Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,148 +18,148 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 63718a6be3a9ce19ddbce923a84def21448c42a0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 44211b6e1b1a0fc80c874e86ba83c2e6ea0ea43e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151396"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Ce sujet explique `AddNew` `Edit`comment `Delete` le , , `CRecordset` et les fonctions des membres de la classe de travail. Sont abordés les sujets suivants :
+Cette rubrique explique comment les `AddNew` `Edit` `Delete` fonctions membres, et de la classe `CRecordset` fonctionnent. Sont abordés les sujets suivants :
 
 - [Fonctionnement de l’ajout d’enregistrements](#_core_adding_a_record)
 
 - [Visibilité des enregistrements ajoutés](#_core_visibility_of_added_records)
 
-- [Fonctionnement des enregistrements d’édition](#_core_editing_an_existing_record)
+- [Fonctionnement de la modification des enregistrements](#_core_editing_an_existing_record)
 
-- [Fonctionnement de la suppression des documents](#_core_deleting_a_record)
+- [Fonctionnement de la suppression d’enregistrements](#_core_deleting_a_record)
 
 > [!NOTE]
-> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez la ligne en vrac aller chercher, voir [Recordset: Fetching Records en vrac (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-En complément, vous voudrez peut-être lire [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md), qui décrit le rôle correspondant de RFX dans les opérations de mise à jour.
+En complément, vous pouvez lire [Record Field Exchange :](../../data/odbc/record-field-exchange-how-rfx-works.md)fonctionnement de RFX, qui décrit le rôle correspondant de RFX dans les opérations de mise à jour.
 
-## <a name="adding-a-record"></a><a name="_core_adding_a_record"></a>Ajout d’un enregistrement
+## <a name="adding-a-record"></a><a name="_core_adding_a_record"></a> Ajout d’un enregistrement
 
-L’ajout d’un nouvel enregistrement à un jeu d’enregistrement implique d’appeler la fonction de membre [AddNew](../../mfc/reference/crecordset-class.md#addnew) du recordet, d’établir les valeurs des membres des données sur le terrain du nouvel enregistrement et d’appeler la fonction membre [de la mise](../../mfc/reference/crecordset-class.md#update) à jour pour écrire l’enregistrement à la source de données.
+L’ajout d’un nouvel enregistrement à un Recordset implique l’appel de la fonction membre [AddNew](../../mfc/reference/crecordset-class.md#addnew) du Recordset, la définition des valeurs des membres de données de champ du nouvel enregistrement et l’appel de la fonction membre [Update](../../mfc/reference/crecordset-class.md#update) pour écrire l’enregistrement dans la source de données.
 
-Comme condition préalable `AddNew`à l’appel, le dossier ne doit pas avoir été ouvert comme lu seulement. Les `CanUpdate` `CanAppend` fonctions et les fonctions des membres vous permettent de déterminer ces conditions.
+Comme condition préalable à l’appel de `AddNew` , le jeu d’enregistrements ne doit pas avoir été ouvert en lecture seule. Les `CanUpdate` `CanAppend` fonctions membres et vous permettent de déterminer ces conditions.
 
-Lorsque vous `AddNew`appelez :
+Quand vous appelez `AddNew` :
 
-- L’enregistrement dans le tampon de modification est stocké, de sorte que son contenu peut être restauré si l’opération est annulée.
+- L’enregistrement dans le tampon d’édition étant stocké, son contenu peut être restauré si l’opération est annulée.
 
-- Les membres des données sur le terrain sont signalés de sorte qu’il est possible de détecter les changements en eux plus tard. Les membres des données sur le terrain sont également marqués propres (inchangés) et réglés sur un Null.
+- Les membres de données de champ sont marqués d’un indicateur. il est donc possible de les détecter ultérieurement. Les données membres de champ sont également marquées Clean (inchangé) et ont la valeur null.
 
-Après votre `AddNew`appel, le tampon de modification représente un nouvel enregistrement vide, prêt à être rempli de valeurs. Pour ce faire, vous définissez manuellement les valeurs en leur assignant. Au lieu de spécifier une valeur `SetFieldNull` de données réelle pour un champ, vous pouvez appeler pour spécifier la valeur Null.
+Après l’appel de `AddNew` , le tampon d’édition représente un nouvel enregistrement vide, prêt à être renseigné avec des valeurs. Pour ce faire, vous devez définir manuellement les valeurs en leur affectant. Au lieu de spécifier une valeur de données réelle pour un champ, vous pouvez appeler `SetFieldNull` pour spécifier la valeur null.
 
-Pour valider vos `Update`modifications, vous appelez . Lorsque vous `Update` appelez pour le nouvel enregistrement:
+Pour valider vos modifications, vous appelez `Update` . Lorsque vous appelez `Update` pour le nouvel enregistrement :
 
-- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour ajouter l’enregistrement sur la source de données. Avec `::SQLSetPos`, MFC peut ajouter un enregistrement plus efficacement parce qu’il n’a pas à construire et traiter une déclaration SQL.
+- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour ajouter l’enregistrement sur la source de données. Avec `::SQLSetPos` , les MFC peuvent ajouter plus efficacement un enregistrement, car il n’est pas nécessaire de construire et traiter une instruction SQL.
 
-- S’il `::SQLSetPos` n’est pas utilisé, MFC fait ce qui suit :
+- Si `::SQLSetPos` ne peut pas être utilisé, MFC effectue les opérations suivantes :
 
-   1. Si aucun changement n’est détecté, `Update` ne fait rien et renvoie 0.
+   1. Si aucune modification n’est détectée, `Update` ne fait rien et retourne 0.
 
-   1. S’il y `Update` a des changements, construit une déclaration SQL **INSERT.** Les colonnes représentées par tous les membres des données de champ sale sont répertoriées dans la déclaration **INSERT.** Pour forcer l’inclus dans une colonne, appelez la fonction membre [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) :
+   1. En cas de modification, `Update` construit une instruction SQL **Insert** . Les colonnes représentées par tous les membres de données de champs non modifiés sont répertoriées dans l’instruction **Insert** . Pour forcer l’inclusion d’une colonne, appelez la fonction membre [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) :
 
         ```cpp
         SetFieldDirty( &m_dataMember, TRUE );
         ```
 
-   1. `Update`engage le nouvel enregistrement — la déclaration **INSERT** est exécutée et l’enregistrement est engagé à la table sur la source de données (et le jeu d’enregistrement, si ce n’est un instantané) à moins qu’une transaction soit en cours.
+   1. `Update` valide le nouvel enregistrement : l’instruction **Insert** est exécutée et l’enregistrement est validé dans la table sur la source de données (et le Recordset, s’il ne s’agit pas d’un instantané), à moins qu’une transaction soit en cours.
 
-   1. L’enregistrement stocké est restauré dans le tampon de modification. Le dossier qui était `AddNew` à jour avant l’appel est à nouveau à jour, peu importe si la déclaration **INSERT** a été exécutée avec succès.
-
-   > [!TIP]
-   > Pour un contrôle complet d’un nouvel enregistrement, adoptez l’approche suivante : définissez les valeurs `SetFieldNull` de tous les champs qui auront des valeurs et fixez ensuite explicitement tous les champs qui resteront nuls en appelant avec un pointeur sur le terrain et le paramètre TRUE (la valeur). Si vous voulez vous assurer qu’un champ n’est pas écrit à la source de données, appelez `SetFieldDirty` avec un pointeur sur le terrain et le paramètre FALSE, et ne modifiez pas la valeur du champ. Pour déterminer si un champ est `IsFieldNullable`autorisé à être Null, appelez .
+   1. L’enregistrement stocké est restauré dans le tampon d’édition. L’enregistrement qui était en cours avant l' `AddNew` appel est à nouveau à jour, que l’instruction **Insert** ait été exécutée avec succès ou non.
 
    > [!TIP]
-   > Pour détecter quand les membres des données enregistrent changent de valeur, MFC utilise une valeur PSEUDO_NULL adaptée à chaque type de données que vous pouvez stocker dans un ensemble d’enregistrements. Si vous devez définir explicitement un champ à la valeur PSEUDO_NULL et que le `SetFieldNull`champ se trouve déjà être marqué Null, vous devez également appeler, en passant l’adresse du champ dans le premier paramètre et FALSE dans le deuxième paramètre.
+   > Pour le contrôle total d’un nouvel enregistrement, procédez comme suit : définissez les valeurs de tous les champs qui auront des valeurs, puis définissez explicitement tous les champs qui conserveront la valeur null en appelant `SetFieldNull` avec un pointeur vers le champ et le paramètre True (valeur par défaut). Si vous souhaitez vous assurer qu’un champ n’est pas écrit dans la source de données, appelez `SetFieldDirty` avec un pointeur vers le champ et le paramètre false, et ne modifiez pas la valeur du champ. Pour déterminer si un champ peut être null, appelez `IsFieldNullable` .
 
-## <a name="visibility-of-added-records"></a><a name="_core_visibility_of_added_records"></a>Visibilité des enregistrements ajoutés
+   > [!TIP]
+   > Pour détecter la modification de la valeur des membres de données du jeu d’enregistrements, MFC utilise une valeur de PSEUDO_NULL appropriée à chaque type de données que vous pouvez stocker dans un jeu d’enregistrements. Si vous devez définir explicitement la valeur de PSEUDO_NULL pour un champ et que le champ a déjà été marqué comme null, vous devez également appeler `SetFieldNull` , en passant l’adresse du champ dans le premier paramètre et la valeur false dans le deuxième paramètre.
 
-Quand un enregistrement supplémentaire est-il visible à votre dossier ? Les enregistrements ajoutés apparaissent parfois et ne sont parfois pas visibles, selon deux choses :
+## <a name="visibility-of-added-records"></a><a name="_core_visibility_of_added_records"></a> Visibilité des enregistrements ajoutés
 
-- Ce dont votre chauffeur est capable.
+Quand un enregistrement ajouté est-il visible pour votre Recordset ? Les enregistrements ajoutés s’affichent parfois et ne sont parfois pas visibles, en fonction de deux éléments :
 
-- De quoi le cadre peut tirer profit.
+- Ce que votre pilote peut.
 
-Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour ajouter des enregistrements. Avec `::SQLSetPos`, les enregistrements ajoutés sont visibles à n’importe quel recordet MFC updatable. Sans support pour la fonction, les enregistrements `Requery` ajoutés ne sont pas visibles et vous devez appeler pour les voir. L’utilisation `::SQLSetPos` est également plus efficace.
+- Ce à quoi l’infrastructure peut tirer parti.
 
-## <a name="editing-an-existing-record"></a><a name="_core_editing_an_existing_record"></a>Montage d’un disque existant
+Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour ajouter des enregistrements. Avec `::SQLSetPos` , les enregistrements ajoutés sont visibles par tous les jeux d’enregistrements MFC pouvant être mis à jour. Sans prise en charge de la fonction, les enregistrements ajoutés ne sont pas visibles et vous devez appeler `Requery` pour les afficher. L’utilisation de `::SQLSetPos` est également plus efficace.
 
-L’édition d’un enregistrement existant dans un jeu d’enregistrements implique de faire défiler l’enregistrement, d’appeler la fonction membre [Edit](../../mfc/reference/crecordset-class.md#edit) du recordet, d’établir les valeurs des membres des données de terrain du nouvel enregistrement et d’appeler la fonction membre [de la mise](../../mfc/reference/crecordset-class.md#update) à jour pour écrire l’enregistrement modifié à la source de données.
+## <a name="editing-an-existing-record"></a><a name="_core_editing_an_existing_record"></a> Modification d’un enregistrement existant
 
-Comme condition préalable `Edit`à l’appel, le recordet doit être updatable et sur un dossier. Les `CanUpdate` `IsDeleted` fonctions et les fonctions des membres vous permettent de déterminer ces conditions. Le dossier actuel ne doit pas non plus avoir déjà été supprimé, et il doit y avoir des enregistrements dans le jeu d’enregistrement (les deux `IsBOF` et `IsEOF` le retour 0).
+La modification d’un enregistrement existant dans un Recordset implique de faire défiler l’enregistrement, d’appeler la fonction membre [Edit](../../mfc/reference/crecordset-class.md#edit) du Recordset, de définir les valeurs des membres de données de champ du nouvel enregistrement et d’appeler la fonction membre [Update](../../mfc/reference/crecordset-class.md#update) pour écrire l’enregistrement modifié dans la source de données.
 
-Lorsque vous `Edit`appelez, l’enregistrement dans le tampon de modification (l’enregistrement actuel) est stocké. Les valeurs de l’enregistrement stocké sont ensuite utilisées pour détecter si des champs ont changé.
+En guise de condition préalable à l’appel de `Edit` , le Recordset doit pouvoir être mis à jour et se trouver sur un enregistrement. Les `CanUpdate` `IsDeleted` fonctions membres et vous permettent de déterminer ces conditions. L’enregistrement actif ne doit pas avoir déjà été supprimé et il doit y avoir des enregistrements dans le jeu d’enregistrements ( `IsBOF` et `IsEOF` retourner 0).
 
-Après votre `Edit`appel, le tampon de modification représente toujours l’enregistrement actuel, mais est maintenant prêt à accepter les modifications apportées aux membres des données sur le terrain. Pour modifier l’enregistrement, vous définissez manuellement les valeurs de tous les membres de données sur le terrain que vous souhaitez modifier. Au lieu de spécifier une valeur `SetFieldNull` de données réelle pour un champ, vous pouvez appeler pour spécifier la valeur Null. Pour valider vos `Update`modifications, appelez .
+Lorsque vous appelez `Edit` , l’enregistrement dans la mémoire tampon d’édition (enregistrement en cours) est stocké. Les valeurs de l’enregistrement stocké sont ensuite utilisées pour détecter si des champs ont été modifiés.
+
+Une fois que vous avez appelé `Edit` , le tampon d’édition représente toujours l’enregistrement actif, mais il est maintenant prêt à accepter les modifications apportées aux membres de données de champ. Pour modifier l’enregistrement, vous devez définir manuellement les valeurs des membres de données de champ que vous souhaitez modifier. Au lieu de spécifier une valeur de données réelle pour un champ, vous pouvez appeler `SetFieldNull` pour spécifier la valeur null. Pour valider vos modifications, appelez `Update` .
 
 > [!TIP]
-> Pour sortir `AddNew` ou `Edit` en `Move` mode, appelez avec le paramètre *AFX_MOVE_REFRESH*.
+> Pour sortir du `AddNew` `Edit` mode, appelez `Move` avec le paramètre *AFX_MOVE_REFRESH*.
 
-Comme condition préalable `Update`à l’appel, le dossier ne doit pas être vide et l’enregistrement actuel ne doit pas avoir été supprimé. `IsBOF`, `IsEOF`, `IsDeleted` et devrait tous retourner 0.
+Comme condition préalable à l’appel de `Update` , le jeu d’enregistrements ne doit pas être vide et l’enregistrement actif ne doit pas avoir été supprimé. `IsBOF`, `IsEOF` et `IsDeleted` doivent tous retourner 0.
 
-Lorsque vous `Update` appelez pour l’enregistrement édité:
+Lorsque vous appelez `Update` pour l’enregistrement modifié :
 
-- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour mettre à jour l’enregistrement sur la source de données. Avec `::SQLSetPos`, le pilote compare votre tampon de modification avec l’enregistrement correspondant sur le serveur, mise à jour de l’enregistrement sur le serveur si les deux sont différents. Avec `::SQLSetPos`, MFC peut mettre à jour un enregistrement plus efficacement parce qu’il n’a pas à construire et traiter une déclaration SQL.
+- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour mettre à jour l’enregistrement sur la source de données. Avec `::SQLSetPos` , le pilote compare votre tampon d’édition à l’enregistrement correspondant sur le serveur, en mettant à jour l’enregistrement sur le serveur si les deux sont différents. Avec `::SQLSetPos` , MFC peut mettre à jour un enregistrement plus efficacement, car il n’a pas besoin de construire et traiter une instruction SQL.
 
    \- ou -
 
-- S’il `::SQLSetPos` n’est pas utilisé, MFC fait ce qui suit :
+- Si `::SQLSetPos` ne peut pas être utilisé, MFC effectue les opérations suivantes :
 
-   1. S’il n’y `Update` a eu aucun changement, ne fait rien et retourne 0.
+   1. Si aucune modification n’a été apportée, `Update` ne fait rien et retourne 0.
 
-   1. S’il y `Update` a des changements, construit une déclaration **DE MISE À JOUR** SQL. Les colonnes énumérées dans la déclaration **UPDATE** sont basées sur les données sur le terrain des membres qui ont changé.
+   1. En cas de modification, `Update` construit une instruction SQL **Update** . Les colonnes répertoriées dans l’instruction **Update** sont basées sur les données membres de champ qui ont changé.
 
-   1. `Update`s’engage dans les modifications — exécute l’énoncé **UPDATE** — et l’enregistrement est modifié sur la source de données, mais pas validé si une transaction est en cours (voir [Transaction : Effectuer une transaction dans un Dossier (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) pour obtenir de l’information sur l’incidence de la transaction sur la mise à jour). ODBC conserve une copie de l’enregistrement, qui change également.
+   1. `Update` valide les modifications : exécute l’instruction **Update** , et l’enregistrement est modifié sur la source de données, mais non validé si une transaction est en cours (consultez [transaction : exécution d’une transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) pour plus d’informations sur la façon dont la transaction affecte la mise à jour). ODBC conserve une copie de l’enregistrement, qui change également.
 
-   1. Contrairement au `AddNew`processus `Edit` pour , le processus ne restaure pas l’enregistrement stocké. L’enregistrement édité reste en place comme l’enregistrement actuel.
+   1. Contrairement au processus pour `AddNew` , le `Edit` processus ne restaure pas l’enregistrement stocké. L’enregistrement modifié reste en place en tant qu’enregistrement actif.
 
    > [!CAUTION]
-   > Lorsque vous vous préparez à `Update`mettre à jour un ensemble d’enregistrements en appelant, veillez à ce que votre jeu d’enregistrement comporte toutes les colonnes constituant la clé principale de la table (ou toutes les colonnes de tout index unique sur la table, ou suffisamment de colonnes pour identifier uniquement la ligne). Dans certains cas, le cadre ne peut utiliser que les colonnes sélectionnées dans votre dossier pour identifier l’enregistrement dans votre table à mettre à jour. Sans toutes les colonnes nécessaires, plusieurs enregistrements peuvent être mis à jour dans le tableau. Dans ce cas, le cadre fait `Update`des exceptions lorsque vous appelez .
+   > Lorsque vous vous préparez à mettre à jour un jeu d’enregistrements en appelant, assurez-vous `Update` que votre Recordset comprend toutes les colonnes qui composent la clé primaire de la table (ou toutes les colonnes d’un index unique sur la table, ou suffisamment de colonnes pour identifier la ligne de manière unique). Dans certains cas, l’infrastructure peut utiliser uniquement les colonnes sélectionnées dans votre jeu d’enregistrements pour identifier l’enregistrement à mettre à jour dans votre table. Si vous ne disposez pas de toutes les colonnes nécessaires, plusieurs enregistrements peuvent être mis à jour dans la table. Dans ce cas, l’infrastructure lève des exceptions lorsque vous appelez `Update` .
 
    > [!TIP]
-   > Si vous `AddNew` `Edit` appelez ou après avoir appelé `Update`l’une ou l’autre fonction auparavant, mais avant d’appeler, le tampon de modification est actualisé avec l’enregistrement stocké, remplaçant le nouvel enregistrement ou édité en cours. Ce comportement vous donne un `AddNew` `Edit` moyen d’avorter un ou et commencer un nouveau: si `Edit` `AddNew` vous déterminez que l’enregistrement en cours est défectueux, il suffit d’appeler ou à nouveau.
+   > Si vous appelez `AddNew` ou `Edit` après avoir appelé l’une ou l’autre des fonctions précédemment mais avant `Update` d’appeler, le tampon d’édition est actualisé avec l’enregistrement stocké, ce qui remplace l’enregistrement nouveau ou modifié en cours. Ce comportement vous donne la possibilité d’abandonner un `AddNew` ou `Edit` et d’en démarrer un nouveau : Si vous déterminez que l’enregistrement en cours est défectueux, appelez simplement `Edit` ou `AddNew` à nouveau.
 
-## <a name="deleting-a-record"></a><a name="_core_deleting_a_record"></a>Suppression d’un record
+## <a name="deleting-a-record"></a><a name="_core_deleting_a_record"></a> Suppression d’un enregistrement
 
-La suppression d’un enregistrement à partir d’un enregistrement implique de faire défiler vers l’enregistrement et d’appeler la fonction de membre [Supprimer](../../mfc/reference/crecordset-class.md#delete) du recordet. Contrairement `AddNew` `Edit`et `Delete` , ne nécessite `Update`pas un appel correspondant à .
+La suppression d’un enregistrement d’un jeu d’enregistrements implique de faire défiler jusqu’à l’enregistrement et d’appeler la fonction membre [Delete](../../mfc/reference/crecordset-class.md#delete) du Recordset. Contrairement `AddNew` `Edit` à et, `Delete` ne nécessite pas d’appel correspondant à `Update` .
 
-Comme condition préalable `Delete`à l’appel, le recordet doit être updatable et il doit être sur un dossier. Les `CanUpdate` `IsBOF`fonctions , , `IsEOF`et `IsDeleted` membres vous permettent de déterminer ces conditions.
+En guise de condition préalable à l’appel de `Delete` , le Recordset doit pouvoir être mis à jour et il doit se trouver sur un enregistrement. Les `CanUpdate` `IsBOF` `IsEOF` fonctions membres,, et `IsDeleted` vous permettent de déterminer ces conditions.
 
-Lorsque vous `Delete`appelez :
+Quand vous appelez `Delete` :
 
-- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour supprimer l’enregistrement sur la source de données. L’utilisation `::SQLSetPos` est généralement plus efficace que l’utilisation de SQL.
+- Si votre pilote ODBC prend en charge la `::SQLSetPos` fonction API ODBC, MFC utilise la fonction pour supprimer l’enregistrement sur la source de données. L’utilisation `::SQLSetPos` de est généralement plus efficace que l’utilisation de SQL.
 
    \- ou -
 
-- S’il `::SQLSetPos` n’est pas utilisé, MFC fait ce qui suit :
+- Si `::SQLSetPos` ne peut pas être utilisé, MFC effectue les opérations suivantes :
 
-   1. Le dossier actuel dans le tampon de `AddNew` `Edit`modification n’est pas sauvegardé comme dans et .
+   1. L’enregistrement actif dans le tampon d’édition n’est pas sauvegardé comme dans `AddNew` et `Edit` .
 
-   1. `Delete`construit une déclaration SQL **DELETE** qui supprime l’enregistrement.
+   1. `Delete` construit une instruction SQL **Delete** qui supprime l’enregistrement.
 
-      L’enregistrement actuel dans le tampon `AddNew` de `Edit`modification n’est pas stocké dans et .
+      L’enregistrement actif dans le tampon d’édition n’est pas stocké comme dans `AddNew` et `Edit` .
 
-   1. `Delete`commits la suppression — exécute la déclaration **DELETE.** L’enregistrement est marqué supprimé sur la source de données et, si l’enregistrement est un instantané, dans ODBC.
+   1. `Delete` valide la suppression : exécute l’instruction **Delete** . L’enregistrement est marqué comme supprimé dans la source de données et, s’il s’agit d’un instantané, dans ODBC.
 
-   1. Les valeurs de l’enregistrement supprimé sont toujours dans les données de terrain des membres de l’enregistrement, mais les membres des données sur le terrain sont marqués Null et la fonction membre du `IsDeleted` recordet retourne une valeur non zéro.
+   1. Les valeurs de l’enregistrement supprimé se trouvent toujours dans les membres de données de champ de l’ensemble d’enregistrements, mais les membres de données de champ sont marqués comme null et la fonction membre du recordset `IsDeleted` retourne une valeur différente de zéro.
 
    > [!NOTE]
-   > Après la suppression d’un enregistrement, vous devez faire défiler vers un autre enregistrement pour remplir le tampon de modification avec les données du nouvel enregistrement. C’est une `Delete` erreur d’appeler à nouveau ou d’appeler `Edit`.
+   > Après la suppression d’un enregistrement, vous devez faire défiler vers un autre enregistrement pour recharger le tampon d’édition avec les données du nouvel enregistrement. Il y a une erreur à rappeler `Delete` ou à appeler `Edit` .
 
-Pour plus d’informations sur les déclarations SQL utilisées dans les opérations de mise à jour, voir [SQL](../../data/odbc/sql.md).
+Pour plus d’informations sur les instructions SQL utilisées dans les opérations de mise à jour, consultez [SQL](../../data/odbc/sql.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset : informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Échange de terrain record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[RFX (Record Field Exchange)](../../data/odbc/record-field-exchange-rfx.md)

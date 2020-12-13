@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _open_osfhandle'
 title: _open_osfhandle
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b5fe486416ec49f01078a4d90cab998e4bbe6c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151656"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -67,7 +68,7 @@ La fonction **_open_osfhandle** alloue un descripteur de fichier Runtime C. Il a
 
 Ces constantes manifestes sont définies dans \<fcntl.h> :
 
-| Constant | Description |
+| Constante | Description |
 |--|--|
 | **\_O \_ Append** | Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture. |
 | **\_O \_ RDONLY** | Ouvre le fichier pour un accès en lecture uniquement. |
@@ -78,7 +79,7 @@ L’appel de **_open_osfhandle** transfère la propriété du handle de fichier 
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

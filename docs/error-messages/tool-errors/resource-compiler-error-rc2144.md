@@ -1,19 +1,20 @@
 ---
-title: Erreur RC2144 du compilateur de ressources
+description: 'En savoir plus sur : erreur du compilateur de ressources RC2144'
+title: 'Erreur RC2144 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RC2144
 helpviewer_keywords:
 - RC2144
 ms.assetid: 1b3ff39a-92cd-4a04-b1a3-b1fa6a805813
-ms.openlocfilehash: 1b080916642fc1be4b22820668c4cb4137675425
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8b40f989e4319b16a9a983f5e4e377aeb357e8f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80191195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133508"
 ---
-# <a name="resource-compiler-error-rc2144"></a>Erreur RC2144 du compilateur de ressources
+# <a name="resource-compiler-error-rc2144"></a>Erreur RC2144 du compilateur de ressources 
 
 L'ID DE LANGUE PRINCIPALE n'est pas un numéro
 

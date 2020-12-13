@@ -1,19 +1,20 @@
 ---
-title: 'Procédure : Utiliser le suivi des références en C / c++ / CLI'
+description: 'En savoir plus sur : Comment : utiliser des références de suivi en C++/CLI'
+title: 'Comment : utiliser des références de suivi dans C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17101b5711feb503ad727d78b427e8766146960
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151383"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Procédure : Utiliser le suivi des références en C / c++ / CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Comment : utiliser des références de suivi dans C++/CLI
 
-Cet article explique comment utiliser une référence de suivi (%) dans C++/CLI pour passer common language runtime (CLR) types par référence.
+Cet article explique comment utiliser une référence de suivi (%) en C++/CLI pour passer des types common language runtime (CLR) par référence.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Pour passer des types CLR par référence
 
@@ -70,7 +71,7 @@ int main() {
 zip == 20100
 ```
 
-L’exemple suivant montre que prendre l’adresse d’une référence de suivi retourne un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)et montre comment modifier et accéder aux données via une référence de suivi.
+L’exemple suivant montre que la prise de l’adresse d’une référence de suivi retourne un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)et montre comment modifier les données et y accéder via une référence de suivi.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -122,9 +123,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-interior-pointers"></a>Références de suivi et des pointeurs intérieurs
+## <a name="tracking-references-and-interior-pointers"></a>Suivi des références et des pointeurs intérieurs
 
-L’exemple de code suivant montre que vous pouvez convertir entre des références de suivi et des pointeurs intérieurs.
+L’exemple de code suivant montre que vous pouvez effectuer une conversion entre des références de suivi et des pointeurs intérieurs.
 
 ```cpp
 // tracking_reference_interior_ptr.cpp
@@ -177,9 +178,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-value-types"></a>Références de suivi et les types valeur
+## <a name="tracking-references-and-value-types"></a>Suivi des références et des types valeur
 
-Cet exemple montre un boxing simple via une référence de suivi à un type valeur :
+Cet exemple montre une conversion boxing simple via une référence de suivi à un type valeur :
 
 ```cpp
 // tracking_reference_valuetypes_1.cpp
@@ -194,7 +195,7 @@ int main() {
 }
 ```
 
-L’exemple suivant montre que vous pouvez avoir des références de suivi et des références natives à des types valeur.
+L’exemple suivant montre que vous pouvez avoir à la fois des références de suivi et des références natives à des types valeur.
 
 ```cpp
 // tracking_reference_valuetypes_2.cpp
@@ -219,7 +220,7 @@ int main() {
 13
 ```
 
-L’exemple suivant montre que vous pouvez utiliser des références de suivi avec les types valeur et les types natifs.
+L’exemple suivant montre que vous pouvez utiliser des références de suivi avec des types valeur et des types natifs.
 
 ```cpp
 // tracking_reference_valuetypes_3.cpp
@@ -254,7 +255,7 @@ int main() {
 5
 ```
 
-Cet exemple montre que vous pouvez lier une référence de suivi à un type valeur sur le tas de garbage collection :
+Cet exemple montre que vous pouvez lier une référence de suivi à un type valeur sur le tas récupéré par le garbage collector :
 
 ```cpp
 // tracking_reference_valuetypes_4.cpp
@@ -292,9 +293,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Fonctions de modèle qui prennent natives, valeur ou paramètres de référence
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Fonctions de modèle qui prennent des paramètres natifs, de valeur ou de référence
 
-En utilisant une référence de suivi dans la signature d’une fonction de modèle, vous vous assurer que la fonction peut être appelée par un paramètre de type natif, valeur CLR ou référence CLR.
+En utilisant une référence de suivi dans la signature d’une fonction de modèle, vous vous assurez que la fonction peut être appelée par un paramètre dont le type est native, la valeur CLR ou la référence CLR.
 
 ```cpp
 // tracking_reference_template.cpp

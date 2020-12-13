@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/yl (injecter une référence PCH pour la bibliothèque de débogage)
 title: /Yl (Injecter une référence PCH pour une bibliothèque de débogage)
 ms.date: 01/29/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-ms.openlocfilehash: 816ba66c94e616407a8891cd149a41e44e29358d
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: f1d05b4e0c38377233e9aaf6299227f7fbaebd55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151851"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Injecter une référence PCH pour une bibliothèque de débogage)
 
@@ -33,11 +34,11 @@ Nom facultatif utilisé dans le cadre du symbole unique.
 *\-*<br/>
 Un tiret (-) désactive explicitement l’option de compilateur **/yl** .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L’option de compilateur **/yl** crée une définition de symbole unique dans un fichier d’en-tête précompilé créé à l’aide de l’option [/Yc](yc-create-precompiled-header-file.md) . Les références à ce symbole sont automatiquement injectées dans tous les fichiers qui incluent l’en-tête précompilé à l’aide de l’option du compilateur [/Yu](yu-use-precompiled-header-file.md) . L’option **/yl** est activée par défaut lorsque **/Yc** est utilisé pour créer un fichier d’en-tête précompilé.
 
-L’option **/yl**_Name_ est utilisée pour créer un symbole identifiable dans le fichier d’en-tête précompilé. Le compilateur utilise l’argument *Name* dans le nom de symbole décoré qu’il crée, à `__@@_PchSym_@00@...@name`l’instar de, où les points de suspension (...) représentent une chaîne de caractères unique générée par le compilateur. Si l’argument *Name* est omis, le compilateur génère automatiquement un nom de symbole. Normalement, vous n’avez pas besoin de connaître le nom du symbole. Toutefois, lorsque votre projet utilise plusieurs fichiers d’en-tête précompilés, l’option **/yl**_Name_ peut être utile pour déterminer les fichiers objets qui utilisent l’en-tête précompilé. Vous pouvez utiliser *Name* comme chaîne de recherche pour rechercher la référence de symbole dans un fichier de vidage.
+L’option **/yl**_Name_ est utilisée pour créer un symbole identifiable dans le fichier d’en-tête précompilé. Le compilateur utilise l’argument *Name* dans le nom de symbole décoré qu’il crée, à l’instar de `__@@_PchSym_@00@...@name` , où les points de suspension (...) représentent une chaîne de caractères unique générée par le compilateur. Si l’argument *Name* est omis, le compilateur génère automatiquement un nom de symbole. Normalement, vous n’avez pas besoin de connaître le nom du symbole. Toutefois, lorsque votre projet utilise plusieurs fichiers d’en-tête précompilés, l’option **/yl**_Name_ peut être utile pour déterminer les fichiers objets qui utilisent l’en-tête précompilé. Vous pouvez utiliser *Name* comme chaîne de recherche pour rechercher la référence de symbole dans un fichier de vidage.
 
 **/Yl-** désactive le comportement par défaut et ne place pas de symbole d’identification dans le fichier d’en-tête précompilé. Les fichiers compilés qui incluent cet en-tête précompilé n’obtiennent pas de référence de symbole commune.
 
@@ -47,15 +48,15 @@ Si vous utilisez les options **/yl-**, **/Yc** et [/Z7](z7-zi-zi-debug-informati
 
 Pour plus d’informations sur les en-têtes précompilés, consultez :
 
-- [/Y (En-têtes précompilés)](y-precompiled-headers.md)
+- [/Y (en-têtes précompilés)](y-precompiled-headers.md)
 
-- [Fichiers d'en-tête précompilés](../creating-precompiled-header-files.md)
+- [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés**ligne de commande** des **Propriétés** > de configuration**C/C++** > .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Ajoutez l’option de compilateur **/yl**_Name_ dans la zone **options supplémentaires** . Choisissez **OK** pour enregistrer vos modifications.
 
@@ -66,4 +67,4 @@ Pour plus d’informations sur les en-têtes précompilés, consultez :
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)
