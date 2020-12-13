@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : génération sur le Framework'
 title: Génération à partir du Framework
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dd9423bb8cf80463631d6a39212db42ab94a67ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339785"
 ---
 # <a name="building-on-the-framework"></a>Génération à partir du Framework
 
@@ -22,14 +23,14 @@ Dans les rubriques connexes, les tableaux suivants décrivent la séquence gén�
 
 - [Séquence pour générer une application avec le framework](sequence-of-operations-for-building-mfc-applications.md)
 
-- [Ordre des opérations pour la création d’applications OLE](sequence-of-operations-for-creating-ole-applications.md)
+- [Séquence d’opérations pour la création d’applications OLE](sequence-of-operations-for-creating-ole-applications.md)
 
-- [Ordre des opérations pour la création de contrôles ActiveX](sequence-of-operations-for-creating-activex-controls.md)
+- [Séquence d’opérations pour la création de contrôles ActiveX](sequence-of-operations-for-creating-activex-controls.md)
 
-- [Ordre des opérations pour la création d’applications de base de données](sequence-of-operations-for-creating-database-applications.md)
+- [Séquence d’opérations pour la création d’applications de base de données](sequence-of-operations-for-creating-database-applications.md)
 
 Pour l’essentiel, vous pouvez suivre ces tableaux comme une séquence d’étapes de création d’une application MFC, bien que certaines d’entre elles soient des options alternatives. Par exemple, la plupart des applications utilisent un type de classe d’affichage parmi les différents types disponibles.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](general-mfc-topics.md)
+[Rubriques générales sur MFC](general-mfc-topics.md)

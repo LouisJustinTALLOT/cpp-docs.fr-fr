@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strdate, _wstrdate'
 title: _strdate, _wstrdate
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e0daab087653edf57b3f268aa14192ab145cac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340565"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -74,15 +75,15 @@ wchar_t *_wstrdate(
 *datestr*<br/>
 Pointeur désignant une mémoire tampon contenant la chaîne de date mise en forme.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur vers la chaîne de caractères résultante *dateStr*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Il existe des versions plus sécurisées de ces fonctions. Consultez [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Il est recommandé d’utiliser les fonctions les plus sécurisées, dans la mesure du possible.
 
-La **fonction _strdate** copie la date système actuelle dans la mémoire tampon vers laquelle pointe *dateStr*, au format **mm**/**JJ**/**AA**, où **mm** est deux chiffres représentant le mois, **DD** est deux chiffres représentant le jour et **YY** les deux derniers chiffres de l’année. Par exemple, la chaîne **12/05/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+La fonction **_strdate** copie la date système actuelle dans la mémoire tampon vers laquelle *pointe dateStr*, au format **mm** / **JJ** / **AA**, où **mm** est deux chiffres représentant le mois, **DD** est deux chiffres représentant le jour et **YY** les deux derniers chiffres de l’année. Par exemple, la chaîne **12/05/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
 Si *dateStr* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 

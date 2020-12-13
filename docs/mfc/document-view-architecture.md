@@ -1,5 +1,6 @@
 ---
-title: Architecture document-vue
+description: En savoir plus sur l’architecture document/vue
+title: Architecture Document-View
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef6746a77a3f8a482c347d61685fccad3e6b4dfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339720"
 ---
 # <a name="documentview-architecture"></a>Architecture document/vue
 
@@ -70,9 +71,9 @@ Les documents, leurs vues associées et les fenêtres frame qui décadrent les v
 
 - [Utilisation des vues](using-views.md)
 
-- [Types multidocuments, vues et fenêtres frame](multiple-document-types-views-and-frame-windows.md)
+- [Plusieurs types de documents, vues et fenêtres Frame](multiple-document-types-views-and-frame-windows.md)
 
-- [Initialisation et nettoyage des documents et des vues](initializing-and-cleaning-up-documents-and-views.md)
+- [Initialisation et nettoyage des documents et affichages](initializing-and-cleaning-up-documents-and-views.md)
 
 - [Initialiser vos propres ajouts aux classes de vue de document &](creating-new-documents-windows-and-views.md)
 
@@ -86,7 +87,7 @@ Les documents, leurs vues associées et les fenêtres frame qui décadrent les v
 
 [Éléments de l’interface utilisateur](user-interface-elements-mfc.md)<br/>
 [Windows](windows.md)<br/>
-[Fenêtres frame](frame-windows.md)<br/>
+[Fenêtres Frame](frame-windows.md)<br/>
 [Modèles de document et processus de création de document/vue](document-templates-and-the-document-view-creation-process.md)<br/>
-[Création d'un document/d'une vue](document-view-creation.md)<br/>
+[Création de document/vue](document-view-creation.md)<br/>
 [Création de documents, fenêtres et vues](creating-new-documents-windows-and-views.md)

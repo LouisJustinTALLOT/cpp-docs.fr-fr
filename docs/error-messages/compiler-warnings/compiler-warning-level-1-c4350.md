@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4350'
 title: Avertissement du compilateur (niveau 1) C4350
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
-ms.openlocfilehash: 890ecd4fcec1212fa04a58b0eaab8c2eb4206763
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0626c9c8d0196396c0d13a0697df2dfc64061db0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339993"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>Avertissement du compilateur (niveau 1) C4350
 
 changement de comportement : 'membre1' appelé à la place de 'membre2'
 
-Une rvalue ne peut pas être liée à une référence non const. Dans les versions de C++ Visual antérieures à visual studio 2003, il était possible de lier une rvalue à une référence non const dans une initialisation directe. Ce code émet désormais un avertissement.
+Une rvalue ne peut pas être liée à une référence non const. Dans les versions de Visual C++ antérieures à Visual Studio 2003, il était possible de lier une rvalue à une référence non const dans une initialisation directe. Ce code émet désormais un avertissement.
 
 Pour la compatibilité descendante, il est toujours possible de lier rvalues à des références non const, mais les conversions standard sont préférables dans la mesure du possible.
 
-Cet avertissement représente un changement de comportement du compilateur Visual C++ .NET 2002. S’il est activé, cet avertissement peut être fourni pour le code correct. Par exemple, elle peut être fournie lors de l’utilisation du modèle de classe **std :: auto_ptr** .
+Cet avertissement représente un changement de comportement de la Visual C++ compilateur .NET 2002. S’il est activé, cet avertissement peut être fourni pour le code correct. Par exemple, elle peut être fournie lors de l’utilisation du modèle de classe **std :: auto_ptr** .
 
 Si vous obtenez cet avertissement, examinez votre code pour voir s’il dépend de la liaison de rvalues à des références non const. L’ajout d’un const à la référence ou la fourniture d’une surcharge const-Reference supplémentaire peut résoudre le problème.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : modification des styles de contrôle de liste'
 title: Modification des styles de contrôle de liste
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], styles
 - CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
-ms.openlocfilehash: e515f56f00aa45a14c24bcd635770e803f7f8e70
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a6712baf5ea1e161ec1fd73e25ea01fedd650670
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339733"
 ---
 # <a name="changing-list-control-styles"></a>Modification des styles de contrôle de liste
 
@@ -19,7 +20,7 @@ Vous pouvez modifier le style de fenêtre d’un contrôle de liste ([CListCtrl]
 
 Par exemple, quand l’utilisateur sélectionne votre élément de menu, vous pouvez appeler [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) pour récupérer le style actuel du contrôle, puis appeler [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) pour réinitialiser le style. Pour plus d’informations, consultez [utilisation des contrôles d’affichage de liste](/windows/win32/Controls/using-list-view-controls) dans le SDK Windows.
 
-Les styles disponibles sont répertoriés dans [créer](reference/clistctrl-class.md#create). Les styles **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**et **LVS_REPORT** désigner les quatre vues de contrôle de liste.
+Les styles disponibles sont répertoriés dans [créer](reference/clistctrl-class.md#create). Les styles **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST** et **LVS_REPORT** désigner les quatre vues de contrôle de liste.
 
 ## <a name="extended-styles"></a>Styles étendus
 
@@ -33,4 +34,4 @@ Outre les styles standard pour un contrôle de liste, il existe un autre ensembl
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

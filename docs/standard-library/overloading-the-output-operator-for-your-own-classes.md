@@ -1,16 +1,17 @@
 ---
+description: "En savoir plus sur : surcharge de l' &lt; &lt; opérateur pour vos propres classes"
 title: Surcharge de l’opérateur &lt;&lt; pour vos propres classes
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-ms.openlocfilehash: c470bb7335a5997ae26327f99b8c5f31d20b4edb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 206d6ccb50c7cb3706c66adeb6c1429a04775fc1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340838"
 ---
 # <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Surcharge de l’opérateur &lt;&lt; pour vos propres classes
 

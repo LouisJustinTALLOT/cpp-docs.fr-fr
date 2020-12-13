@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strdec, _wcsdec, _mbsdec, _mbsdec_l'
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85001258baea9e7c6509bfdd33a74f9a0eccd80f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340552"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -93,11 +94,11 @@ Pointeur vers n’importe quel caractère (ou pour **_mbsdec** et **_mbsdec_l**,
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**et **_wcsdec** renvoient chacun un pointeur vers le caractère qui précède immédiatement l’objet *actuel*; **_mbsdec** retourne **null** si la valeur de *Start* est supérieure ou égale à celle de l’objet *actuel*. **_tcsdec** est mappé à l’une de ces fonctions et sa valeur de retour dépend du mappage.
+**_mbsdec**, **_mbsdec_l**, **_strdec** et **_wcsdec** renvoient chacun un pointeur vers le caractère qui précède immédiatement l’objet *actuel*; **_mbsdec** retourne **null** si la valeur de *Start* est supérieure ou égale à celle de l’objet *actuel*. **_tcsdec** est mappé à l’une de ces fonctions et sa valeur de retour dépend du mappage.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_mbsdec** et **_mbsdec_l** retournent un pointeur vers le premier octet du caractère multioctet qui précède immédiatement la valeur *actuelle* dans la chaîne qui contient *Start*.
 
@@ -131,7 +132,7 @@ Pour plus d’informations, consultez [Utilisation de mappages de texte généri
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant illustre une utilisation de **_tcsdec**.
 

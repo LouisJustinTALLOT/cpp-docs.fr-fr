@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3642'
 title: Erreur du compilateur C3642
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 77d65d2bb2c426fe78671328b0eccab739b9dabe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340305"
 ---
 # <a name="compiler-error-c3642"></a>Erreur du compilateur C3642
 
@@ -19,9 +20,9 @@ ms.locfileid: "74742455"
 
 Une fonction marquée avec la Convention d’appel [__clrcall](../../cpp/clrcall.md) ne peut pas être appelée à partir du code natif (non managé).
 
-*return_type/args* est soit le nom de la fonction, soit le type de la fonction `__clrcall` que vous essayez d’appeler.  Un type est utilisé lorsque vous appelez à l’aide d’un pointeur de fonction.
+*return_type/args* est soit le nom de la fonction, soit le type de la `__clrcall` fonction que vous essayez d’appeler.  Un type est utilisé lorsque vous appelez à l’aide d’un pointeur de fonction.
 
-Pour appeler une fonction managée à partir d’un contexte natif, vous pouvez ajouter une fonction « wrapper » qui appellera la fonction `__clrcall`. Ou vous pouvez utiliser le mécanisme de marshaling du CLR. Pour plus d’informations, consultez [Comment : marshaler des pointeurs de fonction à l’aide de PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) .
+Pour appeler une fonction managée à partir d’un contexte natif, vous pouvez ajouter une fonction « wrapper » qui appellera la `__clrcall` fonction. Ou vous pouvez utiliser le mécanisme de marshaling du CLR. Pour plus d’informations, consultez [Comment : marshaler des pointeurs de fonction à l’aide de PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) .
 
 L’exemple suivant génère l’C3642 :
 

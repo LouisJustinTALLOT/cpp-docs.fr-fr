@@ -1,18 +1,19 @@
 ---
-title: parallel_policy, classe
+description: 'En savoir plus sur : classe parallel_policy'
+title: Classe parallel_policy
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_policy
-ms.openlocfilehash: 7bb2b095a50e664dfc585e0bd4aaa608a6ad8e95
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1cead0bcc44256bf7d41d061d592849a7411b057
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340799"
 ---
-# <a name="parallelpolicy-class"></a>parallel_policy, classe
+# <a name="parallel_policy-class"></a>Classe parallel_policy
 
-Utilisé comme un type unique pour lever l’ambiguïté de surcharge de l’algorithme parallèle et d’indiquer que l’exécution d’un algorithme parallèle peut être parallélisée.
+Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et indiquer que l’exécution d’un algorithme parallèle peut être parallélisée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,4 +23,4 @@ class execution::parallel_policy;
 
 ## <a name="remarks"></a>Notes
 
-Pendant l’exécution d’un algorithme parallèle avec le `execution::parallel_policy` stratégie, si l’appel d’une fonction d’accès élément se termine par une exception non interceptée, `terminate()` doit être appelée.
+Lors de l’exécution d’un algorithme parallèle avec la `execution::parallel_policy` stratégie, si l’appel d’une fonction d’accès à un élément se termine par le biais d’une exception non interceptée, `terminate()` doit être appelé.

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classe Path'
 title: path, classe
 ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
-ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
+ms.openlocfilehash: 469d594800036b165f8693162ca11ca161736cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340773"
 ---
 # <a name="path-class"></a>path, classe
 
@@ -51,7 +52,7 @@ class path;
 |[empty](#empty)|Retourne `mypath.empty()`.|
 |[end](#end)|Retourne un itérateur de fin de séquence de type `iterator` .|
 |[extension](#extension)|Retourne le suffixe de `filename()` .|
-|[extension](#filename)|Retourne le composant du répertoire racine de myname, spécifiquement `empty() ? path() : *--end()`. Le composant peut être vide.|
+|[filename](#filename)|Retourne le composant du répertoire racine de myname, spécifiquement `empty() ? path() : *--end()`. Le composant peut être vide.|
 |[generic_string](#generic_string)|Retourne `this->string<Elem, Traits, Alloc>(al)` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
 |[generic_u16string](#generic_u16string)|Retourne `u16string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|
 |[generic_u32string](#generic_u32string)|Retourne `u32string()` avec (sous Windows) les barres obliques inverses converties en barres obliques.|

@@ -1,5 +1,6 @@
 ---
-title: Automatisation
+description: 'En savoir plus sur : Automation'
+title: Automation
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a038a3590c3db9c90c8f99eaaa6f98d2c4e20cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339837"
 ---
-# <a name="automation"></a>Automatisation
+# <a name="automation"></a>Automation
 
 Automation (anciennement appelé OLE Automation) permet à une application de manipuler des objets implémentés dans une autre application, ou d'exposer des objets pour qu'ils puissent être manipulés.
 

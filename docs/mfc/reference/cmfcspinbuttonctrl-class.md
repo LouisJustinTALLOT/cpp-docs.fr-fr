@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCSpinButtonCtrl'
 title: CMFCSpinButtonCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e9abc94247416704ab801beeaa1953c4cceb46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339631"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl, classe
 
-La `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton de spin.
+La `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton toupie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,15 +39,15 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Repeinte le contrôle actuel du bouton de rotation.|
+|[CMFCSpinButtonCtrl :: OnDraw](#ondraw)|Repeint le contrôle de bouton toupie actuel.|
 
 ## <a name="remarks"></a>Notes
 
-Pour utiliser un gestionnaire visuel pour dessiner un contrôle de `CSpinButtonCtrl` bouton de `CMFCSpinButtonCtrl` spin dans votre application, remplacez tous les instances de la classe par la classe.
+Pour utiliser un gestionnaire visuel pour dessiner un contrôle de bouton toupie dans votre application, remplacez toutes les instances de la `CSpinButtonCtrl` classe par la `CMFCSpinButtonCtrl` classe.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer `CMFCSpinButtonCtrl` un objet `Create` de la classe et utiliser sa méthode.
+L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` classe et utiliser sa `Create` méthode.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
@@ -64,11 +65,11 @@ L’exemple suivant montre comment créer `CMFCSpinButtonCtrl` un objet `Create`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxspinbuttonctrl.h
+**En-tête :** afxspinbuttonctrl. h
 
-## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a> CMFCSpinButtonCtrl :: OnDraw
 
-Repeinte le contrôle actuel du bouton de rotation.
+Repeint le contrôle de bouton toupie actuel.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -76,15 +77,15 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*pDC*<br/>
-[dans] Un pointeur vers un contexte d’appareil.
+*Maîtres*<br/>
+dans Pointeur vers un contexte de périphérique (Device Context).
 
 ### <a name="remarks"></a>Notes
 
-Le cadre `CMFCSpinButtonCtrl::OnPaint` appelle la méthode pour gérer le [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) `CMFCSpinButtonCtrl::OnDraw` message, et cette méthode à son tour appelle cette méthode. Remplacer cette méthode pour personnaliser la façon dont le cadre dessine le contrôle du bouton de rotation.
+L’infrastructure appelle la `CMFCSpinButtonCtrl::OnPaint` méthode pour gérer le message [CWnd :: OnPaint](../../mfc/reference/cwnd-class.md#onpaint) , et cette méthode appelle à son tour cette `CMFCSpinButtonCtrl::OnDraw` méthode. Substituez cette méthode pour personnaliser la façon dont l’infrastructure dessine le contrôle spin Button.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+[CMFCVisualManager, classe](../../mfc/reference/cmfcvisualmanager-class.md)

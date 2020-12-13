@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : suppression de travail d’un thread de User-Interface'
 title: "Procédure pas à pas : suppression de travail d'un thread d'interface utilisateur"
 ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 003678f3c79f2abfa7ceb0c67fecd69cf178f442
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 816e8446771cda907397f43386c33476cf3665b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340916"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : suppression de travail d'un thread d'interface utilisateur
 
@@ -34,7 +35,7 @@ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
 
 Nous vous recommandons également de comprendre les principes de base du développement d’applications MFC et de GDI+ avant de commencer cette procédure pas à pas. Pour plus d’informations sur MFC, consultez [applications de bureau MFC](../../mfc/mfc-desktop-applications.md). Pour plus d’informations sur GDI+, consultez [GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Cette procédure pas à pas contient les sections suivantes :
 
@@ -42,13 +43,13 @@ Cette procédure pas à pas contient les sections suivantes :
 
 - [Implémentation de la version série de l’application Mandelbrot](#serial)
 
-- [Suppression du travail du thread d’interface utilisateur](#removing-work)
+- [Suppression du travail du thread User-Interface](#removing-work)
 
 - [Amélioration des performances de dessin](#performance)
 
 - [Ajout de la prise en charge de l’annulation](#cancellation)
 
-## <a name="creating-the-mfc-application"></a><a name="application"></a>Création de l’application MFC
+## <a name="creating-the-mfc-application"></a><a name="application"></a> Création de l’application MFC
 
 Cette section décrit comment créer l’application MFC de base.
 
@@ -64,7 +65,7 @@ Cette section décrit comment créer l’application MFC de base.
 
    Vérifiez que l’application a été créée avec succès en la générant et en l’exécutant. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .
 
-## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a>Implémentation de la version série de l’application Mandelbrot
+## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a> Implémentation de la version série de l’application Mandelbrot
 
 Cette section décrit comment dessiner une fractale de Mandelbrot. Cette version dessine la fractale de Mandelbrot dans un objet [bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) GDI+, puis copie le contenu de cette image bitmap dans la fenêtre cliente.
 
@@ -114,7 +115,7 @@ L’illustration suivante montre les résultats de l’application Mandelbrot.
 
 [[Haut](#top)]
 
-## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a>Suppression du travail du thread d’interface utilisateur
+## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a> Suppression du travail du thread d’interface utilisateur
 
 Cette section montre comment supprimer le travail de dessin du thread d’interface utilisateur dans l’application Mandelbrot. En déplaçant le travail de dessin du thread d’interface utilisateur vers un thread de travail, le thread d’interface utilisateur peut traiter les messages lorsque le thread de travail génère l’image en arrière-plan.
 
@@ -152,7 +153,7 @@ L’interface utilisateur est maintenant plus réactive car le travail de dessin
 
 [[Haut](#top)]
 
-## <a name="improving-drawing-performance"></a><a name="performance"></a>Amélioration des performances de dessin
+## <a name="improving-drawing-performance"></a><a name="performance"></a> Amélioration des performances de dessin
 
 La génération de la fractale Mandelbrot est un bon candidat à la parallélisation, car le calcul de chaque pixel est indépendant de tous les autres calculs. Pour paralléliser la procédure de dessin, convertissez la **`for`** boucle externe de la `CChildView::DrawMandelbrot` méthode en un appel à l’algorithme d' [arallel_for d’accès concurrentiel ::p](reference/concurrency-namespace-functions.md#parallel_for) , comme suit.
 
@@ -162,7 +163,7 @@ La génération de la fractale Mandelbrot est un bon candidat à la parallélisa
 
 [[Haut](#top)]
 
-## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a>Ajout de la prise en charge de l’annulation
+## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a> Ajout de la prise en charge de l’annulation
 
 Cette section décrit comment gérer le redimensionnement de fenêtre et comment annuler des tâches de dessin actives lorsque la fenêtre est détruite.
 

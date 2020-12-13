@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contournement du mécanisme de sérialisation'
 title: Ignorer le mécanisme de sérialisation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: f47cac34f6cdbdae01af98ec28be5af17edf0e25
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 18d31267ca2dd7760daa839556790af26ff38f6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339772"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Ignorer le mécanisme de sérialisation
 

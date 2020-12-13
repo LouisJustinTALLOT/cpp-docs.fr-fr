@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : système de type C++'
 title: Système de type C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 1be39124e51fc2e812ce5a2779ce701d727c81e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339577"
 ---
 # <a name="c-type-system"></a>Système de type C++
 
@@ -106,9 +107,9 @@ Quand vous définissez un **`class`** , **`struct`** , **`union`** ou **`enum`**
 
 ## <a name="pointer-types"></a>Types de pointeur
 
-En revenons aux premières versions du langage C, C++ continue à vous permettre de déclarer une variable d’un type pointeur en utilisant le déclarateur spécial **`*`** (astérisque). Un type pointeur stocke l'adresse de l'emplacement dans la mémoire où la valeur réelle des données est stockée. En C++ moderne, ils sont appelés *pointeurs bruts*et sont accessibles dans votre code par le biais d’opérateurs spéciaux **`*`** (astérisque) ou **`->`** (tiret avec supérieur à). C’est ce que l’on appelle le *déréférencement*et celui que vous utilisez varie selon que vous déréférencez un pointeur vers un scalaire ou un pointeur vers un membre d’un objet. L'utilisation des types pointeur a longtemps été l'un des aspects les plus importants et les plus perturbants du développement de programmes en C et C++. Cette section décrit certains faits et pratiques pour vous aider à utiliser des pointeurs bruts si vous le souhaitez, mais en C++ moderne, il n’est plus nécessaire (ou recommandé) d’utiliser des pointeurs bruts pour la propriété de l’objet, en raison de l’évolution du [pointeur intelligent](../cpp/smart-pointers-modern-cpp.md) (abordé plus loin à la fin de cette section). Il est toujours utile et plus sûr d’utiliser des pointeurs bruts pour observer les objets. Toutefois, si vous devez les utiliser pour la propriété des objets, agissez avec précaution et tenez compte de la façon dont les objets détenus sont créés et détruits.
+En revenons aux premières versions du langage C, C++ continue à vous permettre de déclarer une variable d’un type pointeur en utilisant le déclarateur spécial **`*`** (astérisque). Un type pointeur stocke l'adresse de l'emplacement dans la mémoire où la valeur réelle des données est stockée. En C++ moderne, ils sont appelés *pointeurs bruts* et sont accessibles dans votre code par le biais d’opérateurs spéciaux **`*`** (astérisque) ou **`->`** (tiret avec supérieur à). C’est ce que l’on appelle le *déréférencement* et celui que vous utilisez varie selon que vous déréférencez un pointeur vers un scalaire ou un pointeur vers un membre d’un objet. L'utilisation des types pointeur a longtemps été l'un des aspects les plus importants et les plus perturbants du développement de programmes en C et C++. Cette section décrit certains faits et pratiques pour vous aider à utiliser des pointeurs bruts si vous le souhaitez, mais en C++ moderne, il n’est plus nécessaire (ou recommandé) d’utiliser des pointeurs bruts pour la propriété de l’objet, en raison de l’évolution du [pointeur intelligent](../cpp/smart-pointers-modern-cpp.md) (abordé plus loin à la fin de cette section). Il est toujours utile et plus sûr d’utiliser des pointeurs bruts pour observer les objets. Toutefois, si vous devez les utiliser pour la propriété des objets, agissez avec précaution et tenez compte de la façon dont les objets détenus sont créés et détruits.
 
-La première chose que vous devez savoir est que la déclaration d'une variable pointeur brut alloue uniquement la mémoire requise pour stocker une adresse de l'emplacement mémoire auquel le pointeur fait référence lorsqu'il est déréférencé. L’allocation de la mémoire pour la valeur de données elle-même (également appelée *magasin*de stockage) n’est pas encore allouée. En d'autres termes, lorsque vous déclarez une variable de pointeur brut, vous créez une variable d'adresse mémoire et pas une variable de données réelle. Déréférencer une variable de pointeur avant de s'assurer qu'elle contient une adresse valide pour un magasin de stockage provoque un comportement indéfini (généralement une erreur irrécupérable) dans votre programme. L'exemple suivant illustre ce type d'erreur :
+La première chose que vous devez savoir est que la déclaration d'une variable pointeur brut alloue uniquement la mémoire requise pour stocker une adresse de l'emplacement mémoire auquel le pointeur fait référence lorsqu'il est déréférencé. L’allocation de la mémoire pour la valeur de données elle-même (également appelée *magasin* de stockage) n’est pas encore allouée. En d'autres termes, lorsque vous déclarez une variable de pointeur brut, vous créez une variable d'adresse mémoire et pas une variable de données réelle. Déréférencer une variable de pointeur avant de s'assurer qu'elle contient une adresse valide pour un magasin de stockage provoque un comportement indéfini (généralement une erreur irrécupérable) dans votre programme. L'exemple suivant illustre ce type d'erreur :
 
 ```cpp
 int* pNumber;       // Declare a pointer-to-int variable.

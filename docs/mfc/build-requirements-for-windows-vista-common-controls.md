@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : spécifications de build pour les contrôles communs Windows'
 title: Spécifications de build pour les contrôles communs Windows
 ms.date: 08/19/2019
 helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4d11b4da2fb1ff616ab077390c2d603e76382313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339798"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Spécifications de build pour les contrôles communs Windows
 
@@ -52,6 +53,6 @@ Si vous utilisez l’IDE de Visual Studio pour générer une nouvelle applicatio
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](general-mfc-topics.md)<br/>
+[Rubriques générales sur MFC](general-mfc-topics.md)<br/>
 [Graphique hiérarchique](hierarchy-chart.md)<br/>
-[API ANSI dépréciées](deprecated-ansi-apis.md)
+[API ANSI déconseillées](deprecated-ansi-apis.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : __readgsbyte, __readgsdword, __readgsqword, __readgsword'
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fb1faf0e785f0d0983d7d3611e68a7515298e61c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340968"
 ---
 # <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Lit la mémoire à partir d’un emplacement spécifié par un décalage par rapport au début du segment GS.
 
@@ -47,28 +48,28 @@ unsigned __int64 __readgsqword(
 *Décalage*\
 dans Offset à partir du début de `GS` à lire à partir de.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-Contenu de la mémoire de l’octet, du mot, du mot double ou du mot quadruple (comme indiqué par le nom de la fonction appelée `GS:[Offset]`) à l’emplacement.
+Contenu de la mémoire de l’octet, du mot, du mot double ou du mot quadruple (comme indiqué par le nom de la fonction appelée) à l’emplacement `GS:[Offset]` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__readgsbyte`|X64|
-|`__readgsdword`|X64|
-|`__readgsqword`|X64|
-|`__readgsword`|X64|
+|`__readgsbyte`|x64|
+|`__readgsdword`|x64|
+|`__readgsqword`|x64|
+|`__readgsword`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Ces routines sont uniquement disponibles en tant qu’intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[__writegsbyte, \_ _writegsdword, \_ _writegsqword, \_ _writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)

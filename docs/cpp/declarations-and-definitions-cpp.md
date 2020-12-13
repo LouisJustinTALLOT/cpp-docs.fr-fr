@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : déclarations et définitions (C++)'
 title: Déclarations et définitions (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 688c1960e37fe74edecabebc4cb8090af9d0dd58
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00d86e4df70e150a2e9f2417050b47b943a054ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339512"
 ---
 # <a name="declarations-and-definitions-c"></a>Déclarations et définitions (C++)
 
@@ -44,7 +45,7 @@ namespace N {
 
 À la ligne 9, une variable nommée `obj` de type `C` est déclarée. Toutefois, cette déclaration génère une erreur, car `C` n’est pas déclarée jusqu’à une date ultérieure dans le programme et n’est pas déclarée par progression. Pour corriger l’erreur, vous pouvez soit déplacer la *définition* entière de `C` avant `main` , soit ajouter une déclaration de transfert pour celle-ci. Ce comportement est différent de celui des autres langages tels que C#, dans lesquels les fonctions et les classes peuvent être utilisées avant leur point de déclaration dans un fichier source.
 
-À la ligne 10, une variable nommée `str` de type `std::string` est déclarée. Le nom `std::string` est visible, car il est introduit dans le `string` [fichier d’en-tête](header-files-cpp.md) qui est fusionné dans le fichier source à la ligne 1. `std`est l’espace de noms dans lequel la `string` classe est déclarée.
+À la ligne 10, une variable nommée `str` de type `std::string` est déclarée. Le nom `std::string` est visible, car il est introduit dans le `string` [fichier d’en-tête](header-files-cpp.md) qui est fusionné dans le fichier source à la ligne 1. `std` est l’espace de noms dans lequel la `string` classe est déclarée.
 
 À la ligne 11, une erreur est générée, car le nom n' `j` a pas été déclaré. Une déclaration doit fournir un type, contrairement à d’autres langages tels que javaScript. À la ligne 12, le **`auto`** mot clé est utilisé, ce qui indique au compilateur de déduire le type de `k` en fonction de la valeur avec laquelle il est initialisé. Dans ce cas, le compilateur choisit **`int`** pour le type.  
 
@@ -94,7 +95,7 @@ Dans les versions antérieures de C++, le [`typedef`](aliases-and-typedefs-cpp.m
 
 Un programme C++ peut contenir plusieurs unités de [compilation](header-files-cpp.md). Pour déclarer une entité qui est définie dans une unité de compilation distincte, utilisez le [`extern`](extern-cpp.md) mot clé. Les informations contenues dans la déclaration sont suffisantes pour le compilateur, mais si la définition de l’entité est introuvable dans l’étape de liaison, l’éditeur de liens génère une erreur.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 [Classes de stockage](storage-classes-cpp.md)<br/>
 [`const`](const-cpp.md)<br/>
@@ -102,7 +103,7 @@ Un programme C++ peut contenir plusieurs unités de [compilation](header-files-c
 [`extern`](extern-cpp.md)<br/>
 [Initialiseurs](initializers.md)<br/>
 [Alias et typedefs](aliases-and-typedefs-cpp.md)<br/>
-[`using`déclaré](using-declaration.md)<br/>
+[`using` déclaré](using-declaration.md)<br/>
 [`volatile`](volatile-cpp.md)<br/>
 [`decltype`](decltype-cpp.md)<br/>
 [Attributs en C++](attributes.md)<br/>

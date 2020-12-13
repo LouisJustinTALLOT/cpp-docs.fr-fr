@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les contrôles RichEdit sans fin
 title: Contrôles RichEdit sans marge inférieure
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-ms.openlocfilehash: 567bb5b7f2eb2c203b40b9f1f6add82f5451d672
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ad3f78fb4a5e172c16faf3421b6a9da91d422888
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339811"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Contrôles RichEdit sans marge inférieure
 
@@ -26,4 +27,4 @@ Pour recevoir des messages de notification **EN_REQUESTRESIZE** , vous devez act
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CRichEditCtrl](using-cricheditctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

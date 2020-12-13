@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wcsrtombs_s'
 title: wcsrtombs_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4a25be8bf1c61fec10c54a4ecdb870a383b31e9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910594"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340526"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -80,7 +81,7 @@ Nombre maximal d’octets à stocker dans la mémoire tampon *mbstr* ou [_TRUNCA
 *mbstate*<br/>
 Pointeur vers un objet d’état de conversion **mbstate_t** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
@@ -92,7 +93,7 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
 Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **wcsrtombs_s** convertit une chaîne de caractères larges pointés par *wcstr* en caractères multioctets stockés dans la mémoire tampon pointée par *mbstr*, à l’aide de l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
@@ -108,7 +109,7 @@ Si *Count* correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library
 
 Si **wcsrtombs_s** convertit correctement la chaîne source, elle place la taille en octets de la chaîne convertie, y compris la marque de fin null, dans *&#42;PReturnValue* (le *PReturnValue* fourni n’est pas **null**). Cela se produit même si l’argument *mbstr* est **null** et fournit un moyen de déterminer la taille de mémoire tampon requise. Notez que si *mbstr* a la **valeur null**, *Count* est ignoré.
 
-Si **wcsrtombs_s** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, il place-1 dans * \*pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ**et retourne **EILSEQ**.
+Si **wcsrtombs_s** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, il place-1 dans *\* pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ** et retourne **EILSEQ**.
 
 Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcsrtombs_s** n’est pas défini. **wcsrtombs_s** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
 
@@ -125,7 +126,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 La fonction **wcsrtombs_s** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* a la valeur null.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 // crt_wcsrtombs_s.cpp
@@ -182,7 +183,7 @@ The string was successfully converted.
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

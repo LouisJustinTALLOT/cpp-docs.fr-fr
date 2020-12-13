@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4342'
 title: Avertissement du compilateur (niveau 1) C4342
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f08cf24b0fe429e8b788a20fbcb05d2a8cd8b1d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340018"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Avertissement du compilateur (niveau 1) C4342
 
 changement de comportement : '*Function*'appelé, mais un opérateur de membre a été appelé dans les versions précédentes
 
-Dans les versions de C++ Visual antérieures à visual studio 2002, un membre a été appelé, mais ce comportement a été modifié et le compilateur trouve maintenant la meilleure correspondance dans la portée de l’espace de noms.
+Dans les versions de Visual C++ antérieures à Visual Studio 2002, un membre a été appelé, mais ce comportement a été modifié et le compilateur trouve maintenant la meilleure correspondance dans la portée de l’espace de noms.
 
 Si un opérateur de membre a été trouvé, le compilateur ne tient pas compte des opérateurs de portée d’espace de noms. S’il existe une meilleure correspondance au niveau de la portée de l’espace de noms, le compilateur actuel l’appelle correctement, alors que les compilateurs précédents ne le considèrent pas.
 

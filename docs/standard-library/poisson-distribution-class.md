@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe poisson_distribution'
 title: poisson_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b640517a63665ebec4573da8aff9e537412de589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340669"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution, classe
 
@@ -188,7 +189,7 @@ Distribution for 100 samples:
    17 :
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

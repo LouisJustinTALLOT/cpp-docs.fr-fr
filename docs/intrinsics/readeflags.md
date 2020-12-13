@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __readeflags'
 title: __readeflags
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: 6afdc0f20a3ae72865a80ba2eb7f896f79f63171
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e74864f522ba411f44b4a264e9c0e1fd16aa84ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340994"
 ---
 # <a name="__readeflags"></a>__readeflags
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Lit le registre de l’état du programme et du contrôle (EFLAGS).
 
@@ -34,15 +35,15 @@ Valeur du Registre EFLAGS. La valeur de retour est de 32 bits sur une plateforme
 
 Ces routines sont disponibles uniquement comme intrinsèques.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__readeflags`|x86, x64|
 
-**Fichier d’en-tête** \<Intro. h >
+**Fichier d’en-tête** \<intrin.h>
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe priority_queue'
 title: priority_queue, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 8a1b33e45d066082a0f225067db84a6240e8fc53
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38b8411d20df5275997406b72e050fde803df0fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340643"
 ---
 # <a name="priority_queue-class"></a>priority_queue, classe
 
@@ -97,7 +98,7 @@ Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque s
 
 **Espace de noms :** std
 
-## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue :: container_type
+## <a name="priority_queuecontainer_type"></a><a name="container_type"></a> priority_queue :: container_type
 
 Type qui fournit le conteneur de base à adapter.
 
@@ -115,7 +116,7 @@ Pour plus d’informations sur `Container`, consultez la section Notes de la rub
 
 Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [priority_queue](#priority_queue).
 
-## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue :: Empty
+## <a name="priority_queueempty"></a><a name="empty"></a> priority_queue :: Empty
 
 Teste si un objet priority_queue est vide.
 
@@ -123,7 +124,7 @@ Teste si un objet priority_queue est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le priority_queue est vide ; **`false`** si la priority_queue n’est pas vide.
 
@@ -161,7 +162,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue ::p op
+## <a name="priority_queuepop"></a><a name="pop"></a> priority_queue ::p op
 
 Supprime l’élément le plus grand en haut du priority_queue.
 
@@ -217,7 +218,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue ::p riority_queue
+## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a> priority_queue ::p riority_queue
 
 Construit un priority_queue qui est vide ou qui est une copie d’une plage d’un objet conteneur de base ou d’un autre priority_queue.
 
@@ -376,7 +377,7 @@ int main( )
 }
 ```
 
-## <a name="priority_queuepush"></a><a name="push"></a>priority_queue ::p par émission
+## <a name="priority_queuepush"></a><a name="push"></a> priority_queue ::p par émission
 
 Ajoute un élément à la file d’attente à priorité en fonction de la priorité de l’élément définie par l’opérateur <.
 
@@ -425,7 +426,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuesize"></a><a name="size"></a>priority_queue :: Size
+## <a name="priority_queuesize"></a><a name="size"></a> priority_queue :: Size
 
 Retourne le nombre d’éléments figurant dans le priority_queue.
 
@@ -433,7 +434,7 @@ Retourne le nombre d’éléments figurant dans le priority_queue.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du priority_queue.
 
@@ -466,7 +467,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue :: size_type
+## <a name="priority_queuesize_type"></a><a name="size_type"></a> priority_queue :: size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments dans un priority_queue.
 
@@ -482,7 +483,7 @@ Le type est un synonyme du `size_type` pour le conteneur de base adapté par le 
 
 Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [size](#size).
 
-## <a name="priority_queuetop"></a><a name="top"></a>priority_queue :: Top
+## <a name="priority_queuetop"></a><a name="top"></a> priority_queue :: Top
 
 Retourne une référence à l'élément le plus grand en haut de la file d'attente priority_queue.
 
@@ -490,7 +491,7 @@ Retourne une référence à l'élément le plus grand en haut de la file d'atten
 const_reference top() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’élément le plus grand, tel que déterminé par la `Traits` fonction, objet du priority_queue.
 
@@ -530,7 +531,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue :: value_type
+## <a name="priority_queuevalue_type"></a><a name="value_type"></a> priority_queue :: value_type
 
 Type qui représente le type de l’objet stocké comme élément dans un priority_queue.
 

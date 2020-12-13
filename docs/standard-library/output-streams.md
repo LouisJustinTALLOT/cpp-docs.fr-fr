@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les flux de sortie
 title: Flux de sortie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ec09a6bee1bcd2f329522b61950f3d051fb57889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340864"
 ---
 # <a name="output-streams"></a>Flux de sortie
 
@@ -23,7 +24,7 @@ La classe `ostream`, via la classe dérivée `basic_ostream`, prend en charge le
 
 - Objet `clog` semblable à `cerr`, mais avec une mise en mémoire tampon complète
 
-Les objets sont rarement construits à partir de la classe `ostream`. Les objets prédéfinis sont généralement utilisés. Dans certains cas, vous pouvez réassigner les objets prédéfinis après le démarrage du programme. La classe `ostream` peut être configurée pour des opérations avec ou sans mise en mémoire tampon. Son utilisation est recommandée pour la sortie séquentielle en mode texte. Toutes les fonctionnalités de la classe de base `ios` sont incluses dans `ostream`. Si vous construisez un objet de classe `ostream`, vous devez spécifier un objet `streambuf` pour le constructeur.
+Les objets sont rarement construits à partir de la classe `ostream`. Les objets prédéfinis sont généralement utilisés. Dans certains cas, vous pouvez réassigner les objets prédéfinis après le démarrage du programme. La classe `ostream` peut être configurée pour des opérations avec ou sans mise en mémoire tampon. Son utilisation est recommandée pour la sortie séquentielle en mode texte. Toutes les fonctionnalités de la classe de base, `ios`, sont incluses dans `ostream`. Si vous construisez un objet de classe `ostream`, vous devez spécifier un objet `streambuf` pour le constructeur.
 
 La classe `ofstream` prend en charge la sortie de fichier de disque. Si vous devez utiliser un disque de sortie uniquement, construisez un objet de classe `ofstream`. Vous pouvez spécifier si les objets `ofstream` acceptent les données binaires ou en mode texte lors de la construction de l’objet `ofstream` ou lors de l’appel de la fonction membre `open` de l’objet. De nombreuses fonctions membres et options de mise en forme s’appliquent aux objets `ofstream`, et toutes les fonctionnalités des classes de base `ios` et `ostream` sont fournies.
 
@@ -37,7 +38,7 @@ De la même façon que la fonction runtime `sprintf_s`, la classe `ostringstream
 
 [Utilisation des opérateurs d’insertion et contrôle du format](../standard-library/using-insertion-operators-and-controlling-format.md)
 
-[Fonctions membres de flux de fichiers de sortie](../standard-library/output-file-stream-member-functions.md)
+[Fonctions membres de flux de fichier de sortie](../standard-library/output-file-stream-member-functions.md)
 
 [Effets de la mise en mémoire tampon](../standard-library/effects-of-buffering.md)
 
@@ -45,7 +46,7 @@ De la même façon que la fonction runtime `sprintf_s`, la classe `ostringstream
 
 [Surcharge de l’opérateur << pour vos propres classes](../standard-library/overloading-the-output-operator-for-your-own-classes.md)
 
-[Écrire vos propres manipulateurs sans arguments](../standard-library/writing-your-own-manipulators-without-arguments.md)
+[Écriture de vos propres manipulateurs sans arguments](../standard-library/writing-your-own-manipulators-without-arguments.md)
 
 ## <a name="see-also"></a>Voir aussi
 

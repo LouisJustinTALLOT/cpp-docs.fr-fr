@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct plus'
 title: plus, struct
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4b821da3f31255b71730d0f8c800450141d7c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340721"
 ---
 # <a name="plus-struct"></a>plus, struct
 
@@ -43,12 +44,12 @@ struct plus<void>
 Tout type qui prend en charge un `operator+` binaire qui accepte des opérandes des types spécifiés ou déduits.
 
 *Gauche*\
-Opérande gauche de l’opération d’addition. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *T*déduit .
+Opérande gauche de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération d’addition. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *inféré U*.
+Opérande droit de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left + Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par un `operator+` binaire.
 

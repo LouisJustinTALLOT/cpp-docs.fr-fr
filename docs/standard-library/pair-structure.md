@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure de paires'
 title: pair, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 052dd0e95125726f377e9d74585cfad6cc7e8c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340812"
 ---
 # <a name="pair-structure"></a>pair, structure
 
@@ -78,7 +79,7 @@ Le troisième constructeur (modèle) Initialise le premier élément de la paire
 
 Le quatrième constructeur initialise le premier élément de la paire à *val1* et le second à *val2* à l’aide du [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Il est défini si les deux types de la paire sont constructible à partir des types de valeur fournis.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La structure de modèle stocke une paire d’objets de type `T1` et `T2` , respectivement. Le type `first_type` est le même que le paramètre de modèle `T1` et le type `second_type` est le même que le paramètre de modèle `T2` . `T1` et `T2` chaque besoin doit fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un **`struct`** plutôt que comme un **`class`** . Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Ce dernier répond à la configuration requise pour un conteneur associatif de paires et a un type de valeur de la forme `pair< const key_type, mapped_type >` .
 

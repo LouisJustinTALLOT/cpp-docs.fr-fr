@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : decltype (C++)'
 title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e581436a43fc9632961fcb888dfb0b23974fc2df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339499"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -29,7 +30,7 @@ Le **`decltype`** spécificateur de type produit le type d’une expression spé
 *formule*\
 Expression. Pour plus d’informations, consultez [expressions](../cpp/expressions-cpp.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Type du paramètre d' *expression* .
 
@@ -56,7 +57,7 @@ const A* a = new A();
 
 Examinez ensuite les types retournés par les quatre **`decltype`** instructions dans le tableau suivant.
 
-|Instruction|Type|Notes|
+|.|Type|Notes|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|[Référence rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) à un **`const int`** .|
 |`decltype(var);`|**`int`**|Type de la variable `var`.|
@@ -78,7 +79,7 @@ L’introduction du **`decltype`** spécificateur de type permet à un développ
 
 Le prototype suivant illustre la syntaxe d'une autre déclaration de fonction. Notez que les **`const`** **`volatile`** qualificateurs et et la **`throw`** [spécification d’exception](../cpp/exception-specifications-throw-cpp.md) sont facultatifs. L’espace réservé *function_body* représente une instruction composée qui spécifie ce que fait la fonction. Pour une meilleure pratique de codage, l’espace réservé d' *expression* dans l' **`decltype`** instruction doit correspondre à l’expression spécifiée par l' **`return`** instruction, le cas échéant, dans la *function_body*.
 
-**`auto`***function_name* **`(`** *paramètres*<sub>OPT opt opt</sub> **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *expression* opt **`)`** **`noexcept`** <sub>opt</sub> **`{`** *function_body***`};`**
+**`auto`***function_name* **`(`** *paramètres*<sub>OPT opt opt</sub> **`)`** **`const`** <sub></sub> **`volatile`** <sub></sub> **`->`** **`decltype(`** *expression* opt **`)`** **`noexcept`** <sub></sub> **`{`** *function_body***`};`**
 
 Dans l'exemple de code suivant, le type de retour spécifié à la fin de la fonction de modèle `myFunc` est déterminé par les types des arguments template de `t` et de `u`. Pour une meilleure pratique de codage, l’exemple de code utilise également des références rvalue et le `forward` modèle de fonction, qui prend en charge le *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 

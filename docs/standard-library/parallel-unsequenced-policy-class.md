@@ -1,18 +1,19 @@
 ---
-title: parallel_unsequenced_policy, classe
+description: 'En savoir plus sur : classe parallel_unsequenced_policy'
+title: Classe parallel_unsequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_unsequenced_policy
-ms.openlocfilehash: 92b4e3ce3743fdd3d5ba112a333b2306829b95d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e39edc0979bf1374bc6092dbadb032811180f668
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340786"
 ---
-# <a name="parallelunsequencedpolicy-class"></a>parallel_unsequenced_policy, classe
+# <a name="parallel_unsequenced_policy-class"></a>Classe parallel_unsequenced_policy
 
-Utilisé comme un type unique pour lever l’ambiguïté de surcharge de l’algorithme parallèle et d’indiquer que l’exécution d’un algorithme parallèle peut être parallélisée et vectorisée.
+Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et indiquer que l’exécution d’un algorithme parallèle peut être parallélisée et vectorisé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,4 +23,4 @@ class execution::parallel_unsequenced_policy;
 
 ## <a name="remarks"></a>Notes
 
-Pendant l’exécution d’un algorithme parallèle avec le `execution::parallel_unsequenced_policy` stratégie, si l’appel d’une fonction d’accès élément se termine par une exception non interceptée, `terminate()` doit être appelée.
+Lors de l’exécution d’un algorithme parallèle avec la `execution::parallel_unsequenced_policy` stratégie, si l’appel d’une fonction d’accès à un élément se termine par le biais d’une exception non interceptée, `terminate()` doit être appelé.

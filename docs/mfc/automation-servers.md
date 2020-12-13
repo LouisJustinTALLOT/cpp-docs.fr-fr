@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : serveurs Automation'
 title: Serveurs Automation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 4c2ef77e20b7dccfa8cd6830c090111601331642
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e97bcf524b96e459cd1a3caddec7cdaf0c030962
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339824"
 ---
 # <a name="automation-servers"></a>Serveurs Automation
 
@@ -27,7 +28,7 @@ Ces objets Automation possèdent des propriétés et des méthodes qui leur serv
 
 En exposant des fonctionnalités d'application via une interface commune et bien définie, Automation permet de générer des applications dans un seul langage de programmation général, tel que Microsoft Visual Basic, et non pas dans des langages macros spécifiques à chaque application.
 
-## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a>Prise en charge des serveurs Automation
+## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a> Prise en charge des serveurs Automation
 
 Visual C++ et le framework MFC fournissent la prise en charge complète des serveurs Automation. Ils gèrent une grande partie de la charge mémoire générée par un serveur Automation, donc vous pouvez concentrer vos efforts sur la fonctionnalité de votre application.
 

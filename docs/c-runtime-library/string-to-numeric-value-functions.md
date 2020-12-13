@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les fonctions de type chaîne en valeur numérique
 title: Fonctions de valeur chaîne en valeur numérique
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: b4936e09de5ee26356b71b66154071a93e252b6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f560c83c8ae8d510b70804540e5360982770773c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339564"
 ---
 # <a name="string-to-numeric-value-functions"></a>Fonctions de valeur chaîne en valeur numérique
 
@@ -68,7 +69,7 @@ Les fonctions `strtol`, `strtoul`, `_strtoi64` et `_strtoui64` attendent une cha
 
 [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [ `digits` ]
 
-Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul`et `_strtoui64` autorisent un **+** préfixe de signe plus () ou moins ( **-** ); un signe moins de début indique que la valeur de retour est négative.
+Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul` et `_strtoui64` autorisent un **+** préfixe de signe plus () ou moins ( **-** ); un signe moins de début indique que la valeur de retour est négative.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.
 
@@ -87,7 +88,7 @@ Lorsque la valeur retournée par ces fonctions provoque un dépassement de capac
 |`_strtoui64`|Dépassement|**_UI64_MAX**|
 |`_strtoui64`|Aucune conversion|0|
 
-**_I64_MAX**, _**I64_MIN** et **_UI64_MAX** sont définis dans LIMITS.H.
+**_I64_MAX**, _ **I64_MIN** et **_UI64_MAX** sont définis dans LIMITS.H.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` et `_wcstoui64` sont des versions à caractères larges de `strtod`, `strtol`, `strtoul`, `_strtoi64` et `_strtoui64`, respectivement ; le pointeur vers un argument de fin de conversion de chacune de ces fonctions de caractères larges est une chaîne à caractères larges. Sinon, chacune de ces fonctions de caractères larges se comporte comme son caractère homologue codé sur un octet.
 
@@ -95,6 +96,6 @@ Lorsque la valeur retournée par ces fonctions provoque un dépassement de capac
 
 [Conversion de données](../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Prise en charge de la virgule flottante](../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

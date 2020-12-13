@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __min'
 title: __min
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 337d4fc7226044e41a616dc6da8230e013b2702d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340578"
 ---
 # <a name="__min"></a>__min
 
@@ -50,7 +51,7 @@ Macro de préprocesseur qui retourne la plus petite de deux valeurs.
 *a*, *b*<br/>
 Valeurs de n’importe quel type **<** sur lequel l’opérateur travaille.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Le plus petit des deux arguments.
 
@@ -58,9 +59,9 @@ Le plus petit des deux arguments.
 
 La macro **__min** compare deux valeurs et retourne la valeur de la plus petite. Les arguments peuvent être de n’importe quel type de données numérique, signé ou non signé. Les deux arguments et la valeur de retour doivent être du même type de données.
 
-L’argument retourné est évalué deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lors de son évaluation, par `*p++`exemple.
+L’argument retourné est évalué deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lors de son évaluation, par exemple `*p++` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

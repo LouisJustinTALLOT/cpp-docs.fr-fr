@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wcsrtombs'
 title: wcsrtombs
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: cad31f28c5542a96eae9f144344882b71806052a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34fabe44c0e239eba4201b180df026655a4277f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340505"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -71,11 +72,11 @@ Nombre de caractères à convertir.
 *mbstate*<br/>
 Pointeur vers un objet d’état de conversion **mbstate_t** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre d’octets correctement convertis, sans l’octet Null de fin (le cas échéant) ou -1 si une erreur s’est produite.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **wcsrtombs** convertit une chaîne de caractères larges, en commençant dans l’état de conversion spécifié contenu dans *mbstate*, à partir des valeurs indirectes pointées vers *wcstr*, dans l’adresse de *mbstr*. La conversion se poursuit pour chaque caractère jusqu’à : après la détection d’un caractère élargi de fin null, lorsqu’un caractère non correspondant est rencontré ou lorsque le caractère suivant dépasse la limite contenue dans *Count*. Si **wcsrtombs** rencontre le caractère null à caractères larges (L' \ 0 ') avant ou quand *Count* se produit, il le convertit en un 0 8 bits et s’arrête.
 
@@ -93,7 +94,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 La fonction **wcsrtombs** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* n’a pas la valeur null.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 // crt_wcsrtombs.cpp
@@ -149,7 +150,7 @@ The string was successfuly converted.
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
