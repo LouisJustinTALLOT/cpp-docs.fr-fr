@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : technologie active sur Internet'
 title: Technologie active sur Internet
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 2cd087c99c1ebdcaa8b4a44524e7691984877f20
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4f8035e0af233eac55c00a84679f79d214978219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150239"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologie active sur Internet
 
@@ -38,4 +39,4 @@ Les extensions HTML, telles que la balise Object, ont été ajoutées pour prend
 
 [Concepts de base de la programmation Internet MFC](mfc-internet-programming-basics.md)<br/>
 [Contrôles ActiveX sur Internet](activex-controls-on-the-internet.md)<br/>
-[Extension Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)
+[Extensions Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)

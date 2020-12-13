@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les macros variadiques
 title: Variadiques, macros
 ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 876e0ca46dd8774796c8a4f9d7572cbff5caa93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149654"
 ---
 # <a name="variadic-macros"></a>Variadiques, macros
 
@@ -20,7 +21,7 @@ Les macros variadiques sont des macros de type fonction qui contiennent un nombr
 
 Pour utiliser les macros variadiques, les points de suspension peuvent être spécifiés comme argument formel final dans une définition de macro, et l’identificateur de remplacement `__VA_ARGS__` peut être utilisé dans la définition pour insérer les arguments supplémentaires.  `__VA_ARGS__` est remplacé par tous les arguments qui correspondent aux points de suspension, y compris les virgules entre eux.
 
-La norme C spécifie qu’au moins un argument doit être passé aux points de suspension, pour garantir que la macro n’est pas résolue en une expression avec une virgule de fin. L’implémentation Microsoft C++ traditionnelle supprime une virgule de fin si aucun argument n’est passé aux points de suspension. Lorsque l’option de compilateur `/experimental:preprocessor` est définie, la virgule de fin n’est pas supprimée.
+La norme C spécifie qu’au moins un argument doit être passé aux points de suspension, pour garantir que la macro n’est pas résolue en une expression avec une virgule de fin. L’implémentation traditionnelle de Microsoft C++ supprime une virgule de fin si aucun argument n’est passé aux points de suspension. Lorsque l' `/experimental:preprocessor` option de compilateur est définie, la virgule de fin n’est pas supprimée.
 
 ## <a name="example"></a>Exemple
 

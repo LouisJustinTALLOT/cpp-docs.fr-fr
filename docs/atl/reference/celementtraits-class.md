@@ -1,5 +1,6 @@
 ---
-title: Celementtraits, classe
+description: 'En savoir plus sur : classe CElementTraits'
+title: CElementTraits, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CElementTraits
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
-ms.openlocfilehash: 646b445aed93c9041932c60442f61792f5e1a7e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcb6c9da2bca733efe68b634eebd7f379ba0d10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141802"
 ---
-# <a name="celementtraits-class"></a>Celementtraits, classe
+# <a name="celementtraits-class"></a>CElementTraits, classe
 
-Cette classe est utilisée par les classes de collection pour fournir des fonctions et méthodes pour déplacer, copier, de comparaison et opérations de hachage.
+Cette classe est utilisée par les classes de collection pour fournir des méthodes et des fonctions pour les opérations de déplacement, de copie, de comparaison et de hachage.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,21 +29,21 @@ class CElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de données à stocker dans la collection.
+Type de données à stocker dans la collection.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des méthodes et des fonctions statiques par défaut pour le déplacement, la copie, la comparaison et de hachage des éléments stockés dans un objet de classe de collection. `CElementTraits` est spécifié en tant que le fournisseur par défaut de ces opérations par les classes de collection [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), et [CRBTree](../../atl/reference/crbtree-class.md).
+Cette classe fournit des fonctions et des méthodes statiques par défaut pour déplacer, copier, comparer et hacher des éléments stockés dans un objet de classe de collection. `CElementTraits` est spécifié comme fournisseur par défaut de ces opérations par les classes de collection [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md)et [CRBTree](../../atl/reference/crbtree-class.md).
 
-Les implémentations par défaut seront suffisante pour les types de données simples, mais si les classes de collection sont utilisés pour stocker des objets plus complexes, les fonctions et les méthodes doivent être remplacées par les implémentations fournies par l’utilisateur.
+Les implémentations par défaut sont suffisantes pour les types de données simples, mais si les classes de collection sont utilisées pour stocker des objets plus complexes, les fonctions et les méthodes doivent être substituées par les implémentations fournies par l’utilisateur.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête :** atlcoll. h
 
 ## <a name="see-also"></a>Voir aussi
 
 [CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

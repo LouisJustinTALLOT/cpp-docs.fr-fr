@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : documents actifs'
 title: Documents actifs
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: bfe91dcb42b97ddfbb0bf0be36a54b45e6dc0809
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cae0eda775670867d5e36b4f2b9ec895a5dc3eb7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150304"
 ---
 # <a name="active-documents"></a>Documents actifs
 
@@ -45,7 +46,7 @@ Chaque document actif doit avoir un fournisseur de frame de vue avec cette inter
 
 Un document actif peut créer un ou plusieurs types de [vues](#requirements_for_view_objects) de ses données (par exemple, normal, plan, mise en page, etc.). Les vues agissent comme des filtres dans lesquels les données peuvent être affichées. Même si le document n’a qu’un seul type de vue, vous souhaiterez peut-être toujours prendre en charge plusieurs vues comme un moyen de prendre en charge les nouvelles fonctionnalités de fenêtre (par exemple, le nouvel élément de **fenêtre** dans le menu **fenêtre** des applications Office).
 
-## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a>Conditions requises pour les documents actifs
+## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a> Conditions requises pour les documents actifs
 
 Un document actif qui peut être affiché dans un conteneur de documents actifs doit :
 
@@ -59,9 +60,9 @@ Un document actif qui peut être affiché dans un conteneur de documents actifs 
 
 Savoir quand et comment utiliser les interfaces côté conteneur est nécessaire pour les exigences.
 
-## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a>Conditions requises pour les objets de vue
+## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a> Conditions requises pour les objets de vue
 
-Un document actif peut créer une ou plusieurs vues de ses données. Fonctionnellement, ces vues sont comme les ports d'une méthode particulière permettant d'afficher les données. Si un document actif ne prend en charge qu'une vue, le document actif et cette vue peuvent être implémentés en utilisant une seule classe. `IOleDocument::CreateView`retourne le pointeur d’interface de cet objet `IOleDocumentView` .
+Un document actif peut créer une ou plusieurs vues de ses données. Fonctionnellement, ces vues sont comme les ports d'une méthode particulière permettant d'afficher les données. Si un document actif ne prend en charge qu'une vue, le document actif et cette vue peuvent être implémentés en utilisant une seule classe. `IOleDocument::CreateView` retourne le pointeur d’interface de cet objet `IOleDocumentView` .
 
 Pour être représenté dans un conteneur de documents actifs, un composant de vue doit prendre en charge `IOleInPlaceObject` et `IOleInPlaceActiveObject` en plus des `IOleDocumentView` éléments suivants :
 
@@ -94,10 +95,10 @@ Chaque vue a un site de vue associé, qui encapsule le frame de la vue et le por
 
 En général, chaque type de vue a une représentation affichée différente. Par conséquent les vues et les sites de correspondance de vue doivent implémenter les interfaces d'impression si `IPrint` et `IContinueCallback`, respectivement. Le frame de vue doit négocier avec le fournisseur d’affichage par le biais de `IPrint` lorsque l’impression commence, afin que les en-têtes, les pieds de page, les marges et les éléments associés soient correctement imprimés. Le fournisseur d'affichage notifie le frame des événements liés à l'impression via `IContinueCallback`. Pour plus d’informations sur l’utilisation de ces interfaces, consultez [impression par programmation](programmatic-printing.md).
 
-Notez que si un document actif ne prend en charge qu'une vue, le document actif et cette vue peuvent être implémentés en utilisant une seule classe concrète. `IOleDocument::CreateView`retourne simplement le pointeur d’interface de cet objet `IOleDocumentView` . En bref, il n'est pas nécessaire d'avoir deux instances d'objet distinctes lorsqu'une seule vue est requise.
+Notez que si un document actif ne prend en charge qu'une vue, le document actif et cette vue peuvent être implémentés en utilisant une seule classe concrète. `IOleDocument::CreateView` retourne simplement le pointeur d’interface de cet objet `IOleDocumentView` . En bref, il n'est pas nécessaire d'avoir deux instances d'objet distinctes lorsqu'une seule vue est requise.
 
 Un objet de vue peut également être une cible de commande. En implémentant `IOleCommandTarget` une vue, vous pouvez recevoir des commandes qui proviennent de l’interface utilisateur du conteneur (par exemple, **nouveau**, **ouvrir**, **Enregistrer sous**, **Imprimer** dans le menu **fichier** et **copier**, **coller**, **Annuler** dans le menu **Edition** ). Pour plus d’informations, consultez [gestion des messages et cibles des commandes](message-handling-and-command-targets.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Documents actifs (contenance)](active-document-containment.md)
+[Relation contenant-contenu de document actif](active-document-containment.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes OLE'
 title: Classes OLE
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96b3a45b60a1b229daa73e4f896a867ec4921715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150174"
 ---
 # <a name="ole-classes"></a>Classes OLE
 
@@ -36,7 +37,7 @@ Les catégories de classes suivantes prennent en charge ActiveX :
 
 - [Classes de serveur OLE](ole-server-classes.md)
 
-- [Classes de glisser-déplacer OLE et de transfert de données](ole-drag-and-drop-and-data-transfer-classes.md)
+- [Classes de Transfert de données et de glisser-déplacer OLE](ole-drag-and-drop-and-data-transfer-classes.md)
 
 - [Classes de boîtes de dialogue communes OLE](ole-common-dialog-classes.md)
 

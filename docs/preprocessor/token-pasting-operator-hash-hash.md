@@ -1,5 +1,6 @@
 ---
-title: 'Opérateur de collage de jeton (# #)'
+description: 'En savoir plus sur : opérateur de collage de jeton (# #)'
+title: Opérateur de collage de jeton (##)
 ms.date: 08/29/2019
 f1_keywords:
 - '##'
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-ms.openlocfilehash: 4bf1b8c8f56ab9375503c9e8fb6a906706fc70bb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 3bad0a615fdf7c0b3e1e54d16c25e37bf495072c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149667"
 ---
-# <a name="token-pasting-operator-"></a>Opérateur de collage de jeton (# #)
+# <a name="token-pasting-operator-"></a>Opérateur de collage de jeton (##)
 
 Le signe double-dièse ou l’opérateur de *collage de jeton* ( **##** ), qui est parfois appelé opérateur de *fusion* ou de *combinaison* , est utilisé à la fois dans les macros de type objet et de type fonction. Il permet de joindre des jetons distincts à un jeton unique et, par conséquent, ne peut pas être le premier ou le dernier jeton dans la définition de macro.
 

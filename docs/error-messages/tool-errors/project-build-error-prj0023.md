@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur de génération de projet projet PRJ0023'
 title: Erreur de génération de projet PRJ0023
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-ms.openlocfilehash: 7763ca1d21a13c845e9cd7277d513cca431a9900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b11210f3509f0935e67e5002de1cbc81105ae03c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150512"
 ---
 # <a name="project-build-error-prj0023"></a>Erreur de génération de projet PRJ0023
 
@@ -21,4 +22,4 @@ Le *fichier* de nom de fichier spécifié pour *l’outil outil n’est* pas val
 
 Vous avez peut-être utilisé une macro inconnue ou non valide.
 
-Pour plus d’informations sur la façon d’accéder aux propriétés de votre projet, consultez [définition des propriétés de projet visuel C++ ](../../build/working-with-project-properties.md) .
+Pour plus d’informations sur la façon d’accéder aux propriétés de votre projet, consultez [définition des propriétés de projet Visual C++](../../build/working-with-project-properties.md) .

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur de génération de projet projet PRJ0022'
 title: Erreur de génération de projet PRJ0022
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0022
 ms.assetid: 691344a8-fc70-4aeb-9372-dde72f4588a4
-ms.openlocfilehash: dc5a676baaa3d24516843f2fc0be25f6390826b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8b19b8702f4bee57586494d9e9ee7ad4ee2b4eed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150538"
 ---
 # <a name="project-build-error-prj0022"></a>Erreur de génération de projet PRJ0022
 
@@ -21,4 +22,4 @@ Le *fichier* de nom de fichier spécifié dans la *propriété* Property n’ét
 
 Vous avez peut-être utilisé une macro inconnue ou non valide.
 
-Pour plus d’informations sur la façon d’accéder aux propriétés de votre projet, consultez [définition des propriétés de projet visuel C++ ](../../build/working-with-project-properties.md) .
+Pour plus d’informations sur la façon d’accéder aux propriétés de votre projet, consultez [définition des propriétés de projet Visual C++](../../build/working-with-project-properties.md) .

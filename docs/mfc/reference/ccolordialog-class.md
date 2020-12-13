@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CColorDialog'
 title: CColorDialog, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 54fd987d683a9236531baee3afbb9ee61be623e2
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: d9af49d4986f0619211ed4fd2dc9174acea27d0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150135"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog, classe
 
 Vous permet d’incorporer une boîte de dialogue de sélection de couleurs à votre application.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 class CColorDialog : public CCommonDialog
@@ -66,7 +67,7 @@ class CColorDialog : public CCommonDialog
 |----------|-----------------|
 |[CColorDialog :: m_cc](#m_cc)|Structure utilisée pour personnaliser les paramètres de la boîte de dialogue.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Un `CColorDialog` objet est une boîte de dialogue avec une liste des couleurs définies pour le système d’affichage. L’utilisateur peut sélectionner ou créer une couleur particulière dans la liste, qui est ensuite renvoyée à l’application lorsque la boîte de dialogue s’arrête.
 
@@ -74,13 +75,13 @@ Pour construire un `CColorDialog` objet, utilisez le constructeur fourni ou dér
 
 Une fois la boîte de dialogue construite, vous pouvez définir ou modifier les valeurs de la structure [m_cc](#m_cc) pour initialiser les valeurs des contrôles de la boîte de dialogue. La structure *m_cc* est de type [les ChooseColor.](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1).
 
-Après l’initialisation des contrôles de la boîte de dialogue, appelez la `DoModal` fonction membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner une couleur. `DoModal`retourne la sélection de l’utilisateur du bouton OK (IDOK) ou CANCEL (IDCANCEL) de la boîte de dialogue.
+Après l’initialisation des contrôles de la boîte de dialogue, appelez la `DoModal` fonction membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner une couleur. `DoModal` retourne la sélection de l’utilisateur du bouton OK (IDOK) ou CANCEL (IDCANCEL) de la boîte de dialogue.
 
 Si `DoModal` retourne IDOK, vous pouvez utiliser l’une des `CColorDialog` fonctions membres de pour récupérer les informations entrées par l’utilisateur.
 
 Vous pouvez utiliser la fonction [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur.
 
-`CColorDialog`s’appuie sur le fichier de COMMDLG.DLL fourni avec les versions de Windows 3,1 et ultérieures.
+`CColorDialog` s’appuie sur le fichier de COMMDLG.DLL fourni avec les versions de Windows 3,1 et ultérieures.
 
 Pour personnaliser la boîte de dialogue, dérivez une classe de `CColorDialog` , fournissez un modèle de boîte de dialogue personnalisé et ajoutez une table des messages pour traiter les messages de notification des contrôles étendus. Tous les messages non traités doivent être passés à la classe de base.
 
@@ -109,7 +110,7 @@ Pour plus d’informations sur l’utilisation de `CColorDialog` , consultez [cl
 
 **En-tête :** afxdlgs. h
 
-## <a name="ccolordialogccolordialog"></a><a name="ccolordialog"></a>CColorDialog::CColorDialog
+## <a name="ccolordialogccolordialog"></a><a name="ccolordialog"></a> CColorDialog::CColorDialog
 
 Construit un objet `CColorDialog`.
 
@@ -135,7 +136,7 @@ Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.
 
 [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]
 
-## <a name="ccolordialogdomodal"></a><a name="domodal"></a>CColorDialog ::D oModal
+## <a name="ccolordialogdomodal"></a><a name="domodal"></a> CColorDialog ::D oModal
 
 Appelez cette fonction pour afficher la boîte de dialogue couleur commune Windows et permettre à l’utilisateur de sélectionner une couleur.
 
@@ -149,7 +150,7 @@ IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction [CommDlgExtende
 
 IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou annuler.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous souhaitez initialiser les différentes options de boîte de dialogue de couleur en définissant les membres de la structure [m_cc](#m_cc) , vous devez effectuer cette opération avant d’appeler, `DoModal` mais après la construction de l’objet de boîte de dialogue.
 
@@ -159,7 +160,7 @@ Après avoir appelé `DoModal` , vous pouvez appeler d’autres fonctions membre
 
   Consultez l’exemple de [CColorDialog :: CColorDialog](#ccolordialog).
 
-## <a name="ccolordialoggetcolor"></a><a name="getcolor"></a>CColorDialog :: GetColor
+## <a name="ccolordialoggetcolor"></a><a name="getcolor"></a> CColorDialog :: GetColor
 
 Appelez cette fonction après avoir appelé `DoModal` pour récupérer les informations sur la couleur sélectionnée par l’utilisateur.
 
@@ -175,9 +176,9 @@ Valeur [COLORREF](/windows/win32/gdi/colorref) qui contient les informations RVB
 
 [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]
 
-## <a name="ccolordialoggetsavedcustomcolors"></a><a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors
+## <a name="ccolordialoggetsavedcustomcolors"></a><a name="getsavedcustomcolors"></a> CColorDialog::GetSavedCustomColors
 
-`CColorDialog`les objets permettent à l’utilisateur, en plus de choisir des couleurs, de définir jusqu’à 16 couleurs personnalisées.
+`CColorDialog` les objets permettent à l’utilisateur, en plus de choisir des couleurs, de définir jusqu’à 16 couleurs personnalisées.
 
 ```
 static COLORREF* PASCAL GetSavedCustomColors();
@@ -187,7 +188,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
 
 Pointeur vers un tableau de 16 valeurs de couleur RVB qui stocke les couleurs personnalisées créées par l’utilisateur.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `GetSavedCustomColors` fonction membre donne accès à ces couleurs. Ces couleurs peuvent être récupérées une fois que [DoModal](#domodal) retourne IDOK.
 
@@ -197,7 +198,7 @@ Chacune des 16 valeurs RVB dans le tableau retourné est initialisée à RGB (25
 
 [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]
 
-## <a name="ccolordialogm_cc"></a><a name="m_cc"></a>CColorDialog :: m_cc
+## <a name="ccolordialogm_cc"></a><a name="m_cc"></a> CColorDialog :: m_cc
 
 Structure de type [les ChooseColor.](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1), dont les membres stockent les caractéristiques et les valeurs de la boîte de dialogue.
 
@@ -205,7 +206,7 @@ Structure de type [les ChooseColor.](/windows/win32/api/commdlg/ns-commdlg-choos
 CHOOSECOLOR m_cc;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Après avoir construit un `CColorDialog` objet, vous pouvez utiliser *m_cc* pour définir différents aspects de la boîte de dialogue avant d’appeler la fonction membre [DoModal](#domodal) .
 
@@ -213,7 +214,7 @@ Après avoir construit un `CColorDialog` objet, vous pouvez utiliser *m_cc* pour
 
 [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]
 
-## <a name="ccolordialogoncolorok"></a><a name="oncolorok"></a>CColorDialog::OnColorOK
+## <a name="ccolordialogoncolorok"></a><a name="oncolorok"></a> CColorDialog::OnColorOK
 
 Substituez pour valider la couleur entrée dans la boîte de dialogue.
 
@@ -225,7 +226,7 @@ virtual BOOL OnColorOK();
 
 Valeur différente de zéro si la boîte de dialogue ne doit pas être fermée. Sinon, 0 pour accepter la couleur qui a été entrée.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Substituez cette fonction uniquement si vous souhaitez fournir une validation personnalisée de la couleur sélectionnée par l’utilisateur dans la boîte de dialogue couleur.
 
@@ -245,7 +246,7 @@ Vous pouvez appeler [SetCurrentColor](#setcurrentcolor) à partir de dans `OnCol
 
 [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]
 
-## <a name="ccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor
+## <a name="ccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a> CColorDialog::SetCurrentColor
 
 Appelez cette fonction après avoir appelé `DoModal` pour forcer la sélection de couleur actuelle à la valeur de couleur spécifiée dans *CLR*.
 
@@ -258,7 +259,7 @@ void SetCurrentColor(COLORREF clr);
 *Language*<br/>
 Valeur de couleur RVB.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction est appelée à partir d’un gestionnaire de messages ou `OnColorOK` . La boîte de dialogue met automatiquement à jour la sélection de l’utilisateur en fonction de la valeur du paramètre *CLR* .
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : groupe'
 title: GROUP
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - GROUP directive
 ms.assetid: 55dc9548-154e-486d-849a-135e4631eca9
-ms.openlocfilehash: dbf152b85db6d2c492b429190b8a6cd761b8e9d1
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 47946ab37d66a3ee792e974cd509c5fad996a611
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130233"
 ---
 # <a name="group"></a>GROUP
 
@@ -19,9 +20,9 @@ ms.locfileid: "75317303"
 
 ## <a name="syntax"></a>Syntaxe
 
-> *nom* du *segment* de **groupe** ⟦ __,__ *segment* ... ⟧
+> *nom* du *segment* de **groupe** ⟦__,__ *segment* ... ⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : étiquette'
 title: LABEL (MASM)
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-ms.openlocfilehash: 65f0e4912b19ede978296e8bcb2992fa48b78f8e
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fa685e9bdcc0e6851d214aca44518f3d17b6b0c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129777"
 ---
 # <a name="label"></a>LABEL
 
@@ -19,11 +20,11 @@ Crée une étiquette en affectant à la valeur de l’emplacement actuel le comp
 
 ## <a name="syntax"></a>Syntaxe
 
-> **étiquette** de nom *qualifiedType*
+>  **étiquette** de nom *qualifiedType*
 >
-> **étiquette** de nom ⟦**proche** | Far ** | ** ⟧ **ptr** ⟦*qualifiedType*⟧
+>  **étiquette** de nom ⟦**presque**  |  **Far**  |  ⟧ **ptr** ⟦*qualifiedType*⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

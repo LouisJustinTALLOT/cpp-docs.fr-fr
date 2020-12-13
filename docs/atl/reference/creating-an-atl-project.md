@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création d’un projet ATL'
 title: Création d’un projet ATL
 ms.date: 05/06/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: 971d6c05ad4669f32e3b232d5e91c501e197be30
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ef52e3b398b7c32acc626dc79f62a3e91d659893
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140944"
 ---
 # <a name="creating-an-atl-project"></a>Création d’un projet ATL
 

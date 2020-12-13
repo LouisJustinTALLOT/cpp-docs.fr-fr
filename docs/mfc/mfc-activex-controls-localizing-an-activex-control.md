@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : localisation d’un contrôle ActiveX'
 title: "Contrôles ActiveX MFC : localisation d'un contrôle ActiveX"
 ms.date: 09/12/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: a85ec5cbed797b756afd93cd8423c58d138a0625
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 830fecd316b48f61da4f90136dd29455801ec725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150213"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
 
@@ -42,7 +43,7 @@ En général, les contrôles ActiveX doivent toujours être basés sur les param
 
 Le reste de cet article décrit deux stratégies localisantes. La première stratégie [localise l’interface de programmabilité du contrôle](#_core_localizing_your_control.92.s_programmability_interface) (noms des propriétés, des méthodes et des événements). La deuxième stratégie [localise l’interface utilisateur du contrôle](#_core_localizing_the_control.92.s_user_interface), à l’aide de la propriété LocaleID ambiante du conteneur. Pour une démonstration de la localisation des contrôles, consultez l’exemple de contrôles ActiveX MFC [Localize](../overview/visual-cpp-samples.md).
 
-## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a>Localisation de l’interface de programmabilité du contrôle
+## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localisation de l’interface de programmabilité du contrôle
 
 En recherchant l'interface de programmabilité du contrôle (l'interface utilisée par les programmeurs dans les applications qui utilisent votre contrôle), vous devez créer une version modifiée du fichier .IDL de contrôle (un script pour générer la bibliothèque de types de contrôle) pour chaque langue que vous envisagez de prendre en charge. Il s'agit du seul emplacement dont vous avez besoin pour localiser les noms de propriété de contrôle.
 
@@ -80,7 +81,7 @@ Pour vérifier que les clients de votre contrôle peuvent localiser la biblioth�
 
 Lorsque votre contrôle est inscrit, la fonction `AfxOleRegisterTypeLib` recherche automatiquement le fichier .TLB spécifié dans le même répertoire que le contrôle et l'inscrit dans la base de données d'inscription de Windows. Si le fichier .TLB est introuvable, la fonction n'a aucun effet.
 
-## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a>Localisation de l’interface utilisateur du contrôle
+## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a> Localisation de l’interface utilisateur du contrôle
 
 Pour rechercher l'interface utilisateur d'un contrôle, placez toutes les ressources accessibles à l'utilisateur du contrôle (telles que les pages de propriétés et les messages d'erreur) dans les DLL de ressource spécifiques aux langues. Vous pouvez utiliser la propriété LocaleID ambiante du conteneur pour sélectionner la DLL appropriée pour les paramètres régionaux de l'utilisateur.
 

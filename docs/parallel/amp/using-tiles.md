@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : utilisation de vignettes'
 title: Utilisation des mosaïques
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6277faf867cd64e5ea0e4503bb36f8e1d4a8bc74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150161"
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 
 Vous pouvez utiliser la mosaïque pour optimiser l’accélération de votre application. La mosaïque divise les threads en sous-ensembles rectangulaires égaux ou en *mosaïques*. Si vous utilisez une taille de vignette et un algorithme en mosaïque appropriés, vous pouvez obtenir une accélération supplémentaire à partir de votre code C++ AMP. Les composants de base de la mosaïque sont les suivants :
 
-- `tile_static`variables. Le principal avantage de la mosaïque est le gain de performance de l' `tile_static` accès. L’accès aux données en `tile_static` mémoire peut être beaucoup plus rapide que l’accès aux données dans l’espace global ( `array` ou les `array_view` objets). Une instance d’une `tile_static` variable est créée pour chaque vignette, et tous les threads de la mosaïque ont accès à la variable. Dans un algorithme en mosaïque classique, les données sont copiées en `tile_static` mémoire une seule fois à partir de la mémoire globale, puis consultées plusieurs fois à partir de la `tile_static` mémoire.
+- `tile_static` variables. Le principal avantage de la mosaïque est le gain de performance de l' `tile_static` accès. L’accès aux données en `tile_static` mémoire peut être beaucoup plus rapide que l’accès aux données dans l’espace global ( `array` ou les `array_view` objets). Une instance d’une `tile_static` variable est créée pour chaque vignette, et tous les threads de la mosaïque ont accès à la variable. Dans un algorithme en mosaïque classique, les données sont copiées en `tile_static` mémoire une seule fois à partir de la mémoire globale, puis consultées plusieurs fois à partir de la `tile_static` mémoire.
 
 - [tile_barrier :: Wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` suspend l’exécution du thread actuel jusqu’à ce que tous les threads de la même mosaïque atteignent l’appel à `tile_barrier::wait` . Vous ne pouvez pas garantir l’ordre dans lequel les threads s’exécuteront, seulement qu’aucun thread de la mosaïque ne s’exécutera après l’appel à `tile_barrier::wait` jusqu’à ce que tous les threads aient atteint l’appel. Cela signifie qu’à l’aide de la `tile_barrier::wait` méthode, vous pouvez effectuer des tâches en mosaïque par vignette plutôt qu’en fonction du thread par thread. Un algorithme de mosaïque classique a du code pour initialiser la `tile_static` mémoire pour la vignette entière, suivie d’un appel à `tile_barrier::wait` . Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à toutes les `tile_static` valeurs.
 

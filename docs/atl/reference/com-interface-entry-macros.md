@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de COM_INTERFACE_ENTRY
 title: Macros d’entrée de l’interface COM
 ms.date: 03/28/2017
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0564c1e4ba6b9778865442d281453ff3a4a56d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141360"
 ---
 # <a name="com_interface_entry-macros"></a>Macros COM_INTERFACE_ENTRY
 
@@ -47,7 +48,7 @@ Ces macros entrent les interfaces d’un objet dans sa carte COM afin qu’elles
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Identique à [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), sauf que l’interrogation de tout IID entraîne un appel à *Func*.|
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retourne E_NOINTERFACE et met fin au traitement de la carte COM lors de l’interrogation de l’interface spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -80,7 +81,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -208,7 +209,7 @@ dans GUID de l’interface interrogée pour.
 *Punk*<br/>
 dans Nom d’un `IUnknown` pointeur. Doit être un membre de la classe qui contient le mappage COM.
 
-*clsid*<br/>
+*identificateur*<br/>
 dans Identificateur de l’agrégat qui sera créé si *punk* a la valeur null.
 
 ### <a name="remarks"></a>Notes
@@ -230,7 +231,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 *Punk*<br/>
 dans Nom d’un `IUnknown` pointeur. Doit être un membre de la classe qui contient le mappage COM.
 
-*clsid*<br/>
+*identificateur*<br/>
 dans Identificateur de l’agrégat qui sera créé si *punk* a la valeur null.
 
 ### <a name="remarks"></a>Notes

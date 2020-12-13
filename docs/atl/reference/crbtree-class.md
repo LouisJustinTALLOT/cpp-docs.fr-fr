@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CRBTree'
 title: CRBTree, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 7b8e47b5cd0ac278711947abc867956333371be3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3c45c8b05429ba75905912d76f87605a07ff49e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140970"
 ---
 # <a name="crbtree-class"></a>CRBTree, classe
 
-Cette classe fournit des méthodes pour créer et utiliser une arborescence rouge-noir.
+Cette classe fournit des méthodes pour créer et utiliser une arborescence Red-Black.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -108,13 +109,13 @@ Code utilisé pour copier ou déplacer des éléments de valeur.
 
 ## <a name="remarks"></a>Notes
 
-Un arbre rouge-noir est un arbre de recherche binaire qui utilise un supplément d’informations par nœud pour s’assurer qu’il reste « équilibré », c’est-à-dire que la hauteur de l’arborescence n’augmente pas de façon disproportionnée et affecte les performances.
+Une arborescence de Red-Black est un arbre de recherche binaire qui utilise un supplément d’informations par nœud pour s’assurer qu’il reste « équilibré », c’est-à-dire que la hauteur de l’arborescence n’augmente pas de manière disproportionnée et affecte les performances.
 
 Cette classe de modèle est conçue pour être utilisée par [CRBMap](../../atl/reference/crbmap-class.md) et [CRBMultiMap](../../atl/reference/crbmultimap-class.md). La plupart des méthodes qui composent ces classes dérivées sont fournies par `CRBTree` .
 
 Pour une description plus complète des différentes classes de collection et de leurs fonctionnalités et caractéristiques de performances, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcoll. h
 
@@ -182,7 +183,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Valeur de la position.
 
 *key*<br/>
@@ -239,7 +240,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Valeur de la position.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -261,7 +262,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -285,7 +286,7 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 *key*<br/>
@@ -308,7 +309,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -330,7 +331,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -352,7 +353,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -390,7 +391,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -447,7 +448,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Notes
@@ -464,7 +465,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree :: GetHeadPosition](#getheadposition) ou [CRBTree :: FindFirstKeyAfter](#findfirstkeyafter).
 
 *value*<br/>

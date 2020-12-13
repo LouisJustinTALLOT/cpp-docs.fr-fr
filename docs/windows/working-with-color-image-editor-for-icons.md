@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : travailler avec des couleurs'
 title: 'Comment : utiliser la couleur'
 ms.date: 02/15/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: 3c9134fde9053f57f8848a37b1442728f6111c98
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6c7d6ceaf2510d2360b32138735e8f61398da85a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135835"
 ---
 # <a name="how-to-work-with-color"></a>Comment : utiliser la couleur
 
@@ -125,7 +126,7 @@ Utilisez la boîte de dialogue **charger la palette de couleurs** pour charger d
 |Propriété|Description|
 |-----------------|-----------------|
 |**Look in**|Spécifie l’emplacement où vous souhaitez rechercher un fichier ou un dossier.<br/><br/>Sélectionnez la flèche pour choisir un autre emplacement ou sélectionnez l’icône de dossier dans la barre d’outils pour déplacer les niveaux vers le haut.|
-|**Nom de fichier**|Offre un espace vous permettant de taper le nom du fichier que vous souhaitez ouvrir.<br/><br/>Pour trouver rapidement un fichier que vous avez ouvert précédemment, sélectionnez le nom de fichier dans la liste déroulante, s’il est disponible.<br/><br/>Si vous recherchez un fichier, vous pouvez utiliser des astérisques (*) comme caractères génériques. Par exemple, vous pouvez taper \* . \* pour afficher la liste de tous les fichiers. Vous pouvez également taper le chemin d’accès complet d’un fichier, par exemple, *C:\Mes Documents\MyColorPalette.PAL* ou * \\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
+|**Nom de fichier**|Offre un espace vous permettant de taper le nom du fichier que vous souhaitez ouvrir.<br/><br/>Pour trouver rapidement un fichier que vous avez ouvert précédemment, sélectionnez le nom de fichier dans la liste déroulante, s’il est disponible.<br/><br/>Si vous recherchez un fichier, vous pouvez utiliser des astérisques (*) comme caractères génériques. Par exemple, vous pouvez taper \* . \* pour afficher la liste de tous les fichiers. Vous pouvez également taper le chemin d’accès complet d’un fichier, par exemple, *C:\Mes Documents\MyColorPalette.PAL* ou *\\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
 |**Type de fichiers**|Répertorie les types de fichiers à afficher.<br/><br/>Palette (*. PAL) est le type de fichier par défaut pour les palettes de couleurs.|
 
 ## <a name="how-to"></a>Procédure
@@ -144,7 +145,7 @@ L' **éditeur d’images** fournit l’outil de **remplissage** pour remplir tou
 
 ### <a name="to-use-the-fill-tool"></a>Pour utiliser l’outil remplissage
 
-1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu **Image**  >  **Outils** image et sélectionnez l’outil **remplissage** .
+1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu   >  **Outils** image et sélectionnez l’outil **remplissage** .
 
 1. Si nécessaire, choisissez couleurs de dessin. Dans la [palette de couleurs](./image-editor-for-icons.md), sélectionnez le bouton gauche de la souris pour sélectionner une couleur de premier plan ou le bouton droit de la souris pour sélectionner une couleur d’arrière-plan.
 
@@ -154,9 +155,9 @@ L' **éditeur d’images** fournit l’outil de **remplissage** pour remplir tou
 
 ### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Pour sélectionner une couleur d’une image à utiliser ailleurs
 
-L’outil **Sélectionner une couleur**ou un sélecteur de couleurs permet d’apporter à toute couleur de l’image la couleur de premier plan ou d’arrière-plan actuelle, selon que vous appuyez sur le bouton gauche ou droit de la souris. Pour annuler l’outil **Sélectionner une couleur** , choisissez un autre outil.
+L’outil **Sélectionner une couleur** ou un sélecteur de couleurs permet d’apporter à toute couleur de l’image la couleur de premier plan ou d’arrière-plan actuelle, selon que vous appuyez sur le bouton gauche ou droit de la souris. Pour annuler l’outil **Sélectionner une couleur** , choisissez un autre outil.
 
-1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu **Image**  >  **Outils** image et sélectionnez l’outil **Sélectionner une couleur** .
+1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu   >  **Outils** image et sélectionnez l’outil **Sélectionner une couleur** .
 
 1. Sélectionnez la couleur que vous souhaitez sélectionner dans l’image.
 
@@ -191,11 +192,11 @@ Vous pouvez modifier la couleur d’arrière-plan lorsqu’une sélection est d�
 
 L' **éditeur d’images** offre un moyen pratique d’inverser les couleurs dans la partie sélectionnée de l’image, ce qui vous permet de savoir comment une image s’affiche avec les couleurs inversées.
 
-Pour inverser les couleurs dans la sélection actuelle, accédez à **image**menu  >  **inverser les couleurs**.
+Pour inverser les couleurs dans la sélection actuelle, accédez à **image** menu  >  **inverser les couleurs**.
 
 ### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Pour personnaliser ou modifier les couleurs de la palette de couleurs
 
-1. Accédez à **image**du menu  >  **ajuster les couleurs**.
+1. Accédez à **image** du menu  >  **ajuster les couleurs**.
 
 1. Dans la boîte de dialogue **Sélecteur de couleurs personnalisées** , définissez la couleur en tapant des valeurs RVB ou TSL dans les zones de texte appropriées ou choisissez une couleur dans la zone d' **affichage couleur de dégradé** .
 
@@ -221,9 +222,9 @@ Pour inverser les couleurs dans la sélection actuelle, accédez à **image**men
 
 1. Dans la boîte de dialogue **charger la palette de couleurs** , accédez au répertoire approprié, puis sélectionnez la palette que vous souhaitez charger. Les palettes de **couleurs** sont enregistrées avec l’extension de fichier. PAL.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

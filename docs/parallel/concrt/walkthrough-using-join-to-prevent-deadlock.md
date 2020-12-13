@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : utilisation de Join pour empêcher l’interblocage'
 title: 'Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b74a7cd3f5f2326bb73ece13e16be95d6677bdd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150148"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
 
@@ -26,7 +27,7 @@ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
 
 - [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)
 
-- [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Procédure pas à pas : création d’une application Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +35,7 @@ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
 
 - [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Cette procédure pas à pas contient les sections suivantes :
 
@@ -44,7 +45,7 @@ Cette procédure pas à pas contient les sections suivantes :
 
 - [Utilisation de Join pour empêcher l’interblocage](#solution)
 
-## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>Problème du dîner de philosophes
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a> Problème du dîner de philosophes
 
 Le problème du dîner de philosophes illustre la manière dont le blocage se produit dans une application. Dans ce problème, cinq philosophes se trouvent dans une table ronde. Chaque philosophe alterne entre la pensée et le manger. Chaque philosophe doit partager une baguette avec le voisin à gauche et une autre baguette avec le voisin à droite. L’illustration suivante montre cette disposition.
 
@@ -54,7 +55,7 @@ Pour manger, un philosophe doit contenir deux baguettes. Si chaque philosophe co
 
 [[Haut](#top)]
 
-## <a name="a-nave-implementation"></a><a name="deadlock"></a>Implémentation naïve
+## <a name="a-nave-implementation"></a><a name="deadlock"></a> Implémentation naïve
 
 L’exemple suivant montre une implémentation naïve du problème du dîner de philosophes. La `philosopher` classe, qui dérive de [Concurrency :: agent](../../parallel/concrt/reference/agent-class.md), permet à chaque philosophe d’agir indépendamment. L’exemple utilise un tableau partagé d’objets [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md) pour octroyer à chaque `philosopher` objet un accès exclusif à une paire de baguettes.
 
@@ -76,7 +77,7 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-
 
 [[Haut](#top)]
 
-## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Utilisation de Join pour empêcher l’interblocage
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a> Utilisation de Join pour empêcher l’interblocage
 
 Cette section montre comment utiliser des mémoires tampons de messages et des fonctions de passage de messages pour éliminer le risque d’interblocage.
 

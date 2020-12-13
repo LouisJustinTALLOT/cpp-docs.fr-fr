@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : avertissement des outils Éditeur de liens LNK4217'
 title: Avertissement des outils Éditeur de liens LNK4217
 ms.date: 07/23/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3ace3586cf11da4dd87f00a58543c6d60fc1a10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150590"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Avertissement des outils Éditeur de liens LNK4217
 
 > le symbole'*symbol*'défini dans'*filename_1. obj*'est importé par'*filename_2. obj*'dans la fonction'*Function*'
 
-[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) a été spécifié pour un symbole même si le symbole est défini dans un fichier objet dans la même image. Supprimez le modificateur `__declspec(dllimport)` pour résoudre cet avertissement.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) a été spécifié pour un symbole même si le symbole est défini dans un fichier objet dans la même image. Supprimez le `__declspec(dllimport)` modificateur pour résoudre cet avertissement.
 
 ## <a name="remarks"></a>Notes
 
@@ -54,7 +55,7 @@ cl.exe /c main.cpp tt.cpp
 link.exe main.obj tt.obj
 ```
 
-Pour corriger l’erreur, après avoir compilé les deux fichiers, transmettez TT. obj à lib. exe pour créer un fichier. lib, puis liez main. obj à TT. lib comme indiqué ici :
+Pour corriger l’erreur, après avoir compilé les deux fichiers, transmettez TT. obj à lib.exe pour créer un fichier. lib, puis liez main. obj à TT. lib comme indiqué ici :
 
 ```cmd
 cl.exe /c main.cpp tt.cpp

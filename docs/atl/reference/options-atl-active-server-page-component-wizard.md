@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : options, Assistant composant de page Active Server ATL'
 title: Options, Assistant Composant ASP ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: c76ab7730256b007b66d54ca6753409926f7ae89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6d41b5cb43aa9f0445e73bbe148a2a753e374a15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139020"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Options, Assistant Composant ASP ATL
 
@@ -27,13 +28,13 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consul
 
    |Option|Description|
    |------------|-----------------|
-   |**Single**|Spécifie que l’objet utilise le modèle de thread unique. Dans le modèle à thread unique, un objet s’exécute toujours dans le thread COM principal. Pour plus d’informations, consultez Apartments et [InprocServer32](/windows/win32/com/inprocserver32) à [thread unique](/windows/win32/com/single-threaded-apartments) .|
-   |**Apartment**|Spécifie que l’objet utilise le thread cloisonné. Équivalent à un cloisonnement de thread unique. Chaque objet d’un composant à thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et a une pompe de messages Windows (valeur par défaut).<br /><br /> Pour plus d’informations, consultez [Apartments à thread unique](/windows/win32/com/single-threaded-apartments) .|
-   |**Versions**|Spécifie que l’objet peut utiliser un thread cloisonné ou libre, en fonction du type de thread qu’il a créé.|
-   |**Gratuit**|Spécifie que l’objet utilise le Threading libre. Le Threading libre est équivalent à un modèle multithread cloisonné. Pour plus d’informations, consultez Apartments (cloisonnés) [multithread](/windows/win32/com/multithreaded-apartments) .|
-   |**Neutral**|Spécifie que l’objet suit les indications pour les cloisonnements multithread, mais il peut s’exécuter sur n’importe quel type de thread.|
+   |**Unique**|Spécifie que l’objet utilise le modèle de thread unique. Dans le modèle à thread unique, un objet s’exécute toujours dans le thread COM principal. Pour plus d’informations, consultez Apartments et [InprocServer32](/windows/win32/com/inprocserver32) à [thread unique](/windows/win32/com/single-threaded-apartments) .|
+   |**STA**|Spécifie que l’objet utilise le thread cloisonné. Équivalent à un cloisonnement de thread unique. Chaque objet d’un composant à thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et a une pompe de messages Windows (valeur par défaut).<br /><br /> Pour plus d’informations, consultez [Apartments à thread unique](/windows/win32/com/single-threaded-apartments) .|
+   |**Les deux**|Spécifie que l’objet peut utiliser un thread cloisonné ou libre, en fonction du type de thread qu’il a créé.|
+   |**Gratuit**|Spécifie que l’objet utilise le Threading libre. Le Threading libre est équivalent à un modèle multithread cloisonné. Pour plus d’informations, consultez [Apartments (cloisonnés) multithread](/windows/win32/com/multithreaded-apartments) .|
+   |**Neutralisant**|Spécifie que l’objet suit les indications pour les cloisonnements multithread, mais il peut s’exécuter sur n’importe quel type de thread.|
 
-- **Aggregation**
+- **Agrégation**
 
    Indique si l’objet utilise l' [agrégation](/windows/win32/com/aggregation). L’objet d’agrégation choisit les interfaces à exposer aux clients, et les interfaces sont exposées comme si l’objet d’agrégation les implémentait. Les clients de l’objet d’agrégation communiquent uniquement avec l’objet d’agrégation.
 
@@ -41,11 +42,11 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consul
    |------------|-----------------|
    |**Oui**|Spécifie que l’objet peut être agrégé. Valeur par défaut.|
    |**Non**|Spécifie que l’objet n’est pas agrégé.|
-   |**Uniquement**|Spécifie que l’objet doit être agrégé.|
+   |**Ne**|Spécifie que l’objet doit être agrégé.|
 
 - **Support**
 
-   Options de support supplémentaires:
+   Options de support supplémentaires :
 
    |Option|Description|
    |------------|-----------------|
@@ -56,4 +57,4 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consul
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Composant ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
-[Ajout d’un composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
+[Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

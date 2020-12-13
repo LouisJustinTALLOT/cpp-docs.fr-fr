@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : arrière-plan OLE'
 title: Arrière-plan OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 89d8e3b6e1a84082fabdf954971e75ab86366622
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150226"
 ---
 # <a name="ole-background"></a>Arrière-plan OLE
 

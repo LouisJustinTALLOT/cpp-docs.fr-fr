@@ -1,5 +1,6 @@
 ---
-title: Classe CDynamicChain
+description: 'En savoir plus sur : classe CDynamicChain'
+title: CDynamicChain, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CDynamicChain
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 4a72b3b4308ed83dfdc4a2895a04d1fe9a177ce5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada99b519900150afa2143fb1527245797fed98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141815"
 ---
-# <a name="cdynamicchain-class"></a>Classe CDynamicChain
+# <a name="cdynamicchain-class"></a>CDynamicChain, classe
 
-Cette classe fournit des méthodes de soutien à l’enchaînement dynamique des cartes de messages.
+Cette classe fournit des méthodes qui prennent en charge le chaînage dynamique des tables des messages.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -40,47 +41,47 @@ class CDynamicChain
 |Nom|Description|
 |----------|-----------------|
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Constructeur.|
-|[CDynamicChain::CDynamicChain](#dtor)|Destructeur.|
+|[CDynamicChain :: ~ CDynamicChain](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDynamicChain::CallChain](#callchain)|Dirige un message Windows vers la carte de message d’un autre objet.|
-|[CDynamicChain::RemoveChainEntry](#removechainentry)|Supprime une entrée de carte de message de la collection.|
-|[CDynamicChain::SetChainEntry](#setchainentry)|Ajoute une entrée de carte de message à la collection ou modifie une entrée existante.|
+|[CDynamicChain::CallChain](#callchain)|Dirige un message Windows vers la table des messages d’un autre objet.|
+|[CDynamicChain::RemoveChainEntry](#removechainentry)|Supprime une entrée de la table des messages de la collection.|
+|[CDynamicChain::SetChainEntry](#setchainentry)|Ajoute une entrée de table des messages à la collection ou modifie une entrée existante.|
 
 ## <a name="remarks"></a>Notes
 
-`CDynamicChain`gère une collection de cartes de messages, permettant de diriger un message Windows, au moment de l’exécution, vers la carte de message d’un autre objet.
+`CDynamicChain` gère une collection de tables de messages, ce qui permet de diriger un message Windows, au moment de l’exécution, vers la table des messages d’un autre objet.
 
-Pour ajouter de la prise en charge de l’enchaînement dynamique des cartes de messages, faites ce qui suit :
+Pour ajouter la prise en charge du Chaînage dynamique des tables de messages, procédez comme suit :
 
-- Dérivez votre `CDynamicChain`classe de . Dans la carte des messages, spécifiez la [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro pour enchaîner à la carte de message par défaut d’un autre objet.
+- Dérivez votre classe de `CDynamicChain` . Dans la table des messages, spécifiez la macro [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) à lier à la table des messages par défaut d’un autre objet.
 
-- Dérivez chaque classe que vous voulez enchaîner à partir de [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`permet à un objet d’exposer ses cartes de message à d’autres objets.
+- Dérivez chaque classe à partir de laquelle vous souhaitez effectuer une chaîne à partir de [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` permet à un objet d’exposer ses tables de messages à d’autres objets.
 
-- Appelez `CDynamicChain::SetChainEntry` pour identifier l’objet et la carte de message que vous souhaitez enchaîner.
+- Appelez `CDynamicChain::SetChainEntry` pour identifier l’objet et la table de messages à utiliser pour la chaîne.
 
-Supposons, par exemple, que votre classe soit définie comme suit :
+Par exemple, supposons que votre classe soit définie comme suit :
 
 [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]
 
-Le client `CMyWindow::SetChainEntry`appelle alors :
+Le client appelle ensuite `CMyWindow::SetChainEntry` :
 
 [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]
 
-où `chainedObj` est l’objet enchaîné et est `CMessageMap`un exemple d’une classe dérivée de . Maintenant, `myCtl` si reçoit un message qui `OnPaint` `OnSetFocus`n’est pas manipulé `chainedObj`par ou , la procédure de fenêtre dirige le message à la carte de message par défaut de '.
+où `chainedObj` est l’objet chaîné et est une instance d’une classe dérivée de `CMessageMap` . Désormais, si `myCtl` reçoit un message qui n’est pas géré par `OnPaint` ou `OnSetFocus` , la procédure de fenêtre dirige le message vers la `chainedObj` table des messages par défaut de.
 
-Pour plus d’informations sur la chaîne de cartes de message, voir [Cartes de message](../../atl/message-maps-atl.md) dans l’article "ATL Window Classes."
+Pour plus d’informations sur le chaînage des tables de messages, consultez [tables des messages](../../atl/message-maps-atl.md) dans l’article « classes de fenêtres ATL ».
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlwin.h
+**En-tête :** atlwin. h
 
-## <a name="cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain::CallChain
+## <a name="cdynamicchaincallchain"></a><a name="callchain"></a> CDynamicChain::CallChain
 
-Dirige le message Windows vers la carte de message d’un autre objet.
+Dirige le message Windows vers la table des messages d’un autre objet.
 
 ```
 BOOL CallChain(
@@ -94,35 +95,35 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID dwChainID*<br/>
-[dans] L’identifiant unique associé à l’objet enchaîné et à sa carte de message.
+*dwChainID*<br/>
+dans Identificateur unique associé à l’objet chaîné et à sa table des messages.
 
 *hWnd*<br/>
-[dans] La poignée à la fenêtre recevant le message.
+dans Handle de la fenêtre qui reçoit le message.
 
 *uMsg*<br/>
-[dans] Le message envoyé à la fenêtre.
+dans Message envoyé à la fenêtre.
 
 *wParam*<br/>
-[dans] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 *lParam*<br/>
-[dans] Informations supplémentaires spécifiques au message.
+dans Informations supplémentaires spécifiques au message.
 
 *lResult*<br/>
-[out] Le résultat du traitement du message.
+à Résultat du traitement du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le message est entièrement traité; autrement, FALSE.
+TRUE si le message est entièrement traité ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Pour que la `CallChain`procédure de fenêtre invoque, vous devez spécifier la [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro dans votre carte de message. Par exemple, voir la vue d’ensemble [CDynamicChain.](../../atl/reference/cdynamicchain-class.md)
+Pour que la procédure de fenêtre appelle `CallChain` , vous devez spécifier la macro [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) dans votre table des messages. Pour obtenir un exemple, consultez la vue d’ensemble de [CDynamicChain](../../atl/reference/cdynamicchain-class.md) .
 
-`CallChain`nécessite un appel précédent à [SetChainEntry](#setchainentry) pour associer la valeur *dwChainID* à un objet et à sa carte de message.
+`CallChain` requiert un appel précédent à [SetChainEntry](#setchainentry) pour associer la valeur *dwChainID* à un objet et à sa table des messages.
 
-## <a name="cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain
+## <a name="cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a> CDynamicChain::CDynamicChain
 
 Constructeur.
 
@@ -130,7 +131,7 @@ Constructeur.
 CDynamicChain();
 ```
 
-## <a name="cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain::CDynamicChain
+## <a name="cdynamicchaincdynamicchain"></a><a name="dtor"></a> CDynamicChain :: ~ CDynamicChain
 
 Destructeur.
 
@@ -142,9 +143,9 @@ Destructeur.
 
 Libère toutes les ressources allouées.
 
-## <a name="cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry
+## <a name="cdynamicchainremovechainentry"></a><a name="removechainentry"></a> CDynamicChain::RemoveChainEntry
 
-Supprime la carte de message spécifiée de la collection.
+Supprime la table des messages spécifiée de la collection.
 
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
@@ -152,16 +153,16 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID dwChainID*<br/>
-[dans] L’identifiant unique associé à l’objet enchaîné et à sa carte de message. Vous définissez à l’origine cette valeur par un appel à [SetChainEntry](#setchainentry).
+*dwChainID*<br/>
+dans Identificateur unique associé à l’objet chaîné et à sa table des messages. Vous définissez cette valeur à l’origine à l’aide d’un appel à [SetChainEntry](#setchainentry).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la carte de message est supprimée avec succès de la collection. Dans le cas contraire, la valeur est FALSE.
+TRUE si la table des messages a été correctement supprimée de la collection. Dans le cas contraire, la valeur est FALSE.
 
-## <a name="cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain::SetChainEntry
+## <a name="cdynamicchainsetchainentry"></a><a name="setchainentry"></a> CDynamicChain::SetChainEntry
 
-Ajoute la carte de message spécifiée à la collection.
+Ajoute la table des messages spécifiée à la collection.
 
 ```
 BOOL SetChainEntry(
@@ -172,24 +173,24 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwChainID dwChainID*<br/>
-[dans] L’identifiant unique associé à l’objet enchaîné et à sa carte de message.
+*dwChainID*<br/>
+dans Identificateur unique associé à l’objet chaîné et à sa table des messages.
 
 *pObject*<br/>
-[dans] Un pointeur à l’objet enchaîné déclarant la carte de message. Cet objet doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md).
+dans Pointeur vers l’objet chaîné qui déclare la table des messages. Cet objet doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
-[dans] L’identifiant de la carte de message dans l’objet enchaîné. La valeur par défaut est de 0, ce qui identifie la carte de message par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour spécifier une carte de message alternative déclarée avec `msgMapID` [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map), passez .
+dans Identificateur de la table des messages dans l’objet chaîné. La valeur par défaut est 0, qui identifie la table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour spécifier une autre table des messages déclarée avec [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map), Pass `msgMapID` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la carte de message est ajoutée avec succès à la collection. Dans le cas contraire, la valeur est FALSE.
+TRUE si la table des messages est correctement ajoutée à la collection. Dans le cas contraire, la valeur est FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur *dwChainID* existe déjà dans la collection, son objet associé et la carte des messages sont remplacés par *pObject* et *dwMsgMapID*, respectivement. Sinon, une nouvelle entrée est ajoutée.
+Si la valeur *dwChainID* existe déjà dans la collection, son objet et la table des messages associés sont remplacés par *pObject* et *dwMsgMapID*, respectivement. Dans le cas contraire, une nouvelle entrée est ajoutée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[CWindowImpl (classe)](../../atl/reference/cwindowimpl-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)
