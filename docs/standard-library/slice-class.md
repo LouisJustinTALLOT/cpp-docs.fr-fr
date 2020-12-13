@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Slice, classe'
 title: slice, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2a738db5bf3479c58e6b4ddd4d29a3a7ba84b23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153900"
 ---
 # <a name="slice-class"></a>slice, classe
 
@@ -25,7 +26,7 @@ Classe utilitaire de valarray qui sert à définir des sous-ensembles unidimensi
 
 ## <a name="remarks"></a>Notes
 
-La classe stocke les paramètres qui caractérisent un objet de type [slice_array](../standard-library/slice-array-class.md). Le sous-ensemble d’un valarray est construit indirectement quand un objet de la classe slice apparaît en tant qu’argument pour un objet de la classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
+La classe stocke les paramètres qui caractérisent un objet de type [slice_array](../standard-library/slice-array-class.md) le sous-ensemble d’un valarray est construit indirectement quand un objet de la classe Slice apparaît en tant qu’argument pour un objet de classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Les valeurs stockées qui spécifient le sous-ensemble sélectionné à partir du valarray parent sont les suivantes :
 
 - un index de départ dans le valarray ;
 
@@ -41,23 +42,23 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 
 |Constructeur|Description|
 |-|-|
-|[Tranche](#slice)|Définit un sous-ensemble d'un `valarray` qui se compose d'un nombre d'éléments à égale distance les uns des autres et qui commencent à un élément spécifié.|
+|[couper](#slice)|Définit un sous-ensemble d'un `valarray` qui se compose d'un nombre d'éléments à égale distance les uns des autres et qui commencent à un élément spécifié.|
 
 ### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[Taille](#size)|Recherche le nombre d'éléments dans un secteur d'un `valarray`.|
-|[Commencer](#start)|Recherche l'index de départ d'un secteur d'un `valarray`.|
-|[Foulée](#stride)|Recherche la distance entre des éléments dans un secteur d'un `valarray`.|
+|[size](#size)|Recherche le nombre d'éléments dans un secteur d'un `valarray`.|
+|[start](#start)|Recherche l'index de départ d'un secteur d'un `valarray`.|
+|[progrès](#stride)|Recherche la distance entre des éléments dans un secteur d'un `valarray`.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<valarray>
+**En-tête :**\<valarray>
 
 **Espace de noms :** std
 
-## <a name="slicesize"></a><a name="size"></a>tranche::taille
+## <a name="slicesize"></a><a name="size"></a> Slice :: Size
 
 Recherche le nombre d’éléments dans une section d’un valarray.
 
@@ -65,7 +66,7 @@ Recherche le nombre d’éléments dans une section d’un valarray.
 size_t size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans une section d’un valarray.
 
@@ -121,7 +122,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="sliceslice"></a><a name="slice"></a>tranche::tranche
+## <a name="sliceslice"></a><a name="slice"></a> Slice :: tranche
 
 Définit un sous-ensemble d’un valarray composé d’un nombre d’éléments qui sont à égale distance les uns des autres et qui commencent à un élément spécifié.
 
@@ -142,12 +143,12 @@ Index valarray du premier élément dans le sous-ensemble.
 *_Len*\
 Nombre d’éléments dans le sous-ensemble.
 
-*Foulée*\
+*progrès*\
 Distance entre les éléments dans le sous-ensemble.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’indice de départ, *_Len* pour la longueur totale, et *la foulée* pour la foulée.
+Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale et *Stride* pour le Stride.
 
 ### <a name="remarks"></a>Notes
 
@@ -194,7 +195,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="slicestart"></a><a name="start"></a>tranche::démarrer
+## <a name="slicestart"></a><a name="start"></a> Slice :: Start
 
 Recherche l’index de départ d’une section d’un valarray.
 
@@ -202,7 +203,7 @@ Recherche l’index de départ d’une section d’un valarray.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de départ d’une section d’un valarray.
 
@@ -252,7 +253,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="slicestride"></a><a name="stride"></a>tranche::stride
+## <a name="slicestride"></a><a name="stride"></a> Slice :: Stride
 
 Recherche la distance entre les éléments dans une section d’un valarray.
 
@@ -260,7 +261,7 @@ Recherche la distance entre les éléments dans une section d’un valarray.
 size_t stride() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Distance entre les éléments dans une section d’un valarray.
 
@@ -312,4 +313,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : classes de collection'
 title: Classes de collection dans ATL
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bf0b8cf1e45673dd64b1b1d60a56ed9889bb6cff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153315"
 ---
 # <a name="collection-classes"></a>Classes de collection
 
@@ -60,11 +61,11 @@ Les classes suivantes fournissent la prise en charge des tableaux, des listes, d
 
 - [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) Cette classe fournit des méthodes et des fonctions par défaut pour une classe de collection composée de types de données primitifs.
 
-- [CRBMap](../atl/reference/crbmap-class.md) Cette classe représente une structure de mappage à l’aide d’une arborescence binaire rouge-noir.
+- [CRBMap](../atl/reference/crbmap-class.md) Cette classe représente une structure de mappage à l’aide d’une Red-Black arborescence binaire.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Cette classe représente une structure de mappage qui permet à chaque clé d’être associée à plusieurs valeurs, à l’aide d’une arborescence binaire rouge-noir.
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Cette classe représente une structure de mappage qui permet à chaque clé d’être associée à plusieurs valeurs, à l’aide d’une Red-Black arborescence binaire.
 
-- [CRBTree](../atl/reference/crbtree-class.md) Cette classe fournit des méthodes pour créer et utiliser une arborescence rouge-noir.
+- [CRBTree](../atl/reference/crbtree-class.md) Cette classe fournit des méthodes pour créer et utiliser une arborescence Red-Black.
 
 - [CSimpleArray](../atl/reference/csimplearray-class.md) Cette classe fournit des méthodes pour gérer un tableau simple.
 

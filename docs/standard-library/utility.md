@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; utilitaire&gt;'
 title: '&lt;utility&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 1beade28ceec0f1552def4bc70c2e95e6b2aa24d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67472492acdb0ddbc1de957a69c01b1aafaf9367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153432"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -44,7 +45,7 @@ Les paires sont largement utilisées dans la bibliothèque standard C++. Elles s
 
 |Modèle|Description|
 |-|-|
-|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Modèle d’alias défini pour le cas courant où `T` est`std::size_t`  |
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Modèle d’alias défini pour le cas courant où `T` est `std::size_t`  |
 |[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)|Modèle d’alias d’assistance pour convertir un package de paramètres de type en une séquence d’index de la même longueur|
 |[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)| Modèle d’alias d’assistance pour simplifier la création d’un `std::index_sequence` type. |
 |[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)|Modèle d’alias d’assistance pour simplifier la création d’un `std::integer_sequence` type.|
@@ -71,9 +72,9 @@ Les paires sont largement utilisées dans la bibliothèque standard C++. Elles s
 |-|-|
 |[opérateur ! =](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|
 |[opérateur = =](../standard-library/utility-operators.md#op_eq_eq)|Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.|
-|[and\<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
-|[and\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|
-|[>d’opérateur](../standard-library/utility-operators.md#op_gt)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.|
+|[operator\<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|
+|[>d’opérateur ](../standard-library/utility-operators.md#op_gt)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.|
 |[>opérateur =](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.|
 
 ### <a name="structs"></a>Structs

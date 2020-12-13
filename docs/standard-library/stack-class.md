@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Stack'
 title: stack, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6caec52124b247e405299d45f55a86c20f991abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153861"
 ---
 # <a name="stack-class"></a>stack, classe
 
@@ -76,7 +77,7 @@ Les objets Stack sont comparables si et seulement si les éléments de la classe
 |[size_type](#size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `stack`.|
 |[value_type](#value_type)|Type qui représente le type d'objet stocké en tant qu'élément dans un objet `stack`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

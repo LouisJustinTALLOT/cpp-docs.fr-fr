@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : utilisation des opérateurs d’insertion et contrôle du format'
 title: Utilisation des opérateurs d'insertion et contrôle du format
 ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153562"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
 
@@ -66,13 +67,13 @@ for (int i = 0; i <4; i++)
 }
 ```
 
-Le manipulateur `endl` remplace le caractère de saut de ligne (`'\n'`). Le résultat se présente ainsi :
+Le manipulateur `endl` remplace le caractère de saut de ligne (`'\n'`). Une sortie classique ressemble à ceci :
 
 ```Output
 ******1.23
 *****35.36
 *****653.7
-***4358.24
+**_4358.24
 ```
 
 Pour spécifier les largeurs des éléments de données sur la même ligne, utilisez le manipulateur `setw` :
@@ -87,7 +88,7 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
@@ -105,7 +106,7 @@ La `width` fonction membre est déclarée dans \<iostream> . Si vous utilisez `s
 
 Ni `setw` ni ne `width` tronquent les valeurs. Si la sortie mise en forme dépasse la largeur, la valeur entière est imprimée, conformément au paramètre de précision du flux. `setw`Et `width` affectent uniquement le champ suivant. La largeur de champ reprend son comportement par défaut (la largeur nécessaire) une fois qu'un champ a été imprimé. Toutefois, les autres options de format de flux restent en vigueur jusqu'à ce qu'elles soient modifiées.
 
-## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>Repère
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a> Repère
 
 Les flux de sortie sont par défaut alignés à droite. Pour aligner à gauche les noms dans l’exemple précédent et aligner à droite les nombres, remplacez la **`for`** boucle comme suit :
 
@@ -117,7 +118,7 @@ for (int i = 0; i <4; i++)
          << setw(10) << values[i] << endl;
 ```
 
-Le résultat se présente ainsi :
+Une sortie classique ressemble à ceci :
 
 ```Output
 Zoot        1.23
@@ -128,7 +129,7 @@ Stan     4358.24
 
 L’indicateur d’alignement à gauche est défini à l’aide du manipulateur [setiosflags](../standard-library/iomanip-functions.md#setiosflags) avec l’énumérateur `left`. Cet énumérateur est défini dans la classe [ios](../standard-library/basic-ios-class.md). Sa référence doit donc inclure le préfixe **ios::**. Le manipulateur [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) désactive l’indicateur d’alignement à gauche. Contrairement à `width` et `setw` , l’effet de `setiosflags` et `resetiosflags` est permanent.
 
-## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>Précision
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> Précision
 
 La valeur par défaut pour la précision de virgule flottante est six. Par exemple, le nombre 3466,9768 est imprimé comme 3466,98. Pour modifier comment cette valeur est imprimée, utilisez le manipulateur [setprecision](../standard-library/iomanip-functions.md#setprecision). Le manipulateur a deux indicateurs : [fixed](../standard-library/ios-functions.md#fixed) et [scientific](../standard-library/ios-functions.md#scientific). Si [fixed](../standard-library/ios-functions.md#fixed) est défini, le nombre imprimé est 3466,976800. Si `scientific` est défini, il s’affiche sous la forme 3,4669773 + 003.
 
@@ -181,7 +182,7 @@ Stan    4.4e+03
 
 Là encore, le programme imprime un chiffre après la virgule décimale. Si `ios::fixed` ou `ios::scientific` est défini, la valeur de précision détermine le nombre de chiffres après la virgule décimale. Si ni l'un ni l'autre n'est défini, la valeur de précision détermine le nombre total de chiffres significatifs. Le manipulateur `resetiosflags` efface ces indicateurs.
 
-## <a name="radix"></a><a name="vclrfradixanchor6"></a>Dicaux
+## <a name="radix"></a><a name="vclrfradixanchor6"></a> Dicaux
 
 Les `dec` `oct` `hex` manipulateurs, et définissent la base par défaut pour l’entrée et la sortie. Par exemple, si vous insérez le `hex` manipulateur dans le flux de sortie, l’objet traduit correctement la représentation de données internes des entiers dans un format de sortie hexadécimal. Les nombres sont affichés avec les chiffres a à f en minuscules si l’indicateur [uppercase](../standard-library/ios-functions.md#uppercase) est clear (par défaut) ; sinon, ils sont affichés en majuscules. La base par défaut est `dec` (décimal).
 

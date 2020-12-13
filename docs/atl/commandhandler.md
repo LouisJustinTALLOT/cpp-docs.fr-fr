@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : CommandHandler'
 title: CommandHandler
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 99a95228f6036e5f391395be367cdef39ca3dc3b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 746048dd83088cac8316cf6e0140644956c21b4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153280"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
-`CommandHandler`est la fonction identifiée par le troisième paramètre de la macro COMMAND_HANDLER dans votre table des messages.
+`CommandHandler` est la fonction identifiée par le troisième paramètre de la macro COMMAND_HANDLER dans votre table des messages.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,9 +39,9 @@ Identificateur de l’élément de menu, du contrôle ou de l’accélérateur.
 Handle d’un contrôle de fenêtre.
 
 *bHandled*<br/>
-La table des messages affecte à *bHandled* la `CommandHandler` valeur true avant l’appel à. Si `CommandHandler` ne gère pas complètement le message, il doit affecter à *bHandled* la valeur false pour indiquer que le message doit être traité ultérieurement.
+La table des messages affecte à *bHandled* la valeur true avant l' `CommandHandler` appel à. Si `CommandHandler` ne gère pas complètement le message, il doit affecter à *bHandled* la valeur false pour indiquer que le message doit être traité ultérieurement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat du traitement du message. 0 en cas de réussite.
 

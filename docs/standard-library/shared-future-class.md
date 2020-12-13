@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe shared_future'
 title: shared_future, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: dcc1f4bf1ce25890945f1d9e207f2363122c0ad2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 169e9c7aa906a788975852ae6a3f90a1b46213c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154082"
 ---
 # <a name="shared_future-class"></a>shared_future, classe
 
@@ -56,7 +57,7 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 |----------|-----------------|
 |[get](#get)|Récupère le résultat qui est stocké dans l’*état asynchrone associé*.|
 |[valide](#valid)|Spécifie si l’objet n’est pas vide.|
-|[qu'](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|
 
@@ -72,7 +73,7 @@ Les objets `shared_future` ne sont pas synchronisés. L’appel de méthodes sur
 
 **Espace de noms :** std
 
-## <a name="shared_futureget"></a><a name="get"></a>shared_future :: obtient
+## <a name="shared_futureget"></a><a name="get"></a> shared_future :: obtient
 
 Récupère le résultat qui est stocké dans l’*état asynchrone associé*.
 
@@ -94,7 +95,7 @@ Pour la spécialisation partielle `shared_future<Ty&>` , la valeur stockée est 
 
 Étant donné qu’il n’existe aucune valeur stockée pour la spécialisation `shared_future<void>` , la méthode retourne **`void`** .
 
-## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future :: Operator =
+## <a name="shared_futureoperator"></a><a name="op_eq"></a> shared_future :: Operator =
 
 Transfère un *état asynchrone associé* à partir d’un objet spécifié.
 
@@ -108,7 +109,7 @@ shared_future& operator=(const shared_future& Right);
 *Oui*\
 Objet `shared_future`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `*this`
 
@@ -118,7 +119,7 @@ Pour le premier opérateur, *Right* n’a plus d’état asynchrone associé apr
 
 Pour la deuxième méthode, *Right* conserve son état asynchrone associé.
 
-## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>shared_future :: shared_future, constructeur
+## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a> shared_future :: shared_future, constructeur
 
 Construit un objet `shared_future`.
 
@@ -142,7 +143,7 @@ Les deuxième et troisième constructeurs construisent un `shared_future` objet 
 
 Le quatrième constructeur construit un `shared_future` objet qui a le même état asynchrone associé qu’à *droite*.
 
-## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future :: valide
+## <a name="shared_futurevalid"></a><a name="valid"></a> shared_future :: valide
 
 Spécifie si l’objet a un *état asynchrone associé*.
 
@@ -150,11 +151,11 @@ Spécifie si l’objet a un *état asynchrone associé*.
 bool valid() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet a un état asynchrone associé ; Sinon, **`false`** .
 
-## <a name="shared_futurewait"></a><a name="wait"></a>shared_future :: wait
+## <a name="shared_futurewait"></a><a name="wait"></a> shared_future :: wait
 
 Bloque le thread actuel jusqu’à ce que l' *état asynchrone associé* soit *prêt*.
 
@@ -166,7 +167,7 @@ void wait() const;
 
 Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.
 
-## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future :: wait_for
+## <a name="shared_futurewait_for"></a><a name="wait_for"></a> shared_future :: wait_for
 
 Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou que le temps spécifié soit écoulé.
 
@@ -181,7 +182,7 @@ future_status wait_for(
 *Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.
 
@@ -189,7 +190,7 @@ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un
 
 Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou si une exception a été stockée.
 
-## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future :: wait_until
+## <a name="shared_futurewait_until"></a><a name="wait_until"></a> shared_future :: wait_until
 
 Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou jusqu’à un point spécifié dans le temps.
 
@@ -204,7 +205,7 @@ future_status wait_until(
 *Abs_time*\
 Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.
 

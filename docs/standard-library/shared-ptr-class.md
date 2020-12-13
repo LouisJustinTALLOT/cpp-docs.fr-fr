@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe shared_ptr'
 title: shared_ptr, classe
 ms.date: 07/29/2019
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 973bda9cb769eff339a02cbc43838e8c94516408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154043"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr, classe
 
@@ -329,7 +330,7 @@ Pointeur auto à déplacer. La `auto_ptr` surcharge est déconseillée dans c++ 
 Pointeur unique vers l’objet dont la propriété doit être adoptée. le champ *up* ne possède aucun objet après l’appel.
 
 *Autres*\
-Type de l’objet désigné par *SP*, *AP*ou *up*.
+Type de l’objet désigné par *SP*, *AP* ou *up*.
 
 *Suppresseur*\
 Type de la suppression de l’objet détenu, stocké pour une suppression ultérieure de l’objet.

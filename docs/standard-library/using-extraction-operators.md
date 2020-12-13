@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des opérateurs d’extraction'
 title: Utilisation d'opérateurs d'extraction
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - '&gt;&gt; operator [C++], extraction operators'
 - operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
-ms.openlocfilehash: 7950984973f8df236905128ce4b5336ecb874b7f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 11115ed9d7f83b5e4d8cefe088c638afe8d95f38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153575"
 ---
 # <a name="using-extraction-operators"></a>Utilisation d'opérateurs d'extraction
 

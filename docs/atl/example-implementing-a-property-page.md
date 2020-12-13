@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : exemple : implémentation d’une page de propriétés'
 title: Implémentation d’une page de propriétés (ATL)
 ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b5f05d4e47187a8d3c2fe10ca7a00808095a713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152960"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : implémentation d’une page de propriétés
 
@@ -47,11 +48,11 @@ Pour mettre en place cet exemple, vous allez :
 
 ## <a name="adding-the-atl-property-page-class"></a><a name="vcconusing_the_atl_object_wizard"></a> Ajout de la classe de page de propriétés ATL
 
-Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant [l’Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Renseignez le champ **Nom court** de la page de propriétés avec la valeur **DocProperties** , puis basculez sur la page **Chaînes** pour définir les éléments spécifiques de page de propriétés comme indiqué dans le tableau ci-dessous.
+Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant [l’Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Renseignez le champ **Nom court** de la page de propriétés avec la valeur **DocProperties**, puis basculez sur la page **Chaînes** pour définir les éléments spécifiques de page de propriétés comme indiqué dans le tableau ci-dessous.
 
 |Élément|Valeur|
 |----------|-----------|
-|Intitulé|TextDocument|
+|Titre|TextDocument|
 |Chaîne doc|VCUE TextDocument Properties|
 |Helpfile|*\<blank>*|
 

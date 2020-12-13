@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs d’utilitaire'
 title: '&lt;utility&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 7146c31e33b514b20703b280a7194f639c387c26
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0db6f5b18708052964353687190295084886c928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153458"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt;, opérateurs
 
 > [!NOTE]
 > Les opérateurs utilisant `Type&` sont inclus sous `namespace rel_ops` .
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.
 
@@ -43,12 +44,12 @@ template <class T, class U>
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `pair`.
+Objet de type `pair`.
 
 *Oui*\
-Objet de type `pair`.
+Objet de type `pair`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les paires ne sont pas égales ; **`false`** si les paires sont égales.
 
@@ -103,7 +104,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.
 
@@ -115,12 +116,12 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `pair`.
+Objet de type `pair`.
 
 *Oui*\
-Objet de type `pair`.
+Objet de type `pair`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les paires sont égales ; **`false`** si les `pair` s ne sont pas égaux.
 
@@ -166,7 +167,7 @@ int main( )
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.
 
@@ -183,7 +184,7 @@ Objet de type `pair` situé à gauche de l'opérateur.
 *Oui*\
 Objet de type `pair` situé à droite de l'opérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le `pair` à gauche de l’opérateur est strictement inférieur à l' `pair` extrémité droite de l’opérateur ; sinon, **`false`** .
 
@@ -240,7 +241,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.
 
@@ -260,7 +261,7 @@ Objet de type `pair` situé à gauche de l'opérateur.
 *Oui*\
 Objet de type `pair` situé à droite de l'opérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le `pair` à gauche de l’opérateur est inférieur ou égal à l’extrémité `pair` droite de l’opérateur ; sinon, **`false`** .
 
@@ -325,7 +326,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.
 
@@ -345,7 +346,7 @@ Objet de type `pair` situé à gauche de l'opérateur.
 *Oui*\
 Objet de type `pair` situé à droite de l'opérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le `pair` à gauche de l’opérateur est strictement supérieur à l' `pair` extrémité droite de l’opérateur ; sinon, **`false`** .
 
@@ -412,7 +413,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.
 
@@ -432,7 +433,7 @@ Objet de type `pair` situé à gauche de l'opérateur.
 *Oui*\
 Objet de type `pair` situé à droite de l'opérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le `pair` à gauche de l’opérateur est supérieur ou égal à l’extrémité `pair` droite de l’opérateur ; sinon, **`false`** .
 

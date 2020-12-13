@@ -1,39 +1,40 @@
 ---
-title: Implémentation d’Interface de gestion d’événements
+description: 'En savoir plus sur : implémentation de l’interface de gestion des événements'
+title: Implémentation de l’interface de gestion des événements
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, event handling
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-ms.openlocfilehash: d977b59907266a2e0141defa8c496b1e7bc66a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 109fbb1fbdd4f18d0eb4c295fbc08de2b7cc3a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152761"
 ---
-# <a name="implementing-the-event-handling-interface"></a>Implémentation d’Interface de gestion d’événements
+# <a name="implementing-the-event-handling-interface"></a>Implémentation de l’interface de gestion des événements
 
-ATL vous aide à tous les trois éléments requis pour la gestion des événements : implémentation de l’interface d’événement, informant de la source d’événements et désinformation la source d’événements. Les étapes précises, que vous devrez prendre varient selon le type de l’interface d’événement et les exigences de performances de votre application.
+ATL vous aide à utiliser les trois éléments requis pour la gestion des événements : implémentation de l’interface d’événement, avertissement de la source de l’événement et désavertissement de la source de l’événement. Les étapes précises que vous devez prendre dépendent du type de l’interface d’événement et des exigences de performances de votre application.
 
-Les méthodes les plus courantes de l’implémentation d’une interface à l’aide de ATL sont :
+Les méthodes les plus courantes pour implémenter une interface à l’aide de ATL sont les suivantes :
 
-- La dérivation à partir d’une interface personnalisée directement.
+- Dérivation directe à partir d’une interface personnalisée.
 
-- Dérivant de [IDispatchImpl](../atl/reference/idispatchimpl-class.md) pour les interfaces doubles décrites dans une bibliothèque de types.
+- Dérivation à partir de [IDispatchImpl](../atl/reference/idispatchimpl-class.md) pour les interfaces doubles décrites dans une bibliothèque de types.
 
-- Dérivant de [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pour les dispinterfaces décrites dans une bibliothèque de types.
+- Dérivation à partir de [IDispEventImpl](../atl/reference/idispeventimpl-class.md) pour les dispinterfaces décrites dans une bibliothèque de types.
 
-- Dérivant de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) pour dispinterfaces non décrites dans une bibliothèque de types ou lorsque vous souhaitez améliorer l’efficacité en ne chargeant ne pas les informations de type au moment de l’exécution.
+- Dérivation de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) pour les dispinterfaces non décrites dans une bibliothèque de types ou lorsque vous souhaitez améliorer l’efficacité en ne chargeant pas les informations de type au moment de l’exécution.
 
-Si vous implémentez une interface double ou personnalisée, vous devez informer la source d’événements en appelant [AtlAdvise](reference/connection-point-global-functions.md#atladvise) ou [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Vous devez effectuer le suivi de cookie retourné par l’appel vous-même. Appelez [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) interrompre la connexion.
+Si vous implémentez une interface personnalisée ou double, vous devez informer la source de l’événement en appelant [AtlAdvise](reference/connection-point-global-functions.md#atladvise) ou [CComPtrBase :: Advise](../atl/reference/ccomptrbase-class.md#advise). Vous devrez effectuer le suivi du cookie retourné par l’appel. Appelez [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) pour rompre la connexion.
 
-Si vous implémentez une dispinterface à l’aide `IDispEventImpl` ou `IDispEventSimpleImpl`, vous devez informer la source d’événements en appelant [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Appelez [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) interrompre la connexion.
+Si vous implémentez une dispinterface à l’aide de `IDispEventImpl` ou `IDispEventSimpleImpl` de, vous devez informer la source de l’événement en appelant [IDispEventSimpleImpl ::D ispeventadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Appelez [IDispEventSimpleImpl ::D ispeventunadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) pour rompre la connexion.
 
-Si vous utilisez `IDispEventImpl` comme classe de base d’un contrôle composite, les sources d’événements répertoriées dans la table de récepteur sont averties et arrêter automatiquement à l’aide de [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).
+Si vous utilisez `IDispEventImpl` comme classe de base d’un contrôle composite, les sources d’événements répertoriées dans la table de récepteurs sont recommandées et ne sont pas automatiquement avisées à l’aide de [CComCompositeControl :: AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).
 
-Le `IDispEventImpl` et `IDispEventSimpleImpl` classes gèrent le cookie pour vous.
+Les `IDispEventImpl` `IDispEventSimpleImpl` classes et gèrent le cookie pour vous.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlWinModule'
 title: CAtlWinModule, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ed0c52a59401fa5411fd6d5acbcaf72f31aeb11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152567"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule, classe
 
@@ -60,7 +61,7 @@ Cette classe fournit la prise en charge de toutes les classes ATL qui requièren
 
 **En-tête :** atlbase. h
 
-## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
+## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a> CAtlWinModule::AddCreateWndData
 
 Cette méthode initialise et ajoute une `_AtlCreateWndData` structure.
 
@@ -80,7 +81,7 @@ Pointeur vers le pointeur d’un objet **`this`** .
 
 Cette méthode appelle [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) qui initialise une structure [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Cette structure stocke le **`this`** pointeur, utilisé pour obtenir l’instance de la classe dans les procédures de fenêtre.
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a> CAtlWinModule::CAtlWinModule
 
 Constructeur.
 
@@ -92,7 +93,7 @@ CAtlWinModule();
 
 Si l’initialisation échoue, une exception **EXCEPTION_NONCONTINUABLE** est levée.
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule :: ~ CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a> CAtlWinModule :: ~ CAtlWinModule
 
 Destructeur.
 
@@ -104,7 +105,7 @@ Destructeur.
 
 Libère toutes les ressources allouées.
 
-## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
+## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a> CAtlWinModule::ExtractCreateWndData
 
 Cette méthode retourne un pointeur vers une `_AtlCreateWndData` structure.
 
@@ -112,7 +113,7 @@ Cette méthode retourne un pointeur vers une `_AtlCreateWndData` structure.
 void* ExtractCreateWndData();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la `_AtlCreateWndData` structure précédemment ajoutée avec [CAtlWinModule :: AddCreateWndData](#addcreatewnddata), ou null si aucun objet n’est disponible.
 
