@@ -1,29 +1,30 @@
 ---
-title: named_guids importer l’attribut
+description: 'En savoir plus sur les éléments suivants : named_guids l’attribut import'
+title: named_guids l’attribut d’importation
 ms.date: 08/29/2019
 f1_keywords:
 - named_guids
 helpviewer_keywords:
 - named_guids attribute
 ms.assetid: b905e5e5-07fe-4874-8993-e05b9d639045
-ms.openlocfilehash: 8d95ae33ff5115223b6f89ae714759506c03cc3d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 797c27d9c399e63dbe7808855fa17f159845385c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333361"
 ---
-# <a name="named_guids-import-attribute"></a>named_guids importer l’attribut
+# <a name="named_guids-import-attribute"></a>named_guids l’attribut d’importation
 
-**C++Plus**
+**Section spécifique à C++**
 
-Indique au compilateur de définir et d’initialiser les variables GUID dans l’ancien style, sous `LIBID_MyLib`la `CLSID_MyCoClass`forme `IID_MyInterface`,, `DIID_MyDispInterface`et.
+Indique au compilateur de définir et d’initialiser les variables GUID dans l’ancien style, sous la forme `LIBID_MyLib` ,, `CLSID_MyCoClass` `IID_MyInterface` et `DIID_MyDispInterface` .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *bibliothèque de types* **named_guids**
+>  *bibliothèque de types* #import **named_guids**
 
-**Spécifique C++ à la fin**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 

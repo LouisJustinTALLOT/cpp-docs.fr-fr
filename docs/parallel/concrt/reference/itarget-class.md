@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ITarget, classe'
 title: ITarget, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 39aebd9d82f098225c1275ac6f43d64fc1ce3ba8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a1e900fa67ac5ee72305f18679e7a0fc38a2386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334404"
 ---
 # <a name="itarget-class"></a>ITarget, classe
 
@@ -81,7 +82,7 @@ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../p
 
 **Espace de noms :** concurrence
 
-## <a name="itarget"></a><a name="dtor"></a>~ ITarget
+## <a name="itarget"></a><a name="dtor"></a> ~ ITarget
 
 Détruit l' `ITarget` objet.
 
@@ -89,7 +90,7 @@ Détruit l' `ITarget` objet.
 virtual ~ITarget();
 ```
 
-## <a name="link_source"></a><a name="link_source"></a>link_source
+## <a name="link_source"></a><a name="link_source"></a> link_source
 
 En cas de substitution dans une classe dérivée, lie un bloc source spécifié à ce `ITarget` bloc.
 
@@ -106,7 +107,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 
 Cette fonction ne doit pas être appelée directement sur un `ITarget` bloc. Les blocs doivent être connectés ensemble à l’aide de la `link_target` méthode sur `ISource` les blocs, qui appellera la `link_source` méthode sur la cible correspondante.
 
-## <a name="propagate"></a><a name="propagate"></a>propager
+## <a name="propagate"></a><a name="propagate"></a> propager
 
 En cas de substitution dans une classe dérivée, passe de façon asynchrone un message d’un bloc source à ce bloc cible.
 
@@ -124,7 +125,7 @@ Pointeur vers l'objet `message`.
 *_PSource*<br/>
 Pointeur vers le bloc source qui offre le message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
@@ -132,7 +133,7 @@ Une [message_status](concurrency-namespace-enums.md) indication de ce que la cib
 
 La méthode lève une exception [invalid_argument](../../../standard-library/invalid-argument-class.md) si le `_PMessage` `_PSource` paramètre ou a la valeur `NULL` .
 
-## <a name="send"></a><a name="send"></a>Envoyer
+## <a name="send"></a><a name="send"></a> Envoyer
 
 En cas de substitution dans une classe dérivée, passe de façon synchrone un message au bloc cible.
 
@@ -150,7 +151,7 @@ Pointeur vers l'objet `message`.
 *_PSource*<br/>
 Pointeur vers le bloc source qui offre le message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
@@ -162,7 +163,7 @@ L’utilisation `send` de la méthode en dehors de l’initiation du message et 
 
 Lorsque `send` retourne, le message a déjà été accepté, puis transféré dans le bloc cible, ou il a été refusé par la cible.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 En cas de substitution dans une classe dérivée, retourne la valeur true ou false selon que le bloc de message accepte ou non les messages offerts par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne **`true`** , la cible ne peut pas reporter un message proposé, car la consommation d’un message différé à un moment ultérieur nécessite que la source soit identifiée dans son registre de liaisons de l’alimentation.
 
@@ -170,11 +171,11 @@ En cas de substitution dans une classe dérivée, retourne la valeur true ou fal
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le bloc peut accepter le message d’une source qui n’est pas liée à celui-ci dans le **`false`** cas contraire.
 
-## <a name="unlink_source"></a><a name="unlink_source"></a>unlink_source
+## <a name="unlink_source"></a><a name="unlink_source"></a> unlink_source
 
 En cas de substitution dans une classe dérivée, dissocie un bloc source spécifié de ce `ITarget` bloc.
 
@@ -191,7 +192,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 
 Cette fonction ne doit pas être appelée directement sur un `ITarget` bloc. Les blocs doivent être déconnectés à l’aide des `unlink_target` `unlink_targets` méthodes ou sur des `ISource` blocs, qui appellera la `unlink_source` méthode sur la cible correspondante.
 
-## <a name="unlink_sources"></a><a name="unlink_sources"></a>unlink_sources
+## <a name="unlink_sources"></a><a name="unlink_sources"></a> unlink_sources
 
 En cas de substitution dans une classe dérivée, dissocie tous les blocs sources de ce `ITarget` bloc.
 

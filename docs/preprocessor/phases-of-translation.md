@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : phases de traduction'
 title: Phases de traduction
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: d072c9aec48d815ba85f8a12576baa6447703f8c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6a561fe9aa61df293a038a9edfd094dbdef4fe89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333184"
 ---
 # <a name="phases-of-translation"></a>Phases de traduction
 
-Les programmes C et C++ se composent d'un ou de plusieurs fichiers sources contenant chacun une partie du texte du programme. Un fichier source, ainsi que ses *fichiers include*, les fichiers inclus à l' `#include` aide de la directive de préprocesseur, mais sans inclure les sections de code supprimées par les `#if`directives de compilation conditionnelle, telles que, est appelé  *unité de traduction*.
+Les programmes C et C++ se composent d'un ou de plusieurs fichiers sources contenant chacun une partie du texte du programme. Un fichier source, ainsi que ses *fichiers include*, les fichiers inclus à l’aide de la `#include` directive de préprocesseur, mais sans inclure les sections de code supprimées par les directives de compilation conditionnelle, telles que `#if` , est appelé une *unité de traduction*.
 
 Les fichiers sources peuvent être traduits à des moments différents. En fait, il est courant de traduire uniquement les fichiers obsolètes. Les unités de traduction traduites peuvent être traitées dans des fichiers objets ou des bibliothèques de codes objet séparés. Ces unités de traduction distinctes et traduites sont ensuite liées pour former un programme exécutable ou une bibliothèque de liens dynamiques (DLL). Pour plus d’informations sur les fichiers qui peuvent être utilisés comme entrée pour l’éditeur de liens, consultez [fichiers d’entrée de lien](../build/reference/link-input-files.md).
 
@@ -40,7 +41,7 @@ La liste suivante décrit les phases au cours desquelles le compilateur traduit 
 Les caractères dans le fichier source sont mappés à la représentation source interne. Les séquences de trigraphe sont converties en représentation interne à un caractère au cours de cette phase.
 
 *Épissure de lignes*\
-Toutes les lignes se terminant par **\\** une barre oblique inverse () immédiatement suivie d’un caractère de saut de ligne sont jointes à la ligne suivante dans le fichier source, formant des lignes logiques à partir des lignes physiques. Sauf s’il est vide, un fichier source doit se terminer par un caractère de saut de ligne qui n’est pas précédé d’une barre oblique inverse.
+Toutes les lignes se terminant par une barre oblique inverse ( **\\** ) immédiatement suivie d’un caractère de saut de ligne sont jointes à la ligne suivante dans le fichier source, formant des lignes logiques à partir des lignes physiques. Sauf s’il est vide, un fichier source doit se terminer par un caractère de saut de ligne qui n’est pas précédé d’une barre oblique inverse.
 
 *Jetons*\
 Le fichier source est décomposé en jetons de prétraitement et espaces blancs. Chaque commentaire dans le fichier source est remplacé par un espace. Les caractères de saut de ligne sont conservés.

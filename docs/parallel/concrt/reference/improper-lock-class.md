@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe improper_lock'
 title: improper_lock, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: 886444f3e856234be010715a8ee0c707cf919bb4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 8e29172ad171bbd3f95b3079840fb50b91dfe577
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334633"
 ---
 # <a name="improper_lock-class"></a>improper_lock, classe
 
@@ -29,7 +30,7 @@ class improper_lock : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[improper_lock](#ctor)|Surchargé. Construit un objet `improper_lock exception`.|
 
@@ -47,9 +48,9 @@ En général, cette exception est levée lorsqu’une tentative est faite pour a
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>improper_lock
+## <a name="improper_lock"></a><a name="ctor"></a> improper_lock
 
 Construit un objet `improper_lock exception`.
 
@@ -66,6 +67,6 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[critical_section, classe](critical-section-class.md)<br/>
-[reader_writer_lock, classe](reader-writer-lock-class.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
+[Classe critical_section](critical-section-class.md)<br/>
+[Classe reader_writer_lock](reader-writer-lock-class.md)

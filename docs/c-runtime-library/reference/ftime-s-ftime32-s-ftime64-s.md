@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _ftime_s, _ftime32_s _ftime64_s'
 title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: a77d149f367c7f565141fbc3be1db1bfc3f3f362
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 97b709f014c463022e18b209e374afd6c18c20e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334191"
 ---
 # <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -63,15 +64,15 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Paramètres
 
 *timeptr*<br/>
-Pointeur vers une structure **_timeb**, **__timeb32**ou **__timeb64** .
+Pointeur vers une structure **_timeb**, **__timeb32** ou **__timeb64** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec. Si *timeptr* a la valeur **null**, la valeur de retour est **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_ftime_s** obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointe *timeptr*. Les structures **_timeb**, **__timeb32**et **__timeb64** sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
+La fonction **_ftime_s** obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointe *timeptr*. Les structures **_timeb**, **__timeb32** et **__timeb64** sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
 
 |Champ|Description|
 |-|-|
@@ -82,7 +83,7 @@ La fonction **_ftime_s** obtient l’heure locale actuelle et la stocke dans la 
 
 La fonction **_ftime64_s** , qui utilise la structure **__timeb64** , permet d’exprimer les dates de création de fichiers jusqu’au 31 décembre 3000 à 23:59:59, heure UTC ; tandis que **_ftime32_s** représente uniquement les dates jusqu' 23:59:59 au 18 janvier 2038, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
 
-La fonction **_ftime_s** équivaut à **_ftime64_s**et **_timeb** contient une heure de 64 bits, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure de 32 bits et **_timeb** contient une heure de 32 bits.
+La fonction **_ftime_s** équivaut à **_ftime64_s** et **_timeb** contient une heure de 64 bits, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure de 32 bits et **_timeb** contient une heure de 32 bits.
 
 **_ftime_s** valide ses paramètres. Si un pointeur null est passé en tant que *timeptr*, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction affecte à **errno** la valeur **EINVAL**.
 
@@ -90,7 +91,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_ftime_s**|\<sys/types.h> et \<sys/timeb.h>|
 |**_ftime32_s**|\<sys/types.h> et \<sys/timeb.h>|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2868'
 title: Erreur du compilateur C2868
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2868
 ms.assetid: 6ff5837b-e66d-44d1-9d17-80af35e08d08
-ms.openlocfilehash: 0cbcf7dc80aedc554594f88992059f98b7091c21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c6a6368fbdfe61014a606fadce92322234e438f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333787"
 ---
 # <a name="compiler-error-c2868"></a>Erreur du compilateur C2868
 
 > '*identificateur*' : syntaxe non conforme pour la déclaration using ; nom qualifié ATTENDU
 
-Une [déclaration using](../../cpp/using-declaration.md) requiert un *nom qualifié*, un opérateur d’étendue (`::`) une séquence séparée d’espaces de noms, de classes ou d’énumérations qui se termine par le nom de l’identificateur. Un opérateur de résolution de portée unique peut être utilisé pour introduire un nom à partir de l’espace de noms global.
+Une [déclaration using](../../cpp/using-declaration.md) requiert un *nom qualifié*, une `::` séquence de noms d’espaces de noms, de classes ou d’énumérations séparés par un opérateur Scope () qui se termine par le nom de l’identificateur. Un opérateur de résolution de portée unique peut être utilisé pour introduire un nom à partir de l’espace de noms global.
 
 ## <a name="example"></a>Exemple
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contraintes sur les paramètres de type générique (C++/CLI)'
 title: Contraintes sur les paramètres de type générique (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c9e340c229736cbe1c679b931e52f68b0971f8f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333745"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 
@@ -80,7 +81,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-Avec plusieurs paramètres de type, utilisez une clause **where** pour chaque paramètre de type. Exemple :
+Avec plusieurs paramètres de type, utilisez une clause **where** pour chaque paramètre de type. Par exemple :
 
 ```cpp
 // generics_constraints_3.cpp

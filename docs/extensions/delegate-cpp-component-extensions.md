@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Delegate (C++/CLI et C++/CX)'
 title: délégué (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92cd46980775a340e6bf0d6857ace91645d65a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333726"
 ---
 # <a name="delegate--ccli-and-ccx"></a>délégué (C++/CLI et C++/CX)
 

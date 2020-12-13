@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : _udiv64'
 title: _udiv64
 ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: ddb46f33b0fccc1cedc2a704265b096ba715b506
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 21f383cd78885ab8d3d8bb66a87623a73b59ff95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333642"
 ---
 # <a name="_udiv64"></a>_udiv64
 
-L’intrinsèque `_udiv64` divise un entier non signé 64 bits par un entier non signé 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv64` est **spécifique à Microsoft**.
+L' `_udiv64` intrinsèque divise un entier non signé 64 bits par un entier non signé 32 bits. La valeur de retour contient le quotient et l’intrinsèque retourne le reste à l’aide d’un paramètre de pointeur. `_udiv64` est **spécifique à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,30 +27,30 @@ unsigned int _udiv64(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *dividend*\
 dans Entier non signé 64 bits à diviser.
 
-\ *diviseur*
+*divisor*\
 dans Entier non signé 32 bits à diviser par.
 
-*reste*\
+*sections*\
 à Reste de l’entier non signé 32 bits.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 32 bits du quotient.
 
 ## <a name="remarks"></a>Notes
 
-Le `_udiv64` intrinsèque divise le *dividende* par *diviseur*. Elle stocke le reste dans l’entier non signé 32 bits vers le *reste*, et retourne les 32 bits du quotient.
+L' `_udiv64` intrinsèque divise le *dividende* par *diviseur*. Elle stocke le reste dans l’entier non signé 32 bits vers le *reste*, et retourne les 32 bits du quotient.
 
 Le `_udiv64` intrinsèque est disponible à partir de Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_udiv64`|x86, x64|\<immintrin.h>|
 

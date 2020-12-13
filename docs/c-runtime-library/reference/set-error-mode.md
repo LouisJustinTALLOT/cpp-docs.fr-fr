@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_error_mode'
 title: _set_error_mode
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f21983702adb0ae080443e5869485fe581a65f85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334088"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
@@ -53,7 +54,7 @@ int _set_error_mode(
 *mode_val*<br/>
 Destination des messages d'erreur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne l'ancien paramètre ou -1 si une erreur se produit.
 

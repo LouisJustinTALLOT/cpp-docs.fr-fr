@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __ud2'
 title: __ud2
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2b5f0b9ffec066baa3eb2fa212dfc7baf3a6cb49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333660"
 ---
 # <a name="__ud2"></a>__ud2
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère une instruction non définie.
 
@@ -30,17 +31,17 @@ void __ud2();
 
 Le processeur déclenche une exception opcode non valide si vous exécutez une instruction non définie.
 
-La `__ud2` fonction est équivalente à `UD2` l’instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document «Guide du développeur de logiciels d’architecture Intel, volume 2: Référence du jeu d’instructions, sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+La `__ud2` fonction est équivalente à l' `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document « Guide du développeur de logiciels d’architecture Intel, volume 2 : référence de jeu d’instructions » sur le site [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="example"></a>Exemple
 

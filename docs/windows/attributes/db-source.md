@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : db_source'
 title: db_source (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 273d6626a8cd6fa2cadc42bac7ddb2e5e28a69c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333075"
 ---
 # <a name="db_source"></a>db_source
 
@@ -66,14 +67,14 @@ Cet exemple appelle **db_source** sur une classe pour créer une connexion à la
 class CMyCommand {};
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

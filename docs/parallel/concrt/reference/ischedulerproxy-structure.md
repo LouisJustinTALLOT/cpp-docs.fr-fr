@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ISchedulerProxy, structure'
 title: ISchedulerProxy, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: dcb6d175fa84e33f6a5af974eb76f1e1246bdc35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c3c488136c2b41a76b3080b2162fbf95dcb5ea8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334444"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy, structure
 
@@ -57,7 +58,7 @@ Le Gestionnaire des ressources mains d’une `ISchedulerProxy` interface pour ch
 
 **Espace de noms :** concurrence
 
-## <a name="ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>ISchedulerProxy :: BindContext, méthode
+## <a name="ischedulerproxybindcontext-method"></a><a name="bindcontext"></a> ISchedulerProxy :: BindContext, méthode
 
 Associe un contexte d’exécution à un proxy de thread, s’il n’est pas déjà associé à un.
 
@@ -74,9 +75,9 @@ Interface du contexte d’exécution à associer à un proxy de thread.
 
 Normalement, la méthode [IThreadProxy :: SwitchTo](ithreadproxy-structure.md#switchto) lie un proxy de thread à un contexte d’exécution à la demande. Toutefois, il existe des circonstances dans lesquelles il est nécessaire de lier un contexte à l’avance pour garantir que la `SwitchTo` méthode bascule vers un contexte déjà lié. C’est le cas dans un contexte de planification UMS, car il ne peut pas appeler de méthodes qui allouent de la mémoire, et la liaison d’un proxy de thread peut impliquer l’allocation de mémoire si un proxy de thread n’est pas disponible dans le pool libre de la fabrique de proxy de thread.
 
-`invalid_argument`est levée si le paramètre `pContext` a la valeur `NULL` .
+`invalid_argument` est levée si le paramètre `pContext` a la valeur `NULL` .
 
-## <a name="ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>ISchedulerProxy :: CreateOversubscriber, méthode
+## <a name="ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a> ISchedulerProxy :: CreateOversubscriber, méthode
 
 Crée une racine de processeur virtuel sur le thread matériel associé à une ressource d’exécution existante.
 
@@ -89,7 +90,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
 *pExecutionResource*<br/>
 `IExecutionResource`Interface qui représente le thread matériel que vous souhaitez surabonner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Interface `IVirtualProcessorRoot`.
 
@@ -99,7 +100,7 @@ Utilisez cette méthode lorsque votre planificateur souhaite surabonner un threa
 
 Vous pouvez même surabonner une racine de processeur virtuel existante, car l' `IVirtualProcessorRoot` interface hérite de l' `IExecutionResource` interface.
 
-## <a name="ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>ISchedulerProxy :: RequestInitialVirtualProcessors, méthode
+## <a name="ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a> ISchedulerProxy :: RequestInitialVirtualProcessors, méthode
 
 Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité à exécuter un thread capable d’effectuer le travail pour le planificateur.
 
@@ -112,7 +113,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 *doSubscribeCurrentThread*<br/>
 Indique s’il faut ou non abonner le thread actuel et le compte lors de l’allocation des ressources.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `IExecutionResource`Interface du thread actuel, si le paramètre `doSubscribeCurrentThread` a la valeur **`true`** . Si la valeur est **`false`** , la méthode retourne la valeur null.
 
@@ -128,7 +129,7 @@ Lorsque vous déterminez les threads matériels sélectionnés, le Gestionnaire 
 
 L’acte d’abonnement d’un thread augmente d’une unité le niveau d’abonnement du thread matériel sous-jacent. Le niveau d’abonnement est réduit d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource :: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ischedulerproxyshutdown-method"></a><a name="shutdown"></a>ISchedulerProxy :: Shutdown, méthode
+## <a name="ischedulerproxyshutdown-method"></a><a name="shutdown"></a> ISchedulerProxy :: Shutdown, méthode
 
 Avertit le Gestionnaire des ressources que le planificateur s’arrête. Ainsi, l’Gestionnaire des ressources récupère immédiatement toutes les ressources accordées au planificateur.
 
@@ -144,7 +145,7 @@ Si votre planificateur avait des racines de processeur virtuel désactivées, vo
 
 Il n’est pas nécessaire que le planificateur retourne individuellement toutes les racines de processeur virtuel que le Gestionnaire des ressources lui a accordées via des appels à la `Remove` méthode, car toutes les racines de processeur virtuel sont retournées à la gestionnaire des ressources lors de l’arrêt.
 
-## <a name="ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>ISchedulerProxy :: SubscribeCurrentThread, méthode
+## <a name="ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a> ISchedulerProxy :: SubscribeCurrentThread, méthode
 
 Inscrit le thread actuel avec le Gestionnaire des ressources, en l’associant à ce planificateur.
 
@@ -152,7 +153,7 @@ Inscrit le thread actuel avec le Gestionnaire des ressources, en l’associant �
 virtual IExecutionResource* SubscribeCurrentThread() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `IExecutionResource`Interface qui représente le thread actuel dans le Runtime.
 
@@ -164,7 +165,7 @@ La ressource d’exécution reçue via cette méthode doit être retournée à l
 
 L’acte d’abonnement d’un thread augmente d’une unité le niveau d’abonnement du thread matériel sous-jacent. Le niveau d’abonnement est réduit d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource :: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>ISchedulerProxy :: UnbindContext, méthode
+## <a name="ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a> ISchedulerProxy :: UnbindContext, méthode
 
 Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre du proxy de thread. Cette méthode peut uniquement être appelée sur un contexte d’exécution qui a été lié via la méthode [ISchedulerProxy :: BindContext](#bindcontext) et qui n’a pas encore été démarré par le biais du `pContext` paramètre d’un appel de méthode [IThreadProxy :: SwitchTo](ithreadproxy-structure.md#switchto) .
 

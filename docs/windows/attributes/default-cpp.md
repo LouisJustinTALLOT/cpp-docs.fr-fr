@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : valeur par défaut (C++)'
 title: default (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 83c4a17f513db755395ed978d57c9c6f01f84ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333004"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -93,14 +94,14 @@ int main() {
 
 L’attribut [source](source-cpp.md) présente également un exemple d’utilisation de **`default`** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , données membres|
-|**Repeatable Read**|Non|
+|**Renouvelable**|Non|
 |**Attributs requis**|**coclasse** (quand elle est appliquée à **`class`** ou **`struct`** )|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

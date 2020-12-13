@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure IExecutionResource'
 title: IExecutionResource, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: af6b10d1552770c776762ed195f5efceab30a3d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 913155ac4ca19f116742134e9d39678ee92b44a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334653"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
 
@@ -53,7 +54,7 @@ Les ressources d’exécution peuvent être autonomes ou associées à des racin
 
 **Espace de noms :** concurrence
 
-## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource :: CurrentSubscriptionLevel, méthode
+## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a> IExecutionResource :: CurrentSubscriptionLevel, méthode
 
 Retourne le nombre de racines de processeur virtuel activées et de threads externes abonnés actuellement associés au thread matériel sous-jacent représenté par cette ressource d’exécution.
 
@@ -61,7 +62,7 @@ Retourne le nombre de racines de processeur virtuel activées et de threads exte
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Niveau d’abonnement actuel.
 
@@ -75,7 +76,7 @@ Le fait d’activer une racine de processeur virtuel à l’aide de la méthode 
 
 L’Gestionnaire des ressources utilise les informations de niveau d’abonnement pour déterminer quand déplacer des ressources entre les planificateurs.
 
-## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource :: GetExecutionResourceId, méthode
+## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a> IExecutionResource :: GetExecutionResourceId, méthode
 
 Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.
 
@@ -83,7 +84,7 @@ Retourne un identificateur unique pour le thread matériel que cette ressource d
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur unique pour le thread matériel sous-jacent à cette ressource d’exécution.
 
@@ -91,7 +92,7 @@ Identificateur unique pour le thread matériel sous-jacent à cette ressource d�
 
 Un identificateur unique est attribué à chaque thread matériel par le runtime d’accès concurrentiel. Si plusieurs ressources d’exécution sont associées à un thread matériel, elles ont toutes le même identificateur de ressource d’exécution.
 
-## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource :: GetNodeId, méthode
+## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a> IExecutionResource :: GetNodeId, méthode
 
 Retourne un identificateur unique pour le nœud de processeur auquel cette ressource d’exécution appartient.
 
@@ -99,7 +100,7 @@ Retourne un identificateur unique pour le nœud de processeur auquel cette resso
 virtual unsigned int GetNodeId() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur unique pour un nœud de processeur.
 
@@ -109,7 +110,7 @@ Le runtime d’accès concurrentiel représente les threads matériels sur le sy
 
 Le nombre de nœuds peut être obtenu à partir de la fonction [GetProcessorNodeCount,](concurrency-namespace-functions.md).
 
-## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource :: Remove, méthode
+## <a name="iexecutionresourceremove-method"></a><a name="remove"></a> IExecutionResource :: Remove, méthode
 
 Retourne cette ressource d’exécution au Gestionnaire des ressources.
 
@@ -130,9 +131,9 @@ S’il s’agit d’une ressource d’exécution autonome que vous avez reçue d
 
 Les racines de processeur virtuel, également, peuvent être retournées à la Gestionnaire des ressources en appelant la `Remove` méthode, car l’interface `IVirtualProcessorRoot` hérite de l' `IExecutionResource` interface. Vous devrez peut-être retourner une racine de processeur virtuel soit en réponse à un appel à la méthode [iScheduler :: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) , soit lorsque vous avez terminé avec une racine de processeur virtuel surabonnée que vous avez obtenue à partir de la méthode [ISchedulerProxy :: CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) . Pour les racines de processeur virtuel, il n’existe aucune restriction sur le thread qui peut appeler la `Remove` méthode.
 
-`invalid_argument`est levée si le paramètre `pScheduler` a la valeur `NULL` .
+`invalid_argument` est levée si le paramètre `pScheduler` a la valeur `NULL` .
 
-`invalid_operation`est levée si le paramètre `pScheduler` est différent du planificateur pour lequel cette ressource d’exécution a été créée, ou avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de thread.
+`invalid_operation` est levée si le paramètre `pScheduler` est différent du planificateur pour lequel cette ressource d’exécution a été créée, ou avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de thread.
 
 ## <a name="see-also"></a>Voir aussi
 

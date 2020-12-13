@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l'
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54745c2db33a68b35236c5b6169280e5e7dacfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334129"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -87,7 +88,7 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Pointeur indiquant le début de la chaîne ou l'octet de tête connu précédent.
 
 *actif*<br/>
@@ -96,11 +97,11 @@ Pointeur indiquant la position dans la chaîne à tester.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ismbslead** retourne-1 si le caractère est un octet de tête et **_ismbstrail** retourne-1 si le caractère est un octet de fin. Si les chaînes d'entrée sont valides mais qu'elles ne correspondent ni à un octet de tête ni à un octet de fin, ces fonctions retournent zéro. Si l’un des arguments a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 les **_ismbslead** et les **_ismbstrail** sont plus lentes que les versions **_ismbblead** et **_ismbbtrail** , car elles prennent en compte le contexte de chaîne.
 
@@ -123,7 +124,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Routines de _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>
 [Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

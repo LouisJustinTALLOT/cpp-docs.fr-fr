@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_scheduler_policy_value'
 title: invalid_scheduler_policy_value, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c91295646b0bc85ea4ed5ee8f376c1ed029e4f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334484"
 ---
 # <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value, classe
 
@@ -27,9 +28,9 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|Surchargé. Construit un objet `invalid_scheduler_policy_value`.|
+|[invalid_scheduler_policy_value] (non valide-Scheduler-Policy-thread-Specification-Class. MD # ctor|Surchargé. Construit un objet `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -41,9 +42,9 @@ class invalid_scheduler_policy_value : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>invalid_scheduler_policy_value
+## <a name="invalid_scheduler_policy_value"></a><a name="ctor"></a> invalid_scheduler_policy_value
 
 Construit un objet `invalid_scheduler_policy_value`.
 
@@ -60,5 +61,5 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [SchedulerPolicy, classe](schedulerpolicy-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_scheduler_policy_thread_specification'
 title: invalid_scheduler_policy_thread_specification, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 97a3910fc83e741c54ece51ed8e20686bbd6c66b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334503"
 ---
 # <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification, classe
 
@@ -27,9 +28,9 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Surchargé. Construit un objet `invalid_scheduler_policy_value`.|
+|[invalid_scheduler_policy_thread_specification] (non valide-Scheduler-Policy-value-class. MD # ctor|Surchargé. Construit un objet `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -41,9 +42,9 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
+## <a name="invalid_scheduler_policy_thread_specification"></a><a name="ctor"></a> invalid_scheduler_policy_thread_specification
 
 Construit un objet `invalid_scheduler_policy_value`.
 
@@ -60,5 +61,5 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [SchedulerPolicy, classe](schedulerpolicy-class.md)

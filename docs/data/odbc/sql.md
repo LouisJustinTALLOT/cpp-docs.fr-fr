@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : SQL'
 title: SQL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: cdceec9f4a6a39e9e1a50fc002d4220801e8d15a
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 01a559b959d0f9a8c37f13a79855d55c5890f20e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333913"
 ---
 # <a name="sql"></a>SQL
 
@@ -33,7 +34,7 @@ Cette rubrique répond aux questions suivantes :
 
 - [Comment les classes de base de données utilisent SQL](#_core_how_the_database_classes_use_sql).
 
-## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)
+## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
 Les classes de base de données sont implémentées avec ODBC, qui utilise SQL dans une interface CLI au lieu d’incorporer des commandes SQL dans le code. ODBC utilise SQL pour communiquer avec une [source de données](../../data/odbc/data-source-odbc.md) par le biais de pilotes ODBC. Ces pilotes interprètent le langage SQL et le traduisent, si nécessaire, pour pouvoir l’utiliser avec un format de base de données particulier, comme Microsoft Access. Pour plus d’informations sur la façon dont ODBC utilise SQL, consultez [ODBC](../../data/odbc/odbc-basics.md) et la documentation [de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference) .
 

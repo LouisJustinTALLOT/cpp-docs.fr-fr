@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _umul128'
 title: _umul128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7fd126b169bd01fc4d51d186879e019f8d86f008
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333602"
 ---
 # <a name="_umul128"></a>_umul128
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Multiplie deux entiers non signés 64 bits passés comme les deux premiers arguments, place les 64 bits de poids fort du produit dans l’entier non signé 64 bits vers lequel pointe `HighProduct` et retourne les 64 bits de poids faible du produit.
 
@@ -40,15 +41,15 @@ dans Deuxième entier 64 bits à multiplier.
 *HighProduct*\
 à 64 bits de poids fort du produit.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 64 bits de poids faible du produit.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
-|`_umul128`|X64|\<intrin.h>|
+|`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>Exemple
 
@@ -77,7 +78,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

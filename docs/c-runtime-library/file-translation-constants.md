@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes de traduction de fichier
 title: Constantes de translation de fichier
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 75bb54c7e038efd41ed22ec941d871f6fbc54b7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332990"
 ---
 # <a name="file-translation-constants"></a>Constantes de translation de fichier
 
@@ -26,7 +27,7 @@ ms.locfileid: "79443260"
 
 ## <a name="remarks"></a>Notes
 
-Ces constantes spécifient le mode de translation ( **« b »** ou **« t »** ). Le mode est inclus dans la chaîne qui spécifie le type d'accès ( **"r"** , **"w"** , **"a"** , **"r+"** , **"w+"** , **"a+"** ).
+Ces constantes spécifient le mode de translation (**« b »** ou **« t »**). Le mode est inclus dans la chaîne qui spécifie le type d'accès (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).
 
 Les modes de translation sont les suivants :
 

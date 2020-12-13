@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : db_accessor'
 title: db_accessor (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b32fb16fe938a84280b0fb047923bbc2aa687c75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333118"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -31,7 +32,7 @@ Spécifie le numéro d’accesseur (un index entier de base zéro). Vous devez s
 *Auto*<br/>
 Valeur booléenne qui spécifie si l’accesseur est récupéré automatiquement (TRUE) ou non (FALSe).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **db_accessor** définit l’accesseur OLE DB sous-jacent pour les `db_column` attributs et suivants `db_param` dans la même classe ou fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour regrouper les `db_column` attributs qui participent à la `IAccessor` liaison basée sur OLE DB. Il est utilisé conjointement avec les `db_table` `db_command` attributs ou. L’appel de cet attribut est semblable à l’appel des macros [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) et [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) .
 
@@ -65,14 +66,14 @@ public:
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Value |
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Blocs d’attributs|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

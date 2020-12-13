@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fullpath_dbg, _wfullpath_dbg'
 title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-ms.openlocfilehash: b728090c201c9c5d07cc2f1bec4f53b1682e0e92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a006533a6641110f1f94ca442743533c18c2aebb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334167"
 ---
 # <a name="_fullpath_dbg-_wfullpath_dbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -78,13 +79,13 @@ Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*abs
 *blockType*<br/>
 Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
-*extension*<br/>
+*filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
 *LineNumber*<br/>
 Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom du chemin d’accès absolu (*absPath*). En cas d’erreur (par exemple, si la valeur passée dans *relPath* inclut une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieure à *MaxLength*), la fonction retourne la **valeur null**.
 
@@ -113,4 +114,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 [Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
-[Versions Debug des fonctions d'allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

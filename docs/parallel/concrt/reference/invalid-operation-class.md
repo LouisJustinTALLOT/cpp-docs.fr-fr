@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_operation'
 title: invalid_operation, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3050d487f2c374f66f264b6e568fce5244d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334542"
 ---
 # <a name="invalid_operation-class"></a>invalid_operation, classe
 
@@ -29,7 +30,7 @@ class invalid_operation : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[invalid_operation](#ctor)|Surchargé. Construit un objet `invalid_operation`.|
 
@@ -47,9 +48,9 @@ Les différentes méthodes qui lèvent cette exception indiquent généralement 
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>invalid_operation
+## <a name="invalid_operation"></a><a name="ctor"></a> invalid_operation
 
 Construit un objet `invalid_operation`.
 
@@ -66,4 +67,4 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

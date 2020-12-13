@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma make_public'
 title: make_public, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 327a9882e13f9c51182e0673443566b56177d320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333404"
 ---
 # <a name="make_public-pragma"></a>make_public, pragma
 
@@ -25,7 +26,7 @@ Indique qu'un type natif doit disposer d'une accessibilité d'assembly public.
 
 ### <a name="parameters"></a>Paramètres
 
-*type*\
+*entrer*\
 Nom du type pour lequel vous souhaitez disposer d’une accessibilité d’assembly public.
 
 ## <a name="remarks"></a>Notes
@@ -63,4 +64,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

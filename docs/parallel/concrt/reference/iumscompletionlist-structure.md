@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure IUMSCompletionList,'
 title: IUMSCompletionList, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b54766e8b1c6f2e7c0afbb5e4e9a8efc0c455b4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334350"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList, structure
 
@@ -31,11 +32,11 @@ struct IUMSCompletionList;
 
 |Nom|Description|
 |----------|-----------------|
-|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Récupère une chaîne `IUMSUnblockNotification` d’interfaces représentant des contextes d’exécution dont les procurations de thread associées se sont débloquées depuis la dernière fois que cette méthode a été invoquée.|
+|[IUMSCompletionList, :: GetUnblockNotifications](#getunblocknotifications)|Récupère une chaîne d' `IUMSUnblockNotification` interfaces représentant les contextes d’exécution dont les proxys de thread associés ont été débloqués depuis la dernière fois que cette méthode a été appelée.|
 
 ## <a name="remarks"></a>Notes
 
-Un planificateur doit être extraordinairement prudent sur les actions effectuées après avoir utilisé cette interface pour déquer les éléments de la liste d’achèvement. Les éléments doivent être placés sur la liste des contextes runnables du planificateur et être généralement accessibles dès que possible. Il est tout à fait possible que l’un des éléments déqueued a été donné la propriété d’un verrou arbitraire. Le planificateur ne peut pas faire d’appels de fonction arbitraire qui peuvent bloquer entre l’appel à déqueuer les éléments et le placement de ces éléments sur une liste qui peut être généralement consulté à partir de l’annexe.
+Un planificateur doit être très prudent en ce qui concerne les actions effectuées après l’utilisation de cette interface pour défiler des éléments de la liste de saisie semi-automatique. Les éléments doivent être placés dans la liste des contextes exécutables du planificateur et être généralement accessibles dès que possible. Il est tout à fait possible que l’un des éléments de la file d’attente ait reçu la propriété d’un verrou arbitraire. Le planificateur ne peut pas effectuer d’appels de fonction arbitraires qui peuvent bloquer entre l’appel à des éléments de retrait de la file d’attente et le placement de ces éléments sur une liste qui est généralement accessible à partir du planificateur.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -43,28 +44,28 @@ Un planificateur doit être extraordinairement prudent sur les actions effectué
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** concrtrm.h
+**En-tête :** concrtrm. h
 
-**Namespace:** concurrence
+**Espace de noms :** concurrence
 
-## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMSCompletionList::GetUnblockNotifications Méthode
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a> IUMSCompletionList, :: GetUnblockNotifications, méthode
 
-Récupère une chaîne `IUMSUnblockNotification` d’interfaces représentant des contextes d’exécution dont les procurations de thread associées se sont débloquées depuis la dernière fois que cette méthode a été invoquée.
+Récupère une chaîne d' `IUMSUnblockNotification` interfaces représentant les contextes d’exécution dont les proxys de thread associés ont été débloqués depuis la dernière fois que cette méthode a été appelée.
 
 ```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une chaîne `IUMSUnblockNotification` d’interfaces.
+Chaîne d' `IUMSUnblockNotification` interfaces.
 
 ### <a name="remarks"></a>Notes
 
-Les notifications retournées sont invalides une fois les contextes d’exécution reportés.
+Les notifications renvoyées ne sont pas valides une fois que les contextes d’exécution ont été replanifiés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [IUMSScheduler, structure](iumsscheduler-structure.md)<br/>
 [IUMSUnblockNotification, structure](iumsunblocknotification-structure.md)

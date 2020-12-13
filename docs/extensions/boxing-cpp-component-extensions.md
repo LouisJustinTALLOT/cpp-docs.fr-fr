@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : boxing (C++/CLI et C++/CX)'
 title: Boxing (C++/ CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3bdc87d9dea2a5a70344ee032655712af221d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333747"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Boxing (C++/ CLI et C++/CX)
 
@@ -82,13 +83,13 @@ Les opérations boxing et unboxing permettent de traiter les types valeur en tan
 
 Pour plus d'informations, consultez les pages suivantes :
 
-- [Guide pratique pour demander explicitement le boxing](../dotnet/how-to-explicitly-request-boxing.md)
+- [Comment : demander explicitement le boxing](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Guide pratique pour utiliser gcnew pour créer des types valeur et utiliser un boxing implicite](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Comment : utiliser gcnew pour créer des types valeur et utiliser le boxing implicite](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Guide pratique pour effectuer une conversion unbox](../dotnet/how-to-unbox.md)
+- [Procédure : Effectuer une conversion unbox](../dotnet/how-to-unbox.md)
 
-- [Conversions standard et boxing implicite](../dotnet/standard-conversions-and-implicit-boxing.md)
+- [Conversions standard et Boxing implicite](../dotnet/standard-conversions-and-implicit-boxing.md)
 
 ### <a name="requirements"></a>Spécifications
 
@@ -190,4 +191,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

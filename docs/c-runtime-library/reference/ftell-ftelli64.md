@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ftell, _ftelli64'
 title: ftell, _ftelli64
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: 273ad4990f78355029770e19e7cdcf36d7ba39bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3fec98cb9d90c8b63072a8e618f58246a6b0147
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334243"
 ---
 # <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
@@ -60,13 +61,13 @@ __int64 _ftelli64(
 *train*<br/>
 Structure du **fichier** cible.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**ftell** et **_ftelli64** retournent la position actuelle du fichier. La valeur retournée par **ftell** et **_ftelli64** peut ne pas refléter l’offset d’octet physique pour les flux ouverts en mode texte, car le mode texte provoque la traduction du saut de ligne de retour chariot. Utilisez **ftell** avec [fseek](fseek-fseeki64.md) ou **_ftelli64** avec [_fseeki64](fseek-fseeki64.md) pour revenir correctement aux emplacements de fichiers. En cas d’erreur, **ftell** et **_ftelli64** appeler le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1L et définissent **errno** sur l’une des deux constantes définies dans errno. Manutention. La constante **EBADF** signifie que l’argument de *flux* n’est pas une valeur de pointeur de fichier valide ou ne fait pas référence à un fichier ouvert. **EINVAL** signifie qu’un argument de *flux* non valide a été passé à la fonction. Sur les appareils qui ne sont pas en mesure de rechercher (tels que les terminaux et les imprimantes) ou lorsque le *flux* ne fait pas référence à un fichier ouvert, la valeur de retour n’est pas définie.
+**ftell** et **_ftelli64** retournent la position actuelle du fichier. La valeur retournée par **ftell** et **_ftelli64** peut ne pas refléter l’offset d’octet physique pour les flux ouverts en mode texte, car le mode texte provoque la traduction du saut de ligne de retour chariot. Utilisez **ftell** avec [fseek](fseek-fseeki64.md) ou **_ftelli64** avec [_fseeki64](fseek-fseeki64.md) pour revenir correctement aux emplacements de fichiers. En cas d’erreur, **ftell** et **_ftelli64** appeler le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1L et définissent **errno** sur l’une des deux constantes définies dans errno. H. La constante **EBADF** signifie que l’argument de *flux* n’est pas une valeur de pointeur de fichier valide ou ne fait pas référence à un fichier ouvert. **EINVAL** signifie qu’un argument de *flux* non valide a été passé à la fonction. Sur les appareils qui ne sont pas en mesure de rechercher (tels que les terminaux et les imprimantes) ou lorsque le *flux* ne fait pas référence à un fichier ouvert, la valeur de retour n’est pas définie.
 
 Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **ftell** et **_ftelli64** récupèrent la position actuelle du pointeur de fichier (le cas échéant) associé au *flux*. La position est exprimée sous la forme d’un décalage par rapport au début du flux.
 
@@ -80,7 +81,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-têtes facultatifs|
+|Fonction|En-tête requis|En-têtes facultatifs|
 |--------------|---------------------|----------------------|
 |**ftell**|\<stdio.h>|\<errno.h>|
 |**_ftelli64**|\<stdio.h>|\<errno.h>|

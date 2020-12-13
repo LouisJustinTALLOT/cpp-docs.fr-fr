@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32'
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7c9bd6994506cabd27bfad949bbe7ec3784ffcc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334245"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -105,7 +106,7 @@ Descripteur du fichier ouvert.
 *mémoire tampon*<br/>
 Pointeur désignant la structure destinée à stocker les résultats.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si les informations sur l’état des fichiers sont obtenues. Une valeur de retour de-1 indique une erreur. Si le descripteur de fichier n’est pas valide ou si la *mémoire tampon* est **null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EBADF**, dans le cas d’un descripteur de fichier non valide, ou à **EINVAL**, si *buffer* a la **valeur null**.
 
@@ -124,7 +125,7 @@ La fonction **_fstat** obtient des informations sur le fichier ouvert associé �
 | **st_rdev** | Si un périphérique, *FD*; Sinon, 0. |
 | **st_size** | Taille du fichier en octets. |
 
-Si *FD* fait référence à un périphérique, les champs **st_atime**, **st_ctime**, **st_mtime**et **st_size** ne sont pas significatifs.
+Si *FD* fait référence à un périphérique, les champs **st_atime**, **st_ctime**, **st_mtime** et **st_size** ne sont pas significatifs.
 
 Étant donné que Stat.h utilise le type [_dev_t](../../c-runtime-library/standard-types.md), qui est défini dans Types.h, vous devez inclure Types.h avant Stat.h dans votre code.
 
@@ -132,7 +133,7 @@ Si *FD* fait référence à un périphérique, les champs **st_atime**, **st_cti
 
 Les variantes de ces fonctions prennent en charge les types d’heures 32 bits ou 64 bits, ainsi que les longueurs de fichiers 32 bits ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille du type d’heure utilisé ; le deuxième suffixe est soit **i32** , soit **I64**, indiquant si la taille du fichier est représentée sous la forme d’un entier 32 bits ou 64 bits.
 
-**_fstat** équivaut à **_fstat64i32**et **`struct`** **_stat** contient une heure de 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_fstat** utilise une heure de 32 bits et **`struct`** **_stat** contient une heure de 32 bits. Il en va de même pour **_fstati64**.
+**_fstat** équivaut à **_fstat64i32** et **`struct`** **_stat** contient une heure de 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_fstat** utilise une heure de 32 bits et **`struct`** **_stat** contient une heure de 32 bits. Il en va de même pour **_fstati64**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -140,14 +141,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Fonctions|_USE_32BIT_TIME_T défini ?|Type d’heure|Type de longueur de fichier|
 |---------------|------------------------------------|---------------|----------------------|
-|**_fstat**|Non défini|64 bits|32 bits|
+|**_fstat**|Non défini|64 bits|32 bits|
 |**_fstat**|Défini|32 bits|32 bits|
 |**_fstat32**|Non affecté par la définition de macro|32 bits|32 bits|
-|**_fstat64**|Non affecté par la définition de macro|64 bits|64 bits|
-|**_fstati64**|Non défini|64 bits|64 bits|
-|**_fstati64**|Défini|32 bits|64 bits|
-|**_fstat32i64**|Non affecté par la définition de macro|32 bits|64 bits|
-|**_fstat64i32**|Non affecté par la définition de macro|64 bits|32 bits|
+|**_fstat64**|Non affecté par la définition de macro|64 bits|64 bits|
+|**_fstati64**|Non défini|64 bits|64 bits|
+|**_fstati64**|Défini|32 bits|64 bits|
+|**_fstat32i64**|Non affecté par la définition de macro|32 bits|64 bits|
+|**_fstat64i32**|Non affecté par la définition de macro|64 bits|32 bits|
 
 ## <a name="requirements"></a>Spécifications
 

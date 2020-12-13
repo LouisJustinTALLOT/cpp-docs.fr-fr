@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : Windows Runtime C++ Template Library (WRL)'
 title: Bibliothèque de modèles Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc94f907964efdf4bf93e8d92922f69373740d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333917"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -36,7 +37,7 @@ La bibliothèque de modèles C++ Windows Runtime et C++/CX offrent des avantages
 
 - L’objectif et la conception de la bibliothèque de modèles Windows Runtime C++ sont inspirés par le Active Template Library (ATL), qui est un ensemble de classes C++ basées sur des modèles qui simplifient la programmation des objets COM. Étant donné que Windows Runtime C++ Template Library utilise le C++ standard pour encapsuler les Windows Runtime, vous pouvez plus facilement porter et interagir avec de nombreux composants COM existants écrits en ATL dans le Windows Runtime. Si vous connaissez déjà ATL, vous constaterez peut-être que Windows Runtime la programmation de la bibliothèque de modèles C++ est plus facile.
 
-## <a name="getting-started"></a>Prise en main
+## <a name="getting-started"></a>Mise en route
 
 Voici quelques ressources qui peuvent vous aider à travailler immédiatement avec la bibliothèque de modèles C++ Windows Runtime.
 

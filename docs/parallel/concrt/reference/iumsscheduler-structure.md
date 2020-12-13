@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure IUMSScheduler'
 title: IUMSScheduler, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: 70954906122c048e5199a801632626d35a8e3f18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e42a2e3d39e568ba12cd681053406ce88c7b5dba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334338"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler, structure
 
@@ -31,31 +32,31 @@ struct IUMSScheduler : public IScheduler;
 
 |Nom|Description|
 |----------|-----------------|
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Assigne `IUMSCompletionList` une interface à un planificateur de thread UMS.|
+|[IUMSScheduler :: SetCompletionList](#setcompletionlist)|Assigne une `IUMSCompletionList` interface à un planificateur de threads UMS.|
 
 ## <a name="remarks"></a>Notes
 
-Si vous implémentez un planificateur personnalisé qui communique avec le gestionnaire de ressources, et que vous souhaitez que les threads UMS `IUMSScheduler` soient remis à votre planificateur au lieu de threads Win32 ordinaires, vous devez fournir une implémentation de l’interface. En outre, vous devez définir la valeur `SchedulerKind` de `UmsThreadDefault`la stratégie pour la clé de la stratégie de planificateur d’être . Si la stratégie spécifie `IScheduler` le thread UMS, l’interface qui est passée comme paramètre à `IUMSScheduler` [l’IResourceManager::La méthode RegisterScheduler](iresourcemanager-structure.md#registerscheduler) doit être une interface.
+Si vous implémentez un planificateur personnalisé qui communique avec le Gestionnaire des ressources et que vous souhaitez que les threads UMS soient transmis à votre planificateur au lieu de threads Win32 ordinaires, vous devez fournir une implémentation de l' `IUMSScheduler` interface. En outre, vous devez définir la valeur de la stratégie pour la clé de stratégie du planificateur `SchedulerKind` sur `UmsThreadDefault` . Si la stratégie spécifie le thread UMS, l' `IScheduler` interface qui est passée en tant que paramètre à la méthode [IResourceManager :: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) doit être une `IUMSScheduler` interface.
 
-Le gestionnaire de ressources est en mesure de vous remettre des threads UMS uniquement sur les systèmes d’exploitation qui ont la fonctionnalité UMS. Systèmes d’exploitation 64 bits avec version Windows 7 et threads UMS de prise en charge plus élevée. Si vous créez une stratégie `SchedulerKind` de planificateur `UmsThreadDefault` avec l’ensemble clé de la valeur `SchedulerKind` et que la plate-forme `ThreadScheduler`sous-jacente ne prend pas en charge UMS, la valeur de la clé sur cette politique sera changée en valeur . Vous devez toujours relire cette valeur de stratégie avant de vous attendre à recevoir des threads UMS.
+Le Gestionnaire des ressources est en mesure de transmettre les threads UMS uniquement sur les systèmes d’exploitation qui disposent de la fonctionnalité UMS. les systèmes d’exploitation 64 bits avec version Windows 7 et versions ultérieures prennent en charge les threads UMS. Si vous créez une stratégie de planificateur avec la `SchedulerKind` clé définie sur la valeur `UmsThreadDefault` et que la plateforme sous-jacente ne prend pas en charge UMS, la valeur de la `SchedulerKind` clé de cette stratégie sera remplacée par la valeur `ThreadScheduler` . Vous devez toujours lire cette valeur de stratégie avant de recevoir des threads UMS.
 
-L’interface `IUMSScheduler` est l’une des extrémités d’un canal de communication bidirectionnel entre un planificateur et le gestionnaire des ressources. L’autre extrémité est `IResourceManager` représentée `ISchedulerProxy` par les interfaces et les interfaces, qui sont mises en œuvre par le gestionnaire des ressources.
+L' `IUMSScheduler` interface est une extrémité d’un canal bidirectionnel de communication entre un planificateur et le gestionnaire des ressources. L’autre terminaison est représentée par les `IResourceManager` `ISchedulerProxy` interfaces et, qui sont implémentées par le gestionnaire des ressources.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[IScheduler (IScheduler)](ischeduler-structure.md)
+[IScheduler](ischeduler-structure.md)
 
 `IUMSScheduler`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** concrtrm.h
+**En-tête :** concrtrm. h
 
-**Namespace:** concurrence
+**Espace de noms :** concurrence
 
-## <a name="iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>IUMSScheduler::SetCompletionList Méthode
+## <a name="iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a> IUMSScheduler :: SetCompletionList, méthode
 
-Assigne `IUMSCompletionList` une interface à un planificateur de thread UMS.
+Assigne une `IUMSCompletionList` interface à un planificateur de threads UMS.
 
 ```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
@@ -63,17 +64,17 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*pCompletionList (en)*<br/>
-L’interface de liste d’achèvement pour le planificateur. Il y a une liste unique par planificateur.
+*pCompletionList*<br/>
+Interface de la liste de saisie semi-automatique pour le planificateur. Il n’existe qu’une seule liste par planificateur.
 
 ### <a name="remarks"></a>Notes
 
-Le gestionnaire des ressources invoquera cette méthode sur un planificateur qui spécifie qu’il veut des threads UMS, après que le planificateur a demandé une allocation initiale des ressources. Le planificateur peut `IUMSCompletionList` utiliser l’interface pour déterminer quand les procurations de thread UMS ont débloqué. Il est uniquement valable d’accéder à cette interface à partir d’un proxy de thread fonctionnant sur une racine de processeur virtuel assignée au planificateur UMS.
+La Gestionnaire des ressources appellera cette méthode sur un planificateur qui spécifie qu’elle veut des threads UMS, une fois que le planificateur a demandé une allocation initiale des ressources. Le planificateur peut utiliser l' `IUMSCompletionList` interface pour déterminer quand les proxys de thread UMS ont été débloqués. L’accès à cette interface est uniquement valide à partir d’un proxy de thread s’exécutant sur une racine de processeur virtuel affectée au planificateur UMS.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[PolitiqueElementKey](concurrency-namespace-enums.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
+[PolicyElementKey,](concurrency-namespace-enums.md)<br/>
 [IScheduler, structure](ischeduler-structure.md)<br/>
 [IUMSCompletionList, structure](iumscompletionlist-structure.md)<br/>
 [IResourceManager, structure](iresourcemanager-structure.md)

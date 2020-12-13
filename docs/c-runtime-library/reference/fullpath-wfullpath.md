@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fullpath, _wfullpath'
 title: _fullpath, _wfullpath
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c02d100abc175f24194ce71627502544085f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334148"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -73,7 +74,7 @@ Nom de chemin d’accès relatif.
 *maxLength*<br/>
 Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est en octets pour **_fullpath** , mais en caractères larges ( **`wchar_t`** ) pour **_wfullpath**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu (*absPath*). En cas d’erreur (par exemple, si la valeur passée dans *relPath* inclut une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieure à *MaxLength*), la fonction retourne la **valeur null**.
 

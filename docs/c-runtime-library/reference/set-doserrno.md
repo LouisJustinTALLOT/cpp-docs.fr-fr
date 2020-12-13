@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_doserrno'
 title: _set_doserrno
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4b7860764505ab7d3388bace6fa86b0726851e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334106"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -52,11 +53,11 @@ errno_t _set_doserrno( int error_value );
 *error_value*<br/>
 Nouvelle valeur de **_doserrno**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si l’opération réussit.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les valeurs possibles sont définies dans Errno.h.
 

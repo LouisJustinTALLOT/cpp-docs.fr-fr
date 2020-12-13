@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_multiple_scheduling'
 title: invalid_multiple_scheduling, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: a8b2a045ce94562dcba0019bc03aaa90c4d384a9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 23d89d93c953a3c01a6e0e698cfa7489effd2986
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140902"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334550"
 ---
 # <a name="invalid_multiple_scheduling-class"></a>invalid_multiple_scheduling, classe
 
@@ -29,7 +30,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[invalid_multiple_scheduling](#ctor)|Surchargé. Construit un objet `invalid_multiple_scheduling`.|
 
@@ -43,9 +44,9 @@ class invalid_multiple_scheduling : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>invalid_multiple_scheduling
+## <a name="invalid_multiple_scheduling"></a><a name="ctor"></a> invalid_multiple_scheduling
 
 Construit un objet `invalid_multiple_scheduling`.
 
@@ -62,10 +63,10 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[task_handle, classe](task-handle-class.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
+[Classe task_handle](task-handle-class.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
-[run](task-group-class.md)<br/>
-[qu'](task-group-class.md)<br/>
+[Utilisez](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
-[structured_task_group, classe](structured-task-group-class.md)
+[Classe structured_task_group](structured-task-group-class.md)

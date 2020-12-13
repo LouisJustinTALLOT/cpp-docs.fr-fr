@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les fonctions de recherche de nom de fichier
 title: Fonctions de recherche de nom de fichier
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ab547de95906909a75bdd73f653c5cdae519879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332953"
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
 
@@ -104,7 +105,7 @@ Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindn
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t`est un **`typedef`** pour **`unsigned long`** (32 bits).
+`_fsize_t` est un **`typedef`** pour **`unsigned long`** (32 bits).
 
 ## <a name="example"></a>Exemple
 

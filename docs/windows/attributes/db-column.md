@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : db_column'
 title: db_column (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 931a285d28752273ecb1941702ff1cb32b42740c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333083"
 ---
 # <a name="db_column"></a>db_column
 
@@ -48,7 +49,7 @@ Facultatif Variable membre utilisée pour contenir l’état de cette colonne. L
 *length*<br/>
 Facultatif Variable membre utilisée pour contenir la taille de la colonne en octets.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à la `IAccessor` liaison basée sur OLE DB. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)et [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
 
@@ -96,14 +97,14 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Value |
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

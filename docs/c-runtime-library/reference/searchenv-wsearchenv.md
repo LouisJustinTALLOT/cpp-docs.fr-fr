@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _searchenv, _wsearchenv'
 title: _searchenv, _wsearchenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 411cb2b909d3ed948adcce97c41ace1a806f2f02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334122"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -83,7 +84,7 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier à rechercher.
 
 *argument*<br/>
@@ -92,11 +93,11 @@ Environnement dans lequel effectuer la recherche.
 *chemin*<br/>
 Mémoire tampon destinée à stocker le chemin d’accès complet.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La routine **_searchenv** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur, par exemple **path**, **lib**ou **include**, qui spécifie une liste de chemins d’accès aux répertoires. Étant donné que **_searchenv** est sensible à la casse, *varname* doit correspondre à la casse de la variable d’environnement.
+La routine **_searchenv** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur, par exemple **path**, **lib** ou **include**, qui spécifie une liste de chemins d’accès aux répertoires. Étant donné que **_searchenv** est sensible à la casse, *varname* doit correspondre à la casse de la variable d’environnement.
 
-La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin*d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
+La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin* d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
 La mémoire tampon du *chemin d’accès* doit être d’au moins **_MAX_PATH** caractères pour tenir compte de la longueur totale du nom de chemin d’accès construit. Dans le cas contraire, **_searchenv** risque de saturer la mémoire tampon de *chemin d’accès* et de provoquer un comportement inattendu.
 

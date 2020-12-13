@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __umulh'
 title: __umulh
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1d727d72155bdfb5cd5da1ee56c514af26b5ae89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333611"
 ---
 # <a name="__umulh"></a>__umulh
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Retourner les 64 bits de poids fort du produit de deux entiers non signés 64 bits.
 
@@ -36,17 +37,17 @@ unsigned __int64 __umulh(
 *p*\
 [in] Second nombre à multiplier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 64 bits de poids fort du résultat 128 bits de la multiplication.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__umulh`|X64|
+|`__umulh`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -78,7 +79,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

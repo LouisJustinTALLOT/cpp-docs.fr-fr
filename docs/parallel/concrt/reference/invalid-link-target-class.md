@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_link_target'
 title: invalid_link_target, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d080886c3aab0ecc120d4ce13f5f75f2eecfea8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334585"
 ---
 # <a name="invalid_link_target-class"></a>invalid_link_target, classe
 
@@ -29,7 +30,7 @@ class invalid_link_target : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[invalid_link_target](#ctor)|Surchargé. Construit un objet `invalid_link_target`.|
 
@@ -43,9 +44,9 @@ class invalid_link_target : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>invalid_link_target
+## <a name="invalid_link_target"></a><a name="ctor"></a> invalid_link_target
 
 Construit un objet `invalid_link_target`.
 
@@ -62,5 +63,5 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [Blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md)

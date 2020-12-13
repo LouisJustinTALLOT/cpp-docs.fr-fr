@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragmas managés, non managés'
 title: managed, unmanaged, pragmas
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10f632b009c9922f67f4321acc862142d895e7ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333391"
 ---
 # <a name="managed-unmanaged-pragmas"></a>managed, unmanaged, pragmas
 
@@ -27,7 +28,7 @@ Activez le contrôle au niveau de la fonction pour compiler des fonctions comme 
 
 > **gérée par #pragma**\
 > **#pragma non géré**\
-> **#pragma géré (** [ **push,** ] { **on** | **off** } **)** \
+> **#pragma géré (** [ **push,** ] { **on**  |  **off** } **)**\
 > **#pragma géré (POP)**
 
 ## <a name="remarks"></a>Notes
@@ -42,9 +43,9 @@ Quand vous appliquez ces pragmas :
 
 - Ajoutez le pragma précédant une fonction, mais pas dans le corps d’une fonction.
 
-- Ajoutez le pragma après les instructions `#include`. N’utilisez pas ces pragmas avant `#include` les instructions.
+- Ajoutez le pragma après les instructions `#include`. N’utilisez pas ces pragmas avant les `#include` instructions.
 
-Le compilateur ignore les pragmas managés et **non managés** si `/clr` n’est pas utilisé dans la compilation.
+Le compilateur ignore les pragmas **managés** et **non managés** si `/clr` n’est pas utilisé dans la compilation.
 
 Quand une fonction de modèle est instanciée, l’état du pragma lorsque le modèle est défini détermine s’il est managé ou non managé.
 
@@ -88,4 +89,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

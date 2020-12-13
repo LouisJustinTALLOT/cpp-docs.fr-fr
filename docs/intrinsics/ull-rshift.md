@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __ull_rshift'
 title: __ull_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5b819e4a1df8db7b7562023c6acc9dbbd94f7f76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80074989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333628"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 sur x64, décale une valeur 64 bits spécifiée par le premier paramètre à droite d’un nombre de bits spécifié par le deuxième paramètre.
 
@@ -31,7 +32,7 @@ unsigned __int64 __ull_rshift(
 
 ### <a name="parameters"></a>Paramètres
 
-*masque*\
+*filtrage*\
 dans Valeur entière 64 bits à décaler vers la droite.
 
 *nBit*\
@@ -47,11 +48,11 @@ Masque décalé par `nBit` bits.
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Fichier d’en-tête** \<Intro. h >
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Si le deuxième paramètre est supérieur à 31 sur x86 (63 sur x64), ce nombre est réalisé en modulo 32 (64 sur x64) pour déterminer le nombre de bits à décaler. Le `ull` dans le nom indique `unsigned long long (unsigned __int64)`.
+Si le deuxième paramètre est supérieur à 31 sur x86 (63 sur x64), ce nombre est réalisé en modulo 32 (64 sur x64) pour déterminer le nombre de bits à décaler. La `ull` dans le nom indique `unsigned long long (unsigned __int64)` .
 
 ## <a name="example"></a>Exemple
 
@@ -78,7 +79,7 @@ int main()
 1
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
