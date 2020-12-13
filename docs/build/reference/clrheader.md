@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/CLRHEADER
 title: /CLRHEADER
 ms.date: 05/16/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-ms.openlocfilehash: 5974606448dad103c8f12a126b8d17c688927c88
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8866707ae629672c3ae9ebb468d145eafb0475c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182422"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
@@ -25,10 +26,10 @@ Afficher les informations spécifiques au CLR.
 
 ### <a name="arguments"></a>Arguments
 
-*fichier*<br/>
+*file*<br/>
 Fichier image généré avec [/clr](clr-common-language-runtime-compilation.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **/CLRHEADER** affiche des informations sur les en-têtes .NET utilisés dans n’importe quel programme managé. La sortie indique l’emplacement et la taille, en octets, de l’en-tête .NET et les sections dans l’en-tête.
 
@@ -38,10 +39,10 @@ Lorsque **/CLRHEADER** est utilisé sur un fichier qui a été compilé avec /cl
 
 - 0  -- /clr (l’image peut contenir du code natif).
 
-Vous pouvez également vérifier programmatiquement si une image a été générée pour le common language runtime.  Pour plus d'informations, voir [Procédure : déterminer si une image est native ou CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+Vous pouvez également vérifier programmatiquement si une image a été générée pour le common language runtime.  Pour plus d’informations, consultez [Comment : déterminer si une image est native ou CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
 
 Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015 et non prises en charge dans Visual Studio 2017 et ultérieur. Le code qui doit être « pur » ou « sécurisé » doit être porté sur C#.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [DUMPBIN, options](dumpbin-options.md)
+- [Options DUMPBIN](dumpbin-options.md)

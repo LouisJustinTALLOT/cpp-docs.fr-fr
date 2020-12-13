@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/cgthreads` (threads de génération de code)'
 title: /cgthreads (Threads de génération de code)
 ms.date: 07/31/2020
 f1_keywords:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 41f1e2ab6aa9263a2faf81e83d47db953819827a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182474"
 ---
-# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(Threads de génération de code)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads` (Threads de génération de code)
 
 Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code.
 
@@ -36,7 +37,7 @@ Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la g�
 **`cgthreadsN`**\
 Nombre maximal de threads à utiliser pour cl.exe, où *N* est un nombre compris entre 1 et 8.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L' **`cgthreads`** option spécifie le nombre maximal de threads cl.exe utilise en parallèle pour les phases d’optimisation et de génération de code de la compilation. Notez qu’il ne peut pas y avoir d’espace entre **`cgthreads`** et l’argument *Number* . Par défaut, cl.exe utilise quatre threads, comme si **`/cgthreads4`** a été spécifié. Si davantage de cœurs de processeur sont disponibles, une valeur *numérique* supérieure peut améliorer les temps de génération. Cette option est particulièrement utile quand elle est associée à [ `/GL` (optimisation de l’ensemble du programme)](gl-whole-program-optimization.md).
 
@@ -46,7 +47,7 @@ Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build. Le com
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **options supplémentaires** pour inclure **`cgthreadsN`** , où *`N`* est une valeur comprise entre 1 et 8, puis sélectionnez **OK**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CHeaderCtrl, classe'
 title: CHeaderCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: f225d406ab1560b4308a468ebd71b3dfd88cfa2a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9fe17b6c2553526af40ead253cd7c03fa6b57612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184008"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 
@@ -176,7 +177,7 @@ Efface tous les filtres pour un contrôle header.
 BOOL ClearAllFilters();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -201,7 +202,7 @@ BOOL ClearFilter(int nColumn);
 *nColumn*<br/>
 Valeur de colonne indiquant le filtre à effacer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -239,7 +240,7 @@ Spécifie la fenêtre parente du contrôle d’en-tête, généralement `CDialog
 *nID*<br/>
 Spécifie l’ID du contrôle d’en-tête.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation a réussi ; Sinon, zéro.
 
@@ -309,7 +310,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -330,7 +331,7 @@ CImageList* CreateDragImage(int nIndex);
 *nIndex*<br/>
 Index de base zéro de l’élément dans le contrôle header. L’image assignée à cet élément est la base de l’image transparente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) en cas de réussite ; Sinon, NULL. La liste retournée contient une seule image.
 
@@ -353,7 +354,7 @@ BOOL DeleteItem(int nPos);
 *nPos*<br/>
 Spécifie l’index de base zéro de l’élément à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -406,7 +407,7 @@ Valeur qui spécifie comment gérer les modifications de modification de l’uti
 
 Spécifiez TRUE pour ignorer les modifications apportées par l’utilisateur ou FALSe pour accepter les modifications apportées par l’utilisateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -426,7 +427,7 @@ Récupère la largeur de la marge d’une image bitmap dans un contrôle header.
 int GetBitmapMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la marge de la bitmap en pixels.
 
@@ -446,7 +447,7 @@ Obtient l’index de l’élément qui a le focus dans le contrôle d’en-tête
 int GetFocusedItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de l’élément d’en-tête qui a le focus.
 
@@ -474,7 +475,7 @@ Récupère le handle d’une liste d’images utilisée pour dessiner des élém
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -504,7 +505,7 @@ Spécifie l’index de base zéro de l’élément à récupérer.
 *pHeaderItem*<br/>
 Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui reçoit le nouvel élément. Cette structure est utilisée avec les `InsertItem` `SetItem` fonctions membres et. Tous les indicateurs définis dans l' `mask` élément garantissent que les valeurs des éléments correspondants sont correctement remplies lors du retour. Si l' `mask` élément a la valeur zéro, les valeurs des autres éléments de structure ne sont pas significatives.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -520,7 +521,7 @@ Récupère le nombre d’éléments dans un contrôle header.
 int GetItemCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments de contrôle d’en-tête en cas de réussite ; sinon-1.
 
@@ -546,7 +547,7 @@ dans Index de base zéro d’un élément d’en-tête dont le style est HDF_SPL
 *lpRect*\
 à Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) pour recevoir les informations de rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette fonction est réussie ; Sinon, FALSe.
 
@@ -584,7 +585,7 @@ Index de base zéro de l’élément de contrôle d’en-tête.
 *lpRect*<br/>
 Pointeur vers l’adresse d’une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui reçoit les informations de rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -610,7 +611,7 @@ Pointeur vers l’adresse d’une mémoire tampon qui reçoit les valeurs d’in
 *iCount*<br/>
 Nombre d’éléments de contrôle d’en-tête. Ne doit pas être négatif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -635,7 +636,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 *lpRect*\
 à Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui reçoit les informations de rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette fonction est réussie ; Sinon, FALSe.
 
@@ -670,7 +671,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 *phdhti*\
 [in, out] Pointeur vers une structure [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) qui spécifie le point à tester et reçoit les résultats du test.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de l’élément d’en-tête, le cas échéant, à la position spécifiée ; Sinon,-1.
 
@@ -708,7 +709,7 @@ Index de base zéro de l'élément à insérer. Si la valeur est égale à zéro
 *phdi*<br/>
 Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui contient des informations sur l’élément à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du nouvel élément en cas de réussite ; sinon-1.
 
@@ -729,7 +730,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 *pHeaderLayout*<br/>
 Pointeur vers une structure [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , qui contient des informations utilisées pour définir la taille et la position d’un contrôle header.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -754,7 +755,7 @@ int OrderToIndex(int nOrder) const;
 *nOrder*<br/>
 Ordre de base zéro dans lequel l’élément apparaît dans le contrôle header, de gauche à droite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément, en fonction de son ordre dans le contrôle d’en-tête. L’index est compté de gauche à droite, en commençant par 0.
 
@@ -775,7 +776,7 @@ int SetBitmapMargin(int nWidth);
 *nWidth*<br/>
 Largeur, spécifiée en pixels, de la marge qui entoure une bitmap dans un contrôle d’en-tête existant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la marge de la bitmap en pixels.
 
@@ -800,7 +801,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 *dwTimeOut*<br/>
 Valeur du délai d’attente, en millisecondes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du contrôle de filtre en cours de modification.
 
@@ -825,7 +826,7 @@ BOOL SetFocusedItem(int iItem);
 *iItem*\
 dans Index de base zéro d’un élément d’en-tête.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -862,7 +863,7 @@ Position du pointeur. Le contrôle header met en surbrillance le séparateur app
 *nIndex*<br/>
 Index du séparateur en surbrillance.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du séparateur en surbrillance.
 
@@ -887,7 +888,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Pointeur vers un `CImageList` objet contenant la liste d’images à assigner au contrôle header.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet [CImageList](../../mfc/reference/cimagelist-class.md) précédemment assigné au contrôle header.
 
@@ -917,7 +918,7 @@ Index de base zéro de l’élément à manipuler.
 *pHeaderItem*<br/>
 Pointeur vers une structure [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) qui contient des informations sur le nouvel élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -943,7 +944,7 @@ Nombre d’éléments de contrôle d’en-tête.
 *piArray*<br/>
 Pointeur vers l’adresse d’une mémoire tampon qui reçoit les valeurs d’index des éléments du contrôle d’en-tête, dans l’ordre dans lequel ils apparaissent de gauche à droite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 

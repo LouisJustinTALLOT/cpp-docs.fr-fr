@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; mémoire&gt;'
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183774"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 Définit une classe, un opérateur et plusieurs modèles qui aident à allouer et libérer des objets.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<memory>
 
@@ -26,12 +27,12 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Obtient l'adresse exacte d'un objet.|
-|[align](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
+|[droite](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` objet aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -83,7 +84,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |[opérateur = =](../standard-library/memory-operators.md#op_eq_eq)|Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.|
 |[>opérateur =](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet allocateur est supérieur ou égal à un second objet allocateur d'une classe donnée.|
 |[<d’opérateur ](../standard-library/memory-operators.md#op_lt)|Vérifie si un objet est inférieur à un second objet d'une classe donnée.|
-|[and\<=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet est inférieur ou égal à un second objet d'une classe donnée.|
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet est inférieur ou égal à un second objet d'une classe donnée.|
 |[>d’opérateur ](../standard-library/memory-operators.md#op_gt)|Vérifie si un objet est supérieur à un second objet d'une classe donnée.|
 |[<<d’opérateur ](../standard-library/memory-operators.md#op_lt_lt)|Outil d'insertion `shared_ptr`.|
 

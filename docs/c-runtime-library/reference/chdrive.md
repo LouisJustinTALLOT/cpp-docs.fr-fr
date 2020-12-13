@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _chdrive'
 title: _chdrive
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d3935c64d8ae67c72f8516e4c2d21a7a0aa6e21b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186686"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -56,13 +57,13 @@ int _chdrive(
 *unités*<br/>
 Entier compris entre 1 et 26 qui spécifie le lecteur de travail actif (1=A, 2=B et ainsi de suite).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro (0) si le lecteur de travail actif a été correctement changé ; Sinon, -1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Si le *lecteur* n’est pas dans la plage comprise entre 1 et 26, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction **_chdrive** retourne-1, **errno** a la valeur **EACCES**et **_doserrno** a la valeur **ERROR_INVALID_DRIVE**.
+Si le *lecteur* n’est pas dans la plage comprise entre 1 et 26, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction **_chdrive** retourne-1, **errno** a la valeur **EACCES** et **_doserrno** a la valeur **ERROR_INVALID_DRIVE**.
 
 La fonction **_chdrive** n’est pas thread-safe, car elle dépend de la fonction **SetCurrentDirectory**, qui elle-même n’est pas thread-safe. Pour utiliser **_chdrive** en toute sécurité dans une application multithread, vous devez fournir votre propre synchronisation de thread. Pour plus d’informations, consultez [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
@@ -78,7 +79,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_getdrive](getdrive.md).
 

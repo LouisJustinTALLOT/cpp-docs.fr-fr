@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDumpContext'
 title: CDumpContext, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: 3a81e06586e6de14d57ce4c4de36dc30c73383f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 955be92c4a3b08fe6e1d5a947166133143667ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184774"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext, classe
 
@@ -57,11 +58,11 @@ class CDumpContext
 
 |Nom|Description|
 |----------|-----------------|
-|[CDumpContext ::, opérateur&lt;&lt;](#operator_lt_lt)|Insère des variables et des objets dans le contexte de vidage.|
+|[CDumpContext ::, opérateur &lt;&lt;](#operator_lt_lt)|Insère des variables et des objets dans le contexte de vidage.|
 
 ## <a name="remarks"></a>Notes
 
-`CDumpContext`n’a pas de classe de base.
+`CDumpContext` n’a pas de classe de base.
 
 Vous pouvez utiliser [afxDump](diagnostic-services.md#afxdump), un objet prédéclaré `CDumpContext` , pour la plupart de votre vidage. L' `afxDump` objet est uniquement disponible dans la version de débogage du bibliothèque MFC (Microsoft Foundation Class).
 
@@ -91,7 +92,7 @@ Pour plus d’informations sur `CDumpContext` , consultez [débogage des applica
 
 **En-tête :** AFX. h
 
-## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext :: CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a> CDumpContext :: CDumpContext
 
 Construit un objet de classe `CDumpContext` .
 
@@ -114,7 +115,7 @@ N’écrivez pas dans le sous-jacent `CFile` pendant que le contexte de vidage e
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext ::D umpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a> CDumpContext ::D umpAsHex
 
 Vide le type spécifié sous forme de nombres hexadécimaux.
 
@@ -129,7 +130,7 @@ CDumpContext& DumpAsHex(ULONGLONG n);
 CDumpContext& DumpAsHex(WORD w);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet `CDumpContext`.
 
@@ -141,7 +142,7 @@ Appelez cette fonction membre pour vider l’élément du type spécifié sous l
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext :: Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a> CDumpContext :: Flush
 
 Force l’écriture des données restantes dans les mémoires tampons dans le fichier attaché au contexte de vidage.
 
@@ -153,7 +154,7 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext :: GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a> CDumpContext :: GetDepth
 
 Détermine si un vidage profond ou superficiel est en cours.
 
@@ -161,7 +162,7 @@ Détermine si un vidage profond ou superficiel est en cours.
 int GetDepth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Profondeur du dump définie par `SetDepth` .
 
@@ -169,7 +170,7 @@ Profondeur du dump définie par `SetDepth` .
 
   Consultez l’exemple pour [SetDepth](#setdepth).
 
-## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext :: HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a> CDumpContext :: HexDump
 
 Fait un dump d’un tableau d’octets au format hexadécimal.
 
@@ -203,7 +204,7 @@ Pour vider un type d’élément spécifique unique sous forme de nombre hexadé
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext ::, opérateur&lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a> CDumpContext ::, opérateur &lt;&lt;
 
 Renvoie les données spécifiées dans le contexte de vidage.
 
@@ -231,7 +232,7 @@ CDumpContext& operator<<(HACCEL h);
 CDumpContext& operator<<(HFONT h);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une référence `CDumpContext`. À l’aide de la valeur de retour, vous pouvez écrire plusieurs insertions sur une seule ligne de code source.
 
@@ -245,7 +246,7 @@ Si vous utilisez la macro IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL dans l’implém
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext :: SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a> CDumpContext :: SetDepth
 
 Définit la profondeur de l’image mémoire.
 

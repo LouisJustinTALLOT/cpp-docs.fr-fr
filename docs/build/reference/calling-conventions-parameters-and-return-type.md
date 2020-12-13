@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conventions d’appel, paramètres et type de retour'
 title: Conventions d'appel, paramètres et type de retour
 ms.date: 02/13/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f840ecbe3364f293e9445239984ad375eed48aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182526"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Conventions d'appel, paramètres et type de retour
 

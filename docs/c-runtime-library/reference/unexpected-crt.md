@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : inattendu (CRT)'
 title: unexpected (CRT)
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 73c632c4dd5bfedbb1c3724e60786b348f77f0be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186634"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -42,13 +43,13 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Notes
 
-La routine **inattendue** n’est pas utilisée avec l' C++ implémentation actuelle de la gestion des exceptions. les appels **inattendus** **se terminent** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée et en appelant **set_unexpected** avec le nom de votre fonction comme argument. appel **inattendu** de la dernière fonction donnée comme argument à **set_unexpected**.
+La routine **inattendue** n’est pas utilisée avec l’implémentation actuelle de la gestion des exceptions C++. les appels **inattendus** **se terminent** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée et en appelant **set_unexpected** avec le nom de votre fonction comme argument. appel **inattendu** de la dernière fonction donnée comme argument pour **set_unexpected**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**unexpected**|\<eh.h>|
+|**erreur**|\<eh.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -59,4 +60,4 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
+[pire](terminate-crt.md)<br/>

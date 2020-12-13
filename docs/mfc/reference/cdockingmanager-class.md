@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDockingManager'
 title: CDockingManager, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5bbcc2a31739a5a81d66713bab47662b96c74e50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185048"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager, classe
 
@@ -183,102 +184,102 @@ class CDockingManager : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockingManager::AddDockSite](#adddocksite)|Crée un volet de dock et l’ajoute à la liste des barres de contrôle.|
-|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Ajoute une poignée à une vitre de bar à la liste des vitres cachées de barre de tabbed MDI.|
-|[CDockingManager::AddMiniFrame](#addminiframe)|Ajoute un cadre à la liste des mini-cadres.|
-|[CDockingManager::AddPane](#addpane)|Enregistre une vitre auprès du gestionnaire d’amarrage.|
-|[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|Recalcule et ajuste la disposition de toutes les vitres dans une fenêtre de cadre.|
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Provoque l’WM_NCCALCSIZE message à envoyer à `CPaneFrameWnd` tous les volets et fenêtres.|
-|[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|Ajuste l’alignement d’un rectangle.|
-|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Resizes a docking pane in autohide mode so that it takes the full width or height of the frame’s client area surrounded by dock sites.|
-|[CDockingManager::AutoHidePane](#autohidepane)|Crée une barre d’outils d’autohide.|
-|[CDockingManager::BringBarsToTop](#bringbarstotop)|Apporte les barres amarrés qui ont l’alignement spécifié vers le haut.|
-|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Ajoute les noms des vitres d’amarrage et des barres d’outils à un menu.|
-|[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcule le rectangle prévu d’une fenêtre amarrée.|
-|[CDockingManager::Créer](#create)|Crée un gestionnaire d’amarrage.|
-|[CDockingManager::DeterminePaneAndStatus](#determinepaneandstatus)|Détermine la vitre qui contient un point donné et son statut d’amarrage.|
-|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Permet ou désactive le chargement de la disposition d’amarrage à partir du registre.|
-|[CDockingManager::DockPane](#dockpane)|Amarre une vitre à une autre vitre ou à une fenêtre de cadre.|
-|[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|Ancre un volet à gauche d'un autre volet.|
-|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Permet l’amarrage de la vitre au cadre principal, crée une vitre de dock, et l’ajoute à la liste des barres de contrôle.|
-|[CDockingManager::EnableDocking](#enabledocking)|Crée une vitre de dock et permet l’amarrage de la vitre au cadre principal.|
-|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Affiche un bouton supplémentaire qui ouvre un menu pop-up sur les légendes de toutes les vitres d’amarrage.|
-|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Indique à la bibliothèque d’afficher un menu contexte spécial qui dispose d’une liste de barres d’outils d’application et de volets d’amarrage lorsque l’utilisateur clique sur le bouton de la souris droite et que la bibliothèque traite le message WM_CONTEXTMENU.|
-|[CDockingManager::FindDockSite](#finddocksite)|Récupère la vitre de barre qui est à la position spécifiée et qui a l’alignement spécifié.|
-|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Retourne la vitre de barre qui a l’id de la vitre de barre cible.|
-|[CDockingManager::FindPaneByID](#findpanebyid)|Trouve une vitre par l’ID de contrôle spécifié.|
-|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Engage toutes les positions actuelles de barre d’outils dans des rectangles virtuels.|
-|[CDockingManager::FrameDePoint](#framefrompoint)|Retourne le cadre qui contient le point donné.|
-|[CDockingManager::GetClientAreaBounds](#getclientareabounds)|Obtient le rectangle qui contient les limites de la zone client.|
-|[CDockingManager::GetDockingMode](#getdockingmode)|Retourne le mode d’amarrage actuel.|
-|[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|Obtient un pointeur sur le cadre de fenêtre parent.|
-|[CDockingManager::GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Retourne l’alignement activé des vitres.|
-|[CDockingManager::GetMiniFrames](#getminiframes)|Obtient une liste de miniframes.|
-|[CDockingManager::GetOuterEdgeBounds](#getouteredgebounds)|Obtient un rectangle qui contient les bords extérieurs du cadre.|
-|[CDockingManager::GetPaneList](#getpanelist)|Retourne une liste de vitres qui appartiennent au gestionnaire d’amarrage. Cela comprend toutes les vitres flottantes.|
-|[CDockingManager::GetSmartDockingManager](#getsmartdockingmanager)|Récupère un pointeur au gestionnaire d’amarrage intelligent.|
-|[CDockingManager::GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Récupère un pointeur au gestionnaire d’amarrage intelligent.|
-|[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|Retourne les paramètres d’amarrage intelligents pour le gestionnaire d’amarrage.|
-|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Méthode statique qui renvoie un thème utilisé pour afficher des marqueurs d’amarrage intelligents.|
-|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Cache un volet en mode autohide.|
-|[CDockingManager::InsertDockSite](#insertdocksite)|Crée un volet de dock et l’insère dans la liste des barres de contrôle.|
-|[CDockingManager::InsertPane](#insertpane)|Insère une vitre de contrôle dans la liste des barres de contrôle.|
-|[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|Précise si un menu pop-up est affiché sur les légendes de tous les volets.|
-|[CDockingManager::IsInAdjustLayout](#isinadjustlayout)|Détermine si les dispositions de toutes les vitres sont ajustées.|
-|[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Précise si le gestionnaire d’amarrage est en mode conteneur OLE.|
-|[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Détermine si un point spécifié se trouve près du quai.|
-|[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|Détermine si le mode d’aperçu d’impression est défini.|
-|[CDockingManager::LoadState](#loadstate)|Charge l’état du gestionnaire d’amarrage du registre.|
-|[CDockingManager::LockUpdate](#lockupdate)|Verrouille la fenêtre donnée.|
-|[CDockingManager::OnActivateFrame](#onactivateframe)|Appelé par le cadre lorsque la fenêtre de cadre est rendue active ou désactivée.|
-|[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Appelée par l’infrastructure quand un menu contextuel actif traite un message WM_DESTROY.|
-|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Appelé par le cadre pour déplacer une fenêtre mini-cadre.|
-|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Appelé par le cadre quand il construit un menu qui a une liste de volets.|
-|[CDockingManager::Pandepoint](#panefrompoint)|Retourne la vitre qui contient le point donné.|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Appelé par le cadre pour sélectionner ou pour effacer une case à cocher pour la commande spécifiée et recalculer la disposition d’une vitre affichée.|
-|[CDockingManager::RecalcLayout](#recalclayout)|Recalcule la disposition interne des contrôles présents dans la liste des contrôles.|
-|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libère les contenants vides de vitres.|
-|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Enlève la vitre cachée spécifiée.|
-|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Supprime une image spécifiée de la liste des mini-images.|
-|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|Désenregistre une vitre et la retire de la liste dans le gestionnaire d’amarrage.|
-|[CDockingManager::ReplacePane](#replacepane)|Remplace un volet par un autre.|
-|[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|Resorts les cadres dans la liste des mini-cadres.|
-|[CDockingManager::SaveState](#savestate)|Enregistre l’état du gestionnaire d’amarrage au registre.|
-|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Envoie le message spécifié à toutes les mini images.|
-|[CDockingManager::Serialize](#serialize)|Écrit le gestionnaire d’amarrage à une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CDockingManager::SetAutohideZOrder](#setautohidezorder)|Définit la taille, la largeur et la hauteur des barres de commande et de la vitre spécifiée.|
-|[CDockingManager::SetDockingMode](#setdockingmode)|Définit le mode d’amarrage.|
-|[CDockingManager::SetDockState](#setdockstate)|Définit l’état d’amarrage des barres de contrôle, les mini-cadres et les barres d’autohide.|
-|[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|Définit le mode d’aperçu d’impression des barres qui sont affichées dans l’aperçu d’impression.|
-|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Définit les paramètres qui définissent le comportement de l’amarrage intelligent.|
-|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Affiche ou cache les fenêtres des mini-cadres.|
-|[CDockingManager::ShowPanes](#showpanes)|Affiche ou cache les vitres des barres de contrôle et d’autohide.|
-|[CDockingManager::StartSDocking](#startsdocking)|Démarre l’amarrage intelligent de la fenêtre spécifiée en fonction de l’alignement du gestionnaire d’amarrage intelligent.|
-|[CDockingManager::StopSDocking](#stopsdocking)|Arrête l’amarrage intelligent.|
+|[CDockingManager :: AddDockSite](#adddocksite)|Crée un volet d’ancrage et l’ajoute à la liste des barres de contrôles.|
+|[CDockingManager :: AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Ajoute un handle à un volet barre à la liste des volets de barre avec onglets MDI masqués.|
+|[CDockingManager :: AddMiniFrame](#addminiframe)|Ajoute un frame à la liste de mini-frames.|
+|[CDockingManager :: AddPane](#addpane)|Inscrit un volet auprès du gestionnaire d’ancrage.|
+|[CDockingManager :: AdjustDockingLayout](#adjustdockinglayout)|Recalcule et ajuste la disposition de tous les volets dans une fenêtre frame.|
+|[CDockingManager :: AdjustPaneFrames](#adjustpaneframes)|Provoque l’envoi du message WM_NCCALCSIZE à tous les volets et `CPaneFrameWnd` fenêtres.|
+|[CDockingManager :: AdjustRectToClientArea](#adjustrecttoclientarea)|Ajuste l’alignement d’un rectangle.|
+|[CDockingManager :: AlignAutoHidePane](#alignautohidepane)|Redimensionne un volet d’ancrage en mode de masquage automatique afin qu’il prenne la largeur ou la hauteur complète de la zone cliente du cadre entourée par les sites d’ancrage.|
+|[CDockingManager :: AutoHidePane](#autohidepane)|Crée une barre d’outils Masquer automatiquement.|
+|[CDockingManager :: BringBarsToTop](#bringbarstotop)|Met les barres ancrées qui ont l’alignement spécifié en haut.|
+|[CDockingManager :: BuildPanesMenu](#buildpanesmenu)|Ajoute les noms des volets d’ancrage et des barres d’outils à un menu.|
+|[CDockingManager :: CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcule le rectangle attendu d’une fenêtre ancrée.|
+|[CDockingManager :: Create](#create)|Crée un gestionnaire d’ancrage.|
+|[CDockingManager ::D eterminePaneAndStatus](#determinepaneandstatus)|Détermine le volet qui contient un point donné et son état d’ancrage.|
+|[CDockingManager ::D isableRestoreDockState](#disablerestoredockstate)|Active ou désactive le chargement de la disposition d’ancrage à partir du Registre.|
+|[CDockingManager ::D ockPane](#dockpane)|Ancre un volet à un autre volet ou à une fenêtre frame.|
+|[CDockingManager ::D ockPaneLeftOf](#dockpaneleftof)|Ancre un volet à gauche d'un autre volet.|
+|[CDockingManager :: EnableAutoHidePanes](#enableautohidepanes)|Active l’ancrage du volet au frame principal, crée un volet d’ancrage et l’ajoute à la liste des barres de contrôles.|
+|[CDockingManager :: EnableDocking](#enabledocking)|Crée un volet d’ancrage et active l’ancrage du volet au frame principal.|
+|[CDockingManager :: EnableDockSiteMenu](#enabledocksitemenu)|Affiche un bouton supplémentaire qui ouvre un menu contextuel sur les légendes de tous les volets d’ancrage.|
+|[CDockingManager :: EnablePaneContextMenu](#enablepanecontextmenu)|Indique à la bibliothèque d’afficher un menu contextuel spécial qui contient une liste de barres d’outils d’application et de volets d’ancrage lorsque l’utilisateur clique avec le bouton droit de la souris et que la bibliothèque traite le message de WM_CONTEXTMENU.|
+|[CDockingManager :: FindDockSite](#finddocksite)|Récupère le volet barre qui se trouve à la position spécifiée et qui a l’alignement spécifié.|
+|[CDockingManager :: FindDockSiteByPane](#finddocksitebypane)|Retourne le volet de barre qui contient l’ID du volet de la barre cible.|
+|[CDockingManager :: FindPaneByID](#findpanebyid)|Recherche un volet en spécifiant l’ID de contrôle spécifié.|
+|[CDockingManager :: FixupVirtualRects](#fixupvirtualrects)|Valide toutes les positions de barre d’outils actuelles dans des rectangles virtuels.|
+|[CDockingManager :: FrameFromPoint](#framefrompoint)|Retourne le frame qui contient le point donné.|
+|[CDockingManager :: GetClientAreaBounds](#getclientareabounds)|Obtient le rectangle qui contient les limites de la zone cliente.|
+|[CDockingManager :: GetDockingMode](#getdockingmode)|Retourne le mode d’ancrage actuel.|
+|[CDockingManager :: GetDockSiteFrameWnd](#getdocksiteframewnd)|Obtient un pointeur vers le frame de fenêtre parent.|
+|[CDockingManager :: GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Retourne l’alignement activé des volets.|
+|[CDockingManager :: GetMiniFrames](#getminiframes)|Obtient une liste de miniframes.|
+|[CDockingManager :: GetOuterEdgeBounds](#getouteredgebounds)|Obtient un rectangle qui contient les bords extérieurs du frame.|
+|[CDockingManager :: GetPaneList](#getpanelist)|Retourne la liste des volets qui appartiennent au gestionnaire d’ancrage. Cela comprend tous les volets flottants.|
+|[CDockingManager :: GetSmartDockingManager](#getsmartdockingmanager)|Récupère un pointeur vers le gestionnaire d’ancrage intelligent.|
+|[CDockingManager :: GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Récupère un pointeur vers le gestionnaire d’ancrage intelligent.|
+|[CDockingManager :: GetSmartDockingParams](#getsmartdockingparams)|Retourne les paramètres d’ancrage actifs pour le gestionnaire d’ancrage.|
+|[CDockingManager :: GetSmartDockingTheme](#getsmartdockingtheme)|Méthode statique qui retourne un thème utilisé pour afficher des marqueurs d’ancrage intelligents.|
+|[CDockingManager :: HideAutoHidePanes](#hideautohidepanes)|Masque un volet en mode de masquage automatique.|
+|[CDockingManager :: InsertDockSite](#insertdocksite)|Crée un volet d’ancrage et l’insère dans la liste des barres de contrôles.|
+|[CDockingManager :: InsertPane](#insertpane)|Insère un volet de contrôle dans la liste des barres de contrôles.|
+|[CDockingManager :: IsDockSiteMenu](#isdocksitemenu)|Spécifie si un menu contextuel s’affiche sur les légendes de tous les volets.|
+|[CDockingManager :: IsInAdjustLayout](#isinadjustlayout)|Détermine si les dispositions de tous les volets sont ajustées.|
+|[CDockingManager :: IsOLEContainerMode](#isolecontainermode)|Spécifie si le gestionnaire d’ancrage est en mode conteneur OLE.|
+|[CDockingManager :: IsPointNearDockSite](#ispointneardocksite)|Détermine si un point spécifié est près du site d’ancrage.|
+|[CDockingManager :: IsPrintPreviewValid](#isprintpreviewvalid)|Détermine si le mode aperçu avant impression est défini.|
+|[CDockingManager :: LoadState](#loadstate)|Charge l’état du gestionnaire d’ancrage à partir du Registre.|
+|[CDockingManager :: LockUpdate](#lockupdate)|Verrouille la fenêtre spécifiée.|
+|[CDockingManager :: OnActivateFrame](#onactivateframe)|Appelé par le Framework lorsque la fenêtre frame est rendue active ou est désactivée.|
+|[CDockingManager :: OnClosePopupMenu](#onclosepopupmenu)|Appelée par l’infrastructure quand un menu contextuel actif traite un message WM_DESTROY.|
+|[CDockingManager :: OnMoveMiniFrame](#onmoveminiframe)|Appelé par l’infrastructure pour déplacer une fenêtre mini-frame.|
+|[CDockingManager :: OnPaneContextMenu](#onpanecontextmenu)|Appelée par le Framework lorsqu’il génère un menu qui contient une liste de volets.|
+|[CDockingManager ::P aneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|
+|[CDockingManager ::P rocessPaneContextMenuCommand](#processpanecontextmenucommand)|Appelé par l’infrastructure pour activer ou désactiver une case à cocher pour la commande spécifiée et recalculer la disposition d’un volet affiché.|
+|[CDockingManager :: RecalcLayout](#recalclayout)|Recalcule la disposition interne des contrôles présents dans la liste de contrôles.|
+|[CDockingManager :: ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libère les conteneurs de volets vides.|
+|[CDockingManager :: RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Supprime le volet de barre masqué spécifié.|
+|[CDockingManager :: RemoveMiniFrame](#removeminiframe)|Supprime un frame spécifié de la liste des mini-cadres.|
+|[CDockingManager :: RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime de la liste dans le gestionnaire d’ancrage.|
+|[CDockingManager :: ReplacePane](#replacepane)|Remplace un volet par un autre.|
+|[CDockingManager :: ResortMiniFramesForZOrder](#resortminiframesforzorder)|Recourt les images dans la liste des mini-frames.|
+|[CDockingManager :: saveste](#savestate)|Enregistre l’état du gestionnaire d’ancrage dans le registre.|
+|[CDockingManager :: SendMessageToMiniFrames](#sendmessagetominiframes)|Envoie le message spécifié à toutes les mini-trames.|
+|[CDockingManager :: Serialize](#serialize)|Écrit le gestionnaire d’ancrage dans une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CDockingManager :: SetAutohideZOrder](#setautohidezorder)|Définit la taille, la largeur et la hauteur des barres de contrôles et du volet spécifié.|
+|[CDockingManager :: SetDockingMode](#setdockingmode)|Définit le mode d’ancrage.|
+|[CDockingManager :: SetDockState](#setdockstate)|Définit l’état d’ancrage des barres de contrôles, des mini-cadres et des barres de masquage automatique.|
+|[CDockingManager :: SetPrintPreviewMode](#setprintpreviewmode)|Définit le mode aperçu avant impression des barres affichées dans l’aperçu avant impression.|
+|[CDockingManager :: SetSmartDockingParams](#setsmartdockingparams)|Définit les paramètres qui définissent le comportement de l’ancrage intelligent.|
+|[CDockingManager :: ShowDelayShowMiniFrames](#showdelayshowminiframes)|Affiche ou masque les fenêtres des mini-frames.|
+|[CDockingManager :: ShowPanes](#showpanes)|Affiche ou masque les volets des barres de contrôle et de masquage automatique.|
+|[CDockingManager :: StartSDocking](#startsdocking)|Démarre l’ancrage intelligent de la fenêtre spécifiée en fonction de l’alignement du gestionnaire d’ancrage intelligent.|
+|[CDockingManager :: StopSDocking](#stopsdocking)|Arrête l’ancrage intelligent.|
 
 ### <a name="data-members"></a>Données membres
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Précise si le gestionnaire d’amarrage cache les vitres en mode conteneur OLE.|
-|[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Spécifie le mode d’amarrage global.|
-|[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|Spécifie la sensibilité à l’amarrage.|
-|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Spécifie l’heure, en millisecondes, avant qu’une vitre d’amarrage ne soit amarré en mode d’amarrage immédiat.|
-|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Spécifie le temps, en millisecondes, avant qu’une barre d’outils ne soit amarrée à la fenêtre principale du cadre.|
+|[CDockingManager :: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Spécifie si le gestionnaire d’ancrage masque les volets en mode conteneur OLE.|
+|[CDockingManager :: m_dockModeGlobal](#m_dockmodeglobal)|Spécifie le mode d’ancrage global.|
+|[CDockingManager :: m_nDockSensitivity](#m_ndocksensitivity)|Spécifie la sensibilité d’ancrage.|
+|[CDockingManager :: m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Spécifie la durée, en millisecondes, avant qu’un volet d’ancrage ne soit ancré en mode d’ancrage immédiat.|
+|[CDockingManager :: m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Spécifie la durée, en millisecondes, avant qu’une barre d’outils soit ancrée à la fenêtre frame principale.|
 
 ## <a name="remarks"></a>Notes
 
-La fenêtre de cadre principale crée et initialise automatiquement cette classe.
+La fenêtre frame principale crée et initialise automatiquement cette classe.
 
-L’objet de gestionnaire d’amarrage contient une liste de toutes les vitres qui sont dans la disposition d’amarrage, et également une liste de toutes les fenêtres [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) qui appartiennent à la fenêtre principale de cadre.
+L’objet gestionnaire d’ancrage contient une liste de tous les volets qui se trouvent dans la disposition d’ancrage, ainsi qu’une liste de toutes les fenêtres [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) qui appartiennent à la fenêtre frame principale.
 
-La `CDockingManager` classe met en œuvre certains services que `CPaneFrameWnd` vous pouvez utiliser pour trouver une vitre ou une fenêtre. Vous n’appelez généralement pas ces services directement parce qu’ils sont enveloppés dans l’objet de fenêtre cadre principal. Pour plus d’informations, voir [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md).
+La `CDockingManager` classe implémente certains services que vous pouvez utiliser pour rechercher un volet ou une `CPaneFrameWnd` fenêtre. En règle générale, vous n’appelez pas ces services directement, car ils sont encapsulés dans l’objet de fenêtre frame principal. Pour plus d’informations, consultez [CPaneFrameWnd, classe](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="customization-tips"></a>Conseils de personnalisation
 
-Les conseils suivants `CDockingManager` s’appliquent aux objets :
+Les conseils suivants s’appliquent aux `CDockingManager` objets :
 
-- [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) prend en charge ces modes d’amarrage :
+- La [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) prend en charge ces modes d’ancrage :
 
   - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
@@ -286,13 +287,13 @@ Les conseils suivants `CDockingManager` s’appliquent aux objets :
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  Ces modes d’amarrage sont définis par [CDockingManager:m_dockModeGlobal](#m_dockmodeglobal) et sont définis en appelant [CDockingManager::SetDockingMode](#setdockingmode).
+  Ces modes d’ancrage sont définis par [CDockingManager :: m_dockModeGlobal](#m_dockmodeglobal) et sont définis en appelant [CDockingManager :: SetDockingMode](#setdockingmode).
 
-- Si vous souhaitez créer un volet non flottant et non resizable, appelez la méthode [CDockingManager:AddPane.](#addpane) Cette méthode enregistre la vitre auprès du gestionnaire d’amarrage, qui est responsable de la disposition de la vitre.
+- Si vous souhaitez créer un volet non flottant et non redimensionnable, appelez la méthode [CDockingManager :: AddPane](#addpane) . Cette méthode inscrit le volet auprès du gestionnaire d’ancrage, qui est responsable de la disposition du volet.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser `CDockingManager` différentes méthodes `CDockingManager` dans la classe pour configurer un objet. L’exemple montre comment afficher un bouton supplémentaire qui ouvre un menu pop-up sur les légendes de toutes les vitres d’amarrage et comment définir le mode d’amarrage de l’objet. Cet extrait de code fait partie de [l’échantillon Visual Studio Demo](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes dans la `CDockingManager` classe pour configurer un `CDockingManager` objet. L’exemple montre comment afficher un bouton supplémentaire qui ouvre un menu contextuel sur les légendes de tous les volets d’ancrage et comment définir le mode d’ancrage de l’objet. Cet extrait de code fait partie de l' [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -304,11 +305,11 @@ L’exemple suivant montre comment utiliser `CDockingManager` différentes méth
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxDockingManager.h
+**En-tête :** afxDockingManager. h
 
-## <a name="cdockingmanageradddocksite"></a><a name="adddocksite"></a>CDockingManager::AddDockSite
+## <a name="cdockingmanageradddocksite"></a><a name="adddocksite"></a> CDockingManager :: AddDockSite
 
-Crée un volet de dock et l’ajoute à la liste des barres de contrôle.
+Crée un volet d’ancrage et l’ajoute à la liste des barres de contrôles.
 
 ```
 BOOL AddDockSite(
@@ -318,19 +319,19 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Paramètres
 
-*Info*<br/>
-[dans] Une référence à une structure d’information qui contient l’alignement du volet dock.
+*info*<br/>
+dans Référence à une structure d’informations qui contient l’alignement du volet d’ancrage.
 
 *ppDockBar*<br/>
-[out] Un pointeur à un pointeur pour le nouveau volet de dock.
+à Pointeur vers un pointeur vers le nouveau volet d’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le volet du quai a été créé avec succès; FALSE autrement.
+TRUE si le volet d’ancrage a été créé avec succès ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar
+## <a name="cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a> CDockingManager :: AddHiddenMDITabbedBar
 
-Ajoute une poignée à une vitre de bar à la liste des vitres cachées de barre de tabbed MDI.
+Ajoute un handle à un volet barre à la liste des volets de barre avec onglets MDI masqués.
 
 ```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
@@ -338,12 +339,12 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-[dans] Un pointeur à un volet de barre
+*pBar*<br/>
+dans Pointeur vers un volet de barre
 
-## <a name="cdockingmanageraddpane"></a><a name="addpane"></a>CDockingManager::AddPane
+## <a name="cdockingmanageraddpane"></a><a name="addpane"></a> CDockingManager :: AddPane
 
-Enregistre une vitre auprès du gestionnaire d’amarrage.
+Inscrit un volet auprès du gestionnaire d’ancrage.
 
 ```
 BOOL AddPane(
@@ -355,29 +356,29 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans, dehors] Spécifie la vitre à ajouter au gestionnaire d’amarrage.
+*pWnd*<br/>
+[in, out] Spécifie le volet à ajouter au gestionnaire d’ancrage.
 
-*bTail (en)*<br/>
-[dans] VRAI pour ajouter la vitre à la fin de la liste des vitres pour le gestionnaire d’amarrage; autrement, FALSE.
+*bTail*<br/>
+dans TRUE pour ajouter le volet à la fin de la liste des volets du gestionnaire d’ancrage ; Sinon, FALSe.
 
 *bAutoHide*<br/>
-[dans] Pour une utilisation interne seulement. Utilisez toujours la valeur par défaut FALSE.
+dans À usage interne uniquement. Utilisez toujours la valeur par défaut FALSe.
 
-*bInsertForOuterEdge (en)*<br/>
-[dans] Pour une utilisation interne seulement. Utilisez toujours la valeur par défaut FALSE.
+*bInsertForOuterEdge*<br/>
+dans À usage interne uniquement. Utilisez toujours la valeur par défaut FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la vitre a été enregistrée avec succès auprès du gestionnaire d’amarrage; autrement, FALSE.
+TRUE si le volet a été correctement inscrit auprès du gestionnaire d’ancrage ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour enregistrer les vitres non flottantes et non résizables auprès du gestionnaire de l’amarrage. Si vous n’enregistrez pas les vitres, elles n’apparaîtront pas correctement lorsque le gestionnaire d’amarrage est aménagé.
+Appelez cette méthode pour inscrire des volets non flottants et non redimensionnables auprès du gestionnaire d’ancrage. Si vous n’inscrivez pas les volets, ils ne s’affichent pas correctement lorsque le gestionnaire d’ancrage est disposé.
 
-## <a name="cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout
+## <a name="cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a> CDockingManager :: AdjustDockingLayout
 
-Recalcule et ajuste la disposition de toutes les vitres dans une fenêtre de cadre.
+Recalcule et ajuste la disposition de tous les volets dans une fenêtre frame.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -385,14 +386,14 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*hdwp hdwp*<br/>
-[dans] Spécifie la structure de position de fenêtre différée. Pour plus d'informations, consultez [Types de données Windows](/windows/win32/WinProg/windows-data-types).
+*hdwp*<br/>
+dans Spécifie la structure de position de fenêtre différée. Pour plus d'informations, consultez [Types de données Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockingmanageraddminiframe"></a><a name="addminiframe"></a>CDockingManager::AddMiniFrame
+## <a name="cdockingmanageraddminiframe"></a><a name="addminiframe"></a> CDockingManager :: AddMiniFrame
 
-Ajoute un cadre à la liste des mini-cadres.
+Ajoute un frame à la liste de mini-frames.
 
 ```
 virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
@@ -400,16 +401,16 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans] Un pointeur à un cadre.
+*pWnd*<br/>
+dans Pointeur vers un frame.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le cadre n’est pas dans la liste des mini-cadres et a été ajouté avec succès; FALSE autrement.
+TRUE si le frame ne figure pas dans la liste des mini-frames et a été ajouté avec succès ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames
+## <a name="cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a> CDockingManager :: AdjustPaneFrames
 
-Provoque l’WM_NCCALCSIZE message à envoyer à `CPaneFrameWnd` tous les volets et fenêtres.
+Provoque l’envoi du message WM_NCCALCSIZE à tous les volets et `CPaneFrameWnd` fenêtres.
 
 ```
 virtual void AdjustPaneFrames();
@@ -417,7 +418,7 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea
+## <a name="cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a> CDockingManager :: AdjustRectToClientArea
 
 Ajuste l’alignement d’un rectangle.
 
@@ -430,18 +431,18 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="parameters"></a>Paramètres
 
 *rectResult*<br/>
-[dans] Une référence `CRect` à un objet
+dans Référence à un `CRect` objet
 
 *dwAlignment*<br/>
-[dans] L’alignement `CRect` de l’objet
+dans Alignement de l' `CRect` objet
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si l’alignement de l’objet `CRect` a été ajusté; FALSE autrement.
+TRUE si l’alignement de l' `CRect` objet a été ajusté ; FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Le *paramètre dwAlignment* peut avoir l’une des valeurs suivantes :
+Le paramètre *dwAlignment* peut avoir l’une des valeurs suivantes :
 
 - CBRS_ALIGN_TOP
 
@@ -451,9 +452,9 @@ Le *paramètre dwAlignment* peut avoir l’une des valeurs suivantes :
 
 - CBRS_ALIGN_RIGHT
 
-## <a name="cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane
+## <a name="cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a> CDockingManager :: AlignAutoHidePane
 
-Resizes a docking pane in autohide mode so that it takes the full width or height of the frame’s client area surrounded by dock sites.
+Redimensionne un volet d’ancrage en mode de masquage automatique afin qu’il prenne la largeur ou la hauteur complète de la zone cliente du cadre entourée par les sites d’ancrage.
 
 ```cpp
 void AlignAutoHidePane(
@@ -464,14 +465,14 @@ void AlignAutoHidePane(
 ### <a name="parameters"></a>Paramètres
 
 *pDefaultSlider*<br/>
-[dans] La vitre du curseur d’amarrage.
+dans Le volet de curseur d’ancrage.
 
 *bIsVisible*<br/>
-[dans] VRAI si la vitre d’amarrage est visible; FALSE autrement.
+dans TRUE si le volet d’ancrage est visible ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerautohidepane"></a><a name="autohidepane"></a>CDockingManager::AutoHidePane
+## <a name="cdockingmanagerautohidepane"></a><a name="autohidepane"></a> CDockingManager :: AutoHidePane
 
-Crée une barre d’outils d’autohide.
+Crée une barre d’outils Masquer automatiquement.
 
 ```
 CMFCAutoHideToolBar* AutoHidePane(
@@ -481,19 +482,19 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-[dans] Un pointeur à la vitre de bar.
+*pBar*<br/>
+dans Pointeur vers le volet barre.
 
 *pCurrAutoHideToolBar*<br/>
-[dans] Un pointeur à une barre d’outils de cache automatique.
+dans Pointeur vers une barre d’outils Masquer automatiquement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-NULL si la barre d’outils de cache automatique n’a pas été créée ; sinon un pointeur à la nouvelle barre d’outils.
+NULL si la barre d’outils de masquage automatique n’a pas été créée. Sinon, pointeur vers la nouvelle barre d’outils.
 
-## <a name="cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a>CDockingManager::BringBarsToTop
+## <a name="cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a> CDockingManager :: BringBarsToTop
 
-Apporte les barres amarrés qui ont l’alignement spécifié vers le haut.
+Met les barres ancrées qui ont l’alignement spécifié en haut.
 
 ```cpp
 void BringBarsToTop(
@@ -504,14 +505,14 @@ void BringBarsToTop(
 ### <a name="parameters"></a>Paramètres
 
 *dwAlignment*<br/>
-[dans] L’alignement des barres de quai qui sont portées au sommet des autres fenêtres.
+dans Alignement des barres d’ancrage placées au-dessus des autres fenêtres.
 
 *bExcludeDockedBars*<br/>
-[dans] VRAI pour exclure les barres amarrés d’être sur le dessus; autrement FALSE.
+dans TRUE pour exclure les barres ancrées de la partie supérieure ; Sinon, FALSe.
 
-## <a name="cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu
+## <a name="cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a> CDockingManager :: BuildPanesMenu
 
-Ajoute les noms des vitres d’amarrage et des barres d’outils à un menu.
+Ajoute les noms des volets d’ancrage et des barres d’outils à un menu.
 
 ```cpp
 void BuildPanesMenu(
@@ -521,15 +522,15 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
-[dans] Un menu pour ajouter les noms des vitres d’amarrage et des barres d’outils à.
+*menus*<br/>
+dans Menu auquel ajouter les noms des volets d’ancrage et des barres d’outils.
 
 *bToolbarsOnly*<br/>
-[dans] VRAI pour ajouter uniquement des noms de barre d’outils au menu; FALSE autrement.
+dans TRUE pour ajouter uniquement des noms de barres d’outils au menu ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect
+## <a name="cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a> CDockingManager :: CalcExpectedDockedRect
 
-Calcule le rectangle prévu d’une fenêtre amarrée.
+Calcule le rectangle attendu d’une fenêtre ancrée.
 
 ```cpp
 void CalcExpectedDockedRect(
@@ -542,28 +543,28 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans] Un pointeur à la fenêtre pour accoster.
+*pWnd*<br/>
+dans Pointeur vers la fenêtre à ancrer.
 
-*ptMouse (en)*<br/>
-[dans] L’emplacement de la souris.
+*ptMouse*<br/>
+dans Emplacement de la souris.
 
 *rectResult*<br/>
-[out] Le rectangle calculé.
+à Rectangle calculé.
 
-*bDrawTab (en anglais seulement)*<br/>
-[dans] VRAI pour dessiner un onglet; autrement FALSE.
+*bDrawTab*<br/>
+dans TRUE pour dessiner un onglet ; Sinon, FALSe.
 
 *ppTargetBar*<br/>
-[out] Un pointeur à un pointeur à la vitre cible.
+à Pointeur vers un pointeur vers le volet cible.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode calcule le rectangle qu’une fenêtre occuperait si un utilisateur traînait la fenêtre au point spécifié par *ptMouse* et l’a amarré là.
+Cette méthode calcule le rectangle qu’une fenêtre occuperait si un utilisateur a fait glisser la fenêtre jusqu’au point spécifié par *ptMouse* et l’a ancré ici.
 
-## <a name="cdockingmanagercreate"></a><a name="create"></a>CDockingManager::Créer
+## <a name="cdockingmanagercreate"></a><a name="create"></a> CDockingManager :: Create
 
-Crée un gestionnaire d’amarrage.
+Crée un gestionnaire d’ancrage.
 
 ```
 BOOL Create(CFrameWnd* pParentWnd);
@@ -572,15 +573,15 @@ BOOL Create(CFrameWnd* pParentWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pParentWnd*<br/>
-[dans] Un pointeur sur le cadre parent du gestionnaire d’amarrage. Cette valeur ne doit pas être NULL.
+dans Pointeur vers le frame parent du gestionnaire d’ancrage. Cette valeur ne doit pas être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI toujours.
+TRUE.
 
-## <a name="cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus
+## <a name="cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a> CDockingManager ::D eterminePaneAndStatus
 
-Détermine la vitre qui contient un point donné et son statut d’amarrage.
+Détermine le volet qui contient un point donné et son état d’ancrage.
 
 ```
 virtual AFX_CS_STATUS DeterminePaneAndStatus(
@@ -594,42 +595,42 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pt*<br/>
-[dans] L’emplacement de la vitre pour vérifier.
+*pt*<br/>
+dans Emplacement du volet à vérifier.
 
-*nSensibilité*<br/>
-[dans] La valeur pour augmenter le rectangle de fenêtre de chaque vitre vérifiée. Un volet satisfait aux critères de recherche si le point donné se trouve dans cette région accrue.
+*nSensitivity*<br/>
+dans Valeur permettant d’augmenter le rectangle de la fenêtre de chaque volet sélectionné. Un volet répond aux critères de recherche si le point donné se trouve dans cette région augmentée.
 
-*dwEnabledAlignement*<br/>
-[dans] L’alignement de la vitre d’amarrage.
+*dwEnabledAlignment*<br/>
+dans Alignement du volet d’ancrage.
 
 *ppTargetBar*<br/>
-[out] Un pointeur à un pointeur à la vitre cible.
+à Pointeur vers un pointeur vers le volet cible.
 
 *pBarToIgnore*<br/>
-[dans] Le volet que la méthode ignore.
+dans Volet ignoré par la méthode.
 
 *pBarToDock*<br/>
-[dans] La vitre qui est amarré.
+dans Volet ancré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le statut d’amarrage.
+État d’ancrage.
 
 ### <a name="remarks"></a>Notes
 
-Le statut d’amarrage peut être l’une des valeurs suivantes :
+L’état d’ancrage peut être l’une des valeurs suivantes :
 
-|AFX_CS_STATUS valeur|Signification|
+|Valeur AFX_CS_STATUS|Signification|
 |---------------------------|-------------|
-|CS_NOTHING|Le pointeur n’est pas au-dessus d’un site de quai. Par conséquent, garder la vitre flottante.|
-|CS_DOCK_IMMEDIATELY|Le pointeur est sur le site du quai en mode immédiat (DT_IMMEDIATE style est activé), de sorte que la vitre doit être amarré immédiatement.|
-|CS_DELAY_DOCK|Le pointeur est au-dessus d’un site de quai qui est une autre vitre d’amarrage ou est un bord du cadre principal.|
-|CS_DELAY_DOCK_TO_TAB|Le pointeur est au-dessus d’un site de quai qui fait amarrer la vitre dans une fenêtre tabbed. Cela se produit lorsque la souris est au-dessus d’une légende d’une autre vitre d’amarrage ou sur une zone d’onglet d’une vitre tabbed.|
+|CS_NOTHING|Le pointeur ne se trouve pas sur un site d’ancrage. Par conséquent, conservez le volet flottant.|
+|CS_DOCK_IMMEDIATELY|Le pointeur se trouve sur le site d’ancrage en mode immédiat (le style de DT_IMMEDIATE est activé), de sorte que le volet doit être immédiatement ancré.|
+|CS_DELAY_DOCK|Le pointeur se trouve sur un site d’ancrage qui est un autre volet d’ancrage ou est un bord du frame principal.|
+|CS_DELAY_DOCK_TO_TAB|Le pointeur se trouve sur un site d’ancrage qui provoque l’ancrage du volet dans une fenêtre à onglets. Cela se produit lorsque la souris se trouve sur une légende d’un autre volet d’ancrage ou sur une zone d’onglet d’un volet à onglets.|
 
-## <a name="cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState
+## <a name="cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a> CDockingManager ::D isableRestoreDockState
 
-Permet ou désactive le chargement de la disposition d’amarrage à partir du registre.
+Active ou désactive le chargement de la disposition d’ancrage à partir du Registre.
 
 ```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
@@ -638,15 +639,15 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bDisable*<br/>
-[dans] VRAI pour désactiver le chargement de la disposition d’amarrage du registre; autrement, FALSE.
+dans TRUE pour désactiver le chargement de la disposition d’ancrage à partir du Registre ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode lorsque vous devez préserver la disposition actuelle des vitres d’amarrage et des barres d’outils lorsque l’état d’application est de chargement.
+Appelez cette méthode lorsque vous devez conserver la disposition actuelle des volets d’ancrage et des barres d’outils lors du chargement de l’état de l’application.
 
-## <a name="cdockingmanagerdockpane"></a><a name="dockpane"></a>CDockingManager::DockPane
+## <a name="cdockingmanagerdockpane"></a><a name="dockpane"></a> CDockingManager ::D ockPane
 
-Amarre une vitre à une autre vitre ou à une fenêtre de cadre.
+Ancre un volet à un autre volet ou à une fenêtre frame.
 
 ```cpp
 void DockPane(
@@ -657,16 +658,16 @@ void DockPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-[dans] Un pointeur à une vitre de bar pour s’amarrer à.
+*pBar*<br/>
+dans Pointeur vers un volet de barre auquel ancrer.
 
-*nDockBarID (en)*<br/>
-[dans] L’id du bar à quai.
+*nDockBarID*<br/>
+dans ID de la barre à ancrer.
 
 *lpRect*<br/>
-[dans] Le rectangle de destination.
+dans Rectangle de destination.
 
-## <a name="cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf
+## <a name="cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a> CDockingManager ::D ockPaneLeftOf
 
 Ancre un volet à gauche d'un autre volet.
 
@@ -679,18 +680,18 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Paramètres
 
 *pBarToDock*<br/>
-[dans] Un pointeur à la vitre à amarré à gauche de *pTargetBar*.
+dans Pointeur vers le volet à ancrer à gauche de *pTargetBar*.
 
 *pTargetBar*<br/>
-[dans] Un pointeur à la vitre cible.
+dans Pointeur vers le volet cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la vitre a été amarré avec succès; autrement, FALSE.
+TRUE si le volet a été correctement ancré ; Sinon, FALSe.
 
-## <a name="cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes
+## <a name="cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a> CDockingManager :: EnableAutoHidePanes
 
-Permet l’amarrage de la vitre au cadre principal, crée une vitre de dock, et l’ajoute à la liste des barres de contrôle.
+Active l’ancrage du volet au frame principal, crée un volet d’ancrage et l’ajoute à la liste des barres de contrôles.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwStyle);
@@ -698,16 +699,16 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwStyle (en)*<br/>
-[dans] L’alignement d’amarrage.
+*dwStyle*<br/>
+dans Alignement de l’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le volet du quai a été créé avec succès; FALSE autrement.
+TRUE si le volet d’ancrage a été créé avec succès ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerenabledocking"></a><a name="enabledocking"></a>CDockingManager::EnableDocking
+## <a name="cdockingmanagerenabledocking"></a><a name="enabledocking"></a> CDockingManager :: EnableDocking
 
-Crée une vitre de dock et permet l’amarrage de la vitre au cadre principal.
+Crée un volet d’ancrage et active l’ancrage du volet au frame principal.
 
 ```
 BOOL EnableDocking(DWORD dwStyle);
@@ -715,16 +716,16 @@ BOOL EnableDocking(DWORD dwStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwStyle (en)*<br/>
-[dans] L’alignement d’amarrage.
+*dwStyle*<br/>
+dans Alignement de l’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le volet du quai a été créé avec succès; FALSE autrement.
+TRUE si le volet d’ancrage a été créé avec succès ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu
+## <a name="cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a> CDockingManager :: EnableDockSiteMenu
 
-Affiche un bouton supplémentaire qui ouvre un menu pop-up sur les légendes de toutes les vitres d’amarrage.
+Affiche un bouton supplémentaire qui ouvre un menu contextuel sur les légendes de tous les volets d’ancrage.
 
 ```
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
@@ -733,25 +734,25 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[dans] VRAI pour activer le menu du site du quai; autrement, FALSE.
+dans TRUE pour activer le menu ancrer le site ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Le menu du site du quai affiche les options suivantes pour modifier l’état d’amarrage de la vitre :
+Le menu ancrer le site affiche les options suivantes pour modifier l’état d’ancrage du volet :
 
-- `Floating`- Flotte une vitre
+- `Floating` -Flotter un volet
 
-- `Docking`- Docks une vitre au cadre principal à l’endroit où la vitre a été amarré pour la dernière fois
+- `Docking` -Ancre un volet au frame principal à l’emplacement où le volet a été ancré pour la dernière fois
 
-- `AutoHide`- Passe du volet en mode autohide
+- `AutoHide` -Bascule le volet en mode de masquage automatique
 
-- `Hide`- Cache une vitre
+- `Hide` -Masque un volet
 
 Par défaut, ce menu n’est pas affiché.
 
-## <a name="cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu
+## <a name="cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a> CDockingManager :: EnablePaneContextMenu
 
-Indique à la bibliothèque d’afficher un menu contexte spécial qui dispose d’une liste de barres d’outils d’application et de volets d’amarrage lorsque l’utilisateur clique sur le bouton de la souris droite et que la bibliothèque traite le message WM_CONTEXTMENU.
+Indique à la bibliothèque d’afficher un menu contextuel spécial qui contient une liste de barres d’outils d’application et de volets d’ancrage lorsque l’utilisateur clique avec le bouton droit de la souris et que la bibliothèque traite le message de WM_CONTEXTMENU.
 
 ```cpp
 void EnablePaneContextMenu(
@@ -764,20 +765,20 @@ void EnablePaneContextMenu(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[dans] Si VRAI, la bibliothèque active le support pour le menu de contexte automatique; si FALSE la bibliothèque éteint le support pour le menu de contexte automatique.
+dans Si la valeur est TRUE, la bibliothèque active la prise en charge du menu contextuel automatique. Si la valeur est FALSe, la bibliothèque désactive le menu contextuel automatique.
 
 *uiCustomizeCmd*<br/>
-[dans] Un identifiant de commande pour l’élément **Customize** dans le menu.
+dans ID de commande pour l’élément de **personnalisation** dans le menu.
 
 *strCustomizeText*<br/>
-[dans] Le texte de l’élément **Personnaliser.**
+dans Texte de l’élément **personnalisé** .
 
 *bToolbarsOnly*<br/>
-[dans] Si VRAI, le menu affiche seulement une liste de barres d’outils d’application; si FALSE, la bibliothèque ajoute des vitres d’amarrage d’application à cette liste.
+dans Si la valeur est TRUE, le menu affiche uniquement une liste de barres d’outils d’application ; Si la valeur est FALSe, la bibliothèque ajoute des volets d’ancrage d’application à cette liste.
 
-## <a name="cdockingmanagerfinddocksite"></a><a name="finddocksite"></a>CDockingManager::FindDockSite
+## <a name="cdockingmanagerfinddocksite"></a><a name="finddocksite"></a> CDockingManager :: FindDockSite
 
-Récupère la vitre de barre qui est à la position spécifiée et qui a l’alignement spécifié.
+Récupère le volet barre qui se trouve à la position spécifiée et qui a l’alignement spécifié.
 
 ```
 virtual CDockSite* FindDockSite(
@@ -788,18 +789,18 @@ virtual CDockSite* FindDockSite(
 ### <a name="parameters"></a>Paramètres
 
 *dwAlignment*<br/>
-[dans] L’alignement de la vitre de barre.
+dans Alignement du volet barre.
 
-*bOuter (en)*<br/>
-[dans] Si TRUE, récupérez la barre en position de tête dans la liste des barres de contrôle. Sinon, récupérez la barre en position de queue dans la liste des barres de contrôle.
+*à propos de*<br/>
+dans Si la valeur est TRUE, récupérez la barre à la position d’en-tête dans la liste des barres de contrôles. Sinon, récupérez la barre à la position de fin dans la liste des barres de contrôles.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La vitre d’amarrage qui a l’alignement spécifié; NULL autrement.
+Volet d’ancrage qui a l’alignement spécifié ; Sinon, NULL.
 
-## <a name="cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a>CDockingManager::FindPaneByID
+## <a name="cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a> CDockingManager :: FindPaneByID
 
-Trouve une vitre par l’ID de contrôle spécifié.
+Recherche un volet en spécifiant l’ID de contrôle spécifié.
 
 ```
 virtual CBasePane* FindPaneByID(
@@ -809,21 +810,21 @@ virtual CBasePane* FindPaneByID(
 
 ### <a name="parameters"></a>Paramètres
 
-*uBarID (en)*<br/>
-[dans] Spécifie l’ID de contrôle de la vitre à trouver.
+*uBarID*<br/>
+dans Spécifie l’ID de contrôle du volet à rechercher.
 
-*bSearchMiniFrames (en)*<br/>
-[dans] VRAI d’inclure toutes les vitres flottantes dans la recherche. FALSE pour n’inclure que les vitres amarrés.
+*bSearchMiniFrames*<br/>
+dans TRUE pour inclure tous les volets flottants dans la recherche. FALSe pour inclure uniquement les volets ancrés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-[L’objet CBasePane](../../mfc/reference/cbasepane-class.md) qui a l’ID de contrôle spécifié, ou NULL si le volet spécifié ne peut pas être trouvé.
+Objet [CBasePane](../../mfc/reference/cbasepane-class.md) qui a l’ID de contrôle spécifié, ou null si le volet spécifié est introuvable.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane
+## <a name="cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a> CDockingManager :: FindDockSiteByPane
 
-Retourne la vitre de barre qui a l’id de la vitre de barre cible.
+Retourne le volet de barre qui contient l’ID du volet de la barre cible.
 
 ```
 virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
@@ -832,15 +833,15 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ### <a name="parameters"></a>Paramètres
 
 *pTargetBar*<br/>
-[dans] Un pointeur à la vitre de barre cible.
+dans Pointeur vers le volet de barre cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La vitre du bar qui a l’id de la vitre de barre cible; NULL si un tel volet de bar n’existe pas.
+Volet à barres qui contient l’ID du volet de la barre cible ; NULL si aucun volet de la barre de ce type n’existe.
 
-## <a name="cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
+## <a name="cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a> CDockingManager :: FixupVirtualRects
 
-Engage toutes les positions actuelles de barre d’outils dans des rectangles virtuels.
+Valide toutes les positions de barre d’outils actuelles dans des rectangles virtuels.
 
 ```
 virtual void FixupVirtualRects();
@@ -848,11 +849,11 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>Notes
 
-Lorsque l’utilisateur commence à faire glisser une barre d’outils, l’application se souvient de sa position d’origine dans le *rectangle virtuel*. Lorsque l’utilisateur déplace une barre d’outils sur son site de quai, la barre d’outils peut déplacer d’autres barres d’outils. Les positions d’origine des autres barres d’outils sont stockées dans les rectangles virtuels correspondants.
+Lorsque l’utilisateur commence à faire glisser une barre d’outils, l’application mémorise sa position d’origine dans le *rectangle virtuel*. Lorsque l’utilisateur déplace une barre d’outils sur son site d’ancrage, la barre d’outils peut déplacer d’autres barres d’outils. Les positions d’origine des autres barres d’outils sont stockées dans les rectangles virtuels correspondants.
 
-## <a name="cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a>CDockingManager::FrameDePoint
+## <a name="cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a> CDockingManager :: FrameFromPoint
 
-Retourne le cadre qui contient le point donné.
+Retourne le frame qui contient le point donné.
 
 ```
 virtual CPaneFrameWnd* FrameFromPoint(
@@ -863,22 +864,22 @@ virtual CPaneFrameWnd* FrameFromPoint(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pt*<br/>
-[dans] Spécifie le point, dans les coordonnées de l’écran, pour vérifier.
+*pt*<br/>
+dans Spécifie le point, en coordonnées d’écran, à vérifier.
 
 *pFrameToExclude*<br/>
-[dans] Un pointeur à un cadre à exclure.
+dans Pointeur vers un frame à exclure.
 
 *bFloatMultiOnly*<br/>
-[dans] VRAI pour exclure les cadres `CMultiPaneFrameWnd`qui ne sont pas des cas de ; FALSE autrement.
+dans TRUE pour exclure les frames qui ne sont pas des instances de `CMultiPaneFrameWnd` ; FALSe dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le cadre qui contient le point donné; NULL autrement.
+Frame qui contient le point donné ; Sinon, NULL.
 
-## <a name="cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds
+## <a name="cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a> CDockingManager :: GetClientAreaBounds
 
-Obtient le rectangle qui contient les limites de la zone client.
+Obtient le rectangle qui contient les limites de la zone cliente.
 
 ```
 CRect GetClientAreaBounds() const;
@@ -889,23 +890,23 @@ void GetClientAreaBounds(CRect& rcClient);
 ### <a name="parameters"></a>Paramètres
 
 *rcClient*<br/>
-[out] Une référence au rectangle qui contient les limites de la zone client.
+à Référence au rectangle qui contient les limites de la zone cliente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le rectangle qui contient les limites de la zone client.
+Rectangle qui contient les limites de la zone cliente.
 
-## <a name="cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a>CDockingManager::GetDockingMode
+## <a name="cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a> CDockingManager :: GetDockingMode
 
-Retourne le mode d’amarrage actuel.
+Retourne le mode d’ancrage actuel.
 
 ```
 static AFX_DOCK_TYPE GetDockingMode();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur d’enumérateur qui représente le mode d’amarrage actuel. Ce peut être l’une des valeurs suivantes :
+Valeur de l’énumérateur qui représente le mode d’ancrage actuel. Ce peut être l’une des valeurs suivantes :
 
 - DT_STANDARD
 
@@ -915,37 +916,37 @@ Une valeur d’enumérateur qui représente le mode d’amarrage actuel. Ce peut
 
 ### <a name="remarks"></a>Notes
 
-Pour définir le mode d’amarrage, appelez [CDockingManager:SetDockingMode](#setdockingmode).
+Pour définir le mode d’ancrage, appelez [CDockingManager :: SetDockingMode](#setdockingmode).
 
-## <a name="cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd
+## <a name="cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a> CDockingManager :: GetDockSiteFrameWnd
 
-Obtient un pointeur sur le cadre de fenêtre parent.
+Obtient un pointeur vers le frame de fenêtre parent.
 
 ```
 CFrameWnd* GetDockSiteFrameWnd() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur vers le cadre de fenêtre parent.
+Pointeur vers le frame de fenêtre parent.
 
-## <a name="cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment
+## <a name="cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a> CDockingManager :: GetEnabledAutoHideAlignment
 
-Retourne l’alignement activé des vitres.
+Retourne l’alignement activé des volets.
 
 ```
 DWORD GetEnabledAutoHideAlignment() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une combinaison peu sage de CBRS_ALIGN_ drapeaux, ou 0 si les vitres d’autohide ne sont pas activées. Pour plus d’informations, voir [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
+Combinaison d’opérations de bits de CBRS_ALIGN_ indicateurs, ou 0 si les volets de masquage automatique ne sont pas activés. Pour plus d’informations, consultez [CFrameWnd :: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
 
 ### <a name="remarks"></a>Notes
 
-La méthode renvoie l’alignement activé pour les barres de commande d’autohide. Pour activer les barres d’autohide, appelez [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
+La méthode retourne l’alignement activé pour les barres de contrôle de masquage automatique. Pour activer les barres de masquage automatique, appelez [CFrameWndEx :: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
 
-## <a name="cdockingmanagergetminiframes"></a><a name="getminiframes"></a>CDockingManager::GetMiniFrames
+## <a name="cdockingmanagergetminiframes"></a><a name="getminiframes"></a> CDockingManager :: GetMiniFrames
 
 Obtient une liste de miniframes.
 
@@ -953,25 +954,25 @@ Obtient une liste de miniframes.
 const CObList& GetMiniFrames() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une liste de miniframes qui contiennent les barres de contrôle qui appartiennent au gestionnaire d’amarrage.
+Liste des miniframes qui contiennent les barres de contrôles qui appartiennent au gestionnaire d’ancrage.
 
-## <a name="cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds
+## <a name="cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a> CDockingManager :: GetOuterEdgeBounds
 
-Obtient un rectangle qui contient les bords extérieurs du cadre.
+Obtient un rectangle qui contient les bords extérieurs du frame.
 
 ```
 CRect GetOuterEdgeBounds() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un rectangle qui contient les bords extérieurs du cadre.
+Rectangle qui contient les bords extérieurs du frame.
 
-## <a name="cdockingmanagergetpanelist"></a><a name="getpanelist"></a>CDockingManager::GetPaneList
+## <a name="cdockingmanagergetpanelist"></a><a name="getpanelist"></a> CDockingManager :: GetPaneList
 
-Retourne une liste de vitres qui appartiennent au gestionnaire d’amarrage. Cela comprend toutes les vitres flottantes.
+Retourne la liste des volets qui appartiennent au gestionnaire d’ancrage. Cela comprend tous les volets flottants.
 
 ```cpp
 void GetPaneList(
@@ -983,65 +984,65 @@ void GetPaneList(
 
 ### <a name="parameters"></a>Paramètres
 
-*lstBars (lstBars)*<br/>
-[dans, dehors] Contient toutes les vitres de l’actuel gestionnaire d’amarrage.
+*lstBars*<br/>
+[in, out] Contient tous les volets du gestionnaire d’ancrage actuel.
 
 *bIncludeAutohide*<br/>
-[dans] VRAI pour inclure les vitres qui sont en mode autohide; autrement, FALSE.
+dans TRUE pour inclure les volets qui sont en mode de masquage automatique ; Sinon, FALSe.
 
-*pRTCFilter (en)*<br/>
-[dans] Si ce n’est pas NULL, la liste retournée ne contient que des volets de la classe de temps d’exécution spécifiée.
+*pRTCFilter*<br/>
+dans Si la valeur n’est pas NULL, la liste retournée contient uniquement des volets de la classe Runtime spécifiée.
 
 *bIncludeTabs*<br/>
-[dans] VRAI pour inclure des onglets; autrement, FALSE.
+dans TRUE pour inclure les onglets ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-S’il y a des vitres tabbed dans le gestionnaire d’amarrage, la méthode renvoie des pointeurs aux objets [de classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) et vous devez énumérer les onglets explicitement.
+Si le gestionnaire d’ancrage contient des volets à onglets, la méthode retourne des pointeurs vers des objets de [classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) et vous devez énumérer les onglets explicitement.
 
-Utilisez *pRTCFilter* pour obtenir une classe particulière de vitres. Par exemple, vous ne pouvez obtenir que des barres d’outils en définissant cette valeur de manière appropriée.
+Utilisez *pRTCFilter* pour obtenir une classe particulière de volets. Par exemple, vous pouvez obtenir uniquement des barres d’outils en définissant cette valeur de manière appropriée.
 
-## <a name="cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager
+## <a name="cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a> CDockingManager :: GetSmartDockingManager
 
-Récupère un pointeur au gestionnaire d’amarrage intelligent.
+Récupère un pointeur vers le gestionnaire d’ancrage intelligent.
 
 ```
 CSmartDockingManager* GetSmartDockingManager();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur pour le gestionnaire d’amarrage intelligent.
+Pointeur vers le gestionnaire d’ancrage intelligent.
 
-## <a name="cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent
+## <a name="cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a> CDockingManager :: GetSmartDockingManagerPermanent
 
-Récupère un pointeur au gestionnaire d’amarrage intelligent.
+Récupère un pointeur vers le gestionnaire d’ancrage intelligent.
 
 ```
 CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur pour le gestionnaire d’amarrage intelligent.
+Pointeur vers le gestionnaire d’ancrage intelligent.
 
-## <a name="cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams
+## <a name="cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a> CDockingManager :: GetSmartDockingParams
 
-Retourne les paramètres d’amarrage intelligents pour le gestionnaire d’amarrage.
+Retourne les paramètres d’ancrage actifs pour le gestionnaire d’ancrage.
 
 ```
 static CSmartDockingInfo& GetSmartDockingParams();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La classe qui contient les paramètres d’amarrage intelligents pour le gestionnaire actuel d’amarrage. Pour plus d’informations, voir [CSmartDockingInfo Class](../../mfc/reference/csmartdockinginfo-class.md).
+Classe qui contient les paramètres d’ancrage intelligents pour le gestionnaire d’ancrage actuel. Pour plus d’informations, consultez [CSmartDockingInfo, classe](../../mfc/reference/csmartdockinginfo-class.md).
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes
+## <a name="cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a> CDockingManager :: HideAutoHidePanes
 
-Cache un volet en mode autohide.
+Masque un volet en mode de masquage automatique.
 
 ```cpp
 void HideAutoHidePanes(
@@ -1052,14 +1053,14 @@ void HideAutoHidePanes(
 ### <a name="parameters"></a>Paramètres
 
 *pBarToExclude*<br/>
-[dans] Un pointeur à un bar pour exclure de se cacher.
+dans Pointeur vers une barre à exclure du masquage.
 
-*bImmédiément*<br/>
-[dans] VRAI pour cacher la vitre immédiatement; FALSE pour cacher le volet avec l’effet d’autohide.
+*bImmediately*<br/>
+dans TRUE pour masquer immédiatement le volet ; FALSe pour masquer le volet avec l’effet de masquage automatique.
 
-## <a name="cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a>CDockingManager::InsertDockSite
+## <a name="cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a> CDockingManager :: InsertDockSite
 
-Crée un volet de dock et l’insère dans la liste des barres de contrôle.
+Crée un volet d’ancrage et l’insère dans la liste des barres de contrôles.
 
 ```
 BOOL InsertDockSite(
@@ -1070,22 +1071,22 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Paramètres
 
-*Info*<br/>
-[dans] Une structure qui contient les informations d’alignement sur le volet du quai.
+*info*<br/>
+dans Structure qui contient les informations d’alignement sur le volet d’ancrage.
 
-*dwAlignToInsertAprès*<br/>
-[dans] Alignement de la vitre du quai.
+*dwAlignToInsertAfter*<br/>
+dans Alignement du volet d’ancrage.
 
 *ppDockBar*<br/>
-[out] Un pointeur à un pointeur à un volet de dock.
+à Pointeur vers un pointeur vers un volet d’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le volet du quai a été créé avec succès; FALSE autrement.
+TRUE si le volet d’ancrage a été créé avec succès ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerinsertpane"></a><a name="insertpane"></a>CDockingManager::InsertPane
+## <a name="cdockingmanagerinsertpane"></a><a name="insertpane"></a> CDockingManager :: InsertPane
 
-Insère une vitre de contrôle dans la liste des barres de contrôle.
+Insère un volet de contrôle dans la liste des barres de contrôles.
 
 ```
 BOOL InsertPane(
@@ -1096,70 +1097,70 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pControlBar (en)*<br/>
-[dans] Un pointeur à un volet de contrôle.
+*pControlBar*<br/>
+dans Pointeur vers un volet de contrôle.
 
 *pTarget*<br/>
-[dans] Un pointeur à un volet cible.
+dans Pointeur vers un volet cible.
 
-*bAprès*<br/>
-[dans] VRAI pour insérer la vitre après la position de la vitre cible; FALSE autrement.
+*bAfter*<br/>
+dans TRUE pour insérer le volet après la position du volet cible ; FALSe dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le volet de commande est ajouté avec succès à la liste des barres de contrôle; FALSE autrement.
+TRUE si le volet de contrôle est correctement ajouté à la liste des barres de contrôles ; FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode renvoie fausse si le volet de commande est déjà dans la liste des barres de contrôle ou si le volet cible n’existe pas dans la liste des barres de contrôle.
+Cette méthode retourne la valeur false si le volet de contrôle figure déjà dans la liste des barres de contrôles ou si le volet cible n’existe pas dans la liste des barres de contrôles.
 
-## <a name="cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
+## <a name="cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a> CDockingManager :: IsDockSiteMenu
 
-Précise si un menu pop-up est affiché sur les légendes de tous les volets.
+Spécifie si un menu contextuel s’affiche sur les légendes de tous les volets.
 
 ```
 static BOOL IsDockSiteMenu();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si un menu de site de quai est affiché sur les légendes de toutes les vitres d’amarrage ; autrement FALSE.
+TRUE si un menu ancre site s’affiche sur les légendes de tous les volets d’ancrage. Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez activer le menu du site du quai en appelant [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).
+Vous pouvez activer le menu ancrer le site en appelant [CDockingManager :: EnableDockSiteMenu](#enabledocksitemenu).
 
-## <a name="cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout
+## <a name="cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a> CDockingManager :: IsInAdjustLayout
 
-Détermine si les dispositions de toutes les vitres sont ajustées.
+Détermine si les dispositions de tous les volets sont ajustées.
 
 ```
 BOOL IsInAdjustLayout() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si les dispositions de toutes les vitres sont ajustées; FALSE autrement.
+TRUE si les dispositions de tous les volets sont ajustées ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode
+## <a name="cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a> CDockingManager :: IsOLEContainerMode
 
-Précise si le gestionnaire d’amarrage est en mode conteneur OLE.
+Spécifie si le gestionnaire d’ancrage est en mode conteneur OLE.
 
 ```
 BOOL IsOLEContainerMode() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le gestionnaire d’amarrage est en mode conteneur OLE; autrement, FALSE.
+TRUE si le gestionnaire d’ancrage est en mode conteneur OLE ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-En mode conteneur OLE, toutes les vitres d’amarrage et les barres d’outils d’application sont cachées. Les vitres sont également cachées dans ce mode si vous avez réglé [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) à TRUE.
+En mode conteneur OLE, tous les volets d’ancrage et les barres d’outils d’application sont masqués. Les volets sont également masqués dans ce mode si vous avez défini [CDockingManager :: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) sur true.
 
-## <a name="cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
+## <a name="cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a> CDockingManager :: IsPointNearDockSite
 
-Détermine si un point spécifié se trouve près du quai.
+Détermine si un point spécifié est près du site d’ancrage.
 
 ```
 BOOL IsPointNearDockSite(
@@ -1170,34 +1171,34 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Paramètres
 
-*Point*<br/>
-[dans] Le point spécifié.
+*point*<br/>
+dans Point spécifié.
 
-*dwBarAlignement*<br/>
-[out] Précise quel bord le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM.
+*dwBarAlignment*<br/>
+à Spécifie le bord vers lequel le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM.
 
-*bOuterEdge (en)*<br/>
-[out] VRAI si le point est près de la bordure extérieure du site du quai; FALSE autrement.
+*bOuterEdge*<br/>
+à TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSe dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le point est près du site du quai; autrement FALSE.
+TRUE si le point est proche du site d’ancrage ; Sinon, FALSe.
 
-## <a name="cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
+## <a name="cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a> CDockingManager :: IsPrintPreviewValid
 
-Détermine si le mode d’aperçu d’impression est défini.
+Détermine si le mode aperçu avant impression est défini.
 
 ```
 BOOL IsPrintPreviewValid() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le mode d’impression est défini; FALSE autrement.
+TRUE si le mode aperçu avant impression est défini ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerloadstate"></a><a name="loadstate"></a>CDockingManager::LoadState
+## <a name="cdockingmanagerloadstate"></a><a name="loadstate"></a> CDockingManager :: LoadState
 
-Charge l’état du gestionnaire d’amarrage du registre.
+Charge l’état du gestionnaire d’ancrage à partir du Registre.
 
 ```
 virtual BOOL LoadState(
@@ -1208,18 +1209,18 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[dans] Nom de profil.
+dans Nom du profil.
 
 *uiID*<br/>
-[dans] L’id du gestionnaire d’amarrage.
+dans ID du gestionnaire d’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si l’état de gestionnaire d’amarrage a été chargé avec succès ; autrement FALSE.
+TRUE si l’état du gestionnaire d’ancrage a été chargé avec succès ; Sinon, FALSe.
 
-## <a name="cdockingmanagerlockupdate"></a><a name="lockupdate"></a>CDockingManager::LockUpdate
+## <a name="cdockingmanagerlockupdate"></a><a name="lockupdate"></a> CDockingManager :: LockUpdate
 
-Verrouille la fenêtre donnée.
+Verrouille la fenêtre spécifiée.
 
 ```cpp
 void LockUpdate(BOOL bLock);
@@ -1227,16 +1228,16 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*Bloc*<br/>
-[dans] VRAI si la fenêtre est verrouillée; FALSE autrement.
+*Plage*<br/>
+dans TRUE si la fenêtre est verrouillée ; FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’une fenêtre est verrouillée, elle ne peut pas être déplacée et elle ne peut pas être redessiné.
+Quand une fenêtre est verrouillée, elle ne peut pas être déplacée et ne peut pas être redessinée.
 
-## <a name="cdockingmanagerm_bhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode
+## <a name="cdockingmanagerm_bhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a> CDockingManager :: m_bHideDockingBarsInContainerMode
 
-Précise si le gestionnaire d’amarrage cache les vitres en mode conteneur OLE.
+Spécifie si le gestionnaire d’ancrage masque les volets en mode conteneur OLE.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
@@ -1244,11 +1245,11 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 
 ### <a name="remarks"></a>Notes
 
-Définissez cette valeur à FALSE si vous souhaitez garder toutes les vitres amarrés au cadre principal visibles lorsque l’application est en mode conteneur OLE. Par défaut, cette valeur est VRAI.
+Définissez cette valeur sur FALSe si vous souhaitez conserver tous les volets ancrés au frame principal visible quand l’application est en mode conteneur OLE. Par défaut, cette valeur est TRUE.
 
-## <a name="cdockingmanagerm_dockmodeglobal"></a><a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal
+## <a name="cdockingmanagerm_dockmodeglobal"></a><a name="m_dockmodeglobal"></a> CDockingManager :: m_dockModeGlobal
 
-Spécifie le mode d’amarrage global.
+Spécifie le mode d’ancrage global.
 
 ```
 AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
@@ -1256,11 +1257,11 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, chaque volet d’amarrage utilise ce mode d’amarrage. Pour plus d’informations sur les valeurs que ce domaine peut être mis à, voir [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
+Par défaut, chaque volet d’ancrage utilise ce mode d’ancrage. Pour plus d’informations sur les valeurs pouvant être définies pour ce champ, consultez [CBasePane :: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-## <a name="cdockingmanagerm_ndocksensitivity"></a><a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity
+## <a name="cdockingmanagerm_ndocksensitivity"></a><a name="m_ndocksensitivity"></a> CDockingManager :: m_nDockSensitivity
 
-Spécifie la sensibilité à l’amarrage.
+Spécifie la sensibilité d’ancrage.
 
 ```
 AFX_IMPORT_DATA static int m_nDockSensitivity;
@@ -1268,11 +1269,11 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 
 ### <a name="remarks"></a>Notes
 
-La sensibilité à l’amarrage définit la proximité d’une vitre flottante peut s’approcher d’une vitre d’amarrage, d’un site d’amarrage ou d’une autre vitre avant que le cadre ne change son état pour s’amarrer.
+La sensibilité d’ancrage définit la manière dont la fermeture d’un volet flottant peut s’approcher d’un volet d’ancrage, d’un site d’ancrage ou d’un autre volet avant que le Framework ne change d’État en ancré.
 
-## <a name="cdockingmanagerm_ntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a> CDockingManager :: m_nTimeOutBeforeDockingBarDock
 
-Spécifie l’heure, en millisecondes, avant qu’une vitre d’amarrage ne soit amarré en mode d’amarrage immédiat.
+Spécifie la durée, en millisecondes, avant qu’un volet d’ancrage ne soit ancré en mode d’ancrage immédiat.
 
 ```
 static UINT m_nTimeOutBeforeDockingBarDock;
@@ -1280,11 +1281,11 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 
 ### <a name="remarks"></a>Notes
 
-Avant qu’une vitre ne soit amarré, le cadre attend la durée spécifiée. Cela empêche la vitre d’être accidentellement amarré à un endroit pendant que l’utilisateur est encore le traîner.
+Avant qu’un volet soit ancré, le Framework attend la durée spécifiée. Cela empêche l’ancrage accidentel du volet à un emplacement pendant que l’utilisateur le fait glisser.
 
-## <a name="cdockingmanagerm_ntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a> CDockingManager :: m_nTimeOutBeforeToolBarDock
 
-Spécifie le temps, en millisecondes, avant qu’une barre d’outils ne soit amarrée à la fenêtre principale du cadre.
+Spécifie la durée, en millisecondes, avant qu’une barre d’outils soit ancrée à la fenêtre frame principale.
 
 ```
 static UINT m_nTimeOutBeforeToolBarDock;
@@ -1292,11 +1293,11 @@ static UINT m_nTimeOutBeforeToolBarDock;
 
 ### <a name="remarks"></a>Notes
 
-Avant qu’une barre d’outils ne soit amarré, le cadre attend la durée spécifiée. Cela empêche la barre d’outils d’être accidentellement amarré à un endroit pendant que l’utilisateur est encore le traîner.
+Avant qu’une barre d’outils soit ancrée, le Framework attend la durée spécifiée. Cela empêche la barre d’outils d’être ancrée accidentellement à un emplacement pendant que l’utilisateur la fait glisser.
 
-## <a name="cdockingmanageronactivateframe"></a><a name="onactivateframe"></a>CDockingManager::OnActivateFrame
+## <a name="cdockingmanageronactivateframe"></a><a name="onactivateframe"></a> CDockingManager :: OnActivateFrame
 
-Appelé par le cadre lorsque la fenêtre de cadre est rendue active ou désactivée.
+Appelé par le Framework lorsque la fenêtre frame est rendue active ou est désactivée.
 
 ```
 virtual void OnActivateFrame(BOOL bActivate);
@@ -1304,10 +1305,10 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivate (en)*<br/>
-[dans] Si VRAI, la fenêtre de cadre est rendue active ; si FALSE, la fenêtre de cadre est désactivée.
+*bActivate*<br/>
+dans Si la valeur est TRUE, la fenêtre frame est rendue active ; Si la valeur est FALSe, la fenêtre frame est désactivée.
 
-## <a name="cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu
+## <a name="cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a> CDockingManager :: OnClosePopupMenu
 
 Appelée par l’infrastructure quand un menu contextuel actif traite un message WM_DESTROY.
 
@@ -1317,11 +1318,11 @@ void OnClosePopupMenu();
 
 ### <a name="remarks"></a>Notes
 
-Le cadre envoie un message WM_DESTROY lorsqu’il est sur le point de fermer la fenêtre principale actuelle. Remplacer cette méthode pour gérer `CMFCPopupMenu` les notifications à partir `CMFCPopupMenu` d’objets appartenant à la fenêtre de cadre lorsqu’un objet traite un message WM_DESTROY.
+L’infrastructure envoie un message WM_DESTROY lorsqu’il est sur le paragraphe de fermer la fenêtre principale active. Substituez cette méthode pour gérer les notifications des `CMFCPopupMenu` objets qui appartiennent à la fenêtre frame lorsqu’un `CMFCPopupMenu` objet traite un message de WM_DESTROY.
 
-## <a name="cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
+## <a name="cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a> CDockingManager :: OnMoveMiniFrame
 
-Appelé par le cadre pour déplacer une fenêtre mini-cadre.
+Appelé par l’infrastructure pour déplacer une fenêtre mini-frame.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1329,16 +1330,16 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>Paramètres
 
-*pFrame (en)*<br/>
-[dans] Un pointeur vers une fenêtre mini-cadre.
+*pFrame*<br/>
+dans Pointeur vers une fenêtre mini-frame.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la méthode réussit; autrement FALSE.
+TRUE si la méthode est réussie ; Sinon, FALSe.
 
-## <a name="cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu
+## <a name="cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a> CDockingManager :: OnPaneContextMenu
 
-Appelé par le cadre quand il construit un menu qui a une liste de volets.
+Appelée par le Framework lorsqu’il génère un menu qui contient une liste de volets.
 
 ```cpp
 void OnPaneContextMenu(CPoint point);
@@ -1346,12 +1347,12 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Paramètres
 
-*Point*<br/>
-[dans] Précise l’emplacement du menu.
+*point*<br/>
+dans Spécifie l’emplacement du menu.
 
-## <a name="cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a>CDockingManager::Pandepoint
+## <a name="cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a> CDockingManager ::P aneFromPoint
 
-Retourne la vitre qui contient le point donné.
+Retourne le volet qui contient le point donné.
 
 ```
 virtual CBasePane* PaneFromPoint(
@@ -1372,38 +1373,38 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Paramètres
 
-*Point*<br/>
-[dans] Spécifie le point, dans les coordonnées de l’écran, pour vérifier.
+*point*<br/>
+dans Spécifie le point, en coordonnées d’écran, à vérifier.
 
-*nSensibilité*<br/>
-[dans] La valeur pour gonfler le rectangle de fenêtre de chaque vitre vérifiée. Un volet satisfait les critères de recherche si le point donné se trouve dans cette région gonflée.
+*nSensitivity*<br/>
+dans Valeur d’augmentation du rectangle de la fenêtre de chaque volet sélectionné. Un volet répond aux critères de recherche si le point donné se trouve dans cette région gonflée.
 
 *bExactBar*<br/>
-[dans] VRAI pour ignorer le *paramètre de nSensibilité;* autrement, FALSE.
+dans TRUE pour ignorer le paramètre *nSensitivity* ; Sinon, FALSe.
 
-*pRTCBarType (en)*<br/>
-[dans] Si ce n’est pas NULL, la méthode ne recherche que les vitres du type spécifié.
+*pRTCBarType*<br/>
+dans Si la valeur n’est pas NULL, la méthode recherche uniquement les volets du type spécifié.
 
-*bCheckVisibilité*<br/>
-[dans] VRAI pour vérifier seulement les vitres visibles; autrement, FALSE.
+*bCheckVisibility*<br/>
+dans TRUE pour vérifier uniquement les volets visibles ; Sinon, FALSe.
 
 *dwAlignment*<br/>
-[out] Si une vitre est trouvée au point spécifié, ce paramètre contient le côté de la vitre qui était le plus proche du point spécifié. Pour plus d'informations, consultez la section Notes.
+à Si un volet est trouvé au point spécifié, ce paramètre contient le côté du volet le plus proche du point spécifié. Pour plus d'informations, consultez la section Remarques.
 
 *pBarToIgnore*<br/>
-[dans] Si ce n’est pas NULL, la méthode ignore les vitres spécifiées par ce paramètre.
+dans Si la valeur n’est pas NULL, la méthode ignore les volets spécifiés par ce paramètre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-L’objet dérivé de [CBasePane](../../mfc/reference/cbasepane-class.md)qui contient le point donné, ou NULL si aucune vitre n’a été trouvée.
+Objet dérivé de [CBasePane](../../mfc/reference/cbasepane-class.md)qui contient le point donné, ou null si aucun volet n’a été trouvé.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque la fonction revient et qu’une vitre a été trouvée, *dwAlignment* contient l’alignement du point spécifié. Par exemple, si le point était le plus proche du haut de la vitre, *dwAlignment* est réglé pour CBRS_ALIGN_TOP.
+Quand la fonction retourne et qu’un volet a été trouvé, *dwAlignment* contient l’alignement du point spécifié. Par exemple, si le point est le plus proche du haut du volet, *dwAlignment* a la valeur CBRS_ALIGN_TOP.
 
-## <a name="cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand
+## <a name="cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a> CDockingManager ::P rocessPaneContextMenuCommand
 
-Appelé par le cadre pour sélectionner ou pour effacer une case à cocher pour la commande spécifiée et recalculer la disposition d’une vitre affichée.
+Appelé par l’infrastructure pour activer ou désactiver une case à cocher pour la commande spécifiée et recalculer la disposition d’un volet affiché.
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1416,24 +1417,24 @@ BOOL ProcessPaneContextMenuCommand(
 ### <a name="parameters"></a>Paramètres
 
 *nID*<br/>
-[dans] L’id d’une barre de contrôle dans le menu.
+dans ID d’une barre de contrôle dans le menu.
 
-*nCode (en)*<br/>
-[dans] Le code de notification de commande.
+*nCode*<br/>
+dans Code de notification de la commande.
 
 *pExtra*<br/>
-[dans] Un pointeur à vider qui `CCmdUI` est jeté à un pointeur à si *nCode* est CN_UPDATE_COMMAND_UI.
+dans Pointeur vers void qui est casté en pointeur vers `CCmdUI` si *nCode* est CN_UPDATE_COMMAND_UI.
 
-*pHandlerInfo (en anglais)*<br/>
-[dans] Un pointeur à une structure d’info. Ce paramètre n'est pas utilisé.
+*pHandlerInfo*<br/>
+dans Pointeur vers une structure d’informations. Ce paramètre n'est pas utilisé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si *pEXtra* n’est pas NULL et *nCode* équivaut à CN_UPDATE_COMMAND_UI, ou s’il ya une barre de contrôle avec le *nID*spécifié .
+TRUE si *pEXtra* n’est pas null et *nCode* est égal à CN_UPDATE_COMMAND_UI, ou s’il existe une barre de contrôle avec l' *nid* spécifié.
 
-## <a name="cdockingmanagerrecalclayout"></a><a name="recalclayout"></a>CDockingManager::RecalcLayout
+## <a name="cdockingmanagerrecalclayout"></a><a name="recalclayout"></a> CDockingManager :: RecalcLayout
 
-Recalcule la disposition interne des contrôles présents dans la liste des contrôles.
+Recalcule la disposition interne des contrôles présents dans la liste de contrôles.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1441,20 +1442,20 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bNotifier*<br/>
-[dans] Ce paramètre n’est pas utilisé.
+*bNotify*<br/>
+dans Ce paramètre n’est pas utilisé.
 
-## <a name="cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers
+## <a name="cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a> CDockingManager :: ReleaseEmptyPaneContainers
 
-Libère les contenants vides de vitres.
+Libère les conteneurs de volets vides.
 
 ```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
-## <a name="cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar
+## <a name="cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a> CDockingManager :: RemoveHiddenMDITabbedBar
 
-Enlève la vitre cachée spécifiée.
+Supprime le volet de barre masqué spécifié.
 
 ```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
@@ -1462,12 +1463,12 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-[dans] Un pointeur à un volet de barre à enlever.
+*pBar*<br/>
+dans Pointeur vers un volet barre à supprimer.
 
-## <a name="cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame
+## <a name="cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a> CDockingManager :: RemoveMiniFrame
 
-Supprime une image spécifiée de la liste des mini-images.
+Supprime un frame spécifié de la liste des mini-cadres.
 
 ```
 virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
@@ -1475,16 +1476,16 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans] Un pointeur à un cadre à enlever.
+*pWnd*<br/>
+dans Pointeur vers un frame à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le cadre spécifié est supprimé; FALSE autrement.
+TRUE si le frame spécifié est supprimé ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager
+## <a name="cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a> CDockingManager :: RemovePaneFromDockManager
 
-Désenregistre une vitre et la retire de la liste dans le gestionnaire d’amarrage.
+Annule l’inscription d’un volet et le supprime de la liste dans le gestionnaire d’ancrage.
 
 ```cpp
 void RemovePaneFromDockManager(
@@ -1497,22 +1498,22 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans] Un pointeur à un volet à enlever.
+*pWnd*<br/>
+dans Pointeur vers un volet à supprimer.
 
-*bDestroy (en)*<br/>
-[dans] Si VRAI, la vitre enlevée est détruite.
+*bDestroy*<br/>
+dans Si la valeur est TRUE, le volet supprimé est détruit.
 
-*bAdjustLayout (en)*<br/>
-[dans] Si VRAI, ajustez immédiatement la disposition d’amarrage.
+*bAdjustLayout*<br/>
+dans Si la valeur est TRUE, ajustez la disposition d’ancrage immédiatement.
 
 *bAutoHide*<br/>
-[dans] Si VRAI, le volet est retiré de la liste des barres d’autohide. Si FALSE, la vitre est retirée de la liste des vitres régulières.
+dans Si la valeur est TRUE, le volet est supprimé de la liste des barres de masquage automatique. Si la valeur est FALSe, le volet est supprimé de la liste des volets normaux.
 
-*pBarReplacement (en)*<br/>
-[dans] Un pointeur à une vitre qui remplace la vitre enlevée.
+*pBarReplacement*<br/>
+dans Pointeur vers un volet qui remplace le volet supprimé.
 
-## <a name="cdockingmanagerreplacepane"></a><a name="replacepane"></a>CDockingManager::ReplacePane
+## <a name="cdockingmanagerreplacepane"></a><a name="replacepane"></a> CDockingManager :: ReplacePane
 
 Remplace un volet par un autre.
 
@@ -1524,27 +1525,27 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pOriginalBar (en anglais seulement)*<br/>
-[dans] Un pointeur à la vitre originale.
+*pOriginalBar*<br/>
+dans Pointeur vers le volet d’origine.
 
-*pNewBar (en)*<br/>
-[dans] Un pointeur à la vitre qui remplace la vitre d’origine.
+*pNewBar*<br/>
+dans Pointeur vers le volet qui remplace le volet d’origine.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la vitre est remplacée avec succès; FALSE autrement.
+TRUE si le volet est correctement remplacé ; FALSe dans le cas contraire.
 
-## <a name="cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder
+## <a name="cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a> CDockingManager :: ResortMiniFramesForZOrder
 
-Resorts les cadres dans la liste des mini-cadres.
+Recourt les images dans la liste des mini-frames.
 
 ```cpp
 void ResortMiniFramesForZOrder();
 ```
 
-## <a name="cdockingmanagersavestate"></a><a name="savestate"></a>CDockingManager::SaveState
+## <a name="cdockingmanagersavestate"></a><a name="savestate"></a> CDockingManager :: saveste
 
-Enregistre l’état du gestionnaire d’amarrage au registre.
+Enregistre l’état du gestionnaire d’ancrage dans le registre.
 
 ```
 virtual BOOL SaveState(
@@ -1555,22 +1556,22 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[dans] Un chemin vers une clé de registre.
+dans Chemin d’accès à une clé de registre.
 
 *uiID*<br/>
-[dans] L’id du directeur de l’amarrage.
+dans ID du gestionnaire d’ancrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si l’État a été sauvé avec succès; autrement FALSE.
+TRUE si l’État a été enregistré avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Sauver l’état du gestionnaire d’amarrage au registre consiste à sauver les états des barres de contrôle, les états des barres d’autohide et les états des mini-cadres présents dans le gestionnaire d’amarrage.
+L’enregistrement de l’état du gestionnaire d’ancrage dans le registre consiste à enregistrer les États des barres de contrôles, les États des barres de masquage automatique et les États des mini-cadres présents dans le gestionnaire d’ancrage.
 
-## <a name="cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames
+## <a name="cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a> CDockingManager :: SendMessageToMiniFrames
 
-Envoie le message spécifié à toutes les mini images.
+Envoie le message spécifié à toutes les mini-trames.
 
 ```
 BOOL SendMessageToMiniFrames(
@@ -1582,21 +1583,21 @@ BOOL SendMessageToMiniFrames(
 ### <a name="parameters"></a>Paramètres
 
 *uMessage*<br/>
-[dans] Le message à envoyer.
+dans Message à envoyer.
 
 *wParam*<br/>
-[dans] Informations supplémentaires dépendantes des messages.
+dans Informations supplémentaires dépendantes du message.
 
 *lParam*<br/>
-[dans] Informations supplémentaires dépendantes des messages.
+dans Informations supplémentaires dépendantes du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI toujours.
+TRUE.
 
-## <a name="cdockingmanagerserialize"></a><a name="serialize"></a>CDockingManager::Serialize
+## <a name="cdockingmanagerserialize"></a><a name="serialize"></a> CDockingManager :: Serialize
 
-Écrit le gestionnaire d’amarrage à une archive.
+Écrit le gestionnaire d’ancrage dans une archive.
 
 ```cpp
 void Serialize(CArchive& ar);
@@ -1604,16 +1605,16 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*Ar*<br/>
-[dans] Une référence à un objet d’archives.
+*ar*<br/>
+dans Référence à un objet archive.
 
 ### <a name="remarks"></a>Notes
 
-L’écriture du gestionnaire d’amarrage à une archive implique de déterminer le nombre de barres de contrôle d’amarrage et de curseurs, et d’écrire les barres de contrôle, les mini-cadres, les barres d’autohide et les barres de tabbed MDI à l’archive.
+L’écriture du gestionnaire d’ancrage dans une archive implique la détermination du nombre de barres de contrôles d’ancrage et de curseurs, et l’écriture des barres de contrôle, des mini-cadres, des barres de masquage automatique et des barres à onglets MDI à l’archive.
 
-## <a name="cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder
+## <a name="cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a> CDockingManager :: SetAutohideZOrder
 
-Définit la taille, la largeur et la hauteur des barres de commande et de la vitre spécifiée.
+Définit la taille, la largeur et la hauteur des barres de contrôles et du volet spécifié.
 
 ```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
@@ -1621,12 +1622,12 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 
 ### <a name="parameters"></a>Paramètres
 
-*pAHDockingBar (en)*<br/>
-[dans] Un pointeur à une vitre amarable.
+*pAHDockingBar*<br/>
+dans Pointeur vers un volet Ancrable.
 
-## <a name="cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a>CDockingManager::SetDockingMode
+## <a name="cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a> CDockingManager :: SetDockingMode
 
-Définit le mode d’amarrage.
+Définit le mode d’ancrage.
 
 ```
 static void SetDockingMode(
@@ -1637,34 +1638,34 @@ static void SetDockingMode(
 ### <a name="parameters"></a>Paramètres
 
 *dockMode*<br/>
-Spécifie le nouveau mode d’amarrage. Pour plus d'informations, consultez la section Notes.
+Spécifie le nouveau mode d’ancrage. Pour plus d'informations, consultez la section Remarques.
 
-*Thème*<br/>
-Spécifie le thème à utiliser pour les marqueurs d’amarrage intelligents. Il peut s’agir d’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+*thématique*<br/>
+Spécifie le thème à utiliser pour les marqueurs d’ancrage intelligents. Il peut s’agir de l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode statique pour définir le mode d’amarrage.
+Appelez cette méthode statique pour définir le mode d’ancrage.
 
-*dockMode* peut être l’une des valeurs suivantes :
+*dockMode* peut prendre l’une des valeurs suivantes :
 
-- DT_STANDARD - Mode d’amarrage standard tel qu’implémenté dans Visual Studio .NET 2003. Les vitres sont traînées sans contexte de dragage.
+- DT_STANDARD-mode d’ancrage standard tel qu’il est implémenté dans Visual Studio .NET 2003. Les volets sont déplacés sans contexte de glissement.
 
-- DT_IMMEDIATE - Mode d’amarrage immédiat tel qu’implémenté dans Microsoft Visio. Les vitres sont traînées avec un contexte traînant, mais aucun marqueur n’est affiché.
+- DT_IMMEDIATE-mode d’ancrage immédiat tel qu’il est implémenté dans Microsoft Visio. Les volets sont déplacés avec un contexte de glissement, mais aucun marqueur n’est affiché.
 
-- DT_SMART - Mode d’amarrage intelligent tel qu’il est mis en œuvre dans Visual Studio 2005. Les vitres sont traînées avec un contexte traînant et des marqueurs intelligents sont affichés qui montrent où la vitre peut être amarré.
+- DT_SMART-mode d’ancrage intelligent implémenté dans Visual Studio 2005. Les volets sont déplacés avec un contexte de glissement et des marqueurs intelligents s’affichent pour indiquer l’emplacement où le volet peut être ancré.
 
-## <a name="cdockingmanagersetdockstate"></a><a name="setdockstate"></a>CDockingManager::SetDockState
+## <a name="cdockingmanagersetdockstate"></a><a name="setdockstate"></a> CDockingManager :: SetDockState
 
-Définit l’état d’amarrage des barres de contrôle, les mini-cadres et les barres d’autohide.
+Définit l’état d’ancrage des barres de contrôles, des mini-cadres et des barres de masquage automatique.
 
 ```
 virtual void SetDockState();
 ```
 
-## <a name="cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode
+## <a name="cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a> CDockingManager :: SetPrintPreviewMode
 
-Définit le mode d’aperçu d’impression des barres qui sont affichées dans l’aperçu d’impression.
+Définit le mode aperçu avant impression des barres affichées dans l’aperçu avant impression.
 
 ```cpp
 void SetPrintPreviewMode(
@@ -1674,15 +1675,15 @@ void SetPrintPreviewMode(
 
 ### <a name="parameters"></a>Paramètres
 
-*bPréview (en)*<br/>
-[dans] VRAI si le mode d’aperçu d’impression est défini; FALSE autrement.
+*bPreview*<br/>
+dans TRUE si le mode aperçu avant impression est défini ; FALSe dans le cas contraire.
 
-*pState (États-Unis)*<br/>
-[dans] Un pointeur à un état d’aperçu. Ce paramètre n'est pas utilisé.
+*pState*<br/>
+dans Pointeur vers un état d’aperçu. Ce paramètre n'est pas utilisé.
 
-## <a name="cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams
+## <a name="cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a> CDockingManager :: SetSmartDockingParams
 
-Définit les paramètres qui définissent le comportement de l’amarrage intelligent.
+Définit les paramètres qui définissent le comportement de l’ancrage intelligent.
 
 ```
 static void SetSmartDockingParams(CSmartDockingInfo& params);
@@ -1691,17 +1692,17 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Paramètres
 
 *params*<br/>
-[dans, dehors] Définit les paramètres de l’amarrage intelligent.
+[in, out] Définit les paramètres pour l’ancrage intelligent.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode si vous voulez personnaliser l’apparence, la couleur ou la forme des marqueurs d’amarrage intelligents.
+Appelez cette méthode si vous souhaitez personnaliser l’apparence, la couleur ou la forme des marqueurs d’ancrage intelligents.
 
-Pour utiliser le look par défaut pour les marqueurs d’amarrage intelligents, passez une instance uninitialisée de [CSmartDockingInfo Class](../../mfc/reference/csmartdockinginfo-class.md) à *params*.
+Pour utiliser la recherche par défaut des marqueurs d’ancrage intelligents, transmettez une instance non initialisée de la [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) aux *paramètres*.
 
-## <a name="cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames
+## <a name="cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a> CDockingManager :: ShowDelayShowMiniFrames
 
-Affiche ou cache les fenêtres des mini-cadres.
+Affiche ou masque les fenêtres des mini-frames.
 
 ```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
@@ -1709,12 +1710,12 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 
 ### <a name="parameters"></a>Paramètres
 
-*bShow (en)*<br/>
-[dans] VRAI pour activer la fenêtre du cadre montré; FALSE pour cacher la fenêtre du cadre.
+*bShow*<br/>
+dans TRUE pour rendre la fenêtre du frame affichée active ; FALSe pour masquer la fenêtre du frame.
 
-## <a name="cdockingmanagershowpanes"></a><a name="showpanes"></a>CDockingManager::ShowPanes
+## <a name="cdockingmanagershowpanes"></a><a name="showpanes"></a> CDockingManager :: ShowPanes
 
-Affiche ou cache les vitres des barres de contrôle et d’autohide.
+Affiche ou masque les volets des barres de contrôle et de masquage automatique.
 
 ```
 virtual BOOL ShowPanes(BOOL bShow);
@@ -1722,16 +1723,16 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Paramètres
 
-*bShow (en)*<br/>
-[dans] VRAI pour montrer les vitres; FALSE pour cacher les vitres.
+*bShow*<br/>
+dans TRUE pour afficher les volets ; FALSe pour masquer les volets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours FALSE.
 
-## <a name="cdockingmanagerstartsdocking"></a><a name="startsdocking"></a>CDockingManager::StartSDocking
+## <a name="cdockingmanagerstartsdocking"></a><a name="startsdocking"></a> CDockingManager :: StartSDocking
 
-Démarre l’amarrage intelligent de la fenêtre spécifiée en fonction de l’alignement du gestionnaire d’amarrage intelligent.
+Démarre l’ancrage intelligent de la fenêtre spécifiée en fonction de l’alignement du gestionnaire d’ancrage intelligent.
 
 ```cpp
 void StartSDocking(CWnd* pDockingWnd);
@@ -1740,27 +1741,27 @@ void StartSDocking(CWnd* pDockingWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pDockingWnd*<br/>
-[dans] Un pointeur à une fenêtre pour accoster.
+dans Pointeur vers une fenêtre à ancrer.
 
-## <a name="cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a>CDockingManager::StopSDocking
+## <a name="cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a> CDockingManager :: StopSDocking
 
-Arrête l’amarrage intelligent.
+Arrête l’ancrage intelligent.
 
 ```cpp
 void StopSDocking();
 ```
 
-## <a name="cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme
+## <a name="cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a> CDockingManager :: GetSmartDockingTheme
 
-Méthode statique qui renvoie un thème utilisé pour afficher des marqueurs d’amarrage intelligents.
+Méthode statique qui retourne un thème utilisé pour afficher des marqueurs d’ancrage intelligents.
 
 ```
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Retourne l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Notes
 
@@ -1768,7 +1769,7 @@ Retourne l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_V
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Classe CFrameWndEx](../../mfc/reference/cframewndex-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
+[CFrameWndEx, classe](../../mfc/reference/cframewndex-class.md)<br/>
 [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [CPaneFrameWnd, classe](../../mfc/reference/cpaneframewnd-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : SQL : types de données SQL et C++ (ODBC)'
 title: 'SQL : types de données SQL et C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 424ae09f6462d4d34b5a847fc210f9329e76d788
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7dd0e4fe94ef61436a7a62e1bb653e803c0b6168
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185971"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL : types de données SQL et C++ (ODBC)
 
@@ -25,24 +26,24 @@ Le tableau suivant mappe les types de données ANSI SQL aux types de données C+
 |Type de données SQL ANSI|Type de données C++|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
-|**SÉPAR**|`CString`1,0|
+|**DECIMAL**|`CString` 1,0|
 |**SMALLINT**|**`int`**|
-|**NON**|**`float`**|
-|**ENTIÈRE**|**`long`**|
-|**DISSOCIÉ**|**`double`**|
-|**Cliquer**|**`double`**|
-|**CHIFFRE**|`CString`1,0|
+|**REAL**|**`float`**|
+|**INTEGER**|**`long`**|
+|**FLOAT**|**`double`**|
+|**DOUBLE**|**`double`**|
+|**NUMERIC**|`CString` 1,0|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**64BITS**|**Boolean**|
-|**SA**|**POIDS**|
-|**COMPORTANT**|`CString`1,0|
+|**BIT**|**Boolean**|
+|**SA**|**BYTE**|
+|**COMPORTANT**|`CString` 1,0|
 |**BINAIRE2**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**SIMULTANÉMENT**|`CTime`, `CString`|
-|**CONFIRMÉ**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. Mappage **décimal** et **numérique** ANSI à `CString` , car **SQL_C_CHAR** est le type de transfert ODBC par défaut.
 

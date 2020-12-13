@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : définition de fonctions inline C avec dllexport et dllimport'
 title: Définition de fonctions inline C avec dllexport et dllimport
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dllexport attribute [C++], inline functions
 - dllexport attribute [C++]
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
-ms.openlocfilehash: 963e8f998e606a1b7011d58f93c927f36a263fb9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ab176504b0fb75ca149ffa4b3a438960c22aad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186920"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Définition de fonctions inline C avec dllexport et dllimport
 

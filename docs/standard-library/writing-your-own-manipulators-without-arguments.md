@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : écriture de vos propres manipulateurs sans arguments'
 title: Écrire vos propres manipulateurs sans arguments
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 593db0a3dacb54c94cc865ebc20b1e1b39d2c208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187752"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Écrire vos propres manipulateurs sans arguments
 
-Écrire des manipulateurs qui n’utilisent pas d’arguments ne requiert ni dérivation de classe, ni utilisation de macros complexes. Supposons que votre imprimante nécessite la paire \<ÉCHAP>[ pour entrer en mode gras. Vous pouvez insérer cette paire directement dans le flux :
+Écrire des manipulateurs qui n’utilisent pas d’arguments ne requiert ni dérivation de classe, ni utilisation de macros complexes. Supposons que votre imprimante requiert la paire \<ESC> [pour passer en mode gras. Vous pouvez insérer cette paire directement dans le flux :
 
 ```cpp
 cout << "regular " << '\033' << '[' << "boldface" << endl;

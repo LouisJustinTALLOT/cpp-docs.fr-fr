@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe wstring_convert'
 title: wstring_convert, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 01754ca4239d89a64fdb67a85e82b90c5a24872d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 53c3e311967295294d158bb0342d365d45f5e031
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187739"
 ---
 # <a name="wstring_convert-class"></a>wstring_convert, classe
 
@@ -114,7 +115,7 @@ Retourne le nombre de conversions réussies.
 size_t converted() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de conversions ayant réussi.
 
@@ -150,7 +151,7 @@ Premier caractère d'une plage de caractères à convertir.
 *famille*\
 Dernier caractère d'une plage de caractères à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de chaîne étendue résultant de la conversion.
 
@@ -180,7 +181,7 @@ Retourne un objet représentant l'état de la conversion.
 state_type state() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’objet d’[état de conversion](../standard-library/wstring-convert-class.md) qui représente l’état de la conversion.
 

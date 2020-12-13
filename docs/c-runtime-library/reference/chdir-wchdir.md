@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _chdir, _wchdir'
 title: _chdir, _wchdir
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 190e9d6445417aed8c35843cb4c386d49535ebbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186712"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -65,11 +66,11 @@ int _wchdir(
 *dirname*<br/>
 Chemin du nouveau répertoire de travail.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces fonctions retournent la valeur 0 en cas de réussite. Une valeur de retour de-1 indique un échec. Si le chemin d’accès spécifié est introuvable, **errno** a la valeur **ENOENT**. Si *dirname* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_chdir** remplace le répertoire de travail actuel par le répertoire spécifié par *dirname*. Le paramètre *dirname* doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur est spécifiée dans *dirname*, la lettre de lecteur par défaut est également modifiée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :
 

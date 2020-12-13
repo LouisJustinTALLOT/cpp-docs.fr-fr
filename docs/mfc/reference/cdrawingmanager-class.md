@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDrawingManager'
 title: CDrawingManager, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 1cc469b63e448e964dacc4d853905b22155dfe0e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30218dd41e3591c4a39df078bb19e3ac653ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184788"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager, classe
 
@@ -166,7 +167,7 @@ Handle vers la bitmap d’origine
 *clrTransparent*\
 Valeur RVB spécifiant la couleur transparente de l’image bitmap d’origine.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers l’image bitmap DIB nouvellement créée si cette méthode réussit ; Sinon, NULL.
 
@@ -268,7 +269,7 @@ dans Largeur de la bordure de l’anneau.
 *clrFace*<br/>
 dans Couleur de l’intérieur de l’anneau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -385,7 +386,7 @@ dans Couleur de l’ombre.
 *bRightShadow*<br/>
 dans Paramètre booléen qui indique la façon dont l’ombre est dessinée. Si *bRightShadow* est `TRUE` , `DrawShadow` dessine une ombre sur le côté droit du rectangle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -549,7 +550,7 @@ dans Couleur transparente.
 *clrDisabled*<br/>
 dans Couleur utilisée par cette méthode pour la désaturation si *nPercentage* a la valeur-1.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
@@ -589,7 +590,7 @@ dans Entier compris entre 0 et 255 qui indique la tolérance de couleurs.
 *clrBlend*<br/>
 dans Couleur de base pour la fusion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -621,7 +622,7 @@ dans Nombre compris entre 0 et 1 qui indique la luminosité de la couleur.
 *S*<br/>
 dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Représentation RVB de la couleur TLS fournie.
 
@@ -653,7 +654,7 @@ dans Nombre compris entre 0 et 1 qui indique la luminosité de la couleur.
 *S*<br/>
 dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Représentation RVB de la couleur TLS fournie.
 
@@ -685,7 +686,7 @@ dans Nombre compris entre 0 et 1 qui indique la saturation de la couleur.
 *V*\
 dans Nombre compris entre 0 et 1 qui indique la valeur de la couleur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Représentation RVB de la couleur HSV fournie.
 
@@ -729,7 +730,7 @@ dans Consultez la section Notes.
 *RH*<br/>
 dans Consultez la section Notes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Composant individuel rouge, vert ou bleu pour la teinte fournie.
 
@@ -808,7 +809,7 @@ dans Nombre compris entre 0 et 100 qui représente le pourcentage de transparenc
 *dstPixel*<br/>
 dans Couleur de base du pixel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur finale du pixel semi-transparent.
 
@@ -844,7 +845,7 @@ dans Luminosité minimale de l’ombre.
 *iMaxBrightness*<br/>
 dans Luminosité maximale de l’ombre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers l’image bitmap créée si cette méthode réussit ; Sinon, NULL.
 
@@ -1028,7 +1029,7 @@ dans Le rapport pondéré pour la première couleur.
 *K2*\
 dans Le rapport pondéré pour la deuxième couleur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur qui représente un mélange pondéré des couleurs fournies.
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : définitions et conventions'
 title: Définitions et conventions
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 892f14bfc3059406bbc192640e04c0181d06eee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186868"
 ---
 # <a name="definitions-and-conventions"></a>Définitions et conventions
 
@@ -17,7 +18,7 @@ Les terminaux sont des points de terminaison dans une définition de syntaxe. Au
 
 Les non terminaux sont des espaces réservés dans la syntaxe qui sont définis ailleurs dans ce résumé de syntaxe. Les définitions peuvent être récursives.
 
-Un composant facultatif est indiqué par le script <sub>OPT</sub>. Par exemple,
+Un composant facultatif est indiqué par le script <sub>OPT</sub>. Par exemple :
 
 > **{** *expression*<sub>OPT</sub> **}**
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ce qu’est un flux'
 title: Définition d'un flux
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-ms.openlocfilehash: 80f2d17d7de2ddca1ef1501cacdb44f41c06594b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3786fe05f25949129c1bce63bdbbd73a16209475
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187778"
 ---
 # <a name="what-a-stream-is"></a>Définition d'un flux
 
