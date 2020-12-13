@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __stosd'
 title: __stosd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56a29a27790f7f45a9fb3f0ace348759c0b1ff3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143713"
 ---
 # <a name="__stosd"></a>__stosd
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère une instruction de chaîne de`rep stosd`magasin ().
+Génère une instruction de chaîne de magasin ( `rep stosd` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +37,19 @@ void __stosd(
 *Destination*\
 à Destination de l’opération.
 
-*Métadonnée*\
+*Données*\
 dans Données à stocker.
 
 *Saut*\
 dans Longueur du bloc de mots doubles à écrire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -56,7 +57,7 @@ Le résultat est que les *données* de mot double sont écrites dans un bloc de 
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // stosd.c
@@ -85,7 +86,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

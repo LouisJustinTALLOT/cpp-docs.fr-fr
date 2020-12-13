@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CComObject, classe'
 title: CComObject, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 81246ad8bd6281d0b7578932cd431609a1ec4ac5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 086383172d5bb239bbac8ed90e9118838aea1254
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146521"
 ---
 # <a name="ccomobject-class"></a>CComObject, classe
 
@@ -55,7 +56,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 ## <a name="remarks"></a>Notes
 
-`CComObject`implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégé. Toutefois, les appels à `QueryInterface` , `AddRef` et `Release` sont délégués à `CComObjectRootEx` .
+`CComObject` implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégé. Toutefois, les appels à `QueryInterface` , `AddRef` et `Release` sont délégués à `CComObjectRootEx` .
 
 Pour plus d’informations sur l’utilisation `CComObject` de, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).
 
@@ -69,7 +70,7 @@ Pour plus d’informations sur l’utilisation `CComObject` de, consultez l’ar
 
 **En-tête :** atlcom. h
 
-## <a name="ccomobjectaddref"></a><a name="addref"></a>CComObject :: AddRef
+## <a name="ccomobjectaddref"></a><a name="addref"></a> CComObject :: AddRef
 
 Incrémente le décompte de références sur l’objet.
 
@@ -77,11 +78,11 @@ Incrémente le décompte de références sur l’objet.
 STDMETHOD_(ULONG, AddRef)();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette fonction retourne le nouveau nombre de références incrémentées sur l’objet. Cette valeur peut être utile pour les diagnostics ou les tests.
 
-## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject :: CComObject
+## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a> CComObject :: CComObject
 
 Le constructeur incrémente le nombre de verrous de module.
 
@@ -100,7 +101,7 @@ Le destructeur le décrémente.
 
 Si un `CComObject` objet dérivé de est correctement construit à l’aide de l' **`new`** opérateur, le nombre de références initiales est 0. Pour définir le décompte de références à la valeur appropriée (1), effectuez un appel à la fonction [AddRef](#addref) .
 
-## <a name="ccomobjectccomobject"></a><a name="dtor"></a>CComObject :: ~ CComObject
+## <a name="ccomobjectccomobject"></a><a name="dtor"></a> CComObject :: ~ CComObject
 
 Destructeur.
 
@@ -112,7 +113,7 @@ CComObject();
 
 Libère toutes les ressources allouées, appelle [FinalRelease](ccomobjectrootex-class.md#finalrelease)et décrémente le nombre de verrous de module.
 
-## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject :: CreateInstance
+## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a> CComObject :: CreateInstance
 
 Cette fonction statique vous permet de créer un nouvel objet **CComObject<** `Base` **>** , sans la surcharge de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
@@ -125,7 +126,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 *p*<br/>
 à Pointeur vers un pointeur de **<CComObject** `Base` **>** . En cas d' `CreateInstance` échec, *pp* a la valeur null.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -141,7 +142,7 @@ Si vous n’avez pas besoin d’un accès direct à l’objet, mais que vous sou
 
 [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]
 
-## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject :: QueryInterface
+## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a> CComObject :: QueryInterface
 
 Récupère un pointeur vers l'interface demandée.
 
@@ -162,11 +163,11 @@ dans Identificateur de l’interface demandée.
 *p*<br/>
 à Pointeur vers le pointeur d’interface identifié par le type `Q` . Si l’objet ne prend pas en charge cette interface, *pp* a la valeur null.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
-## <a name="ccomobjectrelease"></a><a name="release"></a>CComObject :: Release
+## <a name="ccomobjectrelease"></a><a name="release"></a> CComObject :: Release
 
 Décrémente le décompte de références sur l’objet.
 
@@ -174,7 +175,7 @@ Décrémente le décompte de références sur l’objet.
 STDMETHOD_(ULONG, Release)();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette fonction retourne le nouveau décompte de références décrémenté sur l’objet. Dans les versions Debug, la valeur de retour peut être utile pour les diagnostics ou les tests. Dans les versions sans débogage, `Release` retourne toujours 0.
 

@@ -1,122 +1,123 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : mise à jour de l’application Scribble MFC (partie 2)'
 title: "Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: bc204a152168accf3731eede8ca9ef960ab121d2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2520ac8fc1c66a2fc388738d22f4851547b6d03b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142959"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 
-[La partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas a montré comment ajouter un ruban de bureau couramment à l’application classique Scribble. Cette partie montre comment ajouter des panneaux de ruban et des contrôles que les utilisateurs peuvent utiliser au lieu de menus et de commandes.
+La [première partie](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas a montré comment ajouter un ruban Office Fluent à l’application Scribble classique. Cette partie montre comment ajouter des panneaux et des contrôles de ruban que les utilisateurs peuvent utiliser à la place des menus et des commandes.
 
 ## <a name="prerequisites"></a>Prérequis
 
 [Exemples Visual C++](../overview/visual-cpp-samples.md)
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
-Cette partie de la procédure pas à pas a les sections suivantes:
+Cette partie de la procédure pas à pas contient les sections suivantes :
 
 - [Ajout de nouveaux panneaux au ruban](#addnewpanel)
 
 - [Ajout d’un panneau d’aide au ruban](#addhelppanel)
 
-- [Ajout d’un panneau de stylo au ruban](#addpenpanel)
+- [Ajout d’un panneau de stylet au ruban](#addpenpanel)
 
-- [Ajout d’un bouton couleur au ruban](#addcolorbutton)
+- [Ajout d’un bouton de couleur au ruban](#addcolorbutton)
 
-- [Ajout d’un membre couleur à la classe de documents](#addcolormember)
+- [Ajout d’un membre Color à la classe document](#addcolormember)
 
-- [Initialiser les stylos et les préférences d’épargne](#initpensave)
+- [Initialisation des stylets et enregistrement des préférences](#initpensave)
 
-## <a name="adding-new-panels-to-the-ribbon"></a><a name="addnewpanel"></a>Ajout de nouveaux panneaux au ruban
+## <a name="adding-new-panels-to-the-ribbon"></a><a name="addnewpanel"></a> Ajout de nouveaux panneaux au ruban
 
-Ces étapes montrent comment ajouter un panneau **De vue** qui contient deux cases à cocher qui contrôlent la visibilité de la barre d’outils et de la barre d’état, ainsi qu’un panneau **de fenêtre** qui contient un bouton split orienté verticalement qui contrôle la création et l’arrangement des fenêtres à interface multi-documents (MDI).
+Ces étapes montrent comment ajouter un panneau d' **affichage** qui contient deux cases à cocher qui contrôlent la visibilité de la barre d’outils et de la barre d’État, ainsi qu’un panneau de **fenêtre** qui contient un bouton partagé orienté verticalement qui contrôle la création et la configuration de fenêtres d’interface multidocument (MDI, multiple-document interface).
 
-### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Pour ajouter un panneau de vue et un panneau de fenêtre à la barre de ruban
+### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Pour ajouter un panneau d’affichage et un panneau de fenêtre à la barre du ruban
 
-1. Créez un `View`panneau nommé , qui dispose de deux cases à cocher qui basculent la barre d’état et la barre d’outils.
+1. Créez un panneau nommé `View` , qui comporte deux cases à cocher qui basculent vers la barre d’État et la barre d’outils.
 
-   1. De la **boîte à outils,** faites glisser un **panneau** à la catégorie **Accueil.** Ensuite, faites glisser deux cases à **cocher** sur le panneau.
+   1. À partir de la **boîte à outils**, faites glisser un **panneau** vers la catégorie d' **hébergement** . Ensuite, faites glisser deux **cases à cocher** vers le panneau.
 
-   1. Cliquez sur le panneau pour modifier ses propriétés. Légende **Caption** de `View`changement pour .
+   1. Cliquez sur le panneau pour modifier ses propriétés. Remplacez **Caption** par `View` .
 
-   1. Cliquez sur la première case à cocher pour modifier ses propriétés. Modifier **ID** ID `ID_VIEW_TOOLBAR` et `Toolbar` **caption** à .
+   1. Activez la première case à cocher pour modifier ses propriétés. Remplacez l' **ID** par `ID_VIEW_TOOLBAR` et la **légende** par `Toolbar` .
 
-   1. Cliquez sur la deuxième case à cocher pour modifier ses propriétés. Modifier **ID** ID `ID_VIEW_STATUS_BAR` et `Status Bar` **caption** à .
+   1. Activez la deuxième case à cocher pour modifier ses propriétés. Remplacez l' **ID** par `ID_VIEW_STATUS_BAR` et la **légende** par `Status Bar` .
 
-1. Créez un `Window` panneau nommé qui a un bouton split. Lorsqu’un utilisateur clique sur le bouton split, un menu raccourci affiche trois commandes déjà définies dans l’application Scribble.
+1. Créez un panneau nommé `Window` qui a un bouton partagé. Quand un utilisateur clique sur le bouton partagé, un menu contextuel affiche trois commandes qui sont déjà définies dans l’application Scribble.
 
-   1. De la **boîte à outils,** faites glisser un **panneau** à la catégorie **Accueil.** Ensuite, faites glisser un **bouton** sur le panneau.
+   1. À partir de la **boîte à outils**, faites glisser un **panneau** vers la catégorie d' **hébergement** . Ensuite, faites glisser un **bouton** sur le panneau.
 
-   1. Cliquez sur le panneau pour modifier ses propriétés. Légende **Caption** de `Window`changement pour .
+   1. Cliquez sur le panneau pour modifier ses propriétés. Remplacez **Caption** par `Window` .
 
-   1. Cliquez sur le bouton correspondant. Légende **Caption** de `Windows`changement `w`à , **Keys** to , `False`Large Image **Index** à `1`, et Split **Mode** à . Cliquez ensuite sur l’ellipsis (**...**) à côté **des éléments** de menu pour ouvrir la boîte de dialogue **De l’éditeur d’articles.**
+   1. Cliquez sur le bouton correspondant. Remplacez **Caption** par `Windows` , **Keys** to `w` , **large image index** par `1` et **mode fractionné** par `False` . Cliquez ensuite sur les points de suspension (**...**) en regard des **éléments de menu** pour ouvrir la boîte de dialogue **éditeur d’éléments** .
 
-   1. Cliquez **sur Ajouter** trois fois pour ajouter trois boutons.
+   1. Cliquez trois fois sur **Ajouter** pour ajouter trois boutons.
 
-   1. Cliquez sur le premier bouton, puis `ID_WINDOW_NEW`changer **caption** pour `New Window`, et **ID** à .
+   1. Cliquez sur le premier bouton, puis remplacez **Caption** par `New Window` et **ID** par `ID_WINDOW_NEW` .
 
-   1. Cliquez sur le deuxième bouton, puis `ID_WINDOW_CASCADE`changer **caption** pour `Cascade`, et **ID** à .
+   1. Cliquez sur le deuxième bouton, puis remplacez **Caption** par `Cascade` et **ID** par `ID_WINDOW_CASCADE` .
 
-   1. Cliquez sur le troisième bouton, puis `ID_WINDOW_TILE_HORZ`changer **caption** pour `Tile`, et **ID** à .
+   1. Cliquez sur le troisième bouton, puis remplacez **Caption** par `Tile` et **ID** par `ID_WINDOW_TILE_HORZ` .
 
-1. Enregistrer les modifications, puis construire et exécuter l’application. Les panneaux **De vue** et **de fenêtre** doivent être affichés. Cliquez sur les boutons pour confirmer qu’ils fonctionnent correctement.
+1. Enregistrez les modifications, puis générez et exécutez l’application. Les panneaux de **vue** et de **fenêtre** doivent être affichés. Cliquez sur les boutons pour confirmer qu’ils fonctionnent correctement.
 
-## <a name="adding-a-help-panel-to-the-ribbon"></a><a name="addhelppanel"></a>Ajout d’un panneau d’aide au ruban
+## <a name="adding-a-help-panel-to-the-ribbon"></a><a name="addhelppanel"></a> Ajout d’un panneau d’aide au ruban
 
-Maintenant, vous pouvez attribuer deux éléments de menu qui sont définis dans l’application Scribble aux boutons ruban qui sont nommés **Sujets d’aide** et **à propos de Scribble**. Les boutons sont ajoutés à un nouveau panneau nommé **Help**.
+À présent, vous pouvez assigner deux éléments de menu définis dans l’application Scribble aux boutons du ruban qui sont des **rubriques d’aide** nommées et **à propos de Scribble**. Les boutons sont ajoutés à un nouveau panneau nommé **aide**.
 
 ### <a name="to-add-a-help-panel"></a>Pour ajouter un panneau d’aide
 
-1. De la **boîte à outils,** faites glisser un **panneau** à la catégorie **Accueil.** Ensuite, faites glisser deux **boutons** sur le panneau.
+1. À partir de la **boîte à outils**, faites glisser un **panneau** vers la catégorie d' **hébergement** . Ensuite, faites glisser deux **boutons** sur le panneau.
 
-1. Cliquez sur le panneau pour modifier ses propriétés. Légende **Caption** de `Help`changement pour .
+1. Cliquez sur le panneau pour modifier ses propriétés. Remplacez **Caption** par `Help` .
 
-1. Cliquez sur le premier bouton. Légende **Caption** de `Help Topics`changement pour `ID_HELP_FINDER`, et **ID** à .
+1. Cliquez sur le premier bouton. Remplacez **Caption** par `Help Topics` et **ID** par `ID_HELP_FINDER` .
 
-1. Cliquez sur le deuxième bouton. Légende **Caption** de `About Scribble...`changement pour `ID_APP_ABOUT`, et **ID** à .
+1. Cliquez sur le deuxième bouton. Remplacez **Caption** par `About Scribble...` et **ID** par `ID_APP_ABOUT` .
 
-1. Enregistrer les modifications, puis construire et exécuter l’application. Un panneau **d’aide** qui contient deux boutons ruban doit être affiché.
+1. Enregistrez les modifications, puis générez et exécutez l’application. Un panneau **d’aide** qui contient deux boutons de ruban doit s’afficher.
 
    > [!IMPORTANT]
-   > Lorsque vous cliquez sur le bouton **Sujets d’aide,** l’application Scribble ouvre un fichier d’aide HTML compressé (.chm) nommé *your_project_name*.chm. Par conséquent, si votre projet n’est pas nommé Scribble, vous devez renommer le fichier d’aide à votre nom de projet.
+   > Lorsque vous cliquez sur le bouton **rubriques d’aide** , l’application Scribble ouvre un fichier d’aide HTML (. chm) compressé nommé *your_project_name*. chm. Par conséquent, si votre projet n’est pas nommé Scribble, vous devez renommer le fichier d’aide avec le nom de votre projet.
 
-## <a name="adding-a-pen-panel-to-the-ribbon"></a><a name="addpenpanel"></a>Ajout d’un panneau de stylo au ruban
+## <a name="adding-a-pen-panel-to-the-ribbon"></a><a name="addpenpanel"></a> Ajout d’un panneau de stylet au ruban
 
-Maintenant, ajoutez un panneau pour afficher les boutons qui contrôlent l’épaisseur et la couleur du stylo. Ce panneau contient une case à cocher qui bascule entre les stylos épais et minces. Sa fonctionnalité ressemble à celle de l’élément de menu **Thick Line** dans l’application Scribble.
+À présent, ajoutez un panneau pour afficher les boutons qui contrôlent l’épaisseur et la couleur du stylet. Ce panneau contient une case à cocher qui permet de basculer entre les plumes épaisses et fines. Sa fonctionnalité ressemble à celle de l’élément de menu **trait épais** dans l’application Scribble.
 
-L’application Scribble d’origine permet à l’utilisateur de sélectionner les largeurs de stylet à partir d’une boîte de dialogue qui apparaît lorsque l’utilisateur clique sur **les largeurs de stylo** sur le menu. Parce que la barre de ruban a amplement de place pour de nouveaux contrôles, vous pouvez remplacer la boîte de dialogue en utilisant deux boîtes combo sur le ruban. Une boîte combo ajuste la largeur du stylo mince et l’autre boîte combo ajuste la largeur du stylo épais.
+L’application Scribble d’origine permet à l’utilisateur de sélectionner des largeurs de stylet dans une boîte de dialogue qui s’affiche quand l’utilisateur clique sur la **largeur du stylet** dans le menu. Étant donné que la barre du ruban dispose de suffisamment d’espace pour les nouveaux contrôles, vous pouvez remplacer la boîte de dialogue à l’aide de deux zones de liste déroulante sur le ruban. Une zone de liste modifiable ajuste la largeur de la plume fine et l’autre zone de liste déroulante ajuste la largeur du stylet épais.
 
-#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Pour ajouter un panneau de stylo et des boîtes combo au ruban
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Pour ajouter un panneau de stylet et des zones de liste déroulante au ruban
 
-1. De la **boîte à outils,** faites glisser un **panneau** à la catégorie **Accueil.** Ensuite, faites glisser une **case à cocher** et deux **boîtes Combo** sur le panneau.
+1. À partir de la **boîte à outils**, faites glisser un **panneau** vers la catégorie d' **hébergement** . Ensuite, faites glisser une case **à cocher** et deux **zones de liste déroulante** vers le panneau.
 
-1. Cliquez sur le panneau pour modifier ses propriétés. Légende **Caption** de `Pen`changement pour .
+1. Cliquez sur le panneau pour modifier ses propriétés. Remplacez **Caption** par `Pen` .
 
-1. Cliquez sur la case à cocher. Légende **Caption** de `Use Thick`changement pour `ID_PEN_THICK_OR_THIN`, et **ID** à .
+1. Cliquez sur la case à cocher. Remplacez **Caption** par `Use Thick` et **ID** par `ID_PEN_THICK_OR_THIN` .
 
-1. Cliquez sur la première boîte combo. Légende **Caption** de `Thin Pen`changement `ID_PEN_THIN_WIDTH`à , **ID** `1;2;3;4;5;6;7;8;9;`à , `2` **Type** à `Drop List`, **Données** à , et **Texte** à .
+1. Cliquez sur la première zone de liste déroulante. Remplacez **Caption** par `Thin Pen` , **ID** `ID_PEN_THIN_WIDTH` , **type** `Drop List` , **Data** par `1;2;3;4;5;6;7;8;9;` et **Text** par `2` .
 
-1. Cliquez sur la deuxième boîte combo. Légende **Caption** de `Thick Pen`changement `ID_PEN_THICK_WIDTH`à , **ID** `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`à , `5` **Type** à `Drop List`, **Données** à , et **Texte** à .
+1. Cliquez sur la deuxième zone de liste déroulante. Remplacez **Caption** par `Thick Pen` , **ID** `ID_PEN_THICK_WIDTH` , **type** `Drop List` , **Data** par `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;` et **Text** par `5` .
 
-1. Les nouvelles boîtes combo ne correspondent pas à des éléments de menu existants, vous devez donc créer un élément de menu pour chaque option de stylo.
+1. Les nouvelles zones de liste modifiable ne correspondent à aucun élément de menu existant. vous devez donc créer un élément de menu pour chaque option de stylet.
 
-   1. Dans la fenêtre **Resource View,** ouvrez la ressource de menu **IDR_SCRIBBTYPE.**
+   1. Dans la fenêtre **affichage des ressources** , ouvrez la ressource de menu **IDR_SCRIBBTYPE** .
 
-   1. Cliquez sur **Stylo** pour ouvrir le menu stylo. Cliquez ensuite sur `Thi&n Pen`Type **Ici** et tapez .
+   1. Cliquez sur **stylet** pour ouvrir le menu du stylet. Cliquez ensuite sur **Tapez ici** et tapez `Thi&n Pen` .
 
-   1. Cliquez à droite sur le texte que vous avez tapé pour `ID_PEN_THIN_WIDTH`ouvrir la fenêtre **propriété,** puis changez la propriété ID à .
+   1. Cliquez avec le bouton droit sur le texte que vous avez tapé pour ouvrir la fenêtre **Propriétés** , puis remplacez la valeur de la propriété ID par `ID_PEN_THIN_WIDTH` .
 
-   1. Créez un gestionnaire d’événements pour chaque élément de menu de stylo. Cliquez à droite sur l’élément de menu **Thi&n Pen** que vous avez créé, puis cliquez sur Add Event **Handler**. Le **Wizard De gestionnaire d’événements** est affiché.
+   1. Créez un gestionnaire d’événements pour chaque élément de menu Pen. Cliquez avec le bouton droit sur l’élément de menu « **Thi&n PEN** » que vous avez créé, puis cliquez sur **Ajouter un gestionnaire d’événements**. L' **Assistant gestionnaire d’événements** s’affiche.
 
-   1. Dans la **case de la liste de classe** dans l’assistant, sélectionnez **CScribbleDoc,** puis cliquez sur **Ajouter et modifier**. La commande crée un `CScribbleDoc::OnPenThinWidth`gestionnaire d’événements nommé .
+   1. Dans la zone de **liste classe** de l’Assistant, sélectionnez **CScribbleDoc** , puis cliquez sur **Ajouter et modifier**. La commande crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThinWidth` .
 
    1. Ajoutez le code suivant à `CScribbleDoc::OnPenThinWidth`.
 
@@ -140,17 +141,17 @@ L’application Scribble d’origine permet à l’utilisateur de sélectionner 
         ReplacePen();
         ```
 
-1. Ensuite, créez un élément de menu et des gestionnaires d’événements pour le stylo épais.
+1. Ensuite, créez un élément de menu et des gestionnaires d’événements pour le stylet épais.
 
-   1. Dans la fenêtre **Resource View,** ouvrez la ressource de menu **IDR_SCRIBBTYPE.**
+   1. Dans la fenêtre **affichage des ressources** , ouvrez la ressource de menu **IDR_SCRIBBTYPE** .
 
-   1. Cliquez sur **Stylo** pour ouvrir le menu stylo. Cliquez ensuite sur `Thic&k Pen`Type **Ici** et tapez .
+   1. Cliquez sur **stylet** pour ouvrir le menu du stylet. Cliquez ensuite sur **Tapez ici** et tapez `Thic&k Pen` .
 
-   1. Cliquez à droite sur le texte que vous avez tapé pour afficher la fenêtre **propriété.** Modifier la propriété `ID_PEN_THICK_WIDTH`ID à .
+   1. Cliquez avec le bouton droit sur le texte que vous avez tapé pour afficher la fenêtre **Propriétés** . Remplacez la valeur de la propriété ID par `ID_PEN_THICK_WIDTH` .
 
-   1. Cliquez à droite sur l’élément du menu **Thick Pen** que vous avez créé, puis cliquez sur Ajouter **Event Handler**. Le **Wizard De gestionnaire d’événements** est affiché.
+   1. Cliquez avec le bouton droit sur l’élément de menu **stylet épais** que vous avez créé, puis cliquez sur **Ajouter un gestionnaire d’événements**. L' **Assistant gestionnaire d’événements** s’affiche.
 
-   1. Dans la **case de classe** de l’assistant, sélectionnez **CScribbleDoc,** puis cliquez sur **Ajouter et modifier**. La commande crée un `CScribbleDoc::OnPenThickWidth`gestionnaire d’événements nommé .
+   1. Dans la zone de **liste classe** de l’Assistant, sélectionnez **CScribbleDoc** , puis cliquez sur **Ajouter et modifier**. La commande crée un gestionnaire d’événements nommé `CScribbleDoc::OnPenThickWidth` .
 
    1. Ajoutez le code suivant à `CScribbleDoc::OnPenThickWidth`.
 
@@ -172,49 +173,49 @@ L’application Scribble d’origine permet à l’utilisateur de sélectionner 
         ReplacePen();
         ```
 
-1. Enregistrer les modifications, puis construire et exécuter l’application. De nouveaux boutons et boîtes combo doivent être affichés. Essayez d’utiliser différentes largeurs de stylo pour griffonner.
+1. Enregistrez les modifications, puis générez et exécutez l’application. De nouveaux boutons et zones de liste modifiable doivent s’afficher. Essayez d’utiliser différentes largeurs de stylet pour Scribbler.
 
-## <a name="adding-a-color-button-to-the-pen-panel"></a><a name="addcolorbutton"></a>Ajout d’un bouton couleur au panneau de stylo
+## <a name="adding-a-color-button-to-the-pen-panel"></a><a name="addcolorbutton"></a> Ajout d’un bouton de couleur au panneau du stylet
 
-Ensuite, ajoutez un objet [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) qui permet à l’utilisateur de griffonner en couleur.
+Ensuite, ajoutez un objet [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) qui permet à l’utilisateur de créer un griffonnage en couleur.
 
-### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur au panneau De stylo
+### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur au panneau du stylet
 
-1. Avant d’ajouter le bouton couleur, créez un élément de menu pour cela. Dans la fenêtre **Resource View,** ouvrez la ressource de menu **IDR_SCRIBBTYPE.** Cliquez sur l’élément du menu **Pen** pour ouvrir le menu du stylo. Cliquez ensuite sur `&Color`Type **Ici** et tapez . Cliquez à droite sur le texte que vous avez tapé pour afficher la fenêtre **propriété.** Modifiez l’ID en lui attribuant la valeur `ID_PEN_COLOR`.
+1. Avant d’ajouter le bouton de couleur, créez un élément de menu pour celui-ci. Dans la fenêtre **affichage des ressources** , ouvrez la ressource de menu **IDR_SCRIBBTYPE** . Cliquez sur l’élément de menu **stylet** pour ouvrir le menu stylet. Cliquez ensuite sur **Tapez ici** et tapez `&Color` . Cliquez avec le bouton droit sur le texte que vous avez tapé pour afficher la fenêtre **Propriétés** . Modifiez l’ID en lui attribuant la valeur `ID_PEN_COLOR`.
 
-1. Maintenant, ajoutez le bouton de couleur. De la **boîte à outils,** faites glisser un **bouton de couleur** au panneau de **stylo.**
+1. À présent, ajoutez le bouton Color. À partir de la **boîte à outils**, faites glisser un **bouton de couleur** vers le panneau du **stylet** .
 
-1. Cliquez sur le bouton couleur. Légende **Caption** de `Color`changement `ID_PEN_COLOR`à , **ID** à , `1` **Simple Look** to `True`, **Large Image Index** à , et Split **Mode** à `False`.
+1. Cliquez sur le bouton couleur. Remplacez **Caption** par `Color` , **ID** par `ID_PEN_COLOR` , **simple look** to `True` , **large image index** par `1` et **mode fractionné** par `False` .
 
-1. Enregistrer les modifications, puis construire et exécuter l’application. Le nouveau bouton couleur doit être affiché sur le panneau **De** stylo. Cependant, il ne peut pas être utilisé parce qu’il n’a pas encore un gestionnaire d’événements. Les prochaines étapes montrent comment ajouter un gestionnaire d’événements pour le bouton de couleur.
+1. Enregistrez les modifications, puis générez et exécutez l’application. Le bouton nouvelle couleur doit être affiché sur le panneau du **stylet** . Toutefois, il ne peut pas être utilisé, car il n’a pas encore de gestionnaire d’événements. Les étapes suivantes montrent comment ajouter un gestionnaire d’événements pour le bouton de couleur.
 
-## <a name="adding-a-color-member-to-the-document-class"></a><a name="addcolormember"></a>Ajout d’un membre couleur à la classe de documents
+## <a name="adding-a-color-member-to-the-document-class"></a><a name="addcolormember"></a> Ajout d’un membre Color à la classe document
 
-Parce que l’application originale Scribble n’a pas de stylos couleur, vous devez écrire une implémentation pour eux. Pour stocker la couleur du stylo du document, ajoutez `CscribbleDoc`un nouveau membre à la classe de documents, .
+Étant donné que l’application Scribble d’origine n’a pas de stylos de couleurs, vous devez écrire une implémentation pour ces dernières. Pour stocker la couleur du stylet du document, ajoutez un nouveau membre à la classe de document, `CscribbleDoc` .
 
-### <a name="to-add-a-color-member-to-the-document-class"></a>Pour ajouter un membre couleur à la classe de documents
+### <a name="to-add-a-color-member-to-the-document-class"></a>Pour ajouter un membre Color à la classe document
 
-1. Dans scribdoc.h, `CScribbleDoc` dans la `// Attributes` classe, trouver la section. Ajoutez les lignes de code suivantes `m_nThickWidth` après la définition du membre des données.
+1. Dans scribdoc. h, dans la `CScribbleDoc` classe, recherchez la `// Attributes` section. Ajoutez les lignes de code suivantes après la définition du `m_nThickWidth` membre de données.
 
    ```cpp
    // Current pen color
    COLORREF m_penColor;
    ```
 
-1. Chaque document contient une liste de stokes que l’utilisateur a déjà dessiné. Chaque course est `CStroke` définie par un objet. La `CStroke` classe n’inclut pas d’informations sur la couleur du stylo, vous devez donc modifier la classe. Dans scribdoc.h, `CStroke` dans la classe, ajouter les lignes `m_nPenWidth` de code suivantes après la définition du membre de données.
+1. Chaque document contient une liste de Stokes que l’utilisateur a déjà dessinés. Chaque trait est défini par un `CStroke` objet. La `CStroke` classe n’inclut pas d’informations sur la couleur du stylet. vous devez donc modifier la classe. Dans scribdoc. h, dans la `CStroke` classe, ajoutez les lignes de code suivantes après la définition du `m_nPenWidth` membre de données.
 
    ```cpp
    // Pen color for the stroke
    COLORREF m_penColor;
    ```
 
-1. Dans scribdoc.h, ajoutez `CStroke` un nouveau constructeur dont les paramètres spécifient une largeur et une couleur. Ajoutez la ligne de `CStroke(UINT nPenWidth);` code suivante après la déclaration.
+1. Dans scribdoc. h, ajoutez un nouveau `CStroke` constructeur dont les paramètres spécifient une largeur et une couleur. Ajoutez la ligne de code suivante après l' `CStroke(UINT nPenWidth);` instruction.
 
    ```cpp
    CStroke(UINT nPenWidth, COLORREF penColor);
    ```
 
-1. Dans scribdoc.cpp, ajoutez la `CStroke` mise en œuvre du nouveau constructeur. Ajoutez le code suivant après `CStroke::CStroke(UINT nPenWidth)` la mise en œuvre du constructeur.
+1. Dans scribdoc. cpp, ajoutez l’implémentation du nouveau `CStroke` constructeur. Ajoutez le code suivant après l’implémentation du `CStroke::CStroke(UINT nPenWidth)` constructeur.
 
    ```cpp
    // Constructor that uses the document's current width and color
@@ -226,40 +227,40 @@ Parce que l’application originale Scribble n’a pas de stylos couleur, vous d
    }
    ```
 
-1. Modifier la deuxième `CStroke::DrawStroke` ligne de la méthode comme suit.
+1. Modifiez la deuxième ligne de la `CStroke::DrawStroke` méthode comme suit.
 
    ```cpp
    if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))
    ```
 
-1. Définissez la couleur du stylo par défaut pour la classe de documents. Dans scribdoc.cpp, ajoutez les `CScribbleDoc::InitDocument`lignes `m_nThickWidth = 5;` suivantes à , après la déclaration.
+1. Définissez la couleur de plume par défaut pour la classe de document. Dans scribdoc. cpp, ajoutez les lignes suivantes à `CScribbleDoc::InitDocument` , après l' `m_nThickWidth = 5;` instruction.
 
    ```cpp
    // default pen color is black
    m_penColor = RGB(0, 0, 0);
    ```
 
-1. Dans scribdoc.cpp, changez la `CScribbleDoc::NewStroke` première ligne de la méthode en ce qui suit.
+1. Dans scribdoc. cpp, remplacez la première ligne de la `CScribbleDoc::NewStroke` méthode par la suivante.
 
    ```cpp
    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
    ```
 
-1. Changez la dernière `CScribbleDoc::ReplacePen` ligne de la méthode en ce qui suit.
+1. Remplacez la dernière ligne de la `CScribbleDoc::ReplacePen` méthode par la ligne suivante.
 
    ```cpp
    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);
    ```
 
-1. Vous avez `m_penColor` ajouté le membre dans une étape précédente. Maintenant, créez un gestionnaire d’événement pour le bouton de couleur qui définit le membre.
+1. Vous avez ajouté le `m_penColor` membre dans une étape précédente. À présent, créez un gestionnaire d’événements pour le bouton de couleur qui définit le membre.
 
-   1. Dans la fenêtre **Resource View,** ouvrez la ressource de menu IDR_SCRIBBTYPE.
+   1. Dans la fenêtre **affichage des ressources** , ouvrez la ressource de menu IDR_SCRIBBTYPE.
 
-   1. Cliquez à droite sur l’élément du menu **Couleur** et cliquez sur **Ajouter Event Handler**. Le **Magicien de gestionnaire d’événements** apparaît.
+   1. Cliquez avec le bouton droit sur l’élément de menu **couleur** , puis cliquez sur **Ajouter un gestionnaire d’événements**. L' **Assistant gestionnaire d’événements** s’affiche.
 
-   1. Dans la **case de la liste de classe** de l’assistant, sélectionnez **CScribbleDoc,** puis cliquez sur le bouton **Ajouter et modifier.** La commande `CScribbleDoc::OnPenColor` crée le talon de gestionnaire d’événement.
+   1. Dans la zone de **liste classe** de l’Assistant, sélectionnez **CScribbleDoc** , puis cliquez sur le bouton **Ajouter et modifier** . La commande crée le `CScribbleDoc::OnPenColor` stub du gestionnaire d’événements.
 
-1. Remplacez le talon `CScribbleDoc::OnPenColor` pour le gestionnaire de l’événement par le code suivant.
+1. Remplacez le stub du `CScribbleDoc::OnPenColor` Gestionnaire d’événements par le code suivant.
 
    ```cpp
    void CScribbleDoc::OnPenColor()
@@ -277,17 +278,17 @@ Parce que l’application originale Scribble n’a pas de stylos couleur, vous d
    }
    ```
 
-1. Enregistrer les modifications, puis construire et exécuter l’application. Vous pouvez maintenant appuyer sur le bouton de couleur et changer la couleur du stylo.
+1. Enregistrez les modifications, puis générez et exécutez l’application. Vous pouvez maintenant appuyer sur le bouton de couleur et modifier la couleur du stylet.
 
-## <a name="initializing-pens-and-saving-preferences"></a><a name="initpensave"></a>Initialiser les stylos et les préférences d’épargne
+## <a name="initializing-pens-and-saving-preferences"></a><a name="initpensave"></a> Initialisation des stylets et enregistrement des préférences
 
-Ensuite, initialiser la couleur et la largeur des stylos. Enfin, enregistrer et charger un dessin de couleur à partir d’un fichier.
+Ensuite, initialisez la couleur et la largeur des stylets. Enfin, enregistrez et chargez un dessin de couleur à partir d’un fichier.
 
-### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Pour initialiser les contrôles sur la barre de ruban
+### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Pour initialiser des contrôles sur la barre du ruban
 
-1. Initialiser les stylos sur la barre de ruban.
+1. Initialisez les stylets sur la barre du ruban.
 
-   Ajoutez le code suivant à scribdoc.cpp, dans la `CScribbleDoc::InitDocument` méthode, après la `m_sizeDoc = CSize(200,200)` déclaration.
+   Ajoutez le code suivant à scribdoc. cpp, dans la `CScribbleDoc::InitDocument` méthode, après l' `m_sizeDoc = CSize(200,200)` instruction.
 
    ```cpp
    // Reset the ribbon UI to its initial values
@@ -317,25 +318,25 @@ Ensuite, initialiser la couleur et la largeur des stylos. Enfin, enregistrer et 
    pThickComboBox->SelectItem(0);
    ```
 
-1. Enregistrez un dessin de couleur sur un fichier. Ajoutez la déclaration suivante à scribdoc.cpp, dans la `CStroke::Serialize` méthode, après la `ar << (WORD)m_nPenWidth;` déclaration.
+1. Enregistrer un dessin en couleur dans un fichier. Ajoutez l’instruction suivante à scribdoc. cpp, dans la `CStroke::Serialize` méthode, après l' `ar << (WORD)m_nPenWidth;` instruction.
 
    ```cpp
    ar << (COLORREF)m_penColor;
    ```
 
-1. Enfin, chargez un dessin de couleur à partir d’un fichier. Ajoutez la ligne de code `CStroke::Serialize` suivante, `m_nPenWidth = w;` dans la méthode, après la déclaration.
+1. Enfin, chargez un dessin de couleur à partir d’un fichier. Ajoutez la ligne de code suivante, dans la `CStroke::Serialize` méthode, après l' `m_nPenWidth = w;` instruction.
 
    ```cpp
    ar >> m_penColor;
    ```
 
-1. Maintenant griffonner de couleur et enregistrer votre dessin à un fichier.
+1. À présent, dessinez en couleur et enregistrez votre dessin dans un fichier.
 
 ## <a name="conclusion"></a>Conclusion
 
-Vous avez mis à jour l’application MFC Scribble. Utilisez cette procédure pas à pas comme guide lorsque vous modifiez vos applications existantes.
+Vous avez mis à jour l’application Scribble MFC. Utilisez cette procédure pas à pas comme guide lorsque vous modifiez vos applications existantes.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
-[Procédure pas à pas : mise à jour de l’application Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
+[Procédure pas à pas : mise à jour de l’application Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

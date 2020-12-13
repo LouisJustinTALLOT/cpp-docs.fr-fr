@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wctomb_s, _wctomb_s_l'
 title: wctomb_s, _wctomb_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 845bdd5fff74e24226700b1f233ccf1e29afc27e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136823"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -75,13 +76,13 @@ Adresse d’un caractère multioctet.
 *sizeInBytes*<br/>
 Taille de la mémoire tampon *mbchar*.
 
-*WCHAR*<br/>
+*wchar*<br/>
 Caractère large.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
@@ -89,13 +90,13 @@ Conditions d'erreur
 
 |*mbchar*|*sizeInBytes*|Valeur retournée|*prétvalue*|
 |--------------|-------------------|------------------|-----------------|
-|**NUL**|>0|**EINVAL**|non modifié|
+|**NULL**|>0|**EINVAL**|non modifié|
 |n'importe laquelle|>**INT_MAX**|**EINVAL**|non modifié|
 |n'importe laquelle|trop petit|**EINVAL**|non modifié|
 
 Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **wctomb** retourne **EINVAL** et définit **errno** sur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **wctomb_s** convertit son argument *WCHAR* en caractère multioctet correspondant et stocke le résultat dans *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
 
@@ -114,7 +115,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme illustre le comportement de la fonction **wctomb** .
 

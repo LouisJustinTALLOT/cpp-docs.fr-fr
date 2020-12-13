@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2259'
 title: Erreur du compilateur C2259
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 640349f5870cd818019029c7f04db3e33a068ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134691"
 ---
 # <a name="compiler-error-c2259"></a>Erreur du compilateur C2259
 
@@ -50,7 +51,7 @@ Il existe deux solutions possibles pour le problème :
 
 - Utilisez l’opérateur de résolution de portée pour les méthodes d’interface implémentées dans la classe dérivée pour qualifier le nom de la méthode implémentée avec le nom de l’interface.
 
-C2259 peut également se produire en raison du travail de conformité effectué dans Visual Studio 2005, **/Zc : wchar_t** est désormais activé par défaut. Dans ce cas, C2599 peut être résolu en compilant avec **/Zc : wchar_t-** , pour connaître le comportement des versions précédentes, ou de préférence, en mettant à jour vos types de manière à ce qu’ils soient compatibles. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 peut également se produire en raison du travail de conformité effectué dans Visual Studio 2005, **/Zc : wchar_t** est désormais activé par défaut. Dans ce cas, C2599 peut être résolu en compilant avec **/Zc : wchar_t-**, pour connaître le comportement des versions précédentes, ou de préférence, en mettant à jour vos types de manière à ce qu’ils soient compatibles. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 L’exemple suivant génère l’C2259 :
 

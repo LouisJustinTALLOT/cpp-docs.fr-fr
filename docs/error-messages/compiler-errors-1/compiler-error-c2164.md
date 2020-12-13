@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2164'
 title: Erreur du compilateur C2164
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2164
 ms.assetid: 55df5024-68a8-45a8-ae6c-e6dba35318a2
-ms.openlocfilehash: 74c4f0e24f21f21d7a7015a20cb0e27ac635c467
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9afe0809075f83c77ffae2ef77bc72c9e0f194e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145512"
 ---
 # <a name="compiler-error-c2164"></a>Erreur du compilateur C2164
 
 'fonction' : fonction intrinsèque non déclarée
 
-Un pragma `intrinsic` utilise une fonction non déclarée (se produit uniquement avec **/OI**). Ou bien, l’une des intrinsèques du compilateur a été utilisée sans inclure son fichier d’en-tête.
+Un `intrinsic` pragma utilise une fonction non déclarée (se produit uniquement avec **/OI**). Ou bien, l’une des intrinsèques du compilateur a été utilisée sans inclure son fichier d’en-tête.
 
 L’exemple suivant génère l’C2164 :
 

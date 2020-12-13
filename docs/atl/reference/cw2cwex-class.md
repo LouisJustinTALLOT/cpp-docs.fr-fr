@@ -1,5 +1,6 @@
 ---
-title: Classe CW2CWEX
+description: 'En savoir plus sur : classe CW2CWEX'
+title: CW2CWEX, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CW2CWEX
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: 07dd0319586054403d8ed0c8efc813b4061e355a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 769dcedf1a9dc15129b09e3305330de33242562e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330433"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140229"
 ---
-# <a name="cw2cwex-class"></a>Classe CW2CWEX
+# <a name="cw2cwex-class"></a>CW2CWEX, classe
 
-Cette classe est utilisée par les macros de conversion des cordes CW2CTEX et CT2CWEX, et le Dactylo CW2W.
+Cette classe est utilisée par les macros de conversion de chaînes CW2CTEX et CT2CWEX, ainsi que par le CW2W typedef.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -33,7 +34,7 @@ class CW2CWEX
 #### <a name="parameters"></a>Paramètres
 
 *t_nBufferLength*<br/>
-La taille du tampon utilisé dans le processus de traduction. La longueur par défaut est de 128 octets.
+Taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est de 128 octets.
 
 ## <a name="members"></a>Membres
 
@@ -42,47 +43,47 @@ La taille du tampon utilisé dans le processus de traduction. La longueur par d�
 |Nom|Description|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|Constructeur.|
-|[CW2CWEX: :CW2CWEX](#dtor)|Destructeur.|
+|[CW2CWEX :: ~ CW2CWEX](#dtor)|Destructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CW2CWEX::opérateur LPCWSTR](#operator_lpcwstr)|Opérateur de conversion.|
+|[CW2CWEX :: Operator LPCWSTR](#operator_lpcwstr)|Opérateur de conversion.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CW2CWEX::m_psz](#m_psz)|Le membre des données qui stocke la chaîne source.|
+|[CW2CWEX :: m_psz](#m_psz)|Membre de données qui stocke la chaîne source.|
 
 ## <a name="remarks"></a>Notes
 
 À moins que des fonctionnalités supplémentaires ne soient requises, utilisez CW2CTEX, CT2CWEX ou CW2W dans votre code.
 
-Cette classe est sûre à utiliser en boucles et ne débordera pas la pile. Par défaut, les classes de conversion ET les macros ATL utilisent la page de code ANSI du thread actuel pour la conversion.
+Cette classe peut être utilisée en toute sécurité dans les boucles et ne débordera pas la pile. Par défaut, les macros et les classes de conversion ATL utilisent la page de codes ANSI du thread actuel pour la conversion.
 
-Les macros suivantes sont basées sur cette classe :
+Les macros suivantes sont basées sur cette classe :
 
 - CW2CTEX
 
 - CT2CWEX
 
-Le tapdef suivant est basé sur cette classe :
+Le typedef suivant est basé sur cette classe :
 
 - CW2W
 
-Pour une discussion de ces macros de conversion de texte, voir [ATL et MFC String Conversion Macros](string-conversion-macros.md).
+Pour plus d’informations sur ces macros de conversion de texte, consultez [macros de conversion de chaînes ATL et MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemple
 
-Voir [les macros de conversion des cordes ATL et MFC](string-conversion-macros.md) par exemple en utilisant ces macros de conversion de cordes.
+Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes [, consultez macros de conversion de chaînes ATL et MFC](string-conversion-macros.md) .
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlconv.h
+**En-tête :** atlconv. h
 
-## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a> CW2CWEX::CW2CWEX
 
 Constructeur.
 
@@ -93,17 +94,17 @@ CW2CWEX(LPCWSTR psz) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*Zsp*<br/>
-La chaîne de texte à convertir.
+*psz*<br/>
+Chaîne de texte à convertir.
 
 *nCodePage*<br/>
-Page de codes. Pas utilisé dans cette classe.
+Page de codes. Non utilisé dans cette classe.
 
 ### <a name="remarks"></a>Notes
 
-Alloue le tampon utilisé dans le processus de traduction.
+Alloue la mémoire tampon utilisée dans le processus de traduction.
 
-## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX: :CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a> CW2CWEX :: ~ CW2CWEX
 
 Destructeur.
 
@@ -113,17 +114,17 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère le tampon alloué.
+Libère la mémoire tampon allouée.
 
-## <a name="cw2cwexm_psz"></a><a name="m_psz"></a>CW2CWEX::m_psz
+## <a name="cw2cwexm_psz"></a><a name="m_psz"></a> CW2CWEX :: m_psz
 
-Le membre des données qui stocke la chaîne source.
+Membre de données qui stocke la chaîne source.
 
 ```
 LPCWSTR m_psz;
 ```
 
-## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::opérateur LPCWSTR
+## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a> CW2CWEX :: Operator LPCWSTR
 
 Opérateur de conversion.
 
@@ -131,15 +132,15 @@ Opérateur de conversion.
 operator LPCWSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne la chaîne de texte comme type LPCWSTR.
+Retourne la chaîne de texte en tant que type LPCWSTR.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
-[Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
-[Classe CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
-[Classe CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
-[Classe CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
+[CA2AEX, classe](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX, classe](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX, classe](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX, classe](../../atl/reference/cw2aex-class.md)<br/>
+[CW2WEX, classe](../../atl/reference/cw2wex-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

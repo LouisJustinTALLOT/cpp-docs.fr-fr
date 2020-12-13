@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur :. IF (MASM 32 bits)
 title: .IF
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: 6992ec8b151a83b3f9fa920997845c20caf0476d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: e6ce9695f90a90665aee1cdaf15167963360fe04
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131675"
 ---
 # <a name="if-32-bit-masm"></a>. IF (MASM 32 bits)
 
@@ -20,12 +21,12 @@ Génère du code qui teste l’erreur *condition1* (par exemple, ax > 7) et exé
 ## <a name="syntax"></a>Syntaxe
 
 > **. Si** *condition1*\
-> *instructions*\
-> ⟦ **. ELSEIF** *condition2*\
+> *publication*\
+> ⟦**. ELSEIF** *condition2*\
 > *instructions*⟧ \
-> ⟦ **. SINON**\
+> ⟦**. SINON**\
 > *instructions*⟧ \
-> **.ENDIF**
+> **. ENDIF**
 
 ## <a name="remarks"></a>Notes
 
@@ -33,5 +34,5 @@ Si un [. SINON](dot-else.md) , ses instructions sont exécutées si la condition
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

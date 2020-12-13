@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _spawnv, _wspawnv'
 title: _spawnv, _wspawnv
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: ffed211fffc7b994fa04fde7210339b9355197fe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b934929f857694b4e26223a0579d52be3f0ccb68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146365"
 ---
 # <a name="_spawnv-_wspawnv"></a>_spawnv, _wspawnv
 
@@ -94,11 +95,11 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [_do
 
 Chacune de ces fonctions crée et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.
 
-Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur null, si *argv* pointe vers un pointeur null ou si *argv*[0] est une chaîne vide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL**et retournent-1. Aucun nouveau processus généré.
+Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur null, si *argv* pointe vers un pointeur null ou si *argv*[0] est une chaîne vide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun nouveau processus généré.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

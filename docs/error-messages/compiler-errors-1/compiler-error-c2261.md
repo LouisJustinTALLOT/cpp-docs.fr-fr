@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2261'
 title: Erreur du compilateur C2261
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5156a240696f9021613b54cf7013e9372a13b45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134613"
 ---
 # <a name="compiler-error-c2261"></a>Erreur du compilateur C2261
 
@@ -19,9 +20,9 @@ ms.locfileid: "74758773"
 
 Une valeur n’est pas valide.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> est utilisé pour spécifier un assembly friend. Par exemple, si un fichier. dll souhaite spécifier b. dll comme assembly friend, vous devez spécifier (dans un fichier. dll) : InternalsVisibleTo ("b"). Le runtime permet ensuite à b. dll d’accéder à tous les éléments d’un fichier. dll (à l’exception des types privés).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> est utilisé pour spécifier un assembly friend. Par exemple, si a.dll souhaite spécifier b.dll comme assembly friend, vous devez spécifier (dans a.dll) : InternalsVisibleTo ("b"). Le runtime permet ensuite à b.dll d’accéder à tout ce qui se trouve dans a.dll (à l’exception des types privés).
 
-Pour plus d’informations sur la syntaxe correcte lors de la spécification d’assemblys friend, consultez [Friend AssembliesC++()](../../dotnet/friend-assemblies-cpp.md).
+Pour plus d’informations sur la syntaxe correcte lors de la spécification d’assemblys friend, consultez [assemblys friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Exemple
 

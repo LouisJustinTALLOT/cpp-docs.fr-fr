@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wcstombs, _wcstombs_l'
 title: wcstombs, _wcstombs_l
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 070ba4dbf574ccd6b1afaec074dc9eb9f311e728
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136836"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -90,11 +91,11 @@ Nombre maximal d’octets pouvant être stockés dans la chaîne de sortie multi
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si **wcstombs** convertit correctement la chaîne multioctets, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion de la valeur null de fin (le cas échéant). Si l’argument *mbstr* a la **valeur null**, **wcstombs** retourne la taille requise en octets de la chaîne de destination. Si **wcstombs** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, elle retourne-1 cast en type **size_t** et définit **errno** sur **EILSEQ**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **wcstombs** convertit la chaîne de caractères larges pointée par *wcstr* en caractères multioctets correspondants et stocke les résultats dans le tableau *mbstr* . Le paramètre *Count* indique le nombre maximal d’octets qui peuvent être stockés dans la chaîne de sortie multioctet (autrement dit, la taille de *mbstr*). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. S’il y a deux octets dans la chaîne de sortie multioctet pour chaque caractère élargi dans la chaîne d’entrée (y compris le caractère de largeur null), le résultat est garanti.
 
@@ -119,7 +120,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme illustre le comportement de la fonction **wcstombs** .
 

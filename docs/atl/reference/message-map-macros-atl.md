@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros de table des messages (ATL)'
 title: Macros de table des messages (ATL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -37,12 +38,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 9917f31dbb115552cf9dc9bde24f7b6921611750
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5efe2a6b5aaeb2fbbf3cb5b54ce376ebf00c3b75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139072"
 ---
 # <a name="message-map-macros-atl"></a>Macros de table des messages (ATL)
 
@@ -85,7 +86,7 @@ Ces macros définissent les entrées et les tables des messages.
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mappe un message de WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction du code de notification et d’une plage contiguë d’identificateurs de contrôle.|
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mappe un message de WM_NOTIFY réfléchi à une fonction de gestionnaire, en fonction d’une plage contiguë d’identificateurs de contrôle.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -124,7 +125,7 @@ L’exemple suivant montre deux tables de messages de remplacement. La table des
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -203,7 +204,7 @@ La macro [END_MSG_MAP](#end_msg_map) marque la fin de la table des messages. Not
 
 Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -232,7 +233,7 @@ CHAIN_MSG_MAP_ALT dirige les messages vers une autre table des messages dans une
 
 Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -261,7 +262,7 @@ CHAIN_MSG_MAP_ALT_MEMBER dirige les messages vers une autre table des messages d
 
 Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -299,7 +300,7 @@ Cet exemple illustre les éléments suivants :
 
 - Si une procédure de fenêtre utilise une `CMyClass` deuxième table des messages de remplacement et `OnChar` ne gère pas de message, le message est dirigé vers la table des messages alternatifs spécifiée dans `CMyBaseClass` . `CMyBaseClass` doit avoir déclaré cette table des messages avec ALT_MSG_MAP (1).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -325,7 +326,7 @@ CHAIN_MSG_MAP_DYNAMIC dirige les messages au moment de l’exécution vers la ta
 
 Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -363,7 +364,7 @@ Cet exemple illustre les éléments suivants :
 
 - Si une procédure de fenêtre utilise une `CMyClass` deuxième table des messages de remplacement et `OnChar` ne gère pas de message, le message est dirigé vers l’autre table des messages spécifiée `m_obj` . `CMyContainedClass`La classe doit avoir déclaré cette table des messages avec ALT_MSG_MAP (1).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -383,7 +384,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -425,7 +426,7 @@ En plus de COMMAND_HANDLER, vous pouvez utiliser [MESSAGE_HANDLER](#message_hand
 
 Pour plus d’informations sur l’utilisation des tables de messages dans ATL, consultez [tables des messages](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -445,7 +446,7 @@ dans Identificateur de l’élément de menu, du contrôle ou de l’accélérat
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -475,7 +476,7 @@ dans Nom de la fonction de gestionnaire de messages.
 
 Cette plage est basée sur l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur qui envoie le message.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -502,7 +503,7 @@ dans Nom de la fonction de gestionnaire de messages.
 
 Cette plage est basée sur l’identificateur de l’élément de menu, du contrôle ou de l’accélérateur qui envoie le message.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -528,7 +529,7 @@ Fournit un gestionnaire par défaut pour la fenêtre enfant (contrôle) qui rece
 DEFAULT_REFLECTION_HANDLER()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -558,7 +559,7 @@ L’exemple suivant montre deux tables de messages de remplacement. La table des
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -574,7 +575,7 @@ FORWARD_NOTIFICATIONS()
 
 Spécifiez cette macro dans le cadre de votre table des messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -615,7 +616,7 @@ Pour plus d’informations sur l’utilisation des tables de messages dans ATL, 
 
 [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -638,7 +639,7 @@ dans Marque la fin d’une plage de messages contiguë.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -658,7 +659,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -702,7 +703,7 @@ Pour plus d’informations sur l’utilisation des tables de messages dans ATL, 
 
 [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -722,7 +723,7 @@ dans Identificateur du contrôle qui envoie le message.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -752,7 +753,7 @@ dans Nom de la fonction de gestionnaire de messages.
 
 Cette plage est basée sur l’identificateur du contrôle qui envoie le message.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -779,7 +780,7 @@ dans Nom de la fonction de gestionnaire de messages.
 
 Cette plage est basée sur l’identificateur du contrôle qui envoie le message.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -795,7 +796,7 @@ REFLECT_NOTIFICATIONS()
 
 Spécifiez cette macro dans le cadre de la table des messages de la fenêtre parente.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -815,7 +816,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -838,7 +839,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -858,7 +859,7 @@ dans Identificateur de l’élément de menu, du contrôle ou de l’accélérat
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -884,7 +885,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -907,7 +908,7 @@ dans Marque la fin d’une plage contiguë d’identificateurs de contrôle.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -927,7 +928,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -950,7 +951,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -970,7 +971,7 @@ dans Identificateur de l’élément de menu, du contrôle ou de l’accélérat
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -996,7 +997,7 @@ dans Code de notification.
 *func*<br/>
 dans Nom de la fonction de gestionnaire de messages.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 

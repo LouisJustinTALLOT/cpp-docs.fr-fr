@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _setmode'
 title: _setmode
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 305e9a247410d762821ed0e3e004505adc1a4034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146378"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -59,7 +60,7 @@ Descripteur de fichier.
 *mode*<br/>
 Nouveau mode de traduction.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne le mode de traduction précédent.
 
@@ -71,7 +72,7 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [_do
 
 La fonction **_setmode** *définit le mode de traduction du fichier* donné par *FD*. Le passage de **_O_TEXT** en *mode* définit le mode texte (autrement dit, traduit). Les combinaisons retour chariot-saut de ligne sont traduites en un seul caractère de saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. Le passage de **_O_BINARY** définit le mode binaire (non traduit), dans lequel ces traductions sont supprimées.
 
-Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document.
+Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT** ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document.
 
 > [!CAUTION]
 > Le mode Unicode est destiné aux fonctions d’impression larges (par exemple, `wprintf` ) et n’est pas pris en charge pour les fonctions d’impression étroite. L’utilisation d’une fonction d’impression étroite sur un flux en mode Unicode déclenche une assertion.
@@ -83,7 +84,7 @@ Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** pour 
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l'
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abf09a7a96fc1df9f34f3263638c68da4f9991d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146443"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -85,17 +86,17 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère multioctet à convertir.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le caractère converti *c*, si possible. Dans le cas contraire, elle retourne le caractère *c* inchangé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions testent un caractère *c* et, si possible, appliquent l’une des conversions suivantes.
 
@@ -106,7 +107,7 @@ Les fonctions testent un caractère *c* et, si possible, appliquent l’une des 
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le suffixe **_L** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbctolower** était appelée **jtolower**et **_mbctoupper** était appelée **jtoupper**. Pour le nouveau code, utilisez les nouveaux noms à la place.
+Dans les versions précédentes, **_mbctolower** était appelée **jtolower** et **_mbctoupper** était appelée **jtoupper**. Pour le nouveau code, utilisez les nouveaux noms à la place.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2993'
 title: Erreur du compilateur C2993
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-ms.openlocfilehash: 5aa0d27b2d469f53ec521f587172398b7d4c2d1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2c43d4f3e54378d419f1945b1f6b38e9ee4d9758
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136420"
 ---
 # <a name="compiler-error-c2993"></a>Erreur du compilateur C2993
 
@@ -36,9 +37,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-Cette erreur est également générée en raison du travail de mise en conformité du compilateur effectué dans Visual Studio .NET 2003 : les paramètres de modèle sans type à virgule flottante ne sont plus autorisés. La C++ norme n’autorise pas les paramètres de modèle sans type à virgule flottante.
+Cette erreur est également générée en raison du travail de mise en conformité du compilateur effectué dans Visual Studio .NET 2003 : les paramètres de modèle sans type à virgule flottante ne sont plus autorisés. La norme C++ n’autorise pas les paramètres de modèle sans type à virgule flottante.
 
-S’il s’agit d’un modèle de fonction, utilisez un argument de fonction pour passer le paramètre de modèle sans type à virgule flottante (ce code sera valide dans les versions Visual Studio .NET 2003 et Visual C++Studio .net de Visual). S’il s’agit d’un modèle de classe, il n’existe pas de solution de contournement facile.
+S’il s’agit d’un modèle de fonction, utilisez un argument de fonction pour passer le paramètre de modèle sans type à virgule flottante (ce code sera valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++). S’il s’agit d’un modèle de classe, il n’existe pas de solution de contournement facile.
 
 ```cpp
 // C2993b.cpp

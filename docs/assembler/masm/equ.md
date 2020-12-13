@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : EQU'
 title: EQU
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EQU directive
 ms.assetid: 96db466a-1eab-45bd-a3c2-5a59bd754eab
-ms.openlocfilehash: f409110e665edc590383c438f12cc8b13084bc22
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b62816d0d7d8890b3800db70c17997766bdcfd41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130466"
 ---
 # <a name="equ"></a>EQU
 
@@ -21,7 +22,7 @@ La première directive assigne la valeur numérique de l' *expression* à *Name*
 
 > *nom* de l' *expression* **Equ**
 >
-> *Name* **EQU** __\<__ *texte* __>__
+> *nom* **Equ**__\<__*text*__>__
 
 ## <a name="remarks"></a>Notes
 
@@ -31,5 +32,5 @@ La deuxième directive assigne le *texte* spécifié à *Name*. Le *nom* peut ê
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)
