@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : COleVariant, classe'
 title: COleVariant, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 63bce4695e4e1142b797f24cfbbae71638177d04
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: dcf59fe1d9f67ce47a1a8587209649f56147a9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470899"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331398"
 ---
 # <a name="colevariant-class"></a>COleVariant, classe
 
 Encapsule le type de données [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 class COleVariant : public tagVARIANT
@@ -66,7 +67,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant :: Operator = =](#operator_eq_eq)|Compare deux `COleVariant` valeurs.|
 |[COleVariant :: Operator &lt; &lt; ,&gt;&gt;](#operator_lt_lt__gt_gt)|Renvoie une `COleVariant` valeur à `CArchive` ou `CDumpContext` et les entrées `COleVariant` d’un objet à partir de `CArchive` .|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ce type de données est utilisé dans OLE Automation. Plus précisément, la structure [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contient un pointeur vers un tableau de structures de type Variant. Une `DISPPARAMS` structure est utilisée pour passer des paramètres à [IDispatch :: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
@@ -89,7 +90,7 @@ Pour plus d’informations sur la `COleVariant` classe et son utilisation dans O
 
 **En-tête :** afxdisp.h
 
-## <a name="colevariantattach"></a><a name="attach"></a>COleVariant :: Attach
+## <a name="colevariantattach"></a><a name="attach"></a> COleVariant :: Attach
 
 Appelez cette fonction pour attacher l’objet [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) donné à l' `COleVariant` objet actuel.
 
@@ -102,13 +103,13 @@ void Attach(VARIANT& varSrc);
 *varSrc*<br/>
 Objet existant `VARIANT` à attacher à l' `COleVariant` objet actuel.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction définit le VARTYPE de *varSrc* sur VT_EMPTY.
 
 Pour plus d’informations, consultez les entrées [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) et [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) dans le SDK Windows.
 
-## <a name="colevariantcolevariant"></a><a name="colevariant"></a>COleVariant :: COleVariant
+## <a name="colevariantcolevariant"></a><a name="colevariant"></a> COleVariant :: COleVariant
 
 Construit un objet `COleVariant`.
 
@@ -172,7 +173,7 @@ Objet [CLongBinary](../../mfc/reference/clongbinary-class.md) à copier dans le 
 *pidl*<br/>
 Pointeur vers une structure [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) à copier dans le nouvel `COleVariant` objet.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Tous ces constructeurs créent des `COleVariant` objets initialisés à la valeur spécifiée. Une brève description de chacun de ces constructeurs suit.
 
@@ -208,7 +209,7 @@ Tous ces constructeurs créent des `COleVariant` objets initialisés à la valeu
 
 Pour plus d’informations sur SCODE, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes) in the SDK Windows.
 
-## <a name="colevariantchangetype"></a><a name="changetype"></a>COleVariant :: ChangeType
+## <a name="colevariantchangetype"></a><a name="changetype"></a> COleVariant :: ChangeType
 
 Convertit le type de valeur variant dans cet `COleVariant` objet.
 
@@ -224,11 +225,11 @@ VARTYPE de cet `COleVariant` objet.
 *pSrc*<br/>
 Pointeur vers l’objet [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) à convertir. Si cette valeur est NULL, cet `COleVariant` objet est utilisé comme source pour la conversion.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez les entrées [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)et [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) dans la SDK Windows.
 
-## <a name="colevariantclear"></a><a name="clear"></a>COleVariant :: Clear
+## <a name="colevariantclear"></a><a name="clear"></a> COleVariant :: Clear
 
 Efface la `VARIANT`.
 
@@ -236,13 +237,13 @@ Efface la `VARIANT`.
 void Clear();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cela définit le VARTYPE de cet objet sur VT_EMPTY. Le `COleVariant` destructeur appelle cette fonction.
 
 Pour plus d’informations, consultez les `VARIANT` entrées, VarType et `VariantClear` dans le SDK Windows.
 
-## <a name="colevariantdetach"></a><a name="detach"></a>COleVariant ::D Etach
+## <a name="colevariantdetach"></a><a name="detach"></a> COleVariant ::D Etach
 
 Détache l’objet [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) sous-jacent de cet `COleVariant` objet.
 
@@ -250,7 +251,7 @@ Détache l’objet [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) sous-jac
 VARIANT Detach();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction définit le VARTYPE de cet `COleVariant` objet sur VT_EMPTY.
 
@@ -259,7 +260,7 @@ Cette fonction définit le VARTYPE de cet `COleVariant` objet sur VT_EMPTY.
 
 Pour plus d’informations, consultez les entrées [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)et [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) dans la SDK Windows.
 
-## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant :: GetByteArrayFromVariantArray
+## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a> COleVariant :: GetByteArrayFromVariantArray
 
 Récupère un tableau d’octets d’un tableau variant existant
 
@@ -269,10 +270,10 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Paramètres
 
-*bits*<br/>
+*bytes*<br/>
 Référence à un objet [CByteArray](../../mfc/reference/cbytearray-class.md) existant.
 
-## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant :: Operator LPCVARIANT
+## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a> COleVariant :: Operator LPCVARIANT
 
 Cet opérateur de cast retourne une `VARIANT` structure dont la valeur est copiée à partir de cet `COleVariant` objet.
 
@@ -280,9 +281,9 @@ Cet opérateur de cast retourne une `VARIANT` structure dont la valeur est copi�
 operator LPCVARIANT() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant :: Operator LPVARIANT
+## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a> COleVariant :: Operator LPVARIANT
 
 Appelez cet opérateur de cast pour accéder à la structure sous-jacente `VARIANT` de cet `COleVariant` objet.
 
@@ -290,12 +291,12 @@ Appelez cet opérateur de cast pour accéder à la structure sous-jacente `VARIA
 operator LPVARIANT();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 > [!CAUTION]
 > La modification de la valeur de la `VARIANT` structure accessible par le pointeur retourné par cette fonction modifie la valeur de cet `COleVariant` objet.
 
-## <a name="colevariantoperator-"></a><a name="operator_eq"></a>COleVariant :: Operator =
+## <a name="colevariantoperator-"></a><a name="operator_eq"></a> COleVariant :: Operator =
 
 Ces opérateurs d’assignation surchargés copient la valeur source dans cet `COleVariant` objet.
 
@@ -316,7 +317,7 @@ const COleVariant& operator=(const CByteArray& arrSrc);
 const COleVariant& operator=(const CLongBinary& lbSrc);
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Voici une brève description de chaque opérateur :
 
@@ -346,7 +347,7 @@ Voici une brève description de chaque opérateur :
 
 Pour plus d’informations, consultez les entrées [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) et [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) dans le SDK Windows.
 
-## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant :: Operator = =
+## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a> COleVariant :: Operator = =
 
 Cet opérateur compare deux valeurs de type Variant et retourne une valeur différente de zéro si elles sont égales ; Sinon, 0.
 
@@ -373,11 +374,11 @@ friend CArchive& AFXAPI operator>>(
     COleVariant& varSrc);
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L' `COleVariant` opérateur d’insertion ( **\<\<**) operator supports diagnostic dumping and storing to an archive. The extraction (**>>** ) prend en charge le chargement à partir d’une archive.
 
-## <a name="colevariantsetstring"></a><a name="setstring"></a>COleVariant :: SetString
+## <a name="colevariantsetstring"></a><a name="setstring"></a> COleVariant :: SetString
 
 Définit la chaîne sur un type particulier.
 
@@ -393,9 +394,9 @@ Chaîne terminée par le caractère null à copier dans le nouvel `COleVariant` 
 *VtSrc*<br/>
 VARTYPE du nouvel `COleVariant` objet.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Le paramètre *vtSrc* doit être VT_BSTR (Unicode) ou VT_BSTRT (ANSI). `SetString`est généralement utilisé pour définir des chaînes ANSI, car la valeur par défaut pour le constructeur [COleVariant :: COleVariant](#colevariant) avec un paramètre de pointeur de chaîne ou de chaîne et sans VarType est Unicode.
+Le paramètre *vtSrc* doit être VT_BSTR (Unicode) ou VT_BSTRT (ANSI). `SetString` est généralement utilisé pour définir des chaînes ANSI, car la valeur par défaut pour le constructeur [COleVariant :: COleVariant](#colevariant) avec un paramètre de pointeur de chaîne ou de chaîne et sans VarType est Unicode.
 
 Un jeu d’enregistrements DAO dans une génération non UNICODE s’attend à ce que les chaînes soient au format ANSI. Ainsi, pour les fonctions DAO qui utilisent des `COleVariant` objets, si vous n’êtes pas en train de créer un jeu d’enregistrements Unicode, vous devez utiliser la forme **COleVariant :: COleVariant (** *lpszSrc* **,** *vtSrc* **)** du constructeur avec *vtSrc* défini sur VT_BSTRT (ANSI) ou utiliser `SetString` avec *vtSrc* défini sur VT_BSTRT pour créer des chaînes ANSI. Par exemple, les `CDaoRecordset` fonctions [CDaoRecordset :: Seek](../../mfc/reference/cdaorecordset-class.md#seek) et [CDaoRecordset :: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) utilisent des `COleVariant` objets en tant que paramètres. Ces objets doivent être ANSI si le jeu d’enregistrements DAO n’est pas UNICODE.
 

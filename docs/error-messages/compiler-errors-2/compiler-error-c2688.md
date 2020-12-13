@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2688'
 title: Erreur du compilateur C2688
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 17219fe6f4358b73ace0435e60d8fc2b7a9b6df8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330683"
 ---
 # <a name="compiler-error-c2688"></a>Erreur du compilateur C2688
 
 'C2 :: fgrv' : retours covariants avec un héritage virtuel ou multiple non pris en charge pour les fonctions varargs
 
-Les types de retour covariants ne sont C++ pas pris en charge dans le visuel quand une fonction contient des arguments de variables.
+Les types de retour covariants ne sont pas pris en charge dans Visual C++ lorsqu’une fonction contient des arguments de variables.
 
 Pour résoudre cette erreur, définissez vos fonctions de manière à ce qu’elles n’utilisent pas d’arguments de variables, ou transmettez les valeurs de retour de la même manière pour toutes les fonctions virtuelles.
 

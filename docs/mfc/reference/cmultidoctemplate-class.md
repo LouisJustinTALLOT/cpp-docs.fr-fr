@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CMultiDocTemplate, classe'
 title: CMultiDocTemplate, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 70b77c04fed41da3b5f025f6a600b9ecfd4bc89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331563"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate, classe
 
@@ -35,7 +36,7 @@ Les fonctions membres de cette classe sont virtuelles. Consultez [CDocTemplate](
 |----------|-----------------|
 |[CMultiDocTemplate :: CMultiDocTemplate](#cmultidoctemplate)|Construit un objet `CMultiDocTemplate`.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une application MDI utilise la fenêtre frame principale comme un espace de travail dans lequel l’utilisateur peut ouvrir zéro, une ou plusieurs fenêtres frame de document, chacune affichant un document. Pour obtenir une description plus détaillée de l’interface MDI, consultez *instructions relatives à l’interface Windows pour la conception de logiciels*.
 
@@ -69,7 +70,7 @@ Pour plus d’informations sur `CMultiDocTemplate` , consultez [modèles de docu
 
 **En-tête :** afxwin.h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate :: CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a> CMultiDocTemplate :: CMultiDocTemplate
 
 Construit un objet `CMultiDocTemplate`.
 
@@ -109,7 +110,7 @@ Pointe vers l' `CRuntimeClass` objet de la classe de fenêtre frame. Cette class
 *pViewClass*<br/>
 Pointe vers l' `CRuntimeClass` objet de la classe de vue. Cette classe est une `CView` classe dérivée de que vous définissez pour afficher vos documents.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Allouez dynamiquement un `CMultiDocTemplate` objet pour chaque type de document pris en charge par votre application et transmettez- `CWinApp::AddDocTemplate` le à partir de la `InitInstance` fonction membre de votre classe d’application.
 
@@ -127,4 +128,4 @@ Voici un deuxième exemple.
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CSingleDocTemplate, classe](../../mfc/reference/csingledoctemplate-class.md)<br/>
-[CWinApp, classe](../../mfc/reference/cwinapp-class.md)
+[CWinApp (classe)](../../mfc/reference/cwinapp-class.md)

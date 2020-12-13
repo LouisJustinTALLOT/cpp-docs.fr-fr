@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _heapchk'
 title: _heapchk
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57cde789c8d6e6b8c8da91adf4a6f274ce557ed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332796"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -52,7 +53,7 @@ int _heapchk( void );
 
 **_heapchk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
 
-|Valeur retournée|Condition|
+|Valeur de retour|Condition|
 |-|-|
 | **_HEAPBADBEGIN** | Les informations d’en-tête initiales sont incorrectes ou introuvables. |
 | **_HEAPBADNODE** | Un nœud incorrect a été trouvé ou le tas est endommagé. |
@@ -62,7 +63,7 @@ int _heapchk( void );
 
 En outre, si une erreur se produit, **_heapchk** affecte à **errno** la valeur **ENOSYS**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_heapchk** permet de déboguer les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** sur **ENOSYS**.
 

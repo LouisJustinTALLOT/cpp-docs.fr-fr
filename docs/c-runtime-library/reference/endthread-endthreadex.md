@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _endthread, _endthreadex'
 title: _endthread, _endthreadex
 ms.date: 4/2/2020
 api_name:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ef74cac4cbe23a021ed8d796f92f2767695eb08e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332836"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termine un thread ; **_endthread** met fin à un thread créé par **_beginthread** et **_endthreadex** met fin à un thread créé par **_beginthreadex**.
+Termine un thread ; **_endthread** met fin à un thread créé par **_beginthread** et  **_endthreadex** met fin à un thread créé par **_beginthreadex**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +62,7 @@ void _endthreadex(
 *retval*<br/>
 Code de sortie de thread.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelé automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à **_beginthread** ou **_beginthreadex**. L’arrêt d’un thread à l’aide d’un appel à **endthread** ou **_endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
 
@@ -79,7 +80,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|
@@ -90,7 +91,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md) .
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Voir l’exemple pour [_beginthread](beginthread-beginthreadex.md).
 

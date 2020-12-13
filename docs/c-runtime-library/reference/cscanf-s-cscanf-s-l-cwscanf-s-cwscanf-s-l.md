@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l'
 title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e379d454b9acd9cda75eb41721f55f0818004858
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332934"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -99,7 +100,7 @@ Paramètres facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Le nombre de champs qui ont été correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour est **EOF** pour une tentative de lecture à la fin du fichier. Cela peut se produire quand l’entrée au clavier est redirigée au niveau de la ligne de commande du système d’exploitation. La valeur de retour 0 signifie qu’aucun champ n’a été assigné.
 
@@ -109,7 +110,7 @@ Ces fonctions valident leurs paramètres. Si *format* est un pointeur null, ces 
 
 La fonction **_cscanf_s** lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre *format* pour la fonction [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Tandis que **_cscanf_s** retourne normalement le caractère d’entrée, il ne le fait pas si le dernier appel devait **_ungetch**.
 
-Comme les autres versions sécurisées des fonctions de la famille **scanf** , **_cscanf_s** et **_cswscanf_s** requièrent des arguments de taille pour les caractères de champ de type **c**, **c**, **s**, **s**et **[**. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+Comme les autres versions sécurisées des fonctions de la famille **scanf** , **_cscanf_s** et **_cswscanf_s** requièrent des arguments de taille pour les caractères de champ de type **c**, **c**, **s**, **s** et **[**. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **`unsigned`** , et non **size_t**.

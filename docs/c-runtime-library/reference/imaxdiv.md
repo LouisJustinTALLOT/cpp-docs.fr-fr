@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : imaxdiv'
 title: imaxdiv
 ms.date: 04/05/2018
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e1f417c1fb45b452b3cd07560bfec68d21fd1a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332772"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -56,11 +57,11 @@ Dénominateur.
 
 **imaxdiv** appelé avec des arguments de type [intmax_t](../../c-runtime-library/standard-types.md) retourne une structure de type [imaxdiv_t](../../c-runtime-library/standard-types.md) qui comprend le quotient et le reste.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure **imaxdiv_t** contient le quotient, **intmax_t** **quote**et le reste, **intmax_t** **REM**. Le signe du quotient est le même que celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
+La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure **imaxdiv_t** contient le quotient, **intmax_t** **quote** et le reste, **intmax_t** **REM**. Le signe du quotient est le même que celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

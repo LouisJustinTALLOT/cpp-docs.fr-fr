@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CNetAddressCtrl'
 title: Classe CNetAddressCtrl
 ms.date: 11/19/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 66f2bb647d02b262f9264d5a99f84a3fb23fc119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331503"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -134,7 +135,7 @@ dans Pointeur non null vers un objet [CWnd](../../mfc/reference/cwnd-class.md) q
 *nID*\
 dans ID du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -168,7 +169,7 @@ dans Pointeur non null vers un objet [CWnd](../../mfc/reference/cwnd-class.md) q
 *nID*\
 dans ID du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -180,7 +181,7 @@ Affiche un message d’erreur dans l’info-bulle associée au contrôle d’adr
 HRESULT DisplayErrorTip();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur `S_OK` si cette méthode réussit ; sinon, code d’erreur.
 
@@ -203,7 +204,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 *pAddress*<br/>
 [in, out] Pointeur vers une structure [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) .  Définissez le membre *pAddrInfo* de cette structure sur l’adresse d’une structure [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) avant d’appeler la méthode GetAddress.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur S_OK si cette méthode réussit ; Sinon, code d’erreur COM. Pour plus d’informations sur les codes d’erreur possibles, consultez la section valeur de retour de la macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) .
 
@@ -223,7 +224,7 @@ Récupère le type d’adresse réseau que le contrôle d’adresse réseau actu
 DWORD GetAllowType() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Combinaison de bits (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/win32/shell/net-string).
 
@@ -244,7 +245,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 *dwAddrMask*\
 dans Combinaison de bits (OR) d’indicateurs qui spécifie les types d’adresses que le contrôle d’adresse réseau peut prendre en charge. Pour plus d’informations, consultez [NET_STRING](/windows/win32/shell/net-string).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si cette méthode réussit ; Sinon, code d’erreur COM.
 

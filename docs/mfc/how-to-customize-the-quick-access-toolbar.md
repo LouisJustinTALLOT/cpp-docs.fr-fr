@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : personnaliser la barre d’outils accès rapide'
 title: "Comment : personnaliser la barre d'outils Accès rapide"
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb7935f9e340734f8af0e7ec9197e139c30af894
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330234"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Comment : personnaliser la barre d'outils Accès rapide
 
@@ -50,7 +51,7 @@ Les commandes de la barre d’outils accès rapide n’apparaissent pas sur l’
 
 #### <a name="to-preview-the-ribbon-control"></a>Pour afficher un aperçu du contrôle du ruban
 
-- Dans la **barre d’outils**de l’éditeur de ruban, cliquez sur **tester le ruban**.
+- Dans la **barre d’outils** de l’éditeur de ruban, cliquez sur **tester le ruban**.
 
 ## <a name="see-also"></a>Voir aussi
 

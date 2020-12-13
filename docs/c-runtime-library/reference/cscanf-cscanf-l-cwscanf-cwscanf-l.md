@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _cscanf, _cscanf_l, _cwscanf, _cwscanf_l'
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65c025c7a02c0bd9493bcaf8d6ff0e29c6c7a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332919"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -99,7 +100,7 @@ Paramètres facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Le nombre de champs qui ont été correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour est **EOF** pour une tentative de lecture à la fin du fichier. Cela peut se produire quand l’entrée au clavier est redirigée au niveau de la ligne de commande du système d’exploitation. La valeur de retour 0 signifie qu’aucun champ n’a été assigné.
 

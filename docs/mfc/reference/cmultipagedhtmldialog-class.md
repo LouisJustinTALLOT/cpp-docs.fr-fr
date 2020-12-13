@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMultiPageDHtmlDialog'
 title: CMultiPageDHtmlDialog, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7f8c2081687c71a98e427bb5396cfa47a73deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331536"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog, classe
 
@@ -31,22 +32,22 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 |Nom|Description|
 |----------|-----------------|
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construit un objet de dialogue DHTML à plusieurs pages (de style sorcier).|
-|[CMultiPageDHtmlDialog: :-CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Détruit un objet de dialogue DHTML à plusieurs pages.|
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construit un objet de boîte de dialogue DHTML (de style Assistant).|
+|[CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Détruit un objet de boîte de dialogue DHTML multipage.|
 
 ## <a name="remarks"></a>Notes
 
-Le mécanisme pour ce faire est une [carte d’événement DHTML et URL](dhtml-event-maps.md), qui contient des cartes d’événements intégrées pour chaque page.
+Le mécanisme permettant d’y parvenir est un [mappage d’événements DHTML et URL](dhtml-event-maps.md), qui contient des tables d’événements incorporées pour chaque page.
 
 ## <a name="example"></a>Exemple
 
-Ce dialogue multipage suppose trois ressources HTML qui définissent la fonctionnalité simple de sorcier. La première page a un bouton **Suivant,** la seconde un bouton **Prev** et **Suivant,** et la troisième un bouton **Prev.** Lorsque l’un des boutons est pressé, une fonction de gestionnaire appelle [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) pour charger la nouvelle page appropriée.
+Cette boîte de dialogue multipage suppose trois ressources HTML qui définissent des fonctionnalités simples de type assistant. La première page a un bouton **suivant** , le deuxième bouton **précédent** et **suivant** et le troisième bouton **précédent** . Quand l’un des boutons est enfoncé, une fonction de gestionnaire appelle [CDHtmlDialog :: LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) pour charger la nouvelle page appropriée.
 
-Les parties pertinentes de la déclaration de classe (dans CMyMultiPageDlg.h):
+Les parties pertinentes de la déclaration de classe (dans CMyMultiPageDlg. h) :
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
-Les parties pertinentes de la mise en œuvre de la classe (dans CMyMultipageDlg.cpp) :
+Les parties pertinentes de l’implémentation de la classe (dans CMyMultipageDlg. cpp) :
 
 [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]
 
@@ -74,11 +75,11 @@ Les parties pertinentes de la mise en œuvre de la classe (dans CMyMultipageDlg.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxdhtml.h
+**En-tête :** afxdhtml. h
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a> CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
-Construit un objet de dialogue DHTML à plusieurs pages (de style sorcier).
+Construit un objet de boîte de dialogue DHTML (de style Assistant).
 
 ```
 CMultiPageDHtmlDialog(
@@ -97,23 +98,23 @@ CMultiPageDHtmlDialog();
 ### <a name="parameters"></a>Paramètres
 
 *lpszTemplateName*<br/>
-La chaîne non terminée qui est le nom d’une ressource de modèle de boîte de dialogue.
+Chaîne terminée par le caractère null qui est le nom d’une ressource de modèle de boîte de dialogue.
 
 *szHtmlResID*<br/>
-La chaîne non terminée qui est le nom d’une ressource HTML.
+Chaîne terminée par le caractère null qui est le nom d’une ressource HTML.
 
 *pParentWnd*<br/>
-Un pointeur vers l’objet de fenêtre du parent ou du propriétaire (du type [CWnd)](../../mfc/reference/cwnd-class.md)auquel appartient l’objet de dialogue. S’il s’agit de NULL, la fenêtre parente de l’objet de dialogue est réglée sur la fenêtre d’application principale.
+Pointeur vers l’objet de fenêtre parent ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel l’objet de boîte de dialogue appartient. Si la valeur est NULL, la fenêtre parente de l’objet Dialog est définie sur la fenêtre d’application principale.
 
-*nIDTemplate (en)*<br/>
+*nIDTemplate*<br/>
 Contient le numéro d’identification d’une ressource de modèle de boîte de dialogue.
 
-*nHtmlResID (en anglais)*<br/>
+*nHtmlResID*<br/>
 Contient le numéro d’identification d’une ressource HTML.
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog: :-CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a> CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog
 
-Détruit un objet de dialogue DHTML à plusieurs pages.
+Détruit un objet de boîte de dialogue DHTML multipage.
 
 ```
 virtual ~CMultiPageDHtmlDialog();

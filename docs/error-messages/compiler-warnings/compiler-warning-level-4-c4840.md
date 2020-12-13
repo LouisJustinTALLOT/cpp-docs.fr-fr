@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4840'
 title: Avertissement du compilateur (niveau 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a365dc38aff1ab9811407924f7f6e554d91c6f1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330463"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Avertissement du compilateur (niveau 4) C4840
 
@@ -49,7 +50,7 @@ int main()
 }
 ```
 
-Pour les chaînes générées et gérées à l’aide de `CStringW`, le `operator LPCWSTR()` fourni doit être utilisé pour effectuer un cast d’un objet `CStringW` vers le pointeur de chaîne de style C attendu par la chaîne de format :
+Pour les chaînes générées et gérées à l’aide de `CStringW` , le fourni `operator LPCWSTR()` doit être utilisé pour effectuer un cast d’un `CStringW` objet en pointeur de chaîne de style C attendu par la chaîne de format :
 
 ```cpp
     CStringW str1;

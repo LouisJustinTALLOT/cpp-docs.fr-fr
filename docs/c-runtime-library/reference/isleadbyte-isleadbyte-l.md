@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : isleadbyte, _isleadbyte_l'
 title: isleadbyte, _isleadbyte_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 544adda1b794db6a003e3ae7d51b15456574f875
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332658"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -57,10 +58,10 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 dans le cas contraire. Dans les paramètres régionaux « C » et dans les paramètres régionaux SBCS (jeu de caractères codés sur un octet), **isleadbyte** retourne toujours 0.
 

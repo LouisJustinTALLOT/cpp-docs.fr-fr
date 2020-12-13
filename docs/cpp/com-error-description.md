@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _com_error ::D escription'
 title: _com_error::Description
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-ms.openlocfilehash: de2275f096fe2fde96e64cbc3034602a1fde5e88
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6404d16361abe81d9e234a6b63039a7476d91ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332549"
 ---
 # <a name="_com_errordescription"></a>_com_error::Description
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Appelle `IErrorInfo::GetDescription` fonction.
+Appelle la `IErrorInfo::GetDescription` fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +28,14 @@ _bstr_t Description( ) const;
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le résultat de `IErrorInfo::GetDescription` pour l’objet `IErrorInfo` enregistré dans l’objet `_com_error`. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucune `IErrorInfo` n’est enregistrée, elle retourne un `_bstr_t`vide.
+Retourne le résultat de `IErrorInfo::GetDescription` pour l' `IErrorInfo` objet enregistré dans l' `_com_error` objet. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` n’est enregistré, il retourne un vide `_bstr_t` .
 
 ## <a name="remarks"></a>Notes
 
-Appelle la fonction `IErrorInfo::GetDescription` et récupère les `IErrorInfo` enregistrées dans l’objet `_com_error`. Tout échec lors de l’appel de la méthode `IErrorInfo::GetDescription` est ignoré.
+Appelle la `IErrorInfo::GetDescription` fonction et récupère les `IErrorInfo` enregistrements dans l' `_com_error` objet. Tout échec lors de l’appel de la `IErrorInfo::GetDescription` méthode est ignoré.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_com_error, classe](../cpp/com-error-class.md)
+[Classe _com_error](../cpp/com-error-class.md)

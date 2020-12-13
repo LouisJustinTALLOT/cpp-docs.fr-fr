@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur la classe d’événements
 title: event, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c33096795d1980ea78cbce8c38fa9305ee45cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331249"
 ---
 # <a name="event-class"></a>event, classe
 
@@ -42,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|Réinitialise l’événement à un État non signalé.|
 |[set](#set)|Signale l’événement.|
-|[qu'](#wait)|Attend que l’événement soit signalé.|
+|[wait](#wait)|Attend que l’événement soit signalé.|
 |[wait_for_multiple](#wait_for_multiple)|Attend que plusieurs événements soient signalés.|
 
 ### <a name="public-constants"></a>Constantes publiques
@@ -75,7 +76,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="event"></a><a name="dtor"></a>~ événement
+## <a name="event"></a><a name="dtor"></a> ~ événement
 
 Détruit un événement.
 
@@ -87,7 +88,7 @@ Détruit un événement.
 
 Il est supposé qu’aucun thread n’attend l’événement lorsque le destructeur s’exécute. Le fait d’autoriser l’événement à se détruire avec les threads qui attendent encore ce problème entraîne un comportement indéfini.
 
-## <a name="reset"></a><a name="reset"></a>initialisation
+## <a name="reset"></a><a name="reset"></a> initialisation
 
 Réinitialise l’événement à un État non signalé.
 
@@ -95,7 +96,7 @@ Réinitialise l’événement à un État non signalé.
 void reset();
 ```
 
-## <a name="set"></a><a name="set"></a>définie
+## <a name="set"></a><a name="set"></a> définie
 
 Signale l’événement.
 
@@ -107,7 +108,7 @@ void set();
 
 La signalisation de l’événement peut provoquer l’indisponibilité d’un nombre arbitraire de contextes qui attendent l’événement.
 
-## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a> timeout_infinite
 
 Valeur qui indique qu'une attente ne doit jamais expirer.
 
@@ -115,7 +116,7 @@ Valeur qui indique qu'une attente ne doit jamais expirer.
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a><a name="wait"></a>qu'
+## <a name="wait"></a><a name="wait"></a> qu'
 
 Attend que l’événement soit signalé.
 
@@ -128,14 +129,14 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 *_Timeout*<br/>
 Indique le nombre de millisecondes avant l’expiration du délai d’attente. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’y a aucun délai d’attente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si l’attente a été satisfaite, la valeur `0` est retournée ; sinon, la valeur `COOPERATIVE_WAIT_TIMEOUT` pour indiquer que l’attente a expiré sans que l’événement soit signalé.
 
 > [!IMPORTANT]
 > Dans une application plateforme Windows universelle (UWP), n’appelez pas `wait` sur le thread asta, car cet appel peut bloquer le thread actuel et peut provoquer le blocage de l’application.
 
-## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a> wait_for_multiple
 
 Attend que plusieurs événements soient signalés.
 
@@ -161,7 +162,7 @@ Si la valeur est définie **`true`** , le paramètre spécifie que tous les év�
 *_Timeout*<br/>
 Indique le nombre de millisecondes avant l’expiration du délai d’attente. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’y a aucun délai d’attente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si l’attente a été satisfaite, l’index dans le tableau fourni dans le `_PPEvents` paramètre qui a respecté la condition d’attente ; sinon, la valeur `COOPERATIVE_WAIT_TIMEOUT` pour indiquer que l’attente a expiré sans que la condition soit satisfaite.
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les fonctions d’espace de noms de concurrence
 title: concurrency, fonctions de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 25cd74e20102bbc1a75e4b4efe1bf234845f7fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db49a58084e8e6fbbe4e3ea1ccd9253c7743baea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331280"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency, fonctions de l’espace de noms
 

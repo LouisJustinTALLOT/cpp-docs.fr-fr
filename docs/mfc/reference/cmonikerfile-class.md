@@ -1,5 +1,6 @@
 ---
-title: Classe CMonikerFile
+description: 'En savoir plus sur : classe CMonikerFile'
+title: CMonikerFile, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMonikerFile
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: fc74ad2499fcde63faa2c5859a87fd9ffd2846eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d59de05f688c10d3dbfa6682777d5fd11d4f53ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331581"
 ---
-# <a name="cmonikerfile-class"></a>Classe CMonikerFile
+# <a name="cmonikerfile-class"></a>CMonikerFile, classe
 
 Représente un flux de données ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) nommé par un [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
 
@@ -41,32 +42,32 @@ class CMonikerFile : public COleStreamFile
 
 |Nom|Description|
 |----------|-----------------|
-|[CMonikerFile::CMonikerFile](#cmonikerfile)|Construit un objet `CMonikerFile`.|
+|[CMonikerFile :: CMonikerFile](#cmonikerfile)|Construit un objet `CMonikerFile`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMonikerFile::Fermer](#close)|Détache et libère le flux et libère le surnom.|
-|[CMonikerFile::Detach](#detach)|Détache `IMoniker` `CMonikerFile` l’objet.|
-|[CMonikerFile::GetMoniker](#getmoniker)|Retourne le surnom actuel.|
-|[CMonikerFile::Ouvert](#open)|Ouvre le fichier spécifié pour obtenir un flux.|
+|[CMonikerFile :: Close](#close)|Détache et libère le flux et libère le moniker.|
+|[CMonikerFile ::D Etach](#detach)|Détache le `IMoniker` de cet `CMonikerFile` objet.|
+|[CMonikerFile :: GetMoniker](#getmoniker)|Retourne le moniker actuel.|
+|[CMonikerFile :: Open](#open)|Ouvre le fichier spécifié pour obtenir un flux.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtient le contexte de liaison ou crée un contexte de liaison initialisé par défaut.|
+|[CMonikerFile :: CreateBindContext](#createbindcontext)|Obtient le contexte de liaison ou crée un contexte de liaison initialisé par défaut.|
 
 ## <a name="remarks"></a>Notes
 
-Un surnom contient des informations un peu comme un nom de chemin à un fichier. Si vous avez un pointeur sur `IMoniker` l’interface d’un objet de surnom, vous pouvez accéder au fichier identifié sans avoir d’autres informations spécifiques sur l’endroit où le fichier est réellement situé.
+Un moniker contient des informations très semblables à un nom de chemin d’accès à un fichier. Si vous avez un pointeur vers l’interface d’un objet moniker `IMoniker` , vous pouvez accéder au fichier identifié sans avoir d’autres informations spécifiques sur l’emplacement réel du fichier.
 
-Dérivé `COleStreamFile`de `CMonikerFile` , prend un surnom ou une représentation de cordes qu’il peut faire dans un surnom et se lie au flux pour lequel le surnom est un nom. Vous pouvez ensuite lire et écrire à ce flux. Le but `CMonikerFile` réel est de `IStream`fournir un `IMoniker`accès simple à s nommé par s afin `CFile` que vous n’ayez pas à vous lier à un flux vous-même, mais ont des fonctionnalités pour le flux.
+Dérivée de `COleStreamFile` , `CMonikerFile` prend un moniker ou une représentation sous forme de chaîne qu’il peut créer dans un moniker et se lie au flux pour lequel le moniker est un nom. Vous pouvez ensuite lire et écrire dans ce flux. Le but réel de `CMonikerFile` est de fournir un accès simple aux objets `IStream` nommés par `IMoniker` s afin que vous n’ayez pas à vous connecter à un flux vous-même, mais que vous avez des `CFile` fonctionnalités dans le flux.
 
-`CMonikerFile`ne peut pas être utilisé pour se lier à autre chose qu’un flux. Si vous souhaitez vous lier au stockage `IMoniker` ou à un objet, vous devez utiliser l’interface directement.
+`CMonikerFile` ne peut pas être utilisé pour effectuer une liaison à d’autres éléments qu’un flux. Si vous souhaitez effectuer une liaison au stockage ou à un objet, vous devez utiliser l' `IMoniker` interface directement.
 
-Pour plus d’informations sur les flux et les surnoms, voir [COleStreamFile](../../mfc/reference/colestreamfile-class.md) dans le *MFC Reference* et [IStream](/windows/win32/api/objidl/nn-objidl-istream) et [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) dans windows SDK.
+Pour plus d’informations sur les flux et les monikers, consultez [COleStreamFile](../../mfc/reference/colestreamfile-class.md) dans *MFC Reference* et [IStream](/windows/win32/api/objidl/nn-objidl-istream) et [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) dans le SDK Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -80,11 +81,11 @@ Pour plus d’informations sur les flux et les surnoms, voir [COleStreamFile](..
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxole.h
+**En-tête :** AFXOLE. h
 
-## <a name="cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Fermer
+## <a name="cmonikerfileclose"></a><a name="close"></a> CMonikerFile :: Close
 
-Appelez cette fonction pour détacher et libérer le flux et pour libérer le surnom.
+Appelez cette fonction pour détacher et libérer le flux et libérer le moniker.
 
 ```
 virtual void Close();
@@ -92,9 +93,9 @@ virtual void Close();
 
 ### <a name="remarks"></a>Notes
 
-Peut être appelé sur les cours d’eau non ouverts ou déjà fermés.
+Peut être appelé sur des flux de flux qui ne sont pas ouverts ou déjà fermés.
 
-## <a name="cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile
+## <a name="cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a> CMonikerFile :: CMonikerFile
 
 Construit un objet `CMonikerFile`.
 
@@ -102,7 +103,7 @@ Construit un objet `CMonikerFile`.
 CMonikerFile();
 ```
 
-## <a name="cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext
+## <a name="cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a> CMonikerFile :: CreateBindContext
 
 Appelez cette fonction pour créer un contexte de liaison initialisé par défaut.
 
@@ -112,18 +113,18 @@ IBindCtx* CreateBindContext(CFileException* pError);
 
 ### <a name="parameters"></a>Paramètres
 
-*Perror*<br/>
-Un pointeur à une exception de fichier. En cas d’erreur, il sera réglé sur la cause.
+*pError*<br/>
+Pointeur vers une exception de fichier. En cas d’erreur, elle est définie en conséquence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur au contexte de liaison [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) à lier avec si réussir; autrement NULL. Si l’instance a `IBindHost` été ouverte avec une interface, le contexte de liaison est récupéré à partir de la `IBindHost`. S’il `IBindHost` n’y a pas d’interface ou si l’interface ne parvient pas à retourner un contexte de liaison, un contexte de liaison est créé. Pour une description de l’interface [IBindHost,](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) voir le SDK Windows.
+Pointeur vers le contexte de liaison [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) avec lequel établir une liaison en cas de réussite ; Sinon, NULL. Si l’instance a été ouverte avec une `IBindHost` interface, le contexte de liaison est récupéré à partir de `IBindHost` . S’il n’existe aucune `IBindHost` interface ou si l’interface ne retourne pas de contexte de liaison, un contexte de liaison est créé. Pour obtenir une description de l’interface [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) , consultez la SDK Windows.
 
 ### <a name="remarks"></a>Notes
 
-Un contexte de liaison est un objet qui stocke des informations sur une opération de liaison de surnom particulier. Vous pouvez remplacer cette fonction pour fournir un contexte de liaison personnalisé.
+Un contexte de liaison est un objet qui stocke des informations sur une opération de liaison de moniker particulière. Vous pouvez remplacer cette fonction pour fournir un contexte de liaison personnalisé.
 
-## <a name="cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach
+## <a name="cmonikerfiledetach"></a><a name="detach"></a> CMonikerFile ::D Etach
 
 Appelez cette fonction pour fermer le flux.
 
@@ -133,32 +134,32 @@ BOOL Detach(CFileException* pError = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*Perror*<br/>
-Un pointeur à une exception de fichier. En cas d’erreur, il sera réglé sur la cause.
+*pError*<br/>
+Pointeur vers une exception de fichier. En cas d’erreur, elle est définie en conséquence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-## <a name="cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker
+## <a name="cmonikerfilegetmoniker"></a><a name="getmoniker"></a> CMonikerFile :: GetMoniker
 
-Appelez cette fonction pour récupérer un pointeur sur le surnom actuel.
+Appelez cette fonction pour récupérer un pointeur vers le moniker actuel.
 
 ```
 IMoniker* GetMoniker() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur à l’interface de surnom actuel ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
+Pointeur vers l’interface du moniker en cours ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
 
 ### <a name="remarks"></a>Notes
 
-Comme `CMonikerFile` ce n’est pas une interface, le pointeur retourné n’incrémente pas le `CMonikerFile` nombre de références (via [AddRef),](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)et le surnom est libéré lorsque l’objet est libéré. Si vous voulez conserver le surnom ou le libérer `AddRef` vous-même, vous devez-le.
+Étant donné que `CMonikerFile` n’est pas une interface, le pointeur retourné n’incrémente pas le nombre de références (à l’aide de [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)) et le moniker est libéré lorsque l' `CMonikerFile` objet est libéré. Si vous souhaitez conserver le moniker ou le libérer vous-même, vous devez le faire `AddRef` .
 
-## <a name="cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Ouvert
+## <a name="cmonikerfileopen"></a><a name="open"></a> CMonikerFile :: Open
 
-Appelez cette fonction de membre pour ouvrir un fichier ou un objet de surnom.
+Appelez cette fonction membre pour ouvrir un fichier ou un objet moniker.
 
 ```
 virtual BOOL Open(
@@ -173,23 +174,23 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Paramètres
 
 *lpszURL*<br/>
-Une URL ou un nom de fichier du fichier à ouvrir.
+URL ou nom de fichier du fichier à ouvrir.
 
-*Perror*<br/>
-Un pointeur à une exception de fichier. En cas d’erreur, il sera réglé sur la cause.
+*pError*<br/>
+Pointeur vers une exception de fichier. En cas d’erreur, elle est définie en conséquence.
 
-*pMoniker (en anglais)*<br/>
-Un pointeur à l’interface `IMoniker` de surnom à utiliser pour obtenir un flux.
+*pMoniker*<br/>
+Pointeur vers l’interface de moniker `IMoniker` à utiliser pour obtenir un flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le *paramètre lpszURL* ne peut pas être utilisé sur un Macintosh. Seule la forme de `Open` *pMoniker* peut être utilisée sur un Macintosh.
+Le paramètre *lpszURL* ne peut pas être utilisé sur un Macintosh. Seule la forme *pMoniker* de `Open` peut être utilisée sur un Macintosh.
 
-Vous pouvez utiliser une URL ou un nom de fichier pour le paramètre *lpszURL.* Par exemple :
+Vous pouvez utiliser une URL ou un nom de fichier pour le paramètre *lpszURL* . Par exemple :
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 
@@ -199,6 +200,6 @@ Vous pouvez utiliser une URL ou un nom de fichier pour le paramètre *lpszURL.* 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe COleStreamFile](../../mfc/reference/colestreamfile-class.md)<br/>
+[COleStreamFile, classe](../../mfc/reference/colestreamfile-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Classe CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile, classe](../../mfc/reference/casyncmonikerfile-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ecvt'
 title: _ecvt
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9226ac29827db8d412a1266eeba1ccd2b889e2ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332852"
 ---
 # <a name="_ecvt"></a>_ecvt
 
@@ -65,7 +66,7 @@ Position de la virgule décimale stockée.
 *sign*<br/>
 Signe du nombre converti.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ecvt** retourne un pointeur vers la chaîne de chiffres ; **Null** si une erreur s’est produite.
 
@@ -77,11 +78,11 @@ Le nombre total de chiffres renvoyés par **_ecvt** ne doit pas dépasser **_CVT
 
 Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de la *valeur* peuvent être obtenus à partir de *Dec* et du *signe* après l’appel. Le paramètre *Dec* pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *Sign* pointe sur un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
 
-La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que *count* **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
+La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que  **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
 
 **_ecvt** et **_fcvt** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null**ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
+Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null** ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

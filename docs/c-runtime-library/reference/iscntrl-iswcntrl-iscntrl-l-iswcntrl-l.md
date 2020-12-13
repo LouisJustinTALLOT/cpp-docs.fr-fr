@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l'
 title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 24267a663af1aa68099861bfec1b0e5c18aa83be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b4dcba09b139d1ad1c80e495477a6b7b2283e3f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332704"
 ---
 # <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -73,13 +74,13 @@ int _iswcntrl_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère de contrôle. **iscntrl** retourne une valeur différente de zéro si *c* est un caractère de contrôle (0X00-0x1F ou 0x7F). **iswcntrl** retourne une valeur différente de zéro si *c* est un caractère étendu de contrôle. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
@@ -94,7 +95,7 @@ Le comportement de **iscntrl** et **_iscntrl_l** n’est pas défini si *c* n’
 |**_istcntrl**|**iscntrl**|**iscntrl**|**iswcntrl**|
 |**_istcntrl_l**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -111,6 +112,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

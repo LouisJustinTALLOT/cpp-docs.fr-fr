@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles de liste virtuels'
 title: Contrôles de liste virtuels
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: 12200697af90a3c83fea3df676bd4d2488598d45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d441fc74ab6b1ae395ce0b23bcba08c1703213f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331354"
 ---
 # <a name="virtual-list-controls"></a>Contrôles de liste virtuels
 
@@ -21,7 +22,7 @@ Un contrôle de liste virtuelle est un contrôle d’affichage de liste qui a le
 > [!NOTE]
 > En plus de fournir des fonctionnalités de liste virtuelle dans `CListCtrl` , MFC fournit également la même fonctionnalité dans la classe [CListView](../mfc/reference/clistview-class.md) .
 
-Il existe certains problèmes de compatibilité que vous devez connaître lors du développement de contrôles de liste virtuels. Pour plus d’informations, consultez la section problèmes de compatibilité de la rubrique contrôles de liste dans le SDK Windows.
+Il existe certains problèmes de compatibilité que vous devez connaître lors du développement de contrôles de liste virtuels. Pour plus d’informations, consultez la section problèmes de compatibilité de la rubrique List-View les contrôles dans le SDK Windows.
 
 ## <a name="handling-the-lvn_getdispinfo-notification"></a>Gestion de la notification de LVN_GETDISPINFO
 
@@ -31,15 +32,15 @@ Les contrôles de liste virtuelle maintiennent très peu d’informations sur le
 
 Dans le gestionnaire du message de notification LVN_GETDISPINFO, vous devez vérifier le type d’informations demandées. Les valeurs possibles sont les suivantes :
 
-- `LVIF_TEXT`Le membre *pszText* doit être renseigné.
+- `LVIF_TEXT` Le membre *pszText* doit être renseigné.
 
-- `LVIF_IMAGE`Le membre *IImage* doit être renseigné.
+- `LVIF_IMAGE` Le membre *IImage* doit être renseigné.
 
-- `LVIF_INDENT`Le membre *iIndent* doit être renseigné.
+- `LVIF_INDENT` Le membre *iIndent* doit être renseigné.
 
-- `LVIF_PARAM`Le membre *lParam* doit être rempli. (Non présent pour les sous-éléments.)
+- `LVIF_PARAM` Le membre *lParam* doit être rempli. (Non présent pour les sous-éléments.)
 
-- `LVIF_STATE`Le membre d' *État* doit être rempli.
+- `LVIF_STATE` Le membre d' *État* doit être rempli.
 
 Vous devez ensuite fournir toutes les informations demandées à l’infrastructure.
 
@@ -55,7 +56,7 @@ L’exemple suivant met à jour le cache avec la plage passée à la fonction de
 
 [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]
 
-Pour plus d’informations sur la préparation et la maintenance d’un cache, consultez la section gestion du cache de la rubrique contrôles de liste dans le SDK Windows.
+Pour plus d’informations sur la préparation et la maintenance d’un cache, consultez la section relative à la gestion du cache de la rubrique List-View les contrôles dans le SDK Windows.
 
 ## <a name="finding-specific-items"></a>Recherche d’éléments spécifiques
 

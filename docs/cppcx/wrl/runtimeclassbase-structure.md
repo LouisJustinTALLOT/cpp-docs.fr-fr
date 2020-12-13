@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : structure Runtimeclassbase,'
 title: RuntimeClassBase, structure
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce5cf3eb4b352427c61db4998b161a82d4469c44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330750"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase, structure
 
@@ -24,11 +25,11 @@ struct RuntimeClassBase;
 
 ## <a name="remarks"></a>Notes
 
-Utilisé pour détecter les `RuntimeClass` dans la fonction [Make](make-function.md) .
+Utilisé pour détecter `RuntimeClass` dans la fonction [Make](make-function.md) .
 
 **Runtimeclassbase,** est une structure vide.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `RuntimeClassBase`
 
@@ -40,4 +41,4 @@ Utilisé pour détecter les `RuntimeClass` dans la fonction [Make](make-function
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

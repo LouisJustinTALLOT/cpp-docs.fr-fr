@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : afficher des informations de commande dans la barre d’État'
 title: "Comment : afficher les informations sur les commandes dans la barre d'état"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: bff5d5b20ecc9b20b7b1e8335cda34d582441425
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 568e8d356659d5267e8c4947f2981cd6243a7056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330224"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Comment : afficher les informations sur les commandes dans la barre d'état
 
@@ -20,7 +21,7 @@ Lorsque vous exécutez l’Assistant application pour créer la structure de vot
 
 Vous pouvez ajouter à cette aide de la barre d’État en définissant des chaînes d’invite pour les éléments de menu que vous ajoutez au programme. Pour ce faire, fournissez les chaînes d’invite lorsque vous modifiez les propriétés de l’élément de menu dans l’éditeur de menus. Les chaînes que vous définissez sont stockées dans le fichier de ressources de l’application. ils ont les mêmes ID que les commandes qu’ils expliquent.
 
-Par défaut, l’Assistant application ajoute **AFX_IDS_IDLEMESSAGE**, l’ID d’un message standard « prêt », qui s’affiche lorsque le programme attend de nouveaux messages. Si vous spécifiez l’option aide contextuelle dans l’Assistant Application, le message est remplacé par « pour obtenir de l’aide, appuyez sur F1 ».
+Par défaut, l’Assistant application ajoute **AFX_IDS_IDLEMESSAGE**, l’ID d’un message standard « prêt », qui s’affiche lorsque le programme attend de nouveaux messages. Si vous spécifiez l’option aide Context-Sensitive dans l’Assistant Application, le message est remplacé par « pour obtenir de l’aide, appuyez sur F1 ».
 
 ## <a name="see-also"></a>Voir aussi
 

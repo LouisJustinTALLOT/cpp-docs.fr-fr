@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CMonthCalCtrl, classe'
 title: CMonthCalCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: d986aa5f8e232f0ab94858dbdfae5754536ccdb9
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4c4c4684167a9c1c569f69f582688b294ac95233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331595"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 
@@ -238,7 +239,7 @@ Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fen�
 *nID*<br/>
 Spécifie l’ID de contrôle du contrôle Month Calendar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation a réussi ; Sinon, 0.
 
@@ -268,7 +269,7 @@ Récupère la largeur de la bordure du contrôle calendrier du mois en cours.
 int GetCalendarBorder() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la bordure du contrôle, en pixels.
 
@@ -284,7 +285,7 @@ Récupère le nombre de calendriers affichés dans le contrôle calendrier du mo
 int GetCalendarCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de calendriers actuellement affichés dans le contrôle Month Calendar. Le nombre maximal autorisé de calendriers est 12.
 
@@ -305,7 +306,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 *pmcGridInfo*\
 à Pointeur vers une structure [MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) qui reçoit des informations sur le contrôle calendrier du mois en cours. L’appelant est responsable de l’allocation et de l’initialisation de cette structure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -333,7 +334,7 @@ Récupère l’identificateur de calendrier pour le contrôle calendrier du mois
 CALID GetCalID() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une des constantes d' [identificateur de calendrier](/windows/win32/Intl/calendar-identifiers) .
 
@@ -356,7 +357,7 @@ COLORREF GetColor(int nRegion) const;
 *nRegion*<br/>
 Région du contrôle Month Calendar à partir duquel la couleur est récupérée. Pour obtenir la liste des valeurs, consultez le paramètre *nRegion* de [setColor](#setcolor).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) spécifiant la couleur associée à la partie du contrôle Month Calendar, en cas de réussite. Dans le cas contraire, cette fonction membre retourne-1.
 
@@ -368,7 +369,7 @@ Récupère la vue actuellement affichée par le contrôle calendrier du mois en 
 DWORD GetCurrentView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Vue actuelle, qui est indiquée par l’une des valeurs suivantes :
 
@@ -413,7 +414,7 @@ Référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledateti
 *pDateTime*<br/>
 Pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) qui recevra les informations de date actuellement sélectionnées. Ce paramètre doit être une adresse valide et ne peut pas avoir la valeur NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; otherwize 0.
 
@@ -439,7 +440,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 *pbLocal*<br/>
 Pointeur vers une valeur BOOL. Si la valeur est différente de zéro, le paramètre du contrôle ne correspond pas au paramètre dans le panneau de configuration.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur entière qui représente le premier jour de la semaine. Pour plus d’informations sur ce que représentent ces entiers, consultez la **section Notes** .
 
@@ -452,7 +453,7 @@ Cette fonction membre implémente le comportement de la [MCM_GETFIRSTDAYOFWEEK](
 |0|Lundi|
 |1|Mardi|
 |2|Mercredi|
-|3|Jeudi|
+|3|Thursday|
 |4|Vendredi|
 |5|Samedi|
 |6|Dimanche|
@@ -469,7 +470,7 @@ Récupère le nombre maximal de jours en cours qui peuvent être sélectionnés 
 int GetMaxSelCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur entière qui représente le nombre total de jours pouvant être sélectionnés pour le contrôle.
 
@@ -489,7 +490,7 @@ Récupère la largeur maximale de la chaîne « aujourd’hui » pour le contr
 DWORD GetMaxTodayWidth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la chaîne « Today », en pixels.
 
@@ -524,7 +525,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 *pRect*<br/>
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui recevra les informations de rectangle englobant. Ce paramètre doit être une adresse valide et ne peut pas avoir la valeur NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, cette fonction membre retourne une valeur différente de zéro et `lpRect` reçoit les informations de limite applicables. En cas d’échec, la fonction membre retourne 0.
 
@@ -540,7 +541,7 @@ Récupère la vitesse de défilement pour un contrôle Month Calendar.
 int GetMonthDelta() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taux de défilement pour le contrôle Month Calendar. La vitesse de défilement est le nombre de mois pendant lesquels le contrôle déplace son affichage lorsque l’utilisateur clique une fois sur un bouton de défilement.
 
@@ -591,7 +592,7 @@ Valeur spécifiant l’étendue des limites de plage à récupérer. Cette valeu
 |GMR_DAYSTATE|Inclut les mois précédents et de fin de la plage visible qui ne sont affichés que partiellement.|
 |GMR_VISIBLE|Inclut uniquement les mois qui sont entièrement affichés.|
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier qui représente la plage, en mois, fractionnée par les deux limites indiquées par *refMinRange* et *refMaxRange* dans la première et la deuxième version, ou *pMinRange* et *pMaxRange* dans la troisième version.
 
@@ -629,7 +630,7 @@ Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une structure [System
 *pMaxRange*<br/>
 Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) contenant la date à la fin la plus élevée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD qui peut être zéro (aucune limite n’est définie) ou une combinaison des valeurs suivantes qui spécifient des informations de limite.
 
@@ -678,7 +679,7 @@ Pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwin
 *pMaxRange*<br/>
 Pointeur vers une `SYSTEMTIME` structure contenant la date à la fin la plus élevée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -706,7 +707,7 @@ Référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledateti
 *pDateTime*<br/>
 Pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) qui recevra les informations de date. Ce paramètre doit être une adresse valide et ne peut pas avoir la valeur NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -731,7 +732,7 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 *pMCHitTest*<br/>
 Pointeur vers une structure [MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo) contenant des points de test de positionnement pour le contrôle Month Calendar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD. Égal au membre **uHit** de la `MCHITTESTINFO` structure.
 
@@ -747,7 +748,7 @@ Indique si la vue actuelle du contrôle calendrier du mois en cours est la vue d
 BOOL IsCenturyView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la vue actuelle est la vue de siècle ; Sinon, FALSe.
 
@@ -763,7 +764,7 @@ Indique si la vue actuelle du contrôle calendrier du mois en cours est la vue l
 BOOL IsDecadeView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la vue actuelle est la vue la plus décennie ; Sinon, FALSe.
 
@@ -779,7 +780,7 @@ Indique si la vue actuelle du contrôle calendrier du mois en cours est l’affi
 BOOL IsMonthView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la vue actuelle est la vue de mois ; Sinon, FALSe.
 
@@ -795,7 +796,7 @@ Indique si la vue actuelle du contrôle calendrier du mois en cours est la vue Y
 BOOL IsYearView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la vue actuelle est la vue Year ; Sinon, FALSe.
 
@@ -861,7 +862,7 @@ BOOL SetCalID(CALID calid);
 *calid*\
 dans Une des constantes d' [identificateur de calendrier](/windows/win32/Intl/calendar-identifiers) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -891,7 +892,7 @@ Définit le contrôle calendrier du mois en cours pour afficher la vue du siècl
 BOOL SetCenturyView();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -926,7 +927,7 @@ Valeur entière spécifiant la couleur du calendrier mensuel à définir. Cette 
 *ref*<br/>
 Valeur COLORREF pour le nouveau paramètre de couleur pour la partie spécifiée du contrôle Month Calendar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente le paramètre de couleur précédent pour la partie spécifiée du contrôle Month Calendar, en cas de réussite. Sinon, ce message retourne-1.
 
@@ -956,7 +957,7 @@ dans L’une des valeurs suivantes, qui spécifie une vue mensuelle, annuelle, d
 - `MCMV_DECADE`: Vue décennie
 - `MCMV_CENTURY`: Vue Century
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -982,7 +983,7 @@ Référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledateti
 *pDateTime*<br/>
 Pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) qui contient la date à définir comme sélection actuelle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1012,7 +1013,7 @@ Valeur indiquant le nombre d’éléments dans le tableau vers lequel pointe *pS
 *pStates*<br/>
 Pointeur vers un tableau de valeurs [MONTHDAYSTATE](/windows/win32/Controls/monthdaystate) qui définissent la façon dont le contrôle Month Calendar dessine chaque jour dans son affichage. Le type de données MONTHDAYSTATE est un champ de bits, où chaque bit (1 à 31) représente l’état d’un jour dans un mois. Si un bit est activé, le jour correspondant s'affiche en gras ; sinon il s'affiche sans l'accentuation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1032,7 +1033,7 @@ Définit le contrôle calendrier du mois en cours sur la vue décennie.
 BOOL SetDecadeView();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1058,7 +1059,7 @@ Valeur entière représentant le jour à définir comme premier jour de la semai
 *lpnOld*<br/>
 Pointeur vers un entier indiquant le premier jour de la semaine précédemment défini.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le premier jour de la semaine précédent est défini sur une valeur autre que celle de LOCALE_IFIRSTDAYOFWEEK, ce qui correspond au jour indiqué dans le paramètre du panneau de configuration. Dans le cas contraire, cette fonction retourne 0.
 
@@ -1083,7 +1084,7 @@ BOOL SetMaxSelCount(int nMax);
 *nMax*<br/>
 Valeur qui sera définie pour représenter le nombre maximal de jours sélectionnables.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1108,7 +1109,7 @@ int SetMonthDelta(int iDelta);
 *iDelta*<br/>
 Nombre de mois à définir comme taux de défilement du contrôle. Si cette valeur est égale à zéro, le delta du mois est rétabli à la valeur par défaut, qui est le nombre de mois affichés dans le contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taux de défilement précédent. Si la vitesse de défilement n’a pas été définie précédemment, la valeur de retour est 0.
 
@@ -1124,7 +1125,7 @@ Définit le contrôle calendrier du mois en cours pour afficher l’affichage du
 BOOL SetMonthView();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1170,7 +1171,7 @@ Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une structure [System
 *pMaxRange*<br/>
 Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une `SYSTEMTIME` structure contenant la date à la fin la plus élevée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1208,7 +1209,7 @@ Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une structure [System
 *pMaxRange*<br/>
 Pointeur vers un `COleDateTime` objet, un `CTime` objet ou une `SYSTEMTIME` structure contenant la date à la fin la plus élevée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1250,7 +1251,7 @@ Définit le contrôle calendrier du mois en cours sur l’affichage année.
 BOOL SetYearView();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1271,7 +1272,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 *bRepaint*<br/>
 Spécifie si le contrôle doit être repeint. Par défaut, TRUE. Si la valeur est FALSe, aucun redessin ne se produit.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le contrôle Month Calendar est dimensionné à sa valeur minimale ; Sinon, 0.
 
@@ -1292,7 +1293,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 *lpRect*\
 dans Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui définit un rectangle qui contient le nombre souhaité de calendriers.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le paramètre *lpRect* .
 

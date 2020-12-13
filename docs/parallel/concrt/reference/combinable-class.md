@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe combinable'
 title: combinable, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117441be8ff7a54543adb419a1cb908d2eb9bec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331323"
 ---
 # <a name="combinable-class"></a>combinable, classe
 
@@ -73,7 +74,7 @@ Pour plus d’informations, consultez [conteneurs et objets parallèles](../../.
 
 **Espace de noms :** concurrence
 
-## <a name="clear"></a><a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a> effacé
 
 Efface tous les résultats de calcul intermédiaires d’une utilisation précédente.
 
@@ -81,7 +82,7 @@ Efface tous les résultats de calcul intermédiaires d’une utilisation précé
 void clear();
 ```
 
-## <a name="combinable"></a><a name="ctor"></a>combinable
+## <a name="combinable"></a><a name="ctor"></a> combinable
 
 Construit un nouvel objet `combinable`.
 
@@ -113,7 +114,7 @@ Le deuxième constructeur initialise les nouveaux éléments à l’aide du func
 
 Le troisième constructeur est le constructeur de copie.
 
-## <a name="combinable"></a><a name="dtor"></a>~ combinable
+## <a name="combinable"></a><a name="dtor"></a> ~ combinable
 
 Détruit un objet `combinable` .
 
@@ -121,7 +122,7 @@ Détruit un objet `combinable` .
 ~combinable();
 ```
 
-## <a name="combine"></a><a name="combine"></a>Mixer
+## <a name="combine"></a><a name="combine"></a> Mixer
 
 Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni.
 
@@ -138,11 +139,11 @@ Type de l’objet de fonction qui sera appelé pour combiner deux sous-calculs l
 *_FnCombine*<br/>
 Functor utilisé pour combiner les sous-calculs. Sa signature est `T (T, T)` ou `T (const T&, const T&)` , et elle doit être associative et commutative.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat final de la combinaison de tous les sous-calculs privés de thread.
 
-## <a name="combine_each"></a><a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a> combine_each
 
 Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni une fois par sous-calcul local de thread. Le résultat final est accumulé par l’objet de fonction.
 
@@ -159,7 +160,7 @@ Type de l’objet de fonction qui sera appelé pour combiner un sous-calcul loca
 *_FnCombine*<br/>
 Functor utilisé pour combiner un sous-calcul. Sa signature est `void (T)` ou `void (const T&)` , et doit être associative et commutative.
 
-## <a name="local"></a><a name="local"></a>localisé
+## <a name="local"></a><a name="local"></a> localisé
 
 Retourne une référence au sous-calcul thread-Private.
 
@@ -174,11 +175,11 @@ T& local(bool& _Exists);
 *_Exists*<br/>
 Référence à une valeur booléenne. La valeur booléenne référencée par cet argument sera définie sur **`true`** si le sous-calcul existait déjà sur ce thread, et a la valeur **`false`** s’il s’agissait du premier sous-calcul sur ce thread.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au sous-calcul thread-Private.
 
-## <a name="operator"></a><a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a> opérateur =
 
 Assigne à un `combinable` objet à partir d’un autre `combinable` objet.
 
@@ -191,7 +192,7 @@ combinable& operator= (const combinable& _Copy);
 *_Copy*<br/>
 Objet existant `combinable` à copier dans celui-ci.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à cet `combinable` objet.
 

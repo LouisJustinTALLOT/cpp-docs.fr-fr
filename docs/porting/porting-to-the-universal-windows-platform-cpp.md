@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : portage vers le plateforme Windows universelle (C++)'
 title: Portage vers la plateforme Windows universelle (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 7663fbac62687562f09a3a1ed66b8c09b75c51fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5bc8dfdfb44fa59e860a571b119914309e5a660
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331224"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 
@@ -17,13 +18,13 @@ La documentation du Centre de développement Windows contient un guide de portag
 
 Cette rubrique contient les procédures suivantes relatives au portage de code vers la plateforme Windows universelle (UWP).
 
-- [Portage d’une application du Windows Store Windows 8.1 vers UWP](#BK_81StoreApp)
+- [Portage d’une application de Store Windows 8.1 vers UWP](#BK_81StoreApp)
 
 - [Portage d'un composant d'exécution Windows 8.1 vers UWP](#BK_81Component)
 
 Si vous avez une DLL Win32 de bureau classique et que vous souhaitez l’appeler à partir d’une application UWP, c’est également possible. Ces procédures vous permettent de créer une couche d’interface utilisateur UWP pour une application C++ de bureau Windows classique existante ou votre code C++ standard multiplateforme. Consultez [Guide pratique pour utiliser le code C++ existant dans une application de plateforme universelle Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP
 
 Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour qu'elle fonctionne sur la plateforme UWP et sur tout appareil qui exécute Windows 10.  Il est judicieux de commencer par créer le projet avec Visual Studio 2019 en tant que projet Windows 8.1, afin d’éliminer tout problème qui résulte des modifications apportées au compilateur et aux bibliothèques. Une fois cette opération terminée, il existe deux façons de convertir un projet UWP Windows 10. Le moyen le plus simple (comme expliqué dans la procédure suivante) consiste à créer un projet Windows universel et à y copier votre code existant. Si vous utilisiez un projet universel pour la version de bureau de Windows 8.1 et pour Windows Phone 8.1, votre projet commencera avec deux dispositions différentes en XAML, mais finira avec une disposition dynamique unique qui s'adapte à la taille d'affichage.
 
@@ -31,9 +32,9 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
 
 1. Si ce n’est déjà fait, ouvrez votre projet d’application Windows 8.1 dans Visual Studio 2017 et suivez les instructions pour mettre à niveau le fichier projet.
 
-   Vous devez avoir installé les **Outils Windows 8.1 du programme d’installation de Visual Studio**. Si ces outils ne sont pas installés, démarrez le programme d’installation de **Visual Studio** à partir de la fenêtre **Programmes et fonctionnalités**, choisissez **Visual Studio 2017**, puis dans la fenêtre d’installation, choisissez **Modifier**. Recherchez **Outils Windows 8.1**, vérifiez que l’option est sélectionnée, puis choisissez **OK**.
+   Vous devez avoir installé les outils Windows 8.1 dans le programme d’installation **de Visual Studio** . Si ces outils ne sont pas installés, démarrez le programme d’installation de **Visual Studio** à partir de la fenêtre **programmes et fonctionnalités** , sélectionnez **Visual Studio 2017**, puis, dans la fenêtre d’installation, choisissez **modifier**. Recherchez **Windows 8.1 outils**, assurez-vous qu’il est sélectionné, puis cliquez sur **OK**.
 
-1. Ouvrez la fenêtre **Propriétés du projet** et, sous **C++**  > **Général**, affectez à la propriété **Ensemble d’outils de plateforme** la valeur **v141**, ce qui correspond à l’ensemble d’outils pour Visual Studio 2017.
+1. Ouvrez la fenêtre **Propriétés du projet** et, sous **C++** > **Général**, affectez à la propriété **Ensemble d’outils de plateforme** la valeur **v141**, ce qui correspond à l’ensemble d’outils pour Visual Studio 2017.
 
 1. Générez le projet comme projet Windows 8.1 et résolvez les éventuelles erreurs de génération. À ce stade, les erreurs sont probablement dues à des modifications avec rupture dans les outils de génération et les bibliothèques. Pour obtenir une explication détaillée des modifications susceptibles d’affecter votre code, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -43,7 +44,7 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
 
 1. Fermez la solution puis, à l’aide de l’**Explorateur Windows** ou de la ligne de commande, copiez les fichiers de code (avec les extensions .cpp, .h et .xaml) de votre projet Windows 8.1 vers le même dossier que le fichier projet (.vcxproj) du projet que vous avez créé à l’étape 1. Ne copiez pas le fichier Package.appxmanifest et, si vous avez du code distinct pour la version de bureau de Windows 8.1 et pour Windows Phone, choisissez l'une des deux versions à porter en premier (vous devrez effectuer certaines tâches ultérieurement pour adapter l'autre version). Veillez à copier les sous-dossiers et leur contenu. Si vous y êtes invité, choisissez de remplacer les fichiers ayant des noms dupliqués.
 
-1. Rouvrez la solution, puis choisissez **Ajouter** > **Élément existant** dans le menu contextuel du nœud de projet. Sélectionnez tous les fichiers que vous avez copiés, à l'exception de ceux qui font déjà partie du projet.
+1. Rouvrez la solution, puis choisissez **Ajouter** un  >  **élément existant** dans le menu contextuel du nœud du projet. Sélectionnez tous les fichiers que vous avez copiés, à l'exception de ceux qui font déjà partie du projet.
 
    Vérifiez tous les sous-dossiers et veillez à y ajouter également les fichiers.
 
@@ -64,11 +65,11 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-   Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d'autres plateformes non-Windows, vous devez également vous préparer à l'éventualité qu'aucune de ces macros ne soit définie.
+   Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.
 
 1. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.
 
-## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Portage d'un composant d'exécution Windows 8.1 vers UWP
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Portage d’un composant d’exécution Windows 8.1 vers UWP
 
 Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec les applications du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour faire en sorte que le composant ou la DLL fonctionne avec la plateforme UWP et Windows 10. La procédure de base consiste à créer un projet et à y copier votre code.
 
@@ -82,7 +83,7 @@ Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec 
 
 1. Générez le projet et résolvez toutes les erreurs dues à des modifications avec rupture entre les différentes versions du Kit de développement logiciel Windows (Kit SDK Windows).
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 
 Vous pouvez rencontrer différentes erreurs pendant le processus de déplacement de code vers la plateforme UWP. Voici quelques-uns des problèmes que vous pouvez rencontrer.
 

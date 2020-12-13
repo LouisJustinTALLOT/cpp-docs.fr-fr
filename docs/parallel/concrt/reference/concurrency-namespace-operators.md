@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les opérateurs d’espace de noms d’accès concurrentiel
 title: concurrency, opérateur de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c268f823ed0cef9999cfde3eadcbd514614b3d17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331269"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency, opérateur de l’espace de noms
 

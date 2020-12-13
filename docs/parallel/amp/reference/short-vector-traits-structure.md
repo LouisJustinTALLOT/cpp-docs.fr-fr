@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure short_vector_traits'
 title: short_vector_traits Structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc211c8e66cbd31c57655afce22376909cf77530
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329902"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits Structure
 
-short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et du type scalaire d’un type de vecteur court ou d’un type scalaire
+short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et du type scalaire d’un type de vecteur short ou d’un type scalaire
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -105,17 +106,17 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace nom:** Concordrency::graphiques
+**Espace de noms :** Concurrency :: Graphics
 
-## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits Constructeur
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a> short_vector_traits :: short_vector_traits, constructeur
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::taille Constante
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a> short_vector_traits :: Size, constante
 
 ```cpp
 static int const size = 1;

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : paramètres régionaux'
 title: Paramètres régionaux
 ms.date: 04/11/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 660a4fb0103de8c1ac06272c711e02fcd6d12289
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331073"
 ---
 # <a name="locale"></a>Paramètres régionaux
 

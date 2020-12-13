@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des erreurs (CRT)'
 title: Gestion des erreurs (CRT)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4aa81f1152fe991398b38f6b433993aecb8be401
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331144"
 ---
 # <a name="error-handling-crt"></a>Gestion des erreurs (CRT)
 

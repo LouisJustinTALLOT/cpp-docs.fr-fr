@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCVisualManager'
 title: CMFCVisualManager, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -344,12 +345,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: bf6c663b6c841f4bc06255845d924cab58d87f1f
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ae915c74ec97c2e9ec65da2c24674dd38637ba60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331688"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager, classe
 
@@ -392,7 +393,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager :: GetMDITabsBordersSize](#getmditabsborderssize)|Appelé par l’infrastructure pour récupérer la taille de bordure de la fenêtre MDITabs.|
 |[CMFCVisualManager :: GetMenuItemTextColor](#getmenuitemtextcolor)||
 |[CMFCVisualManager :: GetMenuShadowDepth](#getmenushadowdepth)|Retourne une valeur qui détermine la largeur et la hauteur d’une ombre de menu.|
-|[CMFCVisualManager :: GetNcBtnSize](#getncbtnsize)|Appelé par l’infrastructure pour déterminer la taille des boutons système en fonction du gestionnaire visuel actuel. Les boutons système sont les boutons de la légende du cadre principal qui correspondent aux commandes **Fermer**, **réduire**, **agrandir**et **restaurer**.|
+|[CMFCVisualManager :: GetNcBtnSize](#getncbtnsize)|Appelé par l’infrastructure pour déterminer la taille des boutons système en fonction du gestionnaire visuel actuel. Les boutons système sont les boutons de la légende du cadre principal qui correspondent aux commandes **Fermer**, **réduire**, **agrandir** et **restaurer**.|
 |[CMFCVisualManager :: GetPopupMenuBorderSize](#getpopupmenubordersize)|Appelé par l’infrastructure pour récupérer la taille de la bordure d’un menu contextuel.|
 |[CMFCVisualManager :: GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Appelé par l’infrastructure pour récupérer la couleur d’arrière-plan d’une liste de propriétés.|
 |[CMFCVisualManager :: GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Appelé par l’infrastructure pour récupérer la couleur de texte d’une liste de propriétés.|
@@ -447,7 +448,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager :: OnDrawMenuResizeBar](#ondrawmenuresizebar)||
 |[CMFCVisualManager :: OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|Appelé par le Framework lorsqu’il dessine un bouton de défilement de menu.|
 |[CMFCVisualManager :: OnDrawMenuShadow](#ondrawmenushadow)||
-|[CMFCVisualManager :: OnDrawMenuSystemButton](#ondrawmenusystembutton)|Appelée par le Framework lorsqu’il dessine les boutons du système de menus **Fermer**, **réduire**, **agrandir**et **restaurer**.|
+|[CMFCVisualManager :: OnDrawMenuSystemButton](#ondrawmenusystembutton)|Appelée par le Framework lorsqu’il dessine les boutons du système de menus **Fermer**, **réduire**, **agrandir** et **restaurer**.|
 |[CMFCVisualManager :: OnDrawMiniFrameBorder](#ondrawminiframeborder)||
 |[CMFCVisualManager :: OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Appelée par le Framework lorsqu’il dessine le séparateur pour une barre Outlook. Le séparateur est une barre horizontale utilisée pour regrouper les contrôles.|
 |[CMFCVisualManager :: OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Appelée par le Framework lorsqu’il dessine la bordure d’un bouton de page Outlook. Les boutons de la page Outlook s’affichent si le volet barre Outlook contient plus de boutons qu’il ne peut en afficher.|
@@ -481,7 +482,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager :: OnDrawRibbonPanel](#ondrawribbonpanel)|Appelé par le Framework lorsqu’il dessine un panneau de ruban.|
 |[CMFCVisualManager :: OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|Appelé par le Framework lorsqu’il dessine la légende d’un panneau de ruban.|
 |[CMFCVisualManager :: OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Appelée par le Framework lorsqu’il dessine un objet [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) .|
-|[CMFCVisualManager :: OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Appelé par le Framework lorsqu’il dessine un séparateur dans la **barre d’outils accès rapide**d’un ruban.|
+|[CMFCVisualManager :: OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Appelé par le Framework lorsqu’il dessine un séparateur dans la **barre d’outils accès rapide** d’un ruban.|
 |[CMFCVisualManager :: OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|Appelée par le Framework lorsqu’il dessine un frame autour d’une liste de fichiers récents.|
 |[CMFCVisualManager :: OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Appelée par le Framework lorsqu’il dessine le canal d’un objet [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .|
 |[CMFCVisualManager :: OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Appelée par le Framework lorsqu’il dessine le curseur d’un `CMFCRibbonSlider` objet.|
@@ -625,7 +626,7 @@ L’infrastructure appelle cette méthode pour déterminer si les onglets 3D doi
 virtual BOOL AlwaysHighlight3DTabs() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `TRUE` Si les onglets 3D doivent être mis en surbrillance.
 
@@ -692,7 +693,7 @@ dans *&#42;* de capture de données modifiées<br/>
 dans *CRect*<br/>
 dans Valeur *booléenne*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -712,7 +713,7 @@ dans *&#42;* de capture de données modifiées<br/>
 dans *CRect*<br/>
 dans Valeur *booléenne*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -732,7 +733,7 @@ dans *CRect*<br/>
 dans *CMFCButton&#42;*<br/>
 dans *Uint*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -757,7 +758,7 @@ dans *dwFlags*<br/>
 dans *nGlowSize*<br/>
 dans *clrText*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -786,7 +787,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 *pButton*<br/>
 dans Pointeur vers un bouton à masquage automatique.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui spécifie la couleur de texte de *pButton*.
 
@@ -802,7 +803,7 @@ L’infrastructure appelle cette méthode lorsqu’il dessine un bouton de barre
 virtual CSize GetButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) qui contient la taille supplémentaire de la bordure des boutons de la barre d’outils.
 
@@ -823,7 +824,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 *pBar*<br/>
 dans Pointeur vers une barre de légende.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui indique la couleur du texte dans *pBar*.
 
@@ -837,7 +838,7 @@ Substituez cette méthode dans votre classe dérivée pour personnaliser la coul
 virtual CSize GetCaptionButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -847,7 +848,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 virtual int GetDockingPaneCaptionExtraHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -859,7 +860,7 @@ Le Framework appelle cette méthode lorsqu’il dessine un volet ancré et tabul
 virtual int GetDockingTabsBordersSize();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier qui indique la taille de bordure d’un volet ancré et tabulé.
 
@@ -879,7 +880,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 dans *pButton*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -891,7 +892,7 @@ Retourne un pointeur vers l’objet de la [classe CMFCVisualManager](../../mfc/r
 static CMFCVisualManager* GetInstance();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet `CMFCVisualManager`.
 
@@ -907,7 +908,7 @@ L’infrastructure appelle cette méthode pour déterminer la taille de bordure 
 virtual int GetMDITabsBordersSize();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de la bordure de la fenêtre MDITabs.
 
@@ -921,7 +922,7 @@ Substituez cette fonction dans une classe dérivée pour personnaliser la taille
 virtual int GetMenuImageMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -940,7 +941,7 @@ dans *pButton*<br/>
 dans *bHighlighted*<br/>
 dans *bDisabled*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -952,7 +953,7 @@ Récupère la largeur et la hauteur de l’ombre du menu.
 int GetMenuShadowDepth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur et hauteur de l’ombre du menu en pixels.
 
@@ -973,13 +974,13 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 *bSmall*<br/>
 dans Paramètre booléen qui indique si `GetNcBtnSize` doit récupérer la taille d’un bouton système petit ou grand. Si *bSmall* a la valeur true, `GetNcBtnSize` retourne la taille d’un petit bouton système. Dans le cas contraire, elle retourne la taille d’un grand bouton système.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un paramètre [CSize](../../atl-mfc-shared/reference/csize-class.md) qui indique la taille des boutons système.
 
 ### <a name="remarks"></a>Notes
 
-Les boutons système sont les boutons de la légende de la fenêtre frame qui correspondent aux commandes **Fermer**, **réduire**, **agrandir**et **restaurer**. La taille de ces boutons dépend du gestionnaire visuel actuel. Substituez cette méthode si vous souhaitez personnaliser la taille des boutons système dans votre application.
+Les boutons système sont les boutons de la légende de la fenêtre frame qui correspondent aux commandes **Fermer**, **réduire**, **agrandir** et **restaurer**. La taille de ces boutons dépend du gestionnaire visuel actuel. Substituez cette méthode si vous souhaitez personnaliser la taille des boutons système dans votre application.
 
 ## <a name="cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a> CMFCVisualManager :: GetPopupMenuBorderSize
 
@@ -989,7 +990,7 @@ L’infrastructure appelle cette méthode pour obtenir la taille de la bordure d
 virtual int GetPopupMenuBorderSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier qui spécifie la taille de la bordure des menus contextuels.
 
@@ -1003,7 +1004,7 @@ Substituez cette méthode pour personnaliser la taille de bordure des menus cont
 virtual int GetPopupMenuGap() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1020,7 +1021,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 *pPropList*<br/>
 dans Pointeur vers la liste de propriétés que le Framework dessine.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui indique la couleur d’arrière-plan de *pPropList*.
 
@@ -1041,7 +1042,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 *pPropList*<br/>
 dans Pointeur vers la liste de propriétés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui indique la couleur de texte de la liste de propriétés.
 
@@ -1059,7 +1060,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 dans *pHyperLink*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1073,7 +1074,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 dans *CMFCRibbonPanelMenu&#42;*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1083,7 +1084,7 @@ dans *CMFCRibbonPanelMenu&#42;*<br/>
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1093,7 +1094,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1107,7 +1108,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 dans *bDisabled*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1144,7 +1145,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 dans *pStatusBar*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1161,7 +1162,7 @@ virtual int GetShowAllMenuItemsHeight(
 dans *contrôleur de domaine principal*<br/>
 dans *sizeDefault*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1186,7 +1187,7 @@ dans *clrBaseGroupBorder*<br/>
 virtual COLORREF GetSmartDockingHighlightToneColor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1198,7 +1199,7 @@ Retourne un thème utilisé pour afficher les marqueurs d’ancrage intelligents
 virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
@@ -1217,7 +1218,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
 dans *pStatusBar*<br/>
 dans *pPane*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1281,7 +1282,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 dans *CMFCBaseTabCtrl&#42;*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1300,7 +1301,7 @@ dans *CMFCBaseTabCtrl&#42;*<br/>
 dans *entier*<br/>
 dans Valeur *booléenne*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1310,7 +1311,7 @@ dans Valeur *booléenne*<br/>
 int GetTasksPaneGroupCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1320,7 +1321,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 int GetTasksPaneGroupCaptionHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1330,7 +1331,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 int GetTasksPaneGroupCaptionVertOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1340,7 +1341,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 int GetTasksPaneGroupVertOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1350,7 +1351,7 @@ int GetTasksPaneGroupVertOffset() const;
 int GetTasksPaneHorzMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1360,7 +1361,7 @@ int GetTasksPaneHorzMargin() const;
 int GetTasksPaneIconHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1370,7 +1371,7 @@ int GetTasksPaneIconHorzOffset() const;
 int GetTasksPaneIconVertOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1380,7 +1381,7 @@ int GetTasksPaneIconVertOffset() const;
 int GetTasksPaneTaskHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1390,7 +1391,7 @@ int GetTasksPaneTaskHorzOffset() const;
 int GetTasksPaneVertMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1412,7 +1413,7 @@ dans Pointeur vers le bouton de barre d’outils.
 *state*<br/>
 dans État du bouton de la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur de texte de *pButton* lorsqu’il a l’état indiqué par *État*.
 
@@ -1428,7 +1429,7 @@ Substituez cette fonction pour personnaliser la couleur de texte d’un bouton d
 virtual int GetToolBarCustomizeButtonMargin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1438,7 +1439,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 virtual COLORREF GetToolbarDisabledColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1450,7 +1451,7 @@ L’infrastructure appelle cette fonction pour déterminer la couleur de texte d
 virtual COLORREF GetToolbarDisabledTextColor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur utilisée par l’infrastructure pour la couleur de texte des boutons de la barre d’outils qui ne sont pas disponibles.
 
@@ -1464,7 +1465,7 @@ Substituez cette méthode dans un gestionnaire visuel personnalisé pour défini
 virtual COLORREF GetToolbarHighlightColor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1481,7 +1482,7 @@ virtual BOOL GetToolTipInfo(
 dans *paramètres*<br/>
 dans *ndéclarations*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1493,7 +1494,7 @@ Retourne une valeur indiquant si les boutons à masquage automatique se chevauch
 virtual BOOL HasOverlappedAutoHideButtons() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les boutons de masquage automatique se chevauchent ; FALSe dans le cas contraire.
 
@@ -1503,7 +1504,7 @@ TRUE si les boutons de masquage automatique se chevauchent ; FALSe dans le cas 
 BOOL IsAutoDestroy() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1517,7 +1518,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 dans *CMFCDesktopAlertWndButton&#42;*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1529,7 +1530,7 @@ Retourne une valeur indiquant si le gestionnaire visuel actuel dessine des bordu
 virtual BOOL IsDockingTabHasBorder();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le gestionnaire visuel dessine des bordures autour des volets qui sont ancrés et avec onglets ; FALSe dans le cas contraire.
 
@@ -1545,7 +1546,7 @@ Spécifie si le Framework fait le relief des images qui ne sont pas disponibles.
 BOOL IsEmbossDisabledImage() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le Framework est en relief pour les images qui ne sont pas disponibles ; Sinon, 0.
 
@@ -1561,7 +1562,7 @@ Le Framework appelle cette méthode lorsqu’il dessine des images inactives dan
 BOOL IsFadeInactiveImage() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le Framework utilise l’effet d’éclairage lorsqu’il dessine des images inactives dans la barre d’outils ou dans un menu ; Sinon, 0.
 
@@ -1575,7 +1576,7 @@ Vous pouvez activer ou désactiver l’effet d’éclairage en appelant [CMFCVis
 BOOL IsFrameMenuCheckedItems() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1585,7 +1586,7 @@ BOOL IsFrameMenuCheckedItems() const;
 virtual BOOL IsHighlightOneNoteTabs() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1595,7 +1596,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 virtual BOOL IsHighlightWholeMenuItem();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1605,7 +1606,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 virtual BOOL IsLayeredRibbonKeyTip() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1617,7 +1618,7 @@ Indique si les boutons de menu s’affichent en deux dimensions.
 BOOL IsMenuFlatLook() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si les boutons de menu s’affichent en deux dimensions ; Sinon, 0.
 
@@ -1633,7 +1634,7 @@ Indique si le gestionnaire visuel implémente les menus de style Office XP.
 virtual BOOL IsOfficeXPStyleMenus() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le gestionnaire visuel affiche les menus de style Office XP ; Sinon, 0.
 
@@ -1647,7 +1648,7 @@ La [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) appelle ce
 virtual BOOL IsOffsetPressedButton() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1659,7 +1660,7 @@ Indique si le gestionnaire visuel actuel implémente des légendes owner-drawn.
 virtual BOOL IsOwnerDrawCaption();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si toutes les fenêtres frame de l’application ont des légendes owner-draw ; FALSe dans le cas contraire.
 
@@ -1669,7 +1670,7 @@ TRUE si toutes les fenêtres frame de l’application ont des légendes owner-dr
 virtual BOOL IsOwnerDrawMenuCheck();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1681,7 +1682,7 @@ Indique si le gestionnaire visuel affiche les ombres lors du rendu des images en
 BOOL IsShadowHighlightedImage() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro lorsque le gestionnaire visuel affiche des ombres sous les images en surbrillance ; Sinon, 0.
 
@@ -1691,7 +1692,7 @@ Différent de zéro lorsque le gestionnaire visuel affiche des ombres sous les i
 BOOL IsToolbarButtonFillEnabled() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1705,7 +1706,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 dans *CMFCToolBar&#42;*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1715,7 +1716,7 @@ dans *CMFCToolBar&#42;*<br/>
 virtual BOOL IsWindowsThemingSupported() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1826,7 +1827,7 @@ dans Valeur énumérée qui spécifie l’état du bouton.
 *clrText*<br/>
 à Référence à un paramètre [COLORREF](/windows/win32/gdi/colorref) . Il s’agit d’une valeur réservée qui est actuellement inutilisée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
@@ -2424,7 +2425,7 @@ virtual COLORREF OnDrawMenuLabel(
 dans *contrôleur de domaine principal*<br/>
 dans *Rect*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -2544,7 +2545,7 @@ dans Paramètre booléen qui spécifie si le bouton est mis en surbrillance.
 
 ### <a name="remarks"></a>Notes
 
-Les boutons du système de menus sont les boutons **Fermer**, **réduire**, **agrandir**et **restaurer** situés sur la barre de titre.
+Les boutons du système de menus sont les boutons **Fermer**, **réduire**, **agrandir** et **restaurer** situés sur la barre de titre.
 
 L’implémentation par défaut de cette méthode appelle [CDC ::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) avec le type de DFC_CAPTION. Substituez cette méthode dans votre classe Visual Manager dérivée pour personnaliser l’apparence des boutons système.
 
@@ -2675,7 +2676,7 @@ dans Rectangle qui spécifie les limites de la légende.
 *rectButtons*<br/>
 dans Rectangle qui spécifie les limites des boutons de légende.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui indique la couleur de texte de la légende.
 
@@ -2749,7 +2750,7 @@ dans *contrôleur de domaine principal*<br/>
 dans *rectCaption*<br/>
 dans *pPopupWnd*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -2819,7 +2820,7 @@ dans Pointeur vers un groupe de boutons sur le ruban. Le Framework dessine ce gr
 *rectGroup*<br/>
 dans Rectangle qui spécifie les limites du groupe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur réservée. L'implémentation par défaut retourne -1.
 
@@ -2925,7 +2926,7 @@ dans Contexte de dessin.
 *pContextCaption*<br/>
 dans Pointeur vers une barre de légende. Le gestionnaire visuel dessine cet objet de [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre [COLORREF](/windows/win32/gdi/colorref) qui indique la couleur du texte dans la barre de légende.
 
@@ -2970,7 +2971,7 @@ dans Pointeur vers une instance de la `CMFCRibbonTab` classe. L’infrastructure
 *bIsActive*<br/>
 dans Paramètre booléen qui indique si l’onglet est actif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur utilisée pour le texte dans l’onglet de catégorie du ruban.
 
@@ -3258,7 +3259,7 @@ dans Rectangle qui spécifie les limites du panneau.
 *rectCaption*<br/>
 dans Rectangle qui spécifie les limites de la légende pour le panneau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur du texte dans le panneau du ruban.
 
@@ -3506,7 +3507,7 @@ dans Pointeur vers la barre d’État qui contient le volet.
 *pPane*<br/>
 dans Pointeur vers un volet de barre d’État. Le Framework dessine cet objet [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur réservée. L'implémentation par défaut retourne -1.
 
@@ -3536,7 +3537,7 @@ Pointeur vers un objet [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.m
 *rectTab*<br/>
 Rectangle qui spécifie les limites des onglets du ruban.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur réservée. Par défaut, cette méthode retourne-1.
 
@@ -4152,7 +4153,7 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 *rectClient*<br/>
 dans Rectangle qui spécifie les limites de la zone cliente MDI.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur réservée. L’implémentation par défaut retourne FALSe.
 
@@ -4259,7 +4260,7 @@ dans Rectangle qui spécifie les limites de la fenêtre d’onglets.
 *pTabWnd*<br/>
 dans Pointeur vers une fenêtre d’onglets. Le Framework efface un frame pour ce `CMFCBaseTabCtrl` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; FALSe dans le cas contraire.
 
@@ -4327,7 +4328,7 @@ dans Valeur réservée.
 
 L’implémentation par défaut de cette méthode remplit l’arrière-plan de la barre avec la couleur d’arrière-plan 3D de la variable globale `afxGlobalData` . Substituez cette méthode dans un gestionnaire visuel dérivé pour personnaliser l’arrière-plan d’un volet.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser `OnFillBarBackground` dans la `CMFCVisualManager` classe. Cet extrait de code fait partie de l' [exemple de démonstration Outlook](../../overview/visual-cpp-samples.md).
 
@@ -4390,7 +4391,7 @@ dans *bIsDisabled*<br/>
 dans *bHasDropDownArrow*<br/>
 dans *bIsSysButton*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -4416,7 +4417,7 @@ dans Rectangle qui spécifie les limites du bouton.
 *bIsSelected*<br/>
 dans Paramètre booléen qui indique si le bouton est sélectionné.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur du texte du bouton de la barre d’outils.
 
@@ -4476,7 +4477,7 @@ dans Pointeur vers une fenêtre mini frame. L’infrastructure dessine la barre 
 *bActive*<br/>
 dans Paramètre booléen qui indique si la fenêtre est active.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur utilisée pour remplir l’arrière-plan de la barre de légende.
 
@@ -4584,7 +4585,7 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 *pButton*<br/>
 dans Pointeur vers un objet [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . L’infrastructure remplit l’intérieur du bouton du ruban.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur du texte du bouton du ruban spécifié par *pButton* si le bouton du ruban prend en charge le texte. Valeur-1 si le texte n’est pas valide pour le bouton du ruban.
 
@@ -4662,7 +4663,7 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 *pButton*<br/>
 dans Pointeur vers un objet de [classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . L’infrastructure remplit ce bouton de ruban.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur du texte du bouton du ruban spécifié par *pButton* si le bouton du ruban prend en charge le texte. Valeur-1 si le texte n’est pas valide pour le bouton du ruban.
 
@@ -4892,7 +4893,7 @@ virtual BOOL OnNcActivate(
 dans *pwnd*<br/>
 dans *bActive*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -4918,7 +4919,7 @@ dans Liste de boutons système. Ils sont également appelés boutons de légende
 *rectRedraw*<br/>
 dans Rectangle qui spécifie les limites de la zone non cliente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur réservée. L’implémentation par défaut retourne FALSe.
 
@@ -4944,7 +4945,7 @@ dans Pointeur vers la fenêtre avec la région qui a changé.
 *sizeWindow*<br/>
 dans Taille de la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; FALSe dans le cas contraire.
 
@@ -4982,7 +4983,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 dans *couleur*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 

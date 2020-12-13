@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CObList'
 title: CObList (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: a13363ef9b200051c26781ab6e9870a10de06d88
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: edfa476780e07b41f4f1e0abede24244ad837578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331457"
 ---
 # <a name="coblist-class"></a>CObList (classe)
 
@@ -128,7 +129,7 @@ Pour plus d’informations sur l’utilisation de `CObList` , consultez l’arti
 
 `CObList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll. h
 
@@ -149,7 +150,7 @@ void AddHead(CObList* pNewList);
 *pNewList*<br/>
 Pointeur vers une autre `CObList` liste. Les éléments de *pNewList* seront ajoutés à cette liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première version retourne la valeur de POSITION de l’élément qui vient d’être inséré.
 
@@ -195,7 +196,7 @@ void AddTail(CObList* pNewList);
 *pNewList*<br/>
 Pointeur vers une autre `CObList` liste. Les éléments de *pNewList* seront ajoutés à cette liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première version retourne la valeur de POSITION de l’élément qui vient d’être inséré.
 
@@ -276,7 +277,7 @@ Pointeur d’objet à rechercher dans cette liste.
 *startAfter*<br/>
 Position de départ de la recherche.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si l’objet est introuvable.
 
@@ -310,13 +311,13 @@ POSITION FindIndex(INT_PTR nIndex) const;
 *nIndex*<br/>
 Index de base zéro de l’élément de liste à trouver.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si *nIndex* est trop grand. (L’infrastructure génère une assertion si *nIndex* est négatif.)
 
 ### <a name="remarks"></a>Notes
 
-Il démarre une analyse séquentielle à partir du début de la liste, en arrêtant sur le *n*ième élément.
+Il démarre une analyse séquentielle à partir du début de la liste, en arrêtant sur le *n* ième élément.
 
 Le tableau suivant présente d’autres fonctions membres similaires à `CObList::FindIndex` .
 
@@ -345,7 +346,7 @@ const CObject*& GetAt(POSITION position) const;
 *position*<br/>
 Valeur de POSITION retournée par un `GetHeadPosition` `Find` appel de fonction membre ou précédent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez la description de la valeur de retour pour [GetHead](#gethead).
 
@@ -359,8 +360,8 @@ Le tableau suivant présente d’autres fonctions membres similaires à `CObList
 
 |Classe|Fonction membre|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GetAt (** *position position* **) const ;**<br /><br /> **void \*& GetAt (position position** *position* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt (** *position position* **) const ;**<br /><br /> **CString& GetAt (POSITION position** *position* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GetAt (** *position position* **) const ;**<br /><br /> **void \*& GetAt (position position**  **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt (** *position position* **) const ;**<br /><br /> **CString& GetAt (POSITION position**  **);**|
 
 ### <a name="example"></a>Exemple
 
@@ -374,7 +375,7 @@ Obtient le nombre d’éléments de cette liste.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur entière contenant le nombre d’éléments.
 
@@ -400,7 +401,7 @@ CObject*& GetHead();
 const CObject*& GetHead() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la liste est accessible via un pointeur vers `const CObList` , `GetHead` retourne un `CObject` pointeur. Cela permet d’utiliser la fonction uniquement sur le côté droit d’une instruction d’assignation et de protéger ainsi la liste contre toute modification.
 
@@ -433,7 +434,7 @@ Obtient la position de l’élément head de cette liste.
 POSITION GetHeadPosition() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si la liste est vide.
 
@@ -464,7 +465,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 *rPosition*<br/>
 Référence à une valeur de POSITION retournée par un `GetNext` `GetHeadPosition` appel de fonction membre précédent, ou autre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez la description de la valeur de retour pour [GetHead](#gethead).
 
@@ -515,7 +516,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 *rPosition*<br/>
 Référence à une valeur de POSITION retournée par un `GetPrev` appel de fonction membre ou précédent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez la description de la valeur de retour pour [GetHead](#gethead).
 
@@ -558,7 +559,7 @@ Retourne le nombre d’éléments de liste.
 INT_PTR GetSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d'éléments dans la liste.
 
@@ -588,7 +589,7 @@ CObject*& GetTail();
 const CObject*& GetTail() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez la description de la valeur de retour pour [GetHead](#gethead).
 
@@ -617,7 +618,7 @@ Obtient la position de l’élément de fin de cette liste ; **Null** si la lis
 POSITION GetTailPosition() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si la liste est vide.
 
@@ -659,7 +660,7 @@ Le tableau suivant présente d’autres fonctions membres similaires à `CObList
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Position InsertAfter (** *position position* **, void** <strong>\*</strong> `newElement` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (** *position position* **, const CString&** `newElement` **);**<br /><br /> **Position InsertAfter (** *position position* **, LPCTSTR** `newElement` **);**|
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui est identique au paramètre *position* .
 
@@ -696,7 +697,7 @@ Valeur de POSITION retournée par un `GetNext` `GetPrev` appel de fonction membr
 *newElement*<br/>
 Pointeur d’objet à ajouter à cette liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si la liste est vide.
 
@@ -730,7 +731,7 @@ Indique si cette liste ne contient aucun élément.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si cette liste est vide ; Sinon, 0.
 
@@ -822,7 +823,7 @@ Supprime l’élément de l’en-tête de la liste et retourne un pointeur vers 
 CObject* RemoveHead();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CObject`Pointeur précédemment à l’en-tête de la liste.
 
@@ -851,7 +852,7 @@ Supprime l’élément de la fin de la liste et retourne un pointeur vers celui-
 CObject* RemoveTail();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet qui était à la fin de la liste.
 

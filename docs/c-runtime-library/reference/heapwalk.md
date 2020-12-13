@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _heapwalk'
 title: _heapwalk
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08d877757a443a52a94952032291e69f3466f007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332782"
 ---
 # <a name="_heapwalk"></a>_heapwalk
 
@@ -52,11 +53,11 @@ int _heapwalk( _HEAPINFO *entryinfo );
 *entryinfo*<br/>
 Mémoire tampon destinée à contenir les informations relatives au tas.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_heapwalk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
 
-|Valeur de retour|Signification|
+|Valeur retournée|Signification|
 |-|-|
 |**_HEAPBADBEGIN**| Informations d’en-tête initiales non valides ou introuvables.|
 |**_HEAPBADNODE**| Tas endommagé ou nœud incorrect trouvé.|
@@ -69,7 +70,7 @@ En outre, si une erreur se produit, **_heapwalk** affecte à **errno** la valeur
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_heapwalk** permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, en parcourant une entrée par appel, et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le type **_HEAPINFO** , défini dans malloc. h, contient les éléments suivants.
+La fonction **_heapwalk** permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, en parcourant une entrée par appel, et retourne un pointeur vers une structure de type **_HEAPINFO** qui contient des informations sur l’entrée suivante du tas. Le type de **_HEAPINFO** , défini dans malloc. h, contient les éléments suivants.
 
 |Champ|Signification|
 |-|-|
@@ -77,19 +78,19 @@ La fonction **_heapwalk** permet de déboguer les problèmes liés au tas dans l
 |`size_t _size`|Taille de l’entrée du tas.|
 |`int _useflag`|Indicateur qui indique si l’entrée du tas est en cours d’utilisation.|
 
-Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le champ **_size** et définit le champ **_useflag** sur **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans malloc. h). Pour obtenir ces informations sur la première entrée du tas, transmettez **_heapwalk** un pointeur vers une structure **_HEAPINFO** dont le membre **_pentry** a la **valeur null**. Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** sur **ENOSYS**.
+Un appel à **_heapwalk** qui retourne **_HEAPOK** stocke la taille de l’entrée dans le champ **_size** et définit le champ **_useflag** sur **_FREEENTRY** ou **_USEDENTRY** (les deux sont des constantes définies dans malloc. h). Pour obtenir ces informations sur la première entrée dans le tas, transmettez **_heapwalk** un pointeur vers une structure **_HEAPINFO** dont le membre **_pentry** a la **valeur null**. Si le système d’exploitation ne prend pas en charge **_heapwalk**(par exemple, Windows 98), la fonction retourne **_HEAPEND** et définit **errno** sur **ENOSYS**.
 
 Cette fonction valide son paramètre. Si *entryinfo* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_HEAPBADPTR**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_heapwalk.c

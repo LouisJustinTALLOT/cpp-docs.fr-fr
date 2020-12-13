@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : __int8, __int16, __int32, __int64'
 title: __int8, __int16, __int32, __int64
 ms.date: 10/09/2018
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: 7888a282fffbaa2a23783c3875e02838fd0b1826
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8dddb8dc63b8aa9898b78ee02ea2dc904b362442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332507"
 ---
 # <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
 **Spécifique à Microsoft**
 
-Prise en charge des fonctionnalités Microsoft C/C++ pour les types d'entiers dimensionnés. Vous pouvez déclarer des variables de type entier 8, 16, 32 ou 64 bits à l’aide du **`__intN`** spécificateur de type, où ***`N`*** est 8, 16, 32 ou 64.
+Prise en charge des fonctionnalités Microsoft C/C++ pour les types d'entiers dimensionnés. Vous pouvez déclarer des variables de type entier 8, 16, 32 ou 64 bits à l’aide du **`__intN`** spécificateur de type, où * *_`N`_* _ est 8, 16, 32 ou 64.
 
 L'exemple suivant déclare une variable pour chacun de ces types d'entiers dimensionnés :
 
@@ -44,7 +45,7 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Les types **`__int8`** , **`__int16`** et **`__int32`** sont des synonymes des types ANSI qui ont la même taille, et sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le **`__int8`** type de données est synonyme de type **`char`** , **`__int16`** est synonyme de type **`short`** et **`__int32`** est synonyme de type **`int`** . Le **`__int64`** type est synonyme de type **`long long`** .
+Les types _ * `__int8` * *, **`__int16`** et **`__int32`** sont des synonymes des types ANSI ayant la même taille, et sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le **`__int8`** type de données est synonyme de type **`char`** , **`__int16`** est synonyme de type **`short`** et **`__int32`** est synonyme de type **`int`** . Le **`__int64`** type est synonyme de type **`long long`** .
 
 Pour la compatibilité avec les versions antérieures, **`_int8`** ,, **`_int16`** **`_int32`** et **`_int64`** sont des synonymes de **`__int8`** , **`__int16`** , et, **`__int32`** **`__int64`** sauf si l’option de compilateur [ `/Za` \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _eof'
 title: _eof
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98e277c11755d6c3c7cb34a426e006a66f503193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332825"
 ---
 # <a name="_eof"></a>_eof
 
@@ -55,11 +56,11 @@ int _eof(
 *FD*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_eof** retourne 1 si la position actuelle est la fin du fichier, ou 0 si ce n’est pas le cas. Une valeur de retour de-1 indique une erreur ; dans ce cas, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EBADF**, ce qui indique un descripteur de fichier non valide.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_eof** détermine si la fin du fichier associé à *FD* a été atteinte.
 
@@ -67,13 +68,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_eof.c
@@ -128,7 +129,7 @@ Number of bytes read = 29
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)<br/>
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

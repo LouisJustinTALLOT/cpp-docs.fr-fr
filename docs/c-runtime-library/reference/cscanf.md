@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : cscanf'
 title: cscanf
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - cscanf function
 ms.assetid: 51aa2da2-0d53-4272-b510-f3eabf049ea7
-ms.openlocfilehash: dac19465145b2cae6c5c46327a3946a62ec58eae
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9f950dc89e29bcb87bdbfc6dcb3b72aa07f69017
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332909"
 ---
 # <a name="cscanf"></a>cscanf
 

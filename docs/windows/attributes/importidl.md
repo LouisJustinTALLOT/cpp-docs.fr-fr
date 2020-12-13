@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : importidl'
 title: importidl (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b10caa9f4b1467727c70b6d968ca6aa33b58da0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329877"
 ---
 # <a name="importidl"></a>importidl
 
@@ -43,14 +44,14 @@ Vous souhaiterez peut-être utiliser **importidl**, par exemple, si vous souhait
 [importidl("import.idl")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|N'importe où|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

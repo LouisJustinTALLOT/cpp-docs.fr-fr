@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _isctype, iswctype, _isctype_l, _iswctype_l'
 title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2b8bd10cd4240e4382d17cb8028589ddf4dd8b2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332675"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -82,7 +83,7 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *DESC*<br/>
@@ -91,7 +92,7 @@ Propriété à rechercher. Cette valeur est généralement récupérée à l’a
 *locale*<br/>
 Paramètres régionaux à utiliser pour les tests dépendant des paramètres régionaux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_isctype** et **iswctype** retournent une valeur différente de zéro si *c* a la propriété spécifiée par *desc* dans les paramètres régionaux actuels ou 0 dans le cas contraire. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -104,7 +105,7 @@ Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n�
 |n/a|**_isctype**|n/a|**_iswctype**|
 |n/a|**_isctype_l**|n/a|**_iswctype_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -125,6 +126,6 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _except_handler3'
 title: _except_handler3
 ms.date: 11/04/2016
 api_name:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 5e1dbab97e0f193d4ff59c19229d2c00e2cd7d6a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6253152559516ea7162f887618df0bcbb4bc8ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331131"
 ---
 # <a name="_except_handler3"></a>_except_handler3
 
@@ -49,16 +50,16 @@ int _except_handler3(
 *exception_record*<br/>
 [in] Informations sur l’exception spécifique.
 
-*registration*<br/>
+*abonnement*<br/>
 [in] Enregistrement qui indique la table d’étendue qui doit être utilisée pour rechercher le gestionnaire d’exceptions.
 
 *context*<br/>
 [in] Réservée.
 
-*dispatcher*<br/>
+*répartiteur*<br/>
 [in] Réservée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si une exception doit être écartée, retourne `DISPOSITION_DISMISS`. Si l'exception doit être montée d'un niveau aux gestionnaires d'exceptions d'encapsulation, retourne `DISPOSITION_CONTINUE_SEARCH`.
 
@@ -68,4 +69,4 @@ Si cette méthode trouve un gestionnaire d'exceptions approprié, l'exception es
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+[Référence de fonction alphabétique](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

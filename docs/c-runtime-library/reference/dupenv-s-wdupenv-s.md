@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _dupenv_s, _wdupenv_s'
 title: _dupenv_s, _wdupenv_s
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3163645b83ec701478cca76d98fe5e17acdc86d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332880"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -70,7 +71,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon pour stocker la valeur de la variable.
 
 *numberOfElements*<br/>
@@ -79,7 +80,7 @@ Taille de la *mémoire tampon*.
 *argument*<br/>
 Nom de la variable d'environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
@@ -87,7 +88,7 @@ Ces fonctions valident leurs paramètres ; Si *buffer* ou *varname* a la **vale
 
 Si ces fonctions ne peuvent pas allouer suffisamment de mémoire, elles définissent la valeur de *buffer* à **null** et *NumberOfElements* sur 0, et retournent **ENOMEM**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_dupenv_s** recherche la liste de variables d’environnement pour *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. L’adresse et la longueur de la mémoire tampon sont retournées dans *buffer* et *NumberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** offre une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 

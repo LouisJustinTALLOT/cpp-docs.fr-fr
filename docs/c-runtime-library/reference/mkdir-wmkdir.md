@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mkdir, _wmkdir'
 title: _mkdir, _wmkdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75be13432a5ba0cdc2aa47d2c0e8cbb35e8f982e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330981"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -67,7 +68,7 @@ int _wmkdir(
 *dirname*<br/>
 Chemin du nouveau répertoire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. En cas d’erreur, la fonction retourne-1 et définit **errno** comme suit.
 
@@ -77,7 +78,7 @@ Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. 
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mkdir** crée un répertoire avec le dirname spécifié *.* **_mkdir** ne pouvez créer qu’un seul répertoire par appel, donc seul le dernier composant de *dirname* peut nommer un nouveau répertoire. **_mkdir** ne traduit pas les délimiteurs de chemin. Dans Windows NT, la barre oblique inverse (\\) et la barre oblique (/) sont des délimiteurs de chemin valides dans les chaînes de caractères au sein des routines d’exécution.
 
@@ -104,7 +105,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_makedir.c

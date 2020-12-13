@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Guide de Portage : Spy + +'
 title: 'Guide du portage : Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 6f63f082d96f33246592b0e7f39b6788417f8a32
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c417a6f313ba6f77e0330bd9511b40c8e1285b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331265"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -41,7 +42,7 @@ verstamp.h est l'un des fichiers qui n'a pas été trouvé dans Spy++. En effect
 
 Pour rechercher un symbole dans les fichiers Include disponibles, le plus simple est d’utiliser la commande **Rechercher dans les fichiers** (**Ctrl**+**Maj**+**F**) et de choisir **Dossiers Include Visual C++**. Nous avons trouvé le symbole dans ntverp.h. Nous avons remplacé le fichier include verstamp.h par ntverp.h, ce qui a résolu l'erreur.
 
-## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a>Étape 3. Paramètre OutputFile de l'éditeur de liens
+## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> Étape 3. Paramètre OutputFile de l'éditeur de liens
 
 Certains fichiers des anciens projets se trouvent parfois à des emplacements non standard, ce qui peut engendrer des problèmes après la mise à niveau. Dans ce cas, nous devons ajouter `$(SolutionDir)` au chemin **Include** défini dans les propriétés du projet pour que Visual Studio retrouve les fichiers d’en-tête situés dans ces dossiers particuliers au lieu d’être dans un des dossiers du projet.
 
@@ -53,9 +54,9 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 
 **Link.OutputFile** est la sortie de build (EXE ou DLL, par exemple). Sa valeur est généralement construite à partir de `$(TargetDir)$(TargetName)$(TargetExt)`, qui indique respectivement le chemin, le nom de fichier et l’extension. C'est une erreur courante lors de la migration de projets de l'ancien outil de génération de projets Visual C++ (vcbuild.exe) vers le nouvel outil de génération (MSBuild.exe). Étant donné que ce nouvel outil de génération a été introduit dans Visual Studio 2010, vous risquez de rencontrer ce problème quand vous migrez un projet d'une version antérieure à 2010 vers la version 2010 ou ultérieure. Le problème de base est que l’Assistant Migration de projet ne met pas à jour la valeur **Link. OutputFile** , car il n’est pas toujours possible de déterminer la valeur qui doit être basée sur les autres paramètres du projet. Par conséquent, vous devez généralement la définir manuellement. Pour plus d’informations, consultez ce [billet](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) du blog Visual C++.
 
-Dans cet exemple, la propriété **Link.OutputFile** dans le projet converti avait la valeur .\Debug\Spyxx.exe et la valeur .\Release\Spyxx.exe pour le projet Spy++, selon la configuration choisie. La meilleure solution consiste simplement à remplacer ces valeurs codées en dur par `$(TargetDir)$(TargetName)$(TargetExt)` pour **toutes les configurations**. Si cela ne fonctionne pas, vous pouvez les personnaliser à partir de là, ou modifier les propriétés dans la section **général** où ces valeurs sont définies (les propriétés sont le **Répertoire de sortie**, le nom de la **cible**et l’extension de la **cible**. N’oubliez pas que, si la propriété que vous affichez utilise des macros, vous pouvez choisir **Modifier** dans la liste déroulante pour afficher une boîte de dialogue qui montre la chaîne finale obtenue après les substitutions de macros. Vous pouvez afficher toutes les macros disponibles et leurs valeurs actuelles en sélectionnant le bouton **Macros**.
+Dans cet exemple, la propriété **Link.OutputFile** dans le projet converti avait la valeur .\Debug\Spyxx.exe et la valeur .\Release\Spyxx.exe pour le projet Spy++, selon la configuration choisie. La meilleure solution consiste simplement à remplacer ces valeurs codées en dur par `$(TargetDir)$(TargetName)$(TargetExt)` pour **toutes les configurations**. Si cela ne fonctionne pas, vous pouvez les personnaliser à partir de là, ou modifier les propriétés dans la section **général** où ces valeurs sont définies (les propriétés sont le **Répertoire de sortie**, le nom de la **cible** et l’extension de la **cible**. N’oubliez pas que, si la propriété que vous affichez utilise des macros, vous pouvez choisir **Modifier** dans la liste déroulante pour afficher une boîte de dialogue qui montre la chaîne finale obtenue après les substitutions de macros. Vous pouvez afficher toutes les macros disponibles et leurs valeurs actuelles en sélectionnant le bouton **Macros**.
 
-## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a>Étape 4. Mise à jour de la version cible de Windows
+## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> Étape 4. Mise à jour de la version cible de Windows
 
 L'erreur suivante indique que la version WINVER n'est plus prise en charge dans MFC. La version WINVER pour Windows XP est 0x0501.
 
@@ -81,7 +82,7 @@ Nous allons définir WINVER sur Windows 7. Il est plus facile de lire le code u
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7
 ```
 
-## <a name="step-5-linker-errors"></a><a name="linker_errors"></a>Étape 5. Erreurs de l'éditeur de liens
+## <a name="step-5-linker-errors"></a><a name="linker_errors"></a> Étape 5. Erreurs de l'éditeur de liens
 
 Grâce aux modifications apportées, le projet SpyHk (DLL) a pu être généré, mais une erreur d'éditeur de liens s'est produite.
 
@@ -98,7 +99,7 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
 
 La génération et la liaison du projet DLL en C, SpyHK.dll, s'effectuent maintenant sans erreur.
 
-## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a>Étape 6. Autres fichiers d'en-tête obsolètes
+## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> Étape 6. Autres fichiers d'en-tête obsolètes
 
 À ce stade, nous commençons à travailler sur le projet exécutable principal, Spyxx.
 
@@ -106,7 +107,7 @@ Deux autres fichiers include n'ont pas pu être trouvés : ctl3d.h et penwin.h.
 
 Dans un projet où il y a beaucoup d’erreurs de compilation à éliminer progressivement, il n’est pas réaliste de rechercher toutes les utilisations d’une API obsolète au moment même où vous supprimez la directive `#include`. Nous ne l'avons pas détecté immédiatement, mais plus tard, quand une erreur a été signalée parce que WM_DLGBORDER n'était pas défini. En fait, c'est l'un des nombreux autres symboles non définis provenant de ctl3d.h. Ayant déterminé que le symbole concernait une API obsolète, nous avons supprimé toutes les références à cette API dans le code.
 
-## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a>Étape 7. Mise à jour de l'ancien code iostreams
+## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> Étape 7. Mise à jour de l'ancien code iostreams
 
 L'erreur suivante est courante avec l'ancien code C++ qui utilise iostreams.
 
@@ -254,7 +255,7 @@ La raison pour laquelle elle n'est pas appelée est que le littéral de chaîne 
 
 Ce type de conversion était autorisé dans l'ancien compilateur, moins strict, mais les modifications récentes de mise en conformité du compilateur imposent une syntaxe de code correcte.
 
-## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a>Étape 8. Conversions plus strictes du compilateur
+## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> Étape 8. Conversions plus strictes du compilateur
 
 Nous avons également de nombreuses erreurs comme celles-ci :
 
@@ -294,7 +295,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 Étant donné qu’il y a environ dix occurrences de cette fonction dans différentes classes dérivées de CWnd, il est utile d’utiliser **atteindre la définition** (clavier : **F12**) et **atteindre la déclaration** (clavier : **CTRL** + **F12**) quand le curseur se trouve sur la fonction dans l’éditeur pour les localiser et y accéder à partir de la fenêtre de l’outil **Rechercher un symbole** . La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.
 
-## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a>Étape 9. Modifications MFC
+## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a> Étape 9. Modifications MFC
 
 L'erreur suivante est également liée à un type de déclaration qui a changé et se produit aussi dans une macro.
 
@@ -316,7 +317,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
 
 À ce stade, nous sommes en mesure de compiler le projet. Il nous reste toutefois quelques avertissements à traiter, ainsi que certaines étapes facultatives de la mise à niveau à voir, notamment la conversion de MBCS en Unicode ou l'amélioration de la sécurité à l'aide des fonctions CRT sécurisées.
 
-## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a>Étape 10. Traitement des avertissements du compilateur
+## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> Étape 10. Traitement des avertissements du compilateur
 
 Pour obtenir une liste complète des avertissements, vous devez effectuer une régénération globale de la solution (avec **Régénérer tout**) plutôt qu’une génération ordinaire. Ainsi, vous êtes sûr que tous les éléments déjà compilés seront recompilés, les rapports d’avertissements étant créés uniquement pour la compilation en cours. L'autre question est de savoir si nous acceptons le niveau d'avertissement actuel ou si nous utilisons un niveau d'avertissement plus élevé.  Si l'opération de portage implique une grande quantité de code, surtout s'il s'agit de code écrit il y a longtemps, il peut être utile de choisir un niveau d'avertissement plus élevé.  Vous pouvez aussi démarrer avec le niveau d'avertissement par défaut, puis augmenter le niveau d'avertissement quand vous avez besoin d'obtenir tous les avertissements. Si vous utilisez `/Wall`, des avertissements sont inclus dans les fichiers d’en-tête système. C’est pourquoi beaucoup d’utilisateurs utilisent `/W4` pour obtenir le maximum d’avertissements sur leur code sans recevoir les avertissements relatifs aux en-têtes système. Si vous souhaitez afficher les avertissements en tant qu’erreurs, ajoutez l’option `/WX`. Ces paramètres se trouvent dans la section **C/C++** de la boîte de dialogue **Propriétés du projet** .
 
@@ -500,7 +501,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 Le problème se produit lorsqu’une variable a été déclarée pour la première fois **`extern`** , puis déclarée ultérieurement **`static`** . Les significations de ces deux spécificateurs de classe de stockage s'excluent mutuellement, mais cela est autorisé en tant qu'extension Microsoft. Pour garantir la portabilité du code vers d’autres compilateurs ou compiler le code avec `/Za` (compatibilité ANSI), il faudrait modifier les déclarations pour faire correspondre les spécificateurs de classe de stockage.
 
-## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a>Étape 11. Portage de MBCS vers Unicode
+## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> Étape 11. Portage de MBCS vers Unicode
 
 Notez que, dans l'univers Windows, le terme Unicode désigne généralement UTF-16. D'autres systèmes d'exploitation tels que Linux utilisent UTF-8, ce qui n'est pas le cas de Windows en général. La version MBCS de MFC était dépréciée dans Visual Studio 2013 et 2015, mais elle ne l’est plus dans Visual Studio 2017. Si vous utilisez Visual Studio 2013 ou 2015, avant de procéder au portage du code MBCS vers Unicode UTF-16, nous pouvons éliminer temporairement les avertissements signalant que MBCS est dépréciée, afin d’effectuer d’autres tâches ou de reporter le portage à un autre moment. Le code actuel utilise MBCS. Pour continuer à l’utiliser, nous devons installer la version ANSI/MBCS de MFC. Comme la bibliothèque MFC, qui est relativement volumineuse, ne fait pas partie de l’installation **Développement Desktop en C++** de Visual Studio par défaut, elle doit être sélectionnée dans les composants facultatifs proposés dans le programme d’installation. Consultez [MFC MBCS DLL, complément](../mfc/mfc-mbcs-dll-add-on.md). Une fois que vous avez téléchargé et redémarré Visual Studio, vous pouvez compiler et lier à la version MBCS de MFC, mais pour vous débarrasser des avertissements relatifs à MBCS si vous utilisez Visual Studio 2013 ou 2015, vous devez également ajouter NO_WARN_MBCS_MFC_DEPRECATION à votre liste de macros prédéfinies dans la section du **préprocesseur** des propriétés du projet ou au début de votre fichier d’en-tête *stdafx. h* ou d’un autre fichier d’en-tête commun.
 
@@ -616,7 +617,7 @@ En guise de vérification de notre travail, nous devons réinitialiser le **jeu 
 
 Sur l'ensemble des tâches réalisées sur cette solution Spy++, la conversion du code en Unicode a demandé environ deux jours de travail à un développeur C++ de niveau intermédiaire, sans compter le temps consacré aux nouveaux tests.
 
-## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a>Étape 12. Portage pour utiliser les fonctions CRT sécurisées
+## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> Étape 12. Portage pour utiliser les fonctions CRT sécurisées
 
 La prochaine étape est le portage du code pour utiliser les versions sécurisées (c’est-à-dire les versions avec le suffixe **_s**) des fonctions CRT. Dans ce cas, la stratégie globale consiste à remplacer la fonction par la version **_s**, puis généralement à ajouter les paramètres supplémentaires requis pour la taille de mémoire tampon. Le plus souvent, cette opération est simple, car la taille est connue. Dans d’autres cas, lorsque la taille n’est pas immédiatement disponible, il est nécessaire d’ajouter des paramètres supplémentaires à la fonction qui utilise la fonction CRT, ou peut-être d’examiner l’utilisation de la mémoire tampon de destination et de connaître les limites de taille appropriées.
 
@@ -634,7 +635,7 @@ Voici quelques cas courants : quand `memcpy` est remplacé par `memcpy_s`, il fa
 
 Avec ces techniques, il a fallu environ une demi-journée pour convertir le code pour utiliser les fonctions CRT sécurisées. Si vous aviez choisi de ne pas utiliser les surcharges de modèles et d'ajouter manuellement les paramètres de taille, il aurait probablement fallu deux ou trois fois plus de temps.
 
-## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a>Étape 13. /Zc:forScope- est déconseillé.
+## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> Étape 13. /Zc:forScope- est déconseillé.
 
 Depuis Visual C++ 6.0, le compilateur est conforme à la norme actuelle, qui limite la portée des variables déclarées dans une boucle à la portée de la boucle elle-même. L’option de compilateur [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Conformité forcée dans la portée d’une boucle For** dans les propriétés du projet) détermine si cela est signalé comme une erreur. Nous devons mettre à jour notre code pour le rendre conforme et ajouter des déclarations en dehors de la boucle. Pour éviter d’effectuer ces modifications dans le code, vous pouvez assigner la valeur `No (/Zc:forScope-)` à ce paramètre dans la section **Langage** des propriétés du projet C++. Toutefois, si `/Zc:forScope-` est supprimé dans une version ultérieure de Visual C++, vous devrez modifier votre code pour le rendre conforme à la norme.
 

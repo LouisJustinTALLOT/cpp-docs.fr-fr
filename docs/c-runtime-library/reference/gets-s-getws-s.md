@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gets_s, _getws_s'
 title: gets_s, _getws_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: b01456d3ed37c34dbc10980ebdfbe008e27f624a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 17120283019a8065be9663a92541e510632a3626
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332806"
 ---
 # <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
@@ -71,17 +72,17 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour une chaîne entrée.
 
 *Taille en caractères*<br/>
 Taille de la mémoire tampon.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la *mémoire tampon* en cas de réussite. Un pointeur **NULL** indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](ferror.md) ou [feof](feof.md) pour déterminer laquelle des deux s’est produite.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **gets_s** lit une ligne dans le flux d’entrée standard **stdin** et la stocke dans la *mémoire tampon*. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). **gets_s** remplace ensuite le caractère de saut de ligne par un caractère null (« \ 0 ») avant de retourner la ligne. En revanche, la fonction **fgets_s** conserve le caractère de saut de ligne.
 
@@ -108,7 +109,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -138,7 +139,7 @@ The line entered was: Hello there!
 ## <a name="see-also"></a>Voir aussi
 
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
-[Obtient, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

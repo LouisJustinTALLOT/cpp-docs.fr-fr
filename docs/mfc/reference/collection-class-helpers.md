@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classeurs d’assistance de classe de collection'
 title: Programmes d’assistance pour les classes de collection
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d3838ba0ba05441debb183e47d7df4e39229742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331389"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
-Les classes `CMap` de collection, `CList` et `CArray` utilisent des fonctions d’assistance globales basées sur des modèles à des fins telles que la comparaison, la copie et la sérialisation d’éléments. Dans le cadre de votre implémentation de classes basées sur `CMap` , `CList` et `CArray` , vous devez remplacer ces fonctions si nécessaire par des versions adaptées au type de données stockées dans votre mappage, votre liste ou votre tableau. Pour plus d’informations sur la substitution des fonctions d’assistance telles que `SerializeElements` , consultez l’article [Collections : comment créer une collection de type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que `ConstructElements` et `DestructElements` ont été dépréciés.
+Les classes `CMap` de collection, `CList` et `CArray` utilisent des fonctions d’assistance globales basées sur des modèles à des fins telles que la comparaison, la copie et la sérialisation d’éléments. Dans le cadre de votre implémentation de classes basées sur `CMap` , `CList` et `CArray` , vous devez remplacer ces fonctions si nécessaire par des versions adaptées au type de données stockées dans votre mappage, votre liste ou votre tableau. Pour plus d’informations sur la substitution des fonctions d’assistance telles que `SerializeElements` , consultez l’article [Collections : comment créer un Type-Safe collection](../../mfc/how-to-make-a-type-safe-collection.md). Notez que `ConstructElements` et `DestructElements` ont été dépréciés.
 
 L’bibliothèque MFC (Microsoft Foundation Class) fournit les fonctions globales suivantes dans afxtempl. h pour vous aider à personnaliser vos classes de collection :
 
@@ -65,11 +66,11 @@ Différent de zéro si l’objet pointé par *pElement1* est égal à l’objet 
 
 Les `CMap` appels utilisent la `CMap` *clé* des paramètres de modèle et *ARG_KEY*.
 
-L’implémentation par défaut retourne le résultat de la comparaison de * \* pElement1* et * \* pElement2*. Substituez cette fonction afin qu’elle compare les éléments d’une manière appropriée pour votre application.
+L’implémentation par défaut retourne le résultat de la comparaison de *\* pElement1* et *\* pElement2*. Substituez cette fonction afin qu’elle compare les éléments d’une manière appropriée pour votre application.
 
 Le langage C++ définit l’opérateur de comparaison ( `==` ) pour les types simples ( **`char`** , **`int`** , **`float`** , etc.), mais ne définit pas un opérateur de comparaison pour les classes et les structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier l’une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou la surcharge `CompareElements` avec une version qui retourne les valeurs appropriées.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
    **En-tête :** afxtempl.h
 
@@ -103,9 +104,9 @@ Nombre d’éléments à copier.
 
 L’implémentation par défaut utilise l’opérateur d’assignation simple ( **=** ) pour effectuer l’opération de copie. Si le type en cours de copie n’a pas d’opérateur surchargé =, l’implémentation par défaut effectue une copie au niveau du bit.
 
-Pour plus d’informations sur l’implémentation de cette fonction et d’autres fonctions d’assistance, consultez l’article [Collections : comment créer une collection de type sécurisé](../how-to-make-a-type-safe-collection.md).
+Pour plus d’informations sur l’implémentation de cette fonction et d’autres fonctions d’assistance, consultez l’article [Collections : comment créer un Type-Safe collection](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl. h
 
@@ -141,7 +142,7 @@ Les `CArray::Dump` `CList::Dump` fonctions, et `CMap::Dump` appellent This si la
 
 L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject` , votre substitution effectue généralement une itération au sein des éléments de la collection, `Dump` en appelant pour chaque élément à son tour.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl. h
 
@@ -183,7 +184,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl. h
 
@@ -201,7 +202,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 *TYPE*<br/>
 Paramètre de modèle qui spécifie le type des éléments.
 
-*AR*<br/>
+*ar*<br/>
 Objet archive dans lequel effectuer l’archivage.
 
 *papelements*<br/>
@@ -214,13 +215,13 @@ Nombre d’éléments en cours d’archivage
 
 L’implémentation par défaut effectue une opération de lecture ou d’écriture au niveau du bit.
 
-Pour plus d’informations sur l’implémentation de cette fonction et d’autres fonctions d’assistance, consultez l’article [Collections : comment créer une collection de type sécurisé](../how-to-make-a-type-safe-collection.md).
+Pour plus d’informations sur l’implémentation de cette fonction et d’autres fonctions d’assistance, consultez l’article [Collections : comment créer un Type-Safe collection](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple dans l’article [Collections : comment créer une collection de type sécurisé](../how-to-make-a-type-safe-collection.md).
+Consultez l’exemple dans l’article [Collections : comment créer un Type-Safe collection](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl. h
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe int_2'
 title: int_2, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7ee3f2726ce5c96a51a8246933c8d2d9d9eacc38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330033"
 ---
 # <a name="int_2-class"></a>int_2, classe
 
@@ -49,71 +50,71 @@ class int_2;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur int_2](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|int_2::get_x||
-|int_2::get_xy||
-|int_2::get_y||
-|int_2::get_yx||
-|int_2::ref_g||
-|int_2::ref_r||
-|int_2::ref_x||
-|int_2::ref_y||
-|int_2::set_x||
-|int_2::set_xy||
-|int_2::set_y||
-|int_2::set_yx||
+|int_2 :: get_x||
+|int_2 :: get_xy||
+|int_2 :: get_y||
+|int_2 :: get_yx||
+|int_2 :: ref_g||
+|int_2 :: ref_r||
+|int_2 :: ref_x||
+|int_2 :: ref_y||
+|int_2 :: set_x||
+|int_2 :: set_xy||
+|int_2 :: set_y||
+|int_2 :: set_yx||
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|int_2::operator-||
-|int_2::operator--||
-|int_2::operator%=||
-|int_2::operator&=||
-|int_2::operator*=||
-|int_2::operator/=||
-|int_2::operator^=||
-|int_2::operator&#124;=||
+|int_2 :: Operator-||
+|int_2 :: Operator--||
+|int_2 :: Operator% =||
+|int_2 :: Operator&=||
+|int_2 :: Operator * =||
+|int_2 :: Operator/=||
+|int_2 :: Operator ^ =||
+|int_2 :: Operator&#124;=||
 |int_2 :: Operator ~||
-|int_2::operator++||
-|int_2::operator+=||
-|int_2 :: Operator <\<=||
-|int_2::operator=||
-|int_2::operator-=||
-|int_2::operator>>=||
+|int_2 :: Operator + +||
+|int_2 :: Operator + =||
+|int_2 :: Operator<\<=||
+|int_2 :: Operator =||
+|int_2 :: Operator-=||
+|int_2 :: Operator>>=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[taille, constante](#int_2__size)||
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |int_2 :: g||
-|int_2::gr||
-|int_2::r||
-|int_2::rg||
-|int_2::x||
-|int_2::xy||
+|int_2 :: gr||
+|int_2 :: r||
+|int_2 :: RG||
+|int_2 :: x||
+|int_2 :: XY||
 |int_2 :: y||
-|int_2::yx||
+|int_2 :: YX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -125,7 +126,7 @@ class int_2;
 
 **Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a>int_2
+## <a name="int_2"></a><a name="ctor"></a> int_2
 
 Le constructeur par défaut initialise tous les éléments avec 0.
 
@@ -181,7 +182,7 @@ Valeur d’initialisation.
 *_Other*<br/>
 Objet utilisé pour initialiser.
 
-## <a name="int_2__size"></a>corps
+## <a name="size"></a><a name="int_2__size"></a> corps
 
 ```cpp
 static const int size = 2;

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : enums d’espaces de noms d’accès concurrentiel'
 title: concurrency, énumérations de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 8b9aec0a3464b921ca80f731ac4a3c26e72ef34e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d4f5e2fcdb2beb19d65f96687b53e52ba03ed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331298"
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency, énumérations de l’espace de noms
 
@@ -66,7 +67,7 @@ enum agent_status;
 
 Pour plus d’informations, consultez [agents asynchrones](../../../parallel/concrt/asynchronous-agents.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -91,7 +92,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|Type d’événement qui représente l’initiation d’un traitement|
 |`AGENTS_EVENT_UNLINK`|Type d’événement qui représente la dissociation des blocs de messages|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -117,7 +118,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|Type d’événement qui représente l’acte de déblocage d’un contexte.|
 |`CONCRT_EVENT_YIELD`|Type d’événement qui représente l’action d’un contexte produisant.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h **espace de noms :** accès concurrentiel
 
@@ -141,7 +142,7 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -161,7 +162,7 @@ enum CriticalRegionType;
 |`InsideHyperCriticalRegion`|Indique que le contexte se trouve à l’intérieur d’une région hyper-critique. Dans une région hyper-critique, les suspensions synchrones et asynchrones sont masquées dans le planificateur. En cas de suspension ou de blocage, le gestionnaire de ressources attend que le thread devienne exécutable et le reprenne simplement au lieu d’appeler à nouveau le planificateur. Les verrous effectués dans une telle région ne doivent jamais être partagés avec du code qui s’exécute en dehors d’une telle région. Cela entraîne un blocage imprévisible.|
 |`OutsideCriticalRegion`|Indique que le contexte se trouve en dehors de toute région critique.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm. h
 
@@ -195,7 +196,7 @@ enum join_type;
 |`greedy`|Les `join` blocs de messagerie gourmands acceptent immédiatement un message lors de la propagation. Cela est plus efficace, mais il est possible de verrouiller en direct, en fonction de la configuration du réseau.|
 |`non_greedy`|Les blocs de messagerie non gourmands `join` ajournent les messages et les essaient et les consomment après leur arrivée. Ces opérations sont garanties, mais plus lentes.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -216,7 +217,7 @@ enum message_status;
 |`missed`|La cible a tenté d’accepter le message, mais elle n’était plus disponible.|
 |`postponed`|La cible a différé le message.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -244,7 +245,7 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|Nombre provisoire de processeurs virtuels par thread matériel. Le facteur de surabonnement cible peut être augmenté par le Gestionnaire des ressources, si nécessaire, pour satisfaire `MaxConcurrency` les threads matériels sur l’ordinateur.<br /><br /> Valeurs valides : entiers positifs<br /><br /> Valeur par défaut : `1`|
 |`WinRTInitialization`||
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -263,7 +264,7 @@ enum SchedulerType;
 |`ThreadScheduler`|Indique une demande explicite de threads Win32 normaux.|
 |`UmsThreadDefault`|Les threads UMS (user-mode) ne sont pas pris en charge dans le runtime d’accès concurrentiel dans Visual Studio 2013. L’utilisation de `UmsThreadDefault` comme valeur pour la `SchedulerType` stratégie ne génère pas d’erreur. Toutefois, un planificateur créé avec cette stratégie utilisera par défaut les threads Win32.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -282,7 +283,7 @@ enum SchedulingProtocolType;
 |`EnhanceForwardProgress`|Le planificateur préfère effectuer un tourniquet (Round Robin) à travers les groupes de planification après l’exécution de chaque tâche. Les contextes débloqués sont généralement planifiés dans un mode FIFO (premier entré, premier sorti). Les processeurs virtuels ne cachent pas de contextes débloqués.|
 |`EnhanceScheduleGroupLocality`|Le planificateur préfère continuer à travailler sur les tâches du groupe de planification actuel avant de passer à un autre groupe de planification. Les contextes débloqués sont mis en cache par processeur virtuel et sont généralement planifiés selon un mode dernier entré, premier sorti (LIFO) par le processeur virtuel qui les a débloqués.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -324,7 +325,7 @@ enum task_group_status;
 |`completed`|Les tâches mises en file d’attente dans l’objet `task_group` ou `structured_task_group` sont terminées.|
 |`not_complete`|Les tâches mises en file d’attente dans l’objet `task_group` ne sont pas terminées. Notez que cette valeur n'est actuellement pas retournée par le runtime d'accès concurrentiel.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** pplinterface. h
 
@@ -343,7 +344,7 @@ enum WinRTInitializationType;
 |`DoNotInitializeWinRT`|Lorsque l’application est exécutée sur des systèmes d’exploitation avec la version Windows 8 ou une version ultérieure, les threads dans le planificateur n’initialisent pas le Windows Runtime.|
 |`InitializeWinRTAsMTA`|Lorsque l’application est exécutée sur des systèmes d’exploitation dont la version est Windows 8 ou une version ultérieure, chaque thread dans le planificateur Initialise l’Windows Runtime et déclare qu’il fait partie du cloisonnement multithread.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 

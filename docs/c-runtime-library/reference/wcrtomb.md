@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : wcrtomb'
 title: wcrtomb
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: effa442cee4aa0924fa976ee9138f40b22217375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331059"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -61,17 +62,17 @@ size_t wcrtomb(
 *mbchar*<br/>
 Résultat de la conversion du caractère multioctet.
 
-*WCHAR*<br/>
+*wchar*<br/>
 Caractère large à convertir.
 
 *mbstate*<br/>
 Pointeur vers un objet **mbstate_t** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre d’octets nécessaire pour représenter le caractère multioctet converti ou -1 si une erreur se produit.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **wcrtomb** convertit un caractère élargi, en commençant dans l’état de conversion spécifié dans *mbstate*, à partir de la valeur contenue dans *WCHAR*, dans l’adresse représentée par *mbchar*. La valeur de retour est le nombre d’octets requis pour représenter le caractère multioctet correspondant, mais elle ne retourne pas plus de **MB_CUR_MAX** octets.
 
@@ -87,7 +88,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 La fonction **wcrtomb** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* a la valeur null.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_wcrtomb.c
@@ -140,5 +141,5 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

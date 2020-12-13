@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson'
 title: _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: 7138e9cb7381e4d40911054e1473536b6e639e2d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d9840fbb0ccbefd5b9d78f4c3a7b208dc7b89571
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332747"
 ---
 # <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -79,11 +80,11 @@ Numéro de ligne dans le code source où le gestionnaire a été appelé.
 *réservé*<br/>
 Inutilisé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces fonctions ne retournent pas de valeur. Les fonctions **_invalid_parameter_noinfo_noreturn** et **_invoke_watson** ne retournent pas à l’appelant et, dans certains cas, **_invalid_parameter** et **_invalid_parameter_noinfo** peuvent ne pas être retournés à l’appelant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Quand des paramètres non valides sont passés aux fonctions de la bibliothèque runtime C, celles-ci appellent un *gestionnaire de paramètres non valides*, fonction qui peut être spécifiée par le programmeur pour effectuer plusieurs actions. Par exemple, il peut signaler le problème à l’utilisateur, écrire dans un journal, marquer un arrêt dans un débogueur, mettre fin au programme ou ne rien faire du tout. Si aucune fonction n’est spécifiée par le programmeur, un gestionnaire par défaut, **_invoke_watson**, est appelé.
 
@@ -97,7 +98,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|------------------|
 |**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
@@ -105,7 +106,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
 [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
 [Validation de paramètre](../../c-runtime-library/parameter-validation.md)<br/>

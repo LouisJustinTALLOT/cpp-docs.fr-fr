@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de document'
 title: Classes de documents
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: 012d107d7bcc630c4bc02a9dc697172080787eac
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7f5bd3011dec84cad20b10668e0a997838e79dbb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330288"
 ---
 # <a name="document-classes"></a>Classes de documents
 
@@ -32,7 +33,7 @@ Classe dérivée de `COleDocument` qui fournit l’infrastructure pour la liaiso
 Conserve la liste des éléments du client OLE qui se trouvent dans le contrôle Rich Edit. Utilisé avec [CRichEditView](reference/cricheditview-class.md) et [CRichEditCntrItem](reference/cricheditcntritem-class.md).
 
 [COleServerDoc](reference/coleserverdoc-class.md)<br/>
-Utilisé comme classe de base pour les classes de document de l’application serveur. `COleServerDoc`les objets fournissent l’essentiel de la prise en charge du serveur par le biais d’interactions avec les objets [COleServerItem](reference/coleserveritem-class.md) . La fonctionnalité d’édition visuelle est fournie à l’aide de l’architecture document/vue de la bibliothèque de classes.
+Utilisé comme classe de base pour les classes de document de l’application serveur. `COleServerDoc` les objets fournissent l’essentiel de la prise en charge du serveur par le biais d’interactions avec les objets [COleServerItem](reference/coleserveritem-class.md) . La fonctionnalité d’édition visuelle est fournie à l’aide de l’architecture document/vue de la bibliothèque de classes.
 
 [CHtmlEditDoc](reference/chtmleditdoc-class.md)<br/>
 Fournit, avec [CHtmlEditView](reference/chtmleditview-class.md), les fonctionnalités de la plateforme d’édition HTML WebBrowser dans le contexte de l’architecture document/vue de MFC.
@@ -44,7 +45,7 @@ Les objets de classe de document peuvent être persistants, en d’autres termes
 [CArchive](reference/carchive-class.md)<br/>
 Fonctionne avec un objet [CFile](reference/cfile-class.md) pour implémenter un stockage persistant pour les objets via la sérialisation (voir [CObject :: Serialize](reference/cobject-class.md#serialize)).
 
-Les documents peuvent également contenir des objets OLE. `CDocItem`est la classe de base des éléments serveur et client.
+Les documents peuvent également contenir des objets OLE. `CDocItem` est la classe de base des éléments serveur et client.
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 Classe de base abstraite de [COleClientItem](reference/coleclientitem-class.md) et [COleServerItem](reference/coleserveritem-class.md). Les objets de classes dérivés de `CDocItem` représentent des parties de documents.

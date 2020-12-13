@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _dupenv_s_dbg, _wdupenv_s_dbg'
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a12e5adc55cd69b8336b3f9f50d982f80ec1b070
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332900"
 ---
 # <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -66,7 +67,7 @@ errno_t _wdupenv_s_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon pour stocker la valeur de la variable.
 
 *numberOfElements*<br/>
@@ -76,15 +77,15 @@ Taille de la *mémoire tampon*.
 Nom de la variable d'environnement.
 
 *blockType*<br/>
-Type demandé du bloc de mémoire : _ **client_block** ou **_NORMAL_BLOCK**.
+Type demandé du bloc de mémoire : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
 Pointeur vers le nom du fichier source ou **null**.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Numéro de ligne dans le fichier source ou **null**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
@@ -94,9 +95,9 @@ Si ces fonctions ne peuvent pas allouer suffisamment de mémoire, elles définis
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_dupenv_s_dbg** et **_wdupenv_s_dbg** sont identiques à **_dupenv_s** et **_wdupenv_s** , à ceci près que, quand **_ DEBUG** est défini, ces fonctions utilisent la version Debug de [malloc](malloc.md), _ [malloc_dbg](malloc-dbg.md), pour allouer de la mémoire pour la valeur de la variable d’environnement. Pour plus d’informations sur les fonctionnalités de débogage de _ **malloc_dbg**, consultez _ [malloc_dbg](malloc-dbg.md).
+Les fonctions **_dupenv_s_dbg** et **_wdupenv_s_dbg** sont identiques à **_dupenv_s** et **_wdupenv_s** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version Debug de [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), pour allouer de la mémoire pour la valeur de la variable d’environnement. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur _ **CRTDBG_MAP_ALLOC**. Quand _ **CRTDBG_MAP_ALLOC** est défini, les appels à **_dupenv_s** et **_wdupenv_s** sont remappés à **_dupenv_s_dbg** et **_Wdupenv_s_dbg**, respectivement, avec le *Blocktype* défini sur **_NORMAL_BLOCK**. Vous n’avez donc pas besoin d’appeler ces fonctions de manière explicite, sauf si vous souhaitez marquer les blocs du tas comme _ **client_block**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est définie, les appels à **_dupenv_s** et **_wdupenv_s** sont remappés **à _dupenv_s_dbg** et **_wdupenv_s_dbg**, respectivement, avec la valeur de *Blocktype* définie sur **_NORMAL_BLOCK**. Vous n’avez donc pas besoin d’appeler ces fonctions de manière explicite, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -104,7 +105,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -113,7 +114,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_dupenv_s_dbg.c
@@ -145,6 +146,6 @@ nonexistentvariable = (null)
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Constantes d’environnement](../../c-runtime-library/environmental-constants.md)<br/>
+[Constantes environnementales](../../c-runtime-library/environmental-constants.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
 [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

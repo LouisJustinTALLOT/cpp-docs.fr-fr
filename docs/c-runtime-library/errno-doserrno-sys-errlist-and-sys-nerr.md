@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : errno, _doserrno, _sys_errlist et _sys_nerr'
 title: errno, _doserrno, _sys_errlist et _sys_nerr
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b15091ebfffec891b09f5024b14a8ca7fe0d02e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331171"
 ---
 # <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist et _sys_nerr
 
@@ -56,20 +57,20 @@ Chaque valeur `errno` est associée à un message d'erreur dans `_sys_errlist` q
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 Les routines mathématiques des bibliothèques définissent `errno` en appelant [_matherr](../c-runtime-library/reference/matherr.md). Pour gérer des erreurs mathématiques différemment, écrivez votre propre routine selon la description de la référence `_matherr`, puis appelez-la `_matherr`.
 
-Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies dans \<errno.h> et compatibles avec UNIX. Seuls `ERANGE`, `EILSEQ`, et `EDOM` sont spécifiés dans la norme ISO C99.
+Toutes les `errno` valeurs du tableau suivant sont des constantes prédéfinies dans \<errno.h> et compatibles UNIX. Seuls `ERANGE`, `EILSEQ`, et `EDOM` sont spécifiés dans la norme ISO C99.
 
 |Constante|Message d'erreur système|Valeur|
 |--------------|--------------------------|-----------|
 |`EPERM`|Opération non autorisée|1|
-|`ENOENT`|Aucun fichier ou répertoire de ce type|2|
+|`ENOENT`|No such file or directory|2|
 |`ESRCH`|Aucun de ces processus|3|
 |`EINTR`|Fonction interrompue|4|
-|`EIO`|Erreur d'E/S|5\.|
-|`ENXIO`|Aucun périphérique ou adresse de ce type|6\.|
+|`EIO`|Erreur d'E/S|5|
+|`ENXIO`|Aucun périphérique ou adresse correspondant|6|
 |`E2BIG`|Liste d'arguments trop longue|7|
 |`ENOEXEC`|Erreur de format exec|8|
 |`EBADF`|Numéro de fichier erroné|9|
@@ -105,22 +106,22 @@ Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies 
 |`EILSEQ`|Séquence d'octets non conforme|42|
 |`STRUNCATE`|La chaîne a été tronquée|80|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Macro globale|En-tête requis|En-tête facultatif|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h> ou \<stdlib.h>, \<cerrno> ou \<cstdlib> (C++)||
+|`errno`|\<errno.h> ou \<stdlib.h> , \<cerrno> ou \<cstdlib> (C++)||
 |`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
-Les macros `_doserrno`, `_sys_errlist` et `_sys_nerr` sont des extensions Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
+Les macros `_doserrno`, `_sys_errlist` et `_sys_nerr` sont des extensions Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Variables globales](../c-runtime-library/global-variables.md)<br/>
 [errno, constantes](../c-runtime-library/errno-constants.md)<br/>
 [perror, _wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
-[strerror, _strerror, _wcserror, \__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
-[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[strerror, _strerror, _wcserror, \_ _wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s, _strerror_s, _wcserror_s, \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
 [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
 [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
 [_get_errno](../c-runtime-library/reference/get-errno.md)<br/>

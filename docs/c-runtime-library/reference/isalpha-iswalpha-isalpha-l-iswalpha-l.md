@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : isalpha, iswalpha, _isalpha_l, _iswalpha_l'
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 044564d64c9f7d358633a866c53a25e6ab16d26a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332755"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -76,15 +77,15 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser à la place des paramètres régionaux actuels.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère alphabétique. **isalpha** retourne une valeur différente de zéro si *c* est dans les plages a-z ou a-z. **iswalpha** retourne une valeur différente de zéro uniquement pour les caractères larges pour lesquels [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** est différent de zéro ; autrement dit, pour tout caractère étendu qui fait partie d’un jeu défini par l’implémentation pour lequel aucun **iswcntrl**, **iswdigit**, **iswpunct**ou **iswspace** n’est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère alphabétique. **isalpha** retourne une valeur différente de zéro si *c* est dans les plages a-z ou a-z. **iswalpha** retourne une valeur différente de zéro uniquement pour les caractères larges pour lesquels [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) ou **iswlower** est différent de zéro ; autrement dit, pour tout caractère étendu qui fait partie d’un jeu défini par l’implémentation pour lequel aucun **iswcntrl**, **iswdigit**, **iswpunct** ou **iswspace** n’est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
 Les versions de ces fonctions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -97,7 +98,7 @@ Le comportement de **isalpha** et **_isalpha_l** n’est pas défini si *c* n’
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -114,6 +115,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

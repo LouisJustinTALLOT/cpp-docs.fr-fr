@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure RemoveReference ('
 title: RemoveReference (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bcf3685e44b756ce324adc8301d7afb5b4b3f40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332504"
 ---
 # <a name="removereference-structure"></a>RemoveReference (structure)
 
@@ -44,11 +45,11 @@ Supprime la référence ou la caractéristique de référence rvalue du paramèt
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`Type`|Synonyme du paramètre de modèle de classe.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `RemoveReference`
 
@@ -60,4 +61,4 @@ Supprime la référence ou la caractéristique de référence rvalue du paramèt
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

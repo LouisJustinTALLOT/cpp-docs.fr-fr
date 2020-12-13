@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utiliser le multi-ciblage natif dans Visual Studio pour générer des projets anciens'
 title: Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 14100a70fa3bb883d257017eaf9174c5340317b4
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: d7f7ea617ac5f895a6fb9b04f89caebbb6130e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331197"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 

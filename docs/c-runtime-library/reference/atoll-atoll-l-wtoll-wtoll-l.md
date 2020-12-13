@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : atoll, _atoll_l, _wtoll, _wtoll_l'
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9476588e937dba3b6452d1c51a1ada518ff0459
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331011"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -79,7 +80,7 @@ Chaîne à convertir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne la **`long long`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour pour **atoll** est 0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
