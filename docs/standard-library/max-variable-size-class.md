@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe max_variable_size'
 title: max_variable_size, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0640e11e4ab68b60dc8114c88463a370e43dc749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149225"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size, classe
 
@@ -97,7 +98,7 @@ Retourne une valeur qui indique si davantage de blocs de mémoire doivent être 
 bool full();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si `_Nallocs / 16 + 16 <= _Nblocks` .
 

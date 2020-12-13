@@ -1,26 +1,27 @@
 ---
-title: Conception de Collection et les Interfaces d’énumérateur (ATL)
+description: 'En savoir plus sur : principes de conception pour les interfaces de collection et d’énumérateur'
+title: Conception des interfaces de collection et d’énumérateur (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enumerator interfaces
 - collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-ms.openlocfilehash: f40c86d3bc8d9b4e4c752fe6657f6a5a14f19e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: effd2cce775ef926befc89bb6b72a976d85bdf23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148003"
 ---
-# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principes de conception pour la collecte et les Interfaces d’énumérateur
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principes de conception pour les interfaces de collection et d’énumérateur
 
-Il existe des principes de conception différent derrière chaque type d’interface :
+Il existe différents principes de conception sous-jacents à chaque type d’interface :
 
-- Fournit une interface de collection *aléatoires* l’accès à un *unique* élément dans la collection via le `Item` (méthode), il permet aux clients de découvrir le nombre d’éléments présents dans la collection via le `Count` propriété, et souvent permet aux clients d’ajouter et supprimer des éléments.
+- Une interface de collection fournit un accès *aléatoire* à un élément *unique* de la collection via la `Item` méthode, elle permet aux clients de découvrir le nombre d’éléments dans la collection via la `Count` propriété, et permet souvent aux clients d’ajouter et de supprimer des éléments.
 
-- Fournit une interface d’énumération *série* l’accès à *plusieurs* éléments d’une collection, il n’autorise pas le client découvrir le nombre d’éléments présents dans la collection (jusqu'à ce que l’énumérateur cesse de retour éléments), et il ne fournit aucune façon d’ajouter ou supprimer des éléments.
+- Une interface d’énumérateur fournit un accès en *série* à *plusieurs* éléments d’une collection, elle n’autorise pas le client à découvrir le nombre d’éléments présents dans la collection (jusqu’à ce que l’énumérateur arrête le retour d’éléments) et n’offre aucun moyen d’ajouter ou de supprimer des éléments.
 
-Chaque type d’interface joue un rôle différent en fournissant un accès aux éléments dans une collection.
+Chaque type d’interface joue un rôle différent dans la fourniture de l’accès aux éléments d’une collection.
 
 ## <a name="see-also"></a>Voir aussi
 

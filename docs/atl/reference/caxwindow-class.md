@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAxWindow'
 title: CAxWindow, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 0b1cdabbce4fd6a36f6f3e9fb15b3f28249065c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146989"
 ---
 # <a name="caxwindow-class"></a>CAxWindow, classe
 
@@ -90,7 +91,7 @@ dans Pointeur vers le `IUnknown` du contrôle.
 *ppUnkContainer*<br/>
 à Pointeur vers le `IUnknown` de l’hôte (l' `AxWin` objet).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -154,7 +155,7 @@ dans Pointeur vers un flux utilisé pour initialiser les propriétés du contrô
 *dwResID*<br/>
 ID de ressource d’une ressource HTML. Le contrôle WebBrowser sera créé et chargé avec la ressource spécifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -168,7 +169,7 @@ Cette méthode donne le même résultat que l’appel de :
 
 Consultez [CAxWindow2T :: CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) pour créer, initialiser et héberger un contrôle ActiveX sous licence.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) pour obtenir un exemple qui utilise `CreateControl` .
 
@@ -230,7 +231,7 @@ dans Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter 
 *dwResID*<br/>
 dans ID de ressource d’une ressource HTML. Le contrôle WebBrowser sera créé et chargé avec la ressource spécifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -240,7 +241,7 @@ Cette méthode est similaire à [CAxWindow :: CreateControl](#createcontrol), m
 
 Consultez [CAxWindow2T :: CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) pour créer, initialiser et héberger un contrôle ActiveX sous licence.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) pour obtenir un exemple qui utilise `CreateControlEx` .
 
@@ -252,7 +253,7 @@ Récupère le nom de la classe de fenêtre.
 static LPCTSTR GetWndClassName();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une chaîne contenant le nom de la classe de fenêtre qui peut héberger des contrôles ActiveX sans licence.
 
@@ -269,7 +270,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 *hWnd*<br/>
 Handle d’une fenêtre existante.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une référence à l'objet `CAxWindow` actif.
 
@@ -294,7 +295,7 @@ dans Spécifie l’IID de l’interface du contrôle.
 *Question*<br/>
 dans Interface en cours d’interrogation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -319,7 +320,7 @@ dans Spécifie l’IID de l’interface du contrôle.
 *Question*<br/>
 dans Interface en cours d’interrogation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -340,7 +341,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 *pDisp*<br/>
 dans Pointeur vers une `IDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -357,7 +358,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 *pUIHandler*<br/>
 dans Pointeur vers une `IDocHostUIHandlerDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 

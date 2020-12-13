@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlTransactionManager'
 title: CAtlTransactionManager, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 25d5ea7e9b4838f483dd7f9ee408cdd5bd4c88cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147184"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager, classe
 
@@ -72,7 +73,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Crée la clé de Registre spécifiée et l’associe à une transaction. Si la clé existe déjà, la fonction l’ouvre.|
 |[RegDeleteKey](#regdeletekey)|Supprime une sous-clé et ses valeurs de la vue spécifique à la plateforme spécifiée du registre en tant qu’opération traitée.|
 |[RegOpenKeyEx](#regopenkeyex)|Ouvre la clé de Registre spécifiée et l’associe à une transaction.|
-|[Instruction](#rollback)|Demande que la transaction soit restaurée.|
+|[Restauration](#rollback)|Demande que la transaction soit restaurée.|
 |[SetFileAttributes](#setfileattributes)|Définit les attributs d’un fichier ou d’un répertoire en tant qu’opération traitée.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
@@ -130,7 +131,7 @@ Ferme le handle de transaction.
 inline BOOL Close();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
@@ -146,7 +147,7 @@ Demande que la transaction soit validée.
 inline BOOL Commit();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
@@ -162,7 +163,7 @@ Crée le descripteur de transaction.
 inline BOOL Create();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
@@ -206,9 +207,9 @@ Action à effectuer sur les fichiers qui existent et qui n’existent pas. Ce pa
 Attributs et indicateurs de fichier. Ce paramètre peut inclure n’importe quelle combinaison des attributs de fichier disponibles (FILE_ATTRIBUTE_ *). Tous les autres attributs de fichier remplacent FILE_ATTRIBUTE_NORMAL. Ce paramètre peut également contenir des combinaisons d’indicateurs (FILE_FLAG_ \* ) pour contrôler le comportement de mise en mémoire tampon, les modes d’accès et d’autres indicateurs spéciaux. Celles-ci sont combinées avec toutes les valeurs de FILE_ATTRIBUTE_ \* .
 
 *hTemplateFile*<br/>
-Handle valide d’un fichier de modèle avec le droit d’accès GENERIC_READ. Le fichier de modèle fournit des attributs de fichier et des attributs étendus pour le fichier en cours de création. Ce paramètre peut avoir la valeur NULL.
+Handle valide d’un fichier de modèle avec le droit d’accès GENERIC_READ. Le fichier de modèle fournit des attributs de fichier et des attributs étendus pour le fichier en cours de création. Ce paramètre peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un handle qui peut être utilisé pour accéder à l’objet.
 
@@ -251,7 +252,7 @@ Répertoire ou chemin d’accès et nom de fichier à rechercher. Ce paramètre 
 *pNextInfo*<br/>
 Pointeur vers la structure WIN32_FIND_DATA qui reçoit des informations sur un fichier ou un sous-répertoire trouvé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est un handle de recherche utilisé dans un appel ultérieur à `FindNextFile` ou `FindClose` . Si la fonction échoue ou ne parvient pas à trouver des fichiers à partir de la chaîne recherchée dans le paramètre *lpFileName* , la valeur de retour est INVALID_HANDLE_VALUE.
 
@@ -310,7 +311,7 @@ Retourne le handle de transaction.
 HANDLE GetHandle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le descripteur de transaction pour une classe. Retourne la valeur NULL si `CAtlTransactionManager` n’est pas attaché à un handle.
 
@@ -324,7 +325,7 @@ Détermine si les appels de secours sont activés.
 BOOL IsFallback() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si la classe prend en charge les appels de secours. Sinon, la valeur est FALSE.
 
@@ -399,7 +400,7 @@ Nom d’une sous-clé que cette fonction ouvre ou crée.
 Ce paramètre est réservé et doit être égal à zéro.
 
 *lpClass*<br/>
-Classe définie par l’utilisateur de cette clé. Ce paramètre peut être ignoré. Ce paramètre peut avoir la valeur NULL.
+Classe définie par l’utilisateur de cette clé. Ce paramètre peut être ignoré. Ce paramètre peut être NULL.
 
 *dwOptions*<br/>
 Ce paramètre peut prendre l’une des valeurs suivantes : REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE ou REG_OPTION_VOLATILE.
@@ -416,7 +417,7 @@ Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée
 *lpdwDisposition*<br/>
 Pointeur vers une variable qui reçoit l’une des valeurs de disposition suivantes : REG_CREATED_NEW_KEY ou REG_OPENED_EXISTING_KEY.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
@@ -440,7 +441,7 @@ Handle d’une clé de Registre ouverte.
 *lpSubKey*\
 Nom de la clé à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
@@ -478,7 +479,7 @@ Masque qui spécifie les droits d’accès pour la clé.
 *phkResult*<br/>
 Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée. Si la clé ne fait pas partie des clés de Registre prédéfinies, appelez la `RegCloseKey` fonction une fois que vous avez fini d’utiliser le handle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h
 
@@ -494,7 +495,7 @@ Demande que la transaction soit restaurée.
 inline BOOL Rollback();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 

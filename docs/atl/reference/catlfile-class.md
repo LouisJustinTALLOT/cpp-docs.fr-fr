@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlFile'
 title: CAtlFile, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 83a0a89bf6e2e21be33cf8c6003228111eff5394
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: d38ab3ad894a589fb59fe03691d6c764414cc8b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147392"
 ---
 # <a name="catlfile-class"></a>CAtlFile, classe
 
@@ -68,7 +69,7 @@ class CAtlFile : public CHandle
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlFile :: m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` un objet|
+|[CAtlFile :: m_pTM](#m_ptm)|Pointeur vers un `CAtlTransactionManager` objet|
 
 ## <a name="remarks"></a>Notes
 
@@ -84,7 +85,7 @@ Utilisez cette classe lorsque les besoins en matière de gestion des fichiers so
 
 **En-tête :** atlfile. h
 
-## <a name="catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile
+## <a name="catlfilecatlfile"></a><a name="catlfile"></a> CAtlFile::CAtlFile
 
 Constructeur.
 
@@ -97,7 +98,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*txt*<br/>
+*file*<br/>
 Objet de fichier.
 
 *hFile*<br/>
@@ -108,9 +109,9 @@ Pointeur vers l'objet CAtlTransactionManager
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur de copie transfère la propriété du handle de fichier de `CAtlFile` l’objet d’origine vers l’objet nouvellement construit.
+Le constructeur de copie transfère la propriété du handle de fichier de l’objet d’origine `CAtlFile` vers l’objet nouvellement construit.
 
-## <a name="catlfilecreate"></a><a name="create"></a>CAtlFile :: Create
+## <a name="catlfilecreate"></a><a name="create"></a> CAtlFile :: Create
 
 Appelez cette méthode pour créer ou ouvrir un fichier.
 
@@ -134,21 +135,21 @@ Nom du fichier.
 Accès souhaité. Consultez *dwDesiredAccess* dans [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) dans le SDK Windows.
 
 *dwShareMode*<br/>
-Mode de partage. Consultez *dwShareMode* dans `CreateFile`.
+Mode de partage. Consultez *dwShareMode* dans `CreateFile` .
 
 *dwCreationDisposition*<br/>
-Disposition de la création. Consultez *dwCreationDisposition* dans `CreateFile`.
+Disposition de la création. Consultez *dwCreationDisposition* dans `CreateFile` .
 
 *dwFlagsAndAttributes*<br/>
-Indicateurs et attributs. Consultez *dwFlagsAndAttributes* dans `CreateFile`.
+Indicateurs et attributs. Consultez *dwFlagsAndAttributes* dans `CreateFile` .
 
 *lpsa*<br/>
-Attributs de sécurité. Consultez *lpSecurityAttributes* dans `CreateFile`.
+Attributs de sécurité. Consultez *lpSecurityAttributes* dans `CreateFile` .
 
 *hTemplateFile*<br/>
-Fichier de modèle. Consultez *hTemplateFile* dans `CreateFile`.
+Fichier de modèle. Consultez *hTemplateFile* dans `CreateFile` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -156,7 +157,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) pour créer ou ouvrir le fichier.
 
-## <a name="catlfileflush"></a><a name="flush"></a>CAtlFile :: Flush
+## <a name="catlfileflush"></a><a name="flush"></a> CAtlFile :: Flush
 
 Appelez cette méthode pour effacer les mémoires tampons pour le fichier et provoquer l’écriture de toutes les données mises en mémoire tampon dans le fichier.
 
@@ -164,7 +165,7 @@ Appelez cette méthode pour effacer les mémoires tampons pour le fichier et pro
 HRESULT Flush() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -172,7 +173,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers) pour vider les données mises en mémoire tampon dans le fichier.
 
-## <a name="catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile :: GetOverlappedResult
+## <a name="catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a> CAtlFile :: GetOverlappedResult
 
 Appelez cette méthode pour obtenir les résultats d’une opération Overlapped sur le fichier.
 
@@ -189,12 +190,12 @@ HRESULT GetOverlappedResult(
 Structure OVERLAPPED. Consultez *lpOverlapped* dans [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) dans le SDK Windows.
 
 *dwBytesTransferred*<br/>
-Octets transférés. Consultez *lpNumberOfBytesTransferred* dans `GetOverlappedResult`.
+Octets transférés. Consultez *lpNumberOfBytesTransferred* dans `GetOverlappedResult` .
 
 *bWait*<br/>
-Option wait. Consultez *bWait* dans `GetOverlappedResult`.
+Option wait. Consultez *bWait* dans `GetOverlappedResult` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -202,7 +203,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) pour obtenir les résultats d’une opération Overlapped sur le fichier.
 
-## <a name="catlfilegetposition"></a><a name="getposition"></a>CAtlFile :: GetPosition
+## <a name="catlfilegetposition"></a><a name="getposition"></a> CAtlFile :: GetPosition
 
 Appelez cette méthode pour atteindre la position actuelle du pointeur de fichier.
 
@@ -215,7 +216,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 *nPos*<br/>
 Position en octets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -223,7 +224,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) pour atteindre la position actuelle du pointeur de fichier.
 
-## <a name="catlfilegetsize"></a><a name="getsize"></a>CAtlFile :: est à obtenir
+## <a name="catlfilegetsize"></a><a name="getsize"></a> CAtlFile :: est à obtenir
 
 Appelez cette méthode pour récupérer la taille en octets du fichier.
 
@@ -236,7 +237,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 *nLen*<br/>
 Nombre d’octets dans le fichier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -244,7 +245,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize) pour récupérer la taille en octets du fichier.
 
-## <a name="catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange
+## <a name="catlfilelockrange"></a><a name="lockrange"></a> CAtlFile::LockRange
 
 Appelez cette méthode pour verrouiller une région dans le fichier afin d’empêcher d’autres processus d’y accéder.
 
@@ -260,15 +261,15 @@ Position dans le fichier où le verrou doit commencer.
 *nCount*<br/>
 Longueur de la plage d’octets à verrouiller.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Appelle [lockfile](/windows/win32/api/fileapi/nf-fileapi-lockfile) pour verrouiller une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plusieurs régions d’un fichier, mais aucune région se chevauchant n’est autorisée. Lorsque vous déverrouillez une région à l’aide de [CAtlFile :: UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région précédemment verrouillée. `LockRange`ne fusionne pas les régions adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller chacune d’elles séparément.
+Appelle [lockfile](/windows/win32/api/fileapi/nf-fileapi-lockfile) pour verrouiller une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plusieurs régions d’un fichier, mais aucune région se chevauchant n’est autorisée. Lorsque vous déverrouillez une région à l’aide de [CAtlFile :: UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région précédemment verrouillée. `LockRange` ne fusionne pas les régions adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller chacune d’elles séparément.
 
-## <a name="catlfilem_ptm"></a><a name="m_ptm"></a>CAtlFile :: m_pTM
+## <a name="catlfilem_ptm"></a><a name="m_ptm"></a> CAtlFile :: m_pTM
 
 Pointeur vers un `CAtlTransactionManager` objet.
 
@@ -278,7 +279,7 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlfileread"></a><a name="read"></a>CAtlFile :: lecture
+## <a name="catlfileread"></a><a name="read"></a> CAtlFile :: lecture
 
 Appelez cette méthode pour lire les données d’un fichier en commençant à la position indiquée par le pointeur de fichier.
 
@@ -321,7 +322,7 @@ Structure OVERLAPPED. Consultez *lpOverlapped* dans [ReadFile](/windows/win32/ap
 *pfnCompletionRoutine*<br/>
 Routine de saisie semi-automatique. Consultez *lpCompletionRoutine* dans [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -329,7 +330,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Les trois premières formes appellent [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), le dernier [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) pour lire les données à partir du fichier. Utilisez [CAtlFile :: Seek](#seek) pour déplacer le pointeur de fichier.
 
-## <a name="catlfileseek"></a><a name="seek"></a>CAtlFile :: Seek
+## <a name="catlfileseek"></a><a name="seek"></a> CAtlFile :: Seek
 
 Appelez cette méthode pour déplacer le pointeur de fichier du fichier.
 
@@ -347,7 +348,7 @@ Offset à partir du point de départ donné par *dwFrom*.
 *dwFrom*<br/>
 Point de départ (FILE_BEGIN, FILE_CURRENT ou FILE_END).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -355,7 +356,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) pour déplacer le pointeur de fichier.
 
-## <a name="catlfilesetsize"></a><a name="setsize"></a>CAtlFile :: configure
+## <a name="catlfilesetsize"></a><a name="setsize"></a> CAtlFile :: configure
 
 Appelez cette méthode pour définir la taille du fichier.
 
@@ -368,7 +369,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 *nNewLen*<br/>
 Nouvelle longueur du fichier, en octets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -376,7 +377,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) et [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) pour définir la taille du fichier. Au retour, le pointeur de fichier est positionné à la fin du fichier.
 
-## <a name="catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange
+## <a name="catlfileunlockrange"></a><a name="unlockrange"></a> CAtlFile::UnlockRange
 
 Appelez cette méthode pour déverrouiller une région du fichier.
 
@@ -392,7 +393,7 @@ Position dans le fichier où le déverrouillage doit commencer.
 *nCount*<br/>
 Longueur de la plage d’octets à déverrouiller.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -400,7 +401,7 @@ Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 Appelle [UnlockFile](/windows/win32/api/fileapi/nf-fileapi-unlockfile) pour déverrouiller une région du fichier.
 
-## <a name="catlfilewrite"></a><a name="write"></a>CAtlFile :: Write
+## <a name="catlfilewrite"></a><a name="write"></a> CAtlFile :: Write
 
 Appelez cette méthode pour écrire des données dans le fichier en commençant à la position indiquée par le pointeur de fichier.
 
@@ -439,7 +440,7 @@ Routine de saisie semi-automatique. Consultez *lpCompletionRoutine* dans [WriteF
 *pnBytesWritten*<br/>
 Octets écrits.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 

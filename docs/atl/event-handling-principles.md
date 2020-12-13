@@ -1,5 +1,6 @@
 ---
-title: Principes de manipulation d’événements (ATL)
+description: En savoir plus sur les principes de gestion des événements
+title: Principes de gestion des événements (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,40 +9,40 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: 2e810853e7c81f279039e0b3dfda5199d38deee2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29b9542b4e026d320857990a0ef6253f310535e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147977"
 ---
-# <a name="event-handling-principles"></a>Principes de manipulation d’événements
+# <a name="event-handling-principles"></a>Principes de gestion des événements
 
-Il y a trois étapes communes à toutes les manipulations d’événements. Vous devrez :
+Il existe trois étapes communes à la gestion des événements. Vous devez :
 
-- Implémentez l’interface événement sur votre objet.
+- Implémentez l’interface d’événement sur votre objet.
 
-- Informez la source de l’événement que votre objet veut recevoir des événements.
+- Conseillez à la source de l’événement que votre objet souhaite recevoir des événements.
 
-- Déconsevez la source de l’événement lorsque votre objet n’a plus besoin de recevoir des événements.
+- Désconseillez la source de l’événement lorsque votre objet n’a plus besoin de recevoir des événements.
 
-La façon dont vous implémenterez l’interface événementiel dépendra de son type. Une interface événementiel peut être vtable, double, ou un dispinterface. C’est au concepteur de la source de l’événement de définir l’interface; c’est à vous de mettre en œuvre cette interface.
+La façon dont vous implémenterez l’interface d’événement dépend de son type. Une interface d’événement peut être vtable, double ou dispinterface. C’est au concepteur de la source d’événements de définir l’interface ; C’est à vous de mettre en œuvre cette interface.
 
 > [!NOTE]
-> Bien qu’il n’y ait aucune raison technique qu’une interface d’événement ne peut pas être double, il ya un certain nombre de bonnes raisons de conception pour éviter l’utilisation de duels. Cependant, il s’agit d’une décision prise par le concepteur / implémenteur de la *source*de l’événement . Puisque vous travaillez du point `sink`de vue de l’événement, vous devez tenir compte de la possibilité que vous n’ayez pas d’autre choix que de mettre en œuvre une interface double événement. Pour plus d’informations sur les interfaces doubles, voir [Double Interfaces et ATL](../atl/dual-interfaces-and-atl.md).
+> Bien qu’il n’existe aucune raison technique pour laquelle une interface d’événement ne peut pas être double, il existe un certain nombre de bonnes raisons de conception afin d’éviter l’utilisation de doubles. Toutefois, il s’agit d’une décision prise par le concepteur/implémenteur de la *source* de l’événement. Dans la mesure où vous travaillez du point de vue de l’événement `sink` , vous devez autoriser la possibilité que vous ne disposiez pas d’un choix, mais d’implémenter une interface d’événement double. Pour plus d’informations sur les interfaces doubles, consultez [interfaces doubles et ATL](../atl/dual-interfaces-and-atl.md).
 
-Conseiller la source de l’événement peut être décomposé en trois étapes:
+L’avertissement de la source de l’événement peut être divisé en trois étapes :
 
-- Requête de l’objet source pour [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+- Interrogez l’objet source pour [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
 
-- Appelez [IConnectionPointContainer::FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) passant l’IID de l’interface événementiel qui vous intéresse. En cas de succès, cela retournera l’interface [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) sur un objet point de connexion.
+- Appelez [IConnectionPointContainer :: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) en passant l’IID de l’interface d’événement qui vous intéresse. En cas de réussite, l’interface [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) est retournée sur un objet point de connexion.
 
-- Appelez [IConnectionPoint::Conseiller](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) `IUnknown` de passer le puits de l’événement. En cas de succès, cela retournera un `DWORD` cookie représentant la connexion.
+- Appelez [IConnectionPoint :: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) en passant le `IUnknown` du récepteur d’événements. En cas de réussite, un `DWORD` cookie représentant la connexion est retourné.
 
-Une fois que vous avez enregistré avec succès votre intérêt à recevoir des événements, les méthodes sur l’interface événementiel de votre objet seront appelées en fonction des événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez passer le cookie vers le point de connexion via [IConnectionPoint::Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Cela brisera la connexion entre la source et l’évier.
+Une fois que vous avez correctement enregistré votre intérêt pour la réception d’événements, les méthodes de l’interface d’événement de votre objet sont appelées en fonction des événements déclenchés par l’objet source. Lorsque vous n’avez plus besoin de recevoir des événements, vous pouvez retransmettre le cookie au point de connexion via [IConnectionPoint :: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Cela rompt la connexion entre la source et le récepteur.
 
 Veillez à éviter les cycles de référence lors de la gestion des événements.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de l’événement](../atl/event-handling-and-atl.md)
+[Gestion des événements](../atl/event-handling-and-atl.md)

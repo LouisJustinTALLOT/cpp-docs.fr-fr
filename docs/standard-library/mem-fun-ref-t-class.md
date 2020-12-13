@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe mem_fun_ref_t'
 title: mem_fun_ref_t, classe
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e79d7f3b3271ff699f0dd2ad760753c2162d554a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149173"
 ---
 # <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t, classe
 
-Classe d’adaptateur qui permet à une fonction membre `non_const` qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
+Classe d’adaptateur qui permet `non_const` à une fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,19 +32,19 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pm* \
+*_Pm*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-\ *gauche*
+*gauche*\
 Objet sur lequel la fonction membre *_Pm* est appelée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Fonction unaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de la classe `Type`, dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant (**Left**. * `_Pm`) ().
+Le modèle de classe stocke une copie de *_Pm*, qui doit être un pointeur vers une fonction membre de classe `Type` , dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant (**Left**. * `_Pm` ) ().
 
 ## <a name="example"></a>Exemple
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs de mappage'
 title: '&lt;map&gt;, opérateurs'
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 5cfd40add5e2b2503a5eea9610cadffd97bb0a80
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: edd22b4de7c8a4590f2d3570f3315a05abd66f7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149420"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt;, opérateurs
 
@@ -43,7 +44,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les mappages ne sont pas égaux ; **`false`** si les mappages sont égaux.
 
@@ -108,7 +109,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la carte située à gauche de l’opérateur est strictement inférieure à la carte située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -173,7 +174,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la carte située à gauche de l’opérateur est inférieure ou égale à la carte située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -241,7 +242,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la carte sur le côté gauche de l’opérateur est égale à la carte située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -306,7 +307,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la carte sur le côté gauche de l’opérateur est supérieure à la carte située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -370,7 +371,7 @@ Objet de type `map`.
 *Oui*\
 Objet de type `map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la carte située à gauche de l’opérateur est supérieure ou égale à la carte située sur le côté droit de la liste ; Sinon, **`false`** .
 
@@ -438,7 +439,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les multimappages ne sont pas égaux ; **`false`** si les multimappages sont égaux.
 
@@ -503,7 +504,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le Multimap situé à gauche de l’opérateur est strictement inférieur au Multimap situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -568,7 +569,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le Multimap situé à gauche de l’opérateur est inférieur ou égal au Multimap situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -636,7 +637,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le Multimap situé à gauche de l’opérateur est égal au Multimap situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -701,7 +702,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le Multimap situé à gauche de l’opérateur est supérieur au Multimap situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -766,7 +767,7 @@ Objet de type `multimap`.
 *Oui*\
 Objet de type `multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le Multimap situé à gauche de l’opérateur est supérieur ou égal au Multimap situé à droite de la liste ; Sinon, **`false`** .
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __stosw'
 title: __stosw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2995276fb255858d6c3dd9f438487726e75fdf1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143687"
 ---
 # <a name="__stosw"></a>__stosw
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère une instruction de chaîne de`rep stosw`magasin ().
+Génère une instruction de chaîne de magasin ( `rep stosw` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +37,19 @@ void __stosw(
 *Destination*\
 à Destination de l’opération.
 
-*Métadonnée*\
+*Données*\
 dans Données à stocker.
 
 *Saut*\
 dans Longueur du bloc de mots à écrire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -80,7 +81,7 @@ int main()
 0 128 128 0
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

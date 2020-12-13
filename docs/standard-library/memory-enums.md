@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; énumérations de mémoire'
 title: '&lt;memory&gt;, énumérations'
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: 507628628fcf8bbf8993ce5beb1e02c28ff82147
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da9bb22a6095f74b94e1745210fa55061ecf3c71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149095"
 ---
 # <a name="ltmemorygt-enums"></a>&lt;memory&gt;, énumérations
 
-## <a name="pointer_safety-enumeration"></a><a name="pointer_safety"></a>Énumération pointer_safety
+## <a name="pointer_safety-enumeration"></a><a name="pointer_safety"></a> Énumération pointer_safety
 
 Énumération des valeurs possibles retournées par `get_pointer_safety`.
 

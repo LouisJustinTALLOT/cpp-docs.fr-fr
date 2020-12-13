@@ -1,5 +1,6 @@
 ---
-title: Classe CComQIPtr
+description: 'En savoir plus sur : classe CComQIPtr'
+title: CComQIPtr, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtr
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5af938cd7b2bbae3b091eac5323d3455ce1cf02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142322"
 ---
-# <a name="ccomqiptr-class"></a>Classe CComQIPtr
+# <a name="ccomqiptr-class"></a>CComQIPtr, classe
 
-Une classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.
+Classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +30,10 @@ class CComQIPtr: public CComPtr<T>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Une interface COM spécifiant le type de pointeur à stocker.
+Interface COM spécifiant le type de pointeur à stocker.
 
 *piid*<br/>
-Un pointeur à l’IID de *T*.
+Pointeur vers l’IID de *T*.
 
 ## <a name="members"></a>Membres
 
@@ -40,31 +41,31 @@ Un pointeur à l’IID de *T*.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComQIPtr::CComQIPtr](#ccomqiptr)|Constructeur.|
+|[CComQIPtr :: CComQIPtr](#ccomqiptr)|Constructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComQIPtr::opérateur](#operator_eq)|Assigne un pointeur au pointeur du membre.|
+|[CComQIPtr :: Operator =](#operator_eq)|Assigne un pointeur au pointeur membre.|
 
 ## <a name="remarks"></a>Notes
 
-ATL `CComQIPtr` utilise et [CComPtr](../../atl/reference/ccomptr-class.md) pour gérer les pointeurs d’interface COM, qui dérivent tous deux de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Les deux classes effectuent `AddRef` le `Release`comptage automatique des références par le biais d’appels vers et . Les opérateurs surchargés gèrent les opérations de pointeur.
+ATL utilise `CComQIPtr` et [CComPtr](../../atl/reference/ccomptr-class.md) pour gérer les pointeurs d’interface com, qui dérivent tous les deux de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Les deux classes effectuent un décompte de références automatique via les appels à `AddRef` et `Release` . Les opérateurs surchargés gèrent les opérations de pointeur.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[CComPtrBase (en)](../../atl/reference/ccomptrbase-class.md)
+[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
 
-[CComPtr (en)](../../atl/reference/ccomptr-class.md)
+[CComPtr](../../atl/reference/ccomptr-class.md)
 
 `CComQIPtr`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcomcli.h
+**En-tête :** atlcomcli. h
 
-## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a> CComQIPtr :: CComQIPtr
 
 Constructeur.
 
@@ -77,18 +78,18 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Lp*<br/>
+*Aid*<br/>
 Utilisé pour initialiser le pointeur d’interface.
 
 *T*<br/>
-Une interface COM.
+Interface COM.
 
 *piid*<br/>
-Un pointeur à l’IID de *T*.
+Pointeur vers l’IID de *T*.
 
-## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::opérateur
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a> CComQIPtr :: Operator =
 
-L’opérateur de l’affectation.
+Opérateur d’assignation.
 
 ```
 T* operator= (T* lp) throw();
@@ -98,23 +99,23 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Lp*<br/>
+*Aid*<br/>
 Utilisé pour initialiser le pointeur d’interface.
 
 *T*<br/>
-Une interface COM.
+Interface COM.
 
 *piid*<br/>
-Un pointeur à l’IID de *T*.
+Pointeur vers l’IID de *T*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un pointeur `CComQIPtr` à l’objet mis à jour.
+Retourne un pointeur vers l’objet mis à jour `CComQIPtr` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
-[Classe CComPtrBase](../../atl/reference/ccomptrbase-class.md)<br/>
+[CComPtr :: CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr :: CComQIPtr](#ccomqiptr)<br/>
+[CComPtrBase, classe](../../atl/reference/ccomptrbase-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)<br/>
-[Classe CComQIPtrElraits](../../atl/reference/ccomqiptrelementtraits-class.md)
+[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)

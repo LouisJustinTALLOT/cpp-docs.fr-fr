@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : création d’une application de ruban à l’aide de MFC'
 title: "Procédure pas à pas : création d'une application de ruban à l'aide de MFC"
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: fa266900c52d7d8ca3460ca38b266571974d1563
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143063"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 
 Cette procédure pas à pas montre comment utiliser l' **Assistant Application MFC** pour créer une application qui a un ruban par défaut. Vous pouvez ensuite développer le ruban en ajoutant une catégorie de ruban **personnalisée** qui contient un panneau de ruban **favoris** , puis en ajoutant des commandes fréquemment utilisées au panneau.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prérequis
 
 Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour utiliser les **paramètres de développement généraux**. Si vous utilisez des paramètres différents, certains éléments de l’interface utilisateur référencés dans les instructions suivantes peuvent ne pas s’afficher.
 
@@ -26,7 +27,7 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
 1. Définissez les options suivantes dans l' **Assistant Application MFC**:
 
-    1. Dans la section **type d’application** , sous **style visuel et couleurs**, sélectionnez **Office 2007 (thème Blue)** .
+    1. Dans la section **type d’application** , sous **style visuel et couleurs**, sélectionnez **Office 2007 (thème Blue)**.
 
     1. Dans la section **prise en charge des documents composés** , assurez-vous qu' **aucun élément** n’est sélectionné.
 
@@ -42,7 +43,7 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
 1. Pour vérifier que l'application a été créée avec succès, générez-la et exécutez-la. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez-la en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .
 
-    L’Assistant crée automatiquement un ruban qui a une catégorie de ruban nommée **page d’hébergement**. Ce ruban contient trois panneaux du ruban, nommés **presse-papiers**, **affichage**et **fenêtre**.
+    L’Assistant crée automatiquement un ruban qui a une catégorie de ruban nommée **page d’hébergement**. Ce ruban contient trois panneaux du ruban, nommés **presse-papiers**, **affichage** et **fenêtre**.
 
 ### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>Pour ajouter une catégorie et un volet au ruban
 
@@ -54,16 +55,16 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
     Cliquez avec le bouton droit sur **Category1** , puis cliquez sur **Propriétés**. Dans la fenêtre **Propriétés** , remplacez la **légende** par *personnalisé*.
 
-    Les propriétés **grandes images** et **petites images** spécifient les bitmaps qui sont utilisées comme icônes pour les éléments de ruban dans cette catégorie. La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant. Les bitmaps de petite taille mesurent 16 pixels par 16 pixels. Pour les petites images, utilisez les bitmaps qui sont accessibles par l’ID de ressource `IDB_FILESMALL`. Les bitmaps de grande taille mesurent 32 pixels par 32 pixels. Pour les images de grande taille, utilisez les bitmaps qui sont accessibles par l’ID de ressource `IDB_FILELARGE`.
+    Les propriétés **grandes images** et **petites images** spécifient les bitmaps qui sont utilisées comme icônes pour les éléments de ruban dans cette catégorie. La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant. Les bitmaps de petite taille mesurent 16 pixels par 16 pixels. Pour les petites images, utilisez les bitmaps qui sont accessibles par l' `IDB_FILESMALL` ID de ressource. Les bitmaps de grande taille mesurent 32 pixels par 32 pixels. Pour les images de grande taille, utilisez les bitmaps qui sont accessibles par l' `IDB_FILELARGE` ID de ressource.
 
     > [!NOTE]
     > Sur les écrans HDPI (high dots per inch), les versions HDPI des images sont automatiquement utilisées.
 
-1. Il vous appartient maintenant de personnaliser le volet. Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres. Par exemple, sous l’onglet dossier de **démarrage** de cette application, les commandes **couper**, **copier**et **coller** se trouvent toutes dans le panneau **presse-papiers** . Pour personnaliser le volet, cliquez avec le bouton droit sur **Panel1** , puis cliquez sur **Propriétés**. Dans la fenêtre **Propriétés** , remplacez la **légende** par *favoris*.
+1. Il vous appartient maintenant de personnaliser le volet. Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres. Par exemple, sous l’onglet dossier de **démarrage** de cette application, les commandes **couper**, **copier** et **coller** se trouvent toutes dans le panneau **presse-papiers** . Pour personnaliser le volet, cliquez avec le bouton droit sur **Panel1** , puis cliquez sur **Propriétés**. Dans la fenêtre **Propriétés** , remplacez la **légende** par *favoris*.
 
     Vous pouvez spécifier l' **index d’image** pour le panneau. Ce nombre spécifie l’icône qui s’affiche si le panneau du ruban est ajouté à la **barre d’outils accès rapide**. L’icône ne s’affiche pas sur le panneau du ruban lui-même.
 
-1. Pour vérifier que le volet et la catégorie de ruban ont été correctement créés, affichez un aperçu du contrôle de ruban. Dans la **barre d’outils**de l’éditeur de ruban, cliquez sur le bouton **tester le ruban** . Un onglet **personnalisé** et un volet **favoris** doivent s’afficher sur le ruban.
+1. Pour vérifier que le volet et la catégorie de ruban ont été correctement créés, affichez un aperçu du contrôle de ruban. Dans la **barre d’outils** de l’éditeur de ruban, cliquez sur le bouton **tester le ruban** . Un onglet **personnalisé** et un volet **favoris** doivent s’afficher sur le ruban.
 
 ### <a name="to-add-elements-to-the-ribbon-panels"></a>Pour ajouter des éléments aux volets de ruban
 
@@ -75,19 +76,19 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio pour 
 
     Dans la fenêtre **Propriétés** , remplacez la valeur de la propriété **ID** par **ID_FILE_PRINT**, qui doit déjà être définie. Remplacez la **légende** par *Imprimer*. Remplacez **index image** par *4*.
 
-    Pour créer le bouton **impression rapide** , cliquez sur la colonne valeur de la propriété en regard de **éléments de menu**, puis cliquez sur les points de suspension ( **...** ). Dans l' **éditeur d’éléments**, cliquez sur le bouton **Ajouter** sans étiquette pour créer un élément de menu. Dans la fenêtre **Propriétés** , remplacez **la légende** par *impression rapide*, **ID** par *ID_FILE_PRINT_DIRECT*et **image** par *5*. La propriété image spécifie l’icône d' **impression rapide** dans la ressource bitmap `IDB_FILESMALL`.
+    Pour créer le bouton **impression rapide** , cliquez sur la colonne valeur de la propriété en regard de **éléments de menu**, puis cliquez sur les points de suspension (**...**). Dans l' **éditeur d’éléments**, cliquez sur le bouton **Ajouter** sans étiquette pour créer un élément de menu. Dans la fenêtre **Propriétés** , remplacez **la légende** par *impression rapide*, **ID** par *ID_FILE_PRINT_DIRECT* et **image** par *5*. La propriété image spécifie l’icône d' **impression rapide** dans la `IDB_FILESMALL` ressource bitmap.
 
 1. Pour vérifier que les boutons ont été ajoutés au volet du ruban, générez l'application et exécutez-la. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** . Le bouton **Imprimer** et la zone de liste déroulante du panneau **favoris** de l’onglet **personnalisé** sur le ruban doivent s’afficher.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Guide pratique pour personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Comment : personnaliser la barre d’outils accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Guide pratique pour personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
+[Comment : personnaliser le bouton de l’application](../mfc/how-to-customize-the-application-button.md)
 
 Pour obtenir des exemples de bout en bout, consultez [exemples (Feature Pack MFC)](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
+[Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
 [Exemples (Feature Pack MFC)](../overview/visual-cpp-samples.md)

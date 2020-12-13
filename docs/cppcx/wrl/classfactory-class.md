@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ClassFactory'
 title: ClassFactory (classe)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6503cba1060c432b2cb85020799b83f0ee16c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135302"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
 
@@ -114,7 +115,7 @@ Nom                                            | Description
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory :: AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a> ClassFactory :: AddRef
 
 Incrémente le décompte de références pour l' `ClassFactory` objet actuel.
 
@@ -125,17 +126,17 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory :: ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a> ClassFactory :: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory :: LockServer,
+## <a name="classfactorylockserver"></a><a name="lockserver"></a> ClassFactory :: LockServer,
 
 Incrémente ou décrémente le nombre d’objets sous-jacents qui sont suivis par l' `ClassFactory` objet actuel.
 
@@ -150,15 +151,15 @@ STDMETHOD(
 *Troupeau*<br/>
 **`true`** pour incrémenter le nombre d’objets suivis. **`false`** pour décrémenter le nombre d’objets suivis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, E_FAIL.
 
 ### <a name="remarks"></a>Notes
 
-`ClassFactory`effectue le suivi des objets dans une instance sous-jacente de la classe de [module](module-class.md) .
+`ClassFactory` effectue le suivi des objets dans une instance sous-jacente de la classe de [module](module-class.md) .
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory :: QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a> ClassFactory :: QueryInterface
 
 Récupère un pointeur vers l’interface spécifiée par le paramètre.
 
@@ -176,11 +177,11 @@ ID d’interface.
 *ppvObject*<br/>
 Lorsque cette opération est terminée, il s’agit d’un pointeur vers l’interface spécifiée par le paramètre *riid*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory :: Release
+## <a name="classfactoryrelease"></a><a name="release"></a> ClassFactory :: Release
 
 Décrémente le décompte de références pour l' `ClassFactory` objet actuel.
 
@@ -191,6 +192,6 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.

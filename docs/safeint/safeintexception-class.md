@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe SafeIntException'
 title: SafeIntException, classe
 ms.date: 10/22/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6a7be21b0dfa42a23ba60eac7eb3f4ebbf1629ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149576"
 ---
 # <a name="safeintexception-class"></a>SafeIntException, classe
 
@@ -37,7 +38,7 @@ class SafeIntException;
 
 Nom                                                    | Description
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException :: SafeIntException](#safeintexception) | Crée un objet `SafeIntException` .
+[SafeIntException :: SafeIntException](#safeintexception) | Crée un objet `SafeIntException`.
 
 ## <a name="remarks"></a>Notes
 
@@ -47,15 +48,15 @@ La [classe SafeInt](safeint-class.md) est la seule classe qui utilise la classe 
 
 `SafeIntException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** safeint.h
 
 **Espace de noms :** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException :: SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a> SafeIntException :: SafeIntException
 
-Crée un objet `SafeIntException` .
+Crée un objet `SafeIntException`.
 
 ```cpp
 SafeIntException();

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlFileMapping'
 title: CAtlFileMapping, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: 7516349e4ec54d8cb90fa6ff23b0ded954aa043b
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 875979d47ad4cb5b9c59047eff1f50acd35d1251
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147418"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping, classe
 
@@ -39,11 +40,11 @@ Type de données utilisé pour l’opérateur de conversion.
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlFileMapping :: Operator T *](#operator_t_star)|Autorise la conversion implicite `CAtlFileMapping` d' `T*`objets en.|
+|[CAtlFileMapping :: Operator T *](#operator_t_star)|Autorise la conversion implicite d' `CAtlFileMapping` objets en `T*` .|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe ajoute un opérateur de cast unique pour permettre la conversion `CAtlFileMapping` implicite `T*`d’objets en. Les autres membres sont fournis par la classe de base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Cette classe ajoute un opérateur de cast unique pour permettre la conversion implicite d' `CAtlFileMapping` objets en `T*` . Les autres membres sont fournis par la classe de base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -55,15 +56,15 @@ Cette classe ajoute un opérateur de cast unique pour permettre la conversion `C
 
 **En-tête :** atlfile. h
 
-## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping :: Operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a> CAtlFileMapping :: Operator T *
 
-Autorise la conversion implicite `CAtlFileMapping` d' `T*`objets en.
+Autorise la conversion implicite d' `CAtlFileMapping` objets en `T*` .
 
 ```cpp
 operator T*() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un `T*` pointeur vers le début du fichier mappé en mémoire.
 

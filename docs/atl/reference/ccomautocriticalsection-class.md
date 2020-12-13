@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComAutoCriticalSection'
 title: CComAutoCriticalSection, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 26b43fa4adc40993a44318c67be990c781b5cdf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2441c714b95a3bbefed4a699055d14c6915cffda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146963"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection, classe
 
-`CComAutoCriticalSection`fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
+`CComAutoCriticalSection` fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +37,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ## <a name="remarks"></a>Notes
 
-`CComAutoCriticalSection`est semblable à la classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), sauf qu' `CComAutoCriticalSection` Initialise automatiquement l’objet de section critique dans le constructeur.
+`CComAutoCriticalSection` est semblable à la classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), sauf qu' `CComAutoCriticalSection` Initialise automatiquement l’objet de section critique dans le constructeur.
 
 En général, vous utilisez `CComAutoCriticalSection` le **`typedef`** nom [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Ce nom fait référence à lors de l' `CComAutoCriticalSection` utilisation de [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
@@ -52,7 +53,7 @@ Les `Init` `Term` méthodes et de [CComCriticalSection](../../atl/reference/ccom
 
 **En-tête :** atlcore. h
 
-## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a> CComAutoCriticalSection::CComAutoCriticalSection
 
 Constructeur.
 
@@ -64,7 +65,7 @@ CComAutoCriticalSection();
 
 Appelle la fonction Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), qui initialise l’objet de section critique.
 
-## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection :: ~ CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a> CComAutoCriticalSection :: ~ CComAutoCriticalSection
 
 Destructeur.
 

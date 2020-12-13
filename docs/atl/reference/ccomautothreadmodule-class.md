@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComAutoThreadModule'
 title: CComAutoThreadModule, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe6ded878a054bdcdc2569c8ca347e2ac20410b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146937"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule, classe
 
@@ -52,8 +53,8 @@ dans Classe qui gère la sélection des threads. La valeur par défaut est [CCom
 |[CreateInstance](#createinstance)|Sélectionne un thread, puis crée un objet dans le cloisonnement associé.|
 |[GetDefaultThreads](#getdefaultthreads)|Statique Calcule dynamiquement le nombre de threads pour le module en fonction du nombre de processeurs.|
 |[Init](#init)|Crée les threads du module.|
-|[Verrouiller](#lock)|Incrémente le nombre de verrous sur le module et sur le thread actuel.|
-|[Bloquer](#unlock)|Décrémente le nombre de verrous sur le module et sur le thread actuel.|
+|[Verrou](#lock)|Incrémente le nombre de verrous sur le module et sur le thread actuel.|
+|[Déverrouiller](#unlock)|Décrémente le nombre de verrous sur le module et sur le thread actuel.|
 
 ### <a name="data-members"></a>Données membres
 
@@ -93,7 +94,7 @@ Par défaut, ATL COM AppWizard (l’Assistant Projet ATL dans Visual Studio .NET
 
 `CComAutoThreadModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 

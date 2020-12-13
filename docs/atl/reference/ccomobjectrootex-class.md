@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CComObjectRootEx, classe'
 title: CComObjectRootEx (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe0140944e3da5ddf70e0da38d054a35bb648ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142478"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (classe)
 
@@ -52,8 +53,8 @@ Classe dont les méthodes implémentent le modèle de thread souhaité. Vous pou
 |[CComObjectRootEx](#ccomobjectrootex)|Constructeur.|
 |[Internaladdref,](#internaladdref)|Incrémente le décompte de références pour un objet non agrégé.|
 |[InternalRelease,](#internalrelease)|Décrémente le décompte de références pour un objet non agrégé.|
-|[Verrouiller](#lock)|Si le modèle de thread est multithread, obtient la propriété d’un objet de section critique.|
-|[Bloquer](#unlock)|Si le modèle de thread est multithread, libère la propriété d’un objet de section critique.|
+|[Verrou](#lock)|Si le modèle de thread est multithread, obtient la propriété d’un objet de section critique.|
+|[Déverrouiller](#unlock)|Si le modèle de thread est multithread, libère la propriété d’un objet de section critique.|
 
 ### <a name="ccomobjectrootbase-methods"></a>Méthodes CComObjectRootBase
 
@@ -95,7 +96,7 @@ Si votre objet est agrégé, [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunk
 
 Si votre objet n’est pas agrégé, `IUnknown` est implémenté par `CComObject` ou `CComPolyObject` . Dans ce cas, les appels à `QueryInterface` , `AddRef` et `Release` sont délégués à, `CComObjectRootEx` , `InternalQueryInterface` `InternalAddRef` et `InternalRelease` pour effectuer les opérations réelles.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 

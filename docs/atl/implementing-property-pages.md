@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : implémentation des pages de propriétés'
 title: Implémentation de pages de propriétés
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5f05831fa23eff586e85db56eca8013e0d1d2ea2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147756"
 ---
 # <a name="implementing-property-pages"></a>Implémentation de pages de propriétés
 
@@ -29,7 +30,7 @@ Pour créer une page de propriétés à l’aide d’ATL :
 
 - Créez ou ouvrez un projet de serveur de bibliothèque de liens dynamiques (DLL) ATL.
 
-- Ouvrez la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) et sélectionnez **Page de propriétés ATL** .
+- Ouvrez la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) et sélectionnez **Page de propriétés ATL**.
 
 - Assurez-vous que votre page de propriétés est cloisonnée (puisqu’elle a une interface utilisateur).
 
@@ -41,7 +42,7 @@ Pour créer une page de propriétés à l’aide d’ATL :
 
 - Si vous le souhaitez, remplacez les méthodes `IPropertyPageImpl` en suivant les recommandations ci-dessous.
 
-   |Méthode IPropertyPageImpl|Si vous souhaitez...|Notes|
+   |Méthode IPropertyPageImpl|Si vous souhaitez...|Remarques|
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Effectuer des vérifications de validité de base sur le nombre d’objets passés à votre page et les interfaces prises en charge.|Exécuter votre propre code avant d’appeler l’implémentation de classe de base. Si les objets en cours de définition ne sont pas conformes à vos attentes, vous devez terminer l’appel dès que possible.|
    |[Activer](../atl/reference/ipropertypageimpl-class.md#activate)|Initialiser l’interface utilisateur de votre page (par exemple, définir des contrôles de boîte de dialogue avec les valeurs de propriété actuelles des objets, créer des contrôles dynamiquement ou effectuer d’autres initialisations).|Appeler l’implémentation de classe de base avant votre code afin que la classe de base ait la possibilité de créer une fenêtre de dialogue et tous les contrôles avant que vous essayiez de les mettre à jour.|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlPreviewCtrlImpl'
 title: CAtlPreviewCtrlImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: fd94d0d6fe43d80b45def3f747c7b7d558de31d4
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 52263a4c65af1b791ca5da64eff235e93006ab52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147210"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl, classe
 
@@ -103,7 +104,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 **En-tête :** atlpreviewctrlimpl. h
 
-## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a> CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
 
 Construit un objet contrôle d’aperçu.
 
@@ -114,7 +115,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a> CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl
 
 Détruit un objet contrôle d’aperçu.
 
@@ -124,7 +125,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlImpl :: Create
+## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a> CAtlPreviewCtrlImpl :: Create
 
 Appelée par un gestionnaire d’aperçus enrichis pour créer la fenêtre Windows.
 
@@ -140,13 +141,13 @@ Handle de la fenêtre hôte fournie par le Shell pour l’aperçu riche.
 *République*<br/>
 Spécifie la taille et la position initiales de la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl ::D estroy
+## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a> CAtlPreviewCtrlImpl ::D estroy
 
 Appelée par un gestionnaire d’aperçus détaillés lorsqu’il doit détruire ce contrôle.
 
@@ -156,7 +157,7 @@ virtual void Destroy();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlImpl ::D oPaint
+## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a> CAtlPreviewCtrlImpl ::D oPaint
 
 Appelé par l’infrastructure pour restituer l’aperçu.
 
@@ -171,7 +172,7 @@ Handle d’un contexte de périphérique pour peindre.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlImpl :: Focus
+## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a> CAtlPreviewCtrlImpl :: Focus
 
 Définit le focus d'entrée sur ce contrôle.
 
@@ -181,7 +182,7 @@ virtual void Focus();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl :: m_clrBack
+## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a> CAtlPreviewCtrlImpl :: m_clrBack
 
 Couleur d’arrière-plan de la fenêtre d’aperçu.
 
@@ -191,7 +192,7 @@ COLORREF m_clrBack;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl :: m_clrText
+## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a> CAtlPreviewCtrlImpl :: m_clrText
 
 Couleur du texte de la fenêtre d’aperçu.
 
@@ -201,7 +202,7 @@ COLORREF m_clrText;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl :: m_plf
+## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a> CAtlPreviewCtrlImpl :: m_plf
 
 Police utilisée pour afficher le texte dans la fenêtre d’aperçu.
 
@@ -211,7 +212,7 @@ const LOGFONTW* m_plf;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlImpl :: OnPaint
+## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a> CAtlPreviewCtrlImpl :: OnPaint
 
 Gère le message de WM_PAINT.
 
@@ -237,13 +238,13 @@ Ce paramètre n'est pas utilisé.
 *bHandled*<br/>
 Lorsque cette fonction est retournée, elle contient la valeur TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne toujours 0.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl :: redessin
+## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a> CAtlPreviewCtrlImpl :: redessin
 
 Indique à ce contrôle qu’il doit être redessiné.
 
@@ -253,7 +254,7 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost
+## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a> CAtlPreviewCtrlImpl::SetHost
 
 Définit un nouveau parent pour ce contrôle.
 
@@ -268,7 +269,7 @@ Handle vers la nouvelle fenêtre parente.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals
+## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a> CAtlPreviewCtrlImpl::SetPreviewVisuals
 
 Appelée par un gestionnaire d’aperçus détaillés lorsqu’il doit définir des éléments visuels d’un contenu riche en préversion.
 
@@ -292,7 +293,7 @@ Police utilisée pour afficher le texte dans la fenêtre d’aperçu.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlImpl :: SetRect
+## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a> CAtlPreviewCtrlImpl :: SetRect
 
 Définit un nouveau rectangle englobant pour ce contrôle.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; mappage&gt;'
 title: '&lt;map&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 9a58160c573fac7d4ad170f589c04c75b456299a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 78a4afca400239b7f45637ad6320cbd950d72f54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149407"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 Définit le mappage des modèles de classe de conteneur et Multimap et leurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<map>
 

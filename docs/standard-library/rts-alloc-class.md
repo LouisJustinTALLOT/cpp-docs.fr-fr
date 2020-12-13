@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe rts_alloc'
 title: rts_alloc, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b2fe4bf3fe3f54e8fe1de3d89605280b2ba2b857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148939"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc, classe
 
@@ -66,13 +67,13 @@ void *allocate(std::size_t count);
 *saut*\
 Nombre d’éléments du tableau à allouer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet alloué.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `caches[_IDX].allocate(count)` , où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator new(count)` . `cache`, qui représente l’objet cache.
+La fonction membre retourne `caches[_IDX].allocate(count)` , où l’index `_IDX` est déterminé par le *nombre* de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator new(count)` . `cache`, qui représente l’objet cache.
 
 ## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc ::d eallocate
 
@@ -92,7 +93,7 @@ Nombre d’objets à désallouer dans le stockage.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle `caches[_IDX].deallocate(ptr, count)` , où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator delete(ptr)` .
+La fonction membre appelle `caches[_IDX].deallocate(ptr, count)` , où l’index `_IDX` est déterminé par le *nombre* de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator delete(ptr)` .
 
 ## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc :: est égal à
 

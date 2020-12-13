@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mappages de routine'
 title: Mappages de routine
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22febc86d47ca435e9667015f1130b472e515946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136797"
 ---
 # <a name="routine-mappings"></a>Mappages de routine
 
@@ -265,5 +266,5 @@ Pour plus d’informations, consultez [Mappages de texte générique dans TCHAR.
 [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mappages de types de données](../c-runtime-library/data-type-mappings.md)<br/>
 [Mappages de constantes et de variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
-[Exemple de programme de texte générique](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Utilisation de mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md)
+[Exemple de programme Generic-Text](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Utilisation des mappages de Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

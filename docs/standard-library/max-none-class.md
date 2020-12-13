@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe max_none'
 title: max_none, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 41ada338d9b8546202ecd49ff975f9642f190ba0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d3f6bf2d7dda114ed7541b91da8081d501ddec5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149251"
 ---
 # <a name="max_none-class"></a>max_none, classe
 
@@ -97,7 +98,7 @@ Retourne une valeur qui indique si davantage de blocs de mémoire doivent être 
 bool full();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette fonction membre retourne toujours **`true`** .
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : fonctions CRT non prises en charge Windows Runtime'
 title: Fonctions CRT non prises en charge par Windows Runtime
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
-ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 12195d083485d9591610176a7cb00b4eead844ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136784"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Fonctions CRT non prises en charge par Windows Runtime
 
@@ -21,4 +22,4 @@ Toutes les API CRT sont décrites dans la section [Référence alphabétique des
 ## <a name="see-also"></a>Voir aussi
 
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>

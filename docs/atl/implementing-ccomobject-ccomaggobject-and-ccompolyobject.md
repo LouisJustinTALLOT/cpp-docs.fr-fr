@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : implémentation de CComObject, CComAggObject et CComPolyObject'
 title: Implémentation de CComObject, CComAggObject et CComPolyObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,31 +8,31 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-ms.openlocfilehash: e2413c8fb9f5722f0245883c947067387838e57f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0cc8a6b65ec9d85249cd47e2f43cf1bec2b8ce2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147769"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implémentation de CComObject, CComAggObject et CComPolyObject
 
-Les classes de modèle [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), et [CComPolyObject](../atl/reference/ccompolyobject-class.md) sont toujours les classes les plus dérivées dans la chaîne d’héritage. Il est de leur responsabilité pour gérer toutes les méthodes dans `IUnknown`: `QueryInterface`, `AddRef`, et `Release`. En outre, `CComAggObject` et `CComPolyObject` (lorsqu’il est utilisé pour les objets agrégées) fournissent le décompte des références spéciales et `QueryInterface` sémantique requise pour l’inconnu intérieur.
+Les classes de modèle [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md)et [CComPolyObject](../atl/reference/ccompolyobject-class.md) sont toujours les classes les plus dérivées dans la chaîne d’héritage. Il incombe de gérer toutes les méthodes dans `IUnknown` : `QueryInterface` , `AddRef` et `Release` . En outre, `CComAggObject` et `CComPolyObject` (en cas d’utilisation pour les objets agrégés) fournissent le décompte de références spécial et la `QueryInterface` sémantique requis pour le interne inconnu.
 
-Si `CComObject`, `CComAggObject`, ou `CComPolyObject` est utilisée dépend de si vous déclarez l’une des macros suivantes (ou aucun) :
+Le fait de savoir si `CComObject` , `CComAggObject` ou `CComPolyObject` est utilisé varie selon que vous déclarez une (ou aucune) des macros suivantes :
 
-|Macro|Effet|
+|Macro|Résultat|
 |-----------|------------|
-|DECLARE_NOT_AGGREGATABLE|Utilise toujours `CComObject`.|
-|DECLARE_AGGREGATABLE|Utilise `CComAggObject` si l’objet est agrégée et `CComObject` si elle n’est pas. `CComCoClass` contient cette macro si aucune des macros DECLARE_ * _AGGREGATABLE n’est déclarée dans votre classe, il s’agit de la valeur par défaut.|
-|DECLARE_ONLY_AGGREGATABLE|Utilise toujours `CComAggObject`. Retourne une erreur si l’objet n’est pas agrégée.|
-|DECLARE_POLY_AGGREGATABLE|ATL crée une instance de **CComPolyObject\<CYourClass >** lorsque `IClassFactory::CreateInstance` est appelée. Lors de la création, la valeur de l’inconnu extérieur est vérifiée. Si sa valeur est NULL, `IUnknown` est implémentée pour un objet non regroupées en agrégats. Si l’inconnu extérieur n’est pas NULL, `IUnknown` est implémentée pour un objet agrégé.|
+|DECLARE_NOT_AGGREGATABLE|Utilise toujours `CComObject` .|
+|DECLARE_AGGREGATABLE|Utilise `CComAggObject` si l’objet est agrégé et `CComObject` si ce n’est pas le cas. `CComCoClass` contient cette macro de sorte que si aucune des macros DECLARE_ * _AGGREGATABLE n’est déclarée dans votre classe, il s’agit de la valeur par défaut.|
+|DECLARE_ONLY_AGGREGATABLE|Utilise toujours `CComAggObject` . Retourne une erreur si l’objet n’est pas agrégé.|
+|DECLARE_POLY_AGGREGATABLE|ATL crée une instance de **CComPolyObject \<CYourClass>** quand `IClassFactory::CreateInstance` est appelé. Pendant la création, la valeur de l’externe Unknown est vérifiée. Si la valeur est NULL, `IUnknown` est implémenté pour un objet non agrégé. Si le inconnu externe n’est pas NULL, `IUnknown` est implémenté pour un objet agrégé.|
 
-L’avantage d’utiliser `CComAggObject` et `CComObject` qui est l’implémentation de `IUnknown` est optimisé pour le type d’objet en cours de création. Par exemple, un objet non regroupées en agrégats doit uniquement un décompte de références, alors qu’un objet agrégé doit un décompte de références pour l’inconnu intérieur et un pointeur vers l’inconnu extérieur.
+L’avantage de l’utilisation de `CComAggObject` et de `CComObject` est que l’implémentation de `IUnknown` est optimisée pour le type d’objet en cours de création. Par exemple, un objet non agrégé a uniquement besoin d’un nombre de références, tandis qu’un objet agrégé a besoin à la fois d’un décompte de références pour le interne inconnu et d’un pointeur vers l’extérieur inconnu.
 
-L’avantage d’utiliser `CComPolyObject` est d’éviter d’avoir à la fois `CComAggObject` et `CComObject` dans votre module pour gérer les cas regroupés et. Un seul `CComPolyObject` objet gère les deux cas. Cela ne signifie qu’une seule copie de vtable et une seule copie des fonctions existent dans votre module. Si votre vtable est volumineuse, cela peut réduire considérablement la taille de votre module. Toutefois, si votre vtable est petite, à l’aide de `CComPolyObject` peut entraîner une taille légèrement supérieure de module, car elle n’est pas optimisée pour un objet regroupé ou, comme le sont `CComAggObject` et `CComObject`.
+L’avantage de l’utilisation de `CComPolyObject` est que vous évitez que `CComAggObject` et `CComObject` dans votre module ne gèrent les cas agrégés et non agrégés. Un seul `CComPolyObject` objet gère les deux cas. Cela signifie qu’une seule copie de la vtable et une copie des fonctions existent dans votre module. Si votre vtable est volumineuse, cela peut réduire considérablement la taille de votre module. Toutefois, si votre vtable est petite, l’utilisation de `CComPolyObject` peut entraîner une taille de module légèrement supérieure, car elle n’est pas optimisée pour un objet agrégé ou non agrégé, comme c’est le cas `CComAggObject` et `CComObject` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Principes de base des objets ATL COM](../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Agrégation et macros de fabrique de classe](../atl/reference/aggregation-and-class-factory-macros.md)
+[Notions de base des objets COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Agrégation et macros de fabrique de classes](../atl/reference/aggregation-and-class-factory-macros.md)

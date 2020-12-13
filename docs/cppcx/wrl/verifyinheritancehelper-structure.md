@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure VerifyInheritanceHelper'
 title: VerifyInheritanceHelper (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672455482a2d21cb695124cad31740b6325c377d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135042"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (structure)
 
@@ -32,11 +33,11 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="parameters"></a>Paramètres
 
-*Ⅰ*<br/>
+*Cliqu*<br/>
 Type.
 
 *Base*<br/>
-Un autre type.
+Autre type.
 
 ## <a name="remarks"></a>Notes
 
@@ -48,7 +49,7 @@ Teste si une interface est dérivée d’une autre interface.
 
 Nom                                       | Description
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Vérifier](#verify) | Teste les deux interfaces spécifiées par les paramètres actuels du modèle et détermine si une interface est dérivée de l’autre.
+[VerifyInheritanceHelper :: Verify](#verify) | Teste les deux interfaces spécifiées par les paramètres de modèle actuels et détermine si une interface est dérivée de l’autre.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +57,11 @@ Nom                                       | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** implements.h
+**En-tête :** Implements. h
 
-**Espace nom:** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>VerifyInheritanceHelper::Vérifier
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a> VerifyInheritanceHelper :: Verify
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -70,6 +71,6 @@ static void Verify();
 
 ### <a name="remarks"></a>Notes
 
-Teste les deux interfaces spécifiées par les paramètres actuels du modèle et détermine si une interface est dérivée de l’autre.
+Teste les deux interfaces spécifiées par les paramètres de modèle actuels et détermine si une interface est dérivée de l’autre.
 
 Une erreur est émise si une interface n’est pas dérivée de l’autre.

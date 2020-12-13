@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3914'
 title: Erreur du compilateur C3914
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3914
 ms.assetid: 8f3190e6-ee50-4916-9ecc-3b8748b2e1e7
-ms.openlocfilehash: 6f7da67871b5e6b9d7da9a9aa4eebeb761f8cc50
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7f5291e09d7f3f794d7d1bec90f0a753d7dfe38f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143960"
 ---
 # <a name="compiler-error-c3914"></a>Erreur du compilateur C3914
 
 une propriété par défaut ne peut pas être static
 
-Une propriété par défaut a été déclarée de manière incorrecte.  Pour plus d’informations, consultez [Comment : utiliser des propriétés C++dans/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Une propriété par défaut a été déclarée de manière incorrecte.  Pour plus d’informations, consultez [Comment : utiliser des propriétés en C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions de mappage'
 title: '&lt;map&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 8cc4a82e08963902f9ba5c21ace759c47bdd0014
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dded58c4af44bca08a5cb9e2cd0436974f48f6c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149511"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt;, fonctions
 
-## <a name="swap-map"></a><a name="swap_multimap"></a>swap (Map)
+## <a name="swap-map"></a><a name="swap_multimap"></a> swap (Map)
 
 Échange les éléments de deux classes map.
 
@@ -41,7 +42,7 @@ La fonction de modèle est un algorithme spécialisé sur la classe de conteneur
 
 Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la fonction membre [map::swap](../standard-library/map-class.md#swap).
 
-## <a name="swap-multimap"></a><a name="swap"></a>échange (Multimap)
+## <a name="swap-multimap"></a><a name="swap"></a> échange (Multimap)
 
 Échange les éléments de deux multimaps.
 
@@ -58,7 +59,7 @@ void swap(
 Multimap qui fournit les éléments à échanger ou Multimap dont les éléments doivent être échangés avec ceux du Multimap à *gauche*.
 
 *gauche*\
-Multimap dont les éléments doivent être échangés avec ceux du *droit*Multimap.
+Multimap dont les éléments doivent être échangés avec ceux du *droit* Multimap.
 
 ### <a name="remarks"></a>Notes
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure atomic_flag'
 title: atomic_flag, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: ff60e05c7d14104e164e8251a9146f8b0d0dcde3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f78e3fa8521d230cc119dd7c464653cb6e123733
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149498"
 ---
 # <a name="atomic_flag-structure"></a>atomic_flag, structure
 
@@ -42,7 +43,7 @@ Les objets `atomic_flag` peuvent être passés aux fonctions non-membres [atomic
 
 **Espace de noms :** std
 
-## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag :: Clear
+## <a name="atomic_flagclear"></a><a name="clear"></a> atomic_flag :: Clear
 
 Définit l' **`bool`** indicateur stocké dans dans **`*this`** **`false`** , dans les contraintes de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
@@ -56,7 +57,7 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 *Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag :: test_and_set
+## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a> atomic_flag :: test_and_set
 
 Définit l' **`bool`** indicateur stocké dans dans **`*this`** **`true`** , dans les contraintes de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
@@ -70,7 +71,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 *Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur initiale de l’indicateur stocké dans **`*this`** .
 
