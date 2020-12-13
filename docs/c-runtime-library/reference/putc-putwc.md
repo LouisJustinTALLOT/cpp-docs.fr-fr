@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : putc, putwc'
 title: putc, putwc
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 2a30302a72d228d709cd16d25d7b62d9ce64a8ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1dc5395938c1ac7d5f297a27dabc809ceb03b39c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335621"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -61,21 +62,21 @@ wint_t putwc(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à écrire.
 
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, **putc** et **putchar** retournent **EOF**; **putwc** et **putwchar** retournent **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si un pointeur null est passé pour *Stream*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** ou **WEOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La routine **putc** écrit le caractère unique *c* dans le *flux* de sortie à la position actuelle. Tout entier peut être passé à **putc**, mais seuls les 8 bits de poids faible sont écrits. La routine **putchar** est identique à `putc( c, stdout )`. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires à **fputc** et **_fputchar**, respectivement, mais sont implémentés en tant que fonctions et en tant que macros (consultez [choix entre les fonctions et les macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont respectivement des versions à caractères larges de **putc** et **putchar**. **putwc** et **putc** se comportent de la même manière si le flux est ouvert en mode ANSI. **putc** ne prend pas actuellement en charge la sortie dans un flux Unicode.
+La routine **putc** écrit le caractère unique *c* dans le *flux* de sortie à la position actuelle. Tout entier peut être passé à **putc**, mais seuls les 8 bits de poids faible sont écrits. La routine **putchar** est identique à `putc( c, stdout )` . Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires à **fputc** et **_fputchar**, respectivement, mais sont implémentés en tant que fonctions et en tant que macros (consultez [choix entre les fonctions et les macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont respectivement des versions à caractères larges de **putc** et **putchar**. **putwc** et **putc** se comportent de la même manière si le flux est ouvert en mode ANSI. **putc** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putc_nolock, _putwc_nolock**.
 
@@ -94,13 +95,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_putc.c

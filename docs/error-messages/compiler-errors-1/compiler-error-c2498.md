@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2498'
 title: Erreur du compilateur C2498
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2498
 ms.assetid: 0839f12c-aaa4-4a02-bb33-7f072715dd14
-ms.openlocfilehash: 2b6f6469a221c914e0eef9e190c79a2b2706e651
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e7cbb811cdaeea703d0f1da1c0f2012ebe8210fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335098"
 ---
 # <a name="compiler-error-c2498"></a>Erreur du compilateur C2498
 

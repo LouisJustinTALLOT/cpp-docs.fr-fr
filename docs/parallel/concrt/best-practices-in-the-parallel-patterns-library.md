@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : meilleures pratiques de la bibliothèque de modèles parallèles'
 title: Meilleures pratiques de la Bibliothèque de modèles parallèles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 0bd49dda881df402a8c511714c22be37da3a50c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72b0ff36532decbc55ae792ee407b3b711bd54a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334689"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Meilleures pratiques de la Bibliothèque de modèles parallèles
 
@@ -20,7 +21,7 @@ Ce document décrit la meilleure façon d’utiliser efficacement la bibliothèq
 
 Pour plus d’informations sur la bibliothèque PPL, consultez [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Ce document contient les sections suivantes :
 
@@ -44,7 +45,7 @@ Ce document contient les sections suivantes :
 
 - [Garantir la validité des variables pendant toute la durée de vie d’une tâche](#lifetime)
 
-## <a name="do-not-parallelize-small-loop-bodies"></a><a name="small-loops"></a>Ne pas paralléliser les petits corps de boucle
+## <a name="do-not-parallelize-small-loop-bodies"></a><a name="small-loops"></a> Ne pas paralléliser les petits corps de boucle
 
 La parallélisation des corps de boucles relativement petites peut entraîner une surcharge de la planification associée pour compenser les avantages du traitement parallèle. Prenons l'exemple suivant, qui ajoute chaque paire d'éléments dans deux tableaux.
 
@@ -54,7 +55,7 @@ La charge de travail de chaque itération de boucle parallèle est trop petite p
 
 [[Haut](#top)]
 
-## <a name="express-parallelism-at-the-highest-possible-level"></a><a name="highest"></a>Parallélisme Express au niveau le plus élevé possible
+## <a name="express-parallelism-at-the-highest-possible-level"></a><a name="highest"></a> Parallélisme Express au niveau le plus élevé possible
 
 Quand vous parallélisez du code uniquement au niveau inférieur, vous pouvez introduire une construction de bifurcation-jointure qui n'évolue pas au fur et à mesure que le nombre de processeurs augmente. Une construction de *bifurcation-jointure* est une construction dans laquelle une tâche divise son travail en sous-tâches parallèles plus petites et attend que ces sous-tâches se terminent. Chaque sous-tâche peut elle-même se diviser de manière récursive en sous-tâches supplémentaires.
 
@@ -76,11 +77,11 @@ Pour réduire la quantité de surcharge de planification dans cet exemple, vous 
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Pour obtenir un exemple similaire qui utilise un pipeline pour effectuer le traitement d’image en parallèle, consultez [procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Pour obtenir un exemple similaire qui utilise un pipeline pour effectuer le traitement d’image en parallèle, consultez [procédure pas à pas : création d’un réseau Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Haut](#top)]
 
-## <a name="use-parallel_invoke-to-solve-divide-and-conquer-problems"></a><a name="divide-and-conquer"></a>Utilisez parallel_invoke pour résoudre les problèmes de division et de conquête
+## <a name="use-parallel_invoke-to-solve-divide-and-conquer-problems"></a><a name="divide-and-conquer"></a> Utilisez parallel_invoke pour résoudre les problèmes de division et de conquête
 
 Un problème de *Division et de conquête* est une forme de la construction de bifurcation-jointure qui utilise la récursivité pour diviser une tâche en sous-tâches. Outre les classes [Concurrency :: task_group](reference/task-group-class.md) et [Concurrency :: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) , vous pouvez également utiliser l’algorithme de [arallel_invoke d’accès concurrentiel ::p](reference/concurrency-namespace-functions.md#parallel_invoke) pour résoudre les problèmes de division et de conquête. L’algorithme `parallel_invoke` a une syntaxe plus succincte que les objets de groupes de tâches. Il s’avère utile quand vous avez un nombre fixe de tâches parallèles.
 
@@ -94,7 +95,7 @@ Pour obtenir la version complète de cet exemple, consultez [Comment : utiliser
 
 [[Haut](#top)]
 
-## <a name="use-cancellation-or-exception-handling-to-break-from-a-parallel-loop"></a><a name="breaking-loops"></a>Utiliser l’annulation ou la gestion des exceptions pour rompre une boucle parallèle
+## <a name="use-cancellation-or-exception-handling-to-break-from-a-parallel-loop"></a><a name="breaking-loops"></a> Utiliser l’annulation ou la gestion des exceptions pour rompre une boucle parallèle
 
 La bibliothèque de modèles parallèles fournit deux méthodes pour annuler un travail parallèle exécuté par un groupe de tâches ou un algorithme parallèle. L’une des méthodes consiste à utiliser le mécanisme d’annulation fourni par les classes [Concurrency :: task_group](reference/task-group-class.md) et [Concurrency :: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) . La seconde consiste à lever une exception dans le corps d'une fonction de travail de tâche. Le mécanisme d’annulation est plus efficace que la gestion des exceptions pour annuler une arborescence de travail parallèle. Une *arborescence de travail parallèle* est un groupe de groupes de tâches connexes dans lequel certains groupes de tâches contiennent d’autres groupes de tâches. Le mécanisme d'annulation annule un groupe de tâches et ses groupes de tâches enfants de haut en bas. À l’inverse, la gestion des exceptions fonctionne de bas en haut et doit annuler chaque groupe de tâches enfant indépendamment puisque l’exception se propage vers le haut.
 
@@ -118,7 +119,7 @@ Pour plus d’informations générales sur les mécanismes d’annulation et de 
 
 [[Haut](#top)]
 
-## <a name="understand-how-cancellation-and-exception-handling-affect-object-destruction"></a><a name="object-destruction"></a>Comprendre comment l’annulation et la gestion des exceptions affectent la destruction d’objets
+## <a name="understand-how-cancellation-and-exception-handling-affect-object-destruction"></a><a name="object-destruction"></a> Comprendre comment l’annulation et la gestion des exceptions affectent la destruction d’objets
 
 Dans une arborescence de travail parallèle, une tâche qui est annulée empêche les tâches enfants de s'exécuter. Des problèmes peuvent alors survenir si l'une des tâches enfants effectue une opération importante pour votre application, comme la libération d'une ressource. De plus, l’annulation d’une tâche peut déclencher la propagation d’une exception via un destructeur d’objet et entraîner un comportement non défini dans votre application.
 
@@ -148,7 +149,7 @@ Nous vous recommandons de ne pas effectuer d'opérations critiques, comme la lib
 
 [[Haut](#top)]
 
-## <a name="do-not-block-repeatedly-in-a-parallel-loop"></a><a name="repeated-blocking"></a>Ne pas bloquer de façon répétée dans une boucle parallèle
+## <a name="do-not-block-repeatedly-in-a-parallel-loop"></a><a name="repeated-blocking"></a> Ne pas bloquer de façon répétée dans une boucle parallèle
 
 Une boucle parallèle telle que la [concurrence ::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) ou la [concurrence ::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) qui est dominée par les opérations bloquantes peut entraîner la création de nombreux threads sur une brève période.
 
@@ -164,7 +165,7 @@ Nous vous recommandons de refactoriser votre code pour éviter ce modèle. Dans 
 
 [[Haut](#top)]
 
-## <a name="do-not-perform-blocking-operations-when-you-cancel-parallel-work"></a><a name="blocking"></a>Ne pas effectuer d’opérations de blocage lorsque vous annulez un travail parallèle
+## <a name="do-not-perform-blocking-operations-when-you-cancel-parallel-work"></a><a name="blocking"></a> Ne pas effectuer d’opérations de blocage lorsque vous annulez un travail parallèle
 
 Dans la mesure du possible, n’effectuez pas d’opérations de blocage avant d’appeler la méthode [Concurrency :: task_group :: Cancel](reference/task-group-class.md#cancel) ou [Concurrency :: structured_task_group :: Cancel](reference/structured-task-group-class.md#cancel) pour annuler un travail parallèle.
 
@@ -182,7 +183,7 @@ L'exemple suivant montre comment empêcher le travail inutile et ainsi améliore
 
 [[Haut](#top)]
 
-## <a name="do-not-write-to-shared-data-in-a-parallel-loop"></a><a name="shared-writes"></a>Ne pas écrire dans les données partagées dans une boucle parallèle
+## <a name="do-not-write-to-shared-data-in-a-parallel-loop"></a><a name="shared-writes"></a> Ne pas écrire dans les données partagées dans une boucle parallèle
 
 L’runtime d’accès concurrentiel fournit plusieurs structures de données, par exemple [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md), qui synchronisent l’accès simultané aux données partagées. Ces structures de données s'avèrent utiles dans de nombreux cas, par exemple, quand plusieurs tâches requièrent peu souvent un accès partagé à une ressource.
 
@@ -202,7 +203,7 @@ Pour obtenir la version complète de cet exemple, consultez [Comment : utiliser
 
 [[Haut](#top)]
 
-## <a name="when-possible-avoid-false-sharing"></a><a name="false-sharing"></a>Dans la mesure du possible, évitez le faux partage
+## <a name="when-possible-avoid-false-sharing"></a><a name="false-sharing"></a> Dans la mesure du possible, évitez le faux partage
 
 Le *faux partage* se produit lorsque plusieurs tâches simultanées exécutées sur des processeurs distincts écrivent dans des variables situées sur la même ligne de cache. Quand une seule tâche écrit dans l’une des variables, la ligne de cache des deux variables est invalidée. Chaque processeur doit recharger la ligne de cache à chaque fois que la ligne de cache est invalidée. Ainsi, le faux partage peut diminuer les performances dans votre application.
 
@@ -224,7 +225,7 @@ Nous vous recommandons d’utiliser la classe [Concurrency :: combinable](../..
 
 [[Haut](#top)]
 
-## <a name="make-sure-that-variables-are-valid-throughout-the-lifetime-of-a-task"></a><a name="lifetime"></a>S’assurer que les variables sont valides pendant toute la durée de vie d’une tâche
+## <a name="make-sure-that-variables-are-valid-throughout-the-lifetime-of-a-task"></a><a name="lifetime"></a> S’assurer que les variables sont valides pendant toute la durée de vie d’une tâche
 
 Quand vous fournissez une expression lambda à un groupe de tâches ou à un algorithme parallèle, la clause de capture spécifie si le corps de l’expression lambda accède aux variables dans la portée englobante par valeur ou par référence. Quand vous passez des variables à une expression lambda par référence, vous devez vous assurer que la durée de vie de cette variable persiste jusqu'à ce que la tâche se termine.
 
@@ -264,7 +265,7 @@ Pour plus d’informations sur les expressions lambda, consultez [expressions la
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)<br/>
 [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Procédure pas à pas : création d’un réseau Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
 [Comment : utiliser l’annulation pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
 [Comment : utiliser combinable pour améliorer les performances](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>

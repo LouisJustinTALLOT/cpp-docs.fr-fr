@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : texte et chaînes dans Visual C++'
 title: Texte et chaînes en Visual C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3b77df006e095871d11fb3bfbc3d83b081d6052f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335733"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 
@@ -38,7 +39,7 @@ Un aspect important du développement d’applications pour les marchés interna
 ## <a name="in-this-section"></a>Dans cette section
 
 [Unicode et MBCS](../text/unicode-and-mbcs.md)<br/>
-Décrit la prise C++ en charge visuelle pour la programmation Unicode et MBCS.
+Traite de la prise en charge Visual C++ pour la programmation Unicode et MBCS.
 
 [Prise en charge pour Unicode](../text/support-for-unicode.md)<br/>
 Décrit Unicode, une spécification pour la prise en charge de tous les jeux de caractères, y compris les jeux de caractères qui ne peuvent pas être représentés dans un seul octet.
@@ -46,11 +47,11 @@ Décrit Unicode, une spécification pour la prise en charge de tous les jeux de 
 [Prise en charge des jeux de caractères multioctets (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Décrit MBCS, une alternative à Unicode pour la prise en charge des jeux de caractères, tels que le japonais et le chinois, qui ne peuvent pas être représentés dans un seul octet.
 
-[Mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Mappages de texte générique dans Tchar. h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Fournit des mappages de texte générique spécifiques à Microsoft pour de nombreux types de données, routines et autres objets.
 
-[Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
-Montre comment convertir différents types de C++ chaînes visuelles en d’autres chaînes.
+[Comment : effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
+Montre comment convertir différents types de chaîne Visual C++ en d’autres chaînes.
 
 ## <a name="related-sections"></a>Sections connexes
 

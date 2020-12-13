@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ismbbblank, _ismbbblank_l'
 title: _ismbbblank, _ismbbblank_l
 ms.date: 4/2/2020
 api_name:
@@ -24,12 +25,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d604b377ff874418dab11405ad2c891792a5bda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335641"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -52,17 +53,17 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ismbbblank** retourne une valeur différente de zéro si *c* représente un caractère d’espace (0x20), un caractère de tabulation horizontale (0x09) ou un caractère spécifique aux paramètres régionaux qui est utilisé pour séparer les mots dans une ligne de texte pour laquelle **isspace** a la valeur true ; Sinon, retourne 0. **_ismbbblank** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbblank_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

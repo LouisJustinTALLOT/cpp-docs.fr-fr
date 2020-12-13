@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1 et niveau 4) C4949'
 title: Avertissement du compilateur (niveaux 1 et 4) C4949
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4949
 ms.assetid: 34f45a05-c115-49cb-9f67-0bd4f0735d9b
-ms.openlocfilehash: 7ce8b3242def187e4b8b442f403f92f013a9ca6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2330843c34207edbe99607208baff634836044cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336019"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>Avertissement du compilateur (niveaux 1 et 4) C4949
 
 les pragmas’Managed’et’unmanaged’sont significatifs uniquement lorsqu’ils sont compilés avec'/CLR [ : option] '
 
-Le compilateur ignore les pragmas [managés](../../preprocessor/managed-unmanaged.md) et non managés si le code source n’est pas compilé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). Cet avertissement est à caractère informatif.
+Le compilateur ignore les pragmas [managés](../../preprocessor/managed-unmanaged.md) et non managés si le code source n’est pas compilé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). Cet avertissement possède un caractère informatif.
 
 L’exemple suivant génère l’C4949 :
 

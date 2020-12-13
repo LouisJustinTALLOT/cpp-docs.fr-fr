@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCPopupMenu'
 title: CMFCPopupMenu, classe
 ms.date: 10/18/2018
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 89089559916419bc27b0528430fe7ad12ca804b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97429da34643945ff75b2a16e7bbaf6df439e425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334757"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu, classe
 
@@ -296,7 +297,7 @@ L’exemple suivant montre comment configurer un objet menu contextuel. L’exem
 
 `CMFCPopupMenu`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpopupmenu. h
 

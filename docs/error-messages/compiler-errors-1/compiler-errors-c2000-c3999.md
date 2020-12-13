@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Erreurs du compilateur C2000-C3999'
 title: Erreurs du compilateur C2000 - C3999
 ms.date: 04/22/2019
-ms.openlocfilehash: db25ff6d4f3eafedb5828b72fefbe778ee7eb19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 423911ffd72efd5c17253b26f5c8658eaaae21a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62495139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335056"
 ---
 # <a name="compiler-errors-c2000---c3999"></a>Erreurs du compilateur C2000 - C3999
 
-Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le Microsoft C /C++ compilateur.
+Les Articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le compilateur Microsoft C/C++.
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -33,4 +34,4 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs d’outils et avertissements de compilateur C/C++ et de build](../compiler-errors-1/c-cpp-build-errors.md)

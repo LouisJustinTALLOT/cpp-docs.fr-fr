@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Microsoft :: WRL, espace de noms'
 title: Microsoft::WRL, espace de noms
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdf7f0fbdca5cd5d95772052dd5dfb5018cabb18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335537"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL, espace de noms
 
-Définit les types fondamentaux qui composent la C++ bibliothèque de modèles Windows Runtime.
+Définit les types fondamentaux qui composent la bibliothèque de modèles C++ Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,13 +36,13 @@ namespace Microsoft::WRL;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>Classes
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[ActivationFactory, classe](activationfactory-class.md)|Permet à une ou plusieurs classes d'être activées par le Windows Runtime.|
 |[AsyncBase, classe](asyncbase-class.md)|Implémente la machine d'état asynchrone du Windows Runtime.|
@@ -58,30 +59,30 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Structures
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[ChainInterfaces, structure](chaininterfaces-structure.md)|Spécifie les fonctions de vérification et d'initialisation pouvant être appliquées à un ensemble d'ID d'interface.|
-|[CloakedIid, structure](cloakediid-structure.md)|Indique aux modèles `RuntimeClass`, `Implements` et `ChainInterfaces` que l’interface spécifiée n’est pas accessible dans la liste IID.|
-|[Implements, structure](implements-structure.md)|Implémente `QueryInterface` et `GetIid` pour les interfaces spécifiées.|
+|[ChainInterfaces (structure)](chaininterfaces-structure.md)|Spécifie les fonctions de vérification et d'initialisation pouvant être appliquées à un ensemble d'ID d'interface.|
+|[CloakedIid, structure](cloakediid-structure.md)|Indique aux `RuntimeClass` modèles, `Implements` et `ChainInterfaces` que l’interface spécifiée n’est pas accessible dans la liste iid.|
+|[Implements (structure)](implements-structure.md)|Implémente `QueryInterface` et `GetIid` pour les interfaces spécifiées.|
 |[MixIn, structure](mixin-structure.md)|Garantit qu'une classe d'exécution dérive des interfaces du Windows Runtime, le cas échéant, puis des interfaces du COM classique.|
-|[RuntimeClassFlags, structure](runtimeclassflags-structure.md)|Contient le type d’une instance d’un [RuntimeClass](runtimeclass-class.md).|
+|[RuntimeClassFlags (structure)](runtimeclassflags-structure.md)|Contient le type d’une instance d’un [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Énumérations
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[AsyncResultType, énumération](asyncresulttype-enumeration.md)|Spécifie le type de résultat retourné par la méthode `GetResults()`.|
-|[ModuleType, énumération](moduletype-enumeration.md)|Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.|
-|[RuntimeClassType, énumération](runtimeclasstype-enumeration.md)|Spécifie le type d’instance [RuntimeClass](runtimeclass-class.md) qui est pris en charge.|
+|[AsyncResultType (énumération)](asyncresulttype-enumeration.md)|Spécifie le type de résultat retourné par la `GetResults()` méthode.|
+|[ModuleType (énumération)](moduletype-enumeration.md)|Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.|
+|[RuntimeClassType (énumération)](runtimeclasstype-enumeration.md)|Spécifie le type d’instance [RuntimeClass](runtimeclass-class.md) qui est pris en charge.|
 
 ### <a name="functions"></a>Fonctions
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[AsWeak, fonction](asweak-function.md)|Récupère une référence faible à une instance spécifiée.|
-|[Callback, fonction (WRL)](callback-function-wrl.md)|Crée un objet dont la fonction membre est une méthode de rappel.|
-|[CreateActivationFactory, fonction](createactivationfactory-function.md)|Crée une fabrique qui produit des instances de la classe spécifiée pouvant être activées par le Windows Runtime.|
-|[CreateClassFactory, fonction](createclassfactory-function.md)|Crée une fabrique produisant des instances de la classe spécifiée.|
+|[Asweak, fonction)](asweak-function.md)|Récupère une référence faible à une instance spécifiée.|
+|[Fonction de rappel (WRL)](callback-function-wrl.md)|Crée un objet dont la fonction membre est une méthode de rappel.|
+|[Createactivationfactory, fonction)](createactivationfactory-function.md)|Crée une fabrique qui produit des instances de la classe spécifiée pouvant être activées par le Windows Runtime.|
+|[Createclassfactory, fonction)](createclassfactory-function.md)|Crée une fabrique produisant des instances de la classe spécifiée.|
 |[Make, fonction](make-function.md)|Initialise la classe de Windows Runtime spécifiée.|
 
 ## <a name="requirements"></a>Spécifications
@@ -92,4 +93,4 @@ namespace Microsoft::WRL;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Wrappers, espace de noms](microsoft-wrl-wrappers-namespace.md)
+[Microsoft :: WRL :: wrappers, espace de noms](microsoft-wrl-wrappers-namespace.md)

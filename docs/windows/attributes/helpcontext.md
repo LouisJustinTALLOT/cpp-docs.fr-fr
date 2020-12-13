@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : HelpContext'
 title: HelpContext (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 60e6bf66e088872a357751e4a7b7e043cd9b4dfc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cfedec2f7650490dd266331e6853ba47265aa4ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335720"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +27,7 @@ Spécifie un ID de contexte qui permet à l’utilisateur d’afficher des infor
 ### <a name="parameters"></a>Paramètres
 
 *id*<br/>
-ID de contexte de la rubrique d’aide. Pour plus d’informations sur les ID de contexte, consultez [aide HTML : aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) .
+ID de contexte de la rubrique d’aide. Pour plus d’informations sur les ID de contexte, consultez [aide HTML : Context-Sensitive de l’aide pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) .
 
 ## <a name="remarks"></a>Notes
 
@@ -36,14 +37,14 @@ L’attribut C++ de **HelpContext** a les mêmes fonctionnalités que l’attrib
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **HelpContext**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**interface**, **`typedef`** , **`class`** , méthode, propriété|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

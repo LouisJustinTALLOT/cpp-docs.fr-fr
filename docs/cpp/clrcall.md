@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __clrcall'
 title: __clrcall
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: 85e9025c26cc821cdbd8e5218e184f05e2b96b24
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 3c3932333a198063d2878be7ff8618524ff2eb5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335561"
 ---
 # <a name="__clrcall"></a>__clrcall
 
