@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les messages suivants : Vectoriseur et paralléliseur'
 title: Messages du vectoriseur et du paralléliseur
 ms.date: 04/17/2019
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177131"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 
 Vous pouvez utiliser les options du compilateur Microsoft C++ [/QPAR-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) afin de générer des codes de raison et des messages d’information concernant son activité. Cet article explique les code motifs et les messages.
 
-## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Messages d’information
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> Messages d’information
 
 Selon le niveau de rapport que vous spécifiez, l'un des messages d'information suivants apparait pour chaque boucle.
 
@@ -35,9 +36,9 @@ Pour plus d'informations sur les codes motifs, consultez la partie suivante de c
 
 Les sections suivantes répertorient les codes de raison possibles pour paralléliseur et vectoriseur.
 
-## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>codes de raison 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a> codes de raison 5xx
 
-Les codes de raison 5*XX* s’appliquent à la fois à paralléliseur et à vectoriseur.
+Les codes de raison 5 *XX* s’appliquent à la fois à paralléliseur et à vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -198,9 +199,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>codes de raison 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a> codes de raison 10xx
 
-Les codes de raison 10*XX* s’appliquent au paralléliseur.
+Les codes de raison 10 *XX* s’appliquent au paralléliseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -407,9 +408,9 @@ void code_1010()
 }
 ```
 
-## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>codes de raison 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a> codes de raison 11xx
 
-Les codes de raison 11*XX* s’appliquent au vectoriseur.
+Les codes de raison 11 *XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -555,9 +556,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>codes de raison 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a> codes de raison 12xx
 
-Les codes de raison 12*XX* s’appliquent au vectoriseur.
+Les codes de raison 12 *XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -630,9 +631,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>codes de raison 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> codes de raison 13xx
 
-Les codes de raison 13*XX* s’appliquent au vectoriseur.
+Les codes de raison 13 *XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -762,9 +763,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>codes de raison 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a> codes de raison 14xx
 
-Les codes de raison 14*XX* se produisent quand une option incompatible avec la vectorisation est spécifiée.
+Les codes de raison 14 *XX* se produisent quand une option incompatible avec la vectorisation est spécifiée.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -834,9 +835,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>codes de raison 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a> codes de raison 15xx
 
-Les codes de raison 15*XX* s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
+Les codes de raison 15 *XX* s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
 
 |Code de raison|Explication|
 |-----------------|-----------------|

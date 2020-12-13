@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ZG (générer des prototypes de fonction)
 title: /Zg (Générer les prototypes de fonction)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: ee0bed48f15acae867d344a60a6d42f3b17c7e85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178873"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Générer les prototypes de fonction)
 
@@ -29,7 +30,7 @@ Supprimé. Crée un prototype de fonction pour chaque fonction définie dans le 
 
 ## <a name="remarks"></a>Notes
 
-Cette option du compilateur n’est plus disponible. Elle a été supprimée dans Visual Studio 2015. Cette page est destinée aux utilisateurs de versions antérieures de Visual Studio.
+Cette option du compilateur n’est plus disponible. Elle a été supprimée dans Visual Studio 2015. Cette page est conservée pour les utilisateurs des versions antérieures de Visual Studio.
 
 Le prototype de fonction comprend le type de retour de fonction et une liste de types d’arguments. La liste de types d’arguments est créée à partir des types des paramètres formels de la fonction. Les prototypes de fonctions déjà présents dans le fichier source sont ignorés.
 
@@ -44,11 +45,11 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-Le **/Zg** option a été déconseillée dans Visual Studio 2005 et a été supprimée dans Visual Studio 2015. Le compilateur MSVC a supprimé la prise en charge pour le code plus anciens, de style C. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
+L’option **/ZG** a été déconseillée dans visual Studio 2005 et a été supprimée dans visual studio 2015. Le compilateur MSVC a supprimé la prise en charge de l’ancien code de style C. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options du compilateur déconseillées et supprimées** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -63,4 +64,4 @@ Le **/Zg** option a été déconseillée dans Visual Studio 2005 et a été supp
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

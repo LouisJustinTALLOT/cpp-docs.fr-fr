@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2032'
 title: Erreur du compilateur C2032
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2032
 ms.assetid: 625d7c83-70b6-42c2-a558-81fbc0026324
-ms.openlocfilehash: d20bc61df2d0bab9115768b3bc0589f11a9bcdb9
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: cb39a539dc1e360f70cc2b217d50f3a1eabcf0f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175454"
 ---
 # <a name="compiler-error-c2032"></a>Erreur du compilateur C2032
 
 'identificateur' : la fonction ne peut pas être membre de struct/union’structorunion'
 
-La structure ou l’Union a une fonction membre, ce qui est C++ autorisé dans, mais pas en C. Pour résoudre l’erreur, compilez comme C++ un programme ou supprimez la fonction membre.
+La structure ou l’Union a une fonction membre, qui est autorisée en C++, mais pas en C. Pour résoudre l’erreur, compilez en tant que programme C++ ou supprimez la fonction membre.
 
 L’exemple suivant génère l’C2032 :
 

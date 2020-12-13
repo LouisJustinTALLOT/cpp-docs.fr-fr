@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fpieee_flt'
 title: _fpieee_flt
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: c6a77dcba06b58191781900d4e24202c6335cfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b01bfa07b959031b81fe3cf02a5d341e17f93a0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178704"
 ---
 # <a name="_fpieee_flt"></a>_fpieee_flt
 
@@ -60,7 +61,7 @@ Pointeur désignant la structure d’informations sur les exceptions Windows NT
 *d*<br/>
 Pointeur vers la routine du gestionnaire d'interruptions IEEE de l'utilisateur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour de **_fpieee_flt** est la valeur retournée par le *Gestionnaire*. Ainsi, la routine de filtre IEEE peut être utilisée dans la clause d'exception d'un mécanisme de gestion structurée des exceptions (SEH).
 

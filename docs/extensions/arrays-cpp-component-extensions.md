@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : tableaux (C++/CLI et C++/CX)'
 title: Tableaux (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e75818b7c4de3123fefb6bed9f24da46f8212ed8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177105"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tableaux (C++/CLI et C++/CX)
 
@@ -40,7 +41,7 @@ Pour plus d’informations sur les tableaux, consultez :
 
 Les tableaux sont des membres de l’espace de noms `Platform`. Les tableaux peuvent uniquement être unidimensionnels.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 Le premier exemple de syntaxe utilise le mot clé d’agrégation **ref new** pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
@@ -61,7 +62,7 @@ Le type de la variable de tableau. Les types valides sont les classes Windows Ru
 *moteurs*<br/>
 (Facultatif) Nombre de dimensions du tableau. Doit être égal à 1.
 
-*identificateur*<br/>
+*identifier*<br/>
 Nom de la variable de tableau.
 
 *initialization-type*<br/>
@@ -70,11 +71,11 @@ Le type des valeurs qui initialisent le tableau. En règle générale, *array-ty
 *initialization-list*<br/>
 (Facultatif) Une liste délimitée par des virgules de valeurs entre accolades qui initialisent les éléments du tableau. Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous pouvez détecter au moment de la compilation si un type est un tableau de références comptées à l’aide de `__is_ref_array(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -96,7 +97,7 @@ int main() {
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 Le premier exemple de syntaxe utilise le mot clé **gcnew** pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
@@ -117,7 +118,7 @@ Le type de la variable de tableau. Les types valides sont les classes Windows Ru
 *moteurs*<br/>
 (Facultatif) Nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau est elle-même un tableau.
 
-*identificateur*<br/>
+*identifier*<br/>
 Nom de la variable de tableau.
 
 *initialization-type*<br/>
@@ -131,7 +132,7 @@ Une liste délimitée par des virgules de la taille de chaque dimension du table
 
 Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`. Si *rank-size-list* a la valeur `(3,2,4)`, ce qui déclare un tableau tridimensionnel de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 éléments dans la troisième, *initialization-list* peut valoir `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **array** appartient à l’espace de noms [Plateforme, valeurs par défaut et espaces de noms CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
@@ -145,7 +146,7 @@ Lorsque vous allouez un tableau dont le type élément est un type valeur `V`, l
 
 Au moment de la compilation, vous pouvez détecter si un type est un tableau common language runtime (CLR) grâce à `__is_ref_array(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

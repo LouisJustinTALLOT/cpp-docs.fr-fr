@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : cibles d’attribut (C++/CLI et C++/CX)'
 title: Cibles d’attribut (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c14f80c277feb7fc540eed8735a8a78e1cb1907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177027"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Cibles d’attribut (C++/CLI et C++/CX)
 
@@ -193,7 +194,7 @@ Voici une liste des cibles d’attribut valide :
     };
     ```
 
-En règle générale, un attribut précède directement l’élément de langage auquel il s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la cible prévue de l’attribut. Examinez cet exemple :
+En règle générale, un attribut précède directement l’élément de langage auquel il s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la cible prévue de l’attribut. Prenons l’exemple suivant :
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -274,4 +275,4 @@ value struct MyStruct {};
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs définis par l'utilisateur](user-defined-attributes-cpp-component-extensions.md)
+[Attributs définis par l’utilisateur](user-defined-attributes-cpp-component-extensions.md)

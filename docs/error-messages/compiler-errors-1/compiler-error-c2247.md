@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2247'
 title: Erreur du compilateur C2247
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 480d3862a1f96517ecce11be5c695e106eb58d7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177937"
 ---
 # <a name="compiler-error-c2247"></a>Erreur du compilateur C2247
 
@@ -34,7 +35,7 @@ int j = c.i;               // C2247, i not accessible
 
 Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : contrôle d’accès avec des membres protégés. Un membre protégé (n) est accessible uniquement par le biais d’une fonction membre d’une classe (B) qui hérite de la classe (A) dont il (n) est membre.
 
-Pour obtenir un code valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, déclarez le membre comme un Friend du type. L’héritage public peut également être utilisé.
+Pour le code qui est valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, déclarez le membre comme un Friend du type. L’héritage public peut également être utilisé.
 
 ```cpp
 // C2247b.cpp

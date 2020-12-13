@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ref et struct struct (C++/CLI et C++/CX)'
 title: classe ref et struct ref (C++/CLI et C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 633314e27118cfceddef449ab944c6dd0dbc4f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176975"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 
@@ -95,7 +96,7 @@ Quand vous déclarez un objet à l’aide des mots clés **ref class** ou **ref 
 
 Quand vous déclarez un objet à l’aide des mots clés **value class** ou **value struct**, la durée de vie de l’objet déclaré n’est pas contrôlée. L'objet est comme toute autre classe ou tout autre struct C++ standard.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -114,7 +115,7 @@ Les mots clés **ref class** et **ref struct** indiquent au compilateur que la c
 
 Les mots clés **value class** et **value struct** indiquent au compilateur que la valeur de la classe allouée ou du struct alloué est transmise aux fonctions ou stockée dans les membres.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

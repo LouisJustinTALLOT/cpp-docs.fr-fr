@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : abstract (C++/CLI et C++/CX)'
 title: résumé (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e40d0d0c03bbf97b684d9e011f4bf614f6a44332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177118"
 ---
 # <a name="abstract--ccli-and-ccx"></a>résumé (C++/CLI et C++/CX)
 
@@ -33,7 +34,7 @@ Le mot clé **abstract** peut déclarer :
 
 ### <a name="remarks"></a>Notes
 
-Le premier exemple de syntaxe déclare une classe comme étant abstraite. Le composant *de déclaration de classe* peut être une déclaration c++ native (** `class` * * * * ou **`struct`** ) ou une déclaration d’extension c++ (** ref class * * ou **ref struct**) si l' `/ZW` `/clr` option du compilateur ou est spécifiée.
+Le premier exemple de syntaxe déclare une classe comme étant abstraite. Le composant *de déclaration de classe* peut être une déclaration c++ native (**`class` * * * * ou **`struct`** ) ou une déclaration d’extension c++ (** ref class * * ou **ref struct**) si l' `/ZW` `/clr` option du compilateur ou est spécifiée.
 
 Le deuxième exemple de syntaxe déclare une fonction membre virtuelle comme étant abstraite. La déclaration d'une fonction comme étant abstraite revient à déclarer qu'il s'agit d'une fonction virtuelle pure. La déclaration d'une fonction membre comme étant abstraite entraîne également la déclaration de la classe englobante comme étant abstraite.
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : types de paramètres d’attribut (C++/CLI et C++/CX)'
 title: Types de paramètre d’attribut (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: cf33014c455bef145f7b7ec7ee353f27d1157f24
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 7f2d5dd2def4e61d5b2b0406cc193bf818bc3d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177092"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Types de paramètre d’attribut (C++/CLI et C++/CX)
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : déchargement d’une DLL Delay-Loaded'
 title: Déchargement d'une DLL à chargement différé
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd733bfa02a6d90eecb1b617288d368d33766282
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178938"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Déchargement d'une DLL à chargement différé
 

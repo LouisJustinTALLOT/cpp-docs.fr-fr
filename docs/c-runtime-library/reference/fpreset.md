@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fpreset'
 title: _fpreset
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7818e0f02f6165c5041245e342a81b1dde25b091
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178691"
 ---
 # <a name="_fpreset"></a>_fpreset
 
@@ -46,17 +47,17 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_fpreset** réinitialise le package mathématique à virgule flottante. **_fpreset** est généralement utilisé avec les fonctions **signal**, **System**ou **_exec** ou **_spawn** . Si un programme intercepte des signaux d’erreur à virgule flottante (**SIGFPE**) avec **signal**, il peut récupérer en toute sécurité des erreurs à virgule flottante en appelant **_fpreset** et en utilisant **longjmp**.
+La fonction **_fpreset** réinitialise le package mathématique à virgule flottante. **_fpreset** est généralement utilisé avec les fonctions **signal**, **System**, **_exec** ou **_spawn** . Si un programme intercepte des signaux d’erreur à virgule flottante (**SIGFPE**) avec **signal**, il peut récupérer en toute sécurité des erreurs à virgule flottante en appelant **_fpreset** et en utilisant **longjmp**.
 
 Cette fonction est déconseillée lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car la Common Language Runtime prend en charge uniquement la précision en virgule flottante par défaut.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -175,7 +176,7 @@ Error 131: Divide by zero
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [signal](signal.md)<br/>
-[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>
