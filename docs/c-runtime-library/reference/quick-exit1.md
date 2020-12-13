@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : quick_exit'
 title: quick_exit1
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85640af902092d5cc60a1c718dfd8999c41406b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137096"
 ---
 # <a name="quick_exit"></a>quick_exit
 
@@ -47,36 +48,36 @@ __declspec(noreturn) void quick_exit(
 
 ### <a name="parameters"></a>Paramètres
 
-*status*<br/>
+*statut*<br/>
 Code d’état à retourner à l’environnement hôte.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La fonction **quick_exit** ne peut pas retourner à son appelant.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **quick_exit** provoque l’arrêt normal du programme. Elle n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou les gestionnaires de signal enregistrés par la fonction **signal** . Le comportement n’est pas défini si **quick_exit** est appelé plusieurs fois, ou si la fonction **Exit** est également appelée.
+La fonction **quick_exit** provoque l’arrêt normal du programme. Elle n’appelle aucune fonction inscrite par **atexit**, **_onexit** ou des gestionnaires de signal enregistrés par la fonction **signal** . Le comportement n’est pas défini si **quick_exit** est appelé plusieurs fois, ou si la fonction **Exit** est également appelée.
 
 La fonction **quick_exit** appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **at_quick_exit**, à l’exception des fonctions déjà appelées lorsque la fonction a été inscrite.  Le comportement n’est pas défini si un appel à [longjmp](longjmp.md) est effectué pendant un appel à une fonction inscrite qui terminerait l’appel à la fonction.
 
 Une fois que les fonctions inscrites ont été appelées, **quick_exit** appelle **_Exit** à l’aide de la valeur d' *État* pour retourner le contrôle à l’environnement hôte.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**quick_exit**|\<process.h> ou \<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

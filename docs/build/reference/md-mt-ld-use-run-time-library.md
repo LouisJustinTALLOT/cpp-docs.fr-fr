@@ -1,5 +1,6 @@
 ---
-title: /MD,-MT,-LD (utiliser la bibliothèque Runtime)
+description: En savoir plus sur:/MD,/MT,/LD (utiliser la bibliothèque Run-Time)
+title: /MD,-MT,-LD (utilisez la bibliothèque Run-Time)
 ms.date: 07/17/2019
 f1_keywords:
 - /ld
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: a66677ebbef984e9a4c8190f184ca3a9126a7b83
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: db7d5be50145cc5dc422e7d7c417f519d8f07076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137863"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Utiliser la bibliothèque Runtime)
 
@@ -58,7 +59,7 @@ Indique si un module multithread est une DLL et spécifie les versions retail ou
 
 |Option|Description|
 |------------|-----------------|
-|**/MD**|Indique à l'application d'utiliser la version multithread spécifique à la DLL de la bibliothèque Runtime. Définit `_MT` et `_DLL`, puis indique au compilateur de placer le nom de la bibliothèque MSVCRT.lib dans le fichier .obj.<br /><br /> Les applications compilées avec cette option sont liées de manière statique à MSVCRT.lib. Cette bibliothèque fournit une couche de code qui permet à l'éditeur de liens de résoudre des références externes. Le code de travail réel est contenu dans MSVCR*versionNumber*. DLL, qui doit être disponible au moment de l’exécution pour les applications liées à MSVCRT. lib.|
+|**/MD**|Indique à l'application d'utiliser la version multithread spécifique à la DLL de la bibliothèque Runtime. Définit `_MT` et `_DLL`, puis indique au compilateur de placer le nom de la bibliothèque MSVCRT.lib dans le fichier .obj.<br /><br /> Les applications compilées avec cette option sont liées de manière statique à MSVCRT.lib. Cette bibliothèque fournit une couche de code qui permet à l'éditeur de liens de résoudre des références externes. Le code de travail réel est contenu dans MSVCR *versionNumber*. DLL, qui doit être disponible au moment de l’exécution pour les applications liées à MSVCRT. lib.|
 |**/MDd**|Définit `_DEBUG`, `_MT` et `_DLL`, puis indique à l'application d'utiliser la version debug multithread spécifique à la DLL de la bibliothèque Runtime. Le compilateur place également le nom de la bibliothèque MSVCRTD.lib dans le fichier .obj.|
 |**/MT**|Indique à l'application d'utiliser la version statique multithread de la bibliothèque Runtime. Définit `_MT` et indique au compilateur de placer le nom de la bibliothèque LIBCMT.lib dans le fichier .obj de façon à ce que l'éditeur de liens utilise LIBCMT.lib pour résoudre les symboles externes.|
 |**/MTd**|Définit `_DEBUG` et `_MT`. Cette option indique également au compilateur d'ajouter le nom de bibliothèque LIBCMTD.lib dans le fichier .obj afin que l'Éditeur de liens utilise LIBCMTD.lib pour résoudre les symboles externes.|
@@ -69,7 +70,7 @@ Pour plus d’informations sur les bibliothèques Runtime C et les bibliothèque
 
 Tous les modules passés à un appel donné de l’éditeur de liens doivent avoir été compilés avec la même option du compilateur de la bibliothèque Runtime (**/MD**, **/MT**, **/LD**).
 
-Pour plus d’informations sur l’utilisation des versions Debug des bibliothèques Runtime, consultez Référence de la [bibliothèque Runtime C](../../c-runtime-library/c-run-time-library-reference.md).
+Pour plus d’informations sur l’utilisation des versions Debug des bibliothèques Runtime, consultez Référence de la [bibliothèque C Run-Time](../../c-runtime-library/c-run-time-library-reference.md).
 
 Pour plus d’informations sur les dll, consultez [créer des dll C/C++ dans Visual Studio](../dlls-in-visual-cpp.md).
 
@@ -88,4 +89,4 @@ Pour plus d’informations sur les dll, consultez [créer des dll C/C++ dans Vis
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

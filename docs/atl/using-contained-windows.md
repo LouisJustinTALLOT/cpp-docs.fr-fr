@@ -1,38 +1,39 @@
 ---
-title: Utilisation de Windows contenus
+description: 'En savoir plus sur : utilisation des fenêtres contenues'
+title: Utilisation des fenêtres contenues
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-ms.openlocfilehash: 5da765eae28d411c98e79af5b9173f48ea66ef8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 11beb998365a10a8126e37ecbf7388ec6177e659
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138214"
 ---
-# <a name="using-contained-windows"></a>Utilisation de Windows contenus
+# <a name="using-contained-windows"></a>Utilisation des fenêtres contenues
 
-Les outils ATL contenaient des fenêtres avec [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Une fenêtre contenue représente une fenêtre qui délègue ses messages à un objet conteneur au lieu de les manipuler dans sa propre classe.
+ATL implémente les fenêtres contenues avec [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Une fenêtre contenue représente une fenêtre qui délègue ses messages à un objet conteneur au lieu de les gérer dans sa propre classe.
 
 > [!NOTE]
-> Vous n’avez pas besoin `CContainedWindowT` d’extraire une classe pour utiliser des fenêtres contenues.
+> Vous n’avez pas besoin de dériver une classe de `CContainedWindowT` pour pouvoir utiliser des fenêtres contenues.
 
-Avec les fenêtres contenues, vous pouvez soit superclasser une classe Windows existante, soit sous-classer une fenêtre existante. Pour créer une fenêtre qui surclasse une classe Windows existante, spécifiez d’abord le nom de classe existant dans le constructeur de l’objet. `CContainedWindowT` Ensuite, `CContainedWindowT::Create`appelez . Pour sous-classer une fenêtre existante, vous n’avez pas besoin de spécifier un nom de classe Windows (passez NULL au constructeur). Il suffit `CContainedWindowT::SubclassWindow` d’appeler la méthode avec la poignée à la fenêtre étant sous-classée.
+Avec les fenêtres contenues, vous pouvez superclasser une classe Windows existante ou une sous-classe dans une fenêtre existante. Pour créer une fenêtre qui surclasse une classe Windows existante, spécifiez d’abord le nom de la classe existante dans le constructeur de l' `CContainedWindowT` objet. Appelez ensuite `CContainedWindowT::Create` . Pour sous-classer une fenêtre existante, vous n’avez pas besoin de spécifier un nom de classe Windows (passer NULL au constructeur). Appelez simplement la `CContainedWindowT::SubclassWindow` méthode avec le handle de la fenêtre en cours de sous-classe.
 
-Vous utilisez généralement des fenêtres contenues en tant que membres de données d’une classe de conteneurs. Le conteneur n’a pas besoin d’être une fenêtre; cependant, il doit dériver de [CMessageMap](../atl/reference/cmessagemap-class.md).
+En général, vous utilisez des fenêtres à relation contenant-contenu comme données membres d’une classe de conteneur. Le conteneur n’a pas besoin d’être une fenêtre ; Toutefois, il doit dériver de [CMessageMap](../atl/reference/cmessagemap-class.md).
 
-Une fenêtre contenue peut utiliser d’autres cartes de messages pour gérer ses messages. Si vous avez plus d’une fenêtre contenue, vous devez déclarer plusieurs cartes de messages alternatives, chacune correspondant à une fenêtre contenue séparée.
+Une fenêtre contenue peut utiliser des tables de messages de remplacement pour gérer ses messages. Si vous avez plusieurs fenêtres contenues, vous devez déclarer plusieurs tables de messages secondaires, chacune d’elles correspondant à une fenêtre distincte contenue.
 
 ## <a name="example"></a>Exemple
 
-Voici un exemple d’une classe de conteneurs avec deux fenêtres contenues:
+Voici un exemple de classe de conteneur avec deux fenêtres à relation contenant-contenu :
 
 [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]
 
-Pour plus d’informations sur les fenêtres contenues, consultez l’échantillon [SUBEDIT.](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
+Pour plus d’informations sur les fenêtres contenues, consultez l’exemple [SubEdit](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) .
 
 ## <a name="see-also"></a>Voir aussi
 

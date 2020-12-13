@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : applications UWP, les Windows Runtime et le C Run-Time'
 title: Applications UWP, Windows Runtime et Runtime C
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cfbbdbde19b882fb51b8fd8782b20e4205bdb00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136745"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Applications UWP, Windows Runtime et Runtime C
 
@@ -42,6 +43,6 @@ Pour obtenir la liste complète des fonctions CRT non disponibles pour une appli
 ## <a name="see-also"></a>Voir aussi
 
 [Compatibilité](../c-runtime-library/compatibility.md)<br/>
-[Fonctions CRT non prises en charge par Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Fonctions CRT non prises en charge Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Créer une application console de plateforme Windows universelle](/windows/uwp/launch-resume/console-uwp)
+[Créer une application de console de plateforme Windows universelle](/windows/uwp/launch-resume/console-uwp)
