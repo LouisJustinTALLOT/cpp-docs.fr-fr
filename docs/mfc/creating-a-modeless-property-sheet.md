@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création d’une feuille de propriétés non modale'
 title: Création d'une feuille de propriétés non modale
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 7a44d96adf0a25a401fbc2e561bd7d32758a37d2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1eaec55fe3c7c69ba558a10616dc2658025282d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310055"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Création d'une feuille de propriétés non modale
 

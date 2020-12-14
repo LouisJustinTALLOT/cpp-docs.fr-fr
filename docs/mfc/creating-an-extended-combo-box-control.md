@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création d’un contrôle de zone de liste déroulante étendue'
 title: Création d'un contrôle de zone de liste déroulante étendue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CComboBoxEx class [MFC], creating extended combo box controls
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
-ms.openlocfilehash: 554085304f5330ac9cd99a5b814af26ce3a9c7e6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 93b4a24cfe4bf191e092d2456c5b6a62f79acc78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309977"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Création d'un contrôle de zone de liste déroulante étendue
 
@@ -38,4 +39,4 @@ La façon dont le contrôle de zone de liste déroulante étendue est créé var
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CComboBoxEx](using-ccomboboxex.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

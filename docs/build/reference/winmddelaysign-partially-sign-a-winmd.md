@@ -1,19 +1,20 @@
 ---
+description: En savoir plus sur:/WINMDDELAYSIGN (signer partiellement un winmd)
 title: /WINMDDELAYSIGN (signer partiellement un winmd)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDDelaySign
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
-ms.openlocfilehash: 5e6eab3fbc40543b634f03da826d3bd3477b9623
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 801b172f52a9beb9d09617644b3096e460359724
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259056"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (signer partiellement un winmd)
 
-Permet la signature partielle d’un fichier de métadonnées du Runtime Windows (.winmd) en plaçant la clé publique dans le fichier.
+Active la signature partielle d’un fichier de métadonnées de Windows Runtime (. winmd) en plaçant la clé publique dans le fichier.
 
 ```
 /WINMDDELAYSIGN[:NO]
@@ -21,17 +22,17 @@ Permet la signature partielle d’un fichier de métadonnées du Runtime Windows
 
 ## <a name="remarks"></a>Notes
 
-Ressemble à la [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) option de l’éditeur de liens est appliquée au fichier .winmd. Utilisez **/WINMDDELAYSIGN** si vous souhaitez placer uniquement la clé publique dans le fichier .winmd. Par défaut, l’éditeur de liens se comporte comme si **/winmddelaysign : no** ont été spécifiées ; autrement dit, elle ne déconnecte pas le fichier winmd.
+Ressemble à l’option d’éditeur de liens [/delaysign](delaysign-partially-sign-an-assembly.md) qui est appliquée au fichier. winmd. Utilisez **/WINMDDELAYSIGN** si vous souhaitez placer uniquement la clé publique dans le fichier. winmd. Par défaut, l’éditeur de liens agit comme si **/WINMDDELAYSIGN : no** était spécifié ; autrement dit, il ne signe pas le fichier winmd.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **l’éditeur de liens** dossier.
+1. Sélectionnez le dossier de l' **éditeur de liens** .
 
-1. Sélectionnez le **Windows métadonnées** page de propriétés.
+1. Sélectionnez la page de propriétés **métadonnées Windows** .
 
-1. Dans le **temporiser la signature de métadonnées Windows** liste déroulante, sélectionnez l’option souhaitée.
+1. Dans la zone de liste déroulante **temporisation des métadonnées Windows** , sélectionnez l’option souhaitée.
 
 ## <a name="see-also"></a>Voir aussi
 

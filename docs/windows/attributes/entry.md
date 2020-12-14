@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : entrée'
 title: entry (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fbceea4c23d730ceba780ce68398a9d78fa9c33b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259225"
 ---
 # <a name="entry"></a>entry
 
@@ -36,14 +37,14 @@ L’attribut C++ **entry** a les mêmes fonctionnalités que l’attribut MIDL [
 
 Pour obtenir un exemple d’utilisation de l' **entrée**, consultez l’exemple de [idl_module](idl-module.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Attribut `idl_module`|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

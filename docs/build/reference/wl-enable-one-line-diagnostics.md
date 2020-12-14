@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/WL (activer les diagnostics One-Line)
 title: /WL (Activer un diagnostic de ligne)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: b1ded1cd18eb75ed47b76c1353ad82a7fa497ba9
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 032f2c41558c1475be5673d4a69de9ff9b09f323
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258861"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Activer un diagnostic de ligne)
 
@@ -27,7 +28,7 @@ Ajoute des informations supplémentaires à un message d’erreur ou d’avertis
 
 ## <a name="remarks"></a>Notes
 
-Les C++ messages d’erreur et d’avertissement du compilateur peuvent être suivis d’informations supplémentaires qui, par défaut, sont affichées sur une nouvelle ligne. Quand vous compilez à partir de la ligne de commande, la ligne d’informations supplémentaire peut être ajoutée au message d’erreur ou d’avertissement. Cela peut être souhaitable si vous capturez votre sortie de génération dans un fichier journal, puis traitez ce journal pour rechercher toutes les erreurs et tous les avertissements. Un point-virgule sépare le message d’erreur ou d’avertissement de la ligne supplémentaire.
+Les messages d’erreur et d’avertissement du compilateur C++ peuvent être suivis par des informations supplémentaires qui apparaissent, par défaut, sur une nouvelle ligne. Quand vous compilez à partir de la ligne de commande, la ligne d’informations supplémentaire peut être ajoutée au message d’erreur ou d’avertissement. Cela peut être souhaitable si vous capturez votre sortie de génération dans un fichier journal, puis traitez ce journal pour rechercher toutes les erreurs et tous les avertissements. Un point-virgule sépare le message d’erreur ou d’avertissement de la ligne supplémentaire.
 
 Tous les messages d’erreur et d’avertissement n’ont pas de ligne d’informations supplémentaire. Le code suivant génère une erreur qui contient une ligne d’informations supplémentaire ; elle vous permet de tester l’effet lorsque vous utilisez **/WL**.
 
@@ -58,4 +59,4 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

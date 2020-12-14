@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création et affichage de boîtes de dialogue'
 title: Création et affichage de boîtes de dialogue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9865e43392021cc7ba1349a73bffb8e47f4cca9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309822"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Création et affichage de boîtes de dialogue
 
@@ -24,7 +25,7 @@ La création d’un objet de boîte de dialogue est une opération en deux phase
 |Type de dialogue|Comment le créer|
 |-----------------|----------------------|
 |[Non modale](creating-modeless-dialog-boxes.md)|Construisez `CDialog` , puis appelez la `Create` fonction membre.|
-|[Exigeant](creating-modal-dialog-boxes.md)|Construisez `CDialog` , puis appelez la `DoModal` fonction membre.|
+|[Modal](creating-modal-dialog-boxes.md)|Construisez `CDialog` , puis appelez la `DoModal` fonction membre.|
 
 Si vous le souhaitez, vous pouvez créer votre boîte de dialogue à partir d’un [modèle de boîte de dialogue en mémoire](using-a-dialog-template-in-memory.md) que vous avez construit plutôt qu’à partir d’une ressource de modèle de boîte de dialogue. Il s’agit toutefois d’une rubrique avancée.
 

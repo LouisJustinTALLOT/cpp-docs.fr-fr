@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK2038'
 title: Erreur des outils Éditeur de liens LNK2038
 ms.date: 12/15/2017
 f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: ea1509d846c0bc5a85f0f0252b611dfd38496bcb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 17fa86010b4248b68234292dd909fe50f6379c7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275657"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Erreur des outils Éditeur de liens LNK2038
 

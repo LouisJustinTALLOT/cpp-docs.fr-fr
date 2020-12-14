@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création d’une application de conteneur de documents actifs'
 title: Création d'une application conteneur de documents actifs
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9bf00a73e7520cde45d4e43ae79813896d4c1129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309990"
 ---
 # <a name="creating-an-active-document-container-application"></a>Création d'une application conteneur de documents actifs
 
@@ -21,7 +22,7 @@ La méthode la plus simple et la plus recommandée pour créer une application d
 
 #### <a name="to-create-an-active-document-container-application"></a>Pour créer une application de conteneur de documents actifs
 
-1. Dans le menu **fichier** , cliquez sur **projet**dans le sous-menu **nouveau** .
+1. Dans le menu **fichier** , cliquez sur **projet** dans le sous-menu **nouveau** .
 
 1. Dans le volet gauche, cliquez sur **Visual C++** type de projet.
 
@@ -47,7 +48,7 @@ La méthode la plus simple et la plus recommandée pour créer une application d
 
      [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-   `OnPreparePrinting`fournit la prise en charge de l’impression. Ce code remplace `DoPreparePrinting` , qui est la préparation d’impression par défaut.
+   `OnPreparePrinting` fournit la prise en charge de l’impression. Ce code remplace `DoPreparePrinting` , qui est la préparation d’impression par défaut.
 
    La relation contenant-contenu de document actif fournit un schéma d’impression amélioré :
 
@@ -63,4 +64,4 @@ La méthode la plus simple et la plus recommandée pour créer une application d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Documents actifs (contenance)](active-document-containment.md)
+[Relation contenant-contenu de document actif](active-document-containment.md)

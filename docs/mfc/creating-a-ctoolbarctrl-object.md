@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : création d’un objet CToolBarCtrl'
 title: Création d'un objet CToolBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: 2627f9aaceeab7760e15b23435233e124c5ea6f0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2ea6f1c170fd82a18d4ceb9d5ca9e7fbadfcdbc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310107"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Création d'un objet CToolBarCtrl
 
@@ -33,4 +34,4 @@ Pour utiliser un `CToolBarCtrl` objet, vous devez généralement suivre les éta
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CToolBarCtrl](using-ctoolbarctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

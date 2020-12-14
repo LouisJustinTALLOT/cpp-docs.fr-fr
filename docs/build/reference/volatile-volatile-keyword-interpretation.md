@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/volatile (interprétation de mot clé volatile)
 title: /volatile (interprétation de mot clé volatile)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e75a9932cff59748cf75b89a3a85e89130de84f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259212"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (interprétation de mot clé volatile)
 
@@ -48,7 +49,7 @@ Il n’existe aucun `#pragma` équivalent pour contrôler cette option.
 
 1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Dans la zone **options supplémentaires** , ajoutez **/volatile : ISO** ou **/volatile : ms** , puis choisissez **OK** ou **appliquer** pour enregistrer vos modifications.
 
@@ -56,4 +57,4 @@ Il n’existe aucun `#pragma` équivalent pour contrôler cette option.
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

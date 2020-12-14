@@ -1,13 +1,14 @@
 ---
+description: En savoir plus sur:/WHOLEARCHIVE (inclure tous les fichiers objets de bibliothèque)
 title: /WHOLEARCHIVE (inclure tous les fichiers objets de la bibliothèque)
 ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 1cbc2ad29bab124af90551d2f4a96ee9f08c578c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259173"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (inclure tous les fichiers objets de la bibliothèque)
 
@@ -16,11 +17,11 @@ Force l’éditeur de liens à inclure tous les fichiers objets de la bibliothè
 ## <a name="syntax"></a>Syntaxe
 
 > **/WHOLEARCHIVE**\
-> **/WHOLEARCHIVE :** _bibliothèque_
+> **/WHOLEARCHIVE :**_bibliothèque_
 
 ### <a name="arguments"></a>Arguments
 
-*bibliothèque*\
+*Bibliothèque*\
 Nom de chemin d’accès facultatif à une bibliothèque statique. L’éditeur de liens comprend chaque fichier objet de cette bibliothèque.
 
 ## <a name="remarks"></a>Notes

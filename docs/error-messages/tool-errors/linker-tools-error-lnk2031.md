@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK2031'
 title: Erreur des outils Éditeur de liens LNK2031
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 73ca4a51737d1c073b3164f7e5aaa6deba369a38
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 3d955f106f569f91df9640bacfcca4df511ffd95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275670"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erreur des outils Éditeur de liens LNK2031
 
