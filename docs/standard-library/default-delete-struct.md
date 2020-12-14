@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : struct default_delete'
 title: Struct default_delete
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5b7d652dbb556957acf96ba63ac9ce14b628fb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232965"
 ---
 # <a name="default_delete-struct"></a>Struct default_delete
 
@@ -23,7 +24,7 @@ template <class T>
     struct default_delete
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<memory>
 

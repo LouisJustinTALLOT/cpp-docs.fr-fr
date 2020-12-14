@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : first_is'
 title: first_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 1a06206d7df4dace3f749fdc8ceae7f68aaf095c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 151a9defdde078a062f000860ebb40c3d1c9b466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236267"
 ---
 # <a name="first_is"></a>first_is
 
@@ -56,14 +57,14 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Champ dans **`struct`** ou **`union`** , paramètre d’interface, méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

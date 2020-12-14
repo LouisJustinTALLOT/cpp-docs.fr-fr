@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fclose, _fcloseall'
 title: fclose, _fcloseall
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 3f8567f7bb01c519938f5a4e28bbb33bce09dffe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1831eb2a2272cdddb8d9797f5329d5432bf30472
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235929"
 ---
 # <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
@@ -56,11 +57,11 @@ int _fcloseall( void );
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **fclose** retourne 0 si le flux est fermé avec succès. **_fcloseall** retourne le nombre total de flux fermés. Les deux fonctions retournent **EOF** pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **fclose** ferme le *flux*. Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **fclose** définit **errno** sur **EINVAL** et retourne **EOF**. Il est recommandé de toujours vérifier le pointeur de *flux* avant d’appeler cette fonction.
 
@@ -76,14 +77,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fclose**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [fopen](fopen-wfopen.md).
 

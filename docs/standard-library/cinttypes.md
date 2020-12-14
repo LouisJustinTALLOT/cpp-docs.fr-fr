@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : &lt; cinttypes&gt;'
 title: '&lt;cinttypes&gt;'
 ms.date: 11/04/2016
 ms.assetid: 18eb738c-aa74-4ed3-9cdd-049ef4c64b80
-ms.openlocfilehash: be2bb16b21c7ea42211d2e04068cb1a32f5beaf4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 11635fda45a86ffec08b65cfc13342d83317a77d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234109"
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
 
-Inclut l’en-tête \<inttypes.h> de la bibliothèque C Standard. L’inclusion de cet en-tête inclut également \<cstdint>.
+Comprend l’en-tête de la bibliothèque C standard \<inttypes.h> . L’inclusion de cet en-tête inclut également \<cstdint> .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,6 +27,6 @@ L'inclusion de cet en-tête garantit également que les noms déclarés à l'aid
 ## <a name="see-also"></a>Voir aussi
 
 [\<cstdint>](../standard-library/cstdint.md)\
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

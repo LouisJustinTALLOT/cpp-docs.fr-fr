@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C R6002'
 title: Erreur Runtime C R6002
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f72b249b491ada4f143848a95ed6161695aa023
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237773"
 ---
 # <a name="c-runtime-error-r6002"></a>Erreur Runtime C R6002
 
@@ -32,7 +33,7 @@ La bibliothèque à virgule flottante nécessaire n’a pas été liée.
 
 Cette erreur peut se produire dans votre application lorsque la bibliothèque à virgule flottante n’a pas été liée. Recherchez l’une des causes suivantes :
 
-- Une chaîne de format pour une fonction `printf_s` ou `scanf_s` contenait une spécification de format à virgule flottante et le programme ne contenait pas de variables ou de valeurs à virgule flottante. Pour résoudre ce problème, utilisez un argument à virgule flottante pour correspondre à la spécification de format à virgule flottante, ou effectuez une assignation à virgule flottante ailleurs dans le programme. Cela entraîne le chargement de la prise en charge de la virgule flottante.
+- Une chaîne de format pour `printf_s` une `scanf_s` fonction ou contenait une spécification de format à virgule flottante et le programme ne contenait pas de variables ou de valeurs à virgule flottante. Pour résoudre ce problème, utilisez un argument à virgule flottante pour correspondre à la spécification de format à virgule flottante, ou effectuez une assignation à virgule flottante ailleurs dans le programme. Cela entraîne le chargement de la prise en charge de la virgule flottante.
 
 - Le compilateur réduit la taille d’un programme en chargeant la prise en charge de virgule flottante uniquement lorsque cela est nécessaire. Le compilateur ne peut pas détecter les opérations à virgule flottante ou les spécifications de format à virgule flottante dans les chaînes de format, donc il ne charge pas les routines à virgule flottante nécessaires. Pour résoudre ce problème, utilisez une spécification de format à virgule flottante et fournissez un argument à virgule flottante, ou effectuez une assignation à virgule flottante ailleurs dans le programme. Cela entraîne le chargement de la prise en charge de la virgule flottante.
 

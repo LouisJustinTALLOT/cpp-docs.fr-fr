@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe discrete_distribution'
 title: discrete_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b84d174a653efdeba47fb0356c903b8c7dd2a8d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232757"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution, classe
 
@@ -167,7 +168,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 
@@ -233,7 +234,7 @@ Le constructeur de liste d’initialiseurs qui a un paramètre *weightlist* cons
 Le constructeur qui a les paramètres *ount*, *low*, *igh* et *weightfunc* construit un objet de distribution initialisé selon ces règles :
 
 - Si *count* < 1, **n** = 1 et, par conséquent, est équivalent au constructeur par défaut qui génère toujours zéro.
-- Si *count* > 0, **n** = *count*. Fourni **d** = (*haut*  -  *bas*)/ **n** est supérieur à zéro, à l’aide des sous-plages uniformes **d** , chaque poids est affecté comme suit : `weight[k] = weightfunc(x)` , où **x**  =  *faible*  +  **k**  *  **d**  +  **d** /2, pour **k** = 0,..., **n** -1.
+- Si *count* > 0, **n** = *count*. Fourni **d** = (*haut*  -  *bas*)/ **n** est supérieur à zéro, à l’aide des sous-plages uniformes **d** , chaque poids est affecté comme suit : `weight[k] = weightfunc(x)` , où **x**  =  *faible*  +  **k**  *  **d**  +   /2, pour **k** = 0,..., **n** -1.
 
 Le constructeur qui a un paramètre `param_type`*parm* construit un objet de distribution qui utilise *parm* comme structure de paramètre stockée.
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/SUBSYSTEM (spécifier le sous-système)
 title: /SUBSYSTEM (Spécifier le sous-système)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18a8ad549cc4aa1e143e43619d549c9eb7ae7324
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236241"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 
@@ -30,56 +31,56 @@ ms.locfileid: "62318243"
 ## <a name="arguments"></a>Arguments
 
 **BOOT_APPLICATION**<br/>
-Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [BCD sur](/previous-versions/windows/desktop/bcd/about-bcd).
+Application qui s'exécute dans l'environnement de démarrage de Windows. Pour plus d’informations sur les applications de démarrage, consultez [à propos de BCD](/previous-versions/windows/desktop/bcd/about-bcd).
 
 **CONSOLE**<br/>
-Application en mode caractères Win32. Le système d'exploitation fournit une console pour les applications console. Si `main` ou `wmain` est défini pour le code natif, `int main(array<String ^> ^)` est défini pour le code managé, ou si vous générez complètement l’application à l’aide de `/clr:safe`, CONSOLE est la valeur par défaut.
+Application en mode caractères Win32. Le système d'exploitation fournit une console pour les applications console. Si `main` ou `wmain` est défini pour le code natif, `int main(array<String ^> ^)` est défini pour le code managé ou si vous générez complètement l’application à l’aide de `/clr:safe` , la console est la valeur par défaut.
 
 **EFI_APPLICATION**<br/>
 **EFI_BOOT_SERVICE_DRIVER**<br/>
 **EFI_ROM**<br/>
 **EFI_RUNTIME_DRIVER**<br/>
-Les sous-systèmes Extensible Firmware Interface. Consultez la spécification EFI pour plus d’informations. Pour obtenir des exemples, consultez le site Web d’Intel. La version minimale de version et la valeur par défaut est 1.0.
+Sous-systèmes Extensible Firmware Interface. Pour plus d’informations, consultez la spécification EFI. Pour obtenir des exemples, consultez le site Web d’Intel. La version minimale et la version par défaut sont 1,0.
 
 **NATIF**<br/>
-Pilotes en mode noyau pour Windows NT. Cette option est généralement réservée pour les composants du système Windows. Si [/Driver : WDM](driver-windows-nt-kernel-mode-driver.md) est spécifié, NATIVE est la valeur par défaut.
+Pilotes en mode noyau pour Windows NT. Cette option est généralement réservée aux composants système Windows. Si [/Driver : WDM](driver-windows-nt-kernel-mode-driver.md) est spécifié, native est la valeur par défaut.
 
 **POSIX**<br/>
-Application qui s’exécute avec le sous-système POSIX sous Windows NT.
+Application qui s’exécute avec le sous-système POSIX dans Windows NT.
 
 **WINDOWS**<br/>
-Application ne nécessite pas une console, probablement parce qu’il crée ses propres fenêtres pour l’interaction avec l’utilisateur. Si `WinMain` ou `wWinMain` est défini pour le code natif, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` est défini pour le code managé, WINDOWS est la valeur par défaut.
+L’application ne nécessite pas de console, probablement parce qu’elle crée ses propres fenêtres pour l’interaction avec l’utilisateur. Si `WinMain` ou `wWinMain` est défini pour le code natif, `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` est défini pour le code managé, Windows est la valeur par défaut.
 
-*principales* et *mineure*<br/>
-(Facultatif) Spécifiez la version minimale requise du sous-système. Les arguments sont des nombres décimaux compris entre 0 et 65 535. Consultez la section Notes pour plus d’informations. Il n’y a aucune limite supérieure pour les numéros de version.
+*major* et *Minor*<br/>
+Facultatif Spécifiez la version minimale requise du sous-système. Les arguments sont des nombres décimaux compris entre 0 et 65 535. Pour plus d’informations, consultez les notes. Il n’existe aucune limite supérieure pour les numéros de version.
 
 ## <a name="remarks"></a>Notes
 
-Le **/SUBSYSTEM** option spécifie l’environnement pour l’exécutable.
+L’option **/Subsystem** spécifie l’environnement pour l’exécutable.
 
-Le choix du sous-système affecte le symbole de point d’entrée (ou une fonction de point d’entrée) qui sélectionne l’éditeur de liens.
+Le choix du sous-système affecte le symbole de point d’entrée (ou la fonction de point d’entrée) que l’éditeur de liens doit sélectionner.
 
-Le minimum facultatif et par défaut *majeure* et *mineure* numéros de version pour les sous-systèmes sont comme suit.
+Les numéros de version *principale* et *secondaire* par défaut et facultatifs pour les sous-systèmes sont les suivants.
 
-|Sous-système|Minimum|Par défaut|
+|Subsystem|Minimum|Default|
 |---------------|-------------|-------------|
 |BOOT_APPLICATION|1.0|1.0|
-|CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|Code natif (avec DRIVER : WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
-|NATIF (sans/Driver : WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
+|CONSOLE|5,01 (x86) 5,02 (x64) 6,02 (ARM)|6,00 (x86, x64) 6,02 (ARM)|
+|WINDOWS|5,01 (x86) 5,02 (x64) 6,02 (ARM)|6,00 (x86, x64) 6,02 (ARM)|
+|NATIF (avec pilote : WDM)|1,00 (x86) 1,10 (x64, ARM)|1,00 (x86) 1,10 (x64, ARM)|
+|NATIF (sans/DRIVER : WDM)|4,00 (x86) 5,02 (x64) 6,02 (ARM)|4,00 (x86) 5,02 (x64) 6,02 (ARM)|
 |POSIX|1.0|19.90|
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le dossier de l’éditeur de liens.
+1. Sélectionnez le dossier Éditeur de liens.
 
-1. Sélectionnez le **système** page de propriétés.
+1. Sélectionnez la page de propriétés **système** .
 
-1. Modifier le `SubSystem` propriété.
+1. Modifiez la `SubSystem` propriété.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

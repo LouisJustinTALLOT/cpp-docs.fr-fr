@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fcloseall'
 title: fcloseall
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fcloseall function
 ms.assetid: 4f14acde-5bc5-43da-a709-7a3c559df3cf
-ms.openlocfilehash: 1594e510239949062fde8bf3a8fb036b4cafa16f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b54bf604adf4bd4d9c30a9c4d3a4c4e37ecbc99f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235864"
 ---
 # <a name="fcloseall"></a>fcloseall
 

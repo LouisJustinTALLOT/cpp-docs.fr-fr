@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; cwchar&gt;'
 title: '&lt;cwchar&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cwchar header
 ms.assetid: 7380b1bf-a220-46e5-b832-9f9f4e543aac
-ms.openlocfilehash: e1406bf154cb677be6400bf1cf4122627f64f2ad
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 54cc8996b0c64bf4a35c2caa2c5245061d7f79f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232978"
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar&gt;
 
-Inclut l’en-tête \<wchar.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<wchar.h> et ajoute les noms associés à l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +43,7 @@ namespace std {
 #define WEOF see below
 ```
 
-## <a name="structs"></a>Structs
+## <a name="structs"></a>Structures
 
 ```cpp
 struct tm;
@@ -120,6 +121,6 @@ size_t wcsrtombs(char* dst, const wchar_t** src, size_t len, mbstate_t* ps);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

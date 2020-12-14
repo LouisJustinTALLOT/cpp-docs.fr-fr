@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge des itérateurs de débogage'
 title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd2de8423cb7235fdb54a3d0cfe852081ea32b18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232952"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -148,7 +149,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destructeurs pour les itérateurs de débogage
 
-Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas mais que la mémoire de l’objet est libérée, des violations d’accès et une altération des données peuvent se produire. Examinez cet exemple :
+Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas mais que la mémoire de l’objet est libérée, des violations d’accès et une altération des données peuvent se produire. Prenons l’exemple suivant :
 
 ```cpp
 // iterator_debugging_5.cpp

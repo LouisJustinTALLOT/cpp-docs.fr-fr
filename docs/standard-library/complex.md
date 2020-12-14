@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; complexe&gt;'
 title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831500"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233836"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Définit le modèle de classe `complex` de conteneur et ses modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: \<complex>
 
@@ -44,7 +45,7 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
 En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z*  =  *a*  +  *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées à l’ensemble de nombres complexes et à leurs composants. Par exemple :
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
+   (1 + 2 *i*) \* (2 + 3 *i*) = 1 \* (2 + 3 *i*) + 2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 
 Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’y a pas d’ordre des nombres complexes, en ce qui concerne le champ des nombres réels et de ses sous-ensembles. les inégalités ne peuvent donc pas être appliquées aux nombres complexes comme c’est le cas des nombres réels.
 
@@ -70,7 +71,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -90,7 +91,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 |[Sign](../standard-library/complex-functions.md#log)|Retourne le logarithme naturel d'un nombre complexe.|
 |[log10](../standard-library/complex-functions.md#log10)|Retourne le logarithme de base 10 d'un nombre complexe.|
 |[norm](../standard-library/complex-functions.md#norm)|Extrait la norme d'un nombre complexe.|
-|[polar](../standard-library/complex-functions.md#polar)|Retourne le nombre complexe qui correspond à un module et à un argument spécifiés, au format cartésien.|
+|[polarisé](../standard-library/complex-functions.md#polar)|Retourne le nombre complexe qui correspond à un module et à un argument spécifiés, au format cartésien.|
 |[Poe](../standard-library/complex-functions.md#pow)|Évalue le nombre complexe obtenu en élevant une base qui est un nombre complexe à la puissance d'un autre nombre complexe.|
 |[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Extrait le composant réel d'un nombre complexe.|
@@ -98,7 +99,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 |[Sinh](../standard-library/complex-functions.md#sinh)|Retourne le sinus hyperbolique d'un nombre complexe.|
 |[racine](../standard-library/complex-functions.md#sqrt)|Retourne la racine carrée d'un nombre complexe.|
 |[Tan](../standard-library/complex-functions.md#tan)|Retourne la tangente d'un nombre complexe.|
-|[tanh](../standard-library/complex-functions.md#tanh)|Retourne la tangente hyperbolique d'un nombre complexe.|
+|[Tanh](../standard-library/complex-functions.md#tanh)|Retourne la tangente hyperbolique d'un nombre complexe.|
 
 ### <a name="operators"></a>Opérateurs
 

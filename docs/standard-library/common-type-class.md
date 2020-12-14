@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe common_type'
 title: common_type, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-ms.openlocfilehash: 3605b34a2bfc50831c889976ac5ea884053bb642
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7dc41b443f6ec93c9d07ba8e3871346fae09d94f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233914"
 ---
-# <a name="commontype-class"></a>common_type, classe
+# <a name="common_type-class"></a>common_type, classe
 
 Détermine le type commun d'un ou plusieurs types.
 
@@ -49,7 +50,7 @@ Liste des types qui sont des [types complets](../c-language/incomplete-types.md)
 
 Le membre `type` est le type commun vers lequel tous les types dans la liste de paramètres peuvent être convertis.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le programme suivant illustre certains scénarios d'utilisation correcte et teste les résultats.
 
@@ -92,7 +93,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 Test for typedefs of common_type int
@@ -114,9 +115,9 @@ ModifiedIntType: false
 ClassType: true
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

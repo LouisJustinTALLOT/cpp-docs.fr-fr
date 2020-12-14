@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C R6016'
 title: Erreur Runtime C R6016
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6016
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
-ms.openlocfilehash: 22bf4b7e8951215d1a013edb29af1ebff7517ffc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79339400436f21aefc0edea101b4642d443f5ce0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237684"
 ---
 # <a name="c-runtime-error-r6016"></a>Erreur Runtime C R6016
 
@@ -30,8 +31,8 @@ espace insuffisant pour les données du thread
 
 **Informations pour les programmeurs**
 
-Cette erreur se produit parce que le programme n’a pas reçu suffisamment de mémoire du système d’exploitation pour effectuer un appel [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) ou `_beginthreadex`, ou que le stockage local des threads n’a pas été initialisé par `_beginthread` ou `_beginthreadex`.
+Cette erreur se produit car le programme n’a pas reçu suffisamment de mémoire du système d’exploitation pour effectuer une [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) ou un `_beginthreadex` appel, ou le stockage local des threads n’a pas été initialisé par `_beginthread` ou `_beginthreadex` .
 
 Quand un nouveau thread est lancé, la bibliothèque doit créer une base de données interne pour le thread. Si la base de données ne peut pas être développée à l’aide de la mémoire fournie par le système d’exploitation, le thread ne démarre pas et le processus d’appel s’arrête. Cela peut se produire lorsque de trop nombreux threads ont été créés par le processus, ou si le stockage local des threads est épuisé.
 
-Nous recommandons qu’un exécutable qui appelle la bibliothèque Runtime C (CRT) utilise `_beginthreadex` pour la création de threads plutôt que l’API Windows `CreateThread`. `_beginthreadex` initialise le stockage statique interne utilisé par de nombreuses fonctions CRT dans le stockage local des threads. Si vous utilisez `CreateThread` pour créer un thread, la bibliothèque Runtime C (CRT) peut terminer le processus avec R6016 lorsqu'un appel est effectué à destination d'une fonction CRT qui nécessite l'initialisation du stockage statique interne.
+Nous vous recommandons d’utiliser un fichier exécutable qui appelle la bibliothèque Runtime C (CRT) `_beginthreadex` pour la création de threads plutôt que l’API Windows `CreateThread` . `_beginthreadex` initialise le stockage statique interne utilisé par de nombreuses fonctions CRT dans le stockage local des threads. Si vous utilisez `CreateThread` pour créer un thread, la bibliothèque Runtime C (CRT) peut terminer le processus avec R6016 lorsqu'un appel est effectué à destination d'une fonction CRT qui nécessite l'initialisation du stockage statique interne.

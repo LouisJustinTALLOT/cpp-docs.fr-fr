@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : quitter, _Exit, _exit'
 title: exit, _Exit, _exit
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: a1c0eeaa6d66e91b913ce7940d37409fc4f6ac29
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b2d5a95f8a110e467016be828418050d77caa984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236033"
 ---
 # <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
@@ -69,13 +70,13 @@ void _exit(
 *statut*<br/>
 Code d’état de sortie.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **Exit**, **_Exit** et **_exit** terminent le processus appelant. La fonction **Exit** appelle des destructeurs pour les objets locaux de thread, puis appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **atexit** et **_onexit**, puis vide toutes les mémoires tampons de fichiers avant de mettre fin au processus. Les fonctions **_Exit** et **_exit** terminent le processus sans détruire les objets locaux de thread ou traiter des fonctions **atexit** ou **_onexit** , et sans vider les mémoires tampons de flux.
 
 Bien que les appels **Exit**, **_Exit** et **_exit** ne retournent pas de valeur, la valeur de *Status* est mise à la disposition de l’environnement hôte ou du processus appelant en attente, le cas échéant, une fois le processus terminé. En règle générale, l’appelant définit la valeur d' *État* sur 0 pour indiquer une sortie normale, ou sur une autre valeur pour indiquer une erreur. La valeur d' *État* est disponible pour la commande de traitement par lots du système d’exploitation **ERRORLEVEL** et est représentée par l’une des deux constantes suivantes : **EXIT_SUCCESS**, qui représente la valeur 0, ou **EXIT_FAILURE**, qui représente la valeur 1.
 
-Les fonctions **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit**et **_c_exit** se comportent comme suit.
+Les fonctions **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit** et **_c_exit** se comportent comme suit.
 
 |Fonction|Description|
 |--------------|-----------------|
@@ -86,7 +87,7 @@ Les fonctions **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit**et **_c_
 |**_cexit**|Exécute les procédures d’arrêt complètes de la bibliothèque C et retourne à l’appelant. Ne termine pas le processus.|
 |**_c_exit**|Exécute les procédures d’arrêt minimales de la bibliothèque C et retourne à l’appelant. Ne termine pas le processus.|
 
-Quand vous appelez la fonction **Exit**, **_Exit** ou **_exit** , les destructeurs pour les objets temporaires ou automatiques qui existent au moment de l’appel ne sont pas appelés. Un objet automatique est un objet local non statique défini dans une fonction. Un objet temporaire est un objet créé par le compilateur, tel qu’une valeur retournée par un appel de fonction. Pour détruire un objet automatique avant d’appeler **Exit**, **_Exit**ou **_exit**, appelez explicitement le destructeur de l’objet, comme illustré ici :
+Quand vous appelez la fonction **Exit**,  **_Exit** ou **_exit** , les destructeurs pour les objets temporaires ou automatiques qui existent au moment de l’appel ne sont pas appelés. Un objet automatique est un objet local non statique défini dans une fonction. Un objet temporaire est un objet créé par le compilateur, tel qu’une valeur retournée par un appel de fonction. Pour détruire un objet automatique avant d’appeler **Exit**, **_Exit** ou **_exit**, appelez explicitement le destructeur de l’objet, comme illustré ici :
 
 ```cpp
 void last_fn() {}
@@ -103,7 +104,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**Exit**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; climits&gt;'
 title: '&lt;climits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 6cff0975fb61e30bc96390f345cd67d7b1fbec41
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 97c5f6f9822656c2b25b85dab6fb668a8a8eebbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459337"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234083"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-Inclut l’en-tête \<Limits. > h de la bibliothèque standard C et ajoute les noms associés à l' `std` espace de noms. L’inclusion de cet en-tête garantit que les noms déclarés à l’aide de la liaison externe dans l' `std` en-tête de la bibliothèque standard C sont déclarés dans l’espace de noms.
+Inclut l’en-tête de la bibliothèque standard C \<limits.h> et ajoute les noms associés à l' `std` espace de noms. L’inclusion de cet en-tête garantit que les noms déclarés à l’aide de la liaison externe dans l’en-tête de la bibliothèque standard C sont déclarés dans l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,6 +50,6 @@ Inclut l’en-tête \<Limits. > h de la bibliothèque standard C et ajoute les n
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

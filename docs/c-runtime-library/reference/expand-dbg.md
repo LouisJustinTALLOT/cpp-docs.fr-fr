@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _expand_dbg'
 title: _expand_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6ebdce3a22c4e5b4b63b8301570effed888fe66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235960"
 ---
 # <a name="_expand_dbg"></a>_expand_dbg
 
@@ -51,46 +52,46 @@ void *_expand_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*userData*<br/>
+*Permanence*<br/>
 Pointeur vers le bloc de mémoire précédemment alloué.
 
 *newSize*<br/>
 Nouvelle taille demandée pour le bloc (en octets).
 
 *blockType*<br/>
-Type demandé pour le bloc redimensionné : _ **client_block** ou **_NORMAL_BLOCK**.
+Type demandé pour le bloc redimensionné : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé l’opération de développement ou **null**.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Numéro de ligne dans le fichier source où l’opération de développement a été demandée ou **null**.
 
-Les paramètres *filename* et *LineNumber* sont disponibles uniquement lorsque **_expand_dbg** a été appelé explicitement ou que la constante de préprocesseur _ [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.
+Les paramètres *filename* et *LineNumber* ne sont disponibles que si **_expand_dbg** a été appelé explicitement ou si la constante de préprocesseur [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Une fois l’opération terminée, **_expand_dbg** retourne un pointeur vers le bloc de mémoire redimensionné. Étant donné que la mémoire n’est pas déplacée, l’adresse est identique à userData. Si une erreur s’est produite ou si le bloc n’a pas pu être étendu à la taille demandée, la **valeur null**est retournée. En cas de défaillance, **errno** se trouve dans les informations du système d’exploitation relatives à la nature de l’échec. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Une fois l’opération terminée, **_expand_dbg** retourne un pointeur vers le bloc de mémoire redimensionné. Étant donné que la mémoire n’est pas déplacée, l’adresse est identique à userData. Si une erreur s’est produite ou si le bloc n’a pas pu être étendu à la taille demandée, la **valeur null** est retournée. En cas de défaillance, **errno** se trouve dans les informations du système d’exploitation relatives à la nature de l’échec. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_expand_dbg** est une version de débogage de la fonction _[expand](expand.md) . Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_expand_dbg** est réduit à un appel à **_expand**. **_Expand** et **_expand_dbg** redimensionne un bloc de mémoire dans le tas de base, mais **_expand_dbg** prend en charge plusieurs fonctionnalités de débogage : des mémoires tampons de chaque côté de la partie utilisateur du bloc pour tester les fuites, un paramètre de type de bloc à suivre des types d’allocation spécifiques et des informations de *nom de fichier*/*LineNumber* pour déterminer l’origine des demandes d’allocation.
+La fonction **_expand_dbg** est une version de débogage de la fonction _ [expand](expand.md) . Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_expand_dbg** est réduit à un appel à **_expand**. À la fois **_expand** et **_expand_dbg** redimensionner un bloc de mémoire dans le tas de base, mais **_expand_dbg** prend en charge plusieurs fonctionnalités de débogage : des mémoires tampons de chaque côté de la partie utilisateur du bloc pour tester les fuites, un paramètre de type de bloc pour suivre des types d’allocation spécifiques et des informations de *nom de fichier* / *LineNumber* pour déterminer l’origine des demandes d’allocation.
 
-**_expand_dbg** redimensionne le bloc de mémoire spécifié avec un peu plus d’espace que la taille de l' *information*demandée. *NewSize* peut être supérieure ou inférieure à la taille du bloc de mémoire alloué initialement. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Le redimensionnement s’effectue en étendant ou en réduisant le bloc de mémoire d’origine. **_expand_dbg** ne déplace pas le bloc de mémoire, comme la fonction [_realloc_dbg](realloc-dbg.md) .
+**_expand_dbg** redimensionne le bloc de mémoire spécifié avec un peu plus d’espace que la taille de l' *information* demandée. *NewSize* peut être supérieure ou inférieure à la taille du bloc de mémoire alloué initialement. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Le redimensionnement s’effectue en étendant ou en réduisant le bloc de mémoire d’origine. **_expand_dbg** ne déplace pas le bloc de mémoire, comme la fonction [_realloc_dbg](realloc-dbg.md) .
 
 Lorsque *NewSize* est supérieure à la taille de bloc d’origine, le bloc de mémoire est développé. Pendant une expansion, si le bloc de mémoire ne peut pas être développé pour s’adapter à la taille demandée, la **valeur null** est retournée. Lorsque *NewSize* est inférieure à la taille de bloc d’origine, le bloc de mémoire est contracté jusqu’à ce que la nouvelle taille soit obtenue.
 
-Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans une build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [types de blocs sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Cette fonction valide ses paramètres. Si *memblock* est un pointeur null ou si Size est supérieur à **_HEAP_MAXREQ**, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**.
+Cette fonction valide ses paramètres. Si *memblock* est un pointeur null, ou si la taille est supérieure à **_HEAP_MAXREQ**, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_expand_dbg**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _expand'
 title: _expand
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31558bb67266430cc028e37a1e23dff2fa411356
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235959"
 ---
 # <a name="_expand"></a>_expand
 
@@ -63,7 +64,7 @@ Pointeur désignant le bloc de mémoire précédemment alloué.
 *size*<br/>
 Nouvelle taille en octets.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_expand** retourne un pointeur void vers le bloc de mémoire réalloué. **_expand**, contrairement à **realloc**, ne peut pas déplacer un bloc pour modifier sa taille. Ainsi, s’il y a suffisamment de mémoire disponible pour développer le bloc sans le déplacer, le paramètre *memblock* à **_expand** est identique à la valeur de retour.
 
@@ -132,7 +133,7 @@ Expanded block to 1024 bytes at 002C12BC
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

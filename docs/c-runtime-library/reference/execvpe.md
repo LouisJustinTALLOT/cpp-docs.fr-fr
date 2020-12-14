@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : execvpe'
 title: execvpe
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
-ms.openlocfilehash: 28e4a0106172078a6eb855afc787f266aa5747f1
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: de9209bcb3948ae70022edb9ee15780eaf5a16de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236085"
 ---
 # <a name="execvpe"></a>execvpe
 

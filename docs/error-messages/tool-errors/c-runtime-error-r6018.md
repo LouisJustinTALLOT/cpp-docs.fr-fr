@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C R6018'
 title: Erreur Runtime C R6018
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: 83ad191fe1518e5e6bab0798840415ef392db71e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 778b57c7071ab6ce042c9e1c434541c1dbcfad13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237658"
 ---
 # <a name="c-runtime-error-r6018"></a>Erreur Runtime C R6018
 
@@ -32,4 +33,4 @@ Le programme a rencontré une erreur inattendue lors de l’exécution d’une o
 
 Cette erreur se produit généralement si le programme modifie par inadvertance les données du tas au moment de l’exécution. Toutefois, cela peut également être dû à une erreur interne dans le runtime ou dans le code du système d’exploitation.
 
-Pour résoudre ce problème, recherchez les bogues d’altération du tas dans votre code. Pour plus d’informations et d’exemples, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les fichiers redistribuables les plus récents pour le déploiement de votre application. Pour plus d’informations, consultez [déploiement C++dans Visual ](../../windows/deployment-in-visual-cpp.md).
+Pour résoudre ce problème, recherchez les bogues d’altération du tas dans votre code. Pour plus d’informations et d’exemples, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les fichiers redistribuables les plus récents pour le déploiement de votre application. Pour plus d’informations, consultez [déploiement dans Visual C++](../../windows/deployment-in-visual-cpp.md).

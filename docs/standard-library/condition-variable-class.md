@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe condition_variable'
 title: condition_variable, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f5987c050dece8536aef0f91731a0848b56d3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233810"
 ---
 # <a name="condition_variable-class"></a>condition_variable, classe
 
@@ -45,14 +46,14 @@ class condition_variable;
 |-|-|
 |[condition_variable](#condition_variable)|Construit un objet `condition_variable`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
 |[native_handle](#native_handle)|Retourne le type spécifique de l’implémentation qui représente le descripteur condition_variable.|
 |[notify_all](#notify_all)|Débloque tous les threads qui attendent l’objet `condition_variable`.|
 |[notify_one](#notify_one)|Débloque un des threads qui attendent l’objet `condition_variable`.|
-|[qu'](#wait)|Bloque un thread.|
+|[wait](#wait)|Bloque un thread.|
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 

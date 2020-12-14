@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fcvt_s'
 title: _fcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dd4d58b39d4c18f2fff7da54c5fbd0f2346dfdd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235877"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -64,7 +65,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 La mémoire tampon fournie destinée à contenir le résultat de la conversion.
 
 *sizeInBytes*<br/>
@@ -82,7 +83,7 @@ Pointeur désignant la position de la virgule décimale stockée.
 *sign*<br/>
 Pointeur désignant l’indicateur de signe stocké.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -90,18 +91,18 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*sizeInBytes*|value|count|dec|sign|Renvoie|Valeur dans la *mémoire tampon*|
+|*mémoire tampon*|*sizeInBytes*|value|count|dec|sign|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
 |Not **null** (pointe vers une mémoire valide)|<=0|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
-|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NUL**|n'importe laquelle|**EINVAL**|Non modifiée.|
-|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|Non modifiée.|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NULL**|n'importe laquelle|**EINVAL**|Non modifiée.|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|Non modifiée.|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
 **_fcvt_s** peut générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_fcvt_s** convertit un nombre à virgule flottante en une chaîne de caractères terminée par le caractère null. Le paramètre de *valeur* est le nombre à virgule flottante à convertir. **_fcvt_s** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Le paramètre *Count* spécifie le nombre de chiffres à stocker après la virgule décimale. Les chiffres excédentaires sont arrondis à la *valeur nombre* d’emplacements. Si le *nombre* de chiffres de précision est inférieur à, la chaîne est remplie de zéros.
 
@@ -119,7 +120,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 

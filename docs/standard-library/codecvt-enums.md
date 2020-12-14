@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : &lt; &gt; énumérations codecvt'
 title: '&lt;codecvt&gt;, énumérations'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcd40f72f563b3ecf91125f7167f206d4b1b6517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234057"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt;, énumérations
 
-## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>codecvt_mode Énumération
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a> Énumération codecvt_mode
 
-Spécifie les informations de configuration pour les facettes [locales.](../standard-library/locale-class.md)
+Spécifie des informations de configuration pour les facettes de [paramètres régionaux](../standard-library/locale-class.md) .
 
 ```cpp
 enum codecvt_mode {
@@ -29,7 +30,7 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>Notes
 
-L’énumération définit trois constantes qui fournissent des informations de configuration aux facettes locales déclarées dans [ \<le codecvt>](../standard-library/codecvt.md). Les différentes valeurs sont :
+L’énumération définit trois constantes qui fournissent des informations de configuration aux facettes de paramètres régionaux déclarées dans [\<codecvt>](../standard-library/codecvt.md) . Les différentes valeurs sont :
 
 - `consume_header`, pour consommer une séquence d’en-têtes initiale pendant la lecture d’une séquence multioctet et déterminer le mode Endian de la séquence multioctet suivante à lire
 

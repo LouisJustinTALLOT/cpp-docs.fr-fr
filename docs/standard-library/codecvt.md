@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; codecvt&gt;'
 title: '&lt;codecvt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: ec403bd02df0b937269acc71ddf87e1942bb4c5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 454637427b4a2c058b8ee8cf4bb5b8bc99215e74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233966"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -56,7 +57,7 @@ Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’u
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UTF-16 et un flux d’octets codé au format UTF-8.|
 |[codecvt_utf16](codecvt-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-16LE ou UTF-16BE.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<codecvt>
 

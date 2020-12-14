@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _execvpe, _wexecvpe'
 title: _execvpe, _wexecvpe
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 4a1a2d66600a7502c088577adca4085c68e4ccd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2a9baf9e39335c47a10d7c5f7e8baa8484bee66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236098"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -73,7 +74,7 @@ Tableau de pointeurs vers les paramètres.
 *envp*<br/>
 Tableau de pointeurs vers les paramètres d'environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
@@ -88,7 +89,7 @@ En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une 
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
@@ -98,14 +99,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> ou \<wchar.h>|\<errno.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 

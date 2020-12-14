@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe collate_byname'
 title: collate_byname, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8e5ee60a2415fe6fede6db387c774151b97396dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233953"
 ---
 # <a name="collate_byname-class"></a>collate_byname, classe
 
@@ -47,14 +48,14 @@ Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [collate](../standard-library/collate-class.md#collate)\<CharType >. Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) *_Locname*. Chaque constructeur initialise son objet de base avec [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Le modèle de classe décrit un objet pouvant servir de [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) de type [COLLATE](../standard-library/collate-class.md#collate) \<CharType> . Son comportement est déterminé par les [](../standard-library/locale-class.md#name) paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [COLLATE](../standard-library/collate-class.md#collate) \<CharType> ( `_Refs` ).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :**\<locale>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
