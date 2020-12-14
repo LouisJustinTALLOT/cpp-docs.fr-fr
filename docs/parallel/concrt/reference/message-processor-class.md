@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe message_processor'
 title: message_processor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f74314bde6e12ea8b00bfc7bfd2567ca15864f75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202195"
 ---
 # <a name="message_processor-class"></a>message_processor, classe
 
@@ -32,27 +33,27 @@ class message_processor;
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données de la charge utile au sein des messages gérés par cet objet `message_processor`.
+Type de données de la charge utile au sein des messages gérés par cet `message_processor` objet.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|`type`|Alias de type pour `T`.|
+|`type`|Alias de type pour `T` .|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[async_send](#async_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc de manière asynchrone.|
 |[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.|
-|[qu'](#wait)|En cas de substitution dans une classe dérivée, attend la fin de toutes les opérations asynchrones.|
+|[wait](#wait)|En cas de substitution dans une classe dérivée, attend la fin de toutes les opérations asynchrones.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement en avant des messages dans le bloc. Appelée une fois chaque fois qu’un nouveau message est ajouté et que la file d’attente est vide.|
 
@@ -64,9 +65,9 @@ Type de données de la charge utile au sein des messages gérés par cet objet `
 
 **En-tête :** agents.h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="async_send"></a>async_send
+## <a name="async_send"></a><a name="async_send"></a> async_send
 
 En cas de substitution dans une classe dérivée, place les messages dans le bloc de manière asynchrone.
 
@@ -77,13 +78,13 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *_Msg*<br/>
-Objet `message` à envoyer de façon asynchrone.
+`message`Objet à envoyer de façon asynchrone.
 
 ### <a name="remarks"></a>Notes
 
 Les implémentations de processeur doivent substituer cette méthode.
 
-## <a name="process_incoming_message"></a>process_incoming_message
+## <a name="process_incoming_message"></a><a name="process_incoming_message"></a> process_incoming_message
 
 En cas de substitution dans une classe dérivée, effectue le traitement en avant des messages dans le bloc. Appelée une fois chaque fois qu’un nouveau message est ajouté et que la file d’attente est vide.
 
@@ -95,7 +96,7 @@ virtual void process_incoming_message() = 0;
 
 Les implémentations de bloc de message doivent substituer cette méthode.
 
-## <a name="sync_send"></a>sync_send
+## <a name="sync_send"></a><a name="sync_send"></a> sync_send
 
 En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.
 
@@ -106,13 +107,13 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *_Msg*<br/>
-Objet `message` à envoyer de façon synchrone.
+`message`Objet à envoyer de façon synchrone.
 
 ### <a name="remarks"></a>Notes
 
 Les implémentations de processeur doivent substituer cette méthode.
 
-## <a name="wait"></a>qu'
+## <a name="wait"></a><a name="wait"></a> qu'
 
 En cas de substitution dans une classe dérivée, attend la fin de toutes les opérations asynchrones.
 
@@ -126,5 +127,5 @@ Les implémentations de processeur doivent substituer cette méthode.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[ordered_message_processor, classe](ordered-message-processor-class.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
+[Classe ordered_message_processor](ordered-message-processor-class.md)

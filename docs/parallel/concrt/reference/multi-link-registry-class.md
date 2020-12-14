@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe multi_link_registry'
 title: multi_link_registry, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5d5e6c7e837f76a422c3f2879f74d1af36d64d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202130"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry, classe
 
@@ -69,7 +70,7 @@ Type de données de bloc stocké dans l' `multi_link_registry` objet.
 
 **Espace de noms :** concurrence
 
-## <a name="add"></a><a name="add"></a>complémentaires
+## <a name="add"></a><a name="add"></a> complémentaires
 
 Ajoute un lien à l' `multi_link_registry` objet.
 
@@ -86,7 +87,7 @@ Pointeur vers un bloc à ajouter.
 
 La méthode lève une exception [invalid_link_target](invalid-link-target-class.md) si le lien est déjà présent dans le registre ou si une limite a déjà été définie avec la `set_bound` fonction et qu’un lien a été supprimé depuis.
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Retourne un itérateur au premier élément de l' `multi_link_registry` objet.
 
@@ -94,7 +95,7 @@ Retourne un itérateur au premier élément de l' `multi_link_registry` objet.
 virtual iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui traite le premier élément de l' `multi_link_registry` objet.
 
@@ -102,7 +103,7 @@ Itérateur qui traite le premier élément de l' `multi_link_registry` objet.
 
 L’état final est indiqué par un `NULL` lien.
 
-## <a name="contains"></a><a name="contains"></a>comprend
+## <a name="contains"></a><a name="contains"></a> comprend
 
 Recherche `multi_link_registry` un bloc spécifié dans l’objet.
 
@@ -115,11 +116,11 @@ virtual bool contains(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc qui doit être recherché dans l' `multi_link_registry` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le bloc spécifié a été trouvé ; **`false`** sinon,.
 
-## <a name="count"></a><a name="count"></a>saut
+## <a name="count"></a><a name="count"></a> saut
 
 Compte le nombre d’éléments dans l' `multi_link_registry` objet.
 
@@ -127,11 +128,11 @@ Compte le nombre d’éléments dans l' `multi_link_registry` objet.
 virtual size_t count();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d'éléments de l'objet `multi_link_registry`.
 
-## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a> multi_link_registry
 
 Construit un objet `multi_link_registry`.
 
@@ -139,7 +140,7 @@ Construit un objet `multi_link_registry`.
 multi_link_registry();
 ```
 
-## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a> ~ multi_link_registry
 
 Détruit l' `multi_link_registry` objet.
 
@@ -151,7 +152,7 @@ virtual ~multi_link_registry();
 
 La méthode lève une exception [invalid_operation](invalid-operation-class.md) si elle est appelée avant la suppression de tous les liens.
 
-## <a name="remove"></a><a name="remove"></a>Installez
+## <a name="remove"></a><a name="remove"></a> Installez
 
 Supprime un lien de l' `multi_link_registry` objet.
 
@@ -164,11 +165,11 @@ virtual bool remove(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc à supprimer, s’il est trouvé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le lien a été trouvé et supprimé ; **`false`** sinon,.
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 Définit une limite supérieure du nombre de liens que l' `multi_link_registry` objet peut contenir.
 

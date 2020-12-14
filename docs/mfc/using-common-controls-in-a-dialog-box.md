@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de contrôles communs dans une boîte de dialogue'
 title: Utilisation de contrôles communs dans une boîte de dialogue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: 1a3dcb7151952b52affcfeb838ced15f0d116fce
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 73395ae5b3542f338f3783fd5f0c41116821fed6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202403"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilisation de contrôles communs dans une boîte de dialogue
 
@@ -42,7 +43,7 @@ Les contrôles communs Windows peuvent être utilisés dans les [boîtes de dial
     > [!NOTE]
     >  Vous pouvez également utiliser l'échange de données de boîtes de dialogue pour définir et récupérer des valeurs de contrôles dans une boîte de dialogue.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L'ajout des contrôles communs à une boîte de dialogue entraîne le non fonctionnement de la boîte de dialogue. Pour plus d’informations sur la gestion de cette situation, reportez-vous à [la boîte de dialogue Ajout de contrôles à une boîte](../windows/adding-editing-or-deleting-controls.md) de dialogue.
 

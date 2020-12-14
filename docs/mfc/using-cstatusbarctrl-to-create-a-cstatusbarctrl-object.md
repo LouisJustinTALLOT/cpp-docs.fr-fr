@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl'
 title: Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 12d5664b9fc59c4569ec2ee7db4ae883911f7bcd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0b76065ce4e90600bdec7e4f4a89ee2c5bb14085
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202377"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl
 
@@ -18,7 +19,7 @@ Voici un exemple d’utilisation classique de [CStatusBarCtrl](../mfc/reference/
 
 ### <a name="to-use-a-status-bar-control-with-parts"></a>Pour utiliser un contrôle de barre d’État avec des parties
 
-1. Construisez l’objet `CStatusBarCtrl`.
+1. Construisez l' `CStatusBarCtrl` objet.
 
 1. Appelez [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) si vous souhaitez définir la hauteur minimale de la zone de dessin du contrôle de barre d’État.
 

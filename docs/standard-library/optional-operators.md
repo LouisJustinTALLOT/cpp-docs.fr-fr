@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs facultatifs'
 title: '&lt;opérateurs facultatifs &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c61f62ff87ab285dfeb5b26f1d22de86ef50fee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201857"
 ---
 # <a name="ltoptionalgt-operators"></a>&lt;opérateurs facultatifs &gt;
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est égal à l'objet `optional` situé à droite.
 
@@ -45,7 +46,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 *Oui*\
 Objet de type `optional` , `nullopt_t` ou `T` .
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l'objet `optional` situé à gauche de l'opérateur n'est pas égal à l'objet `optional` situé à droite.
 
@@ -69,7 +70,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 
 Cette fonction de modèle retourne `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est inférieur à l'objet `optional` situé à droite.
 
@@ -89,11 +90,11 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 *Oui*\
 Objet de type `optional` , `nullopt_t` ou `T` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est inférieure mais pas égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est inférieur ou égal à l'objet `optional` situé à droite.
 
@@ -113,7 +114,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 *Oui*\
 Objet de type `optional` , `nullopt_t` ou `T` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est inférieure ou égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -121,7 +122,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 
 Cette fonction de modèle retourne `!(right < left)`.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est supérieur à l'objet `optional` situé à droite.
 
@@ -141,7 +142,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 *Oui*\
 Objet de type `optional` , `nullopt_t` ou `T` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est supérieure à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -149,7 +150,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 
 Cette fonction de modèle retourne `right < left`.
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est supérieur ou égal à l'objet `optional` situé à droite.
 
@@ -169,7 +170,7 @@ Objet de type `optional` , `nullopt_t` ou `T` .
 *Oui*\
 Objet de type `optional` , `nullopt_t` ou `T` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le `optional` à gauche de l’opérateur est supérieur ou égal à l’extrémité `optional` droite de l’opérateur ; sinon, **`false`** .
 

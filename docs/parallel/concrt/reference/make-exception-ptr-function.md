@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : fonction make_exception_ptr'
 title: Fonction make_exception_ptr
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std::make_exception_ptr
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
-ms.openlocfilehash: 68e29942498187970d7a157a8fbb86efe2aac635
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0cdfe41ced73fd62a98a8fece13f06f516c347ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202325"
 ---
 # <a name="make_exception_ptr-function"></a>Fonction make_exception_ptr
 
@@ -28,7 +29,7 @@ Type d’exception.
 *_Except*<br/>
 Valeur de l’exception.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 ## <a name="requirements"></a>Spécifications
 
@@ -38,4 +39,4 @@ Valeur de l’exception.
 
 ## <a name="see-also"></a>Voir aussi
 
-[std, espace de noms](std-namespace.md)
+[Espace de noms std](std-namespace.md)

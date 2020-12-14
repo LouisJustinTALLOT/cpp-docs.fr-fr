@@ -1,5 +1,6 @@
 ---
-title: C++Pages de propriétés de débogage
+description: En savoir plus sur les pages de propriétés de débogage C++
+title: Pages de propriétés de débogage C++
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
@@ -35,16 +36,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a7fec317485dd20a430baab9a413586f913fa3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201740"
 ---
-# <a name="c-debugging-property-pages"></a>C++Pages de propriétés de débogage
+# <a name="c-debugging-property-pages"></a>Pages de propriétés de débogage C++
 
-Ces pages de propriétés se trouvent sous **Propriétés** de la > du **projet** > **Propriétés de configuration** > **débogage**. Choisissez le type de débogueur dans le contrôle déroulant. Pour plus d’informations sur le débogage de C++ code, consultez [Didacticiel : apprendre C++ à déboguer du code à l’aide de Visual Studio et à](/visualstudio/debugger/getting-started-with-the-debugger-cpp) [Déboguer du code natif](/visualstudio/debugger/debugging-native-code).
+Ces pages de propriétés se trouvent sous propriétés du **projet**  >    >  **Configuration Propriétés** du  >  **débogage**. Choisissez le type de débogueur dans le contrôle déroulant. Pour plus d’informations sur le débogage du code C++, consultez [Didacticiel : apprendre à déboguer du code c++ à l’aide de Visual Studio et à](/visualstudio/debugger/getting-started-with-the-debugger-cpp) [Déboguer du code natif](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Page de propriétés du débogueur Windows local
 
@@ -73,7 +74,7 @@ Spécifie le type de débogueur utilisé. Quand cette option est définie sur au
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
 - **Mixte-mixte**
-- **Auto** Automatique auto
+-  Automatique auto
 - **Script-script**
 - **GPU uniquement (C++ amp)** -GPU uniquement (C++ amp)
 
@@ -104,11 +105,11 @@ Attachez le débogueur SQL.
 
 ### <a name="amp-default-accelerator"></a>Accélérateur par défaut de l'AMP
 
-Remplacer C++ la sélection d’accélérateur par défaut du amp. La propriété ne s’applique pas lors du débogage de code managé.
+Remplace la sélection de l’accélérateur par défaut de C++ AMP. La propriété ne s’applique pas lors du débogage de code managé.
 
 ## <a name="remote-windows-debugger-property-page"></a>Page de propriétés du débogueur Windows distant
 
-Pour plus d’informations sur le débogage distant, consultez [débogage à distance d' C++ un projet Visual dans Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
+Pour plus d’informations sur le débogage distant, consultez [débogage à distance d’un projet Visual C++ dans Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
 
 ### <a name="remote-command"></a>Commande distante
 
@@ -122,7 +123,7 @@ Arguments de ligne de commande à passer à l'application.
 
 Répertoire de travail de l’application. Par défaut, le répertoire contenant le fichier projet.
 
-### <a name="remote-server-name"></a>Nom de serveur distant
+### <a name="remote-server-name"></a>Nom du serveur distant
 
 Spécifie un nom de serveur distant.
 
@@ -144,7 +145,7 @@ Spécifie le type de débogueur utilisé. Quand cette option est définie sur au
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
 - **Mixte-mixte**
-- **Auto** Automatique auto
+-  Automatique auto
 - **Script-script**
 - **GPU uniquement (C++ amp)** -GPU uniquement (C++ amp)
 
@@ -187,7 +188,7 @@ Spécifie s’il faut déployer les bibliothèques Runtime de débogage pour la 
 
 ### <a name="amp-default-accelerator"></a>Accélérateur par défaut de l'AMP
 
-Remplacer C++ la sélection d’accélérateur par défaut du amp. La propriété ne s’applique pas lors du débogage de code managé.
+Remplace la sélection de l’accélérateur par défaut de C++ AMP. La propriété ne s’applique pas lors du débogage de code managé.
 
 ## <a name="web-browser-debugger-property-page"></a>Page de propriétés du débogueur de navigateur Web
 
@@ -204,7 +205,7 @@ Spécifie le type de débogueur utilisé. Quand cette option est définie sur au
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
 - **Mixte-mixte**
-- **Auto** Automatique auto
+-  Automatique auto
 - **Script-script**
 
 ## <a name="web-service-debugger-property-page"></a>Page de propriétés du débogueur de service Web
@@ -222,7 +223,7 @@ Spécifie le type de débogueur utilisé. Quand cette option est définie sur au
 - **Natif uniquement** -natif uniquement
 - **Géré uniquement** -géré uniquement
 - **Mixte-mixte**
-- **Auto** Automatique auto
+-  Automatique auto
 - **Script-script**
 
 ### <a name="sql-debugging"></a>Débogage SQL

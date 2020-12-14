@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de CReBarCtrl'
 title: Utilisation de CReBarCtrl
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8f1393079c929e79753ac378fdecfafd19e00423
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202429"
 ---
 # <a name="using-crebarctrl"></a>Utilisation de CReBarCtrl
 
@@ -23,11 +24,11 @@ L’illustration suivante montre un contrôle rebar avec deux bandes. L’un con
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [CReBar et CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
+- [CReBar comparé à CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
 
 - [Création d’un contrôle rebar](../mfc/creating-a-rebar-control.md)
 
-- [Contrôles rebar et bandes](../mfc/rebar-controls-and-bands.md)
+- [Contrôles Rebar et bandes](../mfc/rebar-controls-and-bands.md)
 
 - [Utilisation d’une liste d’images avec un contrôle rebar](../mfc/using-an-image-list-with-a-rebar-control.md)
 

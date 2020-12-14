@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : raw_method_prefix'
 title: raw_method_prefix
 ms.date: 08/29/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: b1bc536507716e5c117718ec825bf7fe76c84b61
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9e05f70814e48a4460287e96905b543f7d76dde6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201987"
 ---
 # <a name="raw_method_prefix"></a>raw_method_prefix
 
-**C++Plus**
+**Section spécifique à C++**
 
 Spécifie un préfixe différent pour éviter les collisions de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *bibliothèque de types* **raw_method_prefix (** «*préfixe*» **)**
+> raw_method_prefix de la *bibliothèque de types* **#import** **(** «*préfixe*» **)**
 
 ### <a name="parameters"></a>Paramètres
 
@@ -30,12 +31,12 @@ Le préfixe à utiliser.
 
 ## <a name="remarks"></a>Notes
 
-Les propriétés et les méthodes de bas niveau sont exposées par les fonctions membres nommées à l’aide d’un préfixe par défaut **raw_** , afin d’éviter les conflits de noms avec les fonctions membres de gestion des erreurs de haut niveau.
+Les propriétés et les méthodes de bas niveau sont exposées par les fonctions membres nommées à l’aide d’un préfixe par défaut de **raw_**, afin d’éviter les conflits de noms avec les fonctions membres de gestion des erreurs de haut niveau.
 
 > [!NOTE]
-> Les effets de l’attribut **raw_method_prefix** sont inchangés par la présence de l’attribut [raw_interfaces_only](raw-interfaces-only.md) . Le **raw_method_prefix** a toujours la priorité `raw_interfaces_only` sur la spécification d’un préfixe. Si les deux attributs sont utilisés dans la `#import` même instruction, le préfixe spécifié par l’attribut **raw_method_prefix** est utilisé.
+> Les effets de l’attribut **raw_method_prefix** sont inchangés par la présence de l’attribut [raw_interfaces_only](raw-interfaces-only.md) . La **raw_method_prefix** est toujours prioritaire sur la `raw_interfaces_only` spécification d’un préfixe. Si les deux attributs sont utilisés dans la même `#import` instruction, le préfixe spécifié par l’attribut **raw_method_prefix** est utilisé.
 
-**Spécifique C++ à la fin**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 

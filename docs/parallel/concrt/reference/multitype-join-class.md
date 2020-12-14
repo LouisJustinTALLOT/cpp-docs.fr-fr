@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe multitype_join'
 title: multitype_join, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: c648e77e404cf39eab281a93e03d8b427da375f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee4e3a282bc9fa410140fefb79f31ac5ed9463ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202117"
 ---
 # <a name="multitype_join-class"></a>multitype_join, classe
 
@@ -44,7 +45,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 `tuple`Type de charge utile des messages joints et propagés par le bloc.
 
 *_Jtype*<br/>
-Type de `join` bloc qui est, `greedy` ou`non_greedy`
+Type de `join` bloc qui est, `greedy` ou `non_greedy`
 
 ## <a name="members"></a>Membres
 
@@ -91,7 +92,7 @@ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../p
 
 **Espace de noms :** concurrence
 
-## <a name="accept"></a><a name="accept"></a>valide
+## <a name="accept"></a><a name="accept"></a> valide
 
 Accepte un message qui a été proposé par ce `multitype_join` bloc, en transférant la propriété à l’appelant.
 
@@ -109,11 +110,11 @@ virtual message<_Destination_type>* accept(
 *_PTarget*<br/>
 Pointeur vers le bloc cible qui appelle la `accept` méthode.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le message dont l’appelant est désormais propriétaire.
 
-## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a> acquire_ref
 
 Acquiert un nombre de références sur ce `multitype_join` bloc de messagerie pour empêcher la suppression.
 
@@ -130,7 +131,7 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 Cette méthode est appelée par un `ITarget` objet qui est lié à cette source au cours de la `link_target` méthode.
 
-## <a name="consume"></a><a name="consume"></a>occuper
+## <a name="consume"></a><a name="consume"></a> occuper
 
 Utilise un message précédemment offert par le `multitype_join` bloc de messagerie et correctement réservé par la cible, en transférant la propriété à l’appelant.
 
@@ -148,7 +149,7 @@ virtual message<_Destination_type>* consume(
 *_PTarget*<br/>
 Pointeur vers le bloc cible qui appelle la `consume` méthode.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
@@ -156,7 +157,7 @@ Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
 La `consume` méthode est semblable à `accept` , mais doit toujours être précédée d’un appel à `reserve` ce retourné **`true`** .
 
-## <a name="link_target"></a><a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a> link_target
 
 Lie un bloc cible à ce `multitype_join` bloc de messagerie.
 
@@ -169,7 +170,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 *_PTarget*<br/>
 Pointeur vers un `ITarget` bloc à lier à ce `multitype_join` bloc de messagerie.
 
-## <a name="multitype_join"></a><a name="ctor"></a>multitype_join
+## <a name="multitype_join"></a><a name="ctor"></a> multitype_join
 
 Construit un bloc de messagerie `multitype_join` .
 
@@ -209,7 +210,7 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 La construction du déplacement ne s’exécute pas en présence d’un verrou, ce qui signifie que c’est à l’utilisateur de s’assurer qu’il n’y a pas de tâches non activables en vol au moment du déplacement. Sinon, de nombreuses courses peuvent se produire, ce qui aboutit à des exceptions ou à un état incohérent.
 
-## <a name="multitype_join"></a><a name="dtor"></a>~ multitype_join
+## <a name="multitype_join"></a><a name="dtor"></a> ~ multitype_join
 
 Détruit le `multitype_join` bloc de messagerie.
 
@@ -217,7 +218,7 @@ Détruit le `multitype_join` bloc de messagerie.
 ~multitype_join();
 ```
 
-## <a name="release"></a><a name="release"></a>3/05
+## <a name="release"></a><a name="release"></a> 3/05
 
 Libère une réservation de message réussie précédente.
 
@@ -235,7 +236,7 @@ virtual void release(
 *_PTarget*<br/>
 Pointeur vers le bloc cible qui appelle la `release` méthode.
 
-## <a name="release_ref"></a><a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a> release_ref
 
 Libère un nombre de références sur ce `multiple_join` bloc de messagerie.
 
@@ -252,7 +253,7 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 Cette méthode est appelée par un `ITarget` objet qui n’est pas lié à cette source. Le bloc source est autorisé à libérer toutes les ressources réservées pour le bloc cible.
 
-## <a name="reserve"></a><a name="reserve"></a>réserver
+## <a name="reserve"></a><a name="reserve"></a> réserver
 
 Réserve un message précédemment offert par ce `multitype_join` bloc de messagerie.
 
@@ -270,7 +271,7 @@ virtual bool reserve(
 *_PTarget*<br/>
 Pointeur vers le bloc cible qui appelle la `reserve` méthode.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le message a été réservé avec succès ; **`false`** sinon,. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a déjà été réservé ou accepté par une autre cible, la source peut refuser des réservations, et ainsi de suite.
 
@@ -278,7 +279,7 @@ Pointeur vers le bloc cible qui appelle la `reserve` méthode.
 
 Après avoir appelé `reserve` , en cas de tentative réussie, vous devez appeler `consume` ou `release` pour accepter ou abandonner la détention du message, respectivement.
 
-## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a> unlink_target
 
 Dissocie un bloc cible de ce `multitype_join` bloc de messagerie.
 
@@ -291,7 +292,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 *_PTarget*<br/>
 Pointeur vers un `ITarget` bloc à dissocier de ce `multitype_join` bloc de messagerie.
 
-## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a> unlink_targets
 
 Dissocie toutes les cibles de ce `multitype_join` bloc de messagerie.
 

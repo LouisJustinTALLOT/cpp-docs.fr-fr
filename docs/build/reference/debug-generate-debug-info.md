@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/DEBUG (générer les informations de débogage)
 title: /DEBUG (Générer les informations de débogage)
 ms.date: 05/16/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: 2ec466a6356ace437d32eb517bf2da291938f5db
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: b0ef30fe7cb5eb5af0c46d6f6a8f3533d2e7d6ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201818"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Générer les informations de débogage)
 
@@ -29,7 +30,7 @@ ms.locfileid: "65837145"
 /DEBUG[:{FASTLINK|FULL|NONE}]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’option **/DEBUG** permet de créer des informations de débogage pour le fichier exécutable.
 
@@ -55,7 +56,7 @@ Il n’est pas possible de créer un fichier .exe ni .dll qui contient des infor
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **Éditeur de liens**.
 

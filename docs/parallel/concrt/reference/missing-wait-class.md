@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe missing_wait'
 title: missing_wait, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: bfbfdf4c2a52573d08c048bac278386aed1dc5a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202182"
 ---
 # <a name="missing_wait-class"></a>missing_wait, classe
 
@@ -29,13 +30,13 @@ class missing_wait : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[missing_wait](#ctor)|Surchargé. Construit un objet `missing_wait`.|
 
 ## <a name="remarks"></a>Notes
 
-En l’absence de workflow d’exception, vous êtes chargé d’appeler la méthode `wait` ou `run_and_wait` d’un objet `task_group` ou `structured_task_group` avant d’autoriser la destruction de cet objet. Le runtime lève cette exception pour indiquer que vous avez oublié d’appeler la méthode `wait` ou `run_and_wait`.
+En l’absence de workflow d’exception, vous êtes chargé d’appeler la `wait` `run_and_wait` méthode ou d’un `task_group` `structured_task_group` objet ou avant d’autoriser la destruction de cet objet. Le runtime lève cette exception pour indiquer que vous avez oublié d’appeler la `wait` méthode ou `run_and_wait` .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -47,9 +48,9 @@ En l’absence de workflow d’exception, vous êtes chargé d’appeler la mét
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>missing_wait
+## <a name="missing_wait"></a><a name="ctor"></a> missing_wait
 
 Construit un objet `missing_wait`.
 
@@ -66,8 +67,8 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
-[qu'](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
-[structured_task_group, classe](structured-task-group-class.md)
+[Classe structured_task_group](structured-task-group-class.md)
