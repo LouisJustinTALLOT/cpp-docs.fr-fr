@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _memccpy'
 title: _memccpy
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3cbfbd1e112c724d6223a6c6d28f0915dcd7ca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240089"
 ---
 # <a name="_memccpy"></a>_memccpy
 
@@ -61,23 +62,23 @@ Dernier caractère à copier.
 *count*<br/>
 Nombre de caractères.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Si le caractère *c* est copié, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, la **valeur null**est retournée.
+Si le caractère *c* est copié, **_memccpy** retourne un pointeur vers le caractère dans *dest* qui suit immédiatement le caractère. Si *c* n’est pas copié, la **valeur null** est retournée.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_memccpy** copie 0 ou plusieurs caractères de *src* vers *dest*, en s’arrêtant lorsque le caractère *c* a été copié ou lorsque les *nombres* de caractères ont été copiés, selon ce qui se produit en premier.
+La fonction **_memccpy** copie 0 ou plusieurs caractères de *src* vers *dest*, en s’arrêtant lorsque le caractère *c* a été copié ou lorsque le *nombre* de caractères a été copié, selon ce qui se produit en premier.
 
 **Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> ou \<string.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -108,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

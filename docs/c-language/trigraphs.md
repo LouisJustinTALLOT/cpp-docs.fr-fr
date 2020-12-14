@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : trigraphes'
 title: Trigraphes
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70844472de698b581f33adea5dd6b6fa5cdfc8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243066"
 ---
 # <a name="trigraphs"></a>Trigraphes
 
@@ -64,5 +65,5 @@ Dans cette instruction `printf`, un caractère d'échappement barre oblique inve
 
 ## <a name="see-also"></a>Voir aussi
 
-[`/Zc:trigraphs`(Substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[`/Zc:trigraphs` (Substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [Identificateurs C](../c-language/c-identifiers.md)

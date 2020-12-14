@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : type char'
 title: char, type
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unsigned char keyword [C]
 - char keyword [C]
 ms.assetid: a5da0866-e780-4793-be87-15a8426e7ea0
-ms.openlocfilehash: 5b60af4becb3fa496a0b54c3702eac247bd75d5e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 187f0ca5f70f6743f52ae62dc2c14d04b78ca63e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242897"
 ---
 # <a name="type-char"></a>char, type
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classe unique_lock'
 title: unique_lock, classe
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6e7f5ddadce00814196e630b27570e21176c0e62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243716"
 ---
 # <a name="unique_lock-class"></a>unique_lock, classe
 
@@ -68,7 +69,7 @@ En interne, un `unique_lock` stocke un pointeur vers un `mutex` objet associé e
 
 *unique_lock*
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<mutex>
 
@@ -289,7 +290,7 @@ Objet `unique_lock`.
 
 Le premier constructeur construit un objet qui a une valeur de pointeur mutex associé de 0.
 
-Le deuxième constructeur déplace l’État mutex associé d’un *autre*constructeur. Après le déplacement, *other* n’est plus associé à un mutex.
+Le deuxième constructeur déplace l’État mutex associé d’un *autre* constructeur. Après le déplacement, *other* n’est plus associé à un mutex.
 
 Les constructeurs restants stockent & *MTX* comme `mutex` pointeur stocké. L’appartenance du `mutex` est déterminée par le deuxième argument, s’il existe.
 

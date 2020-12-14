@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : type double'
 title: double, type
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-ms.openlocfilehash: 43e6cc444f4d6a973fc58b5ce550e468066aca1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c30af4ef432251ddf38be2172102ff7a63254940
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242845"
 ---
 # <a name="type-double"></a>double, type
 
@@ -26,4 +27,4 @@ Le type double contient 64 bits : 1 pour le signe, 11 pour l'exposant et 52 po
 
 ## <a name="see-also"></a>Voir aussi
 
-[Stockage de types de base](../c-language/storage-of-basic-types.md)
+[Stockage des types de base](../c-language/storage-of-basic-types.md)

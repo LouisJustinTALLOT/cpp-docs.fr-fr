@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/YC (créer un fichier d’en-tête précompilé)
 title: /Yc (Créer un fichier d'en-tête précompilé)
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: eba045c3148d0caceee3ca6f9d5352ea61726757
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243646"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d'en-tête précompilé)
 
@@ -36,7 +37,7 @@ Indique au compilateur de créer un fichier d’en-tête précompilé (. pch) qu
 *extension*<br/>
 Spécifie un fichier d’en-tête (. h). Lorsque cet argument est utilisé, le compilateur compile tout le code jusqu’au fichier. h, y compris.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Lorsque **/Yc** est spécifié sans argument, le compilateur compile tout le code jusqu’à la fin du fichier source de base, ou jusqu’au point du fichier de base où une directive [hdrstop](../../preprocessor/hdrstop.md) se produit. Le fichier. pch résultant a le même nom de base que votre fichier source de base, sauf si vous spécifiez un autre nom de fichier à l’aide du pragma **hdrstop** ou de l’option **/FP** .
 
@@ -48,9 +49,9 @@ Si les options __/Yc__*filename* et __/Yu__*filename* se trouvent sur la même l
 
 Pour plus d’informations sur les en-têtes précompilés, consultez :
 
-- [/Y (En-têtes précompilés)](y-precompiled-headers.md)
+- [/Y (en-têtes précompilés)](y-precompiled-headers.md)
 
-- [Fichiers d'en-tête précompilés](../creating-precompiled-header-files.md)
+- [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
@@ -68,9 +69,9 @@ Pour plus d’informations sur les en-têtes précompilés, consultez :
 
 - Localisez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> et <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
-Examinons le code ci-dessous.
+Considérez le code suivant :
 
 ```cpp
 // prog.cpp
@@ -81,10 +82,10 @@ Examinons le code ci-dessous.
 // ...
 ```
 
-Quand ce code est compilé avec la commande `CL /YcMYAPP.H PROG.CPP`, le compilateur enregistre tout le prétraitement pour AFXWIN. h, Resource. h et MyApp. h dans un fichier d’en-tête précompilé nommé MyApp. pch.
+Quand ce code est compilé avec la commande `CL /YcMYAPP.H PROG.CPP` , le compilateur enregistre tout le prétraitement pour AFXWIN. h, Resource. h et MyApp. h dans un fichier d’en-tête précompilé nommé MyApp. pch.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Fichiers d'en-tête précompilés](../creating-precompiled-header-files.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)

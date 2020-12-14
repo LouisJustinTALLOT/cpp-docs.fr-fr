@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : modifier une image'
 title: 'Comment : modifier une image'
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d03e53ccdcb7978b1708765483cabac281ae08b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247148"
 ---
 # <a name="how-to-edit-an-image"></a>Comment : modifier une image
 
@@ -61,7 +62,7 @@ Pour modifier une image, consultez Comment :
 
 ### <a name="to-select-an-image"></a>Pour sélectionner une image
 
-1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu **Image**  >  **Outils** image et choisissez l’outil de sélection de votre choix.
+1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu   >  **Outils** image et choisissez l’outil de sélection de votre choix.
 
 1. Déplacez le point d’insertion dans un coin de la zone d’image que vous souhaitez sélectionner. Les réticules apparaissent lorsque le point d’insertion se trouve sur l’image.
 
@@ -108,7 +109,7 @@ Accédez au menu **modifier**  >  **supprimer**.
    La zone d’origine de la sélection est remplie avec la couleur d’arrière-plan actuelle.
 
 > [!NOTE]
-> Vous pouvez accéder aux commandes **couper**, **copier**, **coller**et **supprimer** en cliquant avec le bouton droit dans la fenêtre de **affichage des ressources** .
+> Vous pouvez accéder aux commandes **couper**, **copier**, **coller** et **supprimer** en cliquant avec le bouton droit dans la fenêtre de **affichage des ressources** .
 
 #### <a name="to-move-the-selection"></a>Pour déplacer la sélection
 
@@ -124,7 +125,7 @@ Pour plus d’informations sur le dessin avec une sélection, consultez [créati
 
 Vous pouvez retourner ou faire pivoter une image pour créer une image miroir de l’original, faire pivoter l’image ou la faire pivoter vers la droite de 90 degrés à la fois.
 
-- Pour retourner l’image horizontalement (image miroir), accédez à **image**menu  >  **retourner horizontalement**.
+- Pour retourner l’image horizontalement (image miroir), accédez à **image** menu  >  **retourner horizontalement**.
 
 - Pour retourner l’image verticalement (tourner à l’envers), accédez à menu **image**  >  **miroir verticale**.
 
@@ -190,7 +191,7 @@ Normalement, l' **éditeur d’images** rogne ou agrandit une image lorsque vous
 
 Vous pouvez ouvrir et modifier des images dans l’environnement de développement comme vous le feriez dans n’importe quelle application graphique, par exemple en ouvrant une image bitmap pour une modification autonome. Les images que vous utilisez n’ont pas besoin de faire partie d’un projet Visual Studio.
 
-1. Accédez à **fichier**menu  >  **ouvrir**.
+1. Accédez à **fichier** menu  >  **ouvrir**.
 
 1. Dans la zone **types de fichiers** , sélectionnez **tous les fichiers**.
 
@@ -206,7 +207,7 @@ Vous pouvez définir ou modifier les propriétés d’une image à l’aide de l
 
    |Propriété|Description|
    |--------------|-----------------|
-   |**Couleurs**|Spécifie le modèle de couleurs de l’image. Sélectionnez **monochrome**, **16**ou **256**, ou **couleurs vraies**.<br/><br/>Si vous avez déjà dessiné l’image avec une palette de 16 couleurs, la sélection de **monochrome** provoque des substitutions de noir et blanc pour les couleurs de l’image. Le contraste n’est pas toujours géré : par exemple, les zones adjacentes de rouge et de vert sont toutes deux converties en noir.|
+   |**Couleurs**|Spécifie le modèle de couleurs de l’image. Sélectionnez **monochrome**, **16** ou **256**, ou **couleurs vraies**.<br/><br/>Si vous avez déjà dessiné l’image avec une palette de 16 couleurs, la sélection de **monochrome** provoque des substitutions de noir et blanc pour les couleurs de l’image. Le contraste n’est pas toujours géré : par exemple, les zones adjacentes de rouge et de vert sont toutes deux converties en noir.|
    |**Nom du fichier**|Spécifie le nom du fichier image.<br/><br/>Par défaut, Visual Studio assigne un nom de fichier de base créé en supprimant les quatre premiers caractères (« IDB_ ») de l’identificateur de ressource par défaut (IDB_BITMAP1) et en ajoutant l’extension appropriée. Dans cet exemple, le nom de fichier de l’image serait *BITMAP1.bmp*. Vous pouvez le renommer *MYBITMAP1.bmp*.|
    |**Height**|Définit la hauteur de l’image (en pixels). La valeur par défaut est 48.<br/><br/>L’image est rognée ou un espace vide est ajouté sous l’image existante.|
    |**Identifiant**|Définit l’identificateur de la ressource.<br/><br/>Pour une image, Microsoft Visual Studio, par défaut, affecte l’identificateur disponible suivant dans une série : IDB_BITMAP1, IDB_BITMAP2, etc. Des noms similaires sont utilisés pour les icônes et les curseurs.|
@@ -214,9 +215,9 @@ Vous pouvez définir ou modifier les propriétés d’une image à l’aide de l
    |**SaveCompressed**|Indique si l’image est dans un format compressé. Cette propriété est en lecture seule.<br/><br/>Visual Studio ne vous permet pas d’enregistrer des images dans un format compressé. par conséquent, pour toutes les images créées dans Visual Studio, cette propriété a la **valeur false**. Si vous ouvrez une image compressée (créée dans un autre programme) dans Visual Studio, cette propriété a la **valeur true**. Si vous enregistrez une image compressée à l’aide de Visual Studio, elle sera décompressée et cette propriété reviendra à la **valeur false**.|
    |**Width**|Définit la largeur de l’image (en pixels). La valeur par défaut pour les bitmaps est 48.<br/><br/>L’image est rognée ou un espace vide est ajouté à droite de l’image existante.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe unique_ptr'
 title: unique_ptr, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 888229c4e07a0b2189e46bcecd562e0177cfd67e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243690"
 ---
 # <a name="unique_ptr-class"></a>unique_ptr, classe
 
@@ -137,7 +138,7 @@ Le pointeur stocké vers une ressource détenue, `stored_ptr`, a le type `pointe
 |[element_type](#element_type)|Synonyme pour le paramètre du modèle `T`.|
 |[dirigé](#pointer)|Synonyme pour `Del::pointer` s'il est défini ; sinon `T *`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

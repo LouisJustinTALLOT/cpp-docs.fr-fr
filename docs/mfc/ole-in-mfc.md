@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : OLE dans MFC'
 title: Intégration du format OLE au format MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 529b6d0eaedaee200da547ef9ed980aab51ea233
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 125a2ad8e900747d859c03b57df33f2e7e5f1c28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244093"
 ---
 # <a name="ole-in-mfc"></a>Intégration du format OLE au format MFC
 
@@ -50,7 +51,7 @@ Fournit des liens vers l’utilisation de conteneurs dans OLE.
 [Objets de données et sources de données](data-objects-and-data-sources-ole.md)<br/>
 Fournit des liens vers des rubriques qui traitent de l’utilisation des `COleDataObject` `COleDataSource` classes et.
 
-[Glisser-déplacer](drag-and-drop-ole.md)<br/>
+[Glisser-déposer](drag-and-drop-ole.md)<br/>
 Traite de l’utilisation de la copie et du collage avec OLE.
 
 [Menus et ressources OLE](menus-and-resources-ole.md)<br/>
@@ -62,7 +63,7 @@ Traite de l’installation et de l’initialisation du serveur.
 [Serveurs](servers.md)<br/>
 Décrit comment créer des éléments OLE (ou composants) pour une utilisation par les applications de conteneur.
 
-[Dispositifs de suivi](trackers.md)<br/>
+[Trackers](trackers.md)<br/>
 Fournit des informations sur la `CRectTracker` classe, qui fournit une interface graphique pour permettre aux utilisateurs d’interagir avec les éléments du client OLE.
 
 ## <a name="related-sections"></a>Sections connexes

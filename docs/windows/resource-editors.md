@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : éditeurs de ressources (C++)'
 title: Éditeurs de ressources (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: b867f34c5195864a22212ec079bf0de8ace20407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247239"
 ---
 # <a name="resource-editors-c"></a>Éditeurs de ressources (C++)
 
@@ -73,7 +74,7 @@ Vous pouvez accéder aux ressources Win32 dans le volet [affichage des ressource
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Pour afficher une ressource Win32 dans un éditeur de ressources
 
-1. Accédez à menu **Afficher**d'  >  **autres fenêtres**  >  **affichage des ressources**.
+1. Accédez à menu **Afficher** d'  >  **autres fenêtres**  >  **affichage des ressources**.
 
 1. Si la fenêtre de **affichage des ressources** n’est pas la fenêtre supérieure, sélectionnez l’onglet **affichage des ressources** pour l’afficher en haut.
 
@@ -118,7 +119,7 @@ Les ressources suivantes ne fournissent pas d’aperçu visuel : accélérateur
 1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez le bouton **pages de propriétés** .
 
    > [!TIP]
-   > Utilisez un raccourci, accédez à menu **Afficher**les  >  **pages de propriétés**.
+   > Utilisez un raccourci, accédez à menu **Afficher** les  >  **pages de propriétés**.
 
    La page de **Propriétés** de la ressource s’ouvre et affiche un aperçu de cette ressource. Vous pouvez utiliser les touches de direction **haut** et **bas** pour parcourir le contrôle d’arborescence dans **affichage des ressources** ou la fenêtre de document. La page de **Propriétés** reste ouverte et affiche toutes les ressources qui ont le focus et peuvent être prévisualisées.
 

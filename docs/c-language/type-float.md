@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : type float'
 title: float, type
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2245db663885d084ee231d10b7dc944016ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242832"
 ---
 # <a name="type-float"></a>float, type
 
@@ -51,7 +52,7 @@ La mantisse est stockée sous forme de fraction binaire supérieure ou égale à
 
 Au lieu d'utiliser la méthode de stockage qui vient d'être décrite, le package à virgule flottante peut stocker des nombres à virgule flottante binaires comme nombres dénormalisés. Des « nombres dénormalisés » sont des nombres à virgule flottante différents de zéro avec des valeurs d'exposant réservées dans lesquelles le bit le plus significatif de la mantisse est 0. En utilisant le format dénormalisé, la plage d'un nombre à virgule flottante peut être étendue, au détriment de la précision. Vous ne pouvez pas contrôler si un nombre à virgule flottante est représenté au format normal ou dénormalisé ; le package à virgule flottante détermine la représentation. Le package à virgule flottante n'utilise jamais le format dénormalisé, sauf si l'exposant devient inférieur au minimum qu'il est possible de représenter au format normal.
 
-Le tableau suivant affiche les valeurs minimales et maximales que vous pouvez stocker dans les variables de chaque type à virgule flottante. Les valeurs répertoriées dans ce tableau s'appliquent uniquement aux nombres à virgule flottante normalisés. Les nombres à virgule flottante dénormalisés ont une valeur minimale inférieure. Notez que les numéros conservés dans les registres 80*x*87 sont toujours représentés au format normalisé 80 bits. Seuls les nombres stockés dans des variables à virgule flottante 32 bits ou 64 bits peuvent être représentés au format dénormalisé (variables de type float et de type long).
+Le tableau suivant affiche les valeurs minimales et maximales que vous pouvez stocker dans les variables de chaque type à virgule flottante. Les valeurs répertoriées dans ce tableau s'appliquent uniquement aux nombres à virgule flottante normalisés. Les nombres à virgule flottante dénormalisés ont une valeur minimale inférieure. Notez que les numéros conservés dans les registres 80 *x* 87 sont toujours représentés au format normalisé 80 bits. Seuls les nombres stockés dans des variables à virgule flottante 32 bits ou 64 bits peuvent être représentés au format dénormalisé (variables de type float et de type long).
 
 ### <a name="range-of-floating-point-types"></a>Plage des types à virgule flottante
 
@@ -82,4 +83,4 @@ f_longer = f_short * f_short;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Stockage de types de base](../c-language/storage-of-basic-types.md)
+[Stockage des types de base](../c-language/storage-of-basic-types.md)

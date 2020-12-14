@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memchr, wmemchr'
 title: memchr, wmemchr
 ms.date: 03/31/2019
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239998"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -78,19 +79,19 @@ const wchar_t *wmemchr(
 *mémoire tampon*<br/>
 Pointeur désignant la mémoire tampon.
 
-*secteur*<br/>
+*c*<br/>
 Caractère à rechercher.
 
 *count*<br/>
 Nombre de caractères à vérifier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans la *mémoire tampon*. Sinon, elle retourne la valeur NULL.
 
 ## <a name="remarks"></a>Notes
 
-`memchr`et `wmemchr` recherchez la première occurrence de *c* dans les premiers caractères *count* de la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
+`memchr`et `wmemchr` recherchez la première occurrence de *c* dans les premiers caractères  de la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
 
 En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . Les \_ \_ \_ surcharges correctes de la macro CRT const sont \_ définies si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges c++ en c++, définissez le retour de symbole \_ const \_ .
 

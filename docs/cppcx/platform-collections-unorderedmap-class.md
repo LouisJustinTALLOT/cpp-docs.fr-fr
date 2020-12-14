@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: UnorderedMap'
 title: Platform::Collections::UnorderedMap, classe
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 51acfa7e411f96addd8a33024224779c32ebcda0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242533"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap, classe
 
-Représente une *carte*non triée qui est une collection de paires clé-valeur.
+Représente une *carte* non triée qui est une collection de paires clé-valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +88,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 `UnorderedMap`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
@@ -121,7 +122,7 @@ Itérateur qui spécifie le premier élément de la carte.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myUnorderedMap->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myUnorderedMap->First();`.
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a> UnorderedMap :: GetView, méthode
 
@@ -348,7 +349,7 @@ Objet de fonction qui peut comparer deux clés pour déterminer si elles sont é
 *H*<br/>
 Objet de fonction qui génère une valeur de hachage pour les clés. Par défaut, ce paramètre est la [classe de hachage 1](../standard-library/hash-class.md) pour les types de clés pris en charge par la classe.
 
-*lecteur*<br/>
+*m*<br/>
 Une référence ou [lvalues et rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std :: unordered_map](../standard-library/unordered-map-class.md) qui est utilisé pour initialiser le UnorderedMap actuel.
 
 *II*<br/>

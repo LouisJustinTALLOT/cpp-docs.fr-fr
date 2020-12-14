@@ -1,27 +1,28 @@
 ---
-title: Compilateur avertissement (niveau 4) C4456
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4456'
+title: Avertissement du compilateur (niveau 4) C4456
 ms.date: 11/04/2016
 f1_keywords:
 - C4456
 helpviewer_keywords:
 - C4456
 ms.assetid: 5ab39fc1-0e19-461b-842b-4da80560b044
-ms.openlocfilehash: 006628721598d838070412c895f64b9a8d3de4e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f066de07b0c6bf7a7b5de3143909e402b0fedde3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241311"
 ---
-# <a name="compiler-warning-level-4-c4456"></a>Compilateur avertissement (niveau 4) C4456
+# <a name="compiler-warning-level-4-c4456"></a>Avertissement du compilateur (niveau 4) C4456
 
-> déclaration de '*identificateur*' masque la déclaration locale précédente
+> la déclaration de'*identifier*'masque la déclaration locale précédente
 
-La déclaration de *identificateur* dans l’étendue locale masque la déclaration de la déclaration locale précédente du même nom. Cet avertissement vous informe que les références à *identificateur* dans l’étendue locale correspondent à la version déclarée localement, pas précédente local, ce qui peut ou peut ne pas être votre intention. Pour résoudre ce problème, nous vous recommandons de que vous donner des noms de variables locales qui ne pas en conflit avec d’autres noms locaux.
+La déclaration de l' *identificateur* dans la portée locale masque la déclaration de la déclaration locale précédente du même nom. Cet avertissement vous informe que les références à l' *identificateur* dans la portée locale sont résolues en version déclarée localement, et non dans la version locale précédente, qui peut être ou non votre intention. Pour résoudre ce problème, nous vous recommandons de fournir des noms de variables locales qui ne sont pas en conflit avec d’autres noms locaux.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère le C4456, car la boucle contrôler variable `int x` et la variable locale `double x` dans `member_fn` ont les mêmes noms. Pour résoudre ce problème, utilisez des noms différents pour les variables locales.
+L’exemple suivant génère l’C4456, car la variable `int x` de contrôle de boucle et la variable locale `double x` dans `member_fn` ont le même nom. Pour résoudre ce problème, utilisez des noms différents pour les variables locales.
 
 ```cpp
 // C4456_hide.cpp

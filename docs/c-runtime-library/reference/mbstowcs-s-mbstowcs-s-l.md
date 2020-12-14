@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbstowcs_s, _mbstowcs_s_l'
 title: mbstowcs_s, _mbstowcs_s_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 800cb64c62498cfea93c6fc600207ad1e2309b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240115"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -98,7 +99,7 @@ Nombre maximal de caractères larges à stocker dans la mémoire tampon *wcstr* 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
@@ -111,7 +112,7 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
 Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbstowcs_s** convertit une chaîne de caractères multioctets pointée par *mbstr* en caractères larges stockés dans la mémoire tampon pointée par *wcstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
@@ -127,7 +128,7 @@ Si *Count* correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library
 
 Si **mbstowcs_s** convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie, y compris la marque de fin null, dans *&#42;PReturnValue* (le *PReturnValue* fourni n’est pas **null**). Cela se produit même si l’argument *wcstr* est **null** et fournit un moyen de déterminer la taille de mémoire tampon requise. Notez que si *wcstr* a la **valeur null**, *Count* est ignoré et *sizeInWords* doit avoir la valeur 0.
 
-Si **mbstowcs_s** rencontre un caractère multioctet non valide, il place 0 dans *&#42;pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ**et retourne **EILSEQ**.
+Si **mbstowcs_s** rencontre un caractère multioctet non valide, il place 0 dans *&#42;pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ** et retourne **EILSEQ**.
 
 Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbstowcs_s** n’est pas défini.
 
@@ -154,7 +155,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

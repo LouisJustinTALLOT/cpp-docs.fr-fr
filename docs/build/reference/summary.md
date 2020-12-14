@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les éléments suivants:/SUMMARY
 title: /SUMMARY
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /SUMMARY dumpbin option
 - SUMMARY dumpbin option
 ms.assetid: f33f244c-1f23-4e94-bd85-b26c97a19e6a
-ms.openlocfilehash: fd9923e22b5cb11981a3037ae3f30ef541445e98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b287001a8b98767a72a5cd25efb6c07b00a04a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240401"
 ---
 # <a name="summary"></a>/SUMMARY
 
@@ -23,10 +24,10 @@ ms.locfileid: "62317742"
 
 ## <a name="remarks"></a>Notes
 
-Cette option affiche un minimum d’informations sur les sections, notamment la taille totale. Cette option est la valeur par défaut si aucune autre option n’est spécifiée.
+Cette option affiche des informations minimales sur les sections, y compris la taille totale. Cette option est la valeur par défaut si aucune autre option n’est spécifiée.
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

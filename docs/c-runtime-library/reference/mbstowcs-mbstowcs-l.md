@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbstowcs, _mbstowcs_l'
 title: mbstowcs, _mbstowcs_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b830da1b69ed72e6cbea4f818a90900122c2219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240154"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -86,14 +87,14 @@ Nombre maximal de caractères multioctets à convertir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si **mbstowcs** convertit correctement la chaîne source, elle retourne le nombre de caractères multioctets convertis. Si l’argument *wcstr* a la **valeur null**, la fonction retourne la taille requise (en caractères larges) de la chaîne de destination. Si **mbstowcs** rencontre un caractère multioctet non valide, elle retourne-1. Si la valeur de retour est *Count*, la chaîne à caractères larges ne se termine pas par un caractère null.
 
 > [!IMPORTANT]
 > Assurez-vous que *wcstr* et *mbstr* ne se chevauchent pas, et que ce *nombre* reflète correctement le nombre de caractères multioctets à convertir.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbstowcs** convertit un nombre maximal de caractères multioctets de *nombre* , pointés par *mbstr* vers une chaîne de caractères larges correspondants qui sont déterminés par les paramètres régionaux actuels. Elle stocke la chaîne de caractères larges obtenue à l’adresse représentée par *wcstr*. Le résultat est similaire à une série d’appels à [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** rencontre le caractère null codé sur un octet (' \ 0 ') avant ou quand *Count* se produit, il convertit le caractère null en un caractère null à caractères larges (L' \ 0 ') et s’arrête. Par conséquent, la chaîne de caractères larges sur *wcstr* est terminée par un caractère NULL uniquement si un caractère NULL est rencontré pendant la conversion. Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement n’est pas défini.
 
@@ -215,7 +216,7 @@ Convert back to wide-character string:
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

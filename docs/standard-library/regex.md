@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; Regex&gt;'
 title: '&lt;regex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33eefd09c74731b36d3a8f104e2380944da2f43f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243768"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -58,7 +59,7 @@ Pour modifier les détails de la grammaire des expressions régulières, écrive
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Définition de type pour **`char`** `regex_iterator` .|
 |[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Définition de type pour **`char`** `regex_token_iterator` .|
 |[csub_match](../standard-library/regex-typedefs.md#csub_match)|Définition de type pour **`char`** `sub_match` .|
-|[Regex](../standard-library/regex-typedefs.md#regex)|Définition de type pour **`char`** `basic_regex` .|
+|[regex](../standard-library/regex-typedefs.md#regex)|Définition de type pour **`char`** `basic_regex` .|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|Définition de type pour `string` `match_results`.|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Définition de type pour `string` `regex_iterator`.|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Définition de type pour `string` `regex_token_iterator`.|
@@ -89,7 +90,7 @@ Pour modifier les détails de la grammaire des expressions régulières, écrive
 |[opérateur = =](../standard-library/regex-operators.md#op_eq_eq)|Comparaison de différents objets, égal.|
 |[opérateur ! =](../standard-library/regex-operators.md#op_neq)|Comparaison de différents objets, n'est pas égal.|
 |[<d’opérateur ](../standard-library/regex-operators.md#op_lt)|Comparaison de différents objets, inférieur à.|
-|[and\<=](../standard-library/regex-operators.md#op_gt_eq)|Comparaison de différents objets, inférieur ou égal à.|
+|[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Comparaison de différents objets, inférieur ou égal à.|
 |[>d’opérateur ](../standard-library/regex-operators.md#op_gt)|Comparaison de différents objets, supérieur à.|
 |[>opérateur =](../standard-library/regex-operators.md#op_gt_eq)|Comparaison de différents objets, supérieur ou égal à.|
 |[<<d’opérateur ](../standard-library/regex-operators.md#op_lt_lt)|Insère un `sub_match` dans un flux.|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de serveur OLE'
 title: Classes de serveur OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 06f5cf0985756506e42c7ad9fde24641b5a0ce93
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2f60f148d6a24323ca6546e633c30103b315ee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243989"
 ---
 # <a name="ole-server-classes"></a>Classes de serveur OLE
 
@@ -20,10 +21,10 @@ Ces classes sont utilisées par les applications serveur. Les documents serveur 
 
 La `COleServerItem` classe représente un document ou une partie d’un document qui peut être incorporé dans un autre document ou lié à.
 
-`COleIPFrameWnd`et `COleResizeBar` prennent en charge la modification sur place lorsque l’objet se trouve dans un conteneur et `COleTemplateServer` prennent en charge la création de paires document/vue afin que les objets OLE d’autres applications puissent être modifiés.
+`COleIPFrameWnd` et `COleResizeBar` prennent en charge la modification sur place lorsque l’objet se trouve dans un conteneur et `COleTemplateServer` prennent en charge la création de paires document/vue afin que les objets OLE d’autres applications puissent être modifiés.
 
 [COleServerDoc](reference/coleserverdoc-class.md)<br/>
-Utilisé comme classe de base pour les classes de document de l’application serveur. `COleServerDoc`les objets fournissent l’essentiel de la prise en charge du serveur par le biais des interactions avec les `COleServerItem` objets. La fonctionnalité d’édition visuelle est fournie à l’aide de l’architecture document/vue de la bibliothèque de classes.
+Utilisé comme classe de base pour les classes de document de l’application serveur. `COleServerDoc` les objets fournissent l’essentiel de la prise en charge du serveur par le biais des interactions avec les `COleServerItem` objets. La fonctionnalité d’édition visuelle est fournie à l’aide de l’architecture document/vue de la bibliothèque de classes.
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 Classe de base abstraite de `COleClientItem` et `COleServerItem` . Les objets de classes dérivés de `CDocItem` représentent des parties de documents.

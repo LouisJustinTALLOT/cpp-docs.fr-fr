@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3710'
 title: Erreur du compilateur C3710
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6e9e146f5ec7370043756998cd162c3e57839671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241701"
 ---
 # <a name="compiler-error-c3710"></a>Erreur du compilateur C3710
 
-'fonction' : syntaxe incorrecte pour spécifier un gestionnaire d’événements dans __hook/\__unhook
+'fonction' : syntaxe incorrecte pour spécifier un gestionnaire d’événements dans __hook/ \_ _unhook
 
 Lorsque vous spécifiez un gestionnaire d’événements avec [__hook](../../cpp/hook.md) ou [__unhook](../../cpp/unhook.md), le gestionnaire doit être une méthode valide.
 

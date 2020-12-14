@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3189'
 title: Erreur du compilateur C3189
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: 2b53056cf8a7b4b9b49720ef17e8f9318390059a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9253a1d4333a7454bfbff5442cfaa5a24ebc68ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242000"
 ---
 # <a name="compiler-error-c3189"></a>Erreur du compilateur C3189
 
-'typeid\<type abstrait déclarateur > ' : cette syntaxe n’est plus prise en charge, utilisez :: typeid à la place
+'typeid \<type abstract declarator> ' : cette syntaxe n’est plus prise en charge, utilisez :: typeid à la place
 
 Une forme obsolète de [typeid](../../extensions/typeid-cpp-component-extensions.md) a été utilisée, utilisez le nouveau formulaire.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbsnbset_s, _mbsnbset_s_l'
 title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8500de308d564b9e16ba5de29af67ee65b260e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240193"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -85,13 +86,13 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à modifier.
 
 *size*<br/>
 Taille de la mémoire tampon de chaîne.
 
-*secteur*<br/>
+*c*<br/>
 Paramètre de caractère codé sur un octet ou multioctet.
 
 *count*<br/>
@@ -100,11 +101,11 @@ Nombre d'octets à définir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ; code d'erreur dans un autre cas.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_mbsnbset_s** et **_mbsnbset_s_l** définissent, au plus, le premier *nombre* d’octets de *Str* à *c*. Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*. Si *c* est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par *Count*, le dernier octet est rempli avec un caractère vide. **_mbsnbset_s** et **_mbsnbset_s_l** ne placent pas de caractère null de fin à la fin de *Str*.
 
@@ -136,7 +137,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_mbsnbset_s.c

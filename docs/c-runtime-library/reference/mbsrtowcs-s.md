@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbsrtowcs_s'
 title: mbsrtowcs_s
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: 72a20396b2f0f75d79baa64619deef8a0c1e00ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7c53d3213bbe552dd63eb527a635660e803e9a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240167"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -78,7 +79,7 @@ Nombre maximal de caractères larges à stocker dans la mémoire tampon *wcstr* 
 *mbstate*<br/>
 Pointeur vers un objet d’état de conversion **mbstate_t** . Si cette valeur est un pointeur null, un objet d'état de conversion interne statique est utilisé. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre paramètre *mbstate* .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si la conversion est réussie, ou un code d'erreur en cas d'échec.
 
@@ -91,7 +92,7 @@ Zéro si la conversion est réussie, ou un code d'erreur en cas d'échec.
 
 Si l’une de ces conditions se produit, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbsrtowcs_s** convertit une chaîne de caractères multioctets indirectement pointée par *mbstr* en caractères larges stockés dans la mémoire tampon pointée par *wcstr*, en utilisant l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
@@ -111,7 +112,7 @@ Si *wcstr* n’est pas un pointeur null, l’objet pointeur désigné par *mbstr
 
 Si *mbstate* est un pointeur null, l’objet statique d’état de conversion **mbstate_t** interne de la bibliothèque est utilisé. Comme cet objet statique interne n’est pas thread-safe, nous vous recommandons de passer votre propre valeur *mbstate* .
 
-Si **mbsrtowcs_s** rencontre un caractère multioctet qui n’est pas valide dans les paramètres régionaux actuels, il place-1 dans *&#42;pReturnValue*, définit la mémoire tampon de *destination wcstr* sur une chaîne vide, définit **errno** sur **EILSEQ**et retourne **EILSEQ**.
+Si **mbsrtowcs_s** rencontre un caractère multioctet qui n’est pas valide dans les paramètres régionaux actuels, il place-1 dans *&#42;pReturnValue*, définit la mémoire tampon de *destination wcstr* sur une chaîne vide, définit **errno** sur **EILSEQ** et retourne **EILSEQ**.
 
 Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbsrtowcs_s** n’est pas défini. **mbsrtowcs_s** est affectée par la catégorie LC_TYPE des paramètres régionaux actuels.
 
@@ -138,7 +139,7 @@ La fonction **mbsrtowcs_s** est multithread safe si aucune fonction du thread ac
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)<br/>

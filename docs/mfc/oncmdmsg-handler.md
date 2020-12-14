@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestionnaire OnCmdMsg'
 title: OnCmdMsg, gestionnaire
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 5114fe53a5bac345eb6a55fb6c371f7bc1f698ef
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69dfbd7ccc52a6d90b57ef9cedf0f896d65057b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243963"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg, gestionnaire
 
@@ -27,4 +28,4 @@ L’implémentation par défaut `CCmdTarget` de `OnCmdMsg` utilise la table des 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Méthode d’appel d’un gestionnaire par le Framework](how-the-framework-calls-a-handler.md)
+[Comment le Framework appelle un gestionnaire](how-the-framework-calls-a-handler.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : OLE (MFC)'
 title: OLE (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - user interfaces, OLE
 - applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
-ms.openlocfilehash: ce35bad80a348bc89ce67065d26f9a82f2feba52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ff0a2a1446caa85d08aa5d708ed9c2ca8e05757
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244080"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 
@@ -24,15 +25,15 @@ L’implémentation de la fonctionnalité OLE dans votre programme affecte votre
 
 - Les dispositifs de suivi fournissent des signaux visuels sur l’état des objets lors de l’édition visuelle et du glisser-déplacer.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [OLE et MFC](ole-in-mfc.md)
 
 - [Modification visuelle (activation)](activation-cpp.md)
 
-- [Glisser-déplacer](drag-and-drop-ole.md)
+- [Glisser-déposer](drag-and-drop-ole.md)
 
-- [Dispositifs de suivi](trackers.md)
+- [Trackers](trackers.md)
 
 ## <a name="see-also"></a>Voir aussi
 

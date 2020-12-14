@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memcmp, wmemcmp'
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239985"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -65,7 +66,7 @@ Seconde mémoire tampon.
 *count*<br/>
 Nombre de caractères à comparer. (Compare les octets pour **memcmp**, les caractères larges pour **wmemcmp**).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
@@ -77,7 +78,7 @@ La valeur de retour indique la relation entre les mémoires tampons.
 
 ## <a name="remarks"></a>Notes
 
-Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **`unsigned char`** pour **memcmp**et comme **`wchar_t`** pour **wmemcmp**.
+Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **`unsigned char`** pour **memcmp** et comme **`wchar_t`** pour **wmemcmp**.
 
 ## <a name="requirements"></a>Spécifications
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbsnbcpy_s, _mbsnbcpy_s_l'
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12233d0f83094934250a04b18582feff0cb7310e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240284"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -100,11 +101,11 @@ Nombre d'octets à copier.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ; **EINVAL** si un paramètre incorrect a été passé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsnbcpy_s** copie le *nombre* d’octets de *strSource* vers *strDest*. Si *Count* dépasse la taille de *strDest*, l’une des chaînes d’entrée est un pointeur null ou *sizeInBytes* ou *Count* a la valeur 0, la fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL**. Si les chaînes source et de destination se chevauchent, le comportement de **_mbsnbcpy_s** n’est pas défini.
 

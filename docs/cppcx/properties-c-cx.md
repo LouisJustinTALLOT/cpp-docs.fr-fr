@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : propriétés (C++/CX)'
 title: Propriétés (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5c56dabb080404b074408f60b6c06535558c1d82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239712"
 ---
 # <a name="properties-ccx"></a>Propriétés (C++/CX)
 
@@ -37,6 +38,6 @@ Notez qu'une propriété ne peut pas être initialisée dans une liste de membre
 
 ## <a name="see-also"></a>Voir aussi
 
-[Système de type](../cppcx/type-system-c-cx.md)<br/>
+[Système de types](../cppcx/type-system-c-cx.md)<br/>
 [Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)

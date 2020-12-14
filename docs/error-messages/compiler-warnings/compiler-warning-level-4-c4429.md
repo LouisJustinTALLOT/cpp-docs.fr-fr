@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4429'
 title: Avertissement du compilateur (niveau 4) C4429
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4429
 ms.assetid: a3e4cf1f-a869-4e47-834a-850c21eb5297
-ms.openlocfilehash: 6702db4af5c31d21610e02b1a4ec75af27ad10f2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: dbd552eb2f8e021f8bf7b7747e2a8aee49bb05a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241363"
 ---
 # <a name="compiler-warning-level-4-c4429"></a>Avertissement du compilateur (niveau 4) C4429
 

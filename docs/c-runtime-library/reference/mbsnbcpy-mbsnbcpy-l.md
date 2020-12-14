@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbsnbcpy, _mbsnbcpy_l'
 title: _mbsnbcpy, _mbsnbcpy_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c82e432b1ababf703ff0cf6061c807f116d0e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240414"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -95,11 +96,11 @@ Nombre d'octets à copier.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_mbsnbcpy** retourne un pointeur vers la chaîne de caractères de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsnbcpy** copie le *nombre* d’octets de *strSource* vers *strDest*. Si *Count* dépasse la taille de *strDest* ou que les chaînes source et de destination se chevauchent, le comportement de **_mbsnbcpy** n’est pas défini.
 

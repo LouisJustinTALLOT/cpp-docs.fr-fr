@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des menus, des barres de contrôles et des accélérateurs'
 title: Gestion des menus, barres de contrôle et accélérateurs
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 9945dc68ffd46bbf5e114a79467299e4b67e3659
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 21c3791bff00c33db50efbe391863169606fde80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244171"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gestion des menus, barres de contrôle et accélérateurs
 
@@ -25,7 +26,7 @@ La fenêtre frame gère la mise à jour des objets interface-utilisateur, notamm
 
 ## <a name="managing-menus"></a>Gestion des menus
 
-La fenêtre frame participe à la mise à jour des éléments de l’interface utilisateur à l’aide du mécanisme de ON_UPDATE_COMMAND_UI décrit dans [Comment mettre à jour des objets d’interface utilisateur](how-to-update-user-interface-objects.md). Les boutons des barres d'outils et d'autres barres de contrôle sont mis à jour lors de la boucle inactive. Les éléments composant les menus déroulants de la barre de menus sont mis à jour juste avant le déroulement du menu.
+La fenêtre frame participe à la mise à jour des éléments de l’interface utilisateur à l’aide du mécanisme de ON_UPDATE_COMMAND_UI décrit dans [How to UPDATE User-Interface Objects](how-to-update-user-interface-objects.md). Les boutons des barres d'outils et d'autres barres de contrôle sont mis à jour lors de la boucle inactive. Les éléments composant les menus déroulants de la barre de menus sont mis à jour juste avant le déroulement du menu.
 
 Pour les applications MDI, la fenêtre frame MDI gère la barre de menus et la légende. Une fenêtre frame MDI possède un menu par défaut utilisé comme barre de menus lorsqu'il n'y a aucune fenêtre enfant MDI active. Lorsqu'il existe des enfants actifs, la barre de menus de la fenêtre frame MDI est prise en charge par le menu de la fenêtre enfant MDI active. Si une application MDI prend en charge plusieurs types de document, tels que les documents composés de graphiques et de feuilles de calcul, chaque type place ses propres menus dans la barre de menus et modifie la légende de la fenêtre frame principale.
 

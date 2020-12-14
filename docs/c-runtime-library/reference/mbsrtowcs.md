@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbsrtowcs'
 title: mbsrtowcs
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: fc9310a95165944b7f516c1f8c48d8d4d1e56117
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 83979058e33ffc3874f26cb8ef70f888195e6644
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240180"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -69,11 +70,11 @@ Nombre maximal de caractères (et non pas d’octets) à convertir et à stocker
 *mbstate*<br/>
 Pointeur vers un objet d’état de conversion **mbstate_t** . Si cette valeur est un pointeur null, un objet d'état de conversion interne statique est utilisé. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre paramètre *mbstate* .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de caractères correctement convertis, non compris le caractère null de fin, le cas échéant. Retourne (size_t) (-1) si une erreur s’est produite et définit **errno** sur EILSEQ.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbsrtowcs** convertit une chaîne de caractères multioctets indirectement pointée par *mbstr*, en caractères larges stockés dans la mémoire tampon pointée par *wcstr*, en utilisant l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu’à ce qu’un caractère multioctet null de fin soit rencontré, une séquence multioctet qui ne correspond pas à un caractère valide dans les paramètres régionaux en cours est rencontrée, ou jusqu’à ce que les caractères *Count* aient été convertis. Si **mbsrtowcs** rencontre le caractère null multioctet (' \ 0 ') avant ou quand *Count* se produit, il le convertit en un caractère null de fin 16 bits et s’arrête.
 
@@ -105,7 +106,7 @@ La fonction **mbsrtowcs** est multithread Safe tant qu’aucune fonction dans le
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
