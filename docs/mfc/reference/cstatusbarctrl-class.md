@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CStatusBarCtrl, classe'
 title: CStatusBarCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: d2440eb05a1367b7d4980494e3d7f5de646d5fd0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 424edbd2d78fc82c7c78315dea1d430c6ea9459d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342632"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (classe)
 
@@ -140,7 +141,7 @@ Spécifie la fenêtre parente du contrôle de barre d’État, généralement `C
 *nID*<br/>
 Spécifie l’ID du contrôle de barre d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -186,7 +187,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -250,7 +251,7 @@ Référence à un entier qui reçoit la largeur de la bordure verticale.
 *nSpacing*<br/>
 Référence à un entier qui reçoit la largeur de la bordure entre les rectangles.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -275,7 +276,7 @@ HICON GetIcon(int iPart) const;
 *iPart*\
 dans Index de base zéro du composant qui contient l’icône à récupérer. Si ce paramètre a la valeur-1, la barre d’État est supposée être une barre d’état de mode simple.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’icône si la méthode a réussi ; Sinon, NULL.
 
@@ -315,7 +316,7 @@ Nombre de parties pour lesquelles récupérer les coordonnées. Si ce paramètre
 *pParts*<br/>
 Adresse d’un tableau d’entiers ayant le même nombre d’éléments que le nombre de parties spécifié par *nParts*. Chaque élément du tableau reçoit la coordonnée cliente du bord droit du composant correspondant. Si un élément a la valeur-1, la position du bord droit de cette partie s’étend jusqu’au bord droit de la barre d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de parties dans le contrôle en cas de réussite, ou zéro dans le cas contraire.
 
@@ -345,7 +346,7 @@ Index de base zéro du composant dont le rectangle englobant doit être récupé
 *lpRect*<br/>
 Adresse d’une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui reçoit le rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -387,7 +388,7 @@ Pointeur vers un entier qui reçoit les informations de type. Le type peut prend
 
 - SBT_OWNERDRAW si le texte a le type de dessin SBT_OWNERDRAW, *PTYPE* reçoit ce message et retourne la valeur 32 bits associée au texte au lieu de la longueur et du type d’opération.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur, en caractères, du texte ou d’un [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant le texte actuel.
 
@@ -421,7 +422,7 @@ Pointeur vers un entier qui reçoit les informations de type. Le type peut prend
 
 - SBT_POPOUT le texte est dessiné avec une bordure qui doit apparaître plus haut que le plan de la barre d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur, en caractères, du texte.
 
@@ -442,7 +443,7 @@ CString GetTipText(int nPane) const;
 *nPane*<br/>
 Index de base zéro du volet de la barre d’État pour recevoir le texte d’info-bulle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant le texte à utiliser dans l’info-bulle.
 
@@ -462,7 +463,7 @@ Vérifie un contrôle de fenêtre d’État pour déterminer s’il est en mode 
 BOOL IsSimple() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le contrôle de fenêtre d’État est en mode simple ; Sinon, zéro.
 
@@ -480,10 +481,10 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Valeur COLORREF qui spécifie la nouvelle couleur d’arrière-plan. Spécifiez la valeur de CLR_DEFAULT pour que la barre d’État utilise sa couleur d’arrière-plan par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur d’arrière-plan par défaut précédente.
 
@@ -513,7 +514,7 @@ Index de base zéro du volet qui doit recevoir l’icône. Si ce paramètre a la
 *hIcon*<br/>
 Handle de l’icône à définir. Si cette valeur est NULL, l’icône est supprimée de la partie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -564,7 +565,7 @@ Nombre de parties à définir. Le nombre de parties ne peut pas être supérieur
 *pWidths*<br/>
 Adresse d’un tableau d’entiers ayant le même nombre d’éléments que les éléments spécifiés par *nParts*. Chaque élément du tableau spécifie la position, en coordonnées clientes, du bord droit du composant correspondant. Si un élément est-1, la position du bord droit de cette partie s’étend jusqu’au bord droit du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -585,7 +586,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 *bSimple*<br/>
 dans Indicateur de type d’affichage. Si ce paramètre a la valeur TRUE, le contrôle affiche du texte simple ; Si la valeur est FALSe, elle affiche plusieurs parties.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne toujours 0.
 
@@ -615,7 +616,7 @@ Index de base zéro de la partie à définir. Si cette valeur est égale à 255,
 *nType*<br/>
 Type d'opération de dessin. Pour obtenir la liste des valeurs possibles, consultez [SB_SETTEXT message](/windows/win32/Controls/sb-settext) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 

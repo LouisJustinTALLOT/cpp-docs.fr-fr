@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions OpenMP'
 title: Fonctions OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 660d786148738c8ce998ad5d78645efdb444ea47
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 16495be2631a26721d33d5cbbd5f21ea21de7c50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342372"
 ---
 # <a name="openmp-functions"></a>Fonctions OpenMP
 
@@ -120,7 +121,7 @@ void omp_destroy_lock(
 *Lock*<br/>
 Variable de type `omp_lock_t` qui a été initialisée avec [omp_init_lock](#omp-init-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.2 omp_destroy_lock et omp_destroy_nest_lock Functions](../3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions).
 
@@ -143,7 +144,7 @@ void omp_destroy_nest_lock(
 *Lock*<br/>
 Variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.2 omp_destroy_lock et omp_destroy_nest_lock Functions](../3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions).
 
@@ -159,11 +160,11 @@ Retourne une valeur qui indique si le nombre de threads disponibles dans les ré
 int omp_get_dynamic();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Une valeur différente de zéro signifie que les threads seront ajustés dynamiquement.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’ajustement dynamique des threads est spécifié avec [omp_set_dynamic](#omp-set-dynamic) et [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic).
 
@@ -181,7 +182,7 @@ Retourne un entier qui est supérieur ou égal au nombre de threads qui seraient
 int omp_get_max_threads( )
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.1.3 omp_get_max_threads Function](../3-run-time-library-functions.md#313-omp_get_max_threads-function).
 
@@ -231,11 +232,11 @@ Retourne une valeur qui indique si le parallélisme imbriqué est activé.
 int omp_get_nested( );
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Une valeur différente de zéro signifie que le parallélisme imbriqué est activé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le parallélisme imbriqué est spécifié avec [omp_set_nested](#omp-set-nested) et [OMP_NESTED](openmp-environment-variables.md#omp-nested).
 
@@ -253,7 +254,7 @@ Retourne le nombre de processeurs disponibles lorsque la fonction est appelée.
 int omp_get_num_procs();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la [fonction 3.1.5 omp_get_num_procs](../3-run-time-library-functions.md#315-omp_get_num_procs-function).
 
@@ -290,7 +291,7 @@ Retourne le nombre de threads dans la région parallèle.
 int omp_get_num_threads( );
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.1.2 omp_get_num_threads Function](../3-run-time-library-functions.md#312-omp_get_num_threads-function).
 
@@ -340,7 +341,7 @@ Retourne le numéro de thread du thread qui s’exécute dans son équipe de thr
 int omp_get_thread_num( );
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la [fonction 3.1.4 omp_get_thread_num](../3-run-time-library-functions.md#314-omp_get_thread_num-function).
 
@@ -356,7 +357,7 @@ Retourne le nombre de secondes entre les battements d’horloge du processeur.
 double omp_get_wtick( );
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.3.2 omp_get_wtick Function](../3-run-time-library-functions.md#332-omp_get_wtick-function).
 
@@ -372,11 +373,11 @@ Retourne une valeur en secondes du temps écoulé à partir d’un certain point
 double omp_get_wtime( );
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Retourne une valeur en secondes du temps écoulé à partir d’un point arbitraire, mais cohérent.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce point restera cohérent pendant l’exécution du programme, ce qui rendra possible les futures comparaisons.
 
@@ -421,7 +422,7 @@ Retourne une valeur différente de zéro si elle est appelée à partir d’une 
 int omp_in_parallel( );
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.1.6 omp_in_parallel Function](../3-run-time-library-functions.md#316-omp_in_parallel-function).
 
@@ -466,7 +467,7 @@ void omp_init_lock(
 *Lock*<br/>
 Variable de type `omp_lock_t`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la section [3.2.1 omp_init_lock et omp_init_nest_lock Functions](../3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
@@ -558,7 +559,7 @@ void omp_init_nest_lock(
 *Lock*<br/>
 Variable de type `omp_nest_lock_t`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le nombre initial d’imbrications est égal à zéro.
 
@@ -643,7 +644,7 @@ void omp_set_dynamic(
 *multiples*<br/>
 Valeur qui indique si le nombre de threads disponibles dans les régions parallèles à venir peut être ajusté par le Runtime. Si la valeur est différente de zéro, le runtime peut ajuster le nombre de threads, si zéro, le runtime n’ajuste pas dynamiquement le nombre de threads.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le nombre de threads ne dépassera jamais la valeur définie par [omp_set_num_threads](#omp-set-num-threads) ou par [OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads).
 
@@ -694,7 +695,7 @@ void omp_set_lock(
 *Lock*<br/>
 Variable de type `omp_lock_t` qui a été initialisée avec [omp_init_lock](#omp-init-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la section [3.2.3 omp_set_lock et omp_set_nest_lock Functions](../3-run-time-library-functions.md#323-omp_set_lock-and-omp_set_nest_lock-functions).
 
@@ -717,7 +718,7 @@ void omp_set_nest_lock(
 *Lock*<br/>
 Variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la section [3.2.3 omp_set_lock et omp_set_nest_lock Functions](../3-run-time-library-functions.md#323-omp_set_lock-and-omp_set_nest_lock-functions).
 
@@ -740,7 +741,7 @@ void omp_set_nested(
 *multiples*<br/>
 Une valeur différente de zéro active le parallélisme imbriqué, tandis que zéro désactive le parallélisme imbriqué.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 OMP le parallélisme imbriqué peut être activé `omp_set_nested` ou en définissant la variable d’environnement [OMP_NESTED](openmp-environment-variables.md#omp-nested) .
 
@@ -793,7 +794,7 @@ void omp_set_num_threads(
 *num_threads*<br/>
 Nombre de threads dans la région parallèle.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la section [3.1.1 omp_set_num_threads Function](../3-run-time-library-functions.md#311-omp_set_num_threads-function).
 
@@ -816,7 +817,7 @@ int omp_test_lock(
 *Lock*<br/>
 Variable de type `omp_lock_t` qui a été initialisée avec [omp_init_lock](#omp-init-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.5 omp_test_lock et omp_test_nest_lock Functions](../3-run-time-library-functions.md#325-omp_test_lock-and-omp_test_nest_lock-functions).
 
@@ -889,7 +890,7 @@ int omp_test_nest_lock(
 *Lock*<br/>
 Variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.5 omp_test_lock et omp_test_nest_lock Functions](../3-run-time-library-functions.md#325-omp_test_lock-and-omp_test_nest_lock-functions).
 
@@ -980,7 +981,7 @@ void omp_unset_lock(
 *Lock*<br/>
 Variable de type `omp_lock_t` qui a été initialisée avec [omp_init_lock](#omp-init-lock), détenue par le thread et s’exécutant dans la fonction.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.4 omp_unset_lock et omp_unset_nest_lock fonctions](../3-run-time-library-functions.md#324-omp_unset_lock-and-omp_unset_nest_lock-functions).
 
@@ -1003,7 +1004,7 @@ void omp_unset_nest_lock(
 *Lock*<br/>
 Variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock), détenue par le thread et s’exécutant dans la fonction.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [3.2.4 omp_unset_lock et omp_unset_nest_lock fonctions](../3-run-time-library-functions.md#324-omp_unset_lock-and-omp_unset_nest_lock-functions).
 

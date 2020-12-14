@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CPtrList'
 title: CPtrList, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27849db4687860ab68feb548de1ed8ad209b73a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343249"
 ---
 # <a name="cptrlist-class"></a>CPtrList, classe
 
@@ -37,7 +38,7 @@ par exemple, se traduit par
 
 ## <a name="remarks"></a>Notes
 
-`CPtrList`incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments de liste de pointeurs individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
+`CPtrList` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments de liste de pointeurs individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
 Les listes de pointeurs ne peuvent pas être sérialisées.
 

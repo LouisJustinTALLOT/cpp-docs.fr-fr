@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : directives OpenMP'
 title: Directives OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 21270e8cdeb17b6d06d903d328962435c627759f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 03730b1f5cda0972dbf86b345c6e44bdad4e949b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342398"
 ---
 # <a name="openmp-directives"></a>Directives OpenMP
 
@@ -44,7 +45,7 @@ Pour le partage de travail parallèle :
 
 |Directive|Description|
 |---------|-----------|
-|[égal](#parallel)|Définit une région parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.|
+|[parallel](#parallel)|Définit une région parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.|
 |[for](#for-openmp)|Fait en sorte que le travail effectué dans une `for` boucle à l’intérieur d’une zone parallèle soit divisé entre les threads.|
 |[sections](#sections-openmp)|Identifie les sections de code qui doivent être réparties entre tous les threads.|
 |[single](#single)|Vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.|
@@ -80,7 +81,7 @@ Spécifie qu’un emplacement de mémoire sera mis à jour de manière atomique.
 *expression*<br/>
 Instruction qui contient la *lvalue*, dont l’emplacement de la mémoire doit être protégé par rapport à plus d’une écriture.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `atomic` directive ne prend pas en charge les clauses.
 
@@ -119,7 +120,7 @@ Synchronise tous les threads d’une équipe ; tous les threads sont suspendus 
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `barrier` directive ne prend pas en charge les clauses.
 
@@ -145,7 +146,7 @@ Spécifie que le code est exécuté uniquement sur un thread à la fois.
 *name*<br/>
 Facultatif Nom permettant d’identifier le code critique. Le nom doit être placé entre parenthèses.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `critical` directive ne prend pas en charge les clauses.
 
@@ -222,7 +223,7 @@ Spécifie que tous les threads ont la même vue de mémoire pour tous les objets
 *var*<br/>
 Facultatif Liste séparée par des virgules des variables qui représentent les objets que vous souhaitez synchroniser. Si *var* n’est pas spécifié, toute la mémoire est vidée.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `flush` directive ne prend pas en charge les clauses.
 
@@ -302,7 +303,7 @@ Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 *for_statement*<br/>
 `for`Boucle. Un comportement non défini se produit si le code utilisateur de la `for` boucle modifie la variable d’index.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `for` directive prend en charge les clauses suivantes :
 
@@ -393,7 +394,7 @@ Spécifie que seul le thread principal doit exécuter une section du programme.
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `master` directive ne prend pas en charge les clauses.
 
@@ -453,7 +454,7 @@ Spécifie que le code sous une `for` boucle parallélisée doit être exécuté 
    structured-block
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `ordered` directive doit être dans l’étendue dynamique d’une construction [for](#for-openmp) ou `parallel for` avec une `ordered` clause.
 
@@ -531,7 +532,7 @@ Définit une région parallèle, qui est le code qui sera exécuté par plusieur
 *clauses*<br/>
 Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `parallel` directive prend en charge les clauses suivantes :
 
@@ -593,7 +594,7 @@ Identifie les sections de code qui doivent être réparties entre tous les threa
 *clauses*<br/>
 Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `sections` directive peut contenir zéro ou plusieurs `section` directives.
 
@@ -648,7 +649,7 @@ Vous permet de spécifier qu’une section de code doit être exécutée sur un 
 *clauses*<br/>
 Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `single` directive prend en charge les clauses suivantes :
 
@@ -706,7 +707,7 @@ Spécifie qu’une variable est privée pour un thread.
 *var*<br/>
 Liste de variables séparées par des virgules que vous souhaitez rendre privées pour un thread. *var* doit être une variable de portée d’espace de noms ou globale ou une variable statique locale.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `threadprivate` directive ne prend pas en charge les clauses.
 

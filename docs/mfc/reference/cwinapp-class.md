@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CWinApp, classe'
 title: CWinApp (classe)
 ms.date: 07/15/2019
 f1_keywords:
@@ -192,12 +193,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60ea2ea2ef1545a814406da047d1aef42b49a7a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344937"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -252,10 +253,10 @@ class CWinApp : public CWinThread
 |[CWinApp :: IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Indique si l’interaction de la barre des tâches Windows 7 est activée.|
 |[CWinApp :: LoadCursor](#loadcursor)|Charge une ressource de curseur.|
 |[CWinApp :: LoadIcon](#loadicon)|Charge une ressource icône.|
-|[CWinApp :: LoadOEMCursor](#loadoemcursor)|Charge un curseur prédéfini OEM Windows que les constantes de **OCR_** spécifient dans Windows. Manutention.|
-|[CWinApp :: LoadOEMIcon](#loadoemicon)|Charge une icône prédéfinie OEM Windows que les constantes de **OIC_** spécifient dans Windows. Manutention.|
-|[CWinApp :: LoadStandardCursor](#loadstandardcursor)|Charge un curseur prédéfini Windows que les constantes d' **IDC_** spécifient dans Windows. Manutention.|
-|[CWinApp :: LoadStandardIcon](#loadstandardicon)|Charge une icône Windows prédéfinie que les constantes de **IDI_** spécifient dans Windows. Manutention.|
+|[CWinApp :: LoadOEMCursor](#loadoemcursor)|Charge un curseur prédéfini OEM Windows que les constantes de **OCR_** spécifient dans Windows. H.|
+|[CWinApp :: LoadOEMIcon](#loadoemicon)|Charge une icône prédéfinie OEM Windows que les constantes de **OIC_** spécifient dans Windows. H.|
+|[CWinApp :: LoadStandardCursor](#loadstandardcursor)|Charge un curseur prédéfini Windows que les constantes de **IDC_** spécifient dans Windows. H.|
+|[CWinApp :: LoadStandardIcon](#loadstandardicon)|Charge une icône Windows prédéfinie que les constantes de **IDI_** spécifient dans Windows. H.|
 |[CWinApp :: OnDDECommand](#onddecommand)|Appelée par l’infrastructure en réponse à une commande d’exécution DDE (Dynamic Data Exchange).|
 |[CWinApp :: OnIdle](#onidle)|Substituez pour effectuer un traitement du temps d’inactivité spécifique à l’application.|
 |[CWinApp :: OpenDocumentFile](#opendocumentfile)|Appelé par le Framework pour ouvrir un document à partir d’un fichier.|
@@ -315,7 +316,7 @@ class CWinApp : public CWinThread
 |[CWinApp :: m_nCmdShow](#m_ncmdshow)|Spécifie le mode d’affichage initial de la fenêtre.|
 |[CWinApp :: m_pActiveWnd](#m_pactivewnd)|Pointeur vers la fenêtre principale de l’application conteneur lorsqu’un serveur OLE est actif sur place.|
 |[CWinApp :: m_pszAppID](#m_pszappid)|ID du modèle utilisateur de l’application.|
-|[CWinApp :: m_pszAppName](#m_pszappname)|Spécifie le nom de l’application.|
+|[CWinApp :: m_pszAppName](#m_pszappname)|Spécifie le nom de l'application.|
 |[CWinApp :: m_pszExeName](#m_pszexename)|Nom du module de l’application.|
 |[CWinApp :: m_pszHelpFilePath](#m_pszhelpfilepath)|Chemin d’accès au fichier d’aide de l’application.|
 |[CWinApp :: m_pszProfileName](#m_pszprofilename)|De l’application. Nom de fichier INI.|
@@ -369,7 +370,7 @@ Le `m_hPrevInstance` membre de données n’existe plus. Pour déterminer si une
 
 `CWinApp`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -824,7 +825,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Référence à une valeur de POSITION retournée par un appel précédent à `GetNextDocTemplate` ou [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). La valeur est mise à jour à la position suivante par cet appel.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -1155,7 +1156,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="parameters"></a>Paramètres
 
 *nIDCursor*<br/>
-Identificateur de constante de manifeste **OCR_** qui spécifie un curseur Windows prédéfini. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OCR_** dans Windows. Manutention.
+Identificateur de constante de manifeste **OCR_** qui spécifie un curseur Windows prédéfini. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OCR_** dans Windows. H.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -1182,7 +1183,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="parameters"></a>Paramètres
 
 *nIDIcon*<br/>
-Identificateur de constante de manifeste **OIC_** qui spécifie une icône Windows prédéfinie. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OIC_** dans Windows. Manutention.
+Identificateur de constante de manifeste **OIC_** qui spécifie une icône Windows prédéfinie. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OIC_** dans Windows. H.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -1203,7 +1204,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpszCursorName*<br/>
-Identificateur de constante de manifeste **IDC_** qui spécifie un curseur Windows prédéfini. Ces identificateurs sont définis dans WINDOWS. Manutention. La liste suivante répertorie les valeurs prédéfinies et les significations possibles pour *lpszCursorName*:
+Identificateur de constante de manifeste **IDC_** qui spécifie un curseur Windows prédéfini. Ces identificateurs sont définis dans WINDOWS. H. La liste suivante répertorie les valeurs prédéfinies et les significations possibles pour *lpszCursorName*:
 
 - Curseur à flèche standard IDC_ARROW
 
@@ -1252,7 +1253,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpszIconName*<br/>
-Identificateur de constante de manifeste qui spécifie une icône Windows prédéfinie. Ces identificateurs sont définis dans WINDOWS. Manutention. Pour obtenir la liste des valeurs prédéfinies possibles et leurs descriptions, consultez le paramètre *lpIconName* dans [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) dans le SDK Windows.
+Identificateur de constante de manifeste qui spécifie une icône Windows prédéfinie. Ces identificateurs sont définis dans WINDOWS. H. Pour obtenir la liste des valeurs prédéfinies possibles et leurs descriptions, consultez le paramètre *lpIconName* dans [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -1423,7 +1424,7 @@ Le gestionnaire de récupération de données d’une application surveille les 
 
 ## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a> CWinApp :: m_pszAppName
 
-Spécifie le nom de l’application.
+Spécifie le nom de l'application.
 
 ```
 LPCTSTR m_pszAppName;
@@ -1828,7 +1829,7 @@ Si vous remplacez cette fonctionnalité avancée, veillez à appeler la version 
 
 ## <a name="cwinappprocessshellcommand"></a><a name="processshellcommand"></a> CWinApp ::P rocessShellCommand
 
-Cette fonction membre est appelée par [InitInstance](#initinstance) pour accepter les paramètres transmis à partir de l' `CCommandLineInfo` objet identifié par *rCmdInfo*et exécuter l’action indiquée.
+Cette fonction membre est appelée par [InitInstance](#initinstance) pour accepter les paramètres transmis à partir de l' `CCommandLineInfo` objet identifié par *rCmdInfo* et exécuter l’action indiquée.
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -2179,7 +2180,7 @@ ID d’une ressource de type chaîne contenant le nom de la clé de registre.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction définit *m_pszRegistryKey*, qui est ensuite utilisé par les `GetProfileInt` `GetProfileString` fonctions membres,, `WriteProfileInt` et `WriteProfileString` de `CWinApp` . Si cette fonction a été appelée, la liste des derniers fichiers utilisés (MRU) est également stockée dans le registre. La clé de Registre est généralement le nom d’une société. Elle est stockée sous la forme suivante : HKEY_CURRENT_USER \Software<nom de la société<nom de l' \\ \> \\ application \> \\<nom de la section \> \\<nom de la valeur \> .
+Cette fonction définit *m_pszRegistryKey*, qui est ensuite utilisé par les `GetProfileInt` `GetProfileString` fonctions membres,, `WriteProfileInt` et `WriteProfileString` de `CWinApp` . Si cette fonction a été appelée, la liste des derniers fichiers utilisés (MRU) est également stockée dans le registre. La clé de Registre est généralement le nom d’une société. Elle est stockée sous la forme suivante : HKEY_CURRENT_USER\Software<nom de la société<nom de l’application<nom de la \\ \> \\ \> \\ section \> \\<nom de la valeur \> .
 
 ## <a name="cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a> CWinApp :: SupportsApplicationRecovery
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CWinFormsDialog, classe'
 title: CWinFormsDialog, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 501f9c354bd6f0b7a628aabb93f4680155f74a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342619"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog, classe
 
@@ -61,13 +62,13 @@ class CWinFormsDialog :
 |[CWinFormsDialog :: Operator-&gt;](#operator_-_gt)|Remplace [CWinFormsDialog :: GetControl](#getcontrol) dans les expressions.|
 |[CWinFormsDialog :: Operator TManagedControl ^](#operator-tmanagedcontrol-hat)|Effectue un cast d’un type en une référence à un contrôle utilisateur Windows Forms.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `CWinFormsDialog` est un wrapper pour une classe de boîte de dialogue MFC ( [CDialog](../../mfc/reference/cdialog-class.md)) qui héberge un contrôle utilisateur Windows Forms. Cela permet l’affichage des contrôles de .NET Framework dans une boîte de dialogue MFC modale ou non modale.
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) et [hébergement d’un contrôle utilisateur Windows Form en tant que boîte de dialogue MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms. h
 
@@ -92,7 +93,7 @@ Récupère une référence au contrôle utilisateur Windows Forms.
 inline TManagedControl^ GetControl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une référence au contrôle Windows Forms dans la boîte de dialogue MFC.
 
@@ -104,7 +105,7 @@ Récupère un handle de fenêtre pour le contrôle utilisateur Windows Forms.
 inline HWND GetControlHandle() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un handle de fenêtre pour le contrôle utilisateur Windows Forms.
 
@@ -116,11 +117,11 @@ Initialise la boîte de dialogue MFC en créant et en hébergeant un Windows For
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur booléenne qui spécifie si l’application a défini le focus d’entrée sur l’un des contrôles de la boîte de dialogue. Si `OnInitDialog` retourne une valeur différente de zéro, Windows définit le focus d’entrée sur le premier contrôle de la boîte de dialogue. Cette méthode peut retourner 0 uniquement si l’application a explicitement défini le focus d’entrée sur l’un des contrôles de la boîte de dialogue.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Quand la boîte de dialogue MFC est créée (à l’aide de la méthode [Create](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)ou [DoModal](../../mfc/reference/cdialog-class.md#domodal) héritée de [CDialog](../../mfc/reference/cdialog-class.md)), un message d’WM_INITDIALOG est envoyé et cette méthode est appelée. Elle crée une instance d’un contrôle Windows Forms sur la boîte de dialogue et ajuste la taille de la boîte de dialogue en fonction de la taille du contrôle utilisateur. Il héberge ensuite le nouveau contrôle dans la boîte de dialogue MFC.
 
@@ -134,7 +135,7 @@ Remplace [CWinFormsDialog :: GetControl](#getcontrol) dans les expressions.
 inline TManagedControl^  operator->() const throw();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cet opérateur fournit une syntaxe pratique qui remplace `GetControl` dans les expressions.
 
@@ -148,7 +149,7 @@ Effectue un cast d’un type en une référence à un contrôle utilisateur Wind
 inline operator TManagedControl^() const throw();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cet opérateur convertit un type en une référence à un contrôle Windows Forms. Il est utilisé pour passer une `CWinFormsDialog<TManagedControl>` boîte de dialogue aux fonctions qui acceptent un pointeur vers un objet de contrôle utilisateur Windows Forms.
 

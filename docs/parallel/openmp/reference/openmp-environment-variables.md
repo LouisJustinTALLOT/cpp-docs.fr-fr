@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les variables d’environnement OpenMP
 title: Variables d'environnement OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 3f9117c531bdf0c5a0c94e0b18a055591f431036
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 58ca563033906f4e5e7e9d59089dc463396aa91c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342385"
 ---
 # <a name="openmp-environment-variables"></a>Variables d'environnement OpenMP
 
@@ -42,7 +43,7 @@ Spécifie si le temps d’exécution OpenMP peut ajuster le nombre de threads da
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `OMP_DYNAMIC` variable d’environnement peut être remplacée par la fonction [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) .
 
@@ -72,7 +73,7 @@ Spécifie si le parallélisme imbriqué est activé, à moins que le parallélis
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `OMP_NESTED` variable d’environnement peut être remplacée par la fonction [omp_set_nested](openmp-functions.md#omp-set-nested) .
 
@@ -107,7 +108,7 @@ set OMP_NUM_THREADS[=num]
 *num*<br/>
 Nombre maximal de threads que vous souhaitez dans la région parallèle, jusqu’à 64 dans l’implémentation Visual C++.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `OMP_NUM_THREADS` variable d’environnement peut être remplacée par la fonction [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) ou par [num_threads](openmp-clauses.md#num-threads).
 
@@ -145,7 +146,7 @@ Facultatif Spécifie la taille des itérations. la *taille* doit être un entier
 *type*<br/>
 Type de planification,, `dynamic` `guided` `runtime` ou `static` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La valeur par défaut de l’implémentation Visual C++ de la norme OpenMP est `OMP_SCHEDULE=static,0` .
 

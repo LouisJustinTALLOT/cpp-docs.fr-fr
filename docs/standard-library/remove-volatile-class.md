@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe remove_volatile'
 title: remove_volatile, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45f0ba9ba4685a471f13d0d36ae5080eb667a9f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344872"
 ---
-# <a name="removevolatile-class"></a>remove_volatile, classe
+# <a name="remove_volatile-class"></a>remove_volatile, classe
 
 Rend un type non volatile.
 
@@ -35,9 +36,9 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_volatile<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `volatile T1`, sinon *t*.
+Une instance de `remove_volatile<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `volatile T1` , sinon *t*.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 #include <type_traits>
@@ -59,13 +60,13 @@ int main()
 remove_volatile_t<volatile int> == int
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[add_volatile, classe](../standard-library/add-volatile-class.md)
+[Classe add_volatile](../standard-library/add-volatile-class.md)

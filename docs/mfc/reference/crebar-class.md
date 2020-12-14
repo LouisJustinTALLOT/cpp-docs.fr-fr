@@ -1,5 +1,6 @@
 ---
-title: Classe CReBar
+description: 'En savoir plus sur : CReBar, classe'
+title: CReBar (classe)
 ms.date: 11/19/2018
 f1_keywords:
 - CReBar
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: c1379d1ef8effea0df564da1b43769bb9a11435d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 138add510b76f21f5776f809b1551eb35d554d68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343125"
 ---
-# <a name="crebar-class"></a>Classe CReBar
+# <a name="crebar-class"></a>CReBar (classe)
 
 Barre de contrôles qui fournit des informations de disposition, de persistance et d'état pour les contrôles rebar.
 
@@ -35,24 +36,24 @@ class CReBar : public CControlBar
 
 |Nom|Description|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|Ajoute une bande à une barre d’armature.|
-|[CReBar::Créer](#create)|Crée le contrôle des barres d’armature et le fixe à l’objet. `CReBar`|
-|[CReBar::GetReBarCtrl](#getrebarctrl)|Permet un accès direct au contrôle commun sous-jacent.|
+|[CReBar :: AddBar](#addbar)|Ajoute une bande à un Rebar.|
+|[CReBar :: Create](#create)|Crée le contrôle rebar et l’attache à l' `CReBar` objet.|
+|[CReBar :: GetReBarCtrl](#getrebarctrl)|Autorise l’accès direct au contrôle commun sous-jacent.|
 
 ## <a name="remarks"></a>Notes
 
-Un objet rebar peut contenir plusieurs fenêtres enfants, généralement d'autres contrôles, notamment des zones d'édition, des barres d'outils et des zones de liste. Un objet rebar peut afficher les fenêtres enfants sur une image bitmap spécifiée. Votre application peut automatiquement resize la barre d’armature, ou l’utilisateur peut resize manuellement la barre d’armature en cliquant ou en faisant glisser sa barre de pincement.
+Un objet rebar peut contenir plusieurs fenêtres enfants, généralement d'autres contrôles, notamment des zones d'édition, des barres d'outils et des zones de liste. Un objet rebar peut afficher les fenêtres enfants sur une image bitmap spécifiée. Votre application peut redimensionner automatiquement le rebar, ou l’utilisateur peut redimensionner manuellement le rebar en cliquant ou en faisant glisser sa barre de redimensionnement.
 
 ![Exemple de RebarMenu](../../mfc/reference/media/vc4sc61.gif "Exemple de RebarMenu")
 
-## <a name="rebar-control"></a>Contrôle des barres d’armature
+## <a name="rebar-control"></a>Contrôle rebar
 
-Un objet de barre d’armature se comporte de la même façon qu’un objet de barre d’outils. Une barre d’armature utilise le mécanisme de clic et de traînée pour redimensionner ses bandes. Un contrôle des barres d’armature peut contenir une ou plusieurs bandes, chaque bande ayant une combinaison d’une barre de pincement, une bitmap, une étiquette de texte, et une fenêtre pour enfants. Cependant, les bandes ne peuvent pas contenir plus d’une fenêtre d’enfant.
+Un objet Rebar se comporte de la même façon qu’un objet Toolbar. Un Rebar utilise le mécanisme de glisser-déplacer pour redimensionner ses bandes. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande ayant n’importe quelle combinaison d’une barre de redimensionnement, d’une image bitmap, d’une étiquette de texte et d’une fenêtre enfant. Toutefois, les bandes ne peuvent pas contenir plus d’une fenêtre enfant.
 
-`CReBar`utilise la classe [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) pour fournir sa mise en œuvre. Vous pouvez accéder au contrôle des barres d’armature via [GetReBarCtrl](#getrebarctrl) pour profiter des options de personnalisation du contrôle. Pour plus d’informations sur `CReBarCtrl`les contrôles des barres d’armature, voir . Pour plus d’informations sur l’utilisation des commandes de barres d’armature, voir [Utilisation CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar` utilise la classe [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) pour fournir son implémentation. Vous pouvez accéder au contrôle rebar via [GetReBarCtrl](#getrebarctrl) pour tirer parti des options de personnalisation du contrôle. Pour plus d’informations sur les contrôles rebar, consultez `CReBarCtrl` . Pour plus d’informations sur l’utilisation des contrôles rebar, consultez [utilisation de CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
-> Les objets de commande des barres d’armature et des barres d’armature ne prennent pas en charge l’amarrage des barres de commande MFC. Si `CRebar::EnableDocking` elle est appelée, votre demande s’affirmera.
+> Les objets Rebar et Rebar Control ne prennent pas en charge l’ancrage de la barre de contrôle MFC. Si `CRebar::EnableDocking` est appelé, votre application effectue une assertion.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,17 +63,17 @@ Un objet de barre d’armature se comporte de la même façon qu’un objet de b
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar (en)](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `CReBar`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxext.h
+**En-tête :** afxext. h
 
-## <a name="crebaraddbar"></a><a name="addbar"></a>CReBar::AddBar
+## <a name="crebaraddbar"></a><a name="addbar"></a> CReBar :: AddBar
 
-Appelez cette fonction de membre pour ajouter une bande à la barre d’armature.
+Appelez cette fonction membre pour ajouter une bande au Rebar.
 
 ```
 BOOL AddBar(
@@ -91,25 +92,25 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-Un pointeur `CWnd` à un objet qui est la fenêtre de l’enfant à insérer dans la barre d’armature. L’objet référencé doit avoir un WS_CHILD.
+*pBar*<br/>
+Pointeur vers un `CWnd` objet qui est la fenêtre enfant à insérer dans le rebar. L’objet référencé doit avoir un WS_CHILD.
 
 *lpszText*<br/>
-Un pointeur à une chaîne contenant le texte à apparaître sur la barre d’armature. NULL par défaut. Le texte contenu dans *lpszText* ne fait pas partie de la fenêtre de l’enfant; il est sur la barre d’armature elle-même.
+Pointeur vers une chaîne contenant le texte à afficher sur le rebar. NULL par défaut. Le texte contenu dans *lpszText* ne fait pas partie de la fenêtre enfant ; Il se trouve sur le rebar lui-même.
 
 *pbmp*<br/>
-Un pointeur `CBitmap` d’un objet à afficher sur le fond de la barre d’armature. NULL par défaut.
+Pointeur vers un `CBitmap` objet à afficher sur l’arrière-plan du Rebar. NULL par défaut.
 
-*dwStyle (en)*<br/>
-Un DWORD contenant le style à appliquer sur la barre d’armature. Consultez `fStyle` la description de la fonction dans la structure Win32 [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) pour une liste complète des styles de bande.
+*dwStyle*<br/>
+Valeur DWORD contenant le style à appliquer au Rebar. Pour obtenir la `fStyle` liste complète des styles de bande, consultez la description de la fonction dans la structure Win32 [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) .
 
 *clrFore*<br/>
-Une valeur COLORREF qui représente la couleur de premier plan de la barre d’armature.
+Valeur COLORREF qui représente la couleur de premier plan du Rebar.
 
-*clrBack (en)*<br/>
-Une valeur COLORREF qui représente la couleur de fond de la barre d’armature.
+*clrBack*<br/>
+Valeur COLORREF qui représente la couleur d’arrière-plan du Rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -117,9 +118,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-## <a name="crebarcreate"></a><a name="create"></a>CReBar::Créer
+## <a name="crebarcreate"></a><a name="create"></a> CReBar :: Create
 
-Appelez cette fonction de membre pour créer une barre d’armature.
+Appelez cette fonction membre pour créer un Rebar.
 
 ```
 virtual BOOL Create(
@@ -132,42 +133,42 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *pParentWnd*<br/>
-Pointeur `CWnd` vers l’objet dont la fenêtre Windows est le parent de la barre d’état. Normalement, votre fenêtre de cadre.
+Pointeur vers l' `CWnd` objet dont la fenêtre Windows est le parent de la barre d’État. Normalement, votre fenêtre frame.
 
-*dwCtrlStyle (en)*<br/>
-Le style de contrôle des barres d’armature. Par défaut, RBS_BANDBORDERS, qui affiche des lignes étroites pour séparer les bandes adjacentes dans le contrôle des barres d’armature. Consultez [Rebar Control Styles](/windows/win32/Controls/rebar-control-styles) dans le Windows SDK pour une liste de styles.
+*dwCtrlStyle*<br/>
+Style de contrôle rebar. Par défaut, RBS_BANDBORDERS, qui affiche des lignes étroites pour séparer les bandes adjacentes dans le contrôle rebar. Pour obtenir la liste des styles, consultez [styles de contrôle rebar](/windows/win32/Controls/rebar-control-styles) dans le SDK Windows.
 
-*dwStyle (en)*<br/>
-Les styles de fenêtre de barre d’armature.
+*dwStyle*<br/>
+Styles de fenêtre Rebar.
 
 *nID*<br/>
-L’id de la fenêtre pour enfants de la barre d’armature.
+ID de la fenêtre enfant du Rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CReBar:AddBar](#addbar).
+  Consultez l’exemple pour [CReBar :: AddBar](#addbar).
 
-## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar::GetReBarCtrl
+## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a> CReBar :: GetReBarCtrl
 
-Cette fonction de membre permet un accès direct au contrôle commun sous-jacent.
+Cette fonction membre autorise un accès direct au contrôle commun sous-jacent.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une référence à un objet [CReBarCtrl.](../../mfc/reference/crebarctrl-class.md)
+Référence à un objet [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction de membre pour profiter de la fonctionnalité du contrôle commun de barre d’armature de Windows dans la personnalisation de votre barre d’armature. Lorsque vous `GetReBarCtrl`appelez, il renvoie `CReBarCtrl` un objet de référence à l’objet afin que vous puissiez utiliser l’un ou l’autre ensemble des fonctions des membres.
+Appelez cette fonction membre pour tirer parti des fonctionnalités du contrôle commun Rebar de Windows dans personnalisation de votre Rebar. Quand vous appelez `GetReBarCtrl` , elle retourne un objet de référence à l' `CReBarCtrl` objet afin que vous puissiez utiliser l’un ou l’autre ensemble de fonctions membres.
 
-Pour plus d’informations sur l’utilisation `CReBarCtrl` pour personnaliser votre barre d’armature, voir à [l’aide de CReBarCtrl](../../mfc/using-crebarctrl.md).
+Pour plus d’informations sur l’utilisation `CReBarCtrl` de pour personnaliser votre rebar, consultez [utilisation de CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Exemple
 
@@ -176,5 +177,5 @@ Pour plus d’informations sur l’utilisation `CReBarCtrl` pour personnaliser v
 ## <a name="see-also"></a>Voir aussi
 
 [MFC, exemple MFCIE](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar (classe)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
