@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_pgmptr'
 title: _get_pgmptr
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 440bc7221f00d5ce04f4583666a76a0fadfee288
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296587"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
@@ -54,11 +55,11 @@ errno_t _get_pgmptr(
 *pValue*<br/>
 Pointeur vers une chaîne à remplir avec la valeur actuelle de la variable **_pgmptr** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *pValue* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Appelez uniquement **_get_pgmptr** si votre programme a un point d’entrée étroit, par exemple **main ()** ou **WinMain ()**. La variable globale **_pgmptr** contient le chemin d’accès complet au fichier exécutable associé au processus. Pour plus d’informations, consultez [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 

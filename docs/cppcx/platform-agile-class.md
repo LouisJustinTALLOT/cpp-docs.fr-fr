@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: agile, classe'
 title: Platform::Agile, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6407bbfecdc84cdb47024e09f632a6e574439814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312174"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 
@@ -39,7 +40,7 @@ Nom de type de la classe non agile.
 
 La plupart des classes du Windows Runtime sont agiles. Un objet agile peut appeler, ou être appelé par, un objet intra-processus ou hors processus dans le même thread ou un autre thread. Si un objet n’est pas agile, encapsulez l’objet non agile dans un objet `Agile<T>` agile. L’objet `Agile<T>` peut ensuite être marshalé, et l’objet non agile sous-jacent peut être utilisé.
 
-La classe `Agile<T>` est une classe C++ native standard qui nécessite `agile.h`. Elle représente l’objet non agile et le *contexte*de l’objet Agile. Le contexte spécifie le modèle de thread et le comportement de marshaling d’un objet agile. Le système d’exploitation utilise le contexte pour déterminer comment marshaler un objet.
+La classe `Agile<T>` est une classe C++ native standard qui nécessite `agile.h`. Elle représente l’objet non agile et le *contexte* de l’objet Agile. Le contexte spécifie le modèle de thread et le comportement de marshaling d’un objet agile. Le système d’exploitation utilise le contexte pour déterminer comment marshaler un objet.
 
 ### <a name="members"></a>Membres
 
@@ -135,7 +136,7 @@ T^ Get() const;
 
 Handle vers l’objet représenté par l’objet Agile actif.
 
-Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myAgileTvariable->Get();`.
+Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.
 
 ## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Agile :: Getaddressof,, méthode
 
@@ -152,7 +153,7 @@ T^* GetAddressOf() throw();
 *T*<br/>
 Type spécifié par le paramètre de nom de type de modèle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Adresse d’un handle vers un objet de type `T`.
 
@@ -175,7 +176,7 @@ T^* GetAddressOfForInOut()  throw();
 *T*<br/>
 Type spécifié par le paramètre de nom de type de modèle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Adresse d'un handle vers l'objet représenté par l'objet Agile actif.
 
@@ -237,7 +238,7 @@ L'objet ou le handle vers un objet qui est copié ou déplacé vers l'objet Agil
 *Aid*<br/>
 Le pointeur d'interface IUnknown d'un objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d'un objet de type `T`
 

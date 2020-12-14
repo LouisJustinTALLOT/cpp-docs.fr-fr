@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : implémentation de la barre d’outils MFC'
 title: Implémentation de la barre d'outils MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: 7876e9403389c19a24e5a482534d0f223eaa4bf5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0e6ecf0536c55163dd63d5f05e4c5c9f24f2c4cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251152"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implémentation de la barre d'outils MFC
 
@@ -43,7 +44,7 @@ Les éléments suivants sont présentés dans cet article :
 
 - [Boutons de la barre d’outils](#_core_toolbar_buttons)
 
-- [Barres d’outils ancrées et flottantes](#_core_docking_and_floating_toolbars)
+- [Ancrer et rendre flottantes les barres d'outils](#_core_docking_and_floating_toolbars)
 
 - [Barres d’outils et info-bulles](#_core_toolbars_and_tool_tips)
 
@@ -51,13 +52,13 @@ Les éléments suivants sont présentés dans cet article :
 
 - [Bitmap de la barre d’outils](#_core_the_toolbar_bitmap)
 
-## <a name="toolbar-buttons"></a><a name="_core_toolbar_buttons"></a>Boutons de la barre d’outils
+## <a name="toolbar-buttons"></a><a name="_core_toolbar_buttons"></a> Boutons de la barre d’outils
 
 Les boutons d’une barre d’outils sont analogues aux éléments d’un menu. Les deux types d’objets d’interface utilisateur génèrent des commandes que votre programme gère en fournissant des fonctions de gestionnaire. Souvent, les boutons de barre d’outils dupliquent les fonctionnalités des commandes de menu, fournissant une interface utilisateur alternative à la même fonctionnalité. Une telle duplication est organisée simplement en donnant au bouton et à l’élément de menu le même ID.
 
 Vous pouvez faire apparaître les boutons dans une barre d’outils et se comporter comme des boutons de bouton, des cases à cocher ou des cases d’option. Pour plus d’informations, consultez la classe [CToolBar](reference/ctoolbar-class.md).
 
-## <a name="docking-and-floating-toolbars"></a><a name="_core_docking_and_floating_toolbars"></a>Barres d’outils ancrées et flottantes
+## <a name="docking-and-floating-toolbars"></a><a name="_core_docking_and_floating_toolbars"></a> Barres d’outils ancrées et flottantes
 
 Une barre d’outils MFC peut :
 
@@ -71,11 +72,11 @@ Une barre d’outils MFC peut :
 
 Pour plus d’informations, consultez l’article sur les [barres d’outils ancrées et flottantes](docking-and-floating-toolbars.md).
 
-## <a name="toolbars-and-tool-tips"></a><a name="_core_toolbars_and_tool_tips"></a>Barres d’outils et info-bulles
+## <a name="toolbars-and-tool-tips"></a><a name="_core_toolbars_and_tool_tips"></a> Barres d’outils et info-bulles
 
 Les barres d’outils MFC peuvent également être affichées pour afficher des « info-bulles », une petite fenêtre contextuelle contenant une brève description de l’objectif d’un bouton de barre d’outils. Lorsque l’utilisateur déplace la souris sur un bouton de barre d’outils, la fenêtre d’info-bulle s’affiche pour offrir un indicateur. Pour plus d’informations, consultez les [astuces de la barre d’outils](toolbar-tool-tips.md)de l’article.
 
-## <a name="the-ctoolbar-and-ctoolbarctrl-classes"></a><a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>Classes CToolBar et CToolBarCtrl
+## <a name="the-ctoolbar-and-ctoolbarctrl-classes"></a><a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Classes CToolBar et CToolBarCtrl
 
 Vous gérez les barres d’outils de votre application via la classe [CToolBar](reference/ctoolbar-class.md). Depuis la version 4,0 de MFC, `CToolBar` a été réimplémenté pour utiliser le contrôle commun de barre d’outils disponible sous windows 95 ou version ultérieure et Windows NT version 3,51 ou ultérieure.
 
@@ -86,15 +87,15 @@ Cette réimplémentation entraîne moins de code MFC pour les barres d’outils,
 
 Consultez également l’exemple général MFC [DOCKTOOL](../overview/visual-cpp-samples.md).
 
-## <a name="the-toolbar-bitmap"></a><a name="_core_the_toolbar_bitmap"></a>Bitmap de la barre d’outils
+## <a name="the-toolbar-bitmap"></a><a name="_core_the_toolbar_bitmap"></a> Bitmap de la barre d’outils
 
 Une fois construite, un `CToolBar` objet crée l’image de la barre d’outils en chargeant une seule bitmap qui contient une image pour chaque bouton. L’Assistant application crée une image bitmap de barre d’outils standard que vous pouvez personnaliser à l’aide de l' [éditeur de barres d’outils](../windows/toolbar-editor.md)Visual C++.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Notions de base de la barre d’outils](toolbar-fundamentals.md)
+- [Notions de base de barre d'outils](toolbar-fundamentals.md)
 
-- [Barres d’outils ancrées et flottantes](docking-and-floating-toolbars.md)
+- [Ancrer et rendre flottantes les barres d'outils](docking-and-floating-toolbars.md)
 
 - [Info-bulles de barre d'outils](toolbar-tool-tips.md)
 

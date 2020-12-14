@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur de ressources RW2002'
 title: 'Erreur RW2002 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae973b826a42aa844e879c0947af1090f7eaa711
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259693"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources 
 
@@ -97,7 +98,7 @@ Erreur d'analyse
 
 1. **Constante de boîte de dialogue numérique attendue**
 
-   Une instruction **Dialog** requiert des valeurs entières pour les champs *x, y, Width*et *Height* . Assurez-vous que ces valeurs sont incluses après le mot clé **Dialog** et qu’elles ne sont pas négatives.
+   Une instruction **Dialog** requiert des valeurs entières pour les champs *x, y, Width* et *Height* . Assurez-vous que ces valeurs sont incluses après le mot clé **Dialog** et qu’elles ne sont pas négatives.
 
 1. **Chaîne attendue dans STRINGTABLE**
 

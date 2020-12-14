@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getmaxstdio'
 title: _getmaxstdio
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-ms.openlocfilehash: cf3f55262e54ec4d5205d08dfcb499f2802ded23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78c427ef9e5152708870d7ff48d0a123b7ee5213
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296548"
 ---
 # <a name="_getmaxstdio"></a>_getmaxstdio
 
@@ -53,13 +54,13 @@ Retourne un nombre qui représente le nombre de fichiers ouverts simultanément 
 
 Utilisez [_setmaxstdio](setmaxstdio.md) pour configurer le nombre de fichiers ouverts simultanément autorisés au niveau **stdio** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

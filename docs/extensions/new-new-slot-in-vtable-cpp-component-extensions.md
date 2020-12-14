@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : nouveau (nouvel emplacement dans vtable) (C++/CLI et C++/CX)'
 title: nouveau (nouvel emplacement dans vtable) (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccc6adbd29eca82b44d34b981803a88332a8784a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257675"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>nouveau (nouvel emplacement dans vtable) (C++/CLI et C++/CX)
 

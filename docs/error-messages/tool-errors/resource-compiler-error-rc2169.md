@@ -1,19 +1,20 @@
 ---
-title: Erreur RC2169 du compilateur de ressources
+description: 'En savoir plus sur : erreur du compilateur de ressources RC2169'
+title: 'Erreur RC2169 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RC2169
 helpviewer_keywords:
 - RC2169
 ms.assetid: 832c19ad-a2e2-4f50-b493-26b791877600
-ms.openlocfilehash: 1906f8c8e795f6aa05987152ca4901deae62bb46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fed36e98fc25ec663a412bed705e93e8de7927e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259863"
 ---
-# <a name="resource-compiler-error-rc2169"></a>Erreur RC2169 du compilateur de ressources
+# <a name="resource-compiler-error-rc2169"></a>Erreur RC2169 du compilateur de ressources 
 
 le nom du fichier de ressources n’est pas au format 2,03
 

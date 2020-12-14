@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : conversions de types et sécurité de type'
 title: Conversions de types et sécurité de type
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 28adbc261b5b4376f947e00695fe66650739438d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ce83837a8aec06063b2a4e50c445fe7756b5c076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312187"
 ---
 # <a name="type-conversions-and-type-safety"></a>Conversions de types et sécurité de type
 
@@ -26,11 +27,11 @@ Lorsqu’une expression contient des opérandes de types intégrés différents 
 
 Dans une conversion étendue, une valeur dans une variable plus petite est assignée à une variable plus grande sans perte de données. Étant donné que les conversions étendues sont toujours sécurisées, le compilateur les exécute en mode silencieux et n’émet pas d’avertissements. Les conversions suivantes sont des conversions étendues.
 
-|À partir|À|
+|Du|À|
 |----------|--------|
-|Tout **`signed`** ou **`unsigned`** type intégral à l’exception **`long long`** de ou**`__int64`**|**`double`**|
-|**`bool`** ni**`char`**|Tout autre type intégré|
-|**`short`** ni**`wchar_t`**|**`int`**, **`long`**, **`long long`**|
+|Tout **`signed`** ou **`unsigned`** type intégral à l’exception **`long long`** de ou **`__int64`**|**`double`**|
+|**`bool`** ou **`char`**|Tout autre type intégré|
+|**`short`** ou **`wchar_t`**|**`int`**, **`long`**, **`long long`**|
 |**`int`**, **`long`**|**`long long`**|
 |**`float`**|**`double`**|
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : gmtime_s, _gmtime32_s _gmtime64_s'
 title: gmtime_s, _gmtime32_s, _gmtime64_s
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bffe11bd655ed8cfead6b862abf0237270c3af20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296457"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -77,7 +78,7 @@ Pointeur vers une structure de [TM](../../c-runtime-library/standard-types.md) .
 *sourceTime*<br/>
 Pointeur désignant la valeur de temps stockée. Le temps est représenté sous forme de secondes écoulées depuis le 1er janvier 1970 minuit (00:00:00), temps universel coordonné (UTC).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans errno. h ; pour obtenir la liste de ces erreurs, consultez [errno](../../c-runtime-library/errno-constants.md).
 
@@ -114,7 +115,7 @@ Chacun des champs de structure est de type **`int`** , comme indiqué dans le ta
 
 **_gmtime64_s**, qui utilise la structure **__time64_t** , permet d’exprimer les dates jusqu’au 31 décembre 3000 à 23:59:59, heure UTC ; tandis que **gmtime32_s** représentent uniquement les dates jusqu' 23:59:59 au 18 janvier 2038, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour ces deux fonctions.
 
-**gmtime_s** est une fonction inline qui prend la valeur **_gmtime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **gmtime_s** n’est pas aligné sur **_gmtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**gmtime_s** est une fonction inline qui prend la valeur **_gmtime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t** 32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **gmtime_s** n’est pas aligné sur **_gmtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

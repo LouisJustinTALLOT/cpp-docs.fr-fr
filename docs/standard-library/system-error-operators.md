@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur les opérateurs suivants : &lt; system_error &gt;'
 title: '&lt;system_error&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 5ddd9135749c2dcfd40cd06a9b69cff65b1a8c8d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ebbb4d9de0ef8bf27aaa276dfee14d94c29eabb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259420"
 ---
 # <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt;, opérateurs
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.
 
@@ -37,7 +38,7 @@ Objet dont l’égalité doit être vérifiée.
 *Oui*\
 Objet dont l’égalité doit être vérifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets sont égaux ; **`false`** si les objets ne sont pas égaux.
 
@@ -45,7 +46,7 @@ Objet dont l’égalité doit être vérifiée.
 
 Cette fonction retourne `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.
 
@@ -64,7 +65,7 @@ Objet dont l’inégalité doit être vérifiée.
 *Oui*\
 Objet dont l’inégalité doit être vérifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet passé à *gauche* n’est pas égal à l’objet passé à *droite*; Sinon, **`false`** .
 
@@ -72,7 +73,7 @@ Objet dont l’inégalité doit être vérifiée.
 
 Cette fonction retourne `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.
 
@@ -108,7 +109,7 @@ Objet à comparer.
 *Oui*\
 Objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet passé à *gauche* est inférieur à l’objet passé à *droite*; Sinon, **`false`** .
 
@@ -116,7 +117,7 @@ Objet à comparer.
 
 Cette fonction permet de tester l'ordre des erreurs.
 
-## <a name="operatorltlt"></a><a name="op_ostream"></a>and&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_ostream"></a> and&lt;&lt;
 
 ```cpp
 template <class charT, class traits>

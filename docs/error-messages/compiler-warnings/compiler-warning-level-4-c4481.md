@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4481'
 title: Avertissement du compilateur (niveau 4) C4481
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: 853720b1c2476d9d8012916d42fe31dc884b16a7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 463df18090a4f6f632a80543576db4cb9048e754
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251295"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Avertissement du compilateur (niveau 4) C4481
 
 extension non standard utilisée : spécificateur de substitution’keyword'
 
-Un mot clé qui n’est pas dans le C++ standard, par exemple, l’un des spécificateurs de substitution qui fonctionne également sous/CLR.  Pour plus d'informations, consultez
+Un mot clé qui n’est pas dans la norme C++, par exemple, un des spécificateurs de substitution qui fonctionne également sous/CLR.  Pour plus d'informations, consultez
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [Spécificateurs de substitution](../../extensions/override-specifiers-cpp-component-extensions.md)
 

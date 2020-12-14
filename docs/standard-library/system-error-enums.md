@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur les éléments suivants : &lt; &gt; énumérations system_error'
 title: '&lt;system_error&gt;, enums'
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 63126c8fde91d44dbecf52cca1240c4f8b44b88a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259446"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt;, enums
 
-## <a name="errc"></a>ERRC,
+## <a name="errc"></a><a name="errc"></a> ERRC,
 
-Fournit des noms symboliques pour toutes les macros de code d’erreur définies par POSIX dans `<errno.h>`.
+Fournit des noms symboliques pour toutes les macros de code d’erreur définies par POSIX dans `<errno.h>` .
 
 ```cpp
 class errc {
@@ -103,9 +104,9 @@ class errc {
 
 ### <a name="remarks"></a>Notes
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
-Fournit des noms symboliques pour les conditions d’erreur dans \<iostream>. Peut être utilisée pour créer des objets [error_condition](../standard-library/error-condition-class.md) à comparer avec la valeur retournée par la fonction [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.
+Fournit des noms symboliques pour les conditions d’erreur dans \<iostream> . Peut être utilisée pour créer des objets [error_condition](../standard-library/error-condition-class.md) à comparer avec la valeur retournée par la fonction [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.
 
 ```cpp
 class io_errc {

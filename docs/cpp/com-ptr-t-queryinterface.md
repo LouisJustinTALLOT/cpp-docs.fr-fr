@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _com_ptr_t :: QueryInterface'
 title: _com_ptr_t::QueryInterface
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c6ff19227c920aade762af295942d8058a17ad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295339"
 ---
 # <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Appelle la fonction membre **QueryInterface** de `IUnknown` sur le pointeur d’interface encapsulé.
 
@@ -43,10 +44,10 @@ Pointeur d'interface brut.
 
 ## <a name="remarks"></a>Notes
 
-Appelle `IUnknown::QueryInterface` sur le pointeur d’interface encapsulé avec la `IID` spécifiée et retourne le pointeur d’interface brut résultant dans *p*. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
+Appelle `IUnknown::QueryInterface` sur le pointeur d’interface encapsulé avec le spécifié `IID` et retourne le pointeur d’interface brut résultant dans *p*. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_com_ptr_t, classe](../cpp/com-ptr-t-class.md)
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

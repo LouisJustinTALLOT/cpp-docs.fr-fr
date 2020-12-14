@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _aligned_offset_realloc'
 title: _aligned_offset_realloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: c719f62a089b1c233bac193f3431d0375af826eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0e61a1425d495b2ab7019eee9f42dbe26989312e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312463"
 ---
 # <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
@@ -64,13 +65,13 @@ Valeur d'alignement, qui doit être un entier à puissance 2.
 *offset*<br/>
 Décalage dans l'allocation de mémoire pour forcer l'alignement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_aligned_offset_realloc** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **null** si la taille est égale à zéro et l’argument de mémoire tampon n’est pas **null**, ou s’il n’y a pas assez de mémoire disponible pour développer le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
 
-**_aligned_offset_realloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**_aligned_offset_realloc** est marqué `__declspec(noalias)` et `__declspec(restrict)` , ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Comme [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** permet l’alignement d’une structure à un décalage dans la structure.
 
@@ -86,7 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|
 |**_aligned_offset_realloc**|\<malloc.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 

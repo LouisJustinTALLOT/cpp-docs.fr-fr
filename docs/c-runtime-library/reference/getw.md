@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getw'
 title: _getw
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f951305351b4693b9787b6eac926c719afd3f3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296535"
 ---
 # <a name="_getw"></a>_getw
 
@@ -52,7 +53,7 @@ int _getw(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_getw** retourne la valeur entière lue. Une valeur de retour de **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur **EOF** est également une valeur entière légitime, utilisez **feof** ou un pour vérifier une condition d’erreur **ou de fin** de fichier. Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 

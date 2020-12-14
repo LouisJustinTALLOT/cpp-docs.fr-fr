@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure Cdaodatabaseinfo,'
 title: CDaoDatabaseInfo, structure
 ms.date: 09/17/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 9c516821ce401f390538537233ec465f3f520458
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74304248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250983"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo, structure
 
-La structure `CDaoDatabaseInfo` contient des informations sur un objet de base de données défini pour les objets d’accès aux données (DAO). DAO 3,6 est la version finale et est considéré comme obsolète.
+La `CDaoDatabaseInfo` structure contient des informations sur un objet de base de données défini pour les objets d’accès aux données (DAO). DAO 3,6 est la version finale et est considéré comme obsolète.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,43 +49,43 @@ Indique si une source de données prend en charge les transactions (enregistreme
 Indique la version du moteur de base de données Microsoft Jet. Pour récupérer directement la valeur de cette propriété, appelez la fonction membre [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) de l’objet de base de données. Pour plus d’informations, consultez la rubrique « propriété de version » dans l’aide de DAO.
 
 *m_lCollatingOrder*<br/>
-Spécifie la séquence de l’ordre de tri dans le texte pour la comparaison ou le tri de chaînes. Les valeurs possibles incluent notamment :
+Spécifie la séquence de l’ordre de tri dans le texte pour la comparaison ou le tri de chaînes. Les valeurs possibles incluent :
 
-- `dbSortGeneral` utilisez l’ordre de tri général (anglais, français, allemand, portugais, italien et espagnol moderne).
+- `dbSortGeneral` Utilisez l’ordre de tri général (anglais, français, allemand, portugais, italien et espagnol moderne).
 
-- `dbSortArabic` utiliser l’ordre de tri arabe.
+- `dbSortArabic` Utilisez l’ordre de tri arabe.
 
-- `dbSortCyrillic` utiliser l’ordre de tri russe.
+- `dbSortCyrillic` Utilisez l’ordre de tri russe.
 
-- `dbSortCzech` utiliser l’ordre de tri tchèque.
+- `dbSortCzech` Utilisez l’ordre de tri tchèque.
 
-- `dbSortDutch` utiliser l’ordre de tri néerlandais.
+- `dbSortDutch` Utilisez l’ordre de tri néerlandais.
 
-- `dbSortGreek` utiliser l’ordre de tri grec.
+- `dbSortGreek` Utilisez l’ordre de tri grec.
 
-- `dbSortHebrew` utiliser l’ordre de tri hébreu.
+- `dbSortHebrew` Utilisez l’ordre de tri hébreu.
 
-- `dbSortHungarian` utiliser l’ordre de tri hongrois.
+- `dbSortHungarian` Utilisez l’ordre de tri hongrois.
 
-- `dbSortIcelandic` utiliser l’ordre de tri islandais.
+- `dbSortIcelandic` Utilisez l’ordre de tri islandais.
 
-- `dbSortNorwdan` utiliser l’ordre de tri norvégien ou danois.
+- `dbSortNorwdan` Utilisez l’ordre de tri norvégien ou danois.
 
-- `dbSortPDXIntl` utiliser l’ordre de tri Paradox international.
+- `dbSortPDXIntl` Utilisez l’ordre de tri Paradox international.
 
-- `dbSortPDXNor` utiliser l’ordre de tri norvégien ou danois Paradox.
+- `dbSortPDXNor` Utilisez l’ordre de tri norvégien ou danois Paradox.
 
-- `dbSortPDXSwe` utiliser l’ordre de tri de l’ordre de tri (suédois ou finnois).
+- `dbSortPDXSwe` Utilisez l’ordre de tri Paradox suédois ou finnois.
 
-- `dbSortPolish` utiliser l’ordre de tri polonais.
+- `dbSortPolish` Utilisez l’ordre de tri polonais.
 
-- `dbSortSpanish` utiliser l’ordre de tri espagnol.
+- `dbSortSpanish` Utilisez l’ordre de tri espagnol.
 
-- `dbSortSwedFin` utiliser l’ordre de tri suédois ou finnois.
+- `dbSortSwedFin` Utilisez l’ordre de tri suédois ou finnois.
 
-- `dbSortTurkish` utiliser l’ordre de tri turc.
+- `dbSortTurkish` Utilisez l’ordre de tri turc.
 
-- `dbSortUndefined` l’ordre de tri n’est pas défini ou est inconnu.
+- `dbSortUndefined` L’ordre de tri n’est pas défini ou est inconnu.
 
 Pour plus d’informations, consultez la rubrique « Personnalisation des paramètres du Registre Windows pour l’accès aux données » dans l’aide de DAO.
 
@@ -98,14 +99,14 @@ Fournit des informations sur la source d’une base de données ouverte. Pour pl
 
 La base de données est un objet DAO sous-jacent à un objet MFC de la classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Les références à Primary, Secondary et All ci-dessus indiquent comment les informations sont retournées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Les informations récupérées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) sont stockées dans une structure `CDaoDatabaseInfo`. Appelez `GetDatabaseInfo` pour l’objet `CDaoWorkspace` dans la collection de bases de données dans laquelle l’objet de base de données est stocké. `CDaoDatabaseInfo` définit également une fonction membre `Dump` dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un objet `CDaoDatabaseInfo`.
+Les informations récupérées par la fonction membre [CDaoWorkspace :: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) sont stockées dans une `CDaoDatabaseInfo` structure. Appelez `GetDatabaseInfo` pour l' `CDaoWorkspace` objet dans la collection de bases de données dans laquelle l’objet de base de données est stocké. `CDaoDatabaseInfo` définit également une `Dump` fonction membre dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoDatabaseInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoWorkspace, classe](../../mfc/reference/cdaoworkspace-class.md)<br/>
-[CDaoDatabase, classe](../../mfc/reference/cdaodatabase-class.md)
+[Structures, styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)<br/>
+[Classe CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)

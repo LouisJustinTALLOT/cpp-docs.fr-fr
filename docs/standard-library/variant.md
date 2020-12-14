@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : &lt; variante&gt;'
 title: '&lt;variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 994bd18a66dd78c8f6042afea10df69ff08a1487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312466"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
 Un objet variant contient et gère une valeur. Si le variant contient une valeur, le type de cette valeur doit être l’un des types d’arguments template donnés à la variante. Ces arguments template sont appelés alternatives.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<variant>
 
@@ -35,7 +36,7 @@ Un objet variant contient et gère une valeur. Si le variant contient une valeur
 |[>d’opérateur ](../standard-library/forward-list-operators.md#op_gt)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur à l’objet variant situé à droite.|
 |[>opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur ou égal à l’objet variant situé à droite.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -43,7 +44,7 @@ Un objet variant contient et gère une valeur. Si le variant contient une valeur
 |[get_if](../standard-library/variant-functions.md#get_if)|Obtient la variante d’un objet, le cas échéant.|
 |[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|Retourne **`true`** si un variant existe.|
 |[swap](../standard-library/variant-functions.md#swap)|Permute une **variante**.|
-|[consultez](../standard-library/variant-functions.md#visit)|Passe à la **variante**suivante.|
+|[consultez](../standard-library/variant-functions.md#visit)|Passe à la **variante** suivante.|
 
 ### <a name="classes"></a>Classes
 
