@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1123'
 title: Erreur des outils Éditeur de liens LNK1123
 ms.date: 12/29/2017
 f1_keywords:
 - LNK1123
 helpviewer_keywords:
 - LNK1123
-ms.openlocfilehash: 31fd634291bfb0af17348197ae8a6225ac490c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f9ee04a8e46c34e6ac5133c90488ed49619734d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281364"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Erreur des outils Éditeur de liens LNK1123
 
@@ -37,6 +38,6 @@ Les fichiers d'entrée doivent avoir le format COFF (Common Object File Format).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers .obj en tant qu’entrée dans l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
-[Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)<br/>
-[Informations de référence sur DUMPBIN](../../build/reference/dumpbin-reference.md)
+[. Fichiers obj en tant qu’entrée dans l’éditeur de liens](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
+[Référence EDITBIN](../../build/reference/editbin-reference.md)<br/>
+[Référence DUMPBIN](../../build/reference/dumpbin-reference.md)

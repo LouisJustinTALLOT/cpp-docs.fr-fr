@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : convertir la chaîne char * en tableau System :: Byte'
 title: 'Comment : convertir la chaîne char * en tableau System::Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 8b53fc329dad1421c7c30f673d0360703773ea65
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5f8e79d68b844ee78eb1792fd0acb051254972bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304361"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Comment : convertir une chaîne de \* char en tableau System :: Byte
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Comment : convertir une \* chaîne char en tableau System :: Byte
 
-La méthode la plus efficace pour convertir une chaîne de `char *` en tableau de <xref:System.Byte> consiste à utiliser <xref:System.Runtime.InteropServices.Marshal> classe.
+La méthode la plus efficace pour convertir une `char *` chaîne en <xref:System.Byte> tableau consiste à utiliser la <xref:System.Runtime.InteropServices.Marshal> classe.
 
 ## <a name="example"></a>Exemple
 

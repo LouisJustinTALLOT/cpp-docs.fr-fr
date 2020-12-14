@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Compiler le Code MFC et ATL à l’aide de - clr'
+description: 'En savoir plus sur : Comment : compiler du code MFC et ATL à l’aide de/CLR'
+title: 'Comment : compiler du code MFC et ATL à l’aide de-CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,71 +14,71 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a861dac3b4c4b454f4fbde4a500c3677ce0e25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304491"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Procédure : / CLR MFC et ATL Code à l’aide de la compilation
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Comment : compiler du code MFC et ATL à l'aide de /clr
 
 Cette rubrique explique comment compiler des programmes MFC et ATL existants pour cibler le Common Language Runtime.
 
-### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Pour compiler un fichier exécutable ou régulière MFC DLL MFC à l’aide de /clr
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Pour compiler une DLL MFC exécutable ou standard à l’aide de/CLR
 
-1. Cliquez sur le projet dans **l’Explorateur de solutions** puis cliquez sur **propriétés**.
+1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.
 
-1. Dans le **propriétés du projet** boîte de dialogue, développez le nœud regard **propriétés de Configuration** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.
+1. Dans la boîte de dialogue **Propriétés du projet** , développez le nœud en regard de **Propriétés de configuration** et sélectionnez **général**. Dans le volet droit, sous **paramètres par défaut du projet**, définissez prise en charge du Common **Language Runtime** pour la **prise en charge du Common Language Runtime (/CLR)**.
 
-   Dans le même volet, assurez-vous que **utilisation des MFC** a la valeur **utiliser les MFC dans une DLL partagée**.
+   Dans le même volet, assurez-vous que l' **utilisation de MFC** est définie pour **utiliser MFC dans une DLL partagée**.
 
-1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Assurez-vous que l’option **Format des informations de débogage** a la valeur **/Zi de base de données de programme** (pas **/Zi**).
+1. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Assurez-vous que le **format des informations de débogage** est défini sur **programmer la base de données/Zi** (et non **/Zi**).
 
-1. Sélectionnez le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.
+1. Sélectionnez le nœud **génération de code** . Affectez à **activer la régénération minimale** la valeur **non (/GM-)**. Affectez également la valeur **par défaut** aux **vérifications de base du runtime** .
 
-1. Sous **propriétés de Configuration**, sélectionnez **C/C++** , puis **génération de Code**. Assurez-vous que l’option **bibliothèque Runtime** a la valeur **DLL de débogage multithread (/ MDd)** ou **DLL multithread (/ MD)**.
+1. Sous **Propriétés de configuration**, sélectionnez **C/C++** , puis **génération de code**. Vérifiez que la **bibliothèque Runtime** est définie sur **dll de débogage multithread (/MDD)** ou **DLL multithread (/MD)**.
 
-1. Dans Stdafx.h, ajoutez la ligne suivante.
+1. Dans stdafx. h, ajoutez la ligne suivante.
 
     ```
     #using <System.Windows.Forms.dll>
     ```
 
-### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Pour compiler une DLL d’extension MFC à l’aide de /clr
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Pour compiler une DLL d’extension MFC à l’aide de/CLR
 
-1. Suivez les étapes décrites dans « To compilez un exécutable ou régulière MFC DLL MFC à l’aide de /clr ».
+1. Suivez les étapes de la section « pour compiler un fichier exécutable MFC ou une DLL MFC normale à l’aide de/CLR ».
 
-1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **en-têtes précompilés**. Définissez **Création/utilisation d’un en-tête précompilé** à **ne pas à l’aide d’en-têtes précompilés**.
+1. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **en-têtes précompilés**. Définissez **créer/utiliser un en-tête précompilé** pour **ne pas utiliser les en-têtes précompilés**.
 
-   Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+   En guise d’alternative, dans **Explorateur de solutions**, cliquez avec le bouton droit sur stdafx. cpp, puis cliquez sur **Propriétés**. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Définir la **compilation avec prise en charge du Common Language Runtime** pour **ne pas prendre en charge le Common Language Runtime**.
 
-1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **l’Explorateur de solutions**, cliquez sur le fichier, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **Explorateur de solutions**, cliquez avec le bouton droit sur le fichier, puis cliquez sur **Propriétés**. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Dans le volet droit, sous **paramètres par défaut du projet**, définissez **compilation avec prise en charge du Common Language Runtime** sur **aucune prise en charge du Common Language Runtime**.
 
-### <a name="to-compile-an-atl-executable-by-using-clr"></a>Pour compiler un exécutable ATL à l’aide de /clr
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Pour compiler un exécutable ATL à l’aide de/CLR
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le projet, puis cliquez sur **propriétés**.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.
 
-1. Dans le **propriétés du projet** boîte de dialogue, développez le nœud regard **propriétés de Configuration** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.
+1. Dans la boîte de dialogue **Propriétés du projet** , développez le nœud en regard de **Propriétés de configuration** et sélectionnez **général**. Dans le volet droit, sous **paramètres par défaut du projet**, définissez prise en charge du Common **Language Runtime** pour la **prise en charge du Common Language Runtime (/CLR)**.
 
-1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Assurez-vous que l’option **Format des informations de débogage** a la valeur **/Zi de base de données de programme** (pas **/Zi**).
+1. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Assurez-vous que le **format des informations de débogage** est défini sur **programmer la base de données/Zi** (et non **/Zi**).
 
-1. Sélectionnez le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.
+1. Sélectionnez le nœud **génération de code** . Affectez à **activer la régénération minimale** la valeur **non (/GM-)**. Affectez également la valeur **par défaut** aux **vérifications de base du runtime** .
 
-1. Sous **propriétés de Configuration**, sélectionnez **C/C++** , puis **génération de Code**. Assurez-vous que l’option **bibliothèque Runtime** a la valeur **DLL de débogage multithread (/ MDd)** ou **DLL multithread (/ MD)**.
+1. Sous **Propriétés de configuration**, sélectionnez **C/C++** , puis **génération de code**. Vérifiez que la **bibliothèque Runtime** est définie sur **dll de débogage multithread (/MDD)** ou **DLL multithread (/MD)**.
 
-1. Pour chaque fichier généré par MIDL (fichiers C), cliquez sur le fichier dans **l’Explorateur de solutions** puis cliquez sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+1. Pour chaque fichier généré par MIDL (fichiers C), cliquez avec le bouton droit sur le fichier dans **Explorateur de solutions** puis cliquez sur **Propriétés**. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Définir la **compilation avec prise en charge du Common Language Runtime** pour **ne pas prendre en charge le Common Language Runtime**.
 
-### <a name="to-compile-an-atl-dll-by-using-clr"></a>Pour compiler une DLL ATL à l’aide de /clr
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Pour compiler une DLL ATL à l’aide de/CLR
 
-1. Suivez les étapes décrites dans la section « pour compiler un exécutable ATL à l’aide de /clr ».
+1. Suivez les étapes de la section « pour compiler un exécutable ATL à l’aide de/CLR ».
 
-1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **en-têtes précompilés**. Définissez **Création/utilisation d’un en-tête précompilé** à **ne pas à l’aide d’en-têtes précompilés**.
+1. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **en-têtes précompilés**. Définissez **créer/utiliser un en-tête précompilé** pour **ne pas utiliser les en-têtes précompilés**.
 
-   Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+   En guise d’alternative, dans **Explorateur de solutions**, cliquez avec le bouton droit sur stdafx. cpp, puis cliquez sur **Propriétés**. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Définir la **compilation avec prise en charge du Common Language Runtime** pour **ne pas prendre en charge le Common Language Runtime**.
 
-1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **l’Explorateur de solutions**, cliquez sur le fichier, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **Explorateur de solutions**, cliquez avec le bouton droit sur le fichier, puis cliquez sur **Propriétés**. Sous **Propriétés de configuration**, développez le nœud en regard de **C/C++** , puis sélectionnez **général**. Dans le volet droit, sous **paramètres par défaut du projet**, définissez **compilation avec prise en charge du Common Language Runtime** sur **aucune prise en charge du Common Language Runtime**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)
+[Assemblys mixtes (natifs et managés)](../dotnet/mixed-native-and-managed-assemblies.md)

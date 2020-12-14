@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : implémentation d’un point de connexion'
 title: Implémenter un point de connexion
 ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: bee04d28036ca5a2dfb0f4913adf39f1fdcca565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281156"
 ---
 # <a name="implement-a-connection-point"></a>Implémenter un point de connexion
 
@@ -34,7 +35,7 @@ Un objet connectable (c’est-à-dire une source) peut afficher un point de conn
 
 1. Sélectionnez les interfaces de points de connexion à implémenter dans les bibliothèques de types appropriées et sélectionnez **Terminer**.
 
-1. Dans l’affichage de classes, examinez les classes proxy créées pour chaque point de connexion. Les classes s’affichent sous la forme CProxy*NomInterface*\<T> et sont dérivées [d’IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
+1. Dans l’affichage de classes, examinez les classes proxy créées pour chaque point de connexion. Les classes apparaissent comme CProxy *NomInterface* \<T> et sont dérivées de [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
 
 1. Double-cliquez sur la classe du point de connexion pour afficher sa définition.
 
@@ -67,7 +68,7 @@ Pour plus d’informations, consultez [ATL, points de connexion](../atl/atl-conn
 
   Affiche les bibliothèques de types disponibles contenant les définitions d’interface pour lesquelles vous pouvez implémenter des points de connexion. Sélectionnez le bouton de sélection pour rechercher un fichier contenant la bibliothèque de types à utiliser.
 
-- **Emplacement**
+- **Lieu**
 
   Affiche l’emplacement de la bibliothèque de types actuellement sélectionnée dans la liste **Bibliothèques de types disponibles**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : manipulation des listes d’images'
 title: Manipulation de listes d'images
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: cb7376241febd6bd1545cd183147e14a15313820
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dc2b136e1aed5266ea7cc910cf10839f59dfcf00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281130"
 ---
 # <a name="manipulating-image-lists"></a>Manipulation de listes d'images
 
@@ -30,4 +31,4 @@ Les fonctions membres [GetSafeHandle](reference/cimagelist-class.md#getsafehandl
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CImageList](using-cimagelist.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

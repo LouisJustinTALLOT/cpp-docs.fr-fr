@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : cwait'
 title: cwait
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwait function
 ms.assetid: 1ad1ab19-02e5-4155-94ca-f02c2d5a90a6
-ms.openlocfilehash: 94127e97add8a38688f24fda09700c8ea8ec8f0c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 974a0bb474376cb54baca513d9f53a686aae5f0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304543"
 ---
 # <a name="cwait"></a>cwait
 

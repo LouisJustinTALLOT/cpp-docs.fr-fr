@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4621'
 title: Avertissement du compilateur (niveau 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: a48934fd097f9039988db32511ca87cbd66b22d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72e4adbb45488b200ff67f1d0b225591f9ea1a6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281468"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Avertissement du compilateur (niveau 1) C4621
 
@@ -19,7 +20,7 @@ aucune forme suffixée de’operator--'trouvée pour le type’type', à l’aid
 
 Aucun opérateur de décrémentation postfix n’a été défini pour le type donné. Le compilateur a utilisé l’opérateur de préfixe surchargé.
 
-Pour éviter cet avertissement, vous pouvez définir un opérateur `--` postfix. Créez une version à deux arguments de l’opérateur `--` comme indiqué ci-dessous :
+Pour éviter cet avertissement, vous pouvez définir un opérateur `--` postfix. Créez une version à deux arguments de l' `--` opérateur, comme indiqué ci-dessous :
 
 ```cpp
 // C4621.cpp
