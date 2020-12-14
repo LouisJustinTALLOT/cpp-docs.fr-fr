@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : notifications à partir d’un contrôle RichEdit'
 title: Notifications d'un contrôle RichEdit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: 206fc02088f6531338bf2aa4cf272a1da096bae4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 83f76c2b0bf8c27d30d8c113fc1607f3cbd718fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254792"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notifications d'un contrôle RichEdit
 
@@ -33,4 +34,4 @@ Les paragraphes suivants répertorient plusieurs notifications spécifiques et l
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CRichEditCtrl](using-cricheditctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

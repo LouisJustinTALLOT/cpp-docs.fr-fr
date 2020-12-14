@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : avertissement des outils Éditeur de liens LNK4204'
 title: Avertissement des outils Éditeur de liens LNK4204
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4204
 ms.assetid: 14adda20-0cbe-407b-90f6-9f81c93530e2
-ms.openlocfilehash: 98c53c9b998e9bd544c1cc72bd2b0c3fd2b0a418
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e61967a7b3bf42eb2c084d73c7c0aa9485c47e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294195"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Avertissement des outils Éditeur de liens LNK4204
 

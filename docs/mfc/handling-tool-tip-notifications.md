@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des notifications d’info-bulle'
 title: Gestion des notifications pour les info-bulles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 41e3dbfc2269f5fbf3c12dc00c19f8a2253fd16a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02bb1fb0760cf91c76e3c3be75fe097d5d57b71e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254857"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestion des notifications pour les info-bulles
 
@@ -46,4 +47,4 @@ Pour obtenir un exemple de fonction de gestionnaire et des informations supplém
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CToolBarCtrl](using-ctoolbarctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

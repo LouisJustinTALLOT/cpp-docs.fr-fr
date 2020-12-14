@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : arrière-plan OLE : conteneurs et serveurs'
 title: 'Arrière-plan OLE : conteneurs et serveurs'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 7c3130ab9d8dff6551ef0ecbec43e5422dbdc4c4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3ea578ce14165b16e84520b22bc545fc5d2a8882
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254773"
 ---
 # <a name="ole-background-containers-and-servers"></a>Arrière-plan OLE : conteneurs et serveurs
 
-Une application conteneur est une application qui peut incorporer des éléments incorporés ou liés dans ses propres documents. Les documents gérés par une application de conteneur doivent être en mesure de stocker et d’afficher des composants de document OLE, ainsi que les données créées par l’application elle-même. Une application conteneur doit également permettre aux utilisateurs d’insérer de nouveaux éléments ou de modifier des éléments existants en activant des applications serveur si nécessaire. Les spécifications de l’interface utilisateur d’une application de conteneur sont répertoriées dans l’article [conteneurs : problèmes d’interface utilisateur](containers-user-interface-issues.md).
+Une application conteneur est une application qui peut incorporer des éléments incorporés ou liés dans ses propres documents. Les documents gérés par une application de conteneur doivent être en mesure de stocker et d’afficher des composants de document OLE, ainsi que les données créées par l’application elle-même. Une application conteneur doit également permettre aux utilisateurs d’insérer de nouveaux éléments ou de modifier des éléments existants en activant des applications serveur si nécessaire. Les spécifications de l’interface utilisateur d’une application conteneur sont répertoriées dans l’article [conteneurs : User-Interface problèmes](containers-user-interface-issues.md).
 
 Une application serveur ou une application de composant est une application qui peut créer des composants de document OLE pour une utilisation par les applications de conteneur. Les applications serveur prennent généralement en charge le glisser-déplacer ou la copie de leurs données dans le presse-papiers afin qu’une application conteneur puisse insérer les données sous la forme d’un élément incorporé ou lié. Une application peut être à la fois un conteneur et un serveur.
 

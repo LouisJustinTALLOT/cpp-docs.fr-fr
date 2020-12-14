@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des notifications de personnalisation'
 title: Gestion des notifications de personnalisation
 ms.date: 11/04/2016
 f1_keywords:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b5e104f118ac0eeff96965692615ce9143c5c178
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254961"
 ---
 # <a name="handling-customization-notifications"></a>Gestion des notifications de personnalisation
 
@@ -217,4 +218,4 @@ Les notifications envoyées par la barre d’outils sont les suivantes :
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CToolBarCtrl](using-ctoolbarctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

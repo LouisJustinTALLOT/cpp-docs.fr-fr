@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __readpmc'
 title: __readpmc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ceff8522d4895f69a47cf429e59d267c671e3a66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294130"
 ---
 # <a name="__readpmc"></a>__readpmc
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère l' `rdpmc` instruction, qui lit le compteur d’analyse des performances spécifié par *Counter*.
 
@@ -31,26 +32,26 @@ unsigned __int64 __readpmc(
 
 ### <a name="parameters"></a>Paramètres
 
-*)* \
+*)*\
 dans Compteur de performance à lire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Valeur du compteur de performances spécifié.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__readpmc`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 L’intrinsèque est disponible uniquement en mode noyau, et la routine n’est disponible qu’en tant qu’intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
