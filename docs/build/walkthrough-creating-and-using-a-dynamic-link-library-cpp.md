@@ -1,19 +1,18 @@
 ---
 title: 'Procédure pas à pas : création et utilisation de votre propre bibliothèque de liens dynamiques (C++)'
 description: Utilisez C++ pour créer une bibliothèque de liens dynamiques (DLL) Windows dans Visual Studio.
-ms.custom:
-- walkthrough
-- contperfq2
+ms.custom: contperf-fy21q2
+ms.topic: tutorial
 ms.date: 08/22/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
-ms.openlocfilehash: ca9aebd7103d36918940e52638b3c2cb52612c25
-ms.sourcegitcommit: 43a6ff739516dff62fee521d401eb4b1201cea8c
+ms.openlocfilehash: 985d187b88780c8b877f264fe76c1cdcac2a15db
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412152"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : création et utilisation de votre propre bibliothèque de liens dynamiques (C++)
 
@@ -516,7 +515,7 @@ Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque dire
 
 1. Dans la zone de liste déroulante **configuration** , sélectionnez **toutes les configurations** si elle n’est pas déjà sélectionnée. Elle garantit que toutes les modifications de propriété s’appliquent aux versions Debug et Release.
 
-1. Dans le volet gauche, sélectionnez **Propriétés de configuration** entrée de l'  >  **éditeur de liens**  >  **Input**. Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour les **Dépendances supplémentaires**, puis choisissez **Modifier**.
+1. Dans le volet gauche, sélectionnez **Propriétés de configuration** entrée de l'  >  **éditeur de liens**  >  . Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour les **Dépendances supplémentaires**, puis choisissez **Modifier**.
 
    ![Modifier la propriété dépendances supplémentaires](media/mathclient-additional-dependencies-property.png "Modifier la propriété dépendances supplémentaires")
 
