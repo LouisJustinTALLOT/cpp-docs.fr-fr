@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Type-Safe l’accès aux contrôles dans une boîte de dialogue'
 title: Accès de type sécurisé aux contrôles d'une boîte de dialogue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c8b3482ee723e95142c9cd19fa6068f32f4ebd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263827"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Accès de type sécurisé aux contrôles d'une boîte de dialogue
 
@@ -25,7 +26,7 @@ Vous disposez de deux méthodes pour établir une connexion entre un contrôle d
 
 - [Sans Assistants Code](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 
-- [Aide des Assistants Code](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+- [Avec des Assistants Code](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 
 ## <a name="see-also"></a>Voir aussi
 

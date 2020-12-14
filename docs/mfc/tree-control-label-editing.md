@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : modification des étiquettes de contrôle d’arborescence'
 title: Modification des étiquettes de contrôles d’arborescence
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 4b53d2c8e5a26a4dc37dfd7ae0710748bcd27bf6
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b471b2ce9773ec86b1e4f94e766d3428fef456fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264009"
 ---
 # <a name="tree-control-label-editing"></a>Modification des étiquettes de contrôles d’arborescence
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérations de glisser-déplacer pour le contrôle d’arborescence'
 title: Opérations de glisser-déposer pour le contrôle d’arborescence
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5d2c5aa511844a3d7cbe64d9a15f8ffb46046b29
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 000255ad4aa6801cbe27676603a3f42d0abbef30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264178"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Opérations de glisser-déposer pour le contrôle d’arborescence
 
-Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie une notification lorsque l’utilisateur commence à faire glisser un élément. Le contrôle envoie un message de notification [TVN_BEGINDRAG](/windows/win32/Controls/tvn-begindrag) lorsque l’utilisateur commence à faire glisser un élément avec le bouton gauche de la souris et un message de notification [TVN_BEGINRDRAG](/windows/win32/Controls/tvn-beginrdrag) lorsque l’utilisateur commence à faire glisser le bouton droit. Vous pouvez empêcher un contrôle d’arborescence d’envoyer ces notifications en donnant au contrôle d’arborescence le style TVS_DISABLEDRAGDROP.
+Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envoie une notification lorsque l’utilisateur commence à faire glisser un élément. Le contrôle envoie un message de notification [TVN_BEGINDRAG](/windows/win32/Controls/tvn-begindrag) lorsque l’utilisateur commence à faire glisser un élément avec le bouton gauche de la souris et un message de notification [TVN_BEGINRDRAG](/windows/win32/Controls/tvn-beginrdrag) lorsque l’utilisateur commence à faire glisser le bouton droit. Vous pouvez empêcher un contrôle d’arborescence d’envoyer des notifications en lui attribuant le style TVS_DISABLEDRAGDROP.
 
 Vous obtenez une image à afficher pendant une opération glisser en appelant la fonction membre [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) . L’arborescence crée une image bitmap de glissement basée sur le nom de l’élément déplacé. Ensuite, le contrôle d’arborescence crée une liste d’images, y ajoute le bitmap et retourne un pointeur vers l’objet [CImageList](../mfc/reference/cimagelist-class.md) .
 
