@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : enum, classe (C++/CLI et C++/CX)'
 title: classe enum (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 309a1defa7288ec13ca058cc366d9cb8deac01ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220667"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe enum (C++/CLI et C++/CX)
 
@@ -48,7 +49,7 @@ Nom de l’énumération.
 *enumerator-list*<br/>
 Liste délimitée par des virgules de noms d’énumérateurs.
 
-La valeur de chaque énumérateur est une expression constante qui est définie implicitement par le compilateur, ou explicitement par la notation, *enumerator* `=` *expression constante*d’énumérateur. Par défaut, la valeur du premier énumérateur est égale à zéro si elle est définie implicitement. La valeur de chaque énumérateur défini implicitement suivant est égale à la valeur de l’énumérateur précédent + 1.
+La valeur de chaque énumérateur est une expression constante qui est définie implicitement par le compilateur, ou explicitement par la notation,  `=` *expression constante* d’énumérateur. Par défaut, la valeur du premier énumérateur est égale à zéro si elle est définie implicitement. La valeur de chaque énumérateur défini implicitement suivant est égale à la valeur de l’énumérateur précédent + 1.
 
 *var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
@@ -65,7 +66,7 @@ Notez que le compilateur émet des messages d’erreur si l’expression constan
 
 - Si *underlying-type* a la valeur `char16`et que la valeur d’énumération est comprise entre 0xD800 et 0xDFFF, la valeur peut être représentée. Cependant, la valeur est logiquement incorrecte, car elle représente la moitié d’une paire de substitution Unicode et ne doit pas apparaître de façon isolée.
 
-### <a name="requirements"></a>Exigences
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -174,7 +175,7 @@ Pour plus d’informations sur les énumérations CLR, consultez :
 
 - [Type sous-jacent d’une énumération](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>Exigences
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

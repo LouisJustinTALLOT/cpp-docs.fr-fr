@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de mappage d’interface et de délégué
 title: Délégués et macros de mappage d’interface (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 01f5cbfb1f751823d218761410bc9091b73cb0a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 222625514fa0d6d1d683a6ee4098812298f7ed72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220147"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Macros de délégué et de mappage d’interface
 
@@ -47,7 +48,7 @@ Classe dans laquelle le contrôle managé est hébergé.
 
 Cette macro marque le début d’une liste d’entrées de délégué, qui composent un mappage de délégué. Pour obtenir un exemple de la façon dont cette macro est utilisée, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** msclr\event.h
 
@@ -75,7 +76,7 @@ Pour chaque interface implémentée, il existe un ou plusieurs INTERFACE_PART ap
 
 Pour plus d’informations sur les cartes d’interface, consultez la [note technique 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -102,7 +103,7 @@ Pour plus d’informations, consultez [Comment : ajouter le routage des command
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -130,7 +131,7 @@ Ce délégué inscrit des méthodes de rappel avec un message de commande de mis
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -148,7 +149,7 @@ END_DELEGATE_MAP();
 
 Cette macro marque la fin d’une liste d’entrées de délégué qui composent un mappage de délégué. Pour obtenir un exemple de la façon dont cette macro est utilisée, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** msclr\event.h
 
@@ -166,7 +167,7 @@ END_INTERFACE_MAP( )
 
 Pour plus d’informations sur les cartes d’interface, consultez la [note technique 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -182,7 +183,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>Paramètres
 
-*MEMBER*<br/>
+*MEMBRE*<br/>
 Méthode de gestionnaire d’événements à attacher au contrôle.
 
 *ARG0*<br/>
@@ -205,7 +206,7 @@ BEGIN_DELEGATE_MAP(CMyView)
 END_DELEGATE_MAP()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** msclr\event.h
 
@@ -234,7 +235,7 @@ Elle vous permet de mapper un IID à un membre de la classe indiquée par *les* 
 
 Pour plus d’informations sur les cartes d’interface, consultez la [note technique 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -253,12 +254,12 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 *DISPOSER*<br/>
 Type du délégué de gestionnaire d’événements managé, tel que [EventHandler](/dotnet/api/system.eventhandler).
 
-*MEMBER*<br/>
+*MEMBRE*<br/>
 Nom de la méthode de gestionnaire d’événements à attacher au contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Cette macro crée un délégué de gestionnaire d’événements managés de type *Delegate* et du *membre*Name. Le délégué de gestionnaire d’événements managé permet à une classe native de gérer des événements managés.
+Cette macro crée un délégué de gestionnaire d’événements managés de type *Delegate* et du *membre* Name. Le délégué de gestionnaire d’événements managé permet à une classe native de gérer des événements managés.
 
 ### <a name="example"></a>Exemple
 
@@ -274,7 +275,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** msclr\event.h
 

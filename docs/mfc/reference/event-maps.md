@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les tables d’événements
 title: Tables d'événements
 ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3a6e949a4dc40927fc8946610707fbb404a400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219848"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -63,7 +64,7 @@ Utilisez la macro DECLARE_EVENT_MAP à la fin de votre déclaration de classe. E
 
 Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** afxctl. h
 
@@ -89,7 +90,7 @@ Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres p
 
 Pour plus d’informations sur les tables d’événements et la macro BEGIN_EVENT_MAP, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** afxctl. h
 
@@ -101,7 +102,7 @@ Utilisez la macro END_EVENT_MAP pour terminer la définition de votre table d’
 END_EVENT_MAP()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** afxctl. h
 
@@ -143,7 +144,7 @@ Les `VTS_` constantes et leurs significations sont les suivantes :
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|DEVISE|
 |VTS_DATE|DATE|
-|VTS_BSTR|**`const`**__caractère \* __|
+|VTS_BSTR|**`const`**__caractère \*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -167,7 +168,7 @@ Les `VTS_` constantes et leurs significations sont les suivantes :
 > [!NOTE]
 > Des constantes variant supplémentaires ont été définies pour tous les types variant, à l’exception de VTS_FONT et VTS_PICTURE, qui fournissent un pointeur vers la constante de données Variant. Ces constantes sont nommées à l’aide de la `VTS_Pconstantname` Convention. Par exemple, VTS_PCOLOR est un pointeur vers une constante VTS_COLOR.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** afxctl. h
 
@@ -207,7 +208,7 @@ spécifie une liste contenant un entier 32 bits représentant une valeur de coul
 
 Pour obtenir la liste des `VTS_` constantes, consultez [EVENT_CUSTOM](#event_custom).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** afxctl. h
 
@@ -240,9 +241,9 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Les valeurs des paramètres *lpMsg*, *hwndParent*et *lpRect* sont extraites des paramètres correspondants de la `IOleObject::DoVerb` fonction membre.
+Les valeurs des paramètres *lpMsg*, *hwndParent* et *lpRect* sont extraites des paramètres correspondants de la `IOleObject::DoVerb` fonction membre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** AFXOLE. h
 
@@ -268,7 +269,7 @@ L’index de verbe standard est de la forme `OLEIVERB_` , suivi d’une action. 
 
 Pour obtenir une description du prototype de fonction à utiliser comme paramètre *memberFxn* , consultez [ON_OLEVERB](#on_oleverb) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête** AFXOLE. h
 

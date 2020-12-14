@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes générées, Assistant Application MFC'
 title: Classes générées, Assistant Application MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 472ceade4dbb5d99194098d82b7effc40092b5d1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 38952f2cb186877c58e8e4823dbad31670c79742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219783"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Classes générées, Assistant Application MFC
 
@@ -19,11 +20,11 @@ Cette rubrique répertorie les noms des classes de base et des fichiers génér�
 
 - **Classes générées**
 
-   Noms des classes créées pour le projet. Par défaut, les noms sont basés sur le nom du projet. Le projet MFC par défaut crée une classe C*ProjName*View, une classe c*ProjName*App, une classe c*ProjName*doc, une classe CMainFrame et une classe CChildFrame. Toutes les autres valeurs de cette page contiennent des informations sur la classe actuellement sélectionnée dans la liste **classes générées** .
+   Noms des classes créées pour le projet. Par défaut, les noms sont basés sur le nom du projet. Le projet MFC par défaut crée une classe C *ProjName* View, une classe c *ProjName* App, une classe c *ProjName* doc, une classe CMainFrame et une classe CChildFrame. Toutes les autres valeurs de cette page contiennent des informations sur la classe actuellement sélectionnée dans la liste **classes générées** .
 
    Pour modifier un nom de classe, utilisez la zone de texte nom de la **classe** .
 
-- **Nom de classe**
+- **Nom de la classe**
 
    Nom de la classe actuellement sélectionnée dans la liste **classes générées** . Si la zone est active, vous pouvez modifier le nom de la classe. Lorsque vous modifiez le focus à partir de la zone nom de la **classe** , toute modification apportée au nom de la classe sélectionnée apparaît dans la liste **classes générées** .
 

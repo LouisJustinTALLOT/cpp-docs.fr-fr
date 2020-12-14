@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les fonctions bitmap grises et tramées'
 title: fonctions d'image bitmap tramée et grise
 ms.date: 11/19/2018
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20391f0ee7227827e1d9d6e18c2379be1fd43612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219731"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 
@@ -80,7 +81,7 @@ Une image bitmap dessinée avec `AfxDrawGrayBitmap` a l’apparence d’un contr
 
 [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -116,7 +117,7 @@ Une image bitmap copiée avec `AfxGetGrayBitmap` a l’apparence d’un contrôl
 
 [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -164,7 +165,7 @@ Le bitmap source est dessiné sur le DC de destination avec un modèle à damier
 
 [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -204,7 +205,7 @@ La bitmap source est copiée dans le bitmap de destination avec un modèle à da
 
 [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3379'
 title: Erreur du compilateur C3379
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 9d99214f3ad7e7db1edc215d94c98e9cf9ec4ca2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 622a1327eb84d83fa24d8a084e3266183c669120
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220732"
 ---
 # <a name="compiler-error-c3379"></a>Erreur du compilateur C3379
 
 'classe' : une classe imbriquée ne peut pas avoir de spécificateur d’accès à l’assembly dans le cadre de sa déclaration
 
-En cas d’application à un type managé, tel qu’une classe ou un struct, les mots clés [public](../../cpp/public-cpp.md) et [Private](../../cpp/private-cpp.md) indiquent si la classe sera exposée par le biais des métadonnées de l’assembly. `public` ou `private` ne peuvent pas être appliqués à une classe imbriquée, ce qui hérite de l’accès à l’assembly de la classe englobante.
+En cas d’application à un type managé, tel qu’une classe ou un struct, les mots clés [public](../../cpp/public-cpp.md) et [Private](../../cpp/private-cpp.md) indiquent si la classe sera exposée par le biais des métadonnées de l’assembly. `public` ou `private` ne peuvent pas être appliqués à une classe imbriquée, qui héritera de l’accès à l’assembly de la classe englobante.
 
-En cas d’utilisation avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), les mots clés `ref` et `value` indiquent qu’une classe est managée (consultez [classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+En cas d’utilisation avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), les `ref` `value` Mots clés et indiquent qu’une classe est managée (consultez [classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 L’exemple suivant génère l’C3379 :
 
