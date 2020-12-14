@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _heapset'
 title: _heapset
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 5bf27ac8287e785b1c799565781842db54edee4d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 628babf8d49e22d75498aeb9b919283bb7257c1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229871"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -71,7 +72,7 @@ La fonction `_heapset` affiche les emplacements de mémoire disponible ou les n�
 
 `_heapset` vérifie la cohérence minimale sur le tas, puis définit chaque octet des entrées libres du tas sur la valeur `fill` . Cette valeur connue indique les emplacements de mémoire du tas qui contiennent des nœuds libres et ceux qui contiennent des données qui ont été écrites accidentellement dans de la mémoire libérée. Si le système d’exploitation ne prend pas en charge `_heapset`(par exemple Windows 98), la fonction resururne `_HEAPOK` et définit `errno` sur `ENOSYS`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

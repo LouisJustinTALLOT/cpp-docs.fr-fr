@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/Yu` (utiliser un fichier d’en-tête précompilé)'
 title: /Yu (Utiliser un fichier d’en-tête précompilé)
 ms.date: 07/31/2020
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 8cccce39949f23e4ceb72807ecaef3597ab733c4
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 7076a3a4dd9183a3a0072fa6211acbb0b95a4865
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229961"
 ---
-# <a name="yu-use-precompiled-header-file"></a>`/Yu`(Utiliser le fichier d’en-tête précompilé)
+# <a name="yu-use-precompiled-header-file"></a>`/Yu` (Utiliser le fichier d’en-tête précompilé)
 
 Indique au compilateur d’utiliser un fichier d’en-tête précompilé ( *`.pch`* ) existant dans la compilation actuelle.
 
@@ -35,7 +36,7 @@ Nom d’un fichier d’en-tête, qui est inclus dans le fichier source à l’ai
 
 Le nom du fichier include doit être le même pour l' **`/Yc`** option qui crée l’en-tête précompilé et pour toute **`/Yu`** option ultérieure qui indique l’utilisation de l’en-tête précompilé.
 
-Pour **`/Yc`** , *filename* spécifie le point auquel la précompilation s’arrête ; le compilateur précompile tout le *filename* code par le biais du nom de fichier et nomme l’en-tête précompilé résultant en utilisant le nom de base du fichier include et une extension de *`.pch`* .
+Pour **`/Yc`** , *filename* spécifie le point auquel la précompilation s’arrête ; le compilateur précompile tout le  code par le biais du nom de fichier et nomme l’en-tête précompilé résultant en utilisant le nom de base du fichier include et une extension de *`.pch`* .
 
 Le *`.pch`* fichier doit avoir été créé à l’aide de **`/Yc`** .
 
@@ -47,13 +48,13 @@ Lorsque vous spécifiez l' **`/Yu`** option sans nom de fichier, votre programme
 
 Si vous spécifiez l' **`/Yu`** option sans nom de fichier et que vous ne parvenez pas à spécifier un `hdrstop` pragma, un message d’erreur est généré et la compilation échoue.
 
-Si les **`/Yc`** options de _nom de_ fichier et de fichier **`/Yu`** _filename_ se produisent sur la même ligne de commande et qu’elles référencent le même nom de fichier, le **`/Yc`** _nom_ de fichier est prioritaire, précompilation de tout le code jusqu’au fichier nommé inclus. Cette fonctionnalité simplifie l’écriture de makefiles.
+Si les **`/Yc`** options de _nom de_ fichier et de fichier **`/Yu`**  se produisent sur la même ligne de commande et qu’elles référencent le même nom de fichier, le **`/Yc`** _nom_ de fichier est prioritaire, précompilation de tout le code jusqu’au fichier nommé inclus. Cette fonctionnalité simplifie l’écriture de makefiles.
 
 Étant donné que les *`.pch`* fichiers contiennent des informations sur l’environnement de l’ordinateur et les informations d’adresse mémoire sur le programme, vous devez uniquement utiliser un *`.pch`* fichier sur l’ordinateur sur lequel il a été créé.
 
 Pour plus d’informations sur les en-têtes précompilés, consultez :
 
-- [`/Y`(En-têtes précompilés)](y-precompiled-headers.md)
+- [`/Y` (En-têtes précompilés)](y-precompiled-headers.md)
 
 - [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)
 
@@ -63,7 +64,7 @@ Pour plus d’informations sur les en-têtes précompilés, consultez :
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++**  >  **en-têtes précompilés** C/C++.
+1. Sélectionnez la page de propriétés **Propriétés de configuration**  >    >  **en-têtes précompilés** C/C++.
 
 1. Modifiez la propriété d' **en-tête précompilé** , la propriété **créer/utiliser PCH par le fichier** ou la propriété d' **en-tête précompilé créer/utiliser** .
 

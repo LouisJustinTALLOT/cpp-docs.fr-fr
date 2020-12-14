@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les éléments suivants:/TLBOUT (Name. Fichier TLB)
 title: /TLBOUT (Nommer le fichier .TLB)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4e99f3b5a036ddbc424732e771f7bab27aeb228d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230001"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nommer le fichier .TLB)
 
@@ -29,16 +30,16 @@ ms.locfileid: "91509332"
 *path*<br/>
 Spécification de chemin d’accès absolu ou relatif pour l’emplacement où le fichier. tlb doit être créé.
 
-*extension*<br/>
+*filename*<br/>
 Spécifie le nom du fichier. tlb créé par le compilateur MIDL. Aucune extension de fichier n’est utilisée. Spécifiez *filename*. tlb si vous souhaitez une extension. tlb.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’option/TLBOUT spécifie le nom et l’extension du fichier. tlb.
 
 Le compilateur MIDL est appelé par l’éditeur de liens MSVC lors de la liaison de projets qui ont l’attribut [module](../../windows/attributes/module-cpp.md) .
 
-Si/TLBOUT n’est pas spécifié, le fichier. tlb obtiendra son nom à partir du *nom*de fichier [/Idlout](idlout-name-midl-output-files.md) . Si/IDLOUT n’est pas spécifié, le fichier. tlb sera appelé vc70. tlb.
+Si/TLBOUT n’est pas spécifié, le fichier. tlb obtiendra son nom à partir du *nom* de fichier [/Idlout](idlout-name-midl-output-files.md) . Si/IDLOUT n’est pas spécifié, le fichier. tlb sera appelé vc70. tlb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 

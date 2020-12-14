@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/TC,/TP,/TC,/TP (spécifier le type de fichier source)
 title: /Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 ms.date: 01/11/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: fa35249983284261252c8ada65e79ed1cb6ec79a
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 23aed145c8dd9ac36f26bcebe2ea2aab1c39e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230027"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 
@@ -29,7 +30,7 @@ L’option **/TC** spécifie que son argument FileName est un fichier source C, 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Tc** _Nom de fichier_ /TC\
+>  _Nom de fichier_ /TC\
 > **/TP** _NomFichier_\
 > **/TC**\
 > **/TP**
@@ -39,7 +40,7 @@ L’option **/TC** spécifie que son argument FileName est un fichier source C, 
 *extension*<br/>
 Fichier source C ou C++.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, **CL** suppose que les fichiers avec l’extension. c sont des fichiers sources c et des fichiers avec l’extension. cpp ou. cxx sont des fichiers sources C++.
 
@@ -49,7 +50,7 @@ Lorsque l’option **TC** ou **TC** est spécifiée, toute spécification de l�
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés**avancé** des **Propriétés** > de configuration**C/C++** > .
+1. Sélectionnez la page de propriétés avancé des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **compiler en tant que** . Choisissez **OK** ou **appliquer** pour appliquer vos modifications.
 
@@ -70,4 +71,4 @@ Cette ligne de commande CL spécifie que TEST1. c, TEST2. cxx, TEST3. non et TES
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

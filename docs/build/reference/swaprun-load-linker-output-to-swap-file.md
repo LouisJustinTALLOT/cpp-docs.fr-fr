@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/SWAPRUN (charger la sortie de l’éditeur de liens dans le fichier d’échange)
 title: /SWAPRUN (Charger la sortie de l'Éditeur de liens dans le fichier d'échange)
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f62d5e32432a2c738b7782c0fbf0cd4fd76a7f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230209"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (Charger la sortie de l'Éditeur de liens dans le fichier d'échange)
 
@@ -30,23 +31,23 @@ ms.locfileid: "62317547"
 
 ## <a name="remarks"></a>Notes
 
-Cette option indique le système d’exploitation pour la première copie de l’éditeur de liens de sortie dans un fichier d’échange et puis exécuter l’image à partir de là. Il s’agit d’une fonctionnalité de Windows NT 4.0 (et versions ultérieure).
+L’option/SWAPRUN indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange, puis d’exécuter l’image à partir de là. Il s’agit d’une fonctionnalité de Windows NT 4,0 (et versions ultérieures).
 
-Si NET est spécifié, le système d’exploitation sera tout d’abord copier l’image binaire du réseau dans un fichier d’échange et chargez-le à partir de là. Cette option est utile pour exécuter des applications sur le réseau. Lorsque le CD est spécifié, le système d’exploitation copie l’image sur un disque amovible dans un fichier de page et puis de son chargement.
+Si NET est spécifié, le système d’exploitation copie tout d’abord l’image binaire du réseau dans un fichier d’échange et la charge à partir de là. Cette option est utile pour exécuter des applications sur le réseau. Si vous spécifiez CD, le système d’exploitation copie l’image sur un disque amovible dans un fichier d’échange, puis la charge.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le **l’éditeur de liens** dossier.
+1. Cliquez sur le dossier **Éditeur de liens**.
 
-1. Cliquez sur le **système** page de propriétés.
+1. Cliquez sur la page de propriétés **système** .
 
-1. Modifier l’une des propriétés suivantes :
+1. Modifiez l’une des propriétés suivantes :
 
-   - **Exécuter l’échange à partir du CD**
+   - **Échange d’exécution à partir du CD**
 
-   - **Exécuter l’échange à partir du réseau**
+   - **Échange d’exécution à partir du réseau**
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

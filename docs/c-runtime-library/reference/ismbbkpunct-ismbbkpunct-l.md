@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ismbbkpunct, _ismbbkpunct_l'
 title: _ismbbkpunct, _ismbbkpunct_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 8cf2d0d38466c370d0110b71a302471679e64657
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: da17df927b337e67df553baec8d56491db10a3d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229728"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
@@ -59,17 +60,17 @@ int _ismbbkpunct_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ismbbkpunct** retourne une valeur différente de zéro si l’entier *c* est un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana. **_ismbbkpunct** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendants des paramètres régionaux. **_ismbbkpunct_l** est identique, à ceci près qu’il utilise les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

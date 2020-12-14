@@ -1,29 +1,30 @@
 ---
+description: 'En savoir plus sur : Comment : gérer des événements à l’aide d’WRL'
 title: "Comment : gérer les événements à l'aide de WRL"
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-ms.openlocfilehash: 0e13212d7cb481bc72a903a31fb170fd1ff8b7ec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b1be04c1356594e2dc2060d031f35d836ad277bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229182"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Comment : gérer les événements à l'aide de WRL
 
-Ce document montre comment utiliser la bibliothèque de C++ modèles Windows Runtime (WRL) pour s’abonner aux événements d’un objet Windows Runtime et les gérer.
+Ce document montre comment utiliser le Windows Runtime C++ Template Library (WRL) pour s’abonner aux événements d’un objet Windows Runtime et les gérer.
 
 Pour obtenir un exemple plus simple qui crée une instance de ce composant et récupère une valeur de propriété, consultez [Comment : activer et utiliser un composant Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).
 
 ## <a name="subscribing-to-and-handling-events"></a>Abonnement et gestion des événements
 
-Les étapes suivantes démarrent un objet `ABI::Windows::System::Threading::IDeviceWatcher` et utilisent des gestionnaires d’événements pour surveiller la progression. L’interface `IDeviceWatcher` vous permet d’énumérer des appareils de manière asynchrone, ou en arrière-plan, et de recevoir une notification lorsque des appareils sont ajoutés, supprimés ou modifiés. La fonction de [rappel](callback-function-wrl.md) est une partie importante de cet exemple car elle lui permet de spécifier des gestionnaires d’événements qui traitent les résultats de l’opération d’arrière-plan. L’exemple complet suit.
+Les étapes suivantes démarrent un `ABI::Windows::System::Threading::IDeviceWatcher` objet et utilisent des gestionnaires d’événements pour surveiller la progression. L' `IDeviceWatcher` interface vous permet d’énumérer des appareils de manière asynchrone, ou en arrière-plan, et de recevoir une notification lorsque des appareils sont ajoutés, supprimés ou modifiés. La fonction de [rappel](callback-function-wrl.md) est une partie importante de cet exemple car elle lui permet de spécifier des gestionnaires d’événements qui traitent les résultats de l’opération d’arrière-plan. L’exemple complet suit.
 
 > [!WARNING]
-> Bien que vous utilisiez généralement C++ la bibliothèque de modèles Windows Runtime dans une application plateforme Windows universelle, cet exemple utilise une application console comme illustration. Les fonctions telles que les `wprintf_s` ne sont pas disponibles à partir d’une application plateforme Windows universelle. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application plateforme Windows universelle, consultez [fonctions CRT non prises en charge dans les applications plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) et [Win32 et com pour les applications UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+> Bien que vous utilisiez généralement le Windows Runtime bibliothèque de modèles C++ dans une application plateforme Windows universelle, cet exemple utilise une application console comme illustration. Les fonctions telles que `wprintf_s` ne sont pas disponibles à partir d’une application plateforme Windows universelle. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application plateforme Windows universelle, consultez [fonctions CRT non prises en charge dans les applications plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) et [Win32 et com pour les applications UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
-1. Incluez (`#include`) toute Windows Runtime requise, C++ Windows Runtime bibliothèque de modèles C++ ou en-têtes de bibliothèque standard.
+1. Include ( `#include` ) tout Windows Runtime requis, Windows Runtime bibliothèque de modèles c++ ou les en-têtes de la bibliothèque C++ standard.
 
    [!code-cpp[wrl-consume-event#2](../codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]
 
@@ -46,28 +47,28 @@ Les étapes suivantes démarrent un objet `ABI::Windows::System::Threading::IDev
    > [!NOTE]
    > Cet événement est destiné à une démonstration uniquement dans le cadre d’une application console. Cet exemple utilise l’événement pour s’assurer qu’une opération asynchrone se termine avant la fermeture de l’application. Dans la plupart des applications, vous n’avez généralement pas à attendre que les opérations asynchrones se terminent.
 
-5. Créez une fabrique d’activation pour l’interface `IDeviceWatcher`.
+5. Créez une fabrique d’activation pour l' `IDeviceWatcher` interface.
 
    [!code-cpp[wrl-consume-event#5](../codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]
 
-   Le Windows Runtime utilise des noms qualifiés complets pour identifier les types. Le paramètre `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` est une chaîne fournie par l’Windows Runtime et contient le nom de la classe d’exécution requise.
+   Le Windows Runtime utilise des noms qualifiés complets pour identifier les types. Le `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` paramètre est une chaîne fournie par le Windows Runtime et contient le nom de classe d’exécution requis.
 
 6. Créer l’objet `IDeviceWatcher`.
 
    [!code-cpp[wrl-consume-event#6](../codesnippet/CPP/how-to-handle-events-using-wrl_6.cpp)]
 
-7. Utilisez la fonction `Callback` pour vous abonner aux événements `Added`, `EnumerationCompleted`et `Stopped`.
+7. Utilisez la `Callback` fonction pour vous abonner `Added` aux `EnumerationCompleted` événements, et `Stopped` .
 
    [!code-cpp[wrl-consume-event#8](../codesnippet/CPP/how-to-handle-events-using-wrl_7.cpp)]
 
-   Le gestionnaire d’événements `Added` incrémente le nombre d’appareils énumérés. Il arrête le processus d’énumération une fois que dix appareils ont été détectés.
+   Le `Added` Gestionnaire d’événements incrémente le nombre d’appareils énumérés. Il arrête le processus d’énumération une fois que dix appareils ont été détectés.
 
-   Le gestionnaire d’événements `Stopped` supprime les gestionnaires d’événements et définit l’événement d’achèvement.
+   Le `Stopped` Gestionnaire d’événements supprime les gestionnaires d’événements et définit l’événement d’achèvement.
 
-   Le gestionnaire d’événements `EnumerationCompleted` arrête le processus d’énumération. Nous prenons en charge cet événement au cas où il y aurait moins de dix appareils.
+   Le `EnumerationCompleted` Gestionnaire d’événements arrête le processus d’énumération. Nous prenons en charge cet événement au cas où il y aurait moins de dix appareils.
 
    > [!TIP]
-   > Cet exemple utilise une expression lambda pour définir les rappels. Vous pouvez également utiliser des objets de fonction (functors), des pointeurs de fonction ou des objets [std :: function](../../standard-library/function-class.md) . Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../cpp/lambda-expressions-in-cpp.md).
+   > Cet exemple utilise une expression lambda pour définir les rappels. Vous pouvez également utiliser des objets de fonction (functors), des pointeurs de fonction ou des objets [std :: function](../../standard-library/function-class.md) . Pour plus d’informations sur les expressions lambda, consultez [expressions lambda](../../cpp/lambda-expressions-in-cpp.md).
 
 8. Démarrez le processus d’énumération.
 
@@ -83,7 +84,7 @@ Voici l’exemple complet :
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Pour compiler le code, copiez-le, puis collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `wrl-consume-events.cpp` puis exécutez la commande suivante dans une fenêtre d' **invite de commandes Visual Studio** .
+Pour compiler le code, copiez-le, puis collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `wrl-consume-events.cpp` , puis exécutez la commande suivante dans une fenêtre d' **invite de commandes Visual Studio** .
 
 `cl.exe wrl-consume-events.cpp runtimeobject.lib`
 

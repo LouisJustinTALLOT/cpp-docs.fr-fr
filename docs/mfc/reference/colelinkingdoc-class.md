@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe COleLinkingDoc'
 title: COleLinkingDoc, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 10cf9bb81c4cbbd324b95a13dc2fa44548266583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226907"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc, classe
 
@@ -45,39 +46,39 @@ class COleLinkingDoc : public COleDocument
 
 |Nom|Description|
 |----------|-----------------|
-|[COleLinkingDoc::Enregistrement](#register)|Enregistre le document avec le système OLE DLLs.|
-|[COleLinkingDoc::Revoke](#revoke)|Révoque l’enregistrement du document.|
+|[COleLinkingDoc :: Register](#register)|Inscrit le document avec les DLL système OLE.|
+|[COleLinkingDoc :: Revoke](#revoke)|Révoque l’inscription du document.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Trouve l’élément intégré spécifié.|
-|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Trouve l’élément lié spécifié.|
+|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Recherche l’élément incorporé spécifié.|
+|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Recherche l’élément lié spécifié.|
 
 ## <a name="remarks"></a>Notes
 
-Une application de conteneurs qui prend en charge la liaison vers les articles embarqués est appelée un « conteneur de liaison ». [L’application d’échantillon OCLIENT](../../overview/visual-cpp-samples.md) est un exemple d’un conteneur de liaison.
+Une application conteneur qui prend en charge la liaison aux éléments incorporés est appelée « conteneur de liens ». L’exemple d’application [OCLIENT](../../overview/visual-cpp-samples.md) est un exemple de conteneur de liens.
 
-Lorsque la source d’un élément lié est un élément intégré dans un autre document, ce document contenant doit être chargé pour que l’élément intégré soit modifié. Pour cette raison, un conteneur de liaison doit pouvoir être lancé par une autre application de conteneur lorsque l’utilisateur veut modifier la source d’un élément lié. Votre application doit également utiliser la classe [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) afin qu’elle puisse créer des documents lorsqu’elle est lancée sur le plan programmatique.
+Quand la source d’un élément lié est un élément incorporé dans un autre document, le document qui le contient doit être chargé pour que l’élément incorporé soit modifié. Pour cette raison, un conteneur de liens doit pouvoir être lancé par une autre application conteneur lorsque l’utilisateur souhaite modifier la source d’un élément lié. Votre application doit également utiliser la classe [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) pour pouvoir créer des documents quand elle est lancée par programmation.
 
-Pour faire de votre conteneur un conteneur `COleLinkingDoc` de liaison, dérivez votre classe de documents au lieu de [COleDocument](../../mfc/reference/coledocument-class.md). Comme pour tout autre conteneur OLE, vous devez concevoir votre classe pour stocker les données natives de l’application ainsi que les éléments intégrés ou liés. En outre, vous devez concevoir des structures de données pour stocker vos données natives. Si vous `CDocItem`définissez une classe dérivée pour les données natives `COleDocument` de votre application, vous pouvez utiliser l’interface définie par le stockage de vos données natives ainsi que vos données OLE.
+Pour transformer votre conteneur en conteneur de liens, dérivez votre classe de document à partir `COleLinkingDoc` de la place de [COleDocument](../../mfc/reference/coledocument-class.md). Comme pour tout autre conteneur OLE, vous devez concevoir votre classe pour stocker les données natives de l’application ainsi que les éléments incorporés ou liés. En outre, vous devez concevoir des structures de données pour le stockage de vos données natives. Si vous définissez une `CDocItem` classe dérivée de pour les données natives de votre application, vous pouvez utiliser l’interface définie par `COleDocument` pour stocker vos données natives ainsi que vos données OLE.
 
-Pour permettre le lancement de votre demande sur `COleTemplateServer` le plan programmatique par `CWinApp`un autre conteneur, déclarez un objet en tant que membre de la classe dérivée de votre application :
+Pour permettre à votre application d’être lancée par programme par un autre conteneur, déclarez un `COleTemplateServer` objet en tant que membre de la `CWinApp` classe dérivée de votre application :
 
 [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]
 
-Dans `InitInstance` la fonction `CWinApp`membre de votre classe dérivée, `COleLinkingDoc`créez un modèle de document et spécifiez votre classe dérivée comme classe de documents :
+Dans la `InitInstance` fonction membre de votre `CWinApp` classe dérivée de, créez un modèle de document et spécifiez votre `COleLinkingDoc` classe dérivée de comme classe de document :
 
 [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]
 
-Connectez `COleTemplateServer` votre objet à vos modèles de `ConnectTemplate` documents en appelant la fonction membre de `COleTemplateServer::RegisterAll`l’objet, et enregistrez tous les objets de classe avec le système OLE en appelant :
+Connectez votre `COleTemplateServer` objet à vos modèles de document en appelant la fonction membre de l’objet `ConnectTemplate` et enregistrez tous les objets de classe auprès du système OLE en appelant `COleTemplateServer::RegisterAll` :
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Pour une `CWinApp`définition et `InitInstance` une fonction de classe dérivées d’un échantillon, voir OCLIENT. H et OCLIENT. RPC dans l’échantillon [OCLIENT](../../overview/visual-cpp-samples.md)de MFC .
+Pour obtenir un exemple de `CWinApp` définition et de fonction de classe dérivée `InitInstance` , consultez OCLIENT. H et OCLIENT. CPP dans l’exemple MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
-Pour plus d’informations sur l’utilisation `COleLinkingDoc`, voir les articles [Conteneurs: Mise en œuvre d’un conteneur](../../mfc/containers-implementing-a-container.md) et [conteneurs: Fonctionnalités avancées](../../mfc/containers-advanced-features.md).
+Pour plus d’informations sur l’utilisation de `COleLinkingDoc` , consultez l’article [conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et de [conteneurs : fonctionnalités avancées](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -93,11 +94,11 @@ Pour plus d’informations sur l’utilisation `COleLinkingDoc`, voir les articl
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxole.h
+**En-tête :** AFXOLE. h
 
-## <a name="colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc
+## <a name="colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a> COleLinkingDoc::COleLinkingDoc
 
-Construit un `COleLinkingDoc` objet sans commencer les communications avec le système OLE DLLs.
+Construit un `COleLinkingDoc` objet sans commencer à communiquer avec les DLL système OLE.
 
 ```
 COleLinkingDoc();
@@ -105,11 +106,11 @@ COleLinkingDoc();
 
 ### <a name="remarks"></a>Notes
 
-Vous devez `Register` appeler la fonction membre pour informer OLE que le document est ouvert.
+Vous devez appeler la `Register` fonction membre pour informer OLE que le document est ouvert.
 
-## <a name="colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem
+## <a name="colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a> COleLinkingDoc::OnFindEmbeddedItem
 
-Appelé par le cadre pour déterminer si le document contient un élément OLE intégré avec le nom spécifié.
+Appelée par l’infrastructure pour déterminer si le document contient un élément OLE incorporé avec le nom spécifié.
 
 ```
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
@@ -117,20 +118,20 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszItemName (en)*<br/>
-Pointeur sur le nom de l’élément OLE intégré demandé.
+*lpszItemName*<br/>
+Pointeur vers le nom de l’élément OLE incorporé demandé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur à l’élément spécifié; NULL si l’article n’est pas trouvé.
+Pointeur vers l’élément spécifié ; NULL si l’élément est introuvable.
 
 ### <a name="remarks"></a>Notes
 
-La mise en œuvre par défaut recherche la liste des éléments intégrés pour un élément avec le nom spécifié (la comparaison de nom est sensible au cas). Remplacez cette fonction si vous avez votre propre méthode de stockage ou de nommage d’éléments OLE intégrés.
+L’implémentation par défaut recherche dans la liste d’éléments incorporés un élément portant le nom spécifié (la comparaison de noms respecte la casse). Remplacez cette fonction si vous disposez de votre propre méthode de stockage ou de dénomination des éléments OLE incorporés.
 
-## <a name="colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem
+## <a name="colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a> COleLinkingDoc::OnGetLinkedItem
 
-Appelé par le cadre pour vérifier si le document contient un élément serveur lié avec le nom spécifié.
+Appelé par l’infrastructure pour vérifier si le document contient un élément de serveur lié portant le nom spécifié.
 
 ```
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
@@ -138,20 +139,20 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszItemName (en)*<br/>
-Pointeur sur le nom de l’élément OLE lié demandé.
+*lpszItemName*<br/>
+Pointeur vers le nom de l’élément OLE lié demandé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur à l’élément spécifié; NULL si l’article n’est pas trouvé.
+Pointeur vers l’élément spécifié ; NULL si l’élément est introuvable.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut `COleLinkingDoc` renvoie toujours NULL. Cette fonction est remplace dans `COleServerDoc` la classe dérivée pour rechercher la liste des éléments du serveur OLE pour un élément lié au nom spécifié (la comparaison de nom est sensible au cas). Remplacez cette fonction si vous avez implémenté votre propre méthode de stockage ou de récupération d’éléments de serveur liés.
+L’implémentation par défaut `COleLinkingDoc` retourne toujours la valeur null. Cette fonction est substituée dans la classe dérivée `COleServerDoc` pour effectuer une recherche dans la liste des éléments de serveur OLE d’un élément lié portant le nom spécifié (la comparaison de noms respecte la casse). Substituez cette fonction si vous avez implémenté votre propre méthode de stockage ou d’extraction d’éléments de serveur liés.
 
-## <a name="colelinkingdocregister"></a><a name="register"></a>COleLinkingDoc::Enregistrement
+## <a name="colelinkingdocregister"></a><a name="register"></a> COleLinkingDoc :: Register
 
-Informe le système OLE DLLs que le document est ouvert.
+Informe les DLL système OLE que le document est ouvert.
 
 ```
 BOOL Register(
@@ -162,24 +163,24 @@ BOOL Register(
 ### <a name="parameters"></a>Paramètres
 
 *pFactory*<br/>
-Pointeur vers un objet d’usine OLE (peut être NULL).
+Pointeur vers un objet de fabrique OLE (peut être NULL).
 
-*lpszPathName (en)*<br/>
-Pointeur sur la trajectoire entièrement qualifiée du document de conteneur.
+*lpszPathName*<br/>
+Pointeur vers le chemin d’accès qualifié complet du document conteneur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Nonzero si le document est enregistré avec succès; sinon 0.
+Différent de zéro si le document est correctement inscrit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction lors de la création ou de l’ouverture d’un fichier nommé pour enregistrer le document avec le système OLE DLLs. Il n’est pas nécessaire d’appeler cette fonction si le document représente un élément intégré.
+Appelez cette fonction lors de la création ou de l’ouverture d’un fichier nommé pour inscrire le document auprès des DLL système OLE. Il n’est pas nécessaire d’appeler cette fonction si le document représente un élément incorporé.
 
-Si vous `COleTemplateServer` utilisez dans `Register` votre application, `COleLinkingDoc`est appelé `OnNewDocument`pour `OnOpenDocument`vous `OnSaveDocument`par la mise en œuvre de , , , et .
+Si vous utilisez `COleTemplateServer` dans votre application, `Register` est appelé pour vous par `COleLinkingDoc` l’implémentation de, de et de `OnNewDocument` `OnOpenDocument` `OnSaveDocument` .
 
-## <a name="colelinkingdocrevoke"></a><a name="revoke"></a>COleLinkingDoc::Revoke
+## <a name="colelinkingdocrevoke"></a><a name="revoke"></a> COleLinkingDoc :: Revoke
 
-Informe le système OLE DLLs que le document n’est plus ouvert.
+Informe les DLL système OLE que le document n’est plus ouvert.
 
 ```cpp
 void Revoke();
@@ -187,13 +188,13 @@ void Revoke();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour révoquer l’enregistrement du document auprès des DLL du système OLE.
+Appelez cette fonction pour révoquer l’inscription du document avec les DLL système OLE.
 
-Vous devez appeler cette fonction lors de la fermeture d’un fichier nommé, mais vous n’avez généralement pas besoin de l’appeler directement. `Revoke`est appelé pour `COleLinkingDoc`vous par `OnCloseDocument` `OnNewDocument`la `OnOpenDocument`mise `OnSaveDocument`en œuvre de , , , et .
+Vous devez appeler cette fonction lors de la fermeture d’un fichier nommé, mais vous n’avez généralement pas besoin de l’appeler directement. `Revoke` est appelé pour vous par `COleLinkingDoc` l’implémentation de, de, de `OnCloseDocument` `OnNewDocument` et de `OnOpenDocument` `OnSaveDocument` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échantillon MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument, classe](../../mfc/reference/coledocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)
+[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4772'
 title: Avertissement du compilateur (niveau 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41fcbf3074cb1e51e06ba21a01a27eaf8ded1b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228441"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>Avertissement du compilateur (niveau 1) C4772
 
-> \#importer référence un type à partir d’une bibliothèque de types manquante ; '*Missing-type*'utilisé en tant qu’espace réservé
+> \#l’importation a référencé un type à partir d’une bibliothèque de types manquante ; '*Missing-type*'utilisé en tant qu’espace réservé
 
-Une bibliothèque de types a été référencée avec la directive [#import](../../preprocessor/hash-import-directive-cpp.md) . Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’a pas été référencée avec `#import`. Ce fichier. tlb est introuvable par le compilateur.
+Une bibliothèque de types a été référencée avec la directive [#import](../../preprocessor/hash-import-directive-cpp.md) . Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’a pas été référencée avec `#import` . Ce fichier. tlb est introuvable par le compilateur.
 
 Notez que le compilateur ne trouvera pas les bibliothèques de types dans les différents répertoires si vous utilisez l’option de compilateur [/i (autres répertoires Include)](../../build/reference/i-additional-include-directories.md) pour spécifier ces répertoires. Si vous souhaitez que le compilateur trouve des bibliothèques de types dans des répertoires différents, ajoutez ces répertoires à la variable d’environnement PATH.
 

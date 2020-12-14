@@ -1,5 +1,6 @@
 ---
-title: '> Résumé des &lt;C++ (commentaires de documentation)'
+description: 'En savoir plus sur : &lt; Résumé&gt;'
+title: '&lt;Résumé> (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 73e36367ff1a36f2b030525ea22f634ae74b64a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230222"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
-La balise \<summary> doit être utilisée pour décrire un type ou un membre de type. Utilisez [\<remarks>](remarks-visual-cpp.md) pour ajouter des informations supplémentaires à une description de type.
+La \<summary> balise doit être utilisée pour décrire un type ou un membre de type. Utilisez [\<remarks>](remarks-visual-cpp.md) pour ajouter des informations supplémentaires à une description de type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,16 +26,16 @@ La balise \<summary> doit être utilisée pour décrire un type ou un membre de 
 <summary>description</summary>
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
 *description*<br/>
 Résumé de l’objet.
 
 ## <a name="remarks"></a>Notes
 
-Le texte de la balise \<summary> est la seule source d’informations sur le type dans IntelliSense et il est également affiché dans [l’Explorateur d’objets](/visualstudio/ide/viewing-the-structure-of-code) et dans le rapport web de commentaire de code.
+Le texte de la \<summary> balise est la seule source d’informations sur le type dans IntelliSense et s’affiche également dans l' [Explorateur d’objets](/visualstudio/ide/viewing-the-structure-of-code) et dans le rapport Web de commentaire de code.
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
 ## <a name="example"></a>Exemple
 

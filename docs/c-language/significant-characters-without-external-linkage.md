@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : caractères significatifs sans liaison externe'
 title: Caractères significatifs sans liaison externe
 ms.date: 11/04/2016
 ms.assetid: 396cfb36-391a-4aa9-885d-20198d4dc2ec
-ms.openlocfilehash: 243a9b052a31c87a73ebd03c6f5d3c2009116722
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0e38f90107e045b034508abb228e82683c4157b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229923"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Caractères significatifs sans liaison externe
 

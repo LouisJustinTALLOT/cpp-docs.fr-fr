@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4743'
 title: Avertissement du compilateur (niveau 1) C4743
 ms.date: 05/13/2019
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-ms.openlocfilehash: 53ead0e34b55eca44399cee09f1947a12e1eadd3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: a8c8bcd4ef0e4d7084da34e033be4194da11727f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228480"
 ---
 # <a name="compiler-warning-level-1-c4743"></a>Avertissement du compilateur (niveau 1) C4743
 
-«*type*'a une taille différente '*file1*'et'*fichier2*' : *nombre* et *nombre* octets
+'*type*'a une taille différente dans'*fichier1*'et'*fichier2*' : *nombre* et octets 
 
-Une variable externe référencée ou définie dans deux fichiers possède des types différents dans ces fichiers, et le compilateur a déterminé que la taille de la variable dans *file1* diffère de la taille de la variable dans *fichier2*.
+Une variable externe référencée ou définie dans deux fichiers a des types différents dans ces fichiers, et le compilateur a déterminé que la taille de la variable dans *fichier1* est différente de la taille de la variable dans *fichier2*.
 
 ## <a name="remarks"></a>Notes
 
-Il existe un cas important lorsque cet avertissement peut être émis pour C++. Si vous déclarez les mêmes types portant le même nom dans deux fichiers différents, si ces déclarations contiennent des fonctions virtuelles, et si les déclarations ne sont pas identiques, le compilateur peut émettre l’avertissement C4744 pour les tables de la fonction virtuelle. L’avertissement se produit, car il existe deux tables de tailles différentes de fonction virtuelle pour le même type, et l’éditeur de liens doit choisir un d’eux à incorporer dans le fichier exécutable.  Il est possible que cela peut entraîner de votre programme appelle la fonction virtuelle incorrecte.
+Il existe un cas important lorsque cet avertissement peut être émis pour C++. Si vous déclarez les mêmes types avec le même nom dans deux fichiers différents, si ces déclarations contiennent des fonctions virtuelles et si les déclarations ne sont pas les mêmes, le compilateur peut émettre des C4744 d’avertissement pour les tables de fonctions virtuelles. L’avertissement se produit, car il existe deux tables de fonctions virtuelles de taille différente pour le même type, et l’éditeur de liens doit choisir l’un d’entre eux pour incorporer dans l’exécutable.  Il est possible que votre programme appelle la fonction virtuelle incorrecte.
 
-Pour résoudre cet avertissement, utilisez la même définition de type ou utiliser des noms différents pour les types ou les variables.
+Pour résoudre cet avertissement, utilisez la même définition de type ou utilisez des noms différents pour les types ou les variables.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4743. Pour le compiler, placez les deux fichiers dans le même dossier, puis exécutez  
+L’exemple suivant génère l’C4743. Pour le compiler, placez les deux fichiers dans le même dossier, puis exécutez  
 
 ```cmd
 cl /EHsc /W1 /GL /O2 C4743a.cpp C4743b.cpp

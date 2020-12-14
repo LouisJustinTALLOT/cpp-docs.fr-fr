@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les éléments suivants:/SUBSYSTEM
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 24c334099eca93fc0f6e5790e78ed99049c572a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230235"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
