@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _rmtmp'
 title: _rmtmp
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fd87dd407b2e392d197e7eb407bc307b48ea2263
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250190"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -53,7 +54,7 @@ int _rmtmp( void );
 
 **_rmtmp** retourne le nombre de fichiers temporaires fermés et supprimés.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_rmtmp** nettoie tous les fichiers temporaires dans le répertoire actif. La fonction supprime uniquement les fichiers créés par **tmpfile**; Utilisez-le uniquement dans le même répertoire que celui dans lequel les fichiers temporaires ont été créés.
 
@@ -71,7 +72,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [tmpfile](tmpfile.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure Interfacelisthelper ('
 title: InterfaceListHelper (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ca9e13e66acb6f27fba76a7653388305c57146dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249800"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (structure)
 
@@ -73,15 +74,15 @@ Paramètre de modèle 9, qui, par défaut, n’est pas spécifié.
 
 ## <a name="remarks"></a>Notes
 
-Génère un type de `InterfaceList` en appliquant de manière récursive les arguments de paramètre de modèle spécifiés.
+Génère un `InterfaceList` type en appliquant de manière récursive les arguments de paramètre de modèle spécifiés.
 
-Le modèle **interfacelisthelper (** utilise le paramètre de modèle *T0* pour définir le premier membre de données dans une structure `InterfaceList`, puis applique de manière récursive le modèle **interfacelisthelper (** aux paramètres de modèle restants. **Interfacelisthelper (** s’arrête lorsqu’il n’y a aucun paramètre de modèle restant.
+Le modèle **interfacelisthelper (** utilise le paramètre de modèle *T0* pour définir le premier membre de données dans une `InterfaceList` structure, puis applique de manière récursive le modèle **interfacelisthelper (** aux paramètres de modèle restants. **Interfacelisthelper (** s’arrête lorsqu’il n’y a aucun paramètre de modèle restant.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`TypeT`|Synonyme du type Interfacelist (.|
 
@@ -97,4 +98,4 @@ Le modèle **interfacelisthelper (** utilise le paramètre de modèle *T0* pour 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : références (C++)'
 title: Références (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f49e089d8992a32f30e1a384d5f0c36fa327c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250047"
 ---
 # <a name="references-c"></a>Références (C++)
 
@@ -22,11 +23,11 @@ Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs 
 
 Les références peuvent être déclarées à l'aide de la syntaxe suivante :
 
-> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ *MS-modifier*] expression *déclarateur* \[ **=** *expression*]**;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ *MS-modifier*] expression *déclarateur* \[ **=** ]**;**
 
 Tout déclarateur valide spécifiant une référence peut être utilisé. La syntaxe simplifiée suivante s'applique, sauf si la référence est une référence à un type de fonction ou à un type tableau :
 
-> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ **&** ou **&&** ] « \[ *CV-Qualifiers*] expression d' *identificateur* \[ **=** *expression*]**;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ **&** ou **&&** ] « \[ *CV-Qualifiers*] expression d' *identificateur* \[ **=** ]**;**
 
 Les références sont déclarées à l'aide de la séquence suivante :
 

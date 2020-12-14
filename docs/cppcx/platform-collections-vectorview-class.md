@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: VectorView'
 title: Platform::Collections::VectorView, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0d1244ed5331fa9732bdfef1f1b7e2133f99442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250034"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -35,7 +36,7 @@ template <typename T, typename E>
 *T*<br/>
 Type des éléments contenus dans l'objet `VectorView` .
 
-*Envoyer*<br/>
+*E*<br/>
 Spécifie un prédicat binaire pour tester l'égalité des valeurs de type `T`. La valeur par défaut est `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Notes
@@ -70,7 +71,7 @@ La `VectorView` classe implémente l’interface [Windows :: Foundation :: Col
 
 **Espace de noms :** Platform::Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView :: First, méthode
+## <a name="vectorviewfirst-method"></a><a name="first"></a> VectorView :: First, méthode
 
 Retourne un itérateur qui spécifie le premier élément du VectorView.
 
@@ -88,9 +89,9 @@ Itérateur qui spécifie le premier élément de l'objet VectorView.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myVectorView->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myVectorView->First();`.
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView :: GetAt, méthode
+## <a name="vectorviewgetat-method"></a><a name="getat"></a> VectorView :: GetAt, méthode
 
 Récupère l'élément du VectorView actuel qui est indiqué par l'index spécifié.
 
@@ -108,11 +109,11 @@ T GetAt(
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l’objet VectorView.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément spécifié par le paramètre `index`. Le type d’élément est spécifié par le paramètre de modèle VectorView, *T*.
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView :: Getmany (, méthode
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a> VectorView :: Getmany (, méthode
 
 Récupère une séquence d'éléments du VectorView actif en commençant à l'index spécifié.
 
@@ -134,11 +135,11 @@ L'index de base zéro du début des éléments à récupérer.
 *dest*<br/>
 Quand cette opération se termine, un tableau d’éléments qui commencent à l’élément spécifié par `startIndex` et se terminent au dernier élément du VectorView.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le nombre d'éléments à récupérer.
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView :: IndexOf, méthode
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a> VectorView :: IndexOf, méthode
 
 Recherche l'élément spécifié dans l'objet VectorView actuel, et s'il existe, retourne l'index de l'élément.
 
@@ -162,11 +163,11 @@ Index de base zéro de l'élément si le paramètre `value` est détecté ; sin
 
 Le paramètre d' *index* est 0 si l’élément est le premier élément du `VectorView` ou si l’élément est introuvable. Si la valeur de retour est **`true`** , l’élément a été trouvé et il s’agit du premier élément ; sinon, l’élément est introuvable.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément spécifié est trouvé ; Sinon, **`false`** .
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView :: Size, méthode
+## <a name="vectorviewsize-method"></a><a name="size"></a> VectorView :: Size, méthode
 
 Retourne le nombre d'éléments dans l'objet VectorView actuel.
 
@@ -181,7 +182,7 @@ virtual property unsigned int Size;
 
 Nombre d’éléments dans le VectorView actuel.
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView :: VectorView, constructeur
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a> VectorView :: VectorView, constructeur
 
 Initialise une nouvelle instance de la classe VectorView.
 

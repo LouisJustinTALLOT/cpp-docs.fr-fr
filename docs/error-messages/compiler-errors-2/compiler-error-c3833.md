@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3833'
 title: Erreur du compilateur C3833
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e43ec93c222d3190bacb427cc06c0eae643fcfe1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249188"
 ---
 # <a name="compiler-error-c3833"></a>Erreur du compilateur C3833
 

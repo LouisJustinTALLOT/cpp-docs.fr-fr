@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestionnaires pour les messages Windows standard'
 title: Gestionnaires pour les messages Windows standard
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 161e4d85e702972ee178e2fe82aa2371f0560068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248929"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestionnaires pour les messages Windows standard
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les pointeurs vers les membres'
 title: Pointeurs vers membres
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c40ac8903aa61a808468ca18fa379c84f2fb81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250112"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l’aide de la séquence suivante :
 
-> *Storage-Class-Specifiers*<sub>OPT</sub> *CV-Qualifiers*<sub>opt</sub> *type-specifier* *MS-modificater*<sub>OPT</sub> *nom qualifié (* **`::*`** *CV-Qualifiers*) *identificateur* d'<sub>acceptation</sub> *PM-initializer*<sub>OPT</sub>**`;`**
+> *Storage-Class-Specifiers*<sub>OPT</sub> *CV-Qualifiers*<sub></sub> *type-specifier* *MS-modificater*<sub>OPT</sub> *nom qualifié (* **`::*`** *CV-Qualifiers*) *identificateur* d'<sub>acceptation</sub> *PM-initializer*<sub>OPT</sub>**`;`**
 
 1. Spécificateur de déclaration :
 

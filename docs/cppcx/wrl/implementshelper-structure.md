@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure ImplementsHelper'
 title: ImplementsHelper (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142cc532a89758c35c3387c398311acd077b8385
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249813"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (structure)
 
@@ -71,7 +72,7 @@ Nom                                                    | Description
 
 **Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper :: CanCastTo,
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a> ImplementsHelper :: CanCastTo,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -98,7 +99,7 @@ Si cette opération réussit, pointeur vers l’interface spécifiée par *riid*
 *vaut*<br/>
 Référence à un ID d’interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
@@ -106,7 +107,7 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 Obtient un pointeur vers l’ID d’interface spécifié.
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper :: Casttounknown,
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a> ImplementsHelper :: Casttounknown,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -114,7 +115,7 @@ Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé
 IUnknown* CastToUnknown();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’interface sous-jacente `IUnknown` .
 
@@ -122,7 +123,7 @@ Pointeur vers l’interface sous-jacente `IUnknown` .
 
 Obtient un pointeur vers l’interface sous-jacente `IUnknown` pour la `Implements` structure actuelle.
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper :: Fillarraywithiid,
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a> ImplementsHelper :: Fillarraywithiid,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -144,7 +145,7 @@ Tableau de types iid.
 
 Insère l’ID d’interface spécifié par le paramètre de modèle avant toute chose actuel dans l’élément de tableau spécifié.
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper :: Iidcount,
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a> ImplementsHelper :: Iidcount,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

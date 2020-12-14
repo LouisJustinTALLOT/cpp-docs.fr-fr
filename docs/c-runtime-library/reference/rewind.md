@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : rembobiner'
 title: rewind
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b66ee84e562ebbb743413c6f76f67071c754a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250294"
 ---
 # <a name="rewind"></a>rewind
 
@@ -53,7 +54,7 @@ void rewind(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **rembobiner** repositionne le pointeur de fichier associé au *flux* au début du fichier. Un appel à **rewind** produit les mêmes effets que
 
@@ -81,7 +82,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_rewind.c

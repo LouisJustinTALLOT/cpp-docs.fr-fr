@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les gestionnaires pour les plages Message-Map'
 title: Gestionnaires pour les plages de table des messages
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b0f829a4c75aa8ee6148bdf3e96f6886ab07aba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248916"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 
@@ -53,7 +54,7 @@ Les sujets abordés dans cet article sont les suivants :
 
 - [Exemple pour une plage d’ID de contrôle](#_core_example_for_a_range_of_control_ids)
 
-## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a>Écriture de l’entrée de la table des messages
+## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a> Écriture de l’entrée Message-Map
 
 Dans le. CPP, ajoutez votre entrée de table des messages, comme indiqué dans l’exemple suivant :
 
@@ -83,7 +84,7 @@ L’entrée de la table des messages est composée des éléments suivants :
 
   La troisième macro, `ON_CONTROL_RANGE` , prend un premier paramètre supplémentaire : un message de notification de contrôle, tel que **EN_CHANGE**.
 
-## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a>Déclaration de la fonction de gestionnaire
+## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a> Déclaration de la fonction de gestionnaire
 
 Ajoutez la déclaration de la fonction gestionnaire dans le. Fichier H. Le code suivant montre comment cela peut se présenter, comme indiqué ci-dessous :
 
@@ -93,7 +94,7 @@ Les fonctions de gestionnaire pour les commandes uniques ne prennent normalement
 
 Pour plus d’informations sur les paramètres requis pour la mise à jour des fonctions de gestionnaire, consultez l' [exemple d’une plage d’ID de commandes](#_core_example_for_a_range_of_command_ids).
 
-## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a>Exemple pour une plage d’ID de commande
+## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a> Exemple pour une plage d’ID de commande
 
 Quand vous pouvez utiliser des plages, un exemple consiste à gérer des commandes telles que la commande zoom dans l’exemple MFC [HIERSVR](../overview/visual-cpp-samples.md). Cette commande effectue un zoom sur la vue, en la mettant à l’échelle entre 25% et 300% de sa taille normale. La classe d’affichage de HIERSVR utilise une plage pour gérer les commandes de zoom avec une entrée de table des messages ressemblant à ceci :
 
@@ -117,7 +118,7 @@ Le cas des fonctions de gestionnaire de mise à jour est similaire et est suscep
 
 Les fonctions de gestionnaire de mise à jour pour les commandes uniques acceptent normalement un seul paramètre, *pCmdUI*, de type `CCmdUI*` . Contrairement aux fonctions de gestionnaire, les fonctions de gestionnaire de mise à jour pour les plages de table de messages ne nécessitent pas de paramètre supplémentaire, *nid*, de type **uint**. L’ID de commande, qui est nécessaire pour spécifier la commande que l’utilisateur a réellement choisie, se trouve dans l' `CCmdUI` objet.
 
-## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a>Exemple pour une plage d’ID de contrôle
+## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a> Exemple pour une plage d’ID de contrôle
 
 Un autre cas intéressant est le mappage des messages de notification de contrôle pour une plage d’ID de contrôle à un gestionnaire unique. Supposons que l’utilisateur puisse cliquer sur l’un des 10 boutons. Pour mapper les 10 boutons à un seul gestionnaire, votre entrée de table des messages ressemble à ceci :
 

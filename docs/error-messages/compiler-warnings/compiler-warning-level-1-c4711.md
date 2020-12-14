@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4711'
 title: Avertissement du compilateur (niveau 1) C4711
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4711
 ms.assetid: 270506ab-fead-4328-b714-2978113be238
-ms.openlocfilehash: 9e2adf3583012a670f936c2b86a9ddc393fe53c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 618b33baa81043282741d8608978ec6fa2aeb0ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175335"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249111"
 ---
 # <a name="compiler-warning-level-1-c4711"></a>Avertissement du compilateur (niveau 1) C4711
 
@@ -21,6 +22,6 @@ Le compilateur a effectué l’incorporation sur la fonction donnée, bien qu’
 
 C4711 est activé si [/OB2](../../build/reference/ob-inline-function-expansion.md) est spécifié.
 
-L’incorporation est effectuée à la discrétion du compilateur. Cet avertissement est à caractère informatif.
+L’incorporation est effectuée à la discrétion du compilateur. Cet avertissement possède un caractère informatif.
 
 Cet avertissement est désactivé par défaut. Pour activer un avertissement, utilisez [#pragma AVERTISSEMENT](../../preprocessor/warning.md). Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.

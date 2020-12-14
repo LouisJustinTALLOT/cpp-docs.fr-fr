@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : concurrence ::d espace de noms irect3d'
 title: Concurrency::direct3d, espace de noms
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9fb0e7d4f5abbccbd9cd931fe2c4520e9410cbc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127031"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247733"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d, espace de noms
 
-L’espace de noms `direct3d` fournit des fonctions qui prennent en charge l’interopérabilité D3D. Elle vous permet d’utiliser des ressources D3D pour le calcul dans le code AMP. Il permet également l’utilisation des ressources créées dans AMP dans le code D3D, sans créer de copies intermédiaires redondantes. Vous pouvez accélérer de façon incrémentielle les sections de calcul intensif de vos applications DirectX à C++ l’aide de amp et utiliser l’API D3D sur les données générées à partir des calculs amp.
+L' `direct3d` espace de noms fournit des fonctions qui prennent en charge l’interopérabilité D3D. Elle vous permet d’utiliser des ressources D3D pour le calcul dans le code AMP. Il permet également l’utilisation des ressources créées dans AMP dans le code D3D, sans créer de copies intermédiaires redondantes. Vous pouvez accélérer de façon incrémentielle les sections de calcul intensif de vos applications DirectX à l’aide de C++ AMP, et utiliser l’API D3D sur les données générées à partir de calculs AMP.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,21 +32,21 @@ namespace direct3d;
 
 ### <a name="classes"></a>Classes
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[scoped_d3d_access_lock, classe](scoped-d3d-access-lock-class.md)|Wrapper RAII pour un verrou d’accès D3D sur un objet `accelerator_view`.|
+|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Wrapper RAII pour un verrou d’accès D3D sur un `accelerator_view` objet.|
 
 ### <a name="structures"></a>Structures
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[adopt_d3d_access_lock_t, structure](adopt-d3d-access-lock-t-structure.md)|Type de balise indiquant que le verrou d’accès D3D doit être adopté au lieu d’être acquis.|
 
 ### <a name="functions"></a>Fonctions
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Retourne la valeur absolue de l’argument.|
+|[absolue](concurrency-direct3d-namespace-functions-amp.md#abs)|Retourne la valeur absolue de l’argument.|
 |[bride](concurrency-direct3d-namespace-functions-amp.md#clamp)|Surchargé. Attache _X à la plage de _Min et de _Max spécifiée|
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Compte le nombre de bits définis dans _X|
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Crée une [classe accelerator_view](accelerator-view-class.md) à partir d’un pointeur vers une interface de périphérique Direct3D|
@@ -58,11 +59,11 @@ namespace direct3d;
 |[IMAX](concurrency-direct3d-namespace-functions-amp.md#imax)|Compare deux valeurs, en retournant la valeur supérieure.|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Compare deux valeurs, en retournant la valeur la plus petite.|
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retourne un indicateur booléen indiquant si le délai d’attente est désactivé pour le accelerator_view spécifié.|
-|[Mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération de multiplication/ajout arithmétique sur trois arguments : _X \* _Y + _Z|
+|[Mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération de multiplication/ajout arithmétique sur trois arguments : _X \* _y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Créez un tableau à partir d’un pointeur d’interface de mémoire tampon D3D.|
 |[bruit](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit perl|
 |[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convertit _X de degrés en radians|
-|[RCP](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcule une réciproque rapide et approximative de l’argument.|
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcule une réciproque rapide et approximative de l’argument.|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverse l’ordre des bits dans _X|
 |[saturer](concurrency-direct3d-namespace-functions-amp.md#saturate)|Attache _X dans la plage comprise entre 0 et 1|
 |[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Surchargé. Retourne le signe de l’argument.|
@@ -79,4 +80,4 @@ namespace direct3d;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrence de l’espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

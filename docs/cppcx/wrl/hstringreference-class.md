@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe HStringReference'
 title: HStringReference, classe
 ms.date: 07/15/2019
 ms.topic: reference
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 871696f4a970b1ef9d1f5d36d2e17184b93c9e8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a45eadd258ba6e17c26cc86aa362011d08ab8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249839"
 ---
 # <a name="hstringreference-class"></a>HStringReference, classe
 
@@ -78,7 +79,7 @@ Nom                                                  | Description
 
 **Espace de noms :** Microsoft :: WRL :: wrappers
 
-## <a name="hstringreferencecopyto"></a><a name="copyto"></a>HStringReference :: CopyTo
+## <a name="hstringreferencecopyto"></a><a name="copyto"></a> HStringReference :: CopyTo
 
 Copie l' `HStringReference` objet actuel dans un objet HSTRING.
 
@@ -97,7 +98,7 @@ HSTRING qui reçoit la copie.
 
 Cette méthode appelle la fonction [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="hstringreferenceget"></a><a name="get"></a>HStringReference :: obtient
+## <a name="hstringreferenceget"></a><a name="get"></a> HStringReference :: obtient
 
 Récupère la valeur du handle HSTRING sous-jacent.
 
@@ -105,11 +106,11 @@ Récupère la valeur du handle HSTRING sous-jacent.
 HSTRING Get() const throw()
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur du handle HSTRING sous-jacent.
 
-## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a>HStringReference :: GetRawBuffer
+## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a> HStringReference :: GetRawBuffer
 
 Récupère un pointeur vers les données de chaîne sous-jacentes.
 
@@ -121,11 +122,11 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 *longueur* Pointeur vers une **`int`** variable qui reçoit la longueur des données.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Pointeur vers les données de chaîne sous-jacentes.
 
-## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a>HStringReference :: HStringReference
+## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a> HStringReference :: HStringReference
 
 Initialise une nouvelle instance de la classe `HStringReference`.
 
@@ -148,8 +149,8 @@ Paramètre de modèle qui spécifie la taille de la `HStringReference` mémoire 
 *str*<br/>
 Référence à une chaîne de caractères larges.
 
-*Len*<br/>
-Longueur maximale de la mémoire tampon de paramètre *Str* à utiliser dans cette opération. Si le paramètre *Len* n’est pas spécifié, le paramètre *Str* entier est utilisé. Si la fonction *Len* est supérieure à la *taille*la plus grande, *Len* est défini sur la valeur la plus *taille*-1.
+*len*<br/>
+Longueur maximale de la mémoire tampon de paramètre *Str* à utiliser dans cette opération. Si le paramètre *Len* n’est pas spécifié, le paramètre *Str* entier est utilisé. Si la fonction *Len* est supérieure à la *taille* la plus grande, *Len* est défini sur la valeur la plus *taille*-1.
 
 *autres*<br/>
 Autre `HStringReference` objet.
@@ -162,7 +163,7 @@ Le deuxième constructeur initialise un nouvel `HStringReference` objet dont la 
 
 Le troisième constructeur initialise un nouvel `HStringReference` objet à la valeur de l' *autre* paramètre, puis détruit l' *autre* paramètre.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a>HStringReference :: Operator =
+## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a> HStringReference :: Operator =
 
 Déplace la valeur d’un autre `HStringReference` objet vers l' `HStringReference` objet actuel.
 
@@ -179,7 +180,7 @@ Objet `HStringReference` existant.
 
 La valeur de l' *autre* objet existant est copiée dans l' `HStringReference` objet actuel, puis l' *autre* objet est détruit.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a>HStringReference :: Operator = =
+## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a> HStringReference :: Operator = =
 
 Indique si les deux paramètres sont égaux.
 
@@ -205,11 +206,11 @@ Premier paramètre à comparer. *LHS* peut être un `HStringReference` objet ou 
 *rhs*<br/>
 Deuxième paramètre à comparer.  *RHS* peut être un `HStringReference` objet ou un handle HSTRING.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les paramètres *LHS* et *RHS* sont égaux ; Sinon, **`false`** .
 
-## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a>HStringReference :: Operator ! =
+## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a> HStringReference :: Operator ! =
 
 Indique si les deux paramètres ne sont pas égaux.
 
@@ -235,11 +236,11 @@ Premier paramètre à comparer. *LHS* peut être un `HStringReference` objet ou 
 *rhs*<br/>
 Deuxième paramètre à comparer.  *RHS* peut être un `HStringReference` objet ou un handle HSTRING.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les paramètres *LHS* et *RHS* ne sont pas égaux ; Sinon, **`false`** .
 
-## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a>HStringReference ::, opérateur&lt;
+## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a> HStringReference ::, opérateur&lt;
 
 Indique si le premier paramètre est inférieur au second paramètre.
 
@@ -257,6 +258,6 @@ Premier paramètre à comparer. *LHS* peut être une référence à un `HStringR
 *rhs*<br/>
 Deuxième paramètre à comparer.  *RHS* peut être une référence à un `HStringReference` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le paramètre *LHS* est inférieur au paramètre *RHS* ; Sinon, **`false`** .

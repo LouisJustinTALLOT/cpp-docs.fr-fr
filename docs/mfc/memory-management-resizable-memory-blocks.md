@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion de la mémoire : blocs de mémoire redimensionnables'
 title: 'Gestion de la mémoire : blocs de mémoire redimensionnables'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 308b5aa00aeb1f0e7887ad90bad79a28b361d7c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bcca5617a0d59a7dd5c6a1f9c9f82cb5876f1ef5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248877"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gestion de la mémoire : blocs de mémoire redimensionnables
 

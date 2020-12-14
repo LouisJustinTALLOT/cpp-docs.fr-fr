@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : référence alphabétique des attributs'
 title: Référence alphabétique des attributs
 ms.custom: index-page
 ms.date: 10/02/2018
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ad9ecd1e3b3d4620b1f862fd1d5d70ef050da48d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4739439ea49ab97f0727ea5f3ec22b41735467a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247590"
 ---
 # <a name="attributes-alphabetical-reference"></a>Référence alphabétique des attributs
 
@@ -28,7 +29,7 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[attribute](attribute.md)|Vous permet de créer un attribut personnalisé.|
 |[bindable](bindable.md)|Indique que la propriété prend en charge la liaison de données.|
 |[call_as](call-as.md)|Permet à une fonction non accessible à distance d’être mappée à une fonction distante.|
-|[études](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans une Union.|
+|[case](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans une Union.|
 |[coclasse](coclass.md)|Crée un objet COM, qui peut implémenter une interface COM.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Ajoute une entrée d’interface à une table COM.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
@@ -40,14 +41,14 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[db_param](db-param.md)|Associe la variable membre spécifiée à un paramètre d’entrée ou de sortie.|
 |[db_source](db-source.md)|Crée et encapsule une connexion, via un fournisseur, à une source de données.|
 |[db_table](db-table.md)|Ouvre une table OLE DB.|
-|[valeurs](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
+|[default](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
 |[defaultbind](defaultbind.md)|Indique la propriété unique pouvant être liée qui représente le mieux l’objet.|
 |[defaultcollelem](defaultcollelem.md)|Utilisé pour Visual Basic optimisation du code.|
 |[DefaultValue](defaultvalue.md)|Autorise la spécification d’une valeur par défaut pour un paramètre facultatif typé.|
 |[defaultvtable](defaultvtable.md)|Définit une interface comme interface vtable par défaut pour un contrôle.|
 |[dispinterface](dispinterface.md)|Place une interface dans le fichier .idl comme interface de dispatch.|
 |[displaybind](displaybind.md)|Indique une propriété qui doit être affichée à l’utilisateur comme pouvant être liée.|
-|[dual](dual.md)|Place une interface dans le fichier. idl en tant qu’interface double.|
+|[double](dual.md)|Place une interface dans le fichier. idl en tant qu’interface double.|
 |[emitidl](emitidl.md)|Détermine si tous les attributs IDL suivants seront traités et placés dans le fichier. idl généré.|
 |[mention](entry.md)|Spécifie une fonction ou une constante exportée dans un module en identifiant le point d’entrée dans la DLL.|
 |[event_receiver](event-receiver.md)|Crée un récepteur d’événements.|
@@ -86,12 +87,12 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[noncreatable](noncreatable.md)|Définit un objet qui ne peut pas être instancié par lui-même.|
 |[nonextensible](nonextensible.md)|Spécifie que l' `IDispatch` implémentation de comprend uniquement les propriétés et les méthodes listées dans la description de l’interface et ne peut pas être étendue avec des membres supplémentaires au moment de l’exécution.|
 |[object](object-cpp.md)|Identifie une interface personnalisée ; synonyme d’attribut personnalisé.|
-|[odl](odl.md)|Identifie une interface en tant qu’interface ODL (Object Description Language).|
+|[ODL](odl.md)|Identifie une interface en tant qu’interface ODL (Object Description Language).|
 |[oleautomation](oleautomation.md)|Indique qu’une interface est compatible avec Automation.|
 |[facultatif](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[à](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[pointer_default](pointer-default.md)|Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.|
-|[Bali](pragma.md)|Émet la chaîne spécifiée, sans les guillemets, dans le fichier. idl généré.|
+|[pragma](pragma.md)|Émet la chaîne spécifiée, sans les guillemets, dans le fichier. idl généré.|
 |[ProgID](progid.md)|Spécifie le ProgID d’un objet COM.|
 |[propget](propget.md)|Spécifie une fonction d’accesseur de propriété (Get).|
 |[propput](propput.md)|Spécifie une fonction de définition de propriété.|

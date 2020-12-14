@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajout de la prise en charge ATL à votre projet MFC'
 title: Ajout de la prise en charge ATL à votre projet MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 94303d1dfc7c06171def1224982f5e0aa5716ce4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1d02bd6e63a01334fcb9a907dc9ea4fe78ff4a48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248240"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Ajout de la prise en charge ATL à votre projet MFC
 
@@ -25,7 +26,7 @@ Si vous avez déjà créé une application MFC, vous pouvez facilement ajouter l
 
 1. Dans Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet.
 
-1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Nouvel élément** .
+1. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Nouvel élément**.
 
 1. Dans le volet gauche, choisissez **ATL** , puis **prise en charge ATL** dans le volet central.
 
@@ -37,7 +38,7 @@ Si vous avez déjà créé une application MFC, vous pouvez facilement ajouter l
 
 1. Dans Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet.
 
-1. Dans le menu contextuel, cliquez sur **Ajouter** , puis cliquez sur **Ajouter une classe** .
+1. Dans le menu contextuel, cliquez sur **Ajouter**, puis cliquez sur **Ajouter une classe**.
 
 1. Sélectionnez **ATL** dans le volet gauche, puis choisissez **Ajouter la prise en charge ATL au projet MFC** dans le volet central.
 

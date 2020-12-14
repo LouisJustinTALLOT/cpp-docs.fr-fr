@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : ajout d’éléments au contrôle'
 title: Ajout d'éléments au contrôle
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 5cc1c7a921cf6d6ba2c0f968012b48bfcaef0658
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44a553564aa9a98806cd8e4d9551c9474421105f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249020"
 ---
 # <a name="adding-items-to-the-control"></a>Ajout d'éléments au contrôle
 
@@ -21,9 +22,9 @@ Les membres supplémentaires spécifient le texte, l’icône, l’État et les 
 
 D’autres versions de `InsertItem` acceptent une ou plusieurs valeurs distinctes, correspondant aux membres de la `LVITEM` structure, ce qui vous permet d’initialiser uniquement les membres que vous souhaitez prendre en charge. En règle générale, le contrôle de liste gère le stockage pour les éléments de liste, mais vous pouvez stocker certaines informations dans votre application à la place, à l’aide de « éléments de rappel ». Pour plus d’informations, consultez [éléments de rappel et masque de rappel](callback-items-and-the-callback-mask.md) dans cette rubrique, ainsi que [les éléments de rappel et le masque de rappel](/windows/win32/Controls/using-list-view-controls) dans la SDK Windows.
 
-Pour plus d’informations, consultez [Ajout d’éléments de liste et de sous-éléments](/windows/win32/Controls/using-list-view-controls).
+Pour plus d’informations, consultez [Ajout d’éléments de List-View et](/windows/win32/Controls/using-list-view-controls)de sous-éléments.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)
