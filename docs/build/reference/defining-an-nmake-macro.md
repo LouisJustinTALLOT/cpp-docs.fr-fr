@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : définition d’une macro NMAKE'
 title: Définition d'une macro NMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - defining NMAKE macros
 - NMAKE macros, defining
 ms.assetid: 45aae451-9d33-4a3d-8799-2e0cae17070d
-ms.openlocfilehash: b163c3dcbfb079a532bd1babca4ee881407bafc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 133e05cac2a236a38f6b2d1e719f1b66fd73760d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201636"
 ---
 # <a name="defining-an-nmake-macro"></a>Définition d'une macro NMAKE
 
@@ -24,19 +25,19 @@ macroname=string
 
 ## <a name="remarks"></a>Notes
 
-Le *nom_macro* est une combinaison de lettres, des chiffres et des traits de soulignement (_) jusqu'à 1 024 caractères et respecte la casse. Le *nom_macro* peut contenir une macro appelée. Si *nom_macro* se compose entièrement d’une macro appelée, la macro appelée ne peut pas être null ou non définie.
+*Nommacro* est une combinaison de lettres, de chiffres et de traits de soulignement (_) jusqu’à 1 024 caractères, et respecte la casse. L’objet *nommacro* peut contenir une macro appelée. Si *nommacro* se compose entièrement d’une macro appelée, la macro appelée ne peut pas être null ou non définie.
 
-Le `string` peut être une séquence de zéro ou plusieurs caractères. Une chaîne null contient zéro caractères ou uniquement des espaces ou des tabulations. Le `string` peut contenir un appel de macro.
+`string`Peut être n’importe quelle séquence de zéro ou plusieurs caractères. Une chaîne NULL ne contient aucun caractère ou uniquement des espaces ou des tabulations. `string`Peut contenir un appel de macro.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
 [Caractères spéciaux dans les macros](special-characters-in-macros.md)
 
-[Macros nulles et non définies](null-and-undefined-macros.md)
+[Macros null et non définies](null-and-undefined-macros.md)
 
 [Où définir des macros](where-to-define-macros.md)
 
-[Priorité dans les définitions de macro](precedence-in-macro-definitions.md)
+[Priorité dans les définitions de macros](precedence-in-macro-definitions.md)
 
 ## <a name="see-also"></a>Voir aussi
 

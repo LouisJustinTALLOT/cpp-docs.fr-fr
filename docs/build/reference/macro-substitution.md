@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : substitution de macro'
 title: Substitution macro
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - macros, NMAKE
 - substitution macros in NMAKE
 ms.assetid: 47465cfe-fd92-49db-aebe-7c2d7ecceb73
-ms.openlocfilehash: 43dc9133c53b1c436c0df8c3db66ae8f18604222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e1531afb210b4671632bca2540bfc7562653139
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199179"
 ---
 # <a name="macro-substitution"></a>Substitution macro
 
-Lorsque *nom_macro* est appelé, chaque occurrence de *string1* dans sa définition de la chaîne est remplacée par *string2*.
+Lorsque *nommacro* est appelé, chaque occurrence de *Chaîne1* dans sa chaîne de définition est remplacée par *Chaîne2*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,9 +26,9 @@ $(macroname:string1=string2)
 
 ## <a name="remarks"></a>Notes
 
-Substitution de macro respecte la casse et est littérale ; *string1* et *string2* ne peut pas appeler des macros. Substitution ne modifie pas la définition d’origine. Vous pouvez remplacer le texte dans une macro prédéfinie à l’exception [ $$@ ](filename-macros.md).
+La substitution de macro est sensible à la casse et est littérale ; *Chaîne1* et *Chaîne2* ne peuvent pas appeler de macros. La substitution ne modifie pas la définition d’origine. Vous pouvez remplacer du texte dans n’importe quelle macro prédéfinie, à l’exception de [$$@](filename-macros.md) .
 
-Aucune espaces ou des tabulations, faites précéder le signe deux-points ; ceux-ci sont interprétés en tant que littéral. Si *string2* est null, toutes les occurrences de *string1* sont supprimés de la chaîne de définition de macro.
+Aucun espace ou tabulation ne précède le signe deux-points ; tout après le signe deux-points est interprété comme littéral. Si *string2* a la valeur null, toutes les occurrences de *string1* sont supprimées de la chaîne de définition de la macro.
 
 ## <a name="see-also"></a>Voir aussi
 

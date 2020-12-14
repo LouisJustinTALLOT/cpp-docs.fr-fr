@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GD,/GR,/GV,/gz (Convention d’appel)
 title: /Gd, /Gr, /Gv, /Gz (Convention d'appel)
 ms.date: 09/05/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: e1617b7c158e9705a6211310fa7873f667a62ba5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd343466efd0b3b0d93fc783cd7e4305c2295ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200323"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convention d'appel)
 
@@ -100,7 +101,7 @@ Pour C, la **`__vectorcall`** Convention d’affectation de noms utilise le nom 
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés avancé **C/C++**  >  **Advanced** .
+1. Sélectionnez la page de propriétés avancé **C/C++**  >   .
 
 1. Modifiez la propriété **Convention d’appel**.
 
@@ -111,4 +112,4 @@ Pour C, la **`__vectorcall`** Convention d’affectation de noms utilise le nom 
 ## <a name="see-also"></a>Voir aussi
 
 - [Options du compilateur MSVC](compiler-options.md)
-- [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+- [Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

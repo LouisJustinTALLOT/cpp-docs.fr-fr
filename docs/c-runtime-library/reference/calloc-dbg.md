@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _calloc_dbg'
 title: _calloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af7b9a5004a35f91710421774fc580bf91d9ab97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198855"
 ---
 # <a name="_calloc_dbg"></a>_calloc_dbg
 
@@ -50,54 +51,54 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*certain*<br/>
+*number*<br/>
 Nombre de blocs de mémoire demandé.
 
 *size*<br/>
 Taille de chaque bloc de mémoire demandée (octets).
 
 *blockType*<br/>
-Type de bloc de mémoire demandé : _ **client_block** ou **_NORMAL_BLOCK**.
+Type de bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 *filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
-Les paramètres *filename* et *LineNumber* sont disponibles uniquement lorsque **_calloc_dbg** a été appelé explicitement ou que la constante de préprocesseur _ [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.
+Les paramètres *filename* et *LineNumber* ne sont disponibles que si **_calloc_dbg** a été appelé explicitement ou si la constante de préprocesseur [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Une fois l’opération réussie, cette fonction retourne un pointeur vers la partie utilisateur du dernier bloc de mémoire alloué, appelle la nouvelle fonction de gestionnaire ou retourne la **valeur null**. Pour obtenir une description complète du comportement de retour, voir la section Notes. Pour plus d’informations sur l’utilisation de la fonction du nouveau gestionnaire, consultez la fonction [calloc](calloc.md).
 
 ## <a name="remarks"></a>Notes
 
-**_calloc_dbg** est une version de débogage de la fonction [calloc](calloc.md) . Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_calloc_dbg** est réduit à un appel à **calloc**. **Calloc** et **_calloc_dbg** allouez des blocs de mémoire de *nombres* dans le tas de base, mais **_calloc_dbg** propose plusieurs fonctionnalités de débogage :
+**_calloc_dbg** est une version de débogage de la fonction [calloc](calloc.md) . Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_calloc_dbg** est réduit à un appel à **calloc**. **Calloc** et **_calloc_dbg** allouez des blocs de mémoire de *nombres* dans le tas de base, mais **_calloc_dbg** propose plusieurs fonctionnalités de débogage :
 
 - Mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites
 
 - Paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques
 
-- /informations d'*LineNumber* du nom de fichier pour déterminer l’origine des demandes d’allocation.
+- *nom du fichier* / informations *LineNumber* pour déterminer l’origine des demandes d’allocation.
 
-**_calloc_dbg** alloue chaque bloc de mémoire avec un peu plus d’espace que la *taille*demandée. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
+**_calloc_dbg** alloue chaque bloc de mémoire avec un peu plus d’espace que la *taille* demandée. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
 
-**_calloc_dbg** définit **errno** sur **ENOMEM** si une allocation de mémoire échoue ; **EINVAL** est retourné si la quantité de mémoire nécessaire (y compris la surcharge mentionnée précédemment) dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** affecte à **errno** la valeur **ENOMEM** si une allocation de mémoire échoue ; **EINVAL** est retourné si la quantité de mémoire nécessaire (y compris la surcharge mentionnée précédemment) dépasse **_HEAP_MAXREQ**. Pour obtenir des informations sur ce code de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans une build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_calloc_dbg**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_callocd.c

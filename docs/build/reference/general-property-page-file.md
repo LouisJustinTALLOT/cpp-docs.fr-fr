@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : général, page de propriétés (fichier)'
 title: Général, page de propriétés (Fichier)
 ms.date: 08/30/2019
 f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 7626e161e6f59de32d426b558827c423a0bb050d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 03b91a028bce5423bcf80fab24153a36eb7435e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200336"
 ---
 # <a name="general-property-page-file"></a>Général, page de propriétés (Fichier)
 
@@ -26,7 +27,7 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de fichier **Explorateur 
 
 - **Contenu** (s’applique uniquement aux applications UWP.) Spécifie si le fichier contient du contenu à inclure dans le package d’application.
 
-- **Type d’élément**
+- **Type d'élément**
 
    Le **type d’élément** spécifie l’outil qui sera utilisé pour traiter le fichier pendant le processus de génération. Les [fichiers dont l’extension est connue de Visual Studio](/visualstudio/extensibility/visual-cpp-project-extensibility#project-items) ont une valeur par défaut dans cette propriété. Vous pouvez spécifier un outil personnalisé ici si vous disposez d’un type de fichier personnalisé ou si vous souhaitez remplacer l’outil par défaut pour un type de fichier connu. Pour plus d’informations, consultez [Spécification des outils de génération personnalisée](../specifying-custom-build-tools.md). Vous pouvez également utiliser cette page de propriétés pour spécifier qu’un fichier ne fait pas partie du processus de génération.
 

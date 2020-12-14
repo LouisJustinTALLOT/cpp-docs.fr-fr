@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/FR,/fr (créer. Fichier SBR)
 title: /FR, /Fr (Créer un fichier .sbr)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9142e7afedb55a7b0f4ed0cdb56e4288524d7afc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200414"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Créer un fichier .sbr)
 
@@ -65,5 +66,5 @@ Si vous ne spécifiez pas `filename`, le fichier .sbr a le même nom de base que
 
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Spécification du nom de chemin](specifying-the-pathname.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Spécification du chemin d’accès](specifying-the-pathname.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : localtime_s, _localtime32_s _localtime64_s'
 title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 856ab5610d176e3a5b2b928bda36154dd071fea5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198815"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -74,7 +75,7 @@ Pointeur désignant la structure de temps à renseigner.
 *sourceTime*<br/>
 Pointeur désignant la valeur de temps stockée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -90,16 +91,16 @@ Concernant les deux premières conditions d’erreur, le gestionnaire de paramè
 
 ## <a name="remarks"></a>Notes
 
-La fonction **Localtime_s** convertit une heure stockée en tant que valeur [time_t](../../c-runtime-library/standard-types.md) et stocke le résultat dans une structure de type [TM](../../c-runtime-library/standard-types.md). La **time_t** valeur time_t *sourceTime* représente les secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, UTC. Cette valeur est généralement obtenue à partir de la fonction [Time](time-time32-time64.md) .
+La fonction **Localtime_s** convertit une heure stockée en tant que valeur [time_t](../../c-runtime-library/standard-types.md) et stocke le résultat dans une structure de type [TM](../../c-runtime-library/standard-types.md). La  valeur time_t *sourceTime* représente les secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, UTC. Cette valeur est généralement obtenue à partir de la fonction [Time](time-time32-time64.md) .
 
-**Localtime_s** correction du fuseau horaire local si l’utilisateur définit d’abord la variable d’environnement globale **TZ**. Quand **TZ** est défini, trois autres variables d’environnement (**_timezone**, **_daylight**et **_tzname**) sont automatiquement définies. Si la variable **TZ** n’est pas définie, **Localtime_s** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application date/heure du panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition ANSI standard de **localtime**.
+**Localtime_s** correction du fuseau horaire local si l’utilisateur définit d’abord la variable d’environnement globale **TZ**. Quand **TZ** est défini, trois autres variables d’environnement (**_timezone**, **_daylight** et **_tzname**) sont automatiquement définies. Si la variable **TZ** n’est pas définie, **Localtime_s** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application date/heure du panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition ANSI standard de **localtime**.
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur.
 
 **_localtime64_s**, qui utilise la structure **__time64_t** , permet d’exprimer les dates jusqu’au 23:59:59, le 18 janvier 3001, le temps universel coordonné (UTC, Coordinated Universal Time), tandis que **_localtime32_s** représente les dates 23:59:59 jusqu’au 18 janvier 2038, heure UTC.
 
-**Localtime_s** est une fonction inline qui prend la valeur **_localtime64_s**et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **Localtime_s** sera évalué à **_localtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**Localtime_s** est une fonction inline qui prend la valeur **_localtime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t** 32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **Localtime_s** sera évalué à **_localtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 Les champs de la structure type [TM](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un **`int`** .
 

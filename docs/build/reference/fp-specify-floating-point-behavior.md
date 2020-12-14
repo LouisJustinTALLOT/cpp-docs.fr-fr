@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/FP (spécifier le comportement de virgule flottante)
 title: /fp (Spécifier le comportement de virgule flottante)
 ms.date: 11/09/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5d57bae24af9cd415a2dcfde073e276f51ce3ea3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200440"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Spécifier le comportement de virgule flottante)
 
@@ -35,7 +36,7 @@ Par défaut, le compilateur utilise le `/fp:precise` comportement.
 Sous, `/fp:precise` le compilateur conserve les propriétés de classement et d’arrondi de l’expression source du code à virgule flottante lors de la génération et de l’optimisation du code objet pour l’ordinateur cible. Le compilateur arrondit à la précision du code source à quatre points spécifiques pendant l’évaluation de l’expression : aux assignations, à conversions, lorsqu’un argument à virgule flottante est passé à un appel de fonction, et lorsqu’une valeur à virgule flottante est retournée à partir d’un appel de fonction. Les calculs intermédiaires peuvent être effectués au niveau de la précision de l’ordinateur. Conversions peut être utilisé pour arrondir explicitement des calculs intermédiaires.
 
 Le compilateur n’effectue pas de transformations algébriques sur les expressions à virgule flottante, telles que la réassociation ou la distribution, sauf si la transformation est garantie pour produire un résultat identique au niveau du bit.
-Les expressions qui impliquent des valeurs spéciales (NaN, + Infinity,-Infinity,-0,0) sont traitées conformément aux spécifications IEEE-754. Par exemple, `x != x` prend la valeur **`true`** si x est NaN. Les *contractions*à virgule flottante, c’est-à-dire les instructions machine qui combinent des opérations à virgule flottante, peuvent être générées sous `/fp:precise` .
+Les expressions qui impliquent des valeurs spéciales (NaN, + Infinity,-Infinity,-0,0) sont traitées conformément aux spécifications IEEE-754. Par exemple, `x != x` prend la valeur **`true`** si x est NaN. Les *contractions* à virgule flottante, c’est-à-dire les instructions machine qui combinent des opérations à virgule flottante, peuvent être générées sous `/fp:precise` .
 
 Le compilateur génère du code destiné à s’exécuter dans l' [environnement à virgule flottante par défaut](#the-default-floating-point-environment) et suppose que l’environnement à virgule flottante n’est pas accessible ou modifié au moment de l’exécution. Autrement dit, il suppose que le code ne masque pas les exceptions à virgule flottante, ne lit ou n’écrit pas les registres d’État à virgule flottante, ni ne modifie les modes d’arrondi.
 
@@ -63,21 +64,21 @@ L' `/fp:except` option génère du code pour s’assurer que toutes les exceptio
 
 Notez que `/fp:except` ne permet pas d’effectuer des exceptions à virgule flottante en soi, mais il est requis pour que les programmes activent les exceptions de virgule flottante. Pour plus d’informations sur l’activation des exceptions de virgule flottante, consultez [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) .
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Plusieurs `/fp` options peuvent être spécifiées dans la même ligne de commande du compilateur. Une seule des `/fp:strict` `/fp:fast` options, et `/fp:precise` peut être appliquée à la fois. Si plusieurs de ces options sont spécifiées sur la ligne de commande, l’option la plus récente est prioritaire et le compilateur génère un avertissement. Les `/fp:strict` options et ne `/fp:except` sont pas compatibles avec `/clr` .
 
 L’option [/za](za-ze-disable-language-extensions.md) (compatibilité ANSI) n’est pas compatible avec `/fp` .
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Utilisation de directives de compilateur pour contrôler le comportement à virgule flottante
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Utilisation de directives de compilateur pour contrôler Floating-Point comportement
 
 Le compilateur fournit trois directives pragma pour remplacer le comportement à virgule flottante spécifié sur la ligne de commande : [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)et [fp_contract](../../preprocessor/fp-contract.md). Vous pouvez utiliser ces directives pour contrôler le comportement à virgule flottante au niveau de la fonction, et non dans une fonction. Notez que ces directives ne correspondent pas directement aux `/fp` options. Ce tableau montre comment les `/fp` directives de pragma et les options sont mappées entre elles. Pour plus d’informations, consultez la documentation relative aux options individuelles et aux directives pragma.
 
 | Option | float_control (précision) | float_control (sauf) | fenv_access | fp_contract |
 |-|-|-|-|-|
-|`/fp:fast`|arrêt|arrêt|arrêt|on|
-|`/fp:precise`|sur|arrêt|arrêt|on|
-|`/fp:strict`|on|on|sur|arrêt|
+|`/fp:fast`|arrêt|arrêt|arrêt|sur|
+|`/fp:precise`|sur|arrêt|arrêt|sur|
+|`/fp:strict`|sur|sur|sur|arrêt|
 
 ### <a name="the-default-floating-point-environment"></a>Environnement à virgule flottante par défaut
 
@@ -269,4 +270,4 @@ En cas de compilation à l’aide `/O2` `/fp:precise` de ou de `/O2` `/fp:strict
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>

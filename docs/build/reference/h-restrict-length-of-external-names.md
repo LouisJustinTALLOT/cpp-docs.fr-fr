@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/H (restreindre la longueur des noms externes)
 title: /H (Limiter la longueur des noms externes)
 ms.date: 09/05/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 9a8976700cfb0f333c2715c573aa2d239e2a8e3a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5df4c4765cc4917e6914eab0b4818c34fceea853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200076"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Limiter la longueur des noms externes)
 
-Obsolète. Limite la longueur des noms externes.
+Action déconseillée. Limite la longueur des noms externes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,7 +77,7 @@ L’option **/h** est dépréciée depuis Visual Studio 2005 ; les limites de l
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Entrez l’option de compilateur dans la zone **options supplémentaires** .
 
@@ -87,4 +88,4 @@ L’option **/h** est dépréciée depuis Visual Studio 2005 ; les limites de l
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

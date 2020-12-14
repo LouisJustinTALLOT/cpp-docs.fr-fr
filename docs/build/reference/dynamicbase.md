@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les éléments suivants:/DYNAMICBASE
 title: /DYNAMICBASE
 ms.date: 06/12/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: 5451e3d16883eef225aebc3c420e6c0700947ad6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 289c0591fa6989d235a63b9bef249078f9a11174
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201051"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 

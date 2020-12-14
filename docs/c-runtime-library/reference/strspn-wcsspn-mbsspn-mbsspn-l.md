@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strspn, wcsspn, _mbsspn, _mbsspn_l'
 title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 366e6f306c119ae7bc712fb3a97db6fbe210b5a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198841"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -85,7 +86,7 @@ size_t _mbsspn_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par Null à trouver.
 
 *strCharSet*<br/>
@@ -94,11 +95,11 @@ Jeu de caractères se terminant par null.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur entière qui spécifie la longueur de la sous-chaîne dans *Str* qui se compose entièrement de caractères dans *strCharSet*. Si *Str* commence par un caractère qui n’est pas dans *strCharSet*, la fonction retourne 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strspn** retourne l’index du premier caractère de *Str* qui n’appartient pas au jeu de caractères de *strCharSet*. La recherche n’inclut pas les caractères Null de fin.
 
@@ -156,7 +157,7 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : activation (C++)'
 title: Activation (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 726c64344f684c8ca9e79d9296daea80882af08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197722"
 ---
 # <a name="activation-c"></a>Activation (C++)
 
@@ -31,7 +32,7 @@ Cet article explique le rôle de l'activation dans la modification visuelle des 
 
 Il est également possible de modifier des éléments OLE incorporés dans une fenêtre distincte. Cela se produit si l'application conteneur ou serveur ne prend pas en charge l'activation sur place. Dans ce cas, lorsque l'utilisateur double-clique sur un élément incorporé, l'application serveur est lancée dans une fenêtre distincte et l'élément incorporé apparaît comme son propre document. L'utilisateur modifie l'élément dans cette fenêtre. Une fois la modification terminée, l'utilisateur ferme l'application serveur et retourne à l'application conteneur.
 
-En guise d’alternative, l’utilisateur peut choisir « ouvrir la modification » à l’aide de la commande ** \<object> ouvrir** du menu **Edition** . Cela ouvre l'objet dans une fenêtre distincte.
+En guise d’alternative, l’utilisateur peut choisir « ouvrir la modification » à l’aide de la commande **\<object> ouvrir** du menu **Edition** . Cela ouvre l'objet dans une fenêtre distincte.
 
 > [!NOTE]
 > La modification des éléments incorporés dans une fenêtre distincte était un comportement standard d'OLE version 1, et certaines applications OLE ne peuvent prendre en charge que ce style de modification.

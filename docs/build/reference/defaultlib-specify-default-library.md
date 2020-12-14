@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/DEFAULTLIB (spécifier la bibliothèque par défaut)
 title: /DEFAULTLIB (Spécifier la bibliothèque par défaut)
 ms.date: 05/29/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abaf158ed01b3e0a04d29c55d213c8749462c43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201688"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Spécifier la bibliothèque par défaut)
 
-Spécifiez une bibliothèque par défaut à Explorer afin de résoudre des références externes.
+Spécifiez une bibliothèque par défaut à rechercher pour résoudre les références externes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,22 +28,22 @@ Spécifiez une bibliothèque par défaut à Explorer afin de résoudre des réf�
 
 ### <a name="arguments"></a>Arguments
 
-*library*<br/>
-Le nom d’une bibliothèque à rechercher lors de la résolution des références externes.
+*Bibliothèque*<br/>
+Nom d’une bibliothèque à rechercher lors de la résolution des références externes.
 
 ## <a name="remarks"></a>Notes
 
-Le **/DEFAULTLIB** option ajoute une *bibliothèque* à la liste des bibliothèques que LINK recherche lors de la résolution des références. Une bibliothèque spécifiée avec **/DEFAULTLIB** est recherchée après les bibliothèques spécifiées explicitement sur la ligne de commande et avant les bibliothèques par défaut nommées dans les fichiers .obj.
+L’option **/DEFAULTLIB** ajoute une *bibliothèque* à la liste des bibliothèques qui lient les recherches lors de la résolution des références. Une bibliothèque spécifiée avec **/DEFAULTLIB** est recherchée après les bibliothèques spécifiées explicitement sur la ligne de commande et avant les bibliothèques par défaut nommées dans les fichiers. obj.
 
-Lorsqu’il est utilisé sans arguments, le [/NODEFAULTLIB (ignorer toutes les bibliothèques par défaut)](nodefaultlib-ignore-libraries.md) option substitue à tous les **/DEFAULTLIB**:*bibliothèque* options. Le **/NODEFAULTLIB**:*bibliothèque* option remplacements **/DEFAULTLIB**:*bibliothèque* lors de la même *bibliothèque*nom est spécifié dans les deux.
+En cas d’utilisation sans arguments, l’option [/NODEFAULTLIB (ignorer toutes les bibliothèques par défaut)](nodefaultlib-ignore-libraries.md) remplace toutes les options **/DEFAULTLIB**:*Library* . L’option **/NODEFAULTLIB**:*Library* remplace **/DEFAULTLIB**:*Library* lorsque le même nom de *bibliothèque* est spécifié dans les deux.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
-1. Dans **des Options supplémentaires**, entrez un **/DEFAULTLIB**:*bibliothèque* option pour chaque bibliothèque à rechercher. Choisissez **OK** pour enregistrer vos modifications.
+1. Dans **options supplémentaires**, entrez une option **/DEFAULTLIB**:*Library* pour chaque bibliothèque dans laquelle effectuer la recherche. Choisissez **OK** pour enregistrer vos modifications.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

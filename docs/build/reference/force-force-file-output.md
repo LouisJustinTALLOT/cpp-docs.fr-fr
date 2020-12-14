@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/FORCE (forcer la sortie de fichier)
 title: /FORCE (Forcer la sortie d'un fichier)
 ms.date: 07/19/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d84810828eef85c4db3558b70953630c70f8f82e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200453"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forcer la sortie d'un fichier)
 

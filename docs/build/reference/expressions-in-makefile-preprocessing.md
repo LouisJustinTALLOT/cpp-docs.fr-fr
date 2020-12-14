@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions dans le prétraitement d’un Makefile'
 title: Expressions utilisées dans le prétraitement d'un makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-ms.openlocfilehash: 3d668492441eb2fc09be378dbebfe2b18c1b5753
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b30900db493a2a87e0527e6f3c062185bb4ab43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200791"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Expressions utilisées dans le prétraitement d'un makefile
 
-Le **! IF** ou **! ELSE IF** `constantexpression` se compose de constantes entières (notation décimale ou en langage C), de constantes de chaîne ou de commandes. Utilisez des parenthèses pour grouper des expressions. Les expressions utiliser C-style entier long signé arithmétique ; nombres se présentent sous forme de 32 bits de complément à 2 dans la plage - 2147483648 et 2147483647.
+Le **! Si** ou **! SINON** `constantexpression` , se compose de constantes entières (notation décimale ou de langage C), de constantes de chaîne ou de commandes. Utilisez des parenthèses pour regrouper des expressions. Les expressions utilisent l’arithmétique d’entiers longue signée de style C. les nombres sont en complément de 32 bits dans la plage comprise entre-2147483648 et 2147483647.
 
-Les expressions peuvent utiliser des opérateurs qui agissent sur des valeurs constantes, les codes de sortie des commandes, les chaînes, les macros et les chemins d’accès de système de fichiers.
+Les expressions peuvent utiliser des opérateurs qui agissent sur les valeurs constantes, les codes de sortie des commandes, les chaînes, les macros et les chemins d’accès de système de fichiers.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
@@ -27,4 +28,4 @@ Les expressions peuvent utiliser des opérateurs qui agissent sur des valeurs co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prétraitement d’un makefile](makefile-preprocessing.md)
+[Prétraitement d’un Makefile](makefile-preprocessing.md)

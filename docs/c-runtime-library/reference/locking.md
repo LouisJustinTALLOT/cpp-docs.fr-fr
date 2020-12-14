@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _locking'
 title: _locking
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 087fc65edbb30bdb6e36b7410f29cf165b119d38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198802"
 ---
 # <a name="_locking"></a>_locking
 
@@ -62,7 +63,7 @@ Action de verrouillage à exécuter.
 *nbytes*<br/>
 Nombre d’octets à verrouiller.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_locking** retourne 0 en cas de réussite. Une valeur de retour de-1 indique un échec, auquel cas [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est défini sur l’une des valeurs suivantes.
 
@@ -75,7 +76,7 @@ Nombre d’octets à verrouiller.
 
 Si l’échec est dû à un paramètre incorrect, tel qu’un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_locking** verrouille ou déverrouille les octets *nbytes* du fichier spécifié par *FD*. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Tout verrouillage ou déverrouillage commence à la position actuelle du pointeur de fichier et se poursuit sur les *nbytes* octets suivants. Il est possible de verrouiller des octets au-delà de la fin du fichier.
 
@@ -105,7 +106,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_locking.c

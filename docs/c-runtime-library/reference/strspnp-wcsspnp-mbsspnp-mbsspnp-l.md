@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l'
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7b043e96d99644e4534dd2de3202575e2e7cf833
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198724"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -86,7 +87,7 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par Null à trouver.
 
 *caractères*<br/>
@@ -95,11 +96,11 @@ Jeu de caractères se terminant par null.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_strspnp**, **_wcsspnp**et **_mbsspnp** retournent un pointeur désignant le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne la **valeur null** si *Str* est entièrement composé de caractères de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
+**_strspnp**, **_wcsspnp** et **_mbsspnp** retournent un pointeur désignant le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne la **valeur null** si *Str* est entièrement composé de caractères de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsspnp** retourne un pointeur vers le caractère multioctet qui est le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
 
@@ -127,7 +128,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_mbsspnp.c
@@ -153,7 +154,7 @@ abbage
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

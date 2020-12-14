@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : fichiers d’aide (WinHelp)'
 title: Fichiers d'aide (WinHelp)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 6810b3f608b9fa7892b686d72056994fb98c92db
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 77d00154db762d11e064fe91681b81fbe859e7be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200050"
 ---
 # <a name="help-files-winhelp"></a>Fichiers d'aide (WinHelp)
 
@@ -20,7 +21,7 @@ Les fichiers suivants sont créés quand vous ajoutez la prise en charge de l’
 |*NomProj*.hpj|*NomProj*\hlp|Fichiers sources|Fichier projet d’aide utilisé par le compilateur d’aide pour créer le fichier d’aide de votre programme ou contrôle.|
 |*NomProj*.rtf|*NomProj*\hlp|Fichiers d’aide|Contient des rubriques de modèles que vous pouvez modifier et des informations sur la personnalisation de votre fichier .hpj.|
 |*NomProj*.cnt|*NomProj*\hlp|Fichiers d’aide|Fournit la structure de la fenêtre **Sommaire** dans l’aide de Windows.|
-|Makehelp.bat|*Projname*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|
+|Makehelp.bat|*Nomproj*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|
 |Print.rtf|*NomProj*\hlp|Fichiers d’aide|Fichier créé si votre projet offre une prise en charge de l’impression (option par défaut). Ce fichier décrit les commandes et boîtes de dialogue relatives à l’impression.|
 |*.bmp|*NomProj*\hlp|Fichiers de ressources|Contient les images des différentes rubriques d’aide générées.|
 
@@ -29,9 +30,9 @@ Vous pouvez ajouter la prise en charge de WinHelp à un projet de contrôle Acti
 |Nom de fichier|Emplacement du répertoire|Emplacement dans l'Explorateur de solutions|Description|
 |---------------|------------------------|--------------------------------|-----------------|
 |*NomProj*.hpj|*NomProj*\hlp|Fichiers sources|Fichier projet utilisé par le compilateur d’aide pour créer le fichier d’aide de votre programme ou contrôle.|
-|*NomProj*.rtf|*NomProj*\hlp|Projet|Contient des rubriques de modèles que vous pouvez modifier et des informations sur la personnalisation de votre fichier .hpj.|
-|Makehelp.bat|*Projname*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|
-|Bullet.bmp|*Projname*|Fichiers de ressources|Fichier utilisé pour représenter les listes à puces dans les rubriques d’aide standard.|
+|*NomProj*.rtf|*NomProj*\hlp|Project|Contient des rubriques de modèles que vous pouvez modifier et des informations sur la personnalisation de votre fichier .hpj.|
+|Makehelp.bat|*Nomproj*|Fichiers sources|Fichier utilisé par le système pour générer le projet d’aide lors de la compilation du projet.|
+|Bullet.bmp|*Nomproj*|Fichiers de ressources|Fichier utilisé pour représenter les listes à puces dans les rubriques d’aide standard.|
 
 ## <a name="see-also"></a>Voir aussi
 

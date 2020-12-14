@@ -1,5 +1,6 @@
 ---
-title: 'Comment : convertir System::String en wchar_t * ou char*'
+description: 'En savoir plus sur : Comment : convertir System :: String en wchar_t * ou char *'
+title: 'Procédure : Convertir System::String en wchar_t* ou char*'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 973d9c71e536865188dc03d88821dacce4b20e52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198360"
 ---
-# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>Comment : convertir System::String en wchar_t * ou char*
+# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>Procédure : Convertir System::String en wchar_t* ou char*
 
-Vous pouvez utiliser `PtrToStringChars` dans Vcclr.h pour convertir <xref:System.String> en `wchar_t *` ou `char *` natif.  De cette manière, un pointeur de chaîne Unicode étendu est toujours retourné, car les chaînes CLR sont Unicode en interne. Vous pouvez ensuite effectuer la conversion du pointeur étendu comme illustré dans l'exemple suivant.
+Vous pouvez utiliser `PtrToStringChars` dans Vcclr. h pour convertir <xref:System.String> en native `wchar_t *` ou `char *` .  Cela retourne toujours un pointeur de chaîne Unicode étendu, car les chaînes CLR sont en interne Unicode. Vous pouvez ensuite effectuer une conversion à partir de l’étendue, comme indiqué dans l’exemple suivant.
 
 ## <a name="example"></a>Exemple
 

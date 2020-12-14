@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GL (optimisation de l’ensemble du programme)
 title: /GL (Optimisation de l'ensemble du programme)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad42eaeeacf897686831c9b415aa62026b5644f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200193"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optimisation de l'ensemble du programme)
 
@@ -30,7 +31,7 @@ Active l'optimisation de l'ensemble du programme.
 
 L’optimisation de l’ensemble du programme permet au compilateur d’effectuer des optimisations avec des informations sur tous les modules du programme. Sans l’optimisation de l’ensemble du programme, les optimisations sont effectuées sur une base par module (compiland).
 
-L’optimisation de l’ensemble du programme est désactivée par défaut et doit être explicitement activée. Toutefois, il est également possible de le désactiver explicitement avec **/GL-** .
+L’optimisation de l’ensemble du programme est désactivée par défaut et doit être explicitement activée. Toutefois, il est également possible de le désactiver explicitement avec **/GL-**.
 
 Avec les informations de tous les modules, le compilateur peut :
 
@@ -48,7 +49,7 @@ Si vous compilez votre programme avec **/GL** et [/c](c-compile-without-linking.
 
 [/Zi](z7-zi-zi-debug-information-format.md) ne peut pas être utilisé avec **/GL**
 
-Le format des fichiers générés avec **/GL** dans la version actuelle n’est peut-être pas lisible par C++les versions ultérieures de Visual. Vous ne devez pas envoyer un fichier. lib constitué de fichiers. obj qui ont été générés avec **/GL** , sauf si vous êtes disposé à expédier des copies du fichier. lib C++ pour toutes les versions de Visual que vos utilisateurs vous attendent à utiliser, maintenant et à l’avenir.
+Le format des fichiers générés avec **/GL** dans la version actuelle n’est peut-être pas lisible par les versions ultérieures de Visual C++. Vous ne devez pas envoyer un fichier. lib constitué de fichiers. obj générés avec **/GL** , à moins que vous ne souhaitiez expédier des copies du fichier. lib pour toutes les versions de Visual C++ que vos utilisateurs vous attendent à utiliser, maintenant et à l’avenir.
 
 les fichiers. obj produits avec **/GL** et les fichiers d’en-tête précompilés ne doivent pas être utilisés pour générer un fichier. lib, sauf si le fichier. lib est lié sur le même ordinateur qui a produit le fichier **/GL** . obj. Les informations du fichier d’en-tête précompilé du fichier. obj seront nécessaires au moment de la liaison.
 
@@ -65,4 +66,4 @@ Pour plus d’informations sur les optimisations disponibles avec et sur les lim
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonction RaiseException'
 title: RaiseException (fonction)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5353757ff04ab12c0fc61da6b2e98b2df835ef0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198438"
 ---
 # <a name="raiseexception-function"></a>RaiseException (fonction)
 
@@ -28,7 +29,7 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Paramètres
 
-*h*<br/>
+*heure(s)*<br/>
 Code d’exception de l’exception levée ; autrement dit, HRESULT d’une opération ayant échoué.
 
 *dwExceptionFlags*<br/>
@@ -38,7 +39,7 @@ Indicateur qui signale une exception continue (la valeur de l’indicateur est z
 
 Lève une exception dans le thread appelant.
 
-Pour plus d’informations, consultez la fonction Windows `RaiseException`.
+Pour plus d’informations, consultez la `RaiseException` fonction Windows.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -48,4 +49,4 @@ Pour plus d’informations, consultez la fonction Windows `RaiseException`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

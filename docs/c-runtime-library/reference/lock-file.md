@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _lock_file'
 title: _lock_file
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1eba161b5083235c1ef0724284e74e6f0f7df0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198828"
 ---
 # <a name="_lock_file"></a>_lock_file
 
@@ -48,10 +49,10 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Paramètres
 
-*txt*<br/>
+*file*<br/>
 Descripteur de fichier.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_lock_file** verrouille l’objet **fichier** spécifié par le *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être mis en correspondance dans un thread.
 

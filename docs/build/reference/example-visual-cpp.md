@@ -1,5 +1,6 @@
 ---
-title: '> exemple de &lt;C++ (commentaires de documentation)'
+description: 'En savoir plus sur : &lt; exemple&gt;'
+title: '&lt;exemple> (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 8ffa51be888fb631db6ec1ecd145177ea346084f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200830"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 
-La balise \<example> vous permet de spécifier un exemple d’utilisation d’une méthode ou de tout autre membre de bibliothèque. En règle générale, cela implique également l’utilisation de la balise [\<code>](code-visual-cpp.md).
+La \<example> balise vous permet de spécifier un exemple d’utilisation d’une méthode ou d’un autre membre de bibliothèque. En général, cela implique également l’utilisation de la [\<code>](code-visual-cpp.md) balise.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,14 +26,14 @@ La balise \<example> vous permet de spécifier un exemple d’utilisation d’un
 <example>description</example>
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
 *description*<br/>
 Description de l’exemple de code.
 
 ## <a name="remarks"></a>Notes
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
 ## <a name="example"></a>Exemple
 

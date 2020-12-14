@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/EXPORT (exporte une fonction)
 title: /EXPORT (Exporter une fonction)
 ms.date: 09/05/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a52ea79d0569d31c26eabd06d51ef58a10567119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200804"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporter une fonction)
 
@@ -22,7 +23,7 @@ Exporte une fonction par nom ou ordinal, ou données, à partir de votre program
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Export :**<em>entryname</em>[**, \@ **<em>ordinal</em>[**, NoName**]] [**, Data**]
+> **/Export :**<em>entryname</em>[**, \@**<em>ordinal</em>[**, NoName**]] [**, Data**]
 
 ## <a name="remarks"></a>Notes
 
@@ -60,7 +61,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Entrez l’option dans la zone **options supplémentaires** .
 

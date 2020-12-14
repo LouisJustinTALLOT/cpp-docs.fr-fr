@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : noms décorés'
 title: Noms décorés
 ms.date: 09/05/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 0cda21b1650fa660175248c15560a7ab0b251d07
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 65135b4f5b85cfae7a25513763b998d304e79a0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201714"
 ---
 # <a name="decorated-names"></a>Noms décorés
 

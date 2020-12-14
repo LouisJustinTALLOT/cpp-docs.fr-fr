@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ENTRY (symbole de point d’entrée)
 title: /ENTRY (Symbole de point d'entrée)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 80833980b64e8fdd2a2f57b2dc40eb21c784b6f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4966ef44922a3a90d5abb5a7ac23460d4155f92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201012"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbole de point d'entrée)
 
@@ -39,8 +40,8 @@ Par défaut, l’adresse de départ est un nom de fonction de la bibliothèque R
 |Nom de la fonction|Par défaut pour|
 |-------------------|-----------------|
 |**mainCRTStartup** (ou **wmainCRTStartup**)|Une application qui utilise/SUBSYSTEM : CONSOLE ; appels `main` (ou `wmain` )|
-|**WinMainCRTStartup** (ou **wWinMainCRTStartup**)|Une application qui utilise/SUBSYSTEM :**Windows**; appelle `WinMain` (ou `wWinMain` ), qui doit être défini pour utiliser**`__stdcall`**|
-|**_DllMainCRTStartup**|UNE DLL ; appelle `DllMain` s’il existe, qui doit être défini pour utiliser**`__stdcall`**|
+|**WinMainCRTStartup** (ou **wWinMainCRTStartup**)|Une application qui utilise/SUBSYSTEM :**Windows**; appelle `WinMain` (ou `wWinMain` ), qui doit être défini pour utiliser **`__stdcall`**|
+|**_DllMainCRTStartup**|UNE DLL ; appelle `DllMain` s’il existe, qui doit être défini pour utiliser **`__stdcall`**|
 
 Si l’option [/dll](dll-build-a-dll.md) ou [/Subsystem](subsystem-specify-subsystem.md) n’est pas spécifiée, l’éditeur de liens sélectionne un sous-système et un point d’entrée selon que `main` ou `WinMain` est défini.
 
