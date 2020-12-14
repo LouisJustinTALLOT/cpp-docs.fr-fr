@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: exception'
 title: Platform::Exception (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 1b6ad35e04ae239d90dbfceecaaf72223ae6a7ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195214"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -85,7 +86,7 @@ Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méth
 *message*<br/>
 Chaîne qui décrit l'erreur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Exception qui représente l'erreur HRESULT.
 

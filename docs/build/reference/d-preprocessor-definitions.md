@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/D (définitions de préprocesseur)
 title: /D (Définitions de préprocesseur)
 ms.date: 09/18/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 7c8a500820c8cc4655c409f4628d72a69acafa5a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6ae7dcd81e1821d4c3a8a2f6d5c1b711c0faa9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196826"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Définitions de préprocesseur)
 
@@ -29,7 +30,7 @@ Définit un symbole de prétraitement pour un fichier source.
 > **/D** \[ ]_Name_ \[ `=` \| `#` \[ { *chaîne* \| *Number* }]] \
 > **/D** \[ ] `"` _Name_ \[ `=` \| `#` \[ { *chaîne* \| *Number* }]]`"`
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous pouvez utiliser ce symbole avec `#if` ou `#ifdef` pour effectuer une compilation conditionnelle du code source. La définition du symbole reste en vigueur jusqu’à ce qu’elle soit redéfinie dans le code ou qu’elle ne soit pas définie dans le code par une `#undef` directive.
 
@@ -107,7 +108,7 @@ TEST defined 1
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)\
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)\
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)\
 [/FI (nom du fichier include imposé)](fi-name-forced-include-file.md)\
 [/U,/u (annuler la définition des symboles)](u-u-undefine-symbols.md)\
 [#undef, directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)\

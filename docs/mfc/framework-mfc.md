@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Framework (MFC)'
 title: Framework (MFC)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 12e5a28e231dfadec867213ebf1cea6fd6ae7300
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193485"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
@@ -39,7 +40,7 @@ L’encapsulation signifie que la classe C++ `CWnd` , par exemple, contient une 
 
 [Génération sur le Framework](building-on-the-framework.md)
 
-[Méthode d’appel de votre code par le Framework](how-the-framework-calls-your-code.md)
+[Comment le Framework appelle votre code](how-the-framework-calls-your-code.md)
 
 [CWinApp : classe d’application](cwinapp-the-application-class.md)
 
@@ -47,8 +48,8 @@ L’encapsulation signifie que la classe C++ `CWnd` , par exemple, contient une 
 
 [Gestion et mappage des messages](message-handling-and-mapping.md)
 
-[Objets fenêtres](window-objects.md)
+[Objets de fenêtre](window-objects.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des classes pour l’écriture d’applications pour Windows](using-the-classes-to-write-applications-for-windows.md)
+[Utilisation des classes pour écrire des applications pour Windows](using-the-classes-to-write-applications-for-windows.md)

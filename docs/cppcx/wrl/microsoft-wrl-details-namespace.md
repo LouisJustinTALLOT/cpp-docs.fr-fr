@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : Microsoft :: WRL ::D espace de noms étails'
 title: Microsoft::WRL::Details, espace de noms
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 50208242d77d7b54951bcb44608f1a20b5147efc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c82d7389c80d35aa041dccc7c6bc8d202fba9c29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195110"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 
@@ -41,7 +42,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|
 |[ArgTraits (structure)](argtraits-structure.md)|Déclare une interface de délégué spécifiée et une fonction membre anonyme qui a un nombre spécifié de paramètres.|
 |[ArgTraitsHelper, structure](argtraitshelper-structure.md)|Permet de définir les caractéristiques communes des arguments de délégué.|
-|[BoolStruct (structure)](boolstruct-structure.md)|Définit si un `ComPtr` gère la durée de vie des objets d’une interface. `BoolStruct`est utilisé en interne par l’opérateur [booltype, ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
+|[BoolStruct (structure)](boolstruct-structure.md)|Définit si un `ComPtr` gère la durée de vie des objets d’une interface. `BoolStruct` est utilisé en interne par l’opérateur [booltype, ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
 |[CreatorMap, structure](creatormap-structure.md)|Contient des informations sur l’initialisation, l’inscription et l’annulation de l’inscription d’objets.|
 |[DerefHelper (structure)](derefhelper-structure.md)|Représente un pointeur déréférencé vers le `T*` paramètre de modèle.|
 |[EnableIf (structure)](enableif-structure.md)|Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **`true`** .|

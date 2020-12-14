@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; tableau&gt;'
 title: '&lt;array&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: b515578e658d658722f92e48a7ac5ab78727c465
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7c593fec9cf240ae28f8d05e1c56c743a7a3e42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193069"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Définit le **tableau** de modèles de classe de conteneur et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<array>
 
@@ -42,12 +43,12 @@ Définit le **tableau** de modèles de classe de conteneur et plusieurs modèles
 |-|-|
 |[opérateur = =](../standard-library/array-operators.md#op_eq_eq)|comparaison de tableaux, égal à|
 |[opérateur ! =](../standard-library/array-operators.md#op_neq)|comparaison de tableaux, non égal à|
-|[and\<](../standard-library/array-operators.md#op_lt)|comparaison de tableaux, inférieur à|
+|[operator\<](../standard-library/array-operators.md#op_lt)|comparaison de tableaux, inférieur à|
 |[>opérateur =](../standard-library/array-operators.md#op_gt_eq)|comparaison de tableaux, supérieur ou égal à|
 |[>d’opérateur ](../standard-library/array-operators.md#op_gt)|comparaison de tableaux, supérieur à|
 |[<opérateur =](../standard-library/array-operators.md#op_lt_eq)|comparaison de tableaux, inférieur ou égal à|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

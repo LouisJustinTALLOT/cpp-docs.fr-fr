@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : philosophie générale de conception de classes'
 title: Philosophie générale de conception des classes
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-ms.openlocfilehash: cfad635c2a826c6f57e2e1513d753a4083494dee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96069b5f30cbca8bb310de6b917fd65a280700b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193459"
 ---
 # <a name="general-class-design-philosophy"></a>Philosophie générale de conception des classes
 

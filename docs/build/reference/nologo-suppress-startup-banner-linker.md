@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/NOLOGO (supprimer la bannière de démarrage) (éditeur de liens)
 title: /NOLOGO (Suppression de la bannière de démarrage) (Éditeur de liens)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48edea691e254f0754d29ab5ea4d8055221c4b69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196553"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Suppression de la bannière de démarrage) (Éditeur de liens)
 
@@ -28,15 +29,15 @@ ms.locfileid: "62320517"
 
 ## <a name="remarks"></a>Notes
 
-L’option /NOLOGO empêche l’affichage de l’auteur message et numéro de version.
+L’option/NOLOGO empêche l’affichage du message de copyright et du numéro de version.
 
-Cette option supprime également la répercussion des fichiers de commandes. Pour plus d’informations, consultez [fichiers de commandes LINK](linking.md).
+Cette option supprime également l’écho des fichiers de commandes. Pour plus d’informations, consultez [lier des fichiers de commandes](linking.md).
 
-Par défaut, ces informations sont transmises par l’éditeur de liens dans la fenêtre Sortie. Sur la ligne de commande, il est envoyé vers la sortie standard et peut être redirigée vers un fichier.
+Par défaut, ces informations sont envoyées par l’éditeur de liens à la fenêtre sortie. Sur la ligne de commande, elle est envoyée à la sortie standard et peut être redirigée vers un fichier.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Cette option doit uniquement être utilisée à partir de la ligne de commande.
+1. Cette option ne doit être utilisée qu’à partir de la ligne de commande.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

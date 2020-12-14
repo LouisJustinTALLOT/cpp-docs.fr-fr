@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les déclarations de pointeur
 title: Déclarations de pointeur
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c1670d1dd86e7df7f164e357ff99f3ed31e7339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195916"
 ---
 # <a name="pointer-declarations"></a>Déclarations de pointeur
 
@@ -32,7 +33,7 @@ Une *déclaration de pointeur* nomme une variable de pointeur et spécifie le ty
 
 *pointeur*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List*<sub>OPT</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub>opt</sub> *pointeur* opt
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub></sub> *pointeur* opt
 
 *type-qualifier-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*qualificateur de type*<br/>

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : migration d’OpenMP vers le runtime d’accès concurrentiel'
 title: Migration d'OpenMP au runtime d'accès concurrentiel
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 081d0ae8b312d827a0af98dd45c62f7563e81677
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ab9b50f0cdebcc8fc601565dd19c5c2704c17d95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193082"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migration d'OpenMP au runtime d'accès concurrentiel
 

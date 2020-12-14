@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs ostream'
 title: '&lt;ostream&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 51422031de786d560b70a8ccaf8a072151630bbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193056"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;, opérateurs
 
-[and&lt;&lt;](#op_lt_lt)
+[operator&lt;&lt;](#op_lt_lt)
 
 ## <a name="operatorltlt"></a><a name="op_lt_lt"></a> and&lt;&lt;
 
@@ -96,11 +97,11 @@ Caractéristiques de caractère.
 *multiples*\
 Type
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Flux.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe `basic_ostream` définit également plusieurs opérateurs d’insertion. Pour plus d’informations, consultez [basic_ostream :: &lt; &lt; Operator](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
@@ -113,7 +114,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-détermine la longueur N = `traits_type::` [longueur](../standard-library/char-traits-struct.md#length)( `str` ) de la séquence à partir de *Str*, puis insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si ( `_Ostr` . [flags](../standard-library/ios-base-class.md#flags)  &  indicateurs `adjustfield` ! = [gauche](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
+détermine la longueur N = `traits_type::` [longueur](../standard-library/char-traits-struct.md#length)( `str` ) de la séquence à partir de *Str*, puis insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si ( `_Ostr` . [](../standard-library/ios-base-class.md#flags)  &  indicateurs `adjustfield` ! = [gauche](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
 
 La fonction de modèle
 

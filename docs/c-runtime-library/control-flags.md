@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les indicateurs de contrôle
 title: Indicateurs de contrôle
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6b49bfa49e2e231a64af8d88739778964ce8ed21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195734"
 ---
 # <a name="control-flags"></a>Indicateurs de contrôle
 
