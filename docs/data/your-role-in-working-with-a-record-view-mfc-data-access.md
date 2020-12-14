@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : votre rôle dans l’utilisation d’une vue de l’enregistrement (accès aux données MFC)'
 title: Votre rôle dans l'utilisation d'une vue de l'enregistrement (Accès aux données MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 351aa2d5ce950017aa8c1b3d99c8d297a423ad9f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1eff5db930859ca1956286a9364c72b02f2b473
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302606"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Votre rôle dans l'utilisation d'une vue de l'enregistrement (Accès aux données MFC)
 
@@ -23,7 +24,7 @@ Le tableau suivant montre ce que vous devez généralement faire pour travailler
 |Utiliser l'éditeur de boîte de dialogue Visual C++ pour concevoir le formulaire.|Crée une ressource de modèle de boîte de dialogue avec des contrôles.|
 |Utilisez l ['Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) pour créer des classes dérivées de [CRecordView](../mfc/reference/crecordview-class.md) et de [CRecordset](../mfc/reference/crecordset-class.md).|Écrit les classes pour vous.|
 |Mapper les contrôles de vue d'enregistrement à des données membres de champ de recordset.|Fournit DDX entre les contrôles et les champs du recordset.|
-||Fournit des gestionnaires de commandes par défaut pour **déplacer en premier**, **déplacer en dernier**, **déplacer suivant**et déplacer les commandes **précédentes** à partir des menus ou des boutons de la barre d’outils.|
+||Fournit des gestionnaires de commandes par défaut pour **déplacer en premier**, **déplacer en dernier**, **déplacer suivant** et déplacer les commandes **précédentes** à partir des menus ou des boutons de la barre d’outils.|
 ||Met à jour les modifications apportées à la source de données.|
 |[Facultatif] Écrire du code pour remplir les zones de liste ou zones de liste déroulante ou d'autres contrôles avec des données à partir d'un second recordset.||
 |[Facultatif] Écrire du code pour les validations spéciales.||
@@ -33,5 +34,5 @@ La programmation basée sur formulaire n'est qu'une approche parmi d'autres de l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
-[Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)
+[Vues des enregistrements (accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Liste des pilotes ODBC](../data/odbc/odbc-driver-list.md)

@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Array et WriteOnlyArray (C++/CX)'
 title: Array et WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 1980fbcd1e2fa8cdaa48e00d2e7de9e45ac96a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c4f9415f401f1180786608288e33691c82fbdfa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302788"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array et WriteOnlyArray (C++/CX)
 
@@ -21,7 +22,7 @@ Les types de tableau suivants peuvent être passés à travers l'ABI :
 
 1. `Platform::WriteOnlyArray`
 
-1. valeur de retour de`Platform::Array^`
+1. valeur de retour de `Platform::Array^`
 
 Vous utilisez ces types de tableau pour implémenter les trois types de modèles de tableau définis par le Windows Runtime.
 

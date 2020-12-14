@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2244'
 title: Erreur du compilateur C2244
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
-ms.openlocfilehash: 97ff469c6f3f766bd1b5412133003bae2acaddfc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9f541eca155b9d728f0bbf7cb1578a6e3424c49c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302238"
 ---
 # <a name="compiler-error-c2244"></a>Erreur du compilateur C2244
 
@@ -19,7 +20,7 @@ ms.locfileid: "74759475"
 
 Une utilisation inhabituelle de l’opérateur unaire + a été utilisée devant un appel de fonction qui n’avait pas de parenthèses.
 
-Cette erreur se produit uniquement C++ dans les projets.
+Cette erreur se produit uniquement dans les projets C++.
 
 L’exemple suivant génère l’C2244 :
 

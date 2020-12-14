@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++'
 title: "Comment : marshaler des pointeurs incorporés à l'aide de l'interopérabilité C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 74ea5cdec755b7845796d1b61339811adb4f0b28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302593"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Comment : marshaler des pointeurs incorporés à l'aide de l'interopérabilité C++
 

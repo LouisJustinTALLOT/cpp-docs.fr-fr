@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3537'
 title: Erreur du compilateur C3537
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: cfd2aa6f10b6e43ed10135ea2b6801619176cff5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 84440b757b85a59f87fcca064911136da6cce269
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315255"
 ---
 # <a name="compiler-error-c3537"></a>Erreur du compilateur C3537
 
