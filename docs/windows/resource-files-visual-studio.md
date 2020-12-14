@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fichiers de ressources (C++)'
 title: Fichiers de ressources (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d76a8778cc3c94dd06b6b5b0ea3d6ee6b951e28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507021"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263321"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
@@ -125,7 +126,7 @@ Pour afficher les informations de version et de type contenues dans une ressourc
 
    - Pour ouvrir dans un autre éditeur, cliquez avec le bouton droit sur le fichier *. manifest* , puis sélectionnez **Ouvrir avec**. Spécifiez l’éditeur à utiliser, puis sélectionnez **ouvrir**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

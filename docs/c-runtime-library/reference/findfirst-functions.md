@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64'
 title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 ms.date: 4/2/2020
 api_name:
@@ -112,12 +113,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: 879a84b14f612992ae7ed3a96211637aaf5c4783
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dce0c283a6177940019f1d358bd6cfa500c04306
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263138"
 ---
 # <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -184,7 +185,7 @@ Spécification du fichier cible (peut inclure des caractères génériques).
 *FileInfo*<br/>
 Mémoire tampon des informations du fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **_findfirst** retourne un handle de recherche unique identifiant le fichier ou le groupe de fichiers qui correspondent à *la spécification de fichier de spécification,* qui peut être utilisé lors d’un appel ultérieur à [_findnext](findnext-functions.md) ou à [_findclose](findclose.md). Sinon, **_findfirst** retourne-1 et affecte à **errno** l’une des valeurs suivantes.
 
@@ -199,7 +200,7 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [_do
 
 Si un paramètre non valide est passé, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Vous devez appeler [_findclose](findclose.md) une fois que vous avez terminé avec la fonction **_findfirst** ou [_findnext](findnext-functions.md) (ou toute variante). Cette opération libère les ressources utilisées par ces fonctions dans votre application.
 
@@ -211,7 +212,7 @@ Ces fonctions utilisent différentes formes de la structure **_finddata_t** pour
 
 Les variantes qui utilisent un type d’heure 64 bits permettent d’exprimer les dates de création de fichiers jusqu’au 31 décembre 3000 à 23:59:59, heure UTC. Celles qui utilisent des types d’heure 32 bits représentent les dates uniquement jusqu’au 18 janvier 2038 à 23:59:59, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
 
-À moins que vous n’ayez une raison particulière d’utiliser les versions qui spécifient la taille de l’heure de manière explicite, utilisez **_findfirst** ou **_wfindfirst** ou, si vous avez besoin de prendre en charge des tailles de fichier supérieures à 3 Go, utilisez **_findfirsti64** ou **_wfindfirsti64**. Toutes ces fonctions utilisent le type d’heure 64 bits. Dans les versions antérieures, ces fonctions utilisaient un type d’heure 32 bits. S’il s’agit d’une modification avec rupture pour une application, vous pouvez définir **_USE_32BIT_TIME_T** pour revenir à l’ancien comportement. Si **_USE_32BIT_TIME_T** est défini, **_findfirst**, **_finfirsti64**et leurs versions Unicode correspondantes utilisent une heure de 32 bits.
+À moins que vous n’ayez une raison particulière d’utiliser les versions qui spécifient la taille de l’heure de manière explicite, utilisez **_findfirst** ou **_wfindfirst** ou, si vous avez besoin de prendre en charge des tailles de fichier supérieures à 3 Go, utilisez **_findfirsti64** ou **_wfindfirsti64**. Toutes ces fonctions utilisent le type d’heure 64 bits. Dans les versions antérieures, ces fonctions utilisaient un type d’heure 32 bits. S’il s’agit d’une modification avec rupture pour une application, vous pouvez définir **_USE_32BIT_TIME_T** pour revenir à l’ancien comportement. Si **_USE_32BIT_TIME_T** est défini, **_findfirst**, **_finfirsti64** et leurs versions Unicode correspondantes utilisent une heure de 32 bits.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -219,14 +220,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Fonctions|**_USE_32BIT_TIME_T** défini ?|Type d’heure|Type de longueur de fichier|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findfirst**, **_wfindfirst**|Non défini|64 bits|32 bits|
-|**_findfirst**, **_wfindfirst**|Défini|32 bits|32 bits|
-|**_findfirst32**, **_wfindfirst32**|Non affecté par la définition de macro|32 bits|32 bits|
+|**_findfirst**, **_wfindfirst**|Non défini|64 bits|32 bits|
+|**_findfirst**, **_wfindfirst**|Défini|32 bits|32 bits|
+|**_findfirst32**, **_wfindfirst32**|Non affecté par la définition de macro|32 bits|32 bits|
 |**_findfirst64**, **_wfindfirst64**|Non affecté par la définition de macro|64 bits|64 bits|
 |**_findfirsti64**, **_wfindfirsti64**|Non défini|64 bits|64 bits|
-|**_findfirsti64**, **_wfindfirsti64**|Défini|32 bits|64 bits|
-|**_findfirst32i64**, **_wfindfirst32i64**|Non affecté par la définition de macro|32 bits|64 bits|
-|**_findfirst64i32**, **_wfindfirst64i32**|Non affecté par la définition de macro|64 bits|32 bits|
+|**_findfirsti64**, **_wfindfirsti64**|Défini|32 bits|64 bits|
+|**_findfirst32i64**, **_wfindfirst32i64**|Non affecté par la définition de macro|32 bits|64 bits|
+|**_findfirst64i32**, **_wfindfirst64i32**|Non affecté par la définition de macro|64 bits|32 bits|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -241,7 +242,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_findfirst**|\<io.h>|
 |**_findfirst32**|\<io.h>|

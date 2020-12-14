@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe marshal_context'
 title: marshal_context, classe
 ms.date: 01/16/2019
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6fa625ed52ac69682574d52c423e54d200461e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253648"
 ---
 # <a name="marshal_context-class"></a>marshal_context, classe
 
@@ -46,7 +47,7 @@ Le même `marshal_context` peut être utilisé pour de nombreuses conversions de
 |---------|-----------|
 |[marshal_context::marshal_as](#marshal-as)|Effectue le marshaling sur un objet de données spécifique pour le convertir entre un type de données managé et un type de données natif.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Fichier d’en-tête :** \<msclr\marshal.h> , \<msclr\marshal_windows.h> , \<msclr\marshal_cppstd.h> ou \<msclr\marshal_atl.h>
 
@@ -60,7 +61,7 @@ Construit un `marshal_context` objet à utiliser pour la conversion de données 
 marshal_context();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Certaines conversions de données requièrent un contexte Marshal. Pour plus d’informations sur les traductions qui requièrent un contexte et le fichier de marshaling que vous devez inclure dans votre application, consultez [vue d’ensemble du marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
@@ -76,7 +77,7 @@ Détruit un objet `marshal_context` .
 ~marshal_context();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Certaines conversions de données requièrent un contexte Marshal. Consultez [vue d’ensemble du marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md) pour plus d’informations sur les traductions qui requièrent un contexte et le fichier de marshaling à inclure dans votre application.
 
@@ -97,11 +98,11 @@ To_Type marshal_as<To_Type>(
 *input*<br/>
 dans Valeur que vous souhaitez marshaler en une `To_Type` variable.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Variable de type `To_Type` qui est la valeur convertie de `input` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction effectue le marshaling sur un objet de données spécifique. Utilisez cette fonction uniquement avec les conversions indiquées par le tableau dans [vue d’ensemble du marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs Regex'
 title: '&lt;regex&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bc0eddc9f3c7db600c49e317335a131bc6646a5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254272"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt;, opérateurs
 

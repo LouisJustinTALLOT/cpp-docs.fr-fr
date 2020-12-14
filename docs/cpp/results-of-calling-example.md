@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : résultats de l’appel de l’exemple'
 title: Exemple de résultats de l'appel
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-ms.openlocfilehash: 1bf5fe62b8ef2b7a37bf72b7a40e5d47af3f3961
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91da3182742414dc4850013463b74ae36aa782c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262917"
 ---
 # <a name="results-of-calling-example"></a>Exemple de résultats de l'appel
 
@@ -30,7 +31,7 @@ Le nom de fonction décoré C est `_MyFunc` .
 
 Le nom décoré C ( **`__stdcall`** ) est `_MyFunc@20` . Le nom décoré C++ est spécifique à l’implémentation.
 
-![Conventions d’appel&#95;&#95;stdcall et thiscall](../cpp/media/vc37i02.gif "Conventions d’appel &#95;&#95;stdcall et thiscall") <br/>
+![ Conventions d’appel&#95;&#95;stdcall et thiscall](../cpp/media/vc37i02.gif "Conventions d’appel &#95;&#95;stdcall et thiscall") <br/>
 Conventions d'appel __stdcall et thiscall
 
 ## <a name="__fastcall"></a>__fastcall

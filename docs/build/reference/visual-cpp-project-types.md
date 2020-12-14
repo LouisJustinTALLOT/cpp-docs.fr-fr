@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : modèles de projet C++'
 title: Types de projets Visual C++
 ms.date: 08/13/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: e929142181ebd849c820ad50e5ce64c2d4f5ab44
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 924e53e0d977b4f9b3b40bf7444f8495dbe1d451
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253167"
 ---
 # <a name="c-project-templates"></a>Modèles de projet C++
 
@@ -28,7 +29,7 @@ Les modèles de projet Visual Studio génèrent des fichiers de code source, des
 
 Les modèles de projet inclus dans Visual Studio dépendent de la version du produit et des charges de travail que vous avez installées. Si vous avez installé la charge de travail développement Desktop en C++, Visual Studio dispose de ces modèles de projet C++.
 
-### <a name="windows-desktop"></a>Windows Desktop
+### <a name="windows-desktop"></a>Bureau Windows
 
 |Modèle de projet|Description|
 |----------------------|-----------------------------|

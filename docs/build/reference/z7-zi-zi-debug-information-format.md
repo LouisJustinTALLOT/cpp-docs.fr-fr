@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/Z7,/Zi,/ZI (format des informations de débogage)
 title: /Z7, /Zi, /ZI (Format des informations de débogage)
 ms.date: 07/06/2020
 f1_keywords:
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: bc3fd9c065219a128e29290084b1e1fb51fc773e
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 604c34cac5c3cd049f23e21f5db033c0ecc8c480
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263229"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format des informations de débogage)
 
@@ -71,7 +73,7 @@ Si vous créez une bibliothèque à partir d’objets qui ont été compilés à
 
 L' **`/ZI`** option est semblable à **`/Zi`** , mais elle produit un fichier PDB dans un format qui prend en charge la fonctionnalité [Modifier & Continuer](/visualstudio/debugger/edit-and-continue-visual-cpp) . Pour utiliser les fonctionnalités de débogage modifier & continuer, vous devez utiliser cette option. La fonctionnalité Modifier & Continuer est utile pour la productivité des développeurs, mais peut entraîner des problèmes de taille de code, de performances et de conformité du compilateur. Étant donné que la plupart des optimisations ne sont pas compatibles avec modifier & continuer, l’utilisation **`/ZI`** désactive toutes les `#pragma optimize` instructions de votre code. L' **`/ZI`** option est également incompatible avec l’utilisation de la [ `__LINE__` macro prédéfinie](../../preprocessor/predefined-macros.md); le code compilé avec **`/ZI`** ne peut pas `__LINE__` être utilisé en tant qu’argument de modèle sans type, bien qu’il `__LINE__` puisse être utilisé dans les expansions de macro.
 
-L' **`/ZI`** option force l’utilisation des options [ `/Gy` (activer la liaison au niveau des fonctions)](gy-enable-function-level-linking.md) et [ `/FC` (chemin d’accès complet du fichier de code source dans les Diagnostics)](fc-full-path-of-source-code-file-in-diagnostics.md) dans votre compilation.
+L' **`/ZI`** option force l’utilisation des options [ `/Gy` (activer Function-Level liaison)](gy-enable-function-level-linking.md) et [ `/FC` (chemin d’accès complet du fichier de code source dans les Diagnostics)](fc-full-path-of-source-code-file-in-diagnostics.md) dans votre compilation.
 
 **`/ZI`** est incompatible avec [ `/clr` (compilation du Common Language Runtime)](clr-common-language-runtime-compilation.md).
 
@@ -82,7 +84,7 @@ L' **`/ZI`** option force l’utilisation des options [ `/Gy` (activer la liaiso
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Ouvrez la page de propriétés général de **Propriétés de configuration**  >  **C/C++**  >  **General** .
+1. Ouvrez la page de propriétés général de **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **format des informations de débogage** . Choisissez **OK** pour enregistrer vos modifications.
 

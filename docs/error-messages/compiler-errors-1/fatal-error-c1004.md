@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1004'
 title: Erreur irrécupérable C1004
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f21978f5ff314a8273dde60428dc89ca0c5767b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262683"
 ---
 # <a name="fatal-error-c1004"></a>Erreur irrécupérable C1004
 
@@ -31,7 +32,7 @@ Pour résoudre cette erreur, vérifiez les éléments suivants :
 
 - Le lecteur de disque par défaut ne dispose pas de suffisamment d’espace pour les fichiers temporaires, ce qui nécessite environ deux fois plus d’espace que le fichier source.
 
-- Une directive de `#if` qui prend la valeur false ne dispose pas d’une directive de `#endif` de fermeture.
+- Une `#if` directive qui prend la valeur false ne dispose pas d’une directive de fermeture `#endif` .
 
 - Un fichier source ne se termine pas par un retour chariot et un saut de ligne.
 

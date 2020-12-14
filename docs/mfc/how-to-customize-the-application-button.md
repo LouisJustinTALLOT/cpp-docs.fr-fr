@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : Comment : personnaliser le bouton de l’application'
 title: 'Comment : personnaliser le bouton Application'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: 9160e602848adf8dc95c840d702e0b1a1b2f9049
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72db627c6a4efef711ea7cc3163d0266e0a6c219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253453"
 ---
 # <a name="how-to-customize-the-application-button"></a>Comment : personnaliser le bouton Application
 
-Lorsque vous cliquez sur le bouton application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes associées aux fichiers, telles que **ouvrir**, **Enregistrer**, **Imprimer**et **quitter**.
+Lorsque vous cliquez sur le bouton application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes associées aux fichiers, telles que **ouvrir**, **Enregistrer**, **Imprimer** et **quitter**.
 
 ![Bouton Application de ruban MFC](../mfc/media/application_button.png "Bouton Application de ruban MFC")
 
@@ -52,7 +53,7 @@ Le menu application n’apparaît pas sur l’aire de conception. Pour l’affic
 
 #### <a name="to-preview-the-ribbon-control"></a>Pour afficher un aperçu du contrôle du ruban
 
-- Dans la **barre d’outils**de l’éditeur de ruban, cliquez sur **tester le ruban**.
+- Dans la **barre d’outils** de l’éditeur de ruban, cliquez sur **tester le ruban**.
 
 ## <a name="see-also"></a>Voir aussi
 

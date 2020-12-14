@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64'
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 4/2/2020
 api_name:
@@ -114,12 +115,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5513f3932b78d450ecce81947e0095efb8df1d9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263125"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -186,7 +187,7 @@ Handle de recherche retourné par un appel précédent à **_findfirst**.
 *FileInfo*<br/>
 Mémoire tampon des informations du fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne 0. Sinon, retourne-1 et définit **errno** sur une valeur indiquant la nature de l’échec. Les codes d’erreur possibles sont présentés dans le tableau suivant.
 
@@ -198,7 +199,7 @@ En cas de réussite, retourne 0. Sinon, retourne-1 et définit **errno** sur une
 
 Si un paramètre non valide est passé, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Vous devez appeler [_findclose](findclose.md) une fois que vous avez terminé d’utiliser la fonction **_findfirst** ou **_findnext** (ou toute variante). Cette opération libère les ressources utilisées par ces fonctions dans votre application.
 
@@ -214,14 +215,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Fonctions|**_USE_32BIT_TIME_T** défini ?|Type d’heure|Type de longueur de fichier|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findnext**, **_wfindnext**|Non défini|64 bits|32 bits|
-|**_findnext**, **_wfindnext**|Défini|32 bits|32 bits|
-|**_findnext32**, **_wfindnext32**|Non affecté par la définition de macro|32 bits|32 bits|
+|**_findnext**, **_wfindnext**|Non défini|64 bits|32 bits|
+|**_findnext**, **_wfindnext**|Défini|32 bits|32 bits|
+|**_findnext32**, **_wfindnext32**|Non affecté par la définition de macro|32 bits|32 bits|
 |**_findnext64**, **_wfindnext64**|Non affecté par la définition de macro|64 bits|64 bits|
 |**_findnexti64**, **_wfindnexti64**|Non défini|64 bits|64 bits|
-|**_findnexti64**, **_wfindnexti64**|Défini|32 bits|64 bits|
-|**_findnext32i64**, **_wfindnext32i64**|Non affecté par la définition de macro|32 bits|64 bits|
-|**_findnext64i32**, **_wfindnext64i32**|Non affecté par la définition de macro|64 bits|32 bits|
+|**_findnexti64**, **_wfindnexti64**|Défini|32 bits|64 bits|
+|**_findnext32i64**, **_wfindnext32i64**|Non affecté par la définition de macro|32 bits|64 bits|
+|**_findnext64i32**, **_wfindnext64i32**|Non affecté par la définition de macro|64 bits|32 bits|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -236,7 +237,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_findnext**|\<io.h>|
 |**_findnext32**|\<io.h>|

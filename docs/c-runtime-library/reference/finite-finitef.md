@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : isFinite,, _finite, _finitef'
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef0747c88d62445c1cbd31f5c7afe6a651f50880
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263112"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
@@ -78,7 +79,7 @@ La `isfinite` macro et les `_finite` `_finitef` fonctions et retournent une vale
 
 ## <a name="remarks"></a>Notes
 
-`isfinite`est une macro qui est compilée en tant que C, et une fonction de modèle Inline lorsqu’elle est compilée en C++. Les `_finite` `_finitef` fonctions et sont spécifiques à Microsoft. La fonction `_finitef` n’est disponible que quand elle est compilée pour les plateformes x86, ARM ou ARM64.
+`isfinite` est une macro qui est compilée en tant que C, et une fonction de modèle Inline lorsqu’elle est compilée en C++. Les `_finite` `_finitef` fonctions et sont spécifiques à Microsoft. La fonction `_finitef` n’est disponible que quand elle est compilée pour les plateformes x86, ARM ou ARM64.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -94,6 +95,6 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf,](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

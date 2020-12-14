@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions Regex'
 title: '&lt;regex&gt;, fonctions'
 ms.date: 09/10/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: fd7087025939a0aacf17153f201e37fc377653f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa2186d7b394d1b603d5600d1977efa8d268a32f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253336"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt;, fonctions
 

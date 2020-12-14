@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : informations de référence sur le langage C++'
 title: Référence du langage C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 7b0d1227419aef3174d4f18b11cdc334879383b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67d1adf6105d0f90a7ef29402624148dbcf8ea53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253921"
 ---
 # <a name="c-language-reference"></a>Référence du langage C++
 
@@ -69,8 +70,8 @@ Opérateurs surchargés, règles pour la surcharge d’opérateur.
 [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md)<br/>
 La gestion des exceptions C++, la gestion structurée des exceptions (SEH) et les mots clés utilisés pour écrire des instructions de gestion des exceptions.
 
-[Assertion et messages fournis par l’utilisateur](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error`directive, le **`static_assert`** mot clé, la `assert` macro.
+[Messages d’assertion et de User-Supplied](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` directive, le **`static_assert`** mot clé, la `assert` macro.
 
 [Modèles](../cpp/templates-cpp.md)<br/>
 Spécifications de modèle, modèles de fonction, modèles de classe, **`typename`** mot clé, modèles et macros, modèles et pointeurs intelligents.

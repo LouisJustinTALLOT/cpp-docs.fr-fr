@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s'
 title: _itoa_s, _itow_s fonctions
 ms.date: 4/2/2020
 api_name:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c02ca2e6090c9396a3a6c91cd6353604d5df8096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254233"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
@@ -149,7 +150,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 *value*<br/>
 Nombre à convertir.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon de sortie qui contient le résultat de la conversion.
 
 *size*<br/>
@@ -164,9 +165,9 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si l’une de
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|value|buffer|taille|radix|Renvoie|
+|value|buffer|est|radix|Renvoie|
 |-----------|------------|----------------------|-----------|------------|
-|n'importe laquelle|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|<=0|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|<= longueur de la chaîne de résultat requise|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|*base* < 2 ou *base* > 36|**EINVAL**|
@@ -175,7 +176,7 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si l’une de
 
 Ces fonctions peuvent générer une violation d’accès si la mémoire *tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**, ou si la longueur de la mémoire tampon n’est pas suffisamment longue pour contenir la chaîne de résultat.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 À l’exception des paramètres et de la valeur de retour, les familles de fonctions **_itoa_s** et **_itow_s** ont le même comportement que les versions **_itoa** et **_itow** les moins sécurisées correspondantes.
 
@@ -206,7 +207,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Ces fonctions sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple illustre l’utilisation de quelques fonctions de conversion d’entier. Notez que la macro [_countof](countof-macro.md) ne fonctionne que pour déterminer la taille de la mémoire tampon lorsque la déclaration de tableau est visible pour le compilateur, et non pour les paramètres qui sont en état d’atténuation.
 

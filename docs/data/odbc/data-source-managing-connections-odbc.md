@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : source de données : gestion des connexions (ODBC)'
 title: 'Source de données : gestion des connexions (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 107a5e20b70f67be74b6e6f861bd539446e9d4ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 748e81dd82190e8269ef30983a66dc3bb5f75731
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253882"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Source de données : gestion des connexions (ODBC)
 
@@ -33,56 +34,56 @@ Cette rubrique répond aux questions suivantes :
 
 - [Comment configurer une source de données](#_core_configuring_a_data_source).
 
-- [Comment un environnement multi-utilisateurs affecte une source de données et ses enregistrements](#_core_working_in_a_multiuser_environment).
+- [Impact d’un environnement multi-utilisateur sur une source de données et ses recordsets](#_core_working_in_a_multiuser_environment).
 
-- [Pourquoi vous généralisez une chaîne de connexion à une source de données](#_core_generalizing_the_connection_string).
+- [Raisons pour lesquelles vous généralisez une chaîne de connexion à une source de données](#_core_generalizing_the_connection_string).
 
-- [Comment se connecter à une source](#_core_connecting_to_a_specific_data_source)de données .
+- [Comment se connecter à une source de données](#_core_connecting_to_a_specific_data_source).
 
 - [Comment se déconnecter d’une source de données](#_core_disconnecting_from_a_data_source).
 
 - [Comment réutiliser un objet CDatabase](#_core_reusing_a_cdatabase_object).
 
-Se connecter à une source de données signifie établir des communications avec un DBMS pour accéder aux données. Lorsque vous vous connectez à une source de données à partir d’une application via un pilote ODBC, le pilote vous connecte, soit localement, soit sur un réseau.
+La connexion à une source de données consiste à établir des communications avec un SGBD pour accéder aux données. Lorsque vous vous connectez à une source de données à partir d’une application via un pilote ODBC, le pilote établit la connexion à votre place, localement ou sur un réseau.
 
-Vous pouvez vous connecter à n’importe quelle source de données pour laquelle vous avez un pilote ODBC. Les utilisateurs de votre application doivent également avoir le même pilote ODBC pour leur source de données. Pour plus d’informations sur la redistribution des pilotes ODBC, voir [Redistribuer les composants ODBC à vos clients](../../data/odbc/redistributing-odbc-components-to-your-customers.md).
+Vous pouvez vous connecter à n’importe quelle source de données pour laquelle vous disposez d’un pilote ODBC. Les utilisateurs de votre application doivent également avoir le même pilote ODBC pour leur source de données. Pour plus d’informations sur la redistribution des pilotes ODBC, consultez [redistribution des composants ODBC à vos clients](../../data/odbc/redistributing-odbc-components-to-your-customers.md).
 
-## <a name="configuring-a-data-source"></a><a name="_core_configuring_a_data_source"></a>Configurer une source de données
+## <a name="configuring-a-data-source"></a><a name="_core_configuring_a_data_source"></a> Configuration d’une source de données
 
-L’administrateur d’ODBC est utilisé pour configurer vos sources de données. Vous pouvez également utiliser oDBC Administrator après installation pour ajouter ou supprimer des sources de données. Lorsque vous créez des applications, vous pouvez soit diriger vos utilisateurs vers l’administrateur ODBC pour les laisser ajouter des sources de données ou vous pouvez intégrer cette fonctionnalité dans votre application en effectuant des appels d’installation ODBC directs. Pour plus d’informations, voir [ODBC Administrateur](../../data/odbc/odbc-administrator.md).
+L’administrateur ODBC est utilisé pour configurer vos sources de données. Vous pouvez également utiliser l’administrateur ODBC après l’installation pour ajouter ou supprimer des sources de données. Lorsque vous créez des applications, vous pouvez diriger vos utilisateurs vers l’administrateur ODBC pour leur permettre d’ajouter des sources de données, ou vous pouvez créer cette fonctionnalité dans votre application en effectuant des appels d’installation ODBC directs. Pour plus d’informations, consultez [ODBC Administrator](../../data/odbc/odbc-administrator.md).
 
-Vous pouvez utiliser un fichier Excel comme source de données, et vous devez configurer le fichier afin qu’il soit enregistré et s’affiche dans la boîte de dialogue **Select Data Source.**
+Vous pouvez utiliser un fichier Excel comme source de données, et vous devez configurer le fichier pour qu’il soit inscrit et s’affiche dans la boîte de dialogue **Sélectionner la source de données** .
 
-#### <a name="to-use-an-excel-file-as-a-data-source"></a>Utiliser un fichier Excel comme source de données
+#### <a name="to-use-an-excel-file-as-a-data-source"></a>Pour utiliser un fichier Excel comme source de données
 
-1. Configurez le fichier avec l’administrateur de source de données ODBC.
+1. Configurez le fichier avec l’administrateur de la source de données ODBC.
 
-1. Sur l’onglet **Fichier DSN,** cliquez sur **Ajouter**.
+1. Sous l’onglet **DSN fichier** , cliquez sur **Ajouter**.
 
-1. Dans la boîte de dialogue **Create New Data Source,** sélectionnez un pilote Excel, puis cliquez sur **Next**.
+1. Dans la boîte de dialogue **créer une nouvelle source de données** , sélectionnez un pilote Excel, puis cliquez sur **suivant**.
 
-1. Cliquez **sur Parcourir**, et sélectionnez le nom du fichier à utiliser comme source de date.
+1. Cliquez sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de date.
 
 > [!NOTE]
-> Vous devrez peut-être sélectionner **tous les fichiers** dans le menu drop-down pour afficher les fichiers .xls.
+> Vous devrez peut-être sélectionner **tous les fichiers** dans le menu déroulant pour afficher les fichiers. xls.
 
 1. Cliquez sur **Suivant**, puis sur **Terminer**.
 
-1. Dans la boîte de dialogue **ODBC Microsoft Excel Setup,** sélectionnez la version de base de données et le carnet de travail.
+1. Dans la boîte de dialogue **installation de Microsoft Excel ODBC** , sélectionnez la version et le classeur de la base de données.
 
-## <a name="working-in-a-multiuser-environment"></a><a name="_core_working_in_a_multiuser_environment"></a>Travailler dans un environnement multi-travailleurs
+## <a name="working-in-a-multiuser-environment"></a><a name="_core_working_in_a_multiuser_environment"></a> Utilisation d’un environnement multi-utilisateur
 
-Si plusieurs utilisateurs sont connectés à une source de données, ils peuvent modifier les données pendant que vous les manipulez dans vos enregistrements. De même, vos modifications peuvent affecter les enregistrements d’autres utilisateurs. Pour plus d’informations, voir [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
+Si plusieurs utilisateurs sont connectés à une source de données, ils peuvent modifier les données lors de leur manipulation dans vos recordsets. De même, vos modifications peuvent affecter les recordsets des autres utilisateurs. Pour plus d’informations, consultez [Recordset : mode de mise à jour des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-## <a name="generalizing-the-connection-string"></a><a name="_core_generalizing_the_connection_string"></a>Généraliser la chaîne de connexion
+## <a name="generalizing-the-connection-string"></a><a name="_core_generalizing_the_connection_string"></a> Généralisation de la chaîne de connexion
 
-Les assistants utilisent une chaîne de connexion par défaut pour établir une connexion à une source de données. Vous utilisez cette connexion pour afficher des tables et des colonnes pendant que vous développez votre application. Toutefois, cette chaîne de connexion par défaut peut ne pas convenir aux connexions de vos utilisateurs à la source de données via votre application. Par exemple, leur source de données et le chemin vers son emplacement peuvent être différents de celui utilisé dans le développement de votre application. Dans ce cas, vous devez réimplanter le [CRecordset::GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) fonction membre d’une manière plus générique et jeter l’implémentation assistant. Par exemple, utilisez l’une des approches suivantes :
+Les assistants utilisent une chaîne de connexion par défaut pour établir une connexion à une source de données. Vous utilisez cette connexion pour afficher les tables et les colonnes pendant que vous développez votre application. Toutefois, cette chaîne de connexion par défaut peut ne pas convenir aux connexions de vos utilisateurs à la source de données par le biais de votre application. Par exemple, la source de données et le chemin d’accès à son emplacement peuvent être différents de ceux utilisés lors du développement de votre application. Dans ce cas, vous devez réimplémenter la fonction membre [CRecordset :: GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) de manière plus générique et ignorer l’implémentation de l’Assistant. Par exemple, utilisez l’une des approches suivantes :
 
-- Inscrivez-vous et gérez les chaînes de connexion à l’aide de l’administrateur ODBC.
+- Inscrire et gérer les chaînes de connexion à l’aide de l’administrateur ODBC.
 
-- Modifier la chaîne de connexion et supprimer le nom de source de données. Le cadre fournit oDBC comme source de données; au moment de l’exécution, ODBC affiche une boîte de dialogue demandant le nom de source de données et toute autre information de connexion requise.
+- Modifiez la chaîne de connexion et supprimez le nom de la source de données. L’infrastructure fournit ODBC comme source de données ; au moment de l’exécution, ODBC affiche une boîte de dialogue qui vous demande le nom de la source de données et les autres informations de connexion requises.
 
-- Fournir le nom de source de données seulement. ODBC demande l’identifiant et le mot de passe de l’utilisateur, si nécessaire. Par exemple, avant de généraliser, la chaîne de connexion ressemble à ceci :
+- Fournissez uniquement le nom de la source de données. ODBC vous demande l’ID d’utilisateur et le mot de passe, si nécessaire. Par exemple, avant la généralisation, la chaîne de connexion se présente comme suit :
 
     ```cpp
     CString CApp1Set::GetDefaultConnect()
@@ -91,7 +92,7 @@ Les assistants utilisent une chaîne de connexion par défaut pour établir une 
     }
     ```
 
-   Cette chaîne de connexion spécifie une connexion de confiance, qui utilise la sécurité intégrée de Windows NT. Vous devez éviter de coder un mot de passe ou de spécifier un mot de passe vierge, car cela crée une faiblesse de sécurité majeure. Au lieu de `GetDefaultConnect` cela, vous pouvez donner une nouvelle chaîne de connexion afin qu’il interroge pour un identifiant d’utilisateur et mot de passe.
+   Cette chaîne de connexion spécifie une connexion approuvée, qui utilise la sécurité intégrée de Windows NT. Vous devez éviter de coder en dur un mot de passe ou de spécifier un mot de passe vide, car cela crée une faille de sécurité majeure. Au lieu de cela, vous pouvez fournir `GetDefaultConnect` une nouvelle chaîne de connexion afin qu’elle interroge un ID d’utilisateur et un mot de passe.
 
     ```cpp
     // User must select data source and supply user ID and password:
@@ -104,37 +105,37 @@ Les assistants utilisent une chaîne de connexion par défaut pour établir une 
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";
     ```
 
-## <a name="connecting-to-a-specific-data-source"></a><a name="_core_connecting_to_a_specific_data_source"></a>Se connecter à une source de données spécifique
+## <a name="connecting-to-a-specific-data-source"></a><a name="_core_connecting_to_a_specific_data_source"></a> Connexion à une source de données spécifique
 
-Pour vous connecter à une source de données spécifique, votre source de données doit déjà avoir été configurée avec [oDBC Administrator](../../data/odbc/odbc-administrator.md).
+Pour vous connecter à une source de données spécifique, votre source de données doit déjà avoir été configurée avec l' [administrateur ODBC](../../data/odbc/odbc-administrator.md).
 
-#### <a name="to-connect-to-a-specific-data-source"></a>Pour vous connecter à une source de données spécifique
+#### <a name="to-connect-to-a-specific-data-source"></a>Pour se connecter à une source de données spécifique
 
-1. Construire `CDatabase` un objet.
+1. Construisez un `CDatabase` objet.
 
-1. Appelez `OpenEx` sa `Open` fonction ou sa fonction de membre.
+1. Appelez sa `OpenEx` `Open` fonction membre ou.
 
-Pour plus d’informations sur la façon de spécifier la source de données si c’est autre chose que celui que vous avez spécifié avec un assistant, voir [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) in the *MFC Reference*.
+Pour plus d’informations sur la façon de spécifier la source de données si elle est différente de celle que vous avez spécifiée à l’aide d’un Assistant, consultez [CDatabase :: OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase :: Open](../../mfc/reference/cdatabase-class.md#open) dans la *référence MFC*.
 
-## <a name="disconnecting-from-a-data-source"></a><a name="_core_disconnecting_from_a_data_source"></a>Déconnecter d’une source de données
+## <a name="disconnecting-from-a-data-source"></a><a name="_core_disconnecting_from_a_data_source"></a> Déconnexion d’une source de données
 
-Vous devez fermer tous les `Close` enregistrements ouverts `CDatabase`avant d’appeler la fonction membre de . Dans les enregistrements `CDatabase` associés à l’objet que `AddNew` `Edit` vous souhaitez fermer, toute déclaration en attente ou déclarations est annulée et toutes les transactions en attente sont annulées.
+Vous devez fermer tous les jeux d’enregistrements ouverts avant d’appeler la `Close` fonction membre de `CDatabase` . Dans les recordsets associés à l' `CDatabase` objet que vous souhaitez fermer, toutes les `AddNew` instructions ou en attente `Edit` sont annulées et toutes les transactions en attente sont annulées.
 
 #### <a name="to-disconnect-from-a-data-source"></a>Pour se déconnecter d’une source de données
 
-1. Appelez `CDatabase` la fonction de membre [Close](../../mfc/reference/cdatabase-class.md#close) de l’objet.
+1. Appelez la `CDatabase` fonction membre [Close](../../mfc/reference/cdatabase-class.md#close) de l’objet.
 
-1. Détruisez l’objet à moins que vous ne vouliez le réutiliser.
+1. Détruisez l’objet, sauf si vous souhaitez le réutiliser.
 
-## <a name="reusing-a-cdatabase-object"></a><a name="_core_reusing_a_cdatabase_object"></a>Réutiliser un objet CDatabase
+## <a name="reusing-a-cdatabase-object"></a><a name="_core_reusing_a_cdatabase_object"></a> Réutilisation d’un objet CDatabase
 
-Vous pouvez réutiliser un `CDatabase` objet après s’en être déconnecté, que vous l’utilisiez pour vous reconnecter à la même source de données ou pour vous connecter à une source de données différente.
+Vous pouvez réutiliser un `CDatabase` objet après l’avoir déconnectée, que vous l’utilisiez pour vous reconnecter à la même source de données ou que vous vous connectiez à une source de données différente.
 
 #### <a name="to-reuse-a-cdatabase-object"></a>Pour réutiliser un objet CDatabase
 
 1. Fermez la connexion d’origine de l’objet.
 
-1. Au lieu de détruire l’objet, appelez à nouveau sa `OpenEx` fonction ou `Open` sa fonction de membre.
+1. Au lieu de détruire l’objet, appelez `OpenEx` `Open` à nouveau sa fonction membre ou.
 
 ## <a name="see-also"></a>Voir aussi
 

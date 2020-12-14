@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spawnlpe'
 title: spawnlpe
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - spawnlpe function
 ms.assetid: 379143a7-f3d0-41de-83cc-2b4321146390
-ms.openlocfilehash: e0dd321c26e02989898016c1ea707f6b6de886ff
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: da4f8a77592d737864e2caeac083f3c3b2089da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262943"
 ---
 # <a name="spawnlpe"></a>spawnlpe
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : menus et ressources : ajouts de conteneurs'
 title: 'Menus et ressources : ajouts de conteneurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: a082a75ef0292e190e597f29be0cdc0bd0b497ef
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e32167e66693587a32732c1c20fc6d85d3010ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253362"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus et ressources : ajouts de conteneurs
 
@@ -39,7 +40,7 @@ Les sujets abordés dans cet article sont les suivants :
 
 - [Ajouts de tables de chaînes](#_core_string_table_additions_for_container_applications)
 
-## <a name="container-menu-additions"></a><a name="_core_container_menu_additions"></a>Ajouts au menu conteneur
+## <a name="container-menu-additions"></a><a name="_core_container_menu_additions"></a> Ajouts au menu conteneur
 
 Vous devez ajouter les éléments suivants au menu Edition :
 
@@ -54,7 +55,7 @@ En plus des modifications mentionnées dans cet article, votre fichier source do
 
 Vous devez créer un nouveau menu pour votre application conteneur si vous souhaitez prendre en charge l’activation sur place des éléments contenus. Ce menu comprend les mêmes menus contextuels de menu de fichier et de fenêtre que ceux utilisés lorsque des fichiers sont ouverts, mais avec deux séparateurs placés entre eux. Ces séparateurs sont utilisés pour indiquer l’emplacement où l’élément de serveur (composant) (application) doit placer ses menus lorsqu’il est activé sur place. Pour plus d’informations sur cette technique de fusion de menus, consultez [menus et ressources : fusion de menus](menus-and-resources-menu-merging.md).
 
-## <a name="container-application-accelerator-table-additions"></a><a name="_core_container_application_accelerator_table_additions"></a>Ajouts de tables d’accélérateurs d’application de conteneur
+## <a name="container-application-accelerator-table-additions"></a><a name="_core_container_application_accelerator_table_additions"></a> Ajouts de tables d’accélérateurs d’application de conteneur
 
 Les petites modifications apportées aux ressources de la table d’accélérateurs d’une application conteneur sont nécessaires si vous prenez en charge l’activation sur place. La première modification permet à l’utilisateur d’appuyer sur la touche ÉCHAP pour annuler le mode d’édition sur place. Ajoutez l’entrée suivante à la table d’accélérateurs principale :
 
@@ -74,7 +75,7 @@ La deuxième modification consiste à créer une nouvelle table d’accélérate
 |ID_PREV_PANE|MAJ + VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-## <a name="string-table-additions-for-container-applications"></a><a name="_core_string_table_additions_for_container_applications"></a>Ajouts de tables de chaînes pour les applications de conteneur
+## <a name="string-table-additions-for-container-applications"></a><a name="_core_string_table_additions_for_container_applications"></a> Ajouts de tables de chaînes pour les applications de conteneur
 
 La plupart des modifications apportées aux tables de chaînes pour les applications de conteneur correspondent aux éléments de menu supplémentaires mentionnés dans [ajouts de menu de conteneur](#_core_container_menu_additions). Ils fournissent le texte affiché dans la barre d’État lorsque chaque élément de menu est affiché. À titre d’exemple, Voici les entrées de table de chaînes générées par l’Assistant Application :
 

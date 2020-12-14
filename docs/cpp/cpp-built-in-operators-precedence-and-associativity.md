@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs intégrés C++, priorité et associativité'
 title: Opérateurs, priorité et associativité C++ intégrés
 ms.date: 07/23/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: 10c9e5db569ba211ed8d42386816b4f6bb71ee29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253960"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Opérateurs, priorité et associativité C++ intégrés
 
@@ -40,12 +41,12 @@ Le tableau suivant indique la priorité et l'associativité des opérateurs C++ 
 | **Priorité du groupe 1, aucune associativité** |
 | [Résolution d’étendue](../cpp/scope-resolution-operator.md) | [`::`](../cpp/scope-resolution-operator.md) |
 | **Priorité du groupe 2, Association de gauche à droite** |
-| [Sélection de membre (objet ou pointeur)](../cpp/member-access-operators-dot-and.md) | [`.`ni`->`](../cpp/member-access-operators-dot-and.md) |
+| [Sélection de membre (objet ou pointeur)](../cpp/member-access-operators-dot-and.md) | [`.` ni `->`](../cpp/member-access-operators-dot-and.md) |
 | [Indice de tableau](../cpp/subscript-operator.md) | [`[]`](../cpp/subscript-operator.md) |
 | [Appel de fonction](../cpp/function-call-operator-parens.md) | [`()`](../cpp/function-call-operator-parens.md) |
 | [Incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`++`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
 | [Décrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`--`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
-| [Nom du type](../cpp/typeid-operator.md) | [`typeid`](../cpp/typeid-operator.md) |
+| [Nom de type](../cpp/typeid-operator.md) | [`typeid`](../cpp/typeid-operator.md) |
 | [Conversion de type constant](../cpp/const-cast-operator.md) | [`const_cast`](../cpp/const-cast-operator.md) |
 | [Conversion de type dynamique](../cpp/dynamic-cast-operator.md) | [`dynamic_cast`](../cpp/dynamic-cast-operator.md) |
 | [Conversion de type réinterprété](../cpp/reinterpret-cast-operator.md) | [`reinterpret_cast`](../cpp/reinterpret-cast-operator.md) |
@@ -64,13 +65,13 @@ Le tableau suivant indique la priorité et l'associativité des opérateurs C++ 
 | [Supprimer un objet](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
 | [Procéder](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **Priorité du groupe 4, de gauche à droite** |
-| [Pointeur vers membre (objets ou pointeurs)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*`ni`->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
+| [Pointeur vers membre (objets ou pointeurs)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` ni `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **Priorité du groupe 5, Association de gauche à droite** |
 | [Multiplication](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [Division](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [Young](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **Priorité du groupe 6, Association de gauche à droite** |
-| [Addition](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
+| [Complément](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
 | [Soustraction](../cpp/additive-operators-plus-and.md) | [`-`](../cpp/additive-operators-plus-and.md) |
 | **Priorité du groupe 7, de gauche à droite** |
 | [Décalage vers la gauche](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`<<`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
@@ -110,7 +111,7 @@ Le tableau suivant indique la priorité et l'associativité des opérateurs C++ 
 | **Priorité de groupe 17, associativité de droite à gauche** |
 | [expression throw](../cpp/try-throw-and-catch-statements-cpp.md) | [`throw`](../cpp/try-throw-and-catch-statements-cpp.md) |
 | **Priorité du groupe 18, Association de gauche à droite** |
-| [Point](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
+| [Comma](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
 ## <a name="see-also"></a>Voir aussi
 

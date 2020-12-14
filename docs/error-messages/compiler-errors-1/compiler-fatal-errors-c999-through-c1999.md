@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreurs irrécupérables du compilateur C999 à C1999'
 title: Erreurs irrécupérables du compilateur C999 à C1999
 ms.date: 04/21/2019
 f1_keywords:
@@ -50,33 +51,33 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262839"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 
-Les Articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le compilateurC++ Microsoft C/.
+Les Articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le compilateur Microsoft C/C++.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>Messages d’erreur
 
-|Erreur|Message|
+|Error|Message|
 |-----------|-------------|
 |[Erreur irrécupérable C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|MESSAGE INCONNU Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
 |[Erreur irrécupérable C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Une erreur interne s’est produite dans le compilateur.<br /> (fichier du compilateur '*file*', ligne *number*)<br /> Pour résoudre ce problème, essayez de simplifier ou de modifier le programme à proximité des emplacements répertoriés ci-dessus. Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
 |[Erreur irrécupérable C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|espace du tas insuffisant pour le compilateur lors de la deuxième passe|
-|[Erreur irrécupérable C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|le nombre d'erreurs est supérieur à *number*; arrêt de la compilation|
+|[Erreur irrécupérable C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|le nombre d’erreurs dépasse le *nombre*; arrêt de la compilation|
 |[Erreur irrécupérable C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|fin de fichier inattendue rencontrée|
 |[Erreur irrécupérable C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|chaîne trop grande pour la mémoire tampon|
 |[Erreur irrécupérable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|indicateur '*string*' non reconnu dans '*option*'|
 |[Erreur irrécupérable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|aucun fichier d'entrée spécifié|
 |[Erreur irrécupérable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite du compilateur : macros imbriquées trop profondément|
-|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter « #include \<> de *fichier*» à votre source ?|
+|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter' #include \<*file*> 'à votre source ?|
 |[Erreur irrécupérable C1012](fatal-error-c1012.md)|parenthèses non équilibrées : '*character*" manquant(e)|
 |[Erreur irrécupérable C1013](fatal-error-c1013.md)|limite du compilateur : parenthèses ouvertes trop nombreuses|
 |[Erreur irrécupérable C1014](fatal-error-c1014.md)|fichiers Include trop nombreux : profondeur = *number*|
@@ -137,14 +138,14 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1091](fatal-error-c1091.md)|limite du compilateur : la longueur de la chaîne dépasse de *number* octets|
 |[Erreur irrécupérable C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Modifier & Continuer ne prend pas en charge les modifications sur les types de données ; génération requise|
 |[Erreur irrécupérable C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|l'appel de l'API '*function*' a échoué '*HRESULT*' : '*description*'|
-|[Erreur irrécupérable C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm*number*' : option de ligne de commande non cohérente avec la valeur utilisée pour générer l'en-tête précompilé ('-Zm*number*')|
+|[Erreur irrécupérable C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm *number*' : option de ligne de commande non cohérente avec la valeur utilisée pour générer l'en-tête précompilé ('-Zm *number*')|
 |[Erreur irrécupérable C1098](fatal-error-c1098.md)|Incompatibilité de version avec le moteur Modifier & Continuer|
 |[Erreur irrécupérable C1099](fatal-error-c1099.md)|Fin de la compilation du moteur Modifier & Continuer|
 |[Erreur irrécupérable C1100](fatal-error-c1100.md)|impossible d'initialiser OLE : *error*|
 |Erreur irrécupérable C1101|impossible de créer un gestionnaire pour l'attribut '*identifier*'|
 |Erreur irrécupérable C1102|impossible d'initialiser : *error*|
 |[Erreur irrécupérable C1103](fatal-error-c1103.md)|erreur irrécupérable lors de l'importation de progid : '*message*'|
-|[Erreur irrécupérable C1104](fatal-error-c1104.md)|erreur irrécupérable lors de l'importation de libid : '*message*'|
+|[Erreur irrécupérable C1104](fatal-error-c1104.md)|erreur irrécupérable lors de l’importation de LIBID : '*message*'|
 |Erreur irrécupérable C1105|*message*: *error*|
 |[Erreur irrécupérable C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|impossible de trouver l'assembly '*assembly*' : spécifiez le chemin de recherche des assemblys en utilisant /AI ou en définissant la variable d'environnement LIBPATH|
 |[Erreur irrécupérable C1108](fatal-error-c1108.md)|impossible de trouver la DLL : '*file*'|
@@ -158,7 +159,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable c1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|échec de l'appel à CryptoAPI|
 |[Erreur irrécupérable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocation automatique dépasse *size*|
 |[Erreur irrécupérable C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|le nombre de sections a dépassé la limite du format de fichier objet : compilez avec /bigobj|
-|[Erreur irrécupérable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#erreur : *message*|
+|[Erreur irrécupérable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error : *message*|
 |[Erreur irrécupérable C1190](fatal-error-c1190.md)|le code ciblé managé requiert une option '/clr'|
 |[Erreur irrécupérable C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*file*' ne peut être importé(e) qu'au niveau de la portée globale|
 |[Erreur irrécupérable C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|Échec de #using sur '*file*'|
@@ -182,7 +183,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1306|la dernière modification apportée à la base de données de profils '*file*' n'était pas une analyse d'optimisation ; les décisions d'optimisation sont peut-être obsolètes|
 |[Erreur irrécupérable C1307](../../error-messages/compiler-errors-1/fatal-error-c1307.md)|le programme a été modifié depuis que les données du profil ont été recueillies|
 |[Erreur irrécupérable C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*file*: la liaison des assemblys n'est pas prise en charge|
-|[Erreur irrécupérable C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|Versions incompatibles de C2.DLL et de pgodb*ver*.DLL|
+|[Erreur irrécupérable C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|Versions incompatibles de C2.DLL et de pgodb *ver*.DLL|
 |[Erreur irrécupérable C1310](fatal-error-c1310.md)|les optimisations guidées par profil ne sont pas disponibles avec OpenMP|
 |[Erreur irrécupérable C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|Le format COFF ne peut pas initialiser de manière statique '*symbol*' avec *number* octet(s) d'une adresse|
 |[Erreur irrécupérable C1312](fatal-error-c1312.md)|Trop de branches conditionnelles dans la fonction.  Simplifiez ou refactorisez le code source.|
@@ -215,4 +216,4 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs d’outils et avertissements de compilateur C/C++ et de build](../compiler-errors-1/c-cpp-build-errors.md)

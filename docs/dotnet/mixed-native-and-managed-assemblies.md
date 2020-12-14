@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : assemblys mixtes (natifs et managés)'
 title: Assemblys mixtes (natif et managé)
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: eee54a6101a83a64c221ae016f69931e7fd7829b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b96ccb5a521cf009f7feabef01a292ac805b0b4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253635"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblys mixtes (natifs et managés)
 
@@ -29,7 +30,7 @@ Visual C++ prend en charge uniquement la génération d’assemblys managés mix
 
 Les versions antérieures de l’ensemble d’outils du compilateur Microsoft C++ prenait en charge la génération de trois types distincts d’assemblys managés : mixte, pur et vérifiable. Les deux derniers sont traités dans du [Code pur et vérifiable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 [Comment : effectuer une migration vers/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 Décrit les étapes recommandées pour l’introduction ou la mise à niveau de la fonctionnalité .NET dans votre application.
@@ -43,7 +44,7 @@ Décrit le problème de « verrouillage du chargeur » et les solutions.
 [Prise en charge des bibliothèques pour les assemblys mixtes](../dotnet/library-support-for-mixed-assemblies.md)<br/>
 Explique comment utiliser des bibliothèques natives dans des compilations **/CLR** .
 
-[Considérations sur les performances](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
+[Considérations relatives aux performances](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
 Décrit les implications en matière de performances des assemblys mixtes et du marshaling de données.
 
 [Domaines d’application et Visual C++](../dotnet/application-domains-and-visual-cpp.md)<br/>
