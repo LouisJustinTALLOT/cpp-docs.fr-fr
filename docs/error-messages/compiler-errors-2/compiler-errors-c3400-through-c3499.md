@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Erreurs du compilateur C3400 à C3499'
 title: Erreurs du compilateur C3400 à C3499
 ms.date: 04/21/2019
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: f4aff80178033d34cf051a14d89736b2b8347dd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6aaf04c397232195749512c6943cc096350d444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238581"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Erreurs du compilateur C3400 à C3499
 
@@ -126,7 +127,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3412](compiler-error-c3412.md)|'*spécialisation*' : impossible de spécialiser le modèle dans la portée actuelle|
 |[Erreur du compilateur C3413](compiler-error-c3413.md)|'*template*' : instanciation explicite non valide|
 |[Erreur du compilateur C3414](compiler-error-c3414.md)|'*fonction*' : la fonction membre importée ne peut pas être définie|
-|[Erreur du compilateur C3415](compiler-error-c3415.md)|plusieurs sections «*section*» ont été trouvées avec différents attributs (« 0x*value*»)|
+|[Erreur du compilateur C3415](compiler-error-c3415.md)|plusieurs sections «*section*» ont été trouvées avec différents attributs (« 0x *value*»)|
 |Erreur du compilateur C3416|Obsolète.|
 |[Erreur du compilateur C3417](compiler-error-c3417.md)|'*déclarateur*' : les types valeur ne peuvent pas contenir de fonctions membres spéciales définies par l’utilisateur|
 |[Erreur du compilateur C3418](compiler-error-c3418.md)|le spécificateur d’accès'*specifier*'n’est pas pris en charge|
@@ -155,7 +156,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3441|'*DECLARATION*' : '*Keyword*'ne peut pas être appliqué une fois que la classe a été définie|
 |Erreur du compilateur C3442|Initialisation de plusieurs membres d’Union : '*membre1*'et'*membre2*'|
 |Erreur du compilateur C3443|L’initialiseur de membre par défaut pour'*Class*'est récursif|
-|Erreur du compilateur C3444|La classe d’agrégation vide'*Class*'doit être initialisée avec'{}'|
+|Erreur du compilateur C3444|La classe d’agrégation vide'*Class*'doit être initialisée avec' {} '|
 |[Erreur du compilateur C3445](compiler-error-c3445.md)|l’initialisation de copie de liste de'*type*'ne peut pas utiliser un constructeur explicite|
 |[Erreur du compilateur C3446](compiler-error-c3446.md)|'*Class*' : un initialiseur de membre par défaut n’est pas autorisé pour un membre d’une classe value|
 |Erreur du compilateur C3447|Obsolète.|
@@ -167,7 +168,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3453](compiler-error-c3453.md)|'*attribute*' : attribut non appliqué, car le qualificateur'*qualificateur*'ne correspond pas|
 |[Erreur du compilateur C3454](compiler-error-c3454.md)|[attribute] non autorisé dans une déclaration de classe|
 |[Erreur du compilateur C3455](compiler-error-c3455.md)|'*attribute*' : aucun des constructeurs d’attributs ne correspond aux arguments|
-|[Erreur du compilateur C3456](compiler-error-c3456.md)|[source\_annotation_attribute] non autorisé dans une déclaration de classe managée/WinRT|
+|[Erreur du compilateur C3456](compiler-error-c3456.md)|[source \_ annotation_attribute] non autorisé dans une déclaration de classe managée/WinRT|
 |[Erreur du compilateur C3457](compiler-error-c3457.md)|'*attribute*' : l’attribut ne prend pas en charge les arguments sans nom|
 |[Erreur du compilateur C3458](compiler-error-c3458.md)|' [*attribute*] ' : attribut' [*attribute*] 'déjà spécifié pour'*identificateur*'|
 |[Erreur du compilateur C3459](compiler-error-c3459.md)|' [*attribute*] ' : attribut autorisé uniquement sur un indexeur de classe (propriété indexée par défaut)|
@@ -214,5 +215,5 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
-[Erreurs du compilateur C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

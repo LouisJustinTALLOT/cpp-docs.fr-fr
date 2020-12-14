@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Erreurs du compilateur C3500 à C3999'
 title: Erreurs du compilateur C3500 à C3999
 ms.date: 04/21/2019
 f1_keywords:
@@ -246,12 +247,12 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: eddadeeeb014c6b64376554f7ff025a06e8935c9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bf0075e9064b7e03c0b733119300ee90d77884fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238568"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Erreurs du compilateur C3500 à C3999
 
@@ -266,7 +267,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3500](compiler-error-c3500.md)|ProgID'*ProgID*'non valide|
 |[Erreur du compilateur C3501](compiler-error-c3501.md)|aucune TypeLib inscrite pour ProgID'*ProgID*'|
 |Erreur du compilateur C3502|Impossible d’obtenir LIBID pour le ProgID'*ProgID*'|
-|Erreur du compilateur C3503|le caractère' 0x*value*'n’est pas autorisé dans un littéral de chaîne brut|
+|Erreur du compilateur C3503|le caractère' 0x *value*'n’est pas autorisé dans un littéral de chaîne brut|
 |Erreur du compilateur C3504|Impossible de créer le GUID à partir de la chaîne'*String*'|
 |[Erreur du compilateur C3505](compiler-error-c3505.md)|Impossible de charger la bibliothèque de types'*Library*'|
 |[Erreur du compilateur C3506](compiler-error-c3506.md)|aucune TypeLib inscrite pour LIBID'*Library*'|
@@ -315,7 +316,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3549|'*valeur*' : un package de paramètres de fonction ne peut pas avoir d’argument par défaut|
 |[Erreur du compilateur C3550](compiler-error-c3550.md)|'decltype(auto)' simple est le seul autorisé dans ce contexte|
 |[Erreur du compilateur C3551](compiler-error-c3551.md)|Si un type de retour de fin est utilisé, le type de retour de début doit être le spécificateur de type unique’auto' (et non'*type*')|
-|[Erreur du compilateur C3552](compiler-error-c3552.md)|expected 'decltype(auto)'|
+|[Erreur du compilateur C3552](compiler-error-c3552.md)|'decltype (auto) 'attendu|
 |[Erreur du compilateur C3553](compiler-error-c3553.md)|decltype attend une expression et non un type|
 |[Erreur du compilateur C3554](compiler-error-c3554.md)|'*type*'ne peut pas être combiné avec un autre spécificateur de type|
 |[Erreur du compilateur C3555](compiler-error-c3555.md)|argument incorrect de 'decltype'|
@@ -337,8 +338,8 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3571|'*type*' : argument de domaine de calcul non conforme ; n’est pas un type de classe|
 |Erreur du compilateur C3572|'*type*' : argument de domaine de calcul non conforme ; membre public manquant : 'static const int Rank’ou la valeur de classement est non positive|
 |Erreur du compilateur C3573|Le nombre d’instances de Concurrency :: Graphics :: sampler passé à l’accès concurrentiel ::p arallel_for_each ne peut pas dépasser le *nombre*|
-|Erreur du compilateur C3574|'*type*' : étendues de mosaïques non conformes : doit être positif et (1) Z < = *nombre*; (2 *) Z X*< = *nombre*|
-|Erreur du compilateur C3575|'*type*' : argument de domaine de calcul non conforme ; membre public manquant : 'Concurrency :: index <*nombre*> _map_index (const Concurrency :: index <*Number*> &) Restrict (amp) '|
+|Erreur du compilateur C3574|'*type*' : étendues de mosaïques non conformes : doit être positif et (1) Z <= *nombre*; (2 *) Z X*<= *nombre*|
+|Erreur du compilateur C3575|'*type*' : argument de domaine de calcul non conforme ; membre public manquant : 'Concurrency :: index<*nombre*> _map_index (const Concurrency :: index<*Number*>&) Restrict (amp) '|
 |Erreur du compilateur C3576|'*type*' : concurrence ::d étails :: _Parallel_for_each argument #*Number* a un type non pris en charge|
 |Erreur du compilateur C3577|concurrence ::p argument de noyau arallel_for_each n’est pas conforme : impossible de résoudre l’appel au membre’void Operator () (*type*) Restrict (amp) '|
 |Erreur du compilateur C3578|La taille de l’objet de fonction est passée à la concurrence ::p arallel_for_each ne peut pas dépasser le *nombre* d’octets|
@@ -346,7 +347,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3580|Nombre d’instances accessibles en écriture de Concurrency :: Array et Concurrency :: Graphics :: texture passées à l’accès concurrentiel ::p arallel_for_each ne peut pas dépasser le *nombre*|
 |Erreur du compilateur C3581|'*type*' : type non pris en charge dans le code restreint amp|
 |Erreur du compilateur C3582|Obsolète.|
-|Erreur du compilateur C3583|'*identificateur*' : la taille de la variable (*nombre* d’octets) est supérieure à la taille*maximale (octets* ) prise en charge dans le code restreint amp|
+|Erreur du compilateur C3583|'*identificateur*' : la taille de la variable (*nombre* d’octets) est supérieure à la taille *maximale (octets* ) prise en charge dans le code restreint amp|
 |Erreur du compilateur C3584|utilisation non prise en charge de tile_static sur'*identifier*'|
 |Erreur du compilateur C3585|'*identifier*'a une classe de stockage non prise en charge dans le code restreint amp|
 |Erreur du compilateur C3586|'*identificateur*' : l’utilisation de variables globales ou statiques n’est pas prise en charge dans le code restreint amp|
@@ -363,7 +364,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3597|'*paramètre*' : '*identificateur*'ne peut pas être capturé par valeur si l’expression lambda est restreinte à amp|
 |Erreur du compilateur C3598|l’instruction label n’est pas prise en charge dans le code restreint amp|
 |Erreur du compilateur C3599|'*Operator*' : impossible d’effectuer une opération arithmétique de pointeur sur un pointeur vers une valeur booléenne dans du Code restreint amp|
-|Erreur du compilateur C3600|'*fonction*' : utilisation de la vignette\_mémoire statique détectée lors de la compilation du graphique des appels pour l’accès concurrentiel sans mosaïque ::p arallel\_for_each à l’adresse : '*fonction*'|
+|Erreur du compilateur C3600|'*fonction*' : utilisation de la \_ mémoire statique en mosaïque détectée lors de la compilation du graphique des appels pour l’accès concurrentiel sans mosaïque ::p arallel \_ for_each à : '*fonction*'|
 |Erreur du compilateur C3601|'*type*' : type d’argument non valide pour la fonction de diagnostic amp'*Function*'|
 |Erreur du compilateur C3602|Un workflow de contrôle non pris en charge a été détecté lors de la compilation du graphique des appels pour l’accès concurrentiel ::p arallel_for_each à : '*Function*'|
 |[Erreur du compilateur C3603](compiler-error-c3603.md)|'*symbol*' : le type'*type*'n’est pas encore pris en charge|
@@ -448,11 +449,11 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3682|'operator *identifier*' : un modèle opérateur littéral/opérateur littéral ne peut pas être déclaré comme ayant’C liaison'|
 |Erreur du compilateur C3683|Impossible de définir à la fois un opérateur de littéral brut et un modèle d’opérateur littéral avec le même identificateur de suffixe littéral|
 |Erreur du compilateur C3684|'operator *identifier*' : la déclaration de l’opérateur Literal a une liste de paramètres non valide|
-|Erreur du compilateur C3685|' *identificateur*d’opérateur' : le modèle d’opérateur littéral ne peut pas avoir de paramètres de fonction|
-|Erreur du compilateur C3686|' *identificateur*d’opérateur' : le modèle d’opérateur littéral doit avoir exactement un paramètre de modèle qui est un package de paramètres|
-|Erreur du compilateur C3687|' *identificateur*d’opérateur' : le modèle d’opérateur littéral doit avoir un paramètre de modèle sans type de type’Char'|
-|Erreur du compilateur C3688|suffixe littéral non valide'*suffixe*'; opérateur littéral ou modèle d’opérateur littéral' *identificateur*d’opérateur’introuvable|
-|Erreur du compilateur C3689|' *identificateur*d’opérateur' : le modèle d’opérateur littéral opérateur/littéral doit figurer dans une portée globale ou d’espace de noms|
+|Erreur du compilateur C3685|' *identificateur* d’opérateur' : le modèle d’opérateur littéral ne peut pas avoir de paramètres de fonction|
+|Erreur du compilateur C3686|' *identificateur* d’opérateur' : le modèle d’opérateur littéral doit avoir exactement un paramètre de modèle qui est un package de paramètres|
+|Erreur du compilateur C3687|' *identificateur* d’opérateur' : le modèle d’opérateur littéral doit avoir un paramètre de modèle sans type de type’Char'|
+|Erreur du compilateur C3688|suffixe littéral non valide'*suffixe*'; opérateur littéral ou modèle d’opérateur littéral' *identificateur* d’opérateur’introuvable|
+|Erreur du compilateur C3689|' *identificateur* d’opérateur' : le modèle d’opérateur littéral opérateur/littéral doit figurer dans une portée globale ou d’espace de noms|
 |Erreur du compilateur C3690|littéral de chaîne attendu, mais un littéral de chaîne défini par l’utilisateur a été trouvé à la place|
 |Erreur du compilateur C3691|préfixe de littéral non valide'*préfixe*'|
 |Erreur du compilateur C3692|Obsolète.|
@@ -481,13 +482,13 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3715](compiler-error-c3715.md)|'*pointeur*' : doit être un pointeur vers'*type*'|
 |Erreur du compilateur C3716|Obsolète.|
 |[Erreur du compilateur C3717](compiler-error-c3717.md)|'*membre*' : une méthode qui déclenche des événements ne peut pas être définie|
-|[Erreur du compilateur C3718](compiler-error-c3718.md)|peut uniquement appeler' _ _*Keyword*'dans le contexte d’une fonction membre de la classe réceptrice|
+|[Erreur du compilateur C3718](compiler-error-c3718.md)|peut uniquement appeler' _ _ *Keyword*'dans le contexte d’une fonction membre de la classe réceptrice|
 |[Erreur du compilateur C3719](compiler-error-c3719.md)|'*membre*' : une source d’événements basée sur une interface ne peut être utilisée que pour les événements com|
 |Erreur du compilateur C3720|'*type*' : peut uniquement implémenter IDispatch sur un Dual ou une dispinterface|
 |[Erreur du compilateur C3721](compiler-error-c3721.md)|'*signature*' : signature incompatible pour l’événement|
 |[Erreur du compilateur C3722](compiler-error-c3722.md)|événement générique non autorisé|
 |[Erreur du compilateur C3723](compiler-error-c3723.md)|'*fonction*' : impossible de résoudre l’événement|
-|[Erreur du compilateur C3724](compiler-error-c3724.md)|doit #include \<Windows. h > pour utiliser le Multi-Threading avec les événements|
+|[Erreur du compilateur C3724](compiler-error-c3724.md)|doit #include \<windows.h> pour utiliser le Multi-Threading avec les événements|
 |Erreur du compilateur C3725|Obsolète.|
 |Erreur du compilateur C3726|Obsolète.|
 |[Erreur du compilateur C3727](compiler-error-c3727.md)|'*Event*' : un événement managé doit être une fonction membre ou un membre de données qui est un pointeur vers un délégué|
@@ -497,14 +498,14 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3731](compiler-error-c3731.md)|événement'*Event*'et gestionnaire'*event_handler*'incompatible ; la source d’événements et le gestionnaire d’événements doivent avoir le même type d’événement|
 |[Erreur du compilateur C3732](compiler-error-c3732.md)|'*interface*' : une interface personnalisée qui déclenche des événements com ne peut pas hériter de IDispatch|
 |[Erreur du compilateur C3733](compiler-error-c3733.md)|'*Event*' : syntaxe incorrecte pour la spécification d’un événement com ; avez-vous oublié' __interface' ?|
-|[Erreur du compilateur c3734](compiler-error-c3734.md)|'*classe*' : une classe managée/WinRT ne peut pas être une coclasse|
+|[Erreur du compilateur C3734](compiler-error-c3734.md)|'*classe*' : une classe managée/WinRT ne peut pas être une coclasse|
 |Erreur du compilateur C3735|Obsolète.|
 |[Erreur du compilateur C3736](compiler-error-c3736.md)|'*membre*' : doit être une méthode ou, dans le cas d’événements managés, éventuellement un membre de données|
 |[Erreur du compilateur C3737](compiler-error-c3737.md)|'*identificateur*' : un délégué ne peut pas avoir de convention d’appel explicite|
 |[Erreur du compilateur C3738](compiler-error-c3738.md)|'*Convention*' : la Convention d’appel de l’instanciation explicite doit correspondre à celle du modèle instancié|
-|[Erreur du compilateur C3739](compiler-error-c3739.md)|'*Class*' : la syntaxe est prise en charge uniquement quand le paramètre’layout\_dependent’de event_receiver a la valeur true|
+|[Erreur du compilateur C3739](compiler-error-c3739.md)|'*Class*' : la syntaxe est prise en charge uniquement quand le \_ paramètre’dependent layout’de event_receiver a la valeur true|
 |[Erreur du compilateur C3740](compiler-error-c3740.md)|'*modèle*' : les modèles ne peuvent pas recevoir d’événements source ou de réception|
-|[Erreur du compilateur C3741](compiler-error-c3741.md)|'*Class*' : doit être une coclasse quand le paramètre’layout\_dependent’de event_receiver a la valeur true|
+|[Erreur du compilateur C3741](compiler-error-c3741.md)|'*Class*' : doit être une coclasse quand le paramètre’layout \_ dependent’de event_receiver a la valeur true|
 |Erreur du compilateur C3742|'*TOKEN1*' : séquence de jeton déséquilibrée dans l’argument d’attribut de'*attribute*', '*Token2*'attendu|
 |[Erreur du compilateur C3743](compiler-error-c3743.md)|peut uniquement raccorder/décrocher une interface entière quand le paramètre « layout_dependent » de event_receiver a la valeur true|
 |[Erreur du compilateur C3744](compiler-error-c3744.md)|__unhook doit avoir au moins 3 arguments pour les événements managés|
@@ -622,7 +623,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3856](compiler-error-c3856.md)|'*classe*' : la classe n’est pas un modèle de classe/générique|
 |[Erreur du compilateur C3857](compiler-error-c3857.md)|'*template*' : plusieurs listes de paramètres de modèle/générique ne sont pas autorisées|
 |[Erreur du compilateur C3858](compiler-error-c3858.md)|'*identificateur*' : ne peut pas être redéclaré dans la portée actuelle|
-|[Erreur du compilateur C3859](compiler-error-c3859.md)|plage de mémoire virtuelle dépassée pour PCH ; Recompilez avec l’option de ligne de commande'-ZM*Number*'ou une valeur supérieure|
+|[Erreur du compilateur C3859](compiler-error-c3859.md)|plage de mémoire virtuelle dépassée pour PCH ; Recompilez avec l’option de ligne de commande'-ZM *Number*'ou une valeur supérieure|
 |[Erreur du compilateur C3860](compiler-error-c3860.md)|la liste d’arguments modèle/générique suivant le modèle de classe/nom générique doit répertorier les paramètres dans l’ordre utilisé dans la liste de paramètres de modèle/générique|
 |[Erreur du compilateur C3861](compiler-error-c3861.md)|'*identificateur*' : identificateur introuvable|
 |[Erreur du compilateur C3862](compiler-error-c3862.md)|'*fonction*' : impossible de compiler une fonction non managée avec/clr : pure ou/CLR : safe|
@@ -635,8 +636,8 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3869](compiler-error-c3869.md)|la contrainte gcnew ne contient pas de liste de paramètres vide' () '|
 |Erreur du compilateur C3870|'*paramètre*' : ' __declspec (*spécificateur*) 'ne peut s’appliquer qu’aux paramètres de type intégral|
 |Erreur du compilateur C3871|'*paramètre*' : ' __declspec (Guard (Overflow)) 'est uniquement pris en charge sur les 64 premiers paramètres d’une fonction|
-|[Erreur du compilateur C3872](compiler-error-c3872.md)|' 0x*value*' : ce caractère n’est pas autorisé dans un identificateur|
-|[Erreur du compilateur C3873](compiler-error-c3873.md)|' 0x*value*' : ce caractère n’est pas autorisé en tant que premier caractère d’un identificateur|
+|[Erreur du compilateur C3872](compiler-error-c3872.md)|' 0x *value*' : ce caractère n’est pas autorisé dans un identificateur|
+|[Erreur du compilateur C3873](compiler-error-c3873.md)|' 0x *value*' : ce caractère n’est pas autorisé en tant que premier caractère d’un identificateur|
 |[Erreur du compilateur C3874](compiler-error-c3874.md)|le type de retour de'*identifier*'doit être'*type1*'au lieu de'*type2*'|
 |Erreur du compilateur C3875|appel d’une fonction membre non statique liste d’arguments manquante|
 |Erreur du compilateur C3876|Obsolète.|
@@ -651,7 +652,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3885|'*type*' : un tableau de taille inconnue ne peut pas être initialisé avec une liste d’initialiseurs vide|
 |[Erreur du compilateur C3886](compiler-error-c3886.md)|'*membre*' : une donnée membre littérale doit être initialisée|
 |[Erreur du compilateur C3887](compiler-error-c3887.md)|'*membre*' : l’initialiseur d’une donnée membre littérale doit être une expression constante|
-|[Erreur du compilateur C3888](compiler-error-c3888.md)|'*membre*' : l’expression const associée à cette donnée membre littérale n’est pas C++prise en charge par/CLI|
+|[Erreur du compilateur C3888](compiler-error-c3888.md)|'*membre*' : l’expression const associée à cette donnée membre littérale n’est pas prise en charge par C++/CLI|
 |Erreur du compilateur C3889|Obsolète.|
 |[Erreur du compilateur C3890](compiler-error-c3890.md)|'*membre*' : vous ne pouvez pas prendre l’adresse d’un membre de données littéral|
 |[Erreur du compilateur C3891](compiler-error-c3891.md)|'*membre*' : un membre de données littéral ne peut pas être utilisé comme l-value|
@@ -703,7 +704,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3937|spécificateur de restriction vide non autorisé|
 |Erreur du compilateur C3938|'*identificateur*' : plusieurs spécificateurs de restriction ne sont pas pris en charge sur les fonctions extern \042C\042|
 |Erreur du compilateur C3939|'*identificateur*' : pointeur vers les fonctions membres, pointeurs de fonction, références à des fonctions avec le spécificateur de restriction’amp’non autorisé|
-|Erreur du compilateur C3940|'*identificateur*' : identificateur introuvable-incompatibilité possible entre les versions du compilateur et de la bibliothèque. Vérifiez que vccorlib. h/. lib, vccorlib120. dll et c1xx. dll correspondent|
+|Erreur du compilateur C3940|'*identificateur*' : identificateur introuvable-incompatibilité possible entre les versions du compilateur et de la bibliothèque. Vérifiez que vccorlib. h/. lib, vccorlib120.dll et c1xx.dll correspondent|
 |Erreur du compilateur C3941|'*condition*' : requiert l’option de ligne de commande'/CLR'|
 |Erreur du compilateur C3942|Obsolète.|
 |Erreur du compilateur C3943|Obsolète.|
@@ -715,10 +716,10 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3949|une expansion de package, '... ', ne peut pas apparaître dans un déclarateur abstrait entre parenthèses|
 |Erreur du compilateur C3950|Obsolète.|
 |Erreur du compilateur C3951|Impossible d’utiliser pointeur vers membre dans le type WinRT projeté'*type*'. Utilisez à la place un délégué.|
-|Erreur du compilateur C3952|'*type*' : WinRT ne prend pas en charge les tableaux’in/out'. Utilisez’const Array\<T > ^ 'pour’in’et’WriteOnlyArray\<T > 'ou’array\<T > ^ * 'pour’out’sur les API publiques|
+|Erreur du compilateur C3952|'*type*' : WinRT ne prend pas en charge les tableaux’in/out'. Utiliser’const array \<T> ^ 'pour’in’et’WriteOnlyArray \<T> 'ou’array \<T> ^ * 'pour’out’sur les API publiques|
 |Erreur du compilateur C3953|Impossible d’utiliser la classe managée'*type*'dans le module WinRT.|
-|Erreur du compilateur C3954|'*type*' : un tableau retourné à partir d’une méthode publiée sur un type WinRT doit utiliser le format’array\<t > ^ '|
-|Erreur du compilateur C3955|'*type*' : un constructeur public ne peut pas contenir un paramètre’out’ou’WriteOnlyArray\<t > '|
+|Erreur du compilateur C3954|'*type*' : un tableau retourné à partir d’une méthode publiée sur un type WinRT doit utiliser le format’array \<T> ^ '|
+|Erreur du compilateur C3955|'*type*' : un constructeur public ne peut pas contenir un paramètre’out’ou’WriteOnlyArray \<T> '|
 |Erreur du compilateur C3956|'*type*' : le type est marqué comme exclusif à'*type*'et ne peut pas être utilisé comme base de'*derived_type*'|
 |Erreur du compilateur C3957|'*type*' : impossible d’utiliser’New’sur un type WinRT ; Utilisez plutôt’Ref New'|
 |Erreur du compilateur C3958|'*type*' : impossible d’utiliser’gcnew’sur un type WinRT ; Utilisez plutôt’Ref New'|
@@ -760,10 +761,10 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur du compilateur C3994|'*type*' : un type valeur ne peut pas implémenter des interfaces ni avoir des fonctions virtuelles|
 |Erreur du compilateur C3995|'*type*' : un type valeur ne peut pas avoir de membres d’événement'*identificateur*'|
 |Erreur du compilateur C3996|Obsolète.|
-|Erreur du compilateur C3998|'c++*version*' : C++ version non prise en charge ; la valeur par défaut est « c++*version*»|
-|Erreur du compilateur C3999|ERREUR inconnue choisissez la commande support technique du menu aide visuel C++ , ou ouvrez le fichier d’aide du support technique pour plus d’informations|
+|Erreur du compilateur C3998|'c++*version*' : version c++ non prise en charge ; la valeur par défaut est « c++*version*»|
+|Erreur du compilateur C3999|ERREUR inconnue Veuillez choisir la commande support technique dans le menu ? (aide) du Visual C++ ou ouvrez le fichier d’aide du support technique pour plus d’informations|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
-[Erreurs du compilateur C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3633'
 title: Erreur du compilateur C3633
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: caf89e2297bb4e9d62be76699b153f013095fa34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239257"
 ---
 # <a name="compiler-error-c3633"></a>Erreur du compilateur C3633
 
 Impossible de définir’Member’en tant que membre de’type’managé
 
-Les membres de données de classe de référence CLR ne peuvent pas C++ être d’un type non pod.  Vous pouvez uniquement instancier un type natif POD dans un type CLR.  Par exemple, un type POD ne peut pas contenir un constructeur de copie ou un opérateur d’assignation.
+Les membres de données de classe de référence CLR ne peuvent pas être d’un type C++ non POD.  Vous pouvez uniquement instancier un type natif POD dans un type CLR.  Par exemple, un type POD ne peut pas contenir un constructeur de copie ou un opérateur d’assignation.
 
 ## <a name="example"></a>Exemple
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3722'
 title: Erreur du compilateur C3722
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: 08087b9cec0a48f0e439d6a2ff9fbe5f4e58d709
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6f24a480f4488ebb910921afe88fe03f54e957b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239023"
 ---
 # <a name="compiler-error-c3722"></a>Erreur du compilateur C3722
 
 événement générique non autorisé
 
-Le compilateur autorise uniquement les classes, structures et fonctions génériques.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
+Le compilateur autorise uniquement les classes, structures et fonctions génériques.  Pour plus d’informations, consultez [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
 L’exemple suivant génère l’C3722 :
 

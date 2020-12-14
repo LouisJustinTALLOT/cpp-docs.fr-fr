@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Erreurs du compilateur C2700 à C2799'
 title: Erreurs du compilateur C2700 à C2799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: 174f6a9c8ec9e44deadfca090ba492cb32d53e9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9093c7cbdc884b23bef77fb8206a80e081dc4f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238854"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>Erreurs du compilateur C2700 à C2799
 
@@ -71,7 +72,7 @@ Les Articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2711](compiler-error-c2711.md)|'*fonction*' : cette fonction ne peut pas être compilée comme managée, envisagez d’utiliser #pragma non managé|
 |[Erreur du compilateur C2712](compiler-error-c2712.md)|Impossible d’utiliser __try dans les fonctions qui requièrent le déroulement de l’objet|
 |[Erreur du compilateur C2713](compiler-error-c2713.md)|Une seule forme de gestion des exceptions permise par fonction|
-|[Erreur du compilateur C2714](compiler-error-c2714.md)| `alignof(void)`n’est pas autorisé|
+|[Erreur du compilateur C2714](compiler-error-c2714.md)| `alignof(void)` n’est pas autorisé|
 |[Erreur du compilateur C2715](compiler-error-c2715.md)|'*type*' : impossible de lever ou d’intercepter ce type|
 |Erreur du compilateur C2716|Obsolète.|
 |Erreur du compilateur C2717|Obsolète.|
