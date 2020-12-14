@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3798'
 title: Erreur du compilateur C3798
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: cc21f0bdcc8e2171dd0c87fc31396e6caab9e6fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 394fe0f420c25fbabab44204e1793dc7dd5e9058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244834"
 ---
 # <a name="compiler-error-c3798"></a>Erreur du compilateur C3798
 
 'specifier' : la déclaration de propriété ne peut pas avoir de spécificateur de substitution (doit être placé sur les méthodes Property/Set à la place)
 
-Une propriété n’a pas été correctement déclarée. Pour plus d’informations, voir .
+Une propriété n’a pas été correctement déclarée. Pour plus d'informations, consultez la rubrique
 
-- [propriété](../../extensions/property-cpp-component-extensions.md)
+- [property](../../extensions/property-cpp-component-extensions.md)
 
-- [abstract](../../extensions/abstract-cpp-component-extensions.md)
+- [abstraction](../../extensions/abstract-cpp-component-extensions.md)
 
 - [sealed](../../extensions/sealed-cpp-component-extensions.md)
 

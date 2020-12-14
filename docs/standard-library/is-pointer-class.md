@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_pointer'
 title: is_pointer, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003f25a40edd3f4c0b80a8402d38027cd81949cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230638"
 ---
 # <a name="is_pointer-class"></a>is_pointer, classe
 

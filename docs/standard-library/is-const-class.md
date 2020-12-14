@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_const'
 title: is_const, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-ms.openlocfilehash: 92059f43e73c4b76f45ea9aeae61daf573367b43
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 81bcb02e06f55521ca5a04ebf01b5e6e1e8827a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231210"
 ---
-# <a name="isconst-class"></a>is_const, classe
+# <a name="is_const-class"></a>is_const, classe
 
 Teste si le type est const.
 
@@ -32,7 +33,7 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true  si TY `const-qualified`est.
+Une instance du prédicat de type a la valeur true si *Ty* est `const-qualified` .
 
 ## <a name="example"></a>Exemple
 
@@ -69,13 +70,13 @@ is_const<int> == false
 is_const<const int> == true
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_volatile, classe](../standard-library/is-volatile-class.md)
+[Classe is_volatile](../standard-library/is-volatile-class.md)

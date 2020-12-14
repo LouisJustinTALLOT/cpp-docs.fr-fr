@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 3) C4554'
 title: Avertissement du compilateur (niveau 3) C4554
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-ms.openlocfilehash: 45f9d85f272bb5093fd418981ea3dbdc8cb7f1c0
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: daed8757cca5c9d9286f6f6bf94c55149c1687c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257834"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>Avertissement du compilateur (niveau 3) C4554
 
-'operator' : check operator precedence for possible error; use parentheses to clarify precedence
+'opérateur' : Vérifiez la priorité des opérateurs pour déterminer si une erreur est possible ; utiliser des parenthèses pour clarifier la précédence
 
-The following sample generates C4554:
+L’exemple suivant génère l’C4554 :
 
 ```cpp
 // C4554.cpp

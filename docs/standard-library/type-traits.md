@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; type_traits&gt;'
 title: '&lt;type_traits&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cf7bb4a5bf73eb49526926c151ffbbd0b55fda5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226491"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
