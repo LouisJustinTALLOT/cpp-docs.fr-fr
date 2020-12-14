@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes d’accès en lecture/écriture de fichier
 title: Constantes d’accès fichier en lecture-écriture
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 96d146b2e2f0ed82cbdc52b11d92c049da50e2cb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3c1fe6f6125b52f24b35a03c4c517385410f1fae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224255"
 ---
 # <a name="file-readwrite-access-constants"></a>Constantes d'accès fichier en lecture/écriture
 
@@ -31,12 +32,12 @@ Les types d’accès sont décrits dans le tableau suivant :
 
 |Type d’accès|Description|
 |----------|----------------|
-|**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, l’appel pour ouvrir le fichier échoue.|
-|**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.|
-|**"a"**|Ouvre pour l'écriture à la fin du fichier (ajout) ; crée d'abord le fichier s'il n'existe pas. Toutes les opérations d’écriture se produisent à la fin du fichier. Même si le pointeur de fichier peut être repositionné à l’aide de `fseek` ou de `rewind`, il est toujours replacé à la fin du fichier avant toute opération d’écriture. |
-|**"r+"**|Ouvre pour l'accès en lecture et en écriture. Si le fichier n’existe pas ou est introuvable, l’appel pour ouvrir le fichier échoue.|
-|**"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.|
-|**"a+"**|Comme **"a"** , mais permet aussi la lecture.|
+|**r**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, l’appel pour ouvrir le fichier échoue.|
+|**s**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.|
+|**un**|Ouvre pour l'écriture à la fin du fichier (ajout) ; crée d'abord le fichier s'il n'existe pas. Toutes les opérations d’écriture se produisent à la fin du fichier. Même si le pointeur de fichier peut être repositionné à l’aide de `fseek` ou de `rewind`, il est toujours replacé à la fin du fichier avant toute opération d’écriture. |
+|**"r +"**|Ouvre pour l'accès en lecture et en écriture. Si le fichier n’existe pas ou est introuvable, l’appel pour ouvrir le fichier échoue.|
+|**"w +"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.|
+|**"a +"**|Comme **"a"**, mais permet aussi la lecture.|
 
 Quand le type d'accès « r+ », « w+ » ou « a+ » est spécifié, la lecture et l'écriture sont autorisées (on dit que le fichier est ouvert pour mise à jour). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire `fflush`, `fsetpos`, `fseek` ou `rewind` doit exister. La position actuelle peut être spécifiée pour l'opération `fsetpos` ou `fseek`.
 

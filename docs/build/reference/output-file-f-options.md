@@ -1,33 +1,34 @@
 ---
-title: Options du fichier de sortie (-F)
+description: 'En savoir plus sur les options suivantes : Output-File (/F)'
+title: Options de Output-File (-F)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output files
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-ms.openlocfilehash: f1a9aea2080ecadbc398186251e4cff34a0d240c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fabb2904ee4ee8f4bdd70f7e7770a5639902be41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226309"
 ---
 # <a name="output-file-f-options"></a>Options du fichier de sortie (/F)
 
-Les options du fichier de sortie créent ou renomment les fichiers de sortie. Elles affectent tous les fichiers C++ C ou source spécifiés dans la variable d’environnement CL, sur la ligne de commande ou dans n’importe quel fichier de commandes.
+Les options du fichier de sortie créent ou renomment les fichiers de sortie. Elles affectent tous les fichiers sources C ou C++ spécifiés dans la variable d’environnement CL, sur la ligne de commande ou dans n’importe quel fichier de commandes.
 
-- [/FA, /Fa (Fichier listing)](fa-fa-listing-file.md)
+- [/FA,/FA (fichier listing)](fa-fa-listing-file.md)
 
-- [Spécification du nom de chemin](specifying-the-pathname.md)
+- [Spécification du chemin d’accès](specifying-the-pathname.md)
 
 - [/FD (nom du fichier PDB)](fd-program-database-file-name.md)
 
-- [/Fe (Nom de fichier EXE)](fe-name-exe-file.md)
+- [/Fe (nom de fichier EXE)](fe-name-exe-file.md)
 
-- [/FI (Nom du fichier Include imposé)](fi-name-forced-include-file.md)
+- [/FI (nom du fichier include imposé)](fi-name-forced-include-file.md)
 
-- [/Fm (Nom de fichier de mappage)](fm-name-mapfile.md)
+- [/FM (nom de mappage)](fm-name-mapfile.md)
 
 - [/FO (nom du fichier objet)](fo-object-file-name.md)
 
@@ -37,9 +38,9 @@ Les options du fichier de sortie créent ou renomment les fichiers de sortie. El
 
 - [/FU (Nom du fichier #using imposé)](fu-name-forced-hash-using-file.md)
 
-- [/Fx (Fusionner le code injecté)](fx-merge-injected-code.md)
+- [/FX (fusionner le code injecté)](fx-merge-injected-code.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

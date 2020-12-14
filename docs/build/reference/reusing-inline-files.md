@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : réutilisation de fichiers Inline'
 title: Réutilisation de fichiers inline
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,17 +7,17 @@ helpviewer_keywords:
 - revising inline files
 - NMAKE program, inline files
 ms.assetid: d42dbffb-2cef-4ccb-9a1f-20b8ef81481c
-ms.openlocfilehash: ceaba468427b2acbe355c9004655de7bc6178041
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b95cbd9e85626e1fee7c03dfd5e9b6b5bd0045c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225009"
 ---
 # <a name="reusing-inline-files"></a>Réutilisation de fichiers inline
 
-Pour réutiliser un fichier inline, spécifiez <<*filename* où le fichier est défini et utilisé tout d’abord, puis réutiliser *filename* sans << plus loin dans le même ou d’une autre commande. Exécutez la commande pour créer le fichier inline avant de toutes les commandes qui utilisent le fichier.
+Pour réutiliser un fichier Inline, spécifiez <<*nom* de fichier dans lequel le fichier est défini et utilisé pour la première fois, puis réutilisez le *nom* de fichier sans << plus tard dans la même commande ou dans une autre commande. La commande permettant de créer le fichier Inline doit être exécutée avant toutes les commandes qui utilisent le fichier.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers inline dans un makefile](inline-files-in-a-makefile.md)
+[Fichiers inline dans un Makefile](inline-files-in-a-makefile.md)

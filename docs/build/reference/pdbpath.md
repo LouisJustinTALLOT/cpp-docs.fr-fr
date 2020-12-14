@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/PDBPATH
 title: /PDBPATH
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: f29b8e61fbfbdb0f373e3e7510cb3f1fe0b9cc2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41207d7cfce3d72ecb9517d9ad3af8bcd3f901d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226049"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -26,30 +27,30 @@ ms.locfileid: "62319848"
 ### <a name="parameters"></a>Paramètres
 
 *filename*<br/>
-Le nom du fichier .dll ou .exe pour lequel vous souhaitez rechercher le fichier .pdb correspondant.
+Nom du fichier. dll ou. exe pour lequel vous souhaitez rechercher le fichier. pdb correspondant.
 
-**:VERBOSE**<br/>
-(Facultatif) Signale tous les répertoires où une tentative a été effectuée pour localiser le fichier .pdb.
+**: VERBOSe**<br/>
+Facultatif Signale tous les répertoires dans lesquels une tentative a été effectuée pour localiser le fichier. pdb.
 
 ## <a name="remarks"></a>Notes
 
-/PDBPATH votre ordinateur en suivant les mêmes chemins d’accès que le débogueur pour recherche un fichier .pdb et signalera qui, le cas échéant, les fichiers .pdb correspondants dans le fichier spécifié dans *filename*.
+/PDBPATH recherchera sur votre ordinateur les mêmes chemins que le débogueur recherchera un fichier. pdb et indiquera, le cas échéant, les fichiers. pdb correspondant au fichier spécifié dans *filename*.
 
-Lorsque vous utilisez le débogueur Visual Studio, vous pouvez rencontrer un problème dû au fait que le débogueur utilise un fichier .pdb pour une autre version du fichier que vous déboguez.
+Lorsque vous utilisez le débogueur Visual Studio, vous pouvez rencontrer un problème en raison du fait que le débogueur utilise un fichier. pdb pour une version différente du fichier que vous déboguez.
 
-/PDBPATH pour les fichiers .pdb en utilisant les chemins suivants :
+/PDBPATH recherche les fichiers. pdb sur les chemins d’accès suivants :
 
 - Vérifiez l’emplacement où se trouve l’exécutable.
 
-- Vérifiez l’emplacement du fichier PDB écrit dans le fichier exécutable. Il s’agit généralement l’emplacement au moment où que l’image a été liée.
+- Vérifiez l’emplacement du fichier PDB écrit dans l’exécutable. Il s’agit généralement de l’emplacement au moment de la liaison de l’image.
 
-- Vérifiez le long du chemin de recherche configuré dans l’IDE Visual Studio.
+- Vérifiez le chemin de recherche configuré dans l’IDE de Visual Studio.
 
-- Vérifiez le long des tracés dans le _NT_SYMBOL_PATH et _NT_ALT_SYMBOL_PATH variables d’environnement.
+- Vérifiez les chemins d’accès dans les variables d’environnement _NT_SYMBOL_PATH et _NT_ALT_SYMBOL_PATH.
 
-- Vérifiez dans le répertoire Windows.
+- Vérifiez le répertoire Windows.
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)<br/>
-[/PDBALTPATH (Utiliser un autre chemin PDB)](pdbaltpath-use-alternate-pdb-path.md)
+[Options DUMPBIN](dumpbin-options.md)<br/>
+[/PDBALTPATH (utiliser un autre chemin d’accès PDB)](pdbaltpath-use-alternate-pdb-path.md)

@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les États de flux
 title: États de flux
 ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c691c1fd01feb9f78ff0929775505f08cb625ecc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224177"
 ---
 # <a name="stream-states"></a>États de flux
 
@@ -19,7 +20,7 @@ Les états valides et les transitions d’état d’un flux de données sont ind
 
 Chaque cercle indique un état stable. Chacune des lignes dénote une transition qui peut se produire à la suite d’un appel de fonction opérant sur le flux de données. Cinq groupes de fonctions peuvent entraîner des transitions d’état.
 
-Les fonctions des trois premiers groupes sont déclarées dans \<stdio.h> :
+Les fonctions des trois premiers groupes sont déclarées dans \<stdio.h> :
 
 - Fonctions de lecture d’octets : [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fread](../c-runtime-library/reference/fread.md), [fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getc](../c-runtime-library/reference/getc-getwc.md), [getchar](../c-runtime-library/reference/getc-getwc.md), [gets](../c-runtime-library/gets-getws.md), [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), et [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)
 
@@ -27,7 +28,7 @@ Les fonctions des trois premiers groupes sont déclarées dans \<stdio.h> :
 
 - Fonctions de position : [fflush](../c-runtime-library/reference/fflush.md), [fseek](../c-runtime-library/reference/fseek-fseeki64.md), [fsetpos](../c-runtime-library/reference/fsetpos.md) et [rewind](../c-runtime-library/reference/rewind.md)
 
-Les fonctions des deux autres groupes sont déclarées dans \<wchar.h> :
+Les fonctions dans les deux autres groupes sont déclarées dans \<wchar.h> :
 
 - Fonctions de lecture larges : [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getwc](../c-runtime-library/reference/getc-getwc.md), [getwchar](../c-runtime-library/reference/getc-getwc.md), [ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md), et [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),
 

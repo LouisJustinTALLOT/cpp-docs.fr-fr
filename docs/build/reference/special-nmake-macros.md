@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros spéciales de NMAKE'
 title: Macros spéciales de NMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE macros, special
 ms.assetid: d772e8ea-1e9f-4ad8-beec-663af76f2dd9
-ms.openlocfilehash: a21c58d5ec6e3bee4ef89c09ecd19697fdb3dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c817e684ff7f4fe50c2844ca4c8976e97782ecd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224645"
 ---
 # <a name="special-nmake-macros"></a>Macros spéciales de NMAKE
 
-NMAKE propose plusieurs macros spéciales pour représenter les différents noms de fichiers et commandes. Une utilisation pour certaines de ces macros est dans les règles d’inférence prédéfinies. Comme toutes les macros, les macros fournies par NMAKE respectent la casse.
+NMAKE fournit plusieurs macros spéciales pour représenter différents noms de fichiers et commandes. Une utilisation de certaines de ces macros est dans les règles d’inférence prédéfinies. Comme toutes les macros, les macros fournies par NMAKE respectent la casse.
 
-- [Macros de nom de fichier](filename-macros.md)
+- [Macros de noms de fichiers](filename-macros.md)
 
 - [Macros récursives](recursion-macros.md)
 

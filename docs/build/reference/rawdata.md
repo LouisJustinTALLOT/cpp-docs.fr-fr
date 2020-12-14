@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/RAWDATA
 title: /RAWDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe2001c0170b8539b98902591849dedaf0fb819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225373"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -24,19 +25,19 @@ ms.locfileid: "62319510"
 
 ## <a name="remarks"></a>Notes
 
-Cette option affiche le contenu brut de chaque section dans le fichier. Les arguments de contrôlent le format de l’affichage, comme indiqué ci-dessous :
+Cette option affiche le contenu brut de chaque section du fichier. Les arguments contrôlent le format de l’affichage, comme indiqué ci-dessous :
 
-|Argument|Résultat|
+|Argument|Résultats|
 |--------------|------------|
-|1|Valeur par défaut. Contenu s’affiche en octets hexadécimales et également en tant que caractères ASCII s’ils ont une représentation sous forme imprimée.|
-|2|Contenu s’affiche en tant que valeurs hexadécimales de 2 octets.|
-|4|Contenu s’affiche en tant que valeurs hexadécimales de 4 octets.|
-|8|Contenu s’affiche en tant que valeurs hexadécimales de 8 octets.|
-|NONE|Données brutes sont supprimées. Cet argument est utile pour contrôler la sortie de/ALL.|
-|*Nombre*|Les lignes affichées sont définies à une largeur qui contient `number` valeurs par ligne.|
+|1|Valeur par défaut. Le contenu s’affiche en octets hexadécimaux, et également en tant que caractères ASCII s’ils ont une représentation imprimée.|
+|2|Le contenu s’affiche sous la forme de valeurs hexadécimales sur 2 octets.|
+|4|Le contenu s’affiche sous la forme de valeurs hexadécimales sur 4 octets.|
+|8|Le contenu s’affiche sous la forme de valeurs hexadécimales de 8 octets.|
+|Aucune|Les données brutes sont supprimées. Cet argument est utile pour contrôler la sortie de/ALL.|
+|*Nombre*|Les lignes affichées sont définies sur une largeur qui contient des `number` valeurs par ligne.|
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

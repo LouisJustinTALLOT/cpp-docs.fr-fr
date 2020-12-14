@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/PDATA
 title: /PDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /PDATA dumpbin option
 - -PDATA dumpbin option
 ms.assetid: 5d41d629-6576-4733-b103-0d61e6b77b50
-ms.openlocfilehash: bd763abf7b2a08e6aa54ba37cb451f1ec0f6cef7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2855e7f33577ca17aa271d953663f858163b94a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226127"
 ---
 # <a name="pdata"></a>/PDATA
 
@@ -25,10 +26,10 @@ ms.locfileid: "62320056"
 
 Processeurs RISC uniquement.
 
-Cette option vide les tables d’exceptions (.pdata) à partir d’une image ou un objet.
+Cette option permet de vider les tables d’exception (. pdata) à partir d’une image ou d’un objet.
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

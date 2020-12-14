@@ -1,5 +1,6 @@
 ---
-title: '&lt;> seealso (C++ commentaires de documentation)'
+description: 'En savoir plus sur : &lt; seealso&gt;'
+title: '&lt;seealso> (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 70f5f0147ff56dd6327e99f073f80c28a7cce539
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224723"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
-La balise \<seealso> vous permet de spécifier le texte que vous souhaitez voir apparaître dans une section Voir aussi. Utilisez [\<see>](see-visual-cpp.md) pour spécifier un lien à partir de l’intérieur du texte.
+La \<seealso> balise vous permet de spécifier le texte que vous souhaitez voir apparaître dans une section Voir aussi. Utilisez [\<see>](see-visual-cpp.md) pour spécifier un lien à partir de texte.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,20 +26,20 @@ La balise \<seealso> vous permet de spécifier le texte que vous souhaitez voir 
 <seealso cref="member"/>
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
-*member*<br/>
-Référence à un membre ou à un champ qui peut être appelé à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
+*membre*<br/>
+Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
 
 Le compilateur vérifie que l’élément de code donné existe et qu’il résout `member` en nom d’élément dans le code XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.
 
-Pour plus d’informations sur la façon de créer une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md).
+Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md) .
 
 ## <a name="remarks"></a>Notes
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
-Pour obtenir un exemple d’utilisation de \<seealso>, consultez [\<summary>](summary-visual-cpp.md).
+[\<summary>](summary-visual-cpp.md)Pour obtenir un exemple d’utilisation de \<seealso> , consultez.
 
 Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue.
 

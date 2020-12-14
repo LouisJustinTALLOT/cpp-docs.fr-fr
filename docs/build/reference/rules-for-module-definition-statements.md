@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : règles pour les instructions Module-Definition'
 title: Règles s'appliquant aux instructions de définition de module
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,35 +8,35 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca1f279a9a93690edeaabc2264d1cfe869b3e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224996"
 ---
 # <a name="rules-for-module-definition-statements"></a>Règles s'appliquant aux instructions de définition de module
 
-Les règles de syntaxe suivantes s’appliquent à toutes les instructions dans un fichier .def. Autres règles qui s’appliquent aux instructions spécifiques sont décrites avec chaque instruction.
+Les règles de syntaxe suivantes s’appliquent à toutes les instructions d’un fichier. def. Les autres règles qui s’appliquent à des instructions spécifiques sont décrites avec chaque instruction.
 
-- Instructions, les mots clés des attributs et les identificateurs spécifié par l’utilisateur respectent la casse.
+- Les instructions, les mots clés d’attribut et les identificateurs spécifiés par l’utilisateur respectent la casse.
 
-- Durée pendant laquelle les noms contenant des espaces ou des points-virgules ( ;) de fichiers doit être placé entre guillemets («).
+- Noms de fichiers longs contenant des espaces ou des points-virgules (;) doit être placé entre guillemets (").
 
-- Utiliser un ou plusieurs espaces, des tabulations ou des caractères de saut de ligne pour séparer un mot clé d’instruction de ses arguments et pour séparer les instructions les unes des autres. Un signe deux-points ( :)) ou signe égal (=) qui désigne un argument est entouré de zéro ou plusieurs espaces, tabulations ou caractères de saut de ligne.
+- Utilisez un ou plusieurs espaces, tabulations ou caractères de saut de ligne pour séparer un mot clé d’instruction de ses arguments et pour séparer les instructions les unes des autres. Deux-points ( :) ou signe égal (=) qui désigne un argument est entouré de zéro, un ou plusieurs espaces, tabulations ou caractères de saut de ligne.
 
-- Un **nom** ou **bibliothèque** instruction, si vous, doit précéder toutes les autres instructions.
+- Une instruction **Name** ou **Library** , si elle est utilisée, doit précéder toutes les autres instructions.
 
-- Le **SECTIONS** et **exportations** instructions peuvent apparaître plusieurs fois dans le fichier .def. Chaque instruction accepte plusieurs spécifications, qui doivent être séparées par un ou plusieurs espaces, des tabulations ou des caractères de saut de ligne. Le mot clé d’instruction doit apparaître une seule fois avant la première spécification et peut être répété avant chaque spécification supplémentaire.
+- Les instructions **sections** et **exports** peuvent apparaître plusieurs fois dans le fichier. def. Chaque instruction peut prendre plusieurs spécifications, qui doivent être séparées par un ou plusieurs espaces, tabulations ou caractères de saut de ligne. Le mot clé de l’instruction doit apparaître une fois avant la première spécification et peut être répété avant chaque spécification supplémentaire.
 
-- De nombreuses instructions ont une option de ligne de commande de lien équivalente. Consultez la description de l’option de liaison correspondante pour plus d’informations.
+- De nombreuses instructions ont une option de ligne de commande LINK équivalente. Pour plus d’informations, consultez la description de l’option de lien correspondante.
 
-- Commentaires dans le fichier .def sont désignés par un point-virgule ( ;) au début de chaque ligne de commentaire. Un commentaire ne peuvent pas partager une ligne avec une instruction, mais il peut apparaître entre les spécifications dans une instruction multiligne. (**SECTIONS** et **exportations** sont des instructions multilignes.)
+- Les commentaires dans le fichier. def sont désignés par un point-virgule (;) au début de chaque ligne de commentaire. Un commentaire ne peut pas partager une ligne avec une instruction, mais il peut apparaître entre les spécifications dans une instruction multiligne. (Les **sections** et les **exportations** sont des instructions multilignes.)
 
-- Arguments numériques sont spécifiés en base 10 ou hexadécimale.
+- Les arguments numériques sont spécifiés en base 10 ou hexadécimal.
 
-- Si un argument de chaîne correspond à un [mot réservé](reserved-words.md), elle doit figurer entre guillemets doubles («).
+- Si un argument de chaîne correspond à un [mot réservé](reserved-words.md), il doit être placé entre guillemets doubles (").
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers de définition de module (.Def)](module-definition-dot-def-files.md)
+[Module-Definition (. Fichiers def)](module-definition-dot-def-files.md)

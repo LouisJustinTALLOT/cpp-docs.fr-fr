@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/Oy (omission du pointeur de frame)
 title: /Oy (Omission du pointeur frame)
 ms.date: 11/19/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0f9272bce5ad36840eac9ccdfc7e2465f7e3c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226296"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Omission du pointeur frame)
 
@@ -26,27 +27,27 @@ Empêche la création des pointeurs de frame sur la pile des appels.
 
 ## <a name="syntax"></a>Syntaxe
 
-> /Oy[-]
+> /Oy [-]
 
 ## <a name="remarks"></a>Notes
 
-Cette option accélère les appels de fonction, dans la mesure où aucun pointeur de frame n'a besoin d'être installé, puis supprimé. Elle libère également un Registre supplémentaire pour une utilisation générale.
+Cette option accélère les appels de fonction, dans la mesure où aucun pointeur de frame n'a besoin d'être installé, puis supprimé. Il libère également un registre supplémentaire pour une utilisation générale.
 
-**/Oy** Active l’omission du pointeur de frame et **/Oy-** désactive l’omission. Dans x64 compilateurs, **/Oy** et **/Oy-** ne sont pas disponibles.
+**/Oy** active l’omission du pointeur de frame et **/Oy-** désactive l’omission. Dans les compilateurs x64, **/Oy** et **/Oy-** ne sont pas disponibles.
 
-Si votre code requiert un adressage basé sur le frame, vous pouvez spécifier le **/Oy-** option après la **/Ox** option ou utilisez [optimiser](../../preprocessor/optimize.md) avec le «**y**» et **hors** arguments pour obtenir une optimisation maximale avec l’adressage en fonction du frame. Le compilateur détecte la plupart des situations où l’adressage en fonction du frame est requis (par exemple, avec le `_alloca` et `setjmp` fonctions et la gestion structurée des exceptions).
+Si votre code requiert un adressage basé sur des frames, vous pouvez spécifier l’option **/Oy-** après l’option **/Ox** ou utiliser [optimize](../../preprocessor/optimize.md) avec les arguments «**y**» et **off** pour obtenir une optimisation maximale avec l’adressage basé sur des trames. Le compilateur détecte la plupart des situations où l’adressage basé sur des trames est requis (par exemple, avec les `_alloca` `setjmp` fonctions et et avec la gestion structurée des exceptions).
 
-Le [/Ox (activer plus optimisations de vitesse)](ox-full-optimization.md) et [/O1, / O2 (réduire la taille, augmenter la vitesse)](o1-o2-minimize-size-maximize-speed.md) options impliquent **/Oy**. Spécification **/Oy-** après le **/Ox**, **/O1**, ou **/O2** option désactive **/Oy**, qu’il s’agisse explicite ou implicite.
+Les options [/Ox (activer la plupart des optimisations de vitesse)](ox-full-optimization.md) et [/O1,/O2 (réduire la taille, augmenter la vitesse)](o1-o2-minimize-size-maximize-speed.md) impliquent **/Oy**. La spécification de **/Oy-** après l’option **/Ox**, **/O1** ou **/O2** désactive **/Oy**, qu’il soit explicite ou implicite.
 
-Le **/Oy** du compilateur option rend l’utilisation du débogueur plus difficile, car le compilateur supprime les informations de pointeur de frame. Si vous spécifiez une option du compilateur de débogage ([/Z7, / Zi, / Zi](z7-zi-zi-debug-information-format.md)), nous vous recommandons de spécifier le **/Oy-** option après les autres options de compilateur d’optimisation.
+L’option du compilateur **/Oy** rend l’utilisation du débogueur plus difficile, car le compilateur supprime les informations du pointeur de frame. Si vous spécifiez une option de compilateur de débogage ([/Z7,/Zi,/Zi](z7-zi-zi-debug-information-format.md)), nous vous recommandons de spécifier l’option **/Oy-** après toute autre option d’optimisation du compilateur.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **optimisation** page de propriétés.
+1. Sélectionnez la page de propriétés optimisation des **Propriétés de configuration**  >  **C/C++**  >   .
 
-1. Modifier le **omission des pointeurs de Frame** propriété. Cette propriété ajoute ou supprime uniquement le **/Oy** option. Si vous souhaitez ajouter le **/Oy-** option, sélectionnez le **ligne de commande** propriété page et modifier **des options supplémentaires**.
+1. Modifiez la propriété **omettre les pointeurs de frame** . Cette propriété ajoute ou supprime uniquement l’option **/Oy** . Si vous souhaitez ajouter l’option **/Oy-** , sélectionnez la page de propriétés **ligne de commande** et modifiez les **options supplémentaires**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -54,6 +55,6 @@ Le **/Oy** du compilateur option rend l’utilisation du débogueur plus diffici
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
+[/O (optimiser le code), options](o-options-optimize-code.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>

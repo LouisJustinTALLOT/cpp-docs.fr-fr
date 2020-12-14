@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécification des dll pour différer le chargement'
 title: Spécification de DLL dont le chargement doit être différé
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece96ea6f818c7e0bc6b6e032ce523e96a9f4ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224541"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Spécification de DLL dont le chargement doit être différé
 
-Vous pouvez spécifier qui chargent des DLL doit être différé avec la [/delayload](delayload-delay-load-import.md):`dllname` option de l’éditeur de liens. Si vous n'envisagez pas d'utiliser votre propre version d'une fonction d'assistance, vous devez également lier votre programme avec delayimp.lib (applications de bureau) ou dloadhelper.lib (pour les applications du Windows store).
+Vous pouvez spécifier les dll dont vous voulez différer le chargement avec l’option [/delayload](delayload-delay-load-import.md): `dllname` éditeur de liens. Si vous n'envisagez pas d'utiliser votre propre version d'une fonction d'assistance, vous devez également lier votre programme avec delayimp.lib (applications de bureau) ou dloadhelper.lib (pour les applications du Windows store).
 
 Voici un exemple simple de chargement différé d'une DLL :
 
@@ -37,4 +38,4 @@ Générez la version DEBUG du projet. Parcourez le code pas à pas à l'aide du 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)
+[Prise en charge de l’éditeur de liens pour les dll Delay-Loaded](linker-support-for-delay-loaded-dlls.md)

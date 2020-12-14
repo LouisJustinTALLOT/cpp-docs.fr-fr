@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : valeur de retour de cl.exe'
 title: Valeur de retour de cl.exe
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-ms.openlocfilehash: 06e0993f6a96117ab73f22e73857843dfcc334a1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d324488e0d83979824d1b0c9244070c974e65af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225087"
 ---
 # <a name="return-value-of-clexe"></a>Valeur de retour de cl.exe
 
@@ -51,4 +52,4 @@ cl /W4 t.cpp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

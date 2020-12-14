@@ -1,5 +1,6 @@
 ---
-title: '&lt;Voir > (C++ commentaires de documentation)'
+description: 'En savoir plus sur : &lt; Voir&gt;'
+title: '&lt;Voir> (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b4f8f9a2312a3db1ce2840209668b7b23837ab31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224736"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
-La balise \<see> vous permet de spécifier un lien à partir de l’intérieur du texte. Utilisez [\<seealso>](seealso-visual-cpp.md) pour désigner le texte que vous souhaitez voir apparaître dans une section Voir aussi.
+La \<see> balise vous permet de spécifier un lien à partir de texte. Utilisez [\<seealso>](seealso-visual-cpp.md) pour indiquer le texte que vous souhaitez voir apparaître dans une section Voir aussi.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,20 +26,20 @@ La balise \<see> vous permet de spécifier un lien à partir de l’intérieur d
 <see cref="member"/>
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
-*member*<br/>
-Référence à un membre ou à un champ qui peut être appelé à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
+*membre*<br/>
+Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel.  Mettez le nom entre guillemets simples ou doubles.
 
 Le compilateur vérifie que l’élément de code donné existe et qu’il résout `member` en nom d’élément dans le code XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.
 
 ## <a name="remarks"></a>Notes
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
-Pour un exemple d’utilisation de \<see>, consultez [\<summary>](summary-visual-cpp.md).
+[\<summary>](summary-visual-cpp.md)Pour obtenir un exemple d’utilisation de \<see> , consultez.
 
-Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Pour plus d’informations, consultez [\<seealso>](seealso-visual-cpp.md).
+Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. [\<seealso>](seealso-visual-cpp.md)Pour plus d’informations, consultez.
 
 ## <a name="example"></a>Exemple
 

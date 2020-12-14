@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; para&gt;'
 title: '&lt;para>'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f01336fc2bf30f7b6bfa3fce3152ac1ba9d0614e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226166"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
-La balise \<para> est prévue pour une utilisation à l’intérieur d’une balise, telle que [\<summary>](summary-visual-cpp.md), [\<remarks>](remarks-visual-cpp.md) ou [\<returns>](returns-visual-cpp.md), et vous permet d’ajouter une structure au texte.
+La \<para> balise est destinée à être utilisée à l’intérieur d’une balise, telle que [\<summary>](summary-visual-cpp.md) , [\<remarks>](remarks-visual-cpp.md) ou [\<returns>](returns-visual-cpp.md) , et vous permet d’ajouter une structure au texte.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,11 +33,11 @@ Texte du paragraphe.
 
 ## <a name="remarks"></a>Notes
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
 ## <a name="example"></a>Exemple
 
-Consultez [\<summary>](summary-visual-cpp.md) pour obtenir un exemple d’utilisation de \<para>.
+[\<summary>](summary-visual-cpp.md)Pour obtenir un exemple d’utilisation de \<para> , consultez.
 
 ## <a name="see-also"></a>Voir aussi
 
