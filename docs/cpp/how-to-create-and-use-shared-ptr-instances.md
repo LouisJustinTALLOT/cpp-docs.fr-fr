@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : créer et utiliser des instances shared_ptr'
 title: 'Procédure : Créer et utiliser des instances shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b98a9a349f7f33805bd86c58e854b1d988733da2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221252"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>Comment : créer et utiliser des instances shared_ptr
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: Collections :: Vector, classe'
 title: Platform::Collections::Vector, classe
 ms.date: 12/04/2019
 ms.topic: reference
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b13221c6280e0e94572cb4b6710bb59fbd7db4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221187"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -44,7 +45,7 @@ template <typename T, typename E>
 *T*<br/>
 Type des éléments contenus dans l'objet Vector.
 
-*Envoyer*<br/>
+*E*<br/>
 Spécifie un prédicat binaire pour tester l’égalité avec des valeurs de type *T*. La valeur par défaut est `std::equal_to<T>` .
 
 ### <a name="remarks"></a>Notes
@@ -101,7 +102,7 @@ Si vous tentez d’utiliser un type **Vector** dans une valeur ou un paramètre 
 
 `Vector`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
@@ -148,7 +149,7 @@ Itérateur qui pointe vers le premier élément du Vector.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.
 
 Quand vous avez besoin d’une paire d’itérateurs à passer à une fonction STL, utilisez les fonctions gratuites [Windows :: Foundation :: Collections :: Begin](../cppcx/begin-function.md) et [Windows :: Foundation :: Collections :: end](../cppcx/end-function.md)
 

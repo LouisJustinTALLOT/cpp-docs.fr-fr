@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAccessorBase'
 title: CAccessorBase, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 43d3f507f8ee003605cf2b3f964b06a3c1088233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221174"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase, classe
 
@@ -54,7 +55,7 @@ Tous les accesseurs des modèles OLE DB dérivent de cette classe. `CAccessorBas
 | [IsAutoAccessor](#isauto) | Teste si l’accesseur spécifié est un autoaccesseur. |
 | [ReleaseAccessors](#release) | Libère les accesseurs. |
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -143,7 +144,7 @@ dans Pointeur vers une `IUnknown` interface pour l’objet com pour lequel les a
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Appelé à partir de [CAccessorRowset :: Close](./caccessorrowset-class.md#close).
 

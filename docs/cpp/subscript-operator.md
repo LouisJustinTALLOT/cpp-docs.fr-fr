@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur d’indice []'
 title: Opérateur d’indice []
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: a4eb878a18aa38b7047104903d10d96d66cc6720
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e11e94bdf516d830020c4844be2a4c3bfc4a8774
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221200"
 ---
 # <a name="subscript-operator-"></a>Opérateur d’indice []
 
