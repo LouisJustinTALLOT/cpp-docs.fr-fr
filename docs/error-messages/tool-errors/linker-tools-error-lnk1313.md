@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1313'
 title: Erreur des outils Éditeur de liens LNK1313
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 1c10038def9a448645e80ae10fc47d4372769b58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310716"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Erreur des outils Éditeur de liens LNK1313
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CTreeCtrl, classe'
 title: CTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -162,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837617"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345015"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -293,7 +294,7 @@ Pour plus d’informations sur l’utilisation de `CTreeCtrl` , consultez :
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 

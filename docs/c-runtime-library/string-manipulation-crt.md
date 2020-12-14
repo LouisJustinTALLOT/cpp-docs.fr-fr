@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : manipulation de chaînes (CRT)'
 title: Manipulation de chaînes (CRT)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-ms.openlocfilehash: 7ea66c38f73e32a99981f331249362e8e0a789c1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d6903adf623e8f03dbf953b0a83f591af8edcdb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284419"
 ---
 # <a name="string-manipulation-crt"></a>Manipulation de chaînes (CRT)
 
@@ -21,7 +22,7 @@ Ces routines fonctionnent sur les chaînes de caractères à un octet terminée 
 
 ## <a name="string-manipulation-routines"></a>Routines de manipulation de chaînes
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Comparer deux chaînes de caractères à l’aide des informations de page de codes (**_mbsicoll** et **_mbsnicoll** ne respectent pas la casse)|
 |[_strdec, _wcsdec, _mbsdec, _mbsdec_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|Déplacer un pointeur de chaîne d’un caractère vers l’arrière|

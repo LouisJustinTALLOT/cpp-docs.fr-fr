@@ -1,17 +1,18 @@
 ---
+description: En savoir plus sur la `scanf` spécification de largeur
 title: scanf, spécification de largeur
 ms.date: 10/22/2019
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 781e292140babd61fbcde77cefcb917736b17cc3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f4b0e13ef87add74bc802ba11ea6b87d0dfc6b8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284432"
 ---
-# <a name="scanf-width-specification"></a>`scanf`spécification de largeur
+# <a name="scanf-width-specification"></a>`scanf` spécification de largeur
 
 Ces informations s'appliquent à l'interprétation des chaînes de format dans la famille `scanf` de fonctions, y compris les versions sécurisées telles que `scanf_s`. Ces fonctions partent normalement de l'hypothèse que le flux d'entrée est divisé en une séquence de jetons. Les jetons sont séparés par un espace blanc (espace, tabulation ou saut de ligne), ou pour les types numériques, par la fin naturelle d’un type de données numérique, comme indiqué par le premier caractère qui ne peut pas être converti en texte numérique. Toutefois, la spécification de largeur peut servir à provoquer l'arrêt de l'analyse de l'entrée avant la fin naturelle d'un jeton.
 
@@ -32,19 +33,19 @@ Si le champ *Width* n’est pas utilisé, `scanf_s` tente de lire le jeton entie
 
 ## <a name="the-size-prefix"></a>Préfixe de taille
 
-Les préfixes facultatifs **h**, **hh**, **l**, **ll**, **I64**et **l** indiquent la taille de `argument` (long ou Short, caractère codé sur un octet ou caractère élargi, selon le caractère de type qu’ils modifient). Ces caractères de spécification de format sont utilisés avec les caractères de type dans les fonctions `scanf` ou `wscanf` pour spécifier l'interprétation des arguments, comme indiqué dans le tableau suivant. Le préfixe de type **I64** est une extension Microsoft et n’est pas compatible avec le langage C standard. Les caractères de type et leurs significations sont décrits dans la table « caractères de type pour les fonctions scanf » dans les [ `scanf` caractères de champ de type](../c-runtime-library/scanf-type-field-characters.md).
+Les préfixes facultatifs **h**, **hh**, **l**, **ll**, **I64** et **l** indiquent la taille de `argument` (long ou Short, caractère codé sur un octet ou caractère élargi, selon le caractère de type qu’ils modifient). Ces caractères de spécification de format sont utilisés avec les caractères de type dans les fonctions `scanf` ou `wscanf` pour spécifier l'interprétation des arguments, comme indiqué dans le tableau suivant. Le préfixe de type **I64** est une extension Microsoft et n’est pas compatible avec le langage C standard. Les caractères de type et leurs significations sont décrits dans la table « caractères de type pour les fonctions scanf » dans les [ `scanf` caractères de champ de type](../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Les préfixes **h**, **l**et **l** sont des extensions Microsoft quand ils sont utilisés avec des données de type **`char`** .
+> Les préfixes **h**, **l** et **l** sont des extensions Microsoft quand ils sont utilisés avec des données de type **`char`** .
 
 ### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Préfixes de taille pour les `scanf` `wscanf` spécificateurs de type de format et
 
 |Pour spécifier|Utilisez le préfixe|Avec le spécificateur de type|
 |----------------|----------------|-------------------------|
-|**`double`**|**budget**|**e**, **E**, **f**, **g** ou **G**|
-|**`long double`**(identique à **`double`** )|**Budget**|**e**, **E**, **f**, **g** ou **G**|
-|**`long int`**|**budget**|**d**, **i**, **o**, **x** ou **X**|
-|**`long unsigned int`**|**budget**|**u**|
+|**`double`**|**l**|**e**, **E**, **f**, **g** ou **G**|
+|**`long double`** (identique à **`double`** )|**Budget**|**e**, **E**, **f**, **g** ou **G**|
+|**`long int`**|**l**|**d**, **i**, **o**, **x** ou **X**|
+|**`long unsigned int`**|**l**|**u**|
 |**`long long`**|**UT**|**d**, **i**, **o**, **x** ou **X**|
 |**`short int`**|**h**|**d**, **i**, **o**, **x** ou **X**|
 |**`short unsigned int`**|**h**|**u**|
@@ -53,12 +54,12 @@ Les préfixes facultatifs **h**, **hh**, **l**, **ll**, **I64**et **l** indiquen
 |**`int64`**|**I64**|**d**, **i**, **o**, **u**, **x** ou **X**|
 |Caractère codé sur un octet avec `scanf`|**h**|**c** ou **c**|
 |Caractère codé sur un octet avec `wscanf`|**h**|**c** ou **c**|
-|Caractère large avec `scanf`|**budget**|**c** ou **c**|
-|Caractère large avec `wscanf`|**budget**|**c**ou **c**|
-|Chaîne de caractères codés sur un octet avec`scanf`|**h**|**s** ou **S**|
-|Chaîne de caractères codés sur un octet avec`wscanf`|**h**|**s** ou **S**|
-|Chaîne de caractères larges avec`scanf`|**budget**|**s** ou **S**|
-|Chaîne de caractères larges avec`wscanf`|**budget**|**s** ou **S**|
+|Caractère large avec `scanf`|**l**|**c** ou **c**|
+|Caractère large avec `wscanf`|**l**|**c** ou **c**|
+|Chaîne de caractères codés sur un octet avec `scanf`|**h**|**s** ou **S**|
+|Chaîne de caractères codés sur un octet avec `wscanf`|**h**|**s** ou **S**|
+|Chaîne de caractères larges avec `scanf`|**l**|**s** ou **S**|
+|Chaîne de caractères larges avec `wscanf`|**l**|**s** ou **S**|
 
 Les exemples suivants utilisent **h** et **l** avec les fonctions `scanf_s` et les fonctions `wscanf_s` :
 
@@ -98,4 +99,4 @@ Pour une raison quelconque, quand la fonction `scanf` arrête de lire un champ d
 [`scanf`, `_scanf_l`, `wscanf`, `_wscanf_l`](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [`scanf_s`, `_scanf_s_l`, `wscanf_s`, `_wscanf_s_l`](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
 [Champs de spécification de format : `scanf` `wscanf` fonctions et](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)<br/>
-[`scanf`Caractères du champ de type](../c-runtime-library/scanf-type-field-characters.md)<br/>
+[`scanf` Caractères du champ de type](../c-runtime-library/scanf-type-field-characters.md)<br/>

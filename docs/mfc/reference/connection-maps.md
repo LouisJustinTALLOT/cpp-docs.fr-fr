@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : mappages de connexions'
 title: Tables de connexions
 ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 517017e9e60b86e96daa24f7822538e91c609fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 61d2e7023ab97aa00952aee4786b34e60ba57af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345249"
 ---
 # <a name="connection-maps"></a>Tables de connexions
 
@@ -60,7 +61,7 @@ Spécifie le nom de la classe locale qui implémente le point de connexion.
 
 Dans le fichier de déclaration (. h) qui définit les fonctions membres pour votre classe, démarrez le point de connexion avec la macro BEGIN_CONNECTION_PART, ajoutez la macro CONNECTION_IID et toutes les autres fonctions membres que vous souhaitez implémenter, puis complétez la carte de point de connexion avec la macro END_CONNECTION_PART.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -77,7 +78,7 @@ END_CONNECTION_PART(localClass)
 *localClass*<br/>
 Spécifie le nom de la classe locale qui implémente le point de connexion.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -102,7 +103,7 @@ L’argument *IID* est un ID d’interface utilisé pour identifier l’interfac
 
 spécifie un point de connexion qui appelle l' `ISinkInterface` interface.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -118,7 +119,7 @@ DECLARE_CONNECTION_MAP()
 
 Si votre contrôle prend en charge des points supplémentaires, utilisez la macro DECLARE_CONNECTION_MAP à la fin de votre déclaration de classe. Ensuite, dans le fichier. cpp qui définit les fonctions membres de la classe, utilisez la macro BEGIN_CONNECTION_MAP, CONNECTION_PART macros pour chacun des points de connexion du contrôle, et la macro END_CONNECTION_MAP pour déclarer la fin du mappage de connexions.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -142,7 +143,7 @@ Spécifie le nom de la classe de base de *les*.
 
 Dans l’implémentation (. CPP) qui définit les fonctions membres pour votre classe, démarrez la carte de connexion avec la macro BEGIN_CONNECTION_MAP, puis ajoutez des entrées de macro pour chacun de vos points de connexion à l’aide de la macro [CONNECTION_PART](#connection_part) . Enfin, complétez la carte de connexion avec la macro [END_CONNECTION_MAP](#end_connection_map) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -154,7 +155,7 @@ Termine la définition de votre mappage de connexion.
 END_CONNECTION_MAP()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -185,13 +186,13 @@ Par exemple :
 
 implémente un mappage de connexions, avec un point de connexion, qui appelle l' `IID_ISinkInterface` interface.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
 ## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a> AfxConnectionAdvise
 
-Appelez cette fonction pour établir une connexion entre une source, spécifiée par *pUnkSrc*et un récepteur, spécifié par *pUnkSink*.
+Appelez cette fonction pour établir une connexion entre une source, spécifiée par *pUnkSrc* et un récepteur, spécifié par *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
@@ -227,13 +228,13 @@ Valeur différente de zéro si une connexion a été établie ; Sinon, 0.
 
 [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 
 ## <a name="afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a> AfxConnectionUnadvise
 
-Appelez cette fonction pour déconnecter une connexion entre une source, spécifiée par *pUnkSrc*et un récepteur, spécifié par *pUnkSink*.
+Appelez cette fonction pour déconnecter une connexion entre une source, spécifiée par *pUnkSrc* et un récepteur, spécifié par *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -269,7 +270,7 @@ Valeur différente de zéro si une connexion a été déconnectée ; Sinon, 0.
 
 [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 

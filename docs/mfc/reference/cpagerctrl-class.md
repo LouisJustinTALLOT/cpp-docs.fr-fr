@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CPagerCtrl'
 title: CPagerCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 9b3af31e7d352e93144cde0c321620693111e145
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ba01d07ebd6d638a1d505d555e44e9562e4bd27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345223"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 
@@ -158,7 +159,7 @@ dans Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la
 *nID*\
 dans ID du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -202,7 +203,7 @@ dans Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la
 *nID*\
 dans ID du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -235,7 +236,7 @@ Récupère la taille de bordure du contrôle de pagineur en cours.
 int GetBorder() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de la bordure actuelle, mesurée en pixels.
 
@@ -257,7 +258,7 @@ Récupère la couleur d’arrière-plan du contrôle de pagineur actuel.
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui contient la couleur d’arrière-plan actuelle du contrôle de pagineur.
 
@@ -279,7 +280,7 @@ Récupère la taille de bouton du contrôle de pagineur actuel.
 int GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille actuelle du bouton, mesurée en pixels.
 
@@ -302,7 +303,7 @@ DWORD GetButtonState(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État du bouton spécifié par le paramètre *iButton* . L’État est PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED ou PGF_HOT. Pour plus d’informations, consultez la section valeur de retour du message [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
@@ -318,7 +319,7 @@ Récupère l’interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idrop
 IDropTarget* GetDropTarget() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `IDropTarget` interface pour le contrôle de pagineur en cours.
 
@@ -336,7 +337,7 @@ Récupère la position de défilement du contrôle de pagineur actuel.
 int GetScrollPos() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position de défilement actuelle, mesurée en pixels.
 
@@ -363,7 +364,7 @@ BOOL IsButtonDepressed(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le bouton spécifié est à l’état enfoncé ; Sinon, FALSe.
 
@@ -384,7 +385,7 @@ BOOL IsButtonGrayed(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le bouton spécifié est grisé ; Sinon, FALSe.
 
@@ -405,7 +406,7 @@ BOOL IsButtonHot(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le bouton spécifié est à l’état actif ; Sinon, FALSe.
 
@@ -426,7 +427,7 @@ BOOL IsButtonInvisible(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le bouton spécifié est dans un État invisible ; Sinon, FALSe.
 
@@ -455,7 +456,7 @@ BOOL IsButtonNormal(int iButton) const;
 *iButton*\
 dans Indique le bouton pour lequel l’État est récupéré. Si le style de contrôle de pagineur est PGS_HORZ, spécifiez PGB_TOPORLEFT pour le bouton gauche et PGB_BOTTOMORRIGHT pour le bouton droit. Si le style de contrôle de pagineur est PGS_VERT, spécifiez PGB_TOPORLEFT pour le bouton supérieur et PGB_BOTTOMORRIGHT pour le bouton inférieur. Pour plus d’informations, consultez [styles de contrôle de pagineur](/windows/win32/Controls/pager-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le bouton spécifié est dans un état normal ; Sinon, FALSe.
 
@@ -500,7 +501,7 @@ COLORREF SetBkColor(COLORREF clrBk);
 *clrBk*\
 dans Valeur [COLORREF](/windows/win32/gdi/colorref) qui contient la nouvelle couleur d’arrière-plan du contrôle de pagineur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui contient la couleur d’arrière-plan précédente du contrôle de pagineur.
 
@@ -527,7 +528,7 @@ int SetBorder(int iBorder);
 *iBorder*\
 dans Nouvelle taille de bordure, exprimée en pixels. Si le paramètre *iBorder* est négatif, la taille de la bordure est définie sur zéro.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de la bordure précédente, mesurée en pixels.
 
@@ -554,7 +555,7 @@ int SetButtonSize(int iButtonSize);
 *iButtonSize*\
 dans Nouvelle taille du bouton, mesurée en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille du bouton précédent, mesurée en pixels.
 

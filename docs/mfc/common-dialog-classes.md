@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de boîtes de dialogue courantes'
 title: Classes de boîtes de dialogue communes
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 2efe095a6d5b71321cbbe56fdee662509baa4573
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab72407c9d709ef660976105d65901398ae5b5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310672"
 ---
 # <a name="common-dialog-classes"></a>Classes de boîtes de dialogue communes
 
-En plus de la classe [CDialog](reference/cdialog-class.md), MFC fournit plusieurs classes dérivées de `CDialog` qui encapsulent les boîtes de dialogue couramment utilisées, comme indiqué dans le tableau suivant. Les boîtes de dialogue encapsulées sont appelées « boîtes de dialogue communes » et font partie de la bibliothèque de boîtes de dialogue communes de Windows (COMMDLG. DLL). Les ressources et le code de modèle de boîte de dialogue pour ces classes sont fournis dans les boîtes de dialogue courantes de Windows qui font partie des versions de Windows 3,1 et ultérieures.
+En plus de la classe [CDialog](reference/cdialog-class.md), MFC fournit plusieurs classes dérivées de `CDialog` qui encapsulent les boîtes de dialogue couramment utilisées, comme indiqué dans le tableau suivant. Les boîtes de dialogue encapsulées sont appelées « boîtes de dialogue communes » et font partie de la bibliothèque de boîtes de dialogue communes de Windows (COMMDLG.DLL). Les ressources et le code de modèle de boîte de dialogue pour ces classes sont fournis dans les boîtes de dialogue courantes de Windows qui font partie des versions de Windows 3,1 et ultérieures.
 
 ### <a name="common-dialog-classes"></a>Classes de boîtes de dialogue communes
 

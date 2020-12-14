@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CTypedPtrArray'
 title: CTypedPtrArray, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: db24e3992e5db70895ccc2908dba108de843bcdc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 07d254072a51a56759a3dbe569c36ff65d199cfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345002"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray, classe
 
@@ -89,7 +90,7 @@ Pour plus d’informations sur l’utilisation de `CTypedPtrArray` , consultez l
 
 **En-tête :** afxtempl.h
 
-## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray :: Add
+## <a name="ctypedptrarrayadd"></a><a name="add"></a> CTypedPtrArray :: Add
 
 Cette fonction membre appelle `BASE_CLASS` **:: Add**.
 
@@ -105,7 +106,7 @@ Paramètre de modèle spécifiant le type d’élément à ajouter au tableau.
 *newElement*<br/>
 Élément à ajouter à ce tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément ajouté.
 
@@ -113,7 +114,7 @@ Index de l’élément ajouté.
 
 Pour plus d’informations, consultez [CObArray :: Add](../../mfc/reference/cobarray-class.md#add).
 
-## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray :: Append
+## <a name="ctypedptrarrayappend"></a><a name="append"></a> CTypedPtrArray :: Append
 
 Cette fonction membre appelle `BASE_CLASS` :: Append * *.
 
@@ -132,7 +133,7 @@ Type des éléments stockés dans le tableau de la classe de base.
 *src*<br/>
 Source des éléments à ajouter à un tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier élément ajouté.
 
@@ -140,7 +141,7 @@ Index du premier élément ajouté.
 
 Pour obtenir des remarques plus détaillées, consultez [CObArray :: Append](../../mfc/reference/cobarray-class.md#append).
 
-## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray :: Copy
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a> CTypedPtrArray :: Copy
 
 Cette fonction membre appelle `BASE_CLASS` **:: Copy**.
 
@@ -163,7 +164,7 @@ Source des éléments à copier dans un tableau.
 
 Pour obtenir des remarques plus détaillées, consultez [CObArray :: Copy](../../mfc/reference/cobarray-class.md#copy).
 
-## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray :: ElementAt
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a> CTypedPtrArray :: ElementAt
 
 Cette fonction inline appelle `BASE_CLASS` **:: ElementAt**.
 
@@ -179,15 +180,15 @@ Paramètre de modèle qui spécifie le type des éléments stockés dans ce tabl
 *nIndex*<br/>
 Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Référence temporaire à l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type*de paramètre de modèle.
+Référence temporaire à l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type* de paramètre de modèle.
 
 ### <a name="remarks"></a>Notes
 
 Pour obtenir des remarques plus détaillées, consultez [CObArray :: ElementAt](../../mfc/reference/cobarray-class.md#elementat).
 
-## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray :: GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a> CTypedPtrArray :: GetAt
 
 Cette fonction inline appelle `BASE_CLASS` **:: GetAt**.
 
@@ -203,15 +204,15 @@ Paramètre de modèle qui spécifie le type des éléments stockés dans le tabl
 *nIndex*<br/>
 Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Copie de l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type*de paramètre de modèle.
+Copie de l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type* de paramètre de modèle.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [CObArray :: GetAt](../../mfc/reference/cobarray-class.md#getat)
 
-## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray :: InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a> CTypedPtrArray :: InsertAt
 
 Cette fonction membre appelle `BASE_CLASS` **:: InsertAt**.
 
@@ -253,7 +254,7 @@ Autre tableau qui contient les éléments à ajouter à ce tableau.
 
 Pour obtenir des remarques plus détaillées, consultez [CObArray :: InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray :: Operator []
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a> CTypedPtrArray :: Operator []
 
 Ces opérateurs Inline appellent `BASE_CLASS` **:: Operator []**.
 
@@ -276,7 +277,7 @@ Le premier opérateur, appelé pour les tableaux qui ne le sont pas **`const`** 
 
 La version de débogage de la bibliothèque déclare si l’indice (à gauche ou à droite d’une instruction d’assignation) est hors limites.
 
-## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray :: SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a> CTypedPtrArray :: SetAt
 
 Cette fonction membre appelle `BASE_CLASS` **:: setat**.
 
@@ -301,7 +302,7 @@ Pointeur vers l’élément à insérer dans le tableau au niveau du nIndex. Une
 
 Pour obtenir des remarques plus détaillées, consultez [CObArray :: setat](../../mfc/reference/cobarray-class.md#setat).
 
-## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray :: SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a> CTypedPtrArray :: SetAtGrow
 
 Cette fonction membre appelle `BASE_CLASS` **:: SetAtGrow**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CToolTipCtrl Class'
 title: CToolTipCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: a4c2644ff7a9b2ae60cc166247d27d7a25305b97
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: bd263d0ada7ad85169eb551dd136f81b480534e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345028"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -218,7 +219,7 @@ ID de l’outil.
 *lpszText*<br/>
 Pointeur vers le texte de l’outil. Si ce paramètre contient la valeur LPSTR_TEXTCALLBACK, TTN_NEEDTEXT messages de notification sont envoyés au parent de la fenêtre vers laquelle *pwnd* pointe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -253,7 +254,7 @@ Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui
 *bLarger*<br/>
 Si la valeur est TRUE, *LPRC* est utilisé pour spécifier un rectangle d’affichage de texte et reçoit le rectangle de fenêtre correspondant. Si la valeur est FALSe, *LPRC* est utilisé pour spécifier un rectangle de fenêtre et reçoit le rectangle d’affichage de texte correspondant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le rectangle est correctement ajusté ; Sinon, 0.
 
@@ -279,7 +280,7 @@ Spécifie la fenêtre parente du contrôle d’info-bulle, généralement `CDial
 *dwStyle*<br/>
 Spécifie le style du contrôle d’info-bulle. Pour plus d’informations, consultez la section **Notes** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l' `CToolTipCtrl` objet est créé avec succès ; sinon, 0.
 
@@ -324,7 +325,7 @@ Spécifie le style du contrôle d’info-bulle. Pour plus d’informations, cons
 *dwStyleEx*<br/>
 Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles Windows étendus, consultez le paramètre *dwExStyle* pour [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, 0.
 
@@ -379,7 +380,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 *lpToolInfo*<br/>
 Pointeur vers la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) de l’info-bulle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de l’info-bulle.
 
@@ -400,7 +401,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 *lpToolInfo*\
 à Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) qui reçoit des informations sur la fenêtre d’info-bulle actuelle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les informations sont récupérées avec succès ; Sinon, FALSe.
 
@@ -433,7 +434,7 @@ Indicateur qui spécifie la valeur de durée qui sera extraite. Ce paramètre pe
 
 - TTDT_RESHOW récupérer le temps nécessaire pour que les fenêtres d’info-bulle suivantes s’affichent lorsque le pointeur se déplace d’un outil à un autre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Délai spécifié, en millisecondes.
 
@@ -473,7 +474,7 @@ Récupère la largeur maximale d’une fenêtre d’info-bulle.
 int GetMaxTipWidth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur maximale d’une fenêtre d’info-bulle.
 
@@ -494,7 +495,7 @@ void GetText(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Référence à un `CString` objet qui reçoit le texte de l’outil.
 
 *pWnd*<br/>
@@ -515,7 +516,7 @@ Récupère la couleur d’arrière-plan dans une fenêtre d’info-bulle.
 COLORREF GetTipBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur d’arrière-plan.
 
@@ -531,7 +532,7 @@ Récupère la couleur de texte dans une fenêtre d’info-bulle.
 COLORREF GetTipTextColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur du texte.
 
@@ -564,7 +565,7 @@ Récupère le nombre d’outils inscrits avec le contrôle d’info-bulle.
 int GetToolCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’outils inscrits avec le contrôle d’info-bulle.
 
@@ -590,7 +591,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 *nIDTool*<br/>
 ID de l’outil.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -620,7 +621,7 @@ Pointeur vers un `CPoint` objet contenant les coordonnées du point à tester.
 *lpToolInfo*<br/>
 Pointeur vers la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) qui contient des informations sur l’outil.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le point spécifié par les informations de test de positionnement se trouve dans le rectangle englobant de l’outil ; Sinon, 0.
 
@@ -764,7 +765,7 @@ int SetMaxTipWidth(int iWidth);
 *iWidth*<br/>
 Largeur maximale de la fenêtre d’info-bulle à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur maximale du Conseil.
 
@@ -824,7 +825,7 @@ Consultez l' *icône* dans [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) 
 *lpstrTitle*<br/>
 Pointeur vers la chaîne de titre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -880,7 +881,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Pointeur vers une chaîne Unicode qui contient le style visuel à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 

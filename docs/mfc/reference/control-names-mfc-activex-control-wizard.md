@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : noms de contrôle, Assistant contrôle ActiveX MFC'
 title: Noms du contrôle, Assistant Contrôle ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: eff7b537e7fe5c19d10cce8766557a3d1ff49342
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 26d329465c13c3988a3e9d4d7ccd06294f3b2be3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345236"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
 
@@ -23,19 +24,19 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 
 - **Nom de la classe du contrôle**
 
-   Par défaut, le nom de la classe de contrôle est basé sur le nom abrégé, avec `C` comme préfixe et `Ctrl` comme suffixe. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom de la classe de contrôle est `CPriceCtrl`.
+   Par défaut, le nom de la classe de contrôle est basé sur le nom abrégé, avec `C` comme préfixe et `Ctrl` comme suffixe. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom de la classe de contrôle est `CPriceCtrl` .
 
 - **Fichier. h du contrôle**
 
-   Par défaut, le nom du fichier d’en-tête est basé sur le nom abrégé, avec `Ctrl` comme suffixe et `.h` en tant qu’extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du fichier d’en-tête est `PriceCtrl.h`. Le nom de ce champ doit correspondre au nom de la classe de contrôle.
+   Par défaut, le nom du fichier d’en-tête est basé sur le nom abrégé, avec `Ctrl` comme suffixe et `.h` comme extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du fichier d’en-tête est `PriceCtrl.h` . Le nom de ce champ doit correspondre au nom de la classe de contrôle.
 
 - **Fichier. cpp du contrôle**
 
-   Par défaut, le nom du fichier d’en-tête est basé sur le nom abrégé, avec `Ctrl` comme suffixe et `.cpp` en tant qu’extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du fichier d’en-tête est `PriceCtrl.cpp`. Le nom de ce champ doit correspondre au nom de l’en-tête.
+   Par défaut, le nom du fichier d’en-tête est basé sur le nom abrégé, avec `Ctrl` comme suffixe et `.cpp` comme extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du fichier d’en-tête est `PriceCtrl.cpp` . Le nom de ce champ doit correspondre au nom de l’en-tête.
 
 - **Nom du type de contrôle**
 
-   Par défaut, le nom du type de contrôle est basé sur le nom abrégé, suivi de `Control`. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du type de classe du contrôle est `Price Control`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique un héritage.
+   Par défaut, le nom du type de contrôle est basé sur le nom abrégé, suivi de `Control` . Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du type de classe du contrôle est `Price Control` . Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique un héritage.
 
 - **ID du type de contrôle**
 
@@ -53,19 +54,19 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 
 - **Nom de la classe de PropPage**
 
-   Par défaut, le nom de la classe de la page de propriétés est basé sur le nom abrégé, avec `C` comme préfixe et `PropPage` comme suffixe. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom de la classe de la page de propriétés est `CPricePropPage`. Ce nom doit correspondre au nom de la classe de contrôle, ajouté à `PropPage`.
+   Par défaut, le nom de la classe de la page de propriétés est basé sur le nom abrégé, avec `C` comme préfixe et `PropPage` comme suffixe. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom de la classe de la page de propriétés est `CPricePropPage` . Ce nom doit correspondre au nom de la classe de contrôle, ajouté à `PropPage` .
 
 - **Fichier. h de PropPage**
 
-   Par défaut, le nom du fichier d’en-tête de la page de propriétés est basé sur le nom abrégé, avec comme `PropPage` comme suffixe et `.h` comme extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du fichier d’en-tête de page de propriétés est `PricePropPage.h`. Ce nom doit correspondre au nom de la classe.
+   Par défaut, le nom du fichier d’en-tête de la page de propriétés est basé sur le nom abrégé, avec comme `PropPage` suffixe et comme `.h` extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du fichier d’en-tête de la page de propriétés est `PricePropPage.h` . Ce nom doit correspondre au nom de la classe.
 
 - **Fichier. cpp de PropPage**
 
-   Par défaut, le nom du fichier d’implémentation de la page de propriétés est basé sur le nom abrégé, avec comme `PropPage` comme suffixe et `.cpp` comme extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du fichier d’en-tête de page de propriétés est `PricePropPage.cpp`. Ce nom doit correspondre au nom du fichier d’en-tête.
+   Par défaut, le nom du fichier d’implémentation de la page de propriétés est basé sur le nom abrégé, avec comme `PropPage` suffixe et comme `.cpp` extension de fichier. Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du fichier d’en-tête de la page de propriétés est `PricePropPage.cpp` . Ce nom doit correspondre au nom du fichier d’en-tête.
 
 - **Nom du type de PropPage**
 
-   Par défaut, le nom du type de la page de propriétés est basé sur le nom abrégé, suivi de `Property Page`. Par exemple, si le nom abrégé de votre contrôle est `Price`, le nom du type de la page de propriétés est `Price Property Page`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique la classe de contrôle.
+   Par défaut, le nom du type de la page de propriétés est basé sur le nom abrégé, suivi de `Property Page` . Par exemple, si le nom abrégé de votre contrôle est `Price` , le nom du type de la page de propriétés est `Price Property Page` . Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique la classe de contrôle.
 
 - **ID de type de PropPage**
 
@@ -83,7 +84,7 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle ActiveX MFC, Assistant](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Paramètres de l’application, Assistant Contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
-[Paramètres du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
+[Assistant contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
+[Paramètres de l’application, Assistant contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
+[Paramètres du contrôle, Assistant contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
 [Types de fichiers créés pour les projets Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)
