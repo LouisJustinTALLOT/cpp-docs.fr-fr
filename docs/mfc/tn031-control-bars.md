@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN031 : barres de contrôles'
 title: 'TN031 : Barres de contrôles'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,23 +15,23 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 37c3a15c281018260e65508dee3799ab0011dbfe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42dddf1afabdf2ab04ba8441208e7109eeacbd65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215545"
 ---
 # <a name="tn031-control-bars"></a>TN031 : Barres de contrôles
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
-Cette note décrit les classes de barres de contrôle dans MFC: le [général CControlBar](#_mfcnotes_ccontrolbar), `CDockBar` [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), et .
+Cette note décrit les classes de barre de contrôle dans MFC : le [CControlBar](#_mfcnotes_ccontrolbar)général, [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)et `CDockBar` .
 
 ## <a name="ccontrolbar"></a><a name="_mfcnotes_ccontrolbar"></a> CControlBar
 
-A `ControlBar` est `CWnd`une classe dérivée qui :
+Un `ControlBar` est une `CWnd` classe dérivée de qui :
 
 - Est aligné en haut ou en bas d’une fenêtre frame.
 
@@ -38,11 +39,11 @@ A `ControlBar` est `CWnd`une classe dérivée qui :
 
 Les barres de contrôles prennent en charge les styles supplémentaires suivants :
 
-- CBRS_TOP (La valeur par défaut) épingle la barre de contrôle vers le haut.
+- CBRS_TOP (valeur par défaut) épingler la barre de contrôle en haut.
 
-- CBRS_BOTTOM Épingler la barre de contrôle vers le bas.
+- CBRS_BOTTOM épingler la barre de contrôle en bas.
 
-- CBRS_NOALIGN Ne repositionnez pas la barre de contrôle lorsque le parent resize.
+- CBRS_NOALIGN ne pas repositionner la barre de contrôle quand le parent est redimensionné.
 
 Les classes dérivées de `CControlBar` fournissent des implémentations plus intéressantes :
 
@@ -52,7 +53,7 @@ Les classes dérivées de `CControlBar` fournissent des implémentations plus in
 
 - `CDialogBar` Un cadre de barre d’outils contenant des commandes Windows standard (créés à partir d’une ressource de modèle de boîte de dialogue).
 
-- `CDockBar`Une zone d’amarrage généralisée pour d’autres `CControlBar` objets dérivés. Les variables et fonctions membres spécifiques disponibles dans cette classe sont susceptibles de changer dans les versions ultérieures.
+- `CDockBar` Zone d’ancrage généralisée pour d’autres `CControlBar` objets dérivés. Les variables et fonctions membres spécifiques disponibles dans cette classe sont susceptibles de changer dans les versions ultérieures.
 
 L’ensemble des fenêtres et des objets des barres de contrôles seront des fenêtres enfants d’une fenêtre de frame parente. Ils sont généralement ajoutés comme frères à la zone cliente du frame (par exemple, un client MDI ou une vue). L’ID de fenêtre enfant d’une barre de contrôle est important. La disposition par défaut de la barre de contrôle fonctionne uniquement pour les barres de contrôles dont l’ID est compris dans la plage allant de AFX_IDW_CONTROLBAR_FIRST à AFX_IDW_CONTROLBAR_LAST. Notez que même s’il existe une plage de 256 ID de barres de contrôles, les 32 premiers sont spéciaux car ils sont directement pris en charge par l’architecture d’aperçu avant impression.
 
@@ -67,7 +68,7 @@ La classe `CControlBar` fournit une implémentation standard pour :
 Les objets de barres de contrôles C++ sont généralement incorporés comme membres d’une classe dérivée de `CFrameWnd` et sont nettoyés quand le `HWND` parent et l’objet sont détruits. Si vous devez allouer un objet de barre de contrôle sur le tas, vous pouvez simplement affecter la valeur *TRUE* au membre **m_bAutoDestruct** pour faire en sorte que la barre de contrôle «**supprime cela**» quand le `HWND` est détruit.
 
 > [!NOTE]
-> Si vous créez `CControlBar`votre propre classe dérivée, plutôt que d’utiliser `CStatusBar` `CToolBar`l’une des classes dérivées de MFC, telles que , , ou `CDialogBar`, vous aurez besoin de définir le membre de données *m_dwStyle.* Cela peut être fait dans `Create`la dérogation de :
+> Si vous créez votre propre `CControlBar` classe dérivée de, au lieu d’utiliser l’une des classes dérivées de MFC, telles que `CStatusBar` , `CToolBar` ou `CDialogBar` , vous devez définir le membre de données *m_dwStyle* . Vous pouvez effectuer cette opération dans la substitution de `Create` :
 
 ```
 // CMyControlBar is derived from CControlBar
@@ -89,9 +90,9 @@ L’algorithme de disposition de barre de contrôle est très simple. La fenêtr
 
 Pour plus d’informations, consultez `CWnd::RepositionBars` et `CFrameWnd::RecalcLayout` .
 
-Les messages Windows privés MFC, y compris WM_SIZEPARENT, sont documentés dans [la note technique 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
+Les messages Windows privés MFC, y compris les WM_SIZEPARENT, sont documentés dans la [note technique 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a>CStatusBar (en)
+## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a> CStatusBar
 
 Une barre d’état est une barre de contrôle qui comporte une ligne de volets de sortie de texte. Il existe deux manières courantes d’utiliser des volets de sortie de texte :
 
@@ -116,21 +117,21 @@ Les couleurs utilisées dans la barre d’état sont également conformes à la 
 
 **Prise en charge de CCmdUI pour CStatusBar**
 
-La façon dont les indicateurs sont habituellement mis à jour est par le biais du mécanisme ON_UPDATE_COMMAND_UI. En temps de marche, la barre d’état appellera le gestionnaire ON_UPDATE_COMMAND_UI avec l’ID de chaîne de la vitre indicateur.
+La façon dont les indicateurs sont généralement mis à jour consiste à utiliser le mécanisme de ON_UPDATE_COMMAND_UI. Pendant les périodes d’inactivité, la barre d’État appelle le gestionnaire de ON_UPDATE_COMMAND_UI avec l’ID de chaîne du volet d’indicateur.
 
-Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
+Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
 
 - `Enable`: Pour activer ou désactiver le volet. Un volet désactivé est identique à un volet activé, sauf que le texte est invisible (autrement dit, l’indicateur de texte est désactivé).
 
-- `SetText`: Pour changer le texte. Faites attention si vous utilisez cette option, car le volet n’est pas redimensionné automatiquement.
+- `SetText`: Pour modifier le texte. Faites attention si vous utilisez cette option, car le volet n’est pas redimensionné automatiquement.
 
 Pour plus d’informations sur les API de création et de personnalisation [, consultez la classe](../mfc/reference/cstatusbar-class.md) CStatusBar *dans la* Référence de la bibliothèque de classes `CStatusBar` . La plupart des opérations de personnalisation des barres d’état doivent être effectuées avant que la barre d’état soit initialement rendue visible.
 
 La barre d’état prend en charge un seul volet extensible, généralement le premier volet. La taille de ce volet est vraiment une taille minimale. Si la taille de la barre d’état est supérieure à la taille minimale de tous les volets, toute largeur supplémentaire est accordée au volet extensible. L’application par défaut avec une barre d’état comporte des indicateurs alignés à droite pour MAJ, NUM et DÉFIL, puisque le premier volet est extensible.
 
-## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a>CToolBar
+## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a> CToolBar
 
-Une barre d’outils est une barre de contrôle comportant une ligne de boutons bitmap pouvant inclure des séparateurs. Deux styles de boutons sont pris en charge : les boutons de commande et les cases à cocher. La fonctionnalité du groupe radio peut être construite avec des boutons de la case à cocher et ON_UPDATE_COMMAND_UI.
+Une barre d’outils est une barre de contrôle comportant une ligne de boutons bitmap pouvant inclure des séparateurs. Deux styles de boutons sont pris en charge : les boutons de commande et les cases à cocher. La fonctionnalité de groupe de cases d’option peut être créée avec des cases à cocher et des ON_UPDATE_COMMAND_UI.
 
 Tous les boutons de bitmap dans la barre d’outils proviennent d’une seule bitmap. Cette bitmap doit contenir une image ou un glyphe pour chaque bouton. En général, l’ordre des images/glyphes dans la bitmap est le même que celui dans lequel ils seront dessinés à l’écran. (Cela peut être modifié à l’aide des API de personnalisation.)
 
@@ -161,9 +162,9 @@ Vous pouvez utiliser les API de personnalisation pour ajuster les ID de boutons,
 
 ## <a name="ccmdui-support-for-ctoolbar"></a>Prise en charge de CCmdUI pour CToolBar
 
-La façon dont les boutons de barre d’outils sont toujours mis à jour est à travers le mécanisme ON_UPDATE_COMMAND_UI. À l’heure de marche, la barre d’outils appellera le gestionnaire ON_UPDATE_COMMAND_UI avec l’ID de commande de ce bouton. ON_UPDATE_COMMAND_UI n’est pas appelé pour les séparateurs, mais il est appelé pour les boutons pushbuttons et case à cocher.
+La façon dont les boutons de barre d’outils sont toujours mis à jour se fait via le mécanisme ON_UPDATE_COMMAND_UI. Pendant les périodes d’inactivité, la barre d’outils appelle le gestionnaire de ON_UPDATE_COMMAND_UI avec l’ID de commande de ce bouton. ON_UPDATE_COMMAND_UI n’est pas appelée pour les séparateurs, mais elle est appelée pour les boutons de bouton et les cases à cocher.
 
-Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
+Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
 
 - `Enable`: Pour activer ou désactiver le bouton. Cela fonctionne pareillement pour les boutons de commande et les cases à cocher.
 
@@ -173,9 +174,9 @@ Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
 
 Les boutons de case à cocher sont des boutons de case à cocher « AUTO ». Autrement dit, quand l’utilisateur appuie dessus, ils changent d’état immédiatement. « Activé » correspond à l’état enfoncé. L’interface utilisateur n’intègre aucun moyen de faire basculer un bouton à l’état « indéterminé ». Vous devez le faire par le biais du code.
 
-Les API de personnalisation vous permettront de modifier l’état d’un bouton de barre d’outils donné, de préférence vous devez changer ces états dans le gestionnaire de ON_UPDATE_COMMAND_UI pour la commande que le bouton de barre d’outils représente. Rappelez-vous, le traitement au ralenti va changer l’état des boutons de barre d’outils avec le gestionnaire de ON_UPDATE_COMMAND_UI, de sorte que toute modification à ces états effectués par SetButtonStyle peut se perdre après le prochain ralenti.
+Les API de personnalisation vous permettent de modifier l’état d’un bouton de barre d’outils donné, de préférence vous devez modifier ces États dans le gestionnaire de ON_UPDATE_COMMAND_UI pour la commande représentée par le bouton de barre d’outils. Rappelez-vous que le traitement inactif modifiera l’état des boutons de la barre d’outils avec le gestionnaire de ON_UPDATE_COMMAND_UI, de sorte que toute modification apportée à ces États par le biais de SetButtonStyle peut être perdue après la prochaine inactivité.
 
-Les boutons de barre d’outils WM_COMMAND envoyer des messages comme des boutons normaux ou des éléments de menu et sont normalement manipulés par un gestionnaire de ON_COMMAND dans la même classe qui fournit le gestionnaire de ON_UPDATE_COMMAND_UI.
+Les boutons de la barre d’outils envoient des messages WM_COMMAND tels que des boutons ou des éléments de menu normaux et sont normalement gérés par un gestionnaire de ON_COMMAND dans la même classe que celle qui fournit le gestionnaire de ON_UPDATE_COMMAND_UI.
 
 Quatre styles de boutons de barre d’outils (valeurs TBBS_) sont utilisés pour les états d’affichage :
 
@@ -191,13 +192,13 @@ Les six styles de bouton officiels du Guide de conception d’application d’in
 
 - Activé = 0
 
-- Souris vers le bas - TBBS_PRESSED (&#124; tout autre style)
+- Mouse out = TBBS_PRESSED (&#124; tout autre style)
 
 - Désactivé = TBBS_DISABLED
 
 - Enfoncé = TBBS_CHECKED
 
-- Vers le bas désactivés - TBBS_CHECKED &#124; TBBS_DISABLED
+- Désactivé = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - Indéterminé = TBBS_INDETERMINATE
 
@@ -213,9 +214,9 @@ Les notifications de contrôle pour un `CDialogBar` sont envoyés au parent de l
 
 ## <a name="ccmdui-support-for-cdialogbar"></a>Prise en charge de CCmdUI pour CDialogBar
 
-Les boutons à barres de dialogue doivent être mis à jour par le mécanisme de ON_UPDATE_COMMAND_UI gestionnaire. Au moment de l’inactivité, la barre de dialogue appellera le gestionnaire ON_UPDATE_COMMAND_UI avec l’ID de commande de tous les boutons qui ont une pièce d’identité >0x8000 (c’est-à-dire dans la gamme des identifiants de commande).
+Les boutons de la barre de boîte de dialogue doivent être mis à jour par le biais du mécanisme du gestionnaire ON_UPDATE_COMMAND_UI. Au moment de l’inactivité, la barre de boîte de dialogue appelle le gestionnaire de ON_UPDATE_COMMAND_UI avec l’ID de commande de tous les boutons dont l’ID est >= 0x8000 (autrement dit, dans la plage d’ID de commande).
 
-Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
+Le gestionnaire de ON_UPDATE_COMMAND_UI peut appeler :
 
 - Enable : pour activer ou désactiver le bouton.
 

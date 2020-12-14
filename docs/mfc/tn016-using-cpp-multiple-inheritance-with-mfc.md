@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN016 : utilisation de l’héritage multiple C++ avec MFC'
 title: "TN016 : utilisation de l'héritage multiple C++ avec MFC"
 ms.date: 06/28/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-ms.openlocfilehash: c44639e713f6d0b26d5b74e9f645f60c8627e0c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac4b082a5dc33e93098453714acd25fbd0c18438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215948"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : utilisation de l'héritage multiple C++ avec MFC
 

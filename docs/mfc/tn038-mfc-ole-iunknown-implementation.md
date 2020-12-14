@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN038 : implémentation de IUnknown MFC/OLE'
 title: 'TN038 : implémentation de l’interface IUnknown OLE MFC'
 ms.date: 06/28/2018
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a921fec560c375440f0430d4804aa78e533c6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215402"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : implémentation IUnknown MFC/OLE
 
@@ -68,7 +69,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-La fonction membre [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) est un peu plus intéressante. Il n’est pas très intéressant d’avoir un objet dont les seules fonctions membres sont [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) et [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) ; il serait intéressant de dire à l’objet d’effectuer plus de choses que la fonction [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) . C’est là que [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) est utile. Elle vous permet d'obtenir une « interface » différente sur le même objet. Ces interfaces sont généralement dérivées de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) et ajoutent des fonctionnalités supplémentaires en ajoutant de nouvelles fonctions membres. Les interfaces COM ne font jamais déclarer de variables membres dans l'interface, et toutes les fonctions membres sont déclarées de façon purement virtuelle. Par exemple,
+La fonction membre [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) est un peu plus intéressante. Il n’est pas très intéressant d’avoir un objet dont les seules fonctions membres sont [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) et [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) ; il serait intéressant de dire à l’objet d’effectuer plus de choses que la fonction [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) . C’est là que [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) est utile. Elle vous permet d'obtenir une « interface » différente sur le même objet. Ces interfaces sont généralement dérivées de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) et ajoutent des fonctionnalités supplémentaires en ajoutant de nouvelles fonctions membres. Les interfaces COM ne font jamais déclarer de variables membres dans l'interface, et toutes les fonctions membres sont déclarées de façon purement virtuelle. Par exemple :
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -102,7 +103,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Les implémentations de [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) et de [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sont exactement les mêmes que celles implémentées ci-dessus. `CPrintObj::QueryInterface`devrait ressembler à ceci :
+Les implémentations de [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) et de [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sont exactement les mêmes que celles implémentées ci-dessus. `CPrintObj::QueryInterface` devrait ressembler à ceci :
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -256,7 +257,7 @@ Par ailleurs, les tables d'interface prennent en charge les fonctionnalités ava
 
 Pour plus d’informations sur l’agrégation, consultez la rubrique [agrégation](/windows/win32/com/aggregation) .
 
-La prise en charge des tables d'interface de MFC est ancrée dans la classe `CCmdTarget`. `CCmdTarget`«*possède un*» nombre de références, ainsi que toutes les fonctions membres associées à l’implémentation de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (le nombre de références par exemple est dans `CCmdTarget` ). Pour créer une classe qui prenne en charge OLE COM, vous devez faire dériver une classe de `CCmdTarget` et utiliser diverses macros, ainsi que des fonctions membres de `CCmdTarget` pour implémenter les interfaces souhaitées. L'implémentation de MFC utilise des classes imbriquées pour définir chaque implémentation d'interface de façon très similaire à l'exemple ci-dessus. Cela est facilité par une implémentation standard de l'interface IUnknown et par un certain nombre de macros qui permettent d'éliminer une partie du code répétitif.
+La prise en charge des tables d'interface de MFC est ancrée dans la classe `CCmdTarget`. `CCmdTarget` «*possède un*» nombre de références, ainsi que toutes les fonctions membres associées à l’implémentation de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (le nombre de références par exemple est dans `CCmdTarget` ). Pour créer une classe qui prenne en charge OLE COM, vous devez faire dériver une classe de `CCmdTarget` et utiliser diverses macros, ainsi que des fonctions membres de `CCmdTarget` pour implémenter les interfaces souhaitées. L'implémentation de MFC utilise des classes imbriquées pour définir chaque implémentation d'interface de façon très similaire à l'exemple ci-dessus. Cela est facilité par une implémentation standard de l'interface IUnknown et par un certain nombre de macros qui permettent d'éliminer une partie du code répétitif.
 
 ## <a name="interface-map-basics"></a>Principes fondamentaux des tables d'interface
 

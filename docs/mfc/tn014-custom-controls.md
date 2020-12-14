@@ -1,5 +1,6 @@
 ---
-title: 'TN014 : Contrôles personnalisés'
+description: 'En savoir plus sur : TN014 : contrôles personnalisés'
+title: 'TN014 : contrôles personnalisés'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: 2960c5b8585519adb535e5611315ec4ececcf53e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c9b069e0101b279558c5bcd4ffb7f457120e8187
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215974"
 ---
-# <a name="tn014-custom-controls"></a>TN014 : Contrôles personnalisés
+# <a name="tn014-custom-controls"></a>TN014 : contrôles personnalisés
 
-Cette note décrit la prise en charge MFC pour les contrôles personnalisés et de dessin automatique. Il décrit également le sous-classement dynamique et décrit la relation entre les objets [CWnd](../mfc/reference/cwnd-class.md) et les `HWND`.
+Cette note décrit la prise en charge MFC pour les contrôles personnalisés et de dessin automatique. Il décrit également le sous-classement dynamique et décrit la relation entre les objets [CWnd](../mfc/reference/cwnd-class.md) et les `HWND` .
 
 L'exemple d'application CTRLTEST MFC montre comment utiliser de nombreux contrôles personnalisés. Consultez le code source de l’exemple général MFC [CTRLTEST](../overview/visual-cpp-samples.md) et l’aide en ligne.
 
@@ -40,7 +41,7 @@ Cette approche ne mène pas à du code réutilisable. Si vous avez deux contrôl
 
 ## <a name="self-draw-controls-and-menus"></a>Contrôles et menus de dessin automatique
 
-MFC fournit une implémentation par défaut (dans `CWnd` les classes et [CMenu](../mfc/reference/cmenu-class.md) ) pour les messages owner-draw standard. Cette implémentation par défaut décode les paramètres owner-draw et délègue les messages owner-draw aux contrôles ou menus. Il est question de dessin automatique car le code de dessin se trouve dans la classe du contrôle ou du menu, et non dans la fenêtre propriétaire.
+MFC fournit une implémentation par défaut (dans les `CWnd` classes et [CMenu](../mfc/reference/cmenu-class.md) ) pour les messages owner-draw standard. Cette implémentation par défaut décode les paramètres owner-draw et délègue les messages owner-draw aux contrôles ou menus. Il est question de dessin automatique car le code de dessin se trouve dans la classe du contrôle ou du menu, et non dans la fenêtre propriétaire.
 
 En utilisant les contrôles de dessin automatique vous pouvez générer des classes de contrôle réutilisables qui utilisent la sémantique owner-draw pour afficher le contrôle. Le code pour dessiner le contrôle figure dans la classe de contrôle, et non son parent. Il s'agit d'une approche orientée objet de programmation de contrôle personnalisé. Ajoutez la liste de fonctions suivante à vos classes de dessin automatique :
 
@@ -88,17 +89,17 @@ En utilisant les contrôles de dessin automatique vous pouvez générer des clas
     // insert code to delete an item from this combo box
     ```
 
-Pour plus d’informations sur les structures owner-draw ([drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct), [measureitemstruct,](/windows/win32/api/winuser/ns-winuser-measureitemstruct), [compareitemstruct,](/windows/win32/api/winuser/ns-winuser-compareitemstruct)et [deleteitemstruct,](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)) `CWnd::OnDrawItem`, `CWnd::OnCompareItem`consultez la documentation MFC `CWnd::OnMeasureItem`pour,, et .`CWnd::OnDeleteItem` respectivement.
+Pour plus d’informations sur les structures owner-draw ([drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct), [measureitemstruct,](/windows/win32/api/winuser/ns-winuser-measureitemstruct), [compareitemstruct,](/windows/win32/api/winuser/ns-winuser-compareitemstruct)et [deleteitemstruct,](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)), consultez la documentation MFC pour `CWnd::OnDrawItem` ,, et, `CWnd::OnMeasureItem` `CWnd::OnCompareItem` `CWnd::OnDeleteItem` respectivement.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Utilisation des contrôles et menus de dessin automatique
 
 Pour les champs de dessin automatique, vous devez substituer les méthodes `OnMeasureItem` et `OnDrawItem`.
 
-Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style LBS_OWNERDRAWVARIABLE pour les zones de liste ou le style CBS_OWNERDRAWVARIABLE pour les zones de liste déroulante dans le modèle de boîte de dialogue. Le style OWNERDRAWFIXED ne fonctionne pas avec les éléments de dessin automatique, car la hauteur d’élément fixe est déterminée avant que les contrôles de dessin automatique soient attachés à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox :: SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox :: SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) pour surmonter cette limitation.)
+Pour les zones de liste et les zones de liste déroulante de dessin automatique, vous devez remplacer `OnMeasureItem` et `OnDrawItem`. Vous devez spécifier le style de LBS_OWNERDRAWVARIABLE pour les zones de liste ou le style de CBS_OWNERDRAWVARIABLE pour les zones de liste déroulante dans le modèle de boîte de dialogue. Le style OWNERDRAWFIXED ne fonctionne pas avec les éléments de dessin automatique, car la hauteur d’élément fixe est déterminée avant que les contrôles de dessin automatique soient attachés à la zone de liste. (Vous pouvez utiliser les méthodes [CListBox :: SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) et [CComboBox :: SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) pour surmonter cette limitation.)
 
 Le passage à un style OWNERDRAWVARIABLE force le système à appliquer le style NOINTEGRALHEIGHT au contrôle. Étant donné que le contrôle ne peut pas calculer une hauteur intégrale avec des éléments de taille variable, le style par défaut de INTEGRALHEIGHT est ignoré et le contrôle est toujours NOINTEGRALHEIGHT. Si les éléments sont à hauteur fixe, vous pouvez empêcher les éléments partiels d'être dessinés en spécifiant que la taille de contrôle soit un multiplicateur entier de la taille d'élément.
 
-Pour les zones de liste et les zones de liste déroulante à dessin automatique avec le style LBS_SORT ou `OnCompareItem` CBS_SORT, vous devez substituer la méthode.
+Pour les zones de liste et les zones de liste déroulante à dessin automatique avec le style LBS_SORT ou CBS_SORT, vous devez substituer la `OnCompareItem` méthode.
 
 Pour les zones de liste et les zones de liste déroulante de dessin automatique, `OnDeleteItem` n'est généralement pas remplacé. Vous pouvez remplacer `OnDeleteItem` si vous souhaitez effectuer un traitement spécial. Un cas où cela s'appliquerait lorsque la mémoire ou d'autres ressources sont stockées avec chaque élément de la zone de liste ou de la zone de liste déroulante.
 
@@ -112,9 +113,9 @@ L'exemple le plus typique d'un bouton de dessin automatique est un bouton bitmap
 
 Occasionnellement, vous souhaiterez modifier la fonctionnalité d'objet qui existe déjà. Les exemples précédents requièrent que vous personnalisiez les contrôles avant qu'ils soient créés. Le sous-classement dynamique permet de personnaliser un contrôle qui a déjà été créé.
 
-Le sous-classing est le terme Windows permettant <xref:System.Windows.Forms.Control.WndProc%2A> de remplacer le d’une fenêtre `WndProc` par un personnalisé et `WndProc` d’appeler l’ancien pour les fonctionnalités par défaut.
+Le sous-classing est le terme Windows permettant de remplacer le <xref:System.Windows.Forms.Control.WndProc%2A> d’une fenêtre par un personnalisé `WndProc` et d’appeler l’ancien `WndProc` pour les fonctionnalités par défaut.
 
-Cela ne doit pas être confondu avec la dérivation de classe C++. Pour clarifier, la C++ *classe de base* des termes et la *classe dérivée* sont analogues à la *superclasse* et à la sous- *classe* dans le modèle d’objet Windows. La dérivation C++ MFC et le sous-classement Windows sont fonctionnellement similaires, à moins que C++ ne prenne pas en charge le sous-classement dynamique.
+Cela ne doit pas être confondu avec la dérivation de classe C++. Pour clarifier, la classe de *base* des termes C++ et la *classe dérivée* sont analogues à la *superclasse* et à la sous- *classe* dans le modèle d’objet Windows. La dérivation C++ MFC et le sous-classement Windows sont fonctionnellement similaires, à moins que C++ ne prenne pas en charge le sous-classement dynamique.
 
 La classe `CWnd` fournit la connexion entre un objet C++ (dérivé de `CWnd`) et un objet fenêtre Windows (appelé `HWND`).
 
@@ -122,7 +123,7 @@ Trois façons courantes permettent de les lier :
 
 - `CWnd` crée `HWND`. Vous pouvez modifier le comportement dans une classe dérivée en créant une classe dérivée de `CWnd`. Le `HWND` est créé lorsque votre application appelle [CWnd :: Create](../mfc/reference/cwnd-class.md#create).
 
-- L'application joint `CWnd` à un objet `HWND`existant. Le comportement de la fenêtre existante n'est pas modifié. Il s’agit d’un cas de délégation qui est rendu possible en appelant [CWnd :: Attach](../mfc/reference/cwnd-class.md#attach) pour ajouter `HWND` un alias `CWnd` à un objet existant.
+- L'application joint `CWnd` à un objet `HWND`existant. Le comportement de la fenêtre existante n'est pas modifié. Il s’agit d’un cas de délégation qui est rendu possible en appelant [CWnd :: Attach pour ajouter](../mfc/reference/cwnd-class.md#attach) un alias à `HWND` un `CWnd` objet existant.
 
 - `CWnd` est attaché à un `HWND` existant et il vous est possible de modifier le comportement dans une classe dérivée. On parle sous-classement dynamique car nous modifions le comportement, par conséquent la classe, de l'objet Windows au moment de l'exécution.
 
@@ -130,7 +131,7 @@ Vous pouvez obtenir un sous-ordre dynamique à l’aide des méthodes [CWnd :: 
 
 Les deux routines joignent un objet `CWnd` au `HWND` existant. `SubclassWindow` prend le `HWND` directement. `SubclassDlgItem` est une fonction d'assistance qui accepte un ID de contrôle et la fenêtre parente. `SubclassDlgItem` est conçu pour joindre des objets C++ aux contrôles de la boîte de dialogue créée à partir d'un modèle de boîte de dialogue.
 
-Consultez l’exemple [CTRLTEST](../overview/visual-cpp-samples.md) pour obtenir plusieurs exemples d’utilisation `SubclassWindow` de et `SubclassDlgItem`de.
+Consultez l’exemple [CTRLTEST](../overview/visual-cpp-samples.md) pour obtenir plusieurs exemples d’utilisation de `SubclassWindow` et de `SubclassDlgItem` .
 
 ## <a name="see-also"></a>Voir aussi
 

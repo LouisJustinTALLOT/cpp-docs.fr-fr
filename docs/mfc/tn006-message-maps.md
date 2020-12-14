@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN006 : tables des messages'
 title: 'TN006 : tables des messages'
 ms.date: 06/25/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 6b387b851f5a76cd0d11957a87e57307d624759e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9331e5523015a670a2a874c9e9b3021d41eed09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216052"
 ---
 # <a name="tn006-message-maps"></a>TN006 : tables des messages
 
@@ -70,7 +71,7 @@ Il s’agit du format généré par AppWizard et ClassWizard lorsqu’ils créen
 
 La table de la table des messages est définie à l’aide d’un ensemble de macros qui se développent en entrées de la table des messages. Une table commence par un appel de macro [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , qui définit la classe gérée par cette table des messages et la classe parente à laquelle les messages non gérés sont passés. La table se termine par l’appel de macro [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) .
 
-Entre ces deux appels de macro est une entrée pour chaque message à gérer par cette table des messages. Chaque message Windows standard a une macro de la forme ON_WM_*MESSAGE_NAME* qui génère une entrée pour ce message.
+Entre ces deux appels de macro est une entrée pour chaque message à gérer par cette table des messages. Chaque message Windows standard a une macro de la forme ON_WM_ *MESSAGE_NAME* qui génère une entrée pour ce message.
 
 Une signature de fonction standard a été définie pour décompresser les paramètres de chaque message Windows et fournir la sécurité de type. Ces signatures peuvent se trouver dans le fichier AFXWIN. h dans la déclaration de [CWnd](../mfc/reference/cwnd-class.md). Chacune d’elles est marquée avec le mot clé **afx_msg** pour faciliter l’identification.
 
