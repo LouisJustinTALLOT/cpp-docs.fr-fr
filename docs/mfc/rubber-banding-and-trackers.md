@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Rubber-Banding et les traceurs'
 title: Bande élastique et dispositifs de suivi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-ms.openlocfilehash: 095f3c15546466c6a495f6aa348990ed69b04a9e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5d641e7553a2891e0319484558f025c6998f9693
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217833"
 ---
 # <a name="rubber-banding-and-trackers"></a>Bande élastique et dispositifs de suivi
 
@@ -32,4 +33,4 @@ Pour plus d’informations, consultez [éléments clients du conteneur](../mfc/c
 ## <a name="see-also"></a>Voir aussi
 
 [Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
-[CRectTracker, classe](../mfc/reference/crecttracker-class.md)
+[CRectTracker (classe)](../mfc/reference/crecttracker-class.md)

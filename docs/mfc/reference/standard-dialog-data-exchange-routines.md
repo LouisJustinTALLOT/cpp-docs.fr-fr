@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les routines d’échange de données de boîtes de dialogue standard
 title: Routines d'échange de données de boîte de dialogue standard
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: bed60094b25bcc3b1994aa904a8c20324be2abae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1d5cb0726168b90e0ba2a7891ce0ffa55b73f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218860"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routines d'échange de données de boîte de dialogue standard
 
@@ -67,7 +68,7 @@ Lorsque `DDX_CBIndex` est appelé, *index* est défini sur l’index de la séle
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -102,7 +103,7 @@ Lorsque `DDX_CBString` est appelé, la *valeur* est définie sur la sélection d
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -137,7 +138,7 @@ Lorsque `DDX_CBStringExact` est appelé, la *valeur* est définie sur la sélect
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -169,7 +170,7 @@ Lorsque `DDX_Check` est appelé, la *valeur* est définie sur l’état actuel d
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -201,7 +202,7 @@ L’objet *pDX* est fourni par le Framework lorsque la `DoDataExchange` fonction
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -245,7 +246,7 @@ Dans la troisième version ci-dessus, `DDX_DateTimeCtrl` gère le transfert de `
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -280,7 +281,7 @@ Référence à un objet de [classe CWinFormsControl](cwinformscontrol-class.md) 
 
 Pour plus d’informations, consultez [Comment : effectuer une liaison de données DDX/DDV avec Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms. h
 
@@ -321,7 +322,7 @@ Lorsque `DDX_IPAddress` est appelé, la *valeur* est lue à partir du contrôle 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -353,7 +354,7 @@ Lorsque `DDX_LBIndex` est appelé, *index* est défini sur l’index de la séle
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -390,7 +391,7 @@ Lorsque `DDX_LBString` est appelé pour transférer des données à partir d’u
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -427,7 +428,7 @@ Lorsque `DDX_CBStringExact` est appelé pour transférer des données à partir 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -467,7 +468,7 @@ Lorsque `DDX_MonthCalCtrl` est appelé, la *valeur* est définie sur l’état a
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -501,7 +502,7 @@ Par exemple, si la première case d’option du groupe est cochée (le bouton av
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -533,7 +534,7 @@ Lorsque `DDX_Scroll` est appelé, la *valeur* est définie à la position actuel
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -565,7 +566,7 @@ Lorsque `DDX_Slider` est appelé, la *valeur* est égale à la position actuelle
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur les contrôles Slider, consultez [utilisation de CSliderCtrl](../../mfc/using-csliderctrl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -645,7 +646,7 @@ Référence à un membre de données dans la boîte de dialogue, le mode formula
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 

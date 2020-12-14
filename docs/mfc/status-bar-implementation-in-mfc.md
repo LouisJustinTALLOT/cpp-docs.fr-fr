@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : implémentation de la barre d’État dans MFC'
 title: Implémentation de la barre d'état dans MFC
 ms.date: 11/19/2018
 f1_keywords:
@@ -16,40 +17,40 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: abd16ecb5e6a492bc42c747f60ec0859e1bc05cb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d42f8b4bf6ae72cf8eb4a12d1f5eafb8603c5e1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216754"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implémentation de la barre d'état dans MFC
 
-Un [CStatusBar](../mfc/reference/cstatusbar-class.md) objet est une barre de contrôle avec une ligne de volets de sortie de texte. Les volets de sortie sont fréquemment utilisés comme des lignes de message et comme indicateurs d'états. Exemples : les lignes de message à l’aide de menu qui expliquent brièvement la commande de menu sélectionné et les indicateurs qui indiquent l’état de l’arrêt défil, VERR. NUM et défil.
+Un objet [CStatusBar](../mfc/reference/cstatusbar-class.md) est une barre de contrôle avec une ligne de volets de sortie de texte. Les volets de sortie sont fréquemment utilisés comme des lignes de message et comme indicateurs d'états. Par exemple, les lignes de message d’aide du menu décrivent brièvement la commande de menu sélectionnée et les indicateurs qui indiquent l’état du verrou de défilement, Verr. NUM et autres clés.
 
-Depuis la version 4.0 de MFC, les barres d’état sont implémentées à l’aide de la classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), qui encapsule une barre de contrôle commun d’état. Pour la compatibilité descendante, MFC conserve l’ancienne implémentation de barre d’état dans la classe `COldStatusBar`. Décrit la documentation pour les versions antérieures de MFC `COldStatusBar` sous `CStatusBar`.
+À partir de la version 4,0 de MFC, les barres d’État sont implémentées à l’aide de la classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), qui encapsule un contrôle commun de barre d’État. Pour la compatibilité descendante, MFC conserve l’ancienne implémentation de la barre d’État dans la classe `COldStatusBar` . La documentation relative aux versions antérieures de MFC décrit `COldStatusBar` sous `CStatusBar` .
 
-[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), une fonction membre new 4.0 de MFC, vous permet de tirer parti de la prise en charge du contrôle commun Windows pour la personnalisation et des fonctionnalités supplémentaires de la barre d’état. `CStatusBar` fonctions membres vous donnent la plupart des fonctionnalités des contrôles communs Windows ; Toutefois, lorsque vous appelez `GetStatusBarCtrl`, vous pouvez donner à votre barres d’état encore plus des caractéristiques d’une barre d’état. Lorsque vous appelez `GetStatusBarCtrl`, elle retournera une référence à un `CStatusBarCtrl` objet. Vous pouvez utiliser cette référence pour manipuler le contrôle de barre d’état.
+[CStatusBar :: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), une fonction membre nouvelle dans MFC 4,0, vous permet de tirer parti de la prise en charge par le contrôle commun Windows de la personnalisation de la barre d’État et des fonctionnalités supplémentaires. `CStatusBar` les fonctions membres vous offrent la plupart des fonctionnalités des contrôles communs Windows. Toutefois, lorsque vous appelez `GetStatusBarCtrl` , vous pouvez affecter à vos barres d’État une plus grande partie des caractéristiques d’une barre d’État. Quand vous appelez `GetStatusBarCtrl` , une référence à un objet est retournée `CStatusBarCtrl` . Vous pouvez utiliser cette référence pour manipuler le contrôle de barre d’État.
 
-La figure suivante montre une barre d’état affichant plusieurs indicateurs.
+L’illustration suivante montre une barre d’État qui affiche plusieurs indicateurs.
 
-![Barre d’état](../mfc/media/vc37dy1.gif "barre d’état") <br/>
-Une barre d’état
+![Barre d’État](../mfc/media/vc37dy1.gif "Barre d'état") <br/>
+Une barre d’État
 
-Comme la barre d’outils, l’objet de barre d’état est incorporé dans sa fenêtre frame parente et est généré automatiquement lors de la construction de la fenêtre frame. La barre d’état, comme toutes les barres de contrôle est détruite automatiquement également lorsque le frame parent est détruit.
+À l’instar de la barre d’outils, l’objet de barre d’État est incorporé dans sa fenêtre frame parente et est construit automatiquement lorsque la fenêtre frame est construite. La barre d’État, comme toutes les barres de contrôle, est automatiquement détruite lorsque le frame parent est détruit.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [La mise à jour le texte d’un volet de barre d’état](../mfc/updating-the-text-of-a-status-bar-pane.md)
+- [Mise à jour du texte d’un volet de barre d’État](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
 - Classes MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) et [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
 
-- [Barres de contrôles](../mfc/control-bars.md)
+- [Barres de contrôle](../mfc/control-bars.md)
 
 - [Barres de boîte de dialogue](../mfc/dialog-bars.md)
 
-- [Barres d’outils (implémentation de barre d’outils MFC)](../mfc/mfc-toolbar-implementation.md)
+- [Barres d’outils (implémentation de la barre d’outils MFC)](../mfc/mfc-toolbar-implementation.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Barres d’état](../mfc/status-bars.md)
+[Barres d’État](../mfc/status-bars.md)

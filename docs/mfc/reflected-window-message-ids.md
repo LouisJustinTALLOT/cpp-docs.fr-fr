@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ID de message de fenêtre réfléchi'
 title: ID des messages de fenêtre réfléchis
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,20 +47,20 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ff6151c6f4c79d7086eb16e7fadeac0b75ac531a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218236"
 ---
 # <a name="reflected-window-message-ids"></a>ID des messages de fenêtre réfléchis
 
-Un moyen rapide de créer un contrôle ActiveX, ou tout autre contrôle spécialisé, est de sous-classer une fenêtre. Pour plus d’informations, voir [MFC ActiveX Controls: Subclassing a Windows Control](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Un moyen rapide de créer un contrôle ActiveX, ou un autre contrôle spécialisé, consiste à sous-définir une fenêtre. Pour plus d’informations, consultez [contrôles ActiveX MFC : sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-Pour empêcher le conteneur du contrôle de recevoir les messages de fenêtre envoyés par un contrôle Windows sous-classé, [COleControl](../mfc/reference/colecontrol-class.md) crée une fenêtre de « réflecteur » pour intercepter certains messages de fenêtre et les renvoyer au contrôle. Le contrôle, dans sa procédure de fenêtre, peut alors traiter ces messages réfléchis en prenant des mesures appropriées pour un contrôle ActiveX.
+Pour empêcher le conteneur du contrôle de recevoir les messages de fenêtre envoyés par un contrôle Windows sous-classé, [COleControl](../mfc/reference/colecontrol-class.md) crée une fenêtre « Reflector » pour intercepter certains messages de fenêtre et les renvoyer au contrôle. Dans sa procédure de fenêtre, le contrôle peut ensuite traiter ces messages reflétés en effectuant les actions appropriées pour un contrôle ActiveX.
 
-Le tableau suivant affiche les messages interceptés et les messages correspondants que la fenêtre du réflecteur envoie.
+Le tableau suivant montre les messages qui sont interceptés et les messages correspondants que la fenêtre réflecteur envoie.
 
 |Message envoyé par le contrôle|Message réfléchi au contrôle|
 |---------------------------------|--------------------------------------|
@@ -82,7 +83,7 @@ Le tableau suivant affiche les messages interceptés et les messages corresponda
 |[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
-> Si le contrôle s’exécute sur un système Win32,\* il existe plusieurs types de messages WM_CTLCOLOR qu’il peut recevoir. Pour plus d’informations, voir WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+> Si le contrôle s’exécute sur un système Win32, il existe plusieurs types de WM_CTLCOLOR \* messages qu’il peut recevoir. Pour plus d’informations, consultez WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
 
 ## <a name="see-also"></a>Voir aussi
 

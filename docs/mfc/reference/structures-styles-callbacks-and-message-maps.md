@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les structures, les styles, les rappels et les tables des messages
 title: Structures, styles, rappels et tables de messages
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b39f3341106c8f064477adb2b579cf07eb9e3e0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218769"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Structures, styles, rappels et tables de messages
 
@@ -30,11 +31,11 @@ Fournit des liens vers les styles utilisés lors de la création d’objets MFC.
 Fournit des liens vers les fonctions de rappel qui s’affichent dans la bibliothèque MFC.
 
 [Tables des messages](../../mfc/reference/message-maps-mfc.md)<br/>
-Décrit les macros de mappage des messages et les entrées de la table des messages `CWnd`.
+Décrit les macros de mappage des messages et les `CWnd` entrées de la table des messages.
 
 ## <a name="related-sections"></a>Sections connexes
 
-[Présentation des bibliothèques de classes](../../mfc/class-library-overview.md)<br/>
+[Vue d’ensemble de la bibliothèque de classes](../../mfc/class-library-overview.md)<br/>
 Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 
 [Exemples MFC](../../overview/visual-cpp-samples.md#mfc-samples)<br/>

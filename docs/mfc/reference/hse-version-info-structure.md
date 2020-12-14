@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure HSE_VERSION_INFO'
 title: HSE_VERSION_INFO, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-ms.openlocfilehash: 97f34bebae8a486a825d04b23c5a92fbd4aefa42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe03f3c4e00f9af62398993838927ce75410f17b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219627"
 ---
-# <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO, structure
+# <a name="hse_version_info-structure"></a>HSE_VERSION_INFO, structure
 
-Cette structure est indiquée par le *pVer* paramètre dans le `CHttpServer::GetExtensionVersion` fonction membre. Il fournit le numéro de version d’ISA et une description textuelle de l’ISA Server.
+Cette structure est désignée par le paramètre *pVer* dans la `CHttpServer::GetExtensionVersion` fonction membre. Il fournit le numéro de version d’ISA et une description textuelle de l’ordinateur ISA.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,15 +30,15 @@ typedef struct _HSE_VERSION_INFO {
 #### <a name="parameters"></a>Paramètres
 
 *dwExtensionVersion*<br/>
-Le numéro de version de l’ISA Server.
+Numéro de version de l’ordinateur ISA.
 
 *lpszExtensionDesc*<br/>
-La description textuelle de l’ISA Server. L’implémentation par défaut fournit le texte d’espace réservé ; substituer `CHttpServer::GetExtensionVersion` afin de fournir votre propre description.
+Description textuelle de l’ordinateur ISA. L’implémentation par défaut fournit le texte de l’espace réservé ; Remplacez `CHttpServer::GetExtensionVersion` pour fournir votre propre description.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** httpext.h
+**En-tête :** httpext. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+[Structures, styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

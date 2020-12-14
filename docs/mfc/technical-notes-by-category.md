@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : notes techniques par catégorie'
 title: Notes techniques par catégorie
 ms.date: 11/04/2016
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-ms.openlocfilehash: 4f12946efdb57293038e59c078a68b2614b05ba7
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 4787b73c9a9039336beba709aa7ddb5aaf761f65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216338"
 ---
 # <a name="technical-notes-by-category"></a>Notes techniques par catégorie
 
@@ -70,20 +71,20 @@ Les notes techniques sont réparties dans les catégories suivantes. Pour obteni
 
 [TN038 : implémentation de IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)\
 [TN039 : implémentation d’Automation MFC/OLE](../mfc/tn039-mfc-ole-automation-implementation.md)\
-[TN040 : redimensionnement et zoom sur place MFC/OLE](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
+[TN040 : MFC/OLE In-Place le redimensionnement et le zoom](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
 [TN041 : migration de MFC/OLE1 vers MFC/OLE2](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)\
 [TN049 : MFC/OLE MBCS vers la couche de traduction Unicode (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)\
 [TN050 : boîtes de dialogue communes MFC/OLE (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)\
-[TN064 : modèle de thread cloisonné dans les contrôles OLE](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
-[TN065 : prise en charge d’une interface double pour les serveurs OLE Automation](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
+[TN064 : Apartment-Model Threading dans les contrôles OLE](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
+[TN065 : prise en charge Dual-Interface pour les serveurs OLE Automation](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
 [TN071 : implémentation IOleCommandTarget MFC](../mfc/tn071-mfc-iolecommandtarget-implementation.md)
 
 ### <a name="mfc-resources"></a>Ressources MFC
 
 [TN020 : conventions de dénomination et de numérotation des ID](../mfc/tn020-id-naming-and-numbering-conventions.md)\
 [TN023 : ressources MFC standard](../mfc/tn023-standard-mfc-resources.md)\
-[TN024 : messages et ressources définis par MFC](../mfc/tn024-mfc-defined-messages-and-resources.md)\
-[TN028 : prise en charge de l’aide contextuelle](../mfc/tn028-context-sensitive-help-support.md)\
+[TN024 : MFC-Defined les messages et les ressources](../mfc/tn024-mfc-defined-messages-and-resources.md)\
+[TN028 : Context-Sensitive aide du support](../mfc/tn028-context-sensitive-help-support.md)\
 [TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)\
 [TN036 : utilisation de CFormView avec AppWizard et ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)\
 [TN070 : noms des classes de fenêtre MFC](../mfc/tn070-mfc-window-class-names.md)

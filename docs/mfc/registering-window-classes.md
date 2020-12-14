@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : inscription des classes de fenêtres'
 title: Inscription de classes de fenêtre
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e31f83b691ad12d845afca6a3a5f18d9ba64b0e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218189"
 ---
 # <a name="registering-window-classes"></a>Inscription de classes de fenêtre
 
-Fenêtre « classes » dans la programmation traditionnelle pour Windows définissent les caractéristiques d’une « classe » (pas une classe C++) à partir duquel un nombre quelconque de windows peut être créé. Ce type de classe est un modèle ou un modèle pour la création de fenêtres.
+Les « classes » de la fenêtre de programmation traditionnelle pour Windows définissent les caractéristiques d’une « classe » (et non d’une classe C++) à partir de laquelle plusieurs fenêtres peuvent être créées. Ce type de classe est un modèle ou un modèle pour la création de fenêtres.
 
-## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Inscription de classe de fenêtre dans les programmes traditionnels pour Windows
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Inscription des classes de fenêtre dans les programmes traditionnels pour Windows
 
-Dans un programme traditionnel pour Windows, sans MFC, vous traitez tous les messages à une fenêtre dans sa procédure de fenêtre « » ou «`WndProc`. » Un `WndProc` est associé à une fenêtre au moyen d’un processus de « inscription de classe de fenêtre ». La fenêtre principale est enregistrée dans le `WinMain` (fonction), mais autres classes de windows peuvent être enregistrées n’importe où dans l’application. L’enregistrement dépend d’une structure qui contient un pointeur vers le `WndProc` fonction ainsi que des spécifications pour le curseur, le pinceau d’arrière-plan et ainsi de suite. La structure est passée en tant que paramètre, ainsi que le nom de chaîne de la classe, dans un appel antérieur à la `RegisterClass` (fonction). Par conséquent, une classe d’enregistrement peut être partagée par plusieurs fenêtres.
+Dans un programme traditionnel pour Windows, sans MFC, vous traitez tous les messages dans une fenêtre de la « procédure de fenêtre » ou de «» `WndProc` . Un `WndProc` est associé à une fenêtre au moyen d’un processus d’inscription de classe de fenêtre. La fenêtre principale est enregistrée dans la `WinMain` fonction, mais d’autres classes de fenêtres peuvent être inscrites n’importe où dans l’application. L’inscription dépend d’une structure qui contient un pointeur vers la `WndProc` fonction ainsi que des spécifications pour le curseur, le pinceau d’arrière-plan, etc. La structure est passée comme paramètre, avec le nom de chaîne de la classe, dans un appel antérieur à la `RegisterClass` fonction. Par conséquent, une classe d’inscription peut être partagée par plusieurs fenêtres.
 
-## <a name="window-class-registration-in-mfc-programs"></a>Inscription de classe de fenêtre dans les programmes MFC
+## <a name="window-class-registration-in-mfc-programs"></a>Inscription des classes de fenêtre dans les programmes MFC
 
-En revanche, la plupart des activités de l’inscription de classe de fenêtre est effectuée automatiquement dans un programme de framework MFC. Si vous utilisez MFC, vous dérivez généralement une classe de fenêtre C++ à partir d’une classe existante à l’aide de la syntaxe C++ normale pour l’héritage de classes. L’infrastructure utilise toujours traditionnel « classes d’enregistrement » et il fournit plusieurs classes standard enregistrées pour vous si nécessaire. Vous pouvez inscrire des classes d’enregistrement supplémentaires en appelant le [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) fonction globale, puis en passant la classe inscrite pour le `Create` fonction membre de `CWnd`. Comme décrit ici, le traditionnel « classe de l’inscription » dans Windows ne doit ne pas être confondue avec une classe C++.
+En revanche, la plupart des activités d’inscription de classe de fenêtre sont effectuées automatiquement dans un programme d’infrastructure MFC. Si vous utilisez MFC, vous dérivez généralement une classe de fenêtre C++ d’une classe de bibliothèque existante à l’aide de la syntaxe C++ normale pour l’héritage de classe. L’infrastructure utilise toujours les « classes d’inscription » traditionnelles et en fournit plusieurs, inscrites pour vous si nécessaire. Vous pouvez inscrire des classes d’inscription supplémentaires en appelant la fonction globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) , puis en passant la classe inscrite à la `Create` fonction membre de `CWnd` . Comme décrit ici, la « classe d’inscription » traditionnelle dans Windows ne doit pas être confondue avec une classe C++.
 
 Pour plus d’informations, consultez [Technical Note 1](../mfc/tn001-window-class-registration.md).
 

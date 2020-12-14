@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les routines de validation de données de boîte de dialogue standard
 title: Routines de validation des données de boîte de dialogue standard
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2b39381610c51f661e98256c39b580df256ebaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218847"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routines de validation des données de boîte de dialogue standard
 
@@ -64,7 +65,7 @@ Nombre maximal de caractères autorisés.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -98,7 +99,7 @@ Valeur maximale (de type BYTE) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -138,7 +139,7 @@ Valeur de date/heure maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -172,7 +173,7 @@ Valeur maximale autorisée (de type **`double`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -206,7 +207,7 @@ Valeur maximale autorisée (de type DWORD).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -240,7 +241,7 @@ Valeur maximale autorisée (de type **`float`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -274,7 +275,7 @@ Valeur maximale autorisée (de type **`int`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -308,7 +309,7 @@ Valeur maximale autorisée (de type **`long`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -342,7 +343,7 @@ Valeur maximale (de type LONGLONG) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -382,7 +383,7 @@ Valeur de date/heure maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -416,7 +417,7 @@ Valeur maximale autorisée (de type **`short`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -450,7 +451,7 @@ Valeur maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur les contrôles Slider, consultez [utilisation de CSliderCtrl](../../mfc/using-csliderctrl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -484,7 +485,7 @@ Valeur maximale autorisée (de type UINT).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -518,7 +519,7 @@ Valeur maximale (de type ULONGLONG) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_. h
 
@@ -554,7 +555,7 @@ Valeur maximale autorisée (de type **`unsigned`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdd_. h
 

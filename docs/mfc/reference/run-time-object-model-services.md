@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Run-Time Object Model services'
 title: Services du modèle objet au moment de l'exécution
 ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5457b34b13d53a6fbf76a74b893958b03b1d63de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218886"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -23,7 +24,7 @@ La création d'objets dynamique permet de créer un objet d'une classe spécifi�
 
 Le tableau suivant répertorie les macros MFC qui prennent en charge les informations relatives à la classe au moment de l'exécution, la sérialisation et la création dynamique.
 
-Pour plus d’informations sur ces services d’objets au moment de l’exécution et la sérialisation, consultez l’article [CObject, classe : accès aux informations de classe d’exécution](../../mfc/accessing-run-time-class-information.md).
+Pour plus d’informations sur ces services d’objets au moment de l’exécution et la sérialisation, consultez l’article [CObject, classe : accès aux informations de classe Run-Time](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="run-time-object-model-services-macros"></a>Macros des services du modèle objet au moment de l'exécution
 
@@ -66,14 +67,14 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>Paramètres
 
-*processeur*<br/>
+*proc*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui contient le nom de la fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit figurer dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs est la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 afxcomctl32. h, afxcomctl32. inl
 
@@ -89,14 +90,14 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>Paramètres
 
-*processeur*<br/>
+*proc*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui contient le nom de la fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit figurer dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs est la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 afxcomctl32. h, afxcomctl32. inl
 
@@ -127,7 +128,7 @@ Pour plus d’informations sur la macro DECLARE_DYNAMIC, consultez [rubriques re
 
 Consultez l’exemple de [IMPLEMENT_DYNAMIC](#implement_dynamic).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -161,7 +162,7 @@ Pour plus d’informations sur la macro DECLARE_DYNCREATE, consultez [rubriques 
 
 Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -184,7 +185,7 @@ Nom de la classe de contrôle.
 
 `GetUserTypeNameID` et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl` . Étant donné que ces fonctions sont virtuelles pures, elles doivent être remplacées dans votre classe de contrôle. En plus de DECLARE_OLECTLTYPE, vous devez ajouter la macro IMPLEMENT_OLECTLTYPE à votre déclaration de classe de contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 
@@ -209,7 +210,7 @@ Utilisez la `DECLARE_PROPPAGEIDS` macro à la fin de votre déclaration de class
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 
@@ -246,7 +247,7 @@ Pour plus d’informations sur la macro DECLARE_SERIAL, consultez [rubriques rel
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -278,7 +279,7 @@ Pour plus d’informations, consultez [rubriques relatives aux classes CObject](
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -314,7 +315,7 @@ Notez que cette définition de macro appellera le constructeur par défaut pour 
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -346,7 +347,7 @@ Contient un ou plusieurs des indicateurs suivants :
 
 Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` définir ThreadingModel = les deux. Pour plus d’informations sur l’inscription du modèle de thread, consultez [InprocServer32](/windows/win32/com/inprocserver32) dans le SDK Windows.
 
-composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*et *B8* du CLSID de la classe.
+composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7* et *B8* du CLSID de la classe.
 
 ### <a name="remarks"></a>Notes
 
@@ -355,9 +356,9 @@ composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*et *B8* du C
 
 Le nom externe est l’identificateur exposé à d’autres applications. Les applications clientes utilisent le nom externe pour demander un objet de cette classe à un serveur Automation.
 
-L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots**et de **huit octets**, représentés par *l*, *W1*, *W2*et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
+L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots** et de **huit octets**, représentés par *l*, *W1*, *W2* et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -391,7 +392,7 @@ La `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui iden
 > [!NOTE]
 > Les paramètres par défaut utilisés par le ControlWizard ActiveX sont : OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE et OLEMISC_RECOMPOSEONRESIZE.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 
@@ -428,7 +429,7 @@ Pour plus d’informations, consultez les rubriques de la [classe CObject](../..
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -455,7 +456,7 @@ Pour plus d’informations, consultez [rubriques relatives aux classes CObject](
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -480,7 +481,7 @@ Ajoutez la macro DECLARE_OLECREATE dans le module. h pour la classe, puis inclue
 
 Si DECLARE_OLECREATE est inclus dans la déclaration de classe, IMPLEMENT_OLECREATE doit être inclus dans l’implémentation de la classe. Une déclaration de classe utilisant DECLARE_OLECREATE doit également utiliser DECLARE_DYNCREATE ou DECLARE_SERIAL.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -500,7 +501,7 @@ Nom réel de la classe.
 *external_name*<br/>
 Nom de l’objet exposé à d’autres applications (entre guillemets).
 
-composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*et *B8* du CLSID de la classe.
+composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7* et *B8* du CLSID de la classe.
 
 ### <a name="remarks"></a>Notes
 
@@ -509,9 +510,9 @@ composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*et *B8* du C
 
 Le nom externe est l’identificateur exposé à d’autres applications. Les applications clientes utilisent le nom externe pour demander un objet de cette classe à un serveur Automation.
 
-L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots**et de **huit octets**, représentés par *l*, *W1*, *W2*et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
+L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots** et de **huit octets**, représentés par *l*, *W1*, *W2* et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 

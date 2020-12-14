@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : inscription'
 title: Inscription
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 82411e53620e92eff3484f7d3f7955030fd439ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8254f4b1ab8a005623650794adc8be0bd06cfdff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218119"
 ---
 # <a name="registration"></a>Inscription
 
@@ -26,33 +27,33 @@ Le framework et les bibliothèques de liens dynamiques (DLL) du système OLE uti
 
 Cet article décrit ce que chaque application serveur doit effectuer lorsqu'elle est installée et chaque fois qu'elle est exécutée.
 
-Pour obtenir des informations détaillées sur la base de données d’enregistrement du système et le format des fichiers .reg utilisés pour la mettre à jour, consultez la *référence du programmeur OLE*.
+Pour obtenir des informations détaillées sur la base de données d’inscription du système et le format des fichiers. reg utilisés pour la mettre à jour, consultez le *Guide de référence du programmeur OLE*.
 
-## <a name="server-installation"></a><a name="_core_server_installation"></a>Installation de serveur
+## <a name="server-installation"></a><a name="_core_server_installation"></a> Installation du serveur
 
 Lors de l'installation initiale de votre application serveur, tous les types d'éléments OLE pris en charge doivent être inscrits. Il est également possible que le serveur actualise la base de données d'inscription du système à chaque fois qu'elle est exécutée comme une application autonome. Cela maintient la base de données d'inscription à jour si le fichier exécutable du serveur est déplacé.
 
 > [!NOTE]
 > Les applications MFC générées par l'application Assistant s'inscrivent automatiquement elles-mêmes lorsqu'elles sont exécutées en tant qu'applications autonomes.
 
-Si vous voulez enregistrer votre application pendant l'installation, utilisez le programme RegEdit.exe. Si vous incluez un programme d’installation avec votre application, faites exécuter le programme d’installation "RegEdit /S *appname*.reg". (Le drapeau /S indique une opération silencieuse, c’est-à-dire qu’il n’affiche pas la boîte de dialogue signalant l’achèvement réussi de la commande.) Sinon, demandez à l’utilisateur d’exécuter RegEdit manuellement.
+Si vous voulez enregistrer votre application pendant l'installation, utilisez le programme RegEdit.exe. Si vous incluez un programme d’installation avec votre application, le programme d’installation doit exécuter « RegEdit/S *appname*. reg ». (L’indicateur/S indique une opération en mode silencieux, autrement dit, il n’affiche pas la boîte de dialogue signalant la réussite de la commande.) Sinon, demandez à l’utilisateur d’exécuter RegEdit manuellement.
 
 > [!NOTE]
 > Le fichier .reg créé par l'assistant Application n'inclut pas de chemin d'accès complet du fichier exécutable. Le programme d'installation doit modifier le fichier .reg pour inclure le chemin d'accès complet au fichier exécutable ou modifier la variable d'environnement PATH pour inclure le répertoire d'installation.
 
 RegEdit fusionne le contenu du fichier texte .reg dans la base de données d’inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles.
 
-## <a name="server-initialization"></a><a name="_core_server_initialization"></a>Initialisation du serveur
+## <a name="server-initialization"></a><a name="_core_server_initialization"></a> Initialisation du serveur
 
 Lorsque vous créez une application serveur avec l’assistant Application, l’assistant termine toutes les tâches d’initialisation automatiquement. Cette section explique ce que vous devez faire si vous écrivez une application serveur manuellement.
 
-Lorsqu'une application serveur est lancée par une application conteneur, les DLL système OLE ajoutent l'option "/Embedding" à la ligne de commande du serveur. Le comportement d'une application serveur diffère selon qu'elle a été exécutée par un conteneur, donc la première chose qu'une application doit effectuer lorsqu'elle commence à être exécutée est de contrôler l'option "/Embedding" ou "-Embedding" sur la ligne de commande. Si ce changement existe, chargez un autre ensemble de ressources qui montre le serveur comme étant actif sur place ou entièrement ouvert. Pour plus d’informations, voir [Menus et Ressources: Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+Lorsqu'une application serveur est lancée par une application conteneur, les DLL système OLE ajoutent l'option "/Embedding" à la ligne de commande du serveur. Le comportement d'une application serveur diffère selon qu'elle a été exécutée par un conteneur, donc la première chose qu'une application doit effectuer lorsqu'elle commence à être exécutée est de contrôler l'option "/Embedding" ou "-Embedding" sur la ligne de commande. Si ce changement existe, chargez un autre ensemble de ressources qui montre le serveur comme étant actif sur place ou entièrement ouvert. Pour plus d’informations, consultez [menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
 Votre application serveur doit également appeler la fonction `CWinApp::RunEmbedded` pour analyser la ligne de commande. Si elle retourne une valeur différente de zéro, l'application ne doit pas afficher sa fenêtre si elle a été exécutée à partir d'une application conteneur, et non comme application autonome. Cette fonction met à jour l'entrée de serveur dans la base de données d'inscription du système et appelle la fonction membre `RegisterAll` pour vous, qui effectue l'inscription d'instance.
 
 Lorsque votre application serveur démarre, vous devez vous assurer qu'elle peut effectuer l'inscription d'instance. L'inscription d'instance informe les DLL du système OLE que le serveur est activé et prêt à recevoir des demandes issues des conteneurs. Elle n'ajoute pas d'entrée à la base de données d'inscription. Exécutez l'inscription de l'instance du serveur en appelant la fonction membre `ConnectTemplate` définie par `COleTemplateServer`. Cela connecte l'objet `CDocTemplate` à l'objet `COleTemplateServer`.
 
-La `ConnectTemplate` fonction prend trois paramètres : le *CLSID*du `CDocTemplate` serveur, un pointeur de l’objet, et un drapeau indiquant si le serveur prend en charge plusieurs instances. Un mini-serveur doit prendre en charge plusieurs instances, c'est-à-dire qu'il est possible que plusieurs instances de serveurs s'exécutent simultanément, une pour chaque conteneur. Par conséquent, passez **VRAI** pour ce drapeau lors du lancement d’un mini-serveur.
+La `ConnectTemplate` fonction accepte trois paramètres : le *CLSID* du serveur, un pointeur vers l' `CDocTemplate` objet et un indicateur qui spécifie si le serveur prend en charge plusieurs instances. Un mini-serveur doit prendre en charge plusieurs instances, c'est-à-dire qu'il est possible que plusieurs instances de serveurs s'exécutent simultanément, une pour chaque conteneur. Par conséquent, transmettez **true** pour cet indicateur lors du lancement d’un mini-minithread.
 
 Si vous entrez un mini-serveur par définition, il sera toujours exécuté par un conteneur. Vous devez toujours analyser la ligne de commande pour vérifier l'option "/Embedding". L'absence de cette option sur la ligne de commande indique que l'utilisateur a essayé de démarrer le mini-serveur en tant qu'application autonome. Si cela se produit, enregistrez le serveur avec la base de données d'inscription système, puis affichez un message informant l'utilisateur pour lancer le mini-serveur depuis une application conteneur.
 
@@ -60,6 +61,6 @@ Si vous entrez un mini-serveur par définition, il sera toujours exécuté par u
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Serveurs](../mfc/servers.md)<br/>
-[CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)<br/>
-[CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)<br/>
+[CWinApp :: RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)<br/>
+[CWinApp :: RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)<br/>
 [COleTemplateServer, classe](../mfc/reference/coletemplateserver-class.md)

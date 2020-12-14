@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles onglet et feuilles de propriétés'
 title: Contrôles onglet et feuilles de propriétés
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,22 +7,22 @@ helpviewer_keywords:
 - tab controls [MFC], and property sheets
 - CTabCtrl class [MFC], and property sheets
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
-ms.openlocfilehash: e765316880749ae5fb065e048b66b1203d7f222e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b81b5c097a5da93a6e6ab614dd5959ce50ba58cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216390"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Contrôles onglet et feuilles de propriétés
 
-Feuilles de propriétés sont des boîtes de dialogue de plusieurs pages ou « onglet boîtes de dialogue « qui peuvent afficher jusqu'à 24 ressources de modèle de boîte de dialogue à l’utilisateur. Pour obtenir des exemples de feuilles de propriétés, consultez la boîte de dialogue Propriétés d’affichage de Windows ou de l’exemple d’application MFC suivant :
+Les feuilles de propriétés sont des boîtes de dialogue à page multiple ou des « boîtes de dialogue d’onglets » qui peuvent afficher jusqu’à 24 ressources de modèle de boîte de dialogue à l’utilisateur. Pour obtenir des exemples de feuilles de propriétés, consultez la boîte de dialogue Propriétés d’affichage de Windows ou l’exemple d’application MFC suivant :
 
-[CMNCTRL1 : Montre les Classes de contrôles communs, 1ère partie](../overview/visual-cpp-samples.md)
+[CMNCTRL1 : illustre les classes de contrôle courantes, partie 1](../overview/visual-cpp-samples.md)
 
-[CMNCTRL2 : Montre les Classes de contrôles communs, 2ème partie](../overview/visual-cpp-samples.md)
+[CMNCTRL2 : illustre les classes de contrôles communs, partie 2](../overview/visual-cpp-samples.md)
 
-Feuilles de propriétés peuvent être facilement implémentés à l’aide de la classe MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
+Les feuilles de propriétés peuvent être facilement implémentées à l’aide de la classe MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 

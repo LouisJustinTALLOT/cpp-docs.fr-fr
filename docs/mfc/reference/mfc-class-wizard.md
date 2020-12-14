@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Assistant classe MFC'
 title: Classe MFC (Assistant)
 ms.date: 09/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: be829156d8fea8188a217b2c0a189ac5d6057a7e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: ba82cabd13fb242f5201243cd9f06c44df8141ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219185"
 ---
 # <a name="mfc-class-wizard"></a>Classe MFC (Assistant)
 
@@ -20,10 +21,10 @@ Utilisez l' **Assistant classe** pour créer des classes MFC ou ajouter des mess
 Il existe trois façons d’ouvrir l' **Assistant classe**:
 
 - Dans le menu **projet** , choisissez **Assistant classe**.
-- Tapez **CTRL** > MAJX > .
+- Tapez **CTRL**  >  **MAJ**  >  **X**.
 - Dans **affichage de classes**, cliquez avec le bouton droit sur une classe ou le nœud du projet, puis choisissez **Assistant classe**.
 
-![Assistant classe](media/class-wizard.png "Assistant classe MFC")
+![Assistant classe](media/class-wizard.png "Classe MFC (Assistant)")
 
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
 
@@ -33,7 +34,7 @@ Il existe trois façons d’ouvrir l' **Assistant classe**:
 
    Vous pouvez sélectionner d’autres projets de votre solution dans la zone de liste déroulante.
 
-- **Nom de classe**
+- **Nom de la classe**
 
    Nom d’une classe dans votre projet.
 
@@ -55,7 +56,7 @@ Il existe trois façons d’ouvrir l' **Assistant classe**:
 
 - **Ressource**
 
-   ID de la ressource dans le **nom**de la classe, le cas échéant. Dans le cas contraire, la zone de **ressources** est vide.
+   ID de la ressource dans le **nom** de la classe, le cas échéant. Dans le cas contraire, la zone de **ressources** est vide.
 
 - **Implémentation de classe**
 
@@ -66,14 +67,14 @@ Il existe trois façons d’ouvrir l' **Assistant classe**:
    |Option|Description|
    |------------|-----------------|
    |**Ouvrir un fichier**|Quitte l’Assistant classe et ouvre le fichier d’implémentation de classe actuel.|
-   |**Ouvrir le dossier contenant**|Ouvre le dossier qui contient le fichier d’implémentation de classe actuel.|
+   |**Ouvrir le dossier conteneur**|Ouvre le dossier qui contient le fichier d’implémentation de classe actuel.|
    |**Copier le chemin d’accès complet dans le presse-papiers**|Copie le chemin d’accès du fichier d’implémentation actuel dans le presse-papiers.|
 
 - **Commandes**
 
    Permet d’ajouter, de supprimer, de modifier ou de rechercher une commande et son gestionnaire de messages.
 
-   Pour ajouter un gestionnaire, cliquez sur **Ajouter un gestionnaire**ou double-cliquez sur un élément dans la liste ID d' **objet** ou **messages** . Le nom, l’ID et le message de la fonction résultante s’affichent dans la liste des **fonctions membres** .
+   Pour ajouter un gestionnaire, cliquez sur **Ajouter un gestionnaire** ou double-cliquez sur un élément dans la liste ID d' **objet** ou **messages** . Le nom, l’ID et le message de la fonction résultante s’affichent dans la liste des **fonctions membres** .
 
    Pour supprimer un gestionnaire, sélectionnez un élément dans la liste **fonctions membres** , puis cliquez sur **supprimer le gestionnaire**.
 
@@ -83,7 +84,7 @@ Il existe trois façons d’ouvrir l' **Assistant classe**:
 
    Permet d’ajouter, de supprimer, de modifier ou de rechercher un message et son gestionnaire de messages.
 
-   Pour ajouter un gestionnaire, cliquez sur **Ajouter un gestionnaire**ou double-cliquez sur un élément dans la liste **messages** .
+   Pour ajouter un gestionnaire, cliquez sur **Ajouter un gestionnaire** ou double-cliquez sur un élément dans la liste **messages** .
 
    Pour ajouter un message personnalisé, cliquez sur **Ajouter un message personnalisé** ou appuyez sur la touche entrée, puis spécifiez des valeurs dans la boîte de dialogue **Ajouter un message personnalisé** . Dans cette boîte de dialogue, vous pouvez également sélectionner **message inscrit** pour gérer un message de fenêtre dont l’unicité est garantie dans tout le système d’exploitation.
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : inscription de contrôles OLE'
 title: Inscription des contrôles OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2556d67e509f7c4217a726ed097bbb69788af7fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218925"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
@@ -53,7 +54,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *hInstance*<br/>
 Handle d’instance du module associé à la classe de contrôle.
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique du contrôle.
 
 *pszProgID*<br/>
@@ -147,7 +148,7 @@ L’exemple ci-dessus montre comment `AfxOleRegisterControlClass` est appelé av
 
 Le contrôle s’affiche dans la boîte de dialogue Insérer un objet pour les conteneurs activés et prend en charge le modèle de cloisonnement. Les contrôles de type Apartment doivent s’assurer que les données de classe statiques sont protégées par des verrous, de sorte que si un contrôle dans un cloisonnement accède aux données statiques, il n’est pas désactivé par le planificateur avant qu’il ne soit terminé, et une autre instance de la même classe commence à utiliser les mêmes données statiques. Tous les accès aux données statiques sont entourés d’un code de section critique.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -168,7 +169,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *hInstance*<br/>
 Handle d’instance du module associé à la classe de la page de propriétés.
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique de la page de propriétés.
 
 *idTypeName*<br/>
@@ -190,7 +191,7 @@ Différent de zéro si la classe de contrôle a été inscrite ; Sinon, 0.
 
 Cela permet à la page de propriétés d’être utilisée par les conteneurs qui prennent en charge le contrôle OLE. `AfxOleRegisterPropertyPageClass` met à jour le Registre avec le nom de la page de propriétés et son emplacement sur le système, et définit également le modèle de thread que le contrôle prend en charge dans le registre. Pour plus d’informations, consultez la [note technique 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « cloisonnement-Model Threading in OLE Controls », et [à propos des processus et des threads](/windows/win32/ProcThread/about-processes-and-threads) dans le SDK Windows.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -234,7 +235,7 @@ Cette fonction met à jour le Registre avec le nom de la bibliothèque de types 
 
 [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 
@@ -258,7 +259,7 @@ ID de programme unique de la page de propriétés ou de contrôle.
 
 Différent de zéro si l’inscription de la classe de contrôle ou de page de propriétés a été correctement annulée ; Sinon, 0.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -283,7 +284,7 @@ Différent de zéro si l’inscription de la bibliothèque de types a été corr
 
 [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp. h
 

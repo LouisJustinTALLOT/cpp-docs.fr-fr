@@ -1,29 +1,30 @@
 ---
-title: 'Procédure : Utiliser la Message croisée'
+description: 'En savoir plus sur : Comment : utiliser la référence croisée Message-Map'
+title: 'Comment : utiliser la référence croisée de la table des messages'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 58659dbf4e4bc817381faaef930334a80f664b03
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4bbc140db59a7df4abd42fdcf68b47273ec3e846
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219653"
 ---
-# <a name="how-to-use-the-message-map-cross-reference"></a>Procédure : Utiliser la Message croisée
+# <a name="how-to-use-the-message-map-cross-reference"></a>Comment : utiliser la référence croisée de la table des messages
 
-Dans les entrées étiquetées \<memberFxn >, écrire votre propre fonction membre pour une dérivée [CWnd](../../mfc/reference/cwnd-class.md) classe. Donnez à votre fonction de n’importe quel nom de que votre choix. Autres fonctions, telles que `OnActivate`, sont des fonctions membres de classe `CWnd`. Si elle est appelée, elles passent le message à la `DefWindowProc` (fonction) Windows. Pour traiter les messages de notification de Windows, remplacer le correspondantes `CWnd` fonction dans votre classe dérivée. Votre fonction doit appeler la fonction substituée dans votre classe de base pour permettre à la classe de base et Windows répondent au message.
+Dans entrées nommées \<memberFxn> , écrivez votre propre fonction membre pour une classe [CWnd](../../mfc/reference/cwnd-class.md) dérivée. Donnez à votre fonction le nom de votre choix. D’autres fonctions, telles que `OnActivate` , sont des fonctions membres de classe `CWnd` . Si elles sont appelées, elles passent le message à la `DefWindowProc` fonction Windows. Pour traiter les messages de notification Windows, remplacez la `CWnd` fonction correspondante dans votre classe dérivée. Votre fonction doit appeler la fonction substituée dans votre classe de base pour permettre à la classe de base et à Windows de répondre au message.
 
-Dans tous les cas, placez le prototype de fonction le `CWnd`-en-tête de la classe dérivée et le code de l’entrée de mappage de message comme indiqué.
+Dans tous les cas, placez le prototype de fonction dans l' `CWnd` en-tête de classe dérivé de et codez l’entrée de la table des messages comme indiqué.
 
 Les termes suivants sont utilisés :
 
 |Terme|Définition|
 |----------|----------------|
-|ID|Tout ID d’élément de menu défini par l’utilisateur (messages WM_COMMAND) ou l’ID de contrôle (messages de notification de fenêtre enfant).|
-|« message » et « wNotifyCode »|ID de message Windows tel que défini dans WINDOWS. H.|
-|nMessageVariable|Nom d’une variable qui contient la valeur de retour à partir de la `RegisterWindowMessage` (fonction) Windows.|
+|id|ID d’élément de menu défini par l’utilisateur (messages WM_COMMAND) ou ID de contrôle (messages de notification de fenêtre enfant).|
+|« message » et « wNotifyCode »|ID de message Windows tels qu’ils sont définis dans WINDOWS. H.|
+|nMessageVariable|Nom d’une variable qui contient la valeur de retour de la `RegisterWindowMessage` fonction Windows.|
 
 ## <a name="see-also"></a>Voir aussi
 

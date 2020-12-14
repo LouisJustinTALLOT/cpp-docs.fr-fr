@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : pages de propriétés (MFC)'
 title: Pages de propriétés (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fa395272ba74c6b3900d5a1500d4cf47ade4e535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218964"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
@@ -75,7 +76,7 @@ Nom de la propriété du contrôle à échanger avec le contrôle de zone de lis
 
 Cette fonction doit être appelée avant l' `DDX_CBIndex` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -109,7 +110,7 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_CBString` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -143,7 +144,7 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_CBStringExact` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -177,7 +178,7 @@ Nom de la propriété du contrôle à échanger avec le contrôle de case à coc
 
 Cette fonction doit être appelée avant l' `DDX_Check` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -211,7 +212,7 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBIndex` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -245,7 +246,7 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBString` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -279,7 +280,7 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBStringExact` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -302,7 +303,7 @@ Cette fonction doit être appelée une fois que toutes les fonctions d’échang
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -336,7 +337,7 @@ Nom de la propriété du contrôle à échanger avec le contrôle de case d’op
 
 Cette fonction doit être appelée avant l' `DDX_Radio` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -412,7 +413,7 @@ Nom de la propriété du contrôle à échanger avec le contrôle spécifié par
 
 Cette fonction doit être appelée avant l' `DDX_Text` appel de fonction correspondant.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -438,7 +439,7 @@ Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres p
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -455,7 +456,7 @@ END_PROPPAGEIDS(class_name)
 *class_name*<br/>
 Nom de la classe de contrôle qui possède la page de propriétés.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 
@@ -469,14 +470,14 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique d’une page de propriétés.
 
 ### <a name="remarks"></a>Notes
 
 Toutes les macros PROPPAGEID doivent être placées entre les macros BEGIN_PROPPAGEIDS et END_PROPPAGEIDS dans le fichier d’implémentation de votre contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl. h
 

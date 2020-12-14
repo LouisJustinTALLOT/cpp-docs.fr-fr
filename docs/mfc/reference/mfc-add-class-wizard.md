@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Assistant Ajouter une classe MFC'
 title: Assistant Ajouter une classe MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3f405b0f5523a183fd546790e0823e7a5e6bbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219250"
 ---
 # <a name="mfc-add-class-wizard"></a>Assistant Ajouter une classe MFC
 
@@ -24,9 +25,9 @@ Utilisez cet Assistant Code pour ajouter une classe à un projet MFC existant, o
 
 Dans cette page, spécifiez le nom de la classe, la classe de base et les noms de fichiers de la nouvelle classe.
 
-- **Nom de classe**
+- **Nom de la classe**
 
-  Spécifie le nom de la nouvelle classe et fournit la base par défaut pour les noms des ID et des fichiers sur cette page. C++les classes commencent généralement par « C ». par exemple, « CMyClass » devient « MyClass. h », et ainsi de suite.
+  Spécifie le nom de la nouvelle classe et fournit la base par défaut pour les noms des ID et des fichiers sur cette page. Les classes C++ commencent généralement par « C ». par exemple, « CMyClass » devient « MyClass. h », et ainsi de suite.
 
 - **Classe de base**
 
@@ -43,13 +44,13 @@ Dans cette page, spécifiez le nom de la classe, la classe de base et les noms d
   Pour les classes qui requièrent un ID de boîte de dialogue, il peut s’avérer plus efficace d’utiliser l' [éditeur de ressources](../../windows/resource-editors.md) pour créer la ressource de boîte de dialogue, d’affecter son ID dans l' [Assistant classe](mfc-class-wizard.md), puis de créer une classe associée à cet ID de ressource. Pour plus d’informations sur la création d’une boîte de dialogue Windows standard, consultez [création d’une](../../windows/creating-a-new-dialog-box.md) boîte de dialogue.
 
   > [!NOTE]
-  > Si vous créez d’abord une ressource de boîte de dialogue et que `CDHtmlDialog`vous dérivez sa nouvelle classe de, supprimez les boutons **OK** et **Annuler** de Windows standard qui s’affichent dans la boîte de dialogue par défaut. La boîte de dialogue Windows standard héberge le formulaire DHTML, qui contient ses propres boutons **OK** et **Annuler** .
+  > Si vous créez d’abord une ressource de boîte de dialogue et que vous dérivez sa nouvelle classe de `CDHtmlDialog` , supprimez les boutons **OK** et **Annuler** de Windows standard qui s’affichent dans la boîte de dialogue par défaut. La boîte de dialogue Windows standard héberge le formulaire DHTML, qui contient ses propres boutons **OK** et **Annuler** .
 
   Si votre boîte de dialogue peut contenir à la fois des contrôles Windows et des contrôles DHTML, cela n’est pas recommandé.
 
 - **ID de boîte de dialogue**
 
-  Spécifie l’ID de la boîte de dialogue, `CDialog`si vous `CPropertyPage`avez sélectionné `CDHtmlDialog` , `CFormView`, ou comme **classe de base**.
+  Spécifie l’ID de la boîte de dialogue, si vous avez sélectionné `CDialog` , `CFormView` , `CPropertyPage` ou `CDHtmlDialog` comme **classe de base**.
 
 - **Fichier .h**
 

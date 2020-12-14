@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Assistant consommateur ODBC MFC'
 title: Consommateur ODBC MFC (Assistant)
 ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: c915408eede80c1564dacc88ab7b9354bd72fc11
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ffc1378f18ab30d77da00da4ce657a5788e04172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219133"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
@@ -35,10 +36,10 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
      La zone **regarder dans** spécifie le répertoire dans lequel sélectionner les fichiers à utiliser comme sources de données. La valeur par défaut est \Program Files\Common Files\ODBC\Data Sources. Les sources de données de fichiers existantes (fichiers. DSN) s’affichent dans la zone de liste principale. Vous pouvez configurer les sources de données à l’avance à l’aide de l’onglet **fichier DSN** de l’administrateur de la [source de données ODBC](/sql/odbc/admin/odbc-data-source-administrator)ou en créer d’autres à l’aide de cette boîte de dialogue.
 
-     Pour créer une source de données de fichier à partir de cette boîte de dialogue, cliquez sur `New` pour spécifier un nom de DSN ; la boîte de dialogue **créer une nouvelle source de données** s’affiche. Dans la boîte de dialogue **créer une nouvelle source de données** , sélectionnez un pilote approprié, cliquez `Next` sur **Parcourir** , puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner « tous les fichiers » pour afficher les fichiers non DSN, tels que les fichiers. xls); cliquez sur `Next` , puis sur **Terminer** . (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue spécifique au pilote, telle que « installation ODBC pour Microsoft Excel », qui convertira le fichier en un nom de source de donnée.)
+     Pour créer une source de données de fichier à partir de cette boîte de dialogue, cliquez sur `New` pour spécifier un nom de DSN ; la boîte de dialogue **créer une nouvelle source de données** s’affiche. Dans la boîte de dialogue **créer une nouvelle source de données** , sélectionnez un pilote approprié, cliquez `Next` sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner « tous les fichiers » pour afficher les fichiers non DSN, tels que les fichiers. xls); cliquez sur `Next` , puis sur **Terminer**. (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue spécifique au pilote, telle que « installation ODBC pour Microsoft Excel », qui convertira le fichier en un nom de source de donnée.)
 
      > [!NOTE]
-     > Vous pouvez également créer au préalable une nouvelle source de données de fichier à l’aide de l’administrateur de la source de données ODBC. Dans le menu **Démarrer** , sélectionnez **paramètres** , **panneau** de configuration, **Outils d’administration** , **sources de données (ODBC)** , puis **administrateur de source de données ODBC** .
+     > Vous pouvez également créer au préalable une nouvelle source de données de fichier à l’aide de l’administrateur de la source de données ODBC. Dans le menu **Démarrer** , sélectionnez **paramètres**, **panneau** de configuration, **Outils d’administration**, **sources de données (ODBC)**, puis **administrateur de source de données ODBC**.
 
      La zone **nom du DSN** vous permet de spécifier un nom pour la source de données de fichier. Vous devez vous assurer que le nom du DSN se termine par l’extension de fichier appropriée, par exemple. xls pour les fichiers Excel ou. mdb pour les fichiers Access.
 
@@ -68,9 +69,9 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
    Spécifie si le Recordset est une feuille de réponse dynamique (par défaut) ou un instantané.
 
-  - **Dynaset** : spécifie que le jeu d’enregistrements est une feuille de réponse dynamique. Une feuille de réponse dynamique est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Un dynaset met en cache uniquement un index intégral des données d’origine et offre donc un gain de performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogés. Il s’agit de la valeur par défaut.
+  - **Dynaset**: spécifie que le jeu d’enregistrements est une feuille de réponse dynamique. Une feuille de réponse dynamique est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Un dynaset met en cache uniquement un index intégral des données d’origine et offre donc un gain de performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogés. Il s’agit de la valeur par défaut.
 
-  - **Snapshot** : spécifie que le jeu d’enregistrements est un instantané. Un instantané est le résultat d’une requête et est une vue d’une base de données à un moment donné. Tous les enregistrements trouvés à la suite de la requête sont mis en cache, de sorte que vous ne voyez pas les modifications apportées aux enregistrements d’origine.
+  - **Snapshot**: spécifie que le jeu d’enregistrements est un instantané. Un instantané est le résultat d’une requête et est une vue d’une base de données à un moment donné. Tous les enregistrements trouvés à la suite de la requête sont mis en cache, de sorte que vous ne voyez pas les modifications apportées aux enregistrements d’origine.
 
 - **Lier toutes les colonnes**
 

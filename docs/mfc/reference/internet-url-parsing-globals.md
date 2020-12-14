@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : URL Internet analyse des informations globales et des assistances'
 title: Analyse des URL Internet globales et des assistances
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4dca0946686759a3880c73aa425edcc724d8772d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219497"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analyse des URL Internet globales et des assistances
 
@@ -109,9 +110,9 @@ Par exemple, `AfxParseURL` analyse les URL de la forme *service://Server/dir/DIR
 *dwServiceType* = = #service
 
 > [!NOTE]
-> Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXINET. h
 
@@ -206,9 +207,9 @@ Différent de zéro si l’URL a été analysée avec succès ; Sinon, 0 s’il
 Il analyse une chaîne d’URL et retourne le type de service et ses composants, ainsi que le nom et le mot de passe de l’utilisateur. Les indicateurs indiquent la manière dont les caractères non sécurisés sont gérés.
 
 > [!NOTE]
-> Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXINET. h
 
@@ -229,7 +230,7 @@ Handle d’une requête Internet.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-N’importe quel type de service Internet défini par WININET. Manutention. Consultez la section Notes pour obtenir la liste de ces services Internet. Si le handle est NULL ou n’est pas reconnu, la fonction retourne AFX_INET_SERVICE_UNK.
+N’importe quel type de service Internet défini par WININET. H. Consultez la section Notes pour obtenir la liste de ces services Internet. Si le handle est NULL ou n’est pas reconnu, la fonction retourne AFX_INET_SERVICE_UNK.
 
 ### <a name="remarks"></a>Notes
 
@@ -262,9 +263,9 @@ La liste suivante répertorie les types Internet possibles retournés par `AfxGe
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
-> Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXINET. h
 
@@ -291,9 +292,9 @@ Erreur ayant provoqué l'exception.
 Vous êtes responsable de la détermination de la cause en fonction du code d’erreur du système d’exploitation.
 
 > [!NOTE]
-> Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXINET. h
 
