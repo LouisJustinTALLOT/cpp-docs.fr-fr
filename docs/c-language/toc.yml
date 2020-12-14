@@ -270,6 +270,8 @@
                   href: ../c-language/string-literals-in-primary-expressions.md
                 - name: Expressions entre parenthèses
                   href: ../c-language/expressions-in-parentheses.md
+                - name: Sélection générique (C11)
+                  href: ../c-language/generic_selection.md
             - name: Expressions L-Value et R-Value
               href: ../c-language/l-value-and-r-value-expressions.md
             - name: Expressions constantes C++
