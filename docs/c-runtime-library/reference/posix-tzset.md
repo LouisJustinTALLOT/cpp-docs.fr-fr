@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : tzset'
 title: tzset
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - tzset function
 ms.assetid: c3afa5d0-cb15-4163-9181-fafb962c95aa
-ms.openlocfilehash: 981f9bc92879bf12e8c49b12190cbe8091d0141b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8a2528c4accaeb385f1979a87f0000347df40c5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252894"
 ---
 # <a name="tzset"></a>tzset
 
-Le nom de fonction POSIX implémenté par Microsoft `tzset` est un alias déconseillé pour la fonction [_tzset](tzset.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+Le nom de fonction POSIX implémenté `tzset` par Microsoft est un alias déconseillé pour la fonction [_tzset](tzset.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
 
 Nous vous recommandons d’utiliser [_tzset](tzset.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.
 

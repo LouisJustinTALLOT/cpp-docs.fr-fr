@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: UnorderedMapView'
 title: Platform::Collections::UnorderedMapView, classe
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: acfc168959deb83244c98c5d361cf9e73c1388f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39f33fd75db92e81fa5321d8983b1b5ea9fce79a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213058"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252374"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView, classe
 
@@ -69,7 +70,7 @@ UnorderedMapView est une implémentation C++ concrète de l’interface [Windows
 
 **Espace de noms :** Platform::Collections
 
-## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapView :: First, méthode
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a> UnorderedMapView :: First, méthode
 
 Retourne un itérateur qui spécifie le premier élément [Windows :: Foundation :: Collections : \<K,V> : IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) dans le mappage non ordonné.
 
@@ -87,9 +88,9 @@ Itérateur qui spécifie le premier élément de la vue cartographique.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myMapView->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.
 
-## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>UnorderedMapView :: Haskey,, méthode
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a> UnorderedMapView :: Haskey,, méthode
 
 Détermine si le UnorderedMap actif contient la clé spécifiée.
 
@@ -104,11 +105,11 @@ bool HasKey(K key);
 *key*<br/>
 Clé utilisée pour rechercher l'élément. Le type de `key` est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la clé est trouvée ; Sinon, **`false`** .
 
-## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>UnorderedMapView :: Lookup, méthode
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a> UnorderedMapView :: Lookup, méthode
 
 Récupère la valeur du type V associé à la clé spécifiée de type K.
 
@@ -123,11 +124,11 @@ V Lookup(K key);
 *key*<br/>
 Clé utilisée pour rechercher un élément dans le UnorderedMapView. Le type de `key` est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur associée à `key`. Le type de la valeur de retour est TypeName *V*.
 
-## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView :: Size, méthode
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a> UnorderedMapView :: Size, méthode
 
 Retourne le nombre d’éléments [Windows :: Foundation :: Collections :: \<K,V> IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) dans le UnorderedMapView.
 
@@ -141,7 +142,7 @@ virtual property unsigned int Size;
 
 Nombre d'éléments contenus dans l'objet UnorderedMapView actif.
 
-## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>UnorderedMapView :: Split, méthode
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a> UnorderedMapView :: Split, méthode
 
 Divise l'objet UnorderedMapView actif en deux objets UnorderedMapView. Cette méthode n'est pas opérationnelle.
 
@@ -167,7 +168,7 @@ Deuxième partie de l'objet UnorderedMapView d'origine.
 
 Cette méthode n'est pas opérationnelle. Elle ne fait rien.
 
-## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>UnorderedMapView :: UnorderedMapView, constructeur
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a> UnorderedMapView :: UnorderedMapView, constructeur
 
 Initialise une nouvelle instance de la classe UnorderedMapView.
 
@@ -230,7 +231,7 @@ Objet de fonction qui peut avoir une valeur de hachage pour une clé. La valeur 
 *P*<br/>
 Type qui fournit un objet de fonction qui peut comparer deux clés pour déterminer leur égalité. La valeur par défaut est [std : \<K> : equal_to](../standard-library/equal-to-struct.md).
 
-*lecteur*<br/>
+*m*<br/>
 Une référence ou [lvalues et rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std :: unordered_map](../standard-library/unordered-map-class.md) qui est utilisé pour initialiser le UnorderedMapView.
 
 *first*<br/>

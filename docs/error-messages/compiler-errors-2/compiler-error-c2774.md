@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2774'
 title: Erreur du compilateur C2774
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2774
 ms.assetid: 10f428c6-7f49-489a-92ba-6ef978b7caaf
-ms.openlocfilehash: 2630dba6a74bf6b31a5df7af57e42fd7c8fd4e09
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d934b2f85fe571c43c8db69018c7c13fd782226a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298199"
 ---
 # <a name="compiler-error-c2774"></a>Erreur du compilateur C2774
 
 'identificateur' : aucune méthode’put’associée à cette propriété
 
-Un membre de données déclaré avec la [propriété](../../cpp/property-cpp.md) n’a pas de fonction `put`, mais une expression tente de définir sa valeur.
+Un membre de données déclaré avec la [propriété](../../cpp/property-cpp.md) n’a aucune `put` fonction, mais une expression tente de définir sa valeur.
 
 L’exemple suivant génère l’C2774 :
 

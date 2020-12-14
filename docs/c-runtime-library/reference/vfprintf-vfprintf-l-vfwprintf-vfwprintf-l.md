@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l'
 title: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3c22b5bff6250c6869d1cc86573064b3e4c81348
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279635"
 ---
 # <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
@@ -78,7 +79,7 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -90,9 +91,9 @@ Pointeur vers la liste d'arguments.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **vfprintf** et **vfwprintf** retournent le nombre de caractères écrits, à l’exclusion du caractère null de fin, ou une valeur négative si une erreur de sortie se produit. Si *Stream* ou *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -116,14 +117,14 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_vftprintf**|**vfprintf**|**vfprintf**|**vfwprintf**|
 |**_vftprintf_l**|**_vfprintf_l**|**_vfprintf_l**|**_vfwprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**vfprintf**, **_vfprintf_l**|\<stdio.h> et \<stdarg.h>|\<varargs.h>*|
-|**vfwprintf**, **_vfwprintf_l**|\<stdio.h> ou \<wchar.h> et \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf**, **_vfwprintf_l**|\<stdio.h> ou \<wchar.h> , et \<stdarg.h>|\<varargs.h>*|
 
-\* Nécessaire pour la compatibilité avec UNIX V.
+\* Requis pour la compatibilité UNIX V.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -133,5 +134,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

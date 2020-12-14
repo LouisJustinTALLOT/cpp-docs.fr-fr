@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : échange de données de boîtes de dialogue'
 title: Échange de données de boîtes de dialogue
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: c12953ab0b9922788747246a97115188b2f686ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ed592e8e6a452d4c6958c3c5f7b573c1be7fe07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261474"
 ---
 # <a name="dialog-data-exchange"></a>Échange de données de boîtes de dialogue
 
@@ -37,7 +38,7 @@ L'illustration suivante montre l'échange de données de boîte de dialogue.
 ![Échange de données de la boîte de dialogue](../mfc/media/vc379d1.gif "Échange de données de la boîte de dialogue") <br/>
 Échange de données de boîtes de dialogue
 
-`UpdateData`fonctionne dans les deux sens, comme spécifié par le paramètre **bool** qui lui est passé. Pour effectuer l'échange, `UpdateData` génère un objet `CDataExchange` et appelle la fonction membre `CDialog` de la substitution de votre classe de boîte de dialogue `DoDataExchange`. `DoDataExchange` accepte un argument de type `CDataExchange`. L'objet `CDataExchange` passé à `UpdateData` représente le contexte de l'échange, et définit des informations telles que la direction de l'échange.
+`UpdateData` fonctionne dans les deux sens, comme spécifié par le paramètre **bool** qui lui est passé. Pour effectuer l'échange, `UpdateData` génère un objet `CDataExchange` et appelle la fonction membre `CDialog` de la substitution de votre classe de boîte de dialogue `DoDataExchange`. `DoDataExchange` accepte un argument de type `CDataExchange`. L'objet `CDataExchange` passé à `UpdateData` représente le contexte de l'échange, et définit des informations telles que la direction de l'échange.
 
 Lorsque vous (ou un Assistant Code) remplacez `DoDataExchange`, vous spécifiez un appel à une fonction DDX par données membres (contrôle). Chaque fonction DDX sait échanger des données dans les deux directions selon le contexte fourni par l’argument `CDataExchange` passé à votre `DoDataExchange` par `UpdateData`.
 
@@ -51,6 +52,6 @@ Si l’utilisateur annule une boîte de dialogue modale, la `OnCancel` fonction 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échange et validation de données de boîtes de dialogue](dialog-data-exchange-and-validation.md)<br/>
+[Échange et validation des données de boîte de dialogue](dialog-data-exchange-and-validation.md)<br/>
 [Utilisation des boîtes de dialogue dans MFC](life-cycle-of-a-dialog-box.md)<br/>
-[Validation de données de boîtes de dialogue](dialog-data-validation.md)
+[Validation des données de boîte de dialogue](dialog-data-validation.md)

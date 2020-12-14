@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : barres de boîte de dialogue'
 title: Barres de boîte de dialogue
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 052e0b8a085c052f73d3c6540521f57fdfbb9c51
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 701954dc9ec682bd95258b26d7af1290ea2da521
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261630"
 ---
 # <a name="dialog-bars"></a>Barres de boîte de dialogue
 

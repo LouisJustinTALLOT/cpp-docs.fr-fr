@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : boîtes de dialogue'
 title: Boîtes de dialogue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: da6a2eca7c2366e519b9bf2e809b042dc3ee2e50
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4ae034c1eaf6d0cf1842218ecb09a96cd35e3ffc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261448"
 ---
 # <a name="dialog-boxes"></a>Boîtes de dialogue
 
@@ -33,9 +34,9 @@ Les [feuilles de propriétés](property-sheets-mfc.md), également appelées bo�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Exemple : affichage d'une boîte de dialogue via une commande de menu](example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Exemple : affichage d’une boîte de dialogue via une commande de menu](example-displaying-a-dialog-box-via-a-menu-command.md)
 
-- [Composants de boîte de dialogue dans le Framework](dialog-box-components-in-the-framework.md)
+- [Composants de boîte de dialogue dans l’infrastructure](dialog-box-components-in-the-framework.md)
 
 - [Boîtes de dialogue modales et non modales](modal-and-modeless-dialog-boxes.md)
 

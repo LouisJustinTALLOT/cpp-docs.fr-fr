@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l'
 title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d051a356fc440219003fb402d99bf09d960537e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279700"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -85,17 +86,17 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*<= 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
@@ -126,7 +127,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Routines de _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>
 [Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

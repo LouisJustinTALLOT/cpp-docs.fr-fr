@@ -1,5 +1,6 @@
 ---
-title: 'Opérateurs relationnels : &lt; , &gt; , &lt; = et&gt;='
+description: 'En savoir plus sur : opérateurs relationnels : &lt; , &gt; , &lt; = et &gt;='
+title: 'Opérateurs relationnels : &lt; , &gt; , &lt; = et &gt;='
 ms.date: 11/04/2016
 f1_keywords:
 - <
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-ms.openlocfilehash: 81421a135059b8804955d472365ebef9802d3210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dee784c5d93610b27a01ba4ecc36638b84a66885
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252413"
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>Opérateurs relationnels : &lt; , &gt; , &lt; = et&gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>Opérateurs relationnels : &lt; , &gt; , &lt; = et &gt;=
 
 ## <a name="syntax"></a>Syntaxe
 

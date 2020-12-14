@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : boîtes de dialogue dans OLE'
 title: Boîtes de dialogue dans OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: b59ba16e6e68df2a539232636e8fe710750e3214
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 39353e75fafd65af1f3e5665afce28e3495a978b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261500"
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 
@@ -30,7 +31,7 @@ Cette boîte de dialogue permet à l’utilisateur de contrôler le format utili
 *Changer d'icône*<br/>
 Cette boîte de dialogue permet à l’utilisateur de sélectionner l’icône qui est affichée pour représenter l’élément lié ou incorporé. Affichez cette boîte de dialogue lorsque l’utilisateur choisit modifier l’icône dans le menu Edition ou bien choisit le bouton modifier l’icône dans les boîtes de dialogue coller spécial ou convertir. Affichez-la également lorsque l’utilisateur ouvre la boîte de dialogue Insérer un objet et choisit afficher en tant qu’icône. Utilisez la classe [COleChangeIconDialog](reference/colechangeicondialog-class.md) pour afficher cette boîte de dialogue.
 
-*Passer*<br/>
+*Convert*<br/>
 Cette boîte de dialogue permet à l’utilisateur de modifier le type d’un élément incorporé ou lié. Par exemple, si vous avez incorporé un métafichier dans un document composé et que vous souhaitez utiliser ultérieurement une autre application pour modifier le métafichier incorporé, vous pouvez utiliser la boîte de dialogue convertir. Pour afficher cette boîte de dialogue, dans le menu Edition, cliquez sur objet de *type d’élément* , puis, dans le menu en cascade, cliquez sur convertir. Utilisez la classe [COleConvertDialog](reference/coleconvertdialog-class.md) pour afficher cette boîte de dialogue. Pour obtenir un exemple, exécutez l’exemple MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Modifier les liens ou mettre à jour les liens*<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2797'
 title: Erreur du compilateur C2797
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c10b0acf550a3bbce81210df60dca75a7b2db704
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297562"
 ---
 # <a name="compiler-error-c2797"></a>Erreur du compilateur C2797
 
 Périmé L’initialisation de liste dans une liste d’initialiseurs de membre ou un initialiseur de membre de données non statique n’est pas implémenté.
 
-Cet avertissement est obsolète dans Visual Studio 2015. Dans Visual Studio 2013 et les versions antérieures, le C++ compilateur Microsoft n’implémente pas l’initialisation de liste à l’intérieur d’une liste d’initialiseurs de membre ou d’un initialiseur de données membres non statiques. Avant Visual Studio 2013 Update 3, une conversion en appel de fonction se produisait en mode silencieux, ce qui pouvait occasionner une génération de code incorrect. Visual Studio 2013 Update 3 signale cela comme une erreur.
+Cet avertissement est obsolète dans Visual Studio 2015. Dans Visual Studio 2013 et les versions antérieures, le compilateur Microsoft C++ n’implémente pas l’initialisation de liste à l’intérieur d’une liste d’initialiseurs de membre ou d’un initialiseur de données membres non statiques. Avant Visual Studio 2013 Update 3, une conversion en appel de fonction se produisait en mode silencieux, ce qui pouvait occasionner une génération de code incorrect. Visual Studio 2013 Update 3 signale cela comme une erreur.
 
 Cet exemple génère C2797 :
 

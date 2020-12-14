@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1053'
 title: Erreur irrécupérable C1053
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C1053
 ms.assetid: f50c1c6a-d9cc-42fa-984e-4e2e6e9cd1b1
-ms.openlocfilehash: 34d57e06f008652955ef6522055e124ef1b209e1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7a1790d8eb1416a883dcbf150ee888157990a754
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251672"
 ---
 # <a name="fatal-error-c1053"></a>Erreur irrécupérable C1053
 
-'identificateur\<> ' : fonction trop grande
+' \<identifier> ' : fonction trop grande
 
 La fonction est trop grande pour être compilée.
 

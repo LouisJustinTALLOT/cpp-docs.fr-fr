@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de boîte de dialogue'
 title: Classes de boîte de dialogue
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c178bc6895e338bf4b2876be5233c1b80007abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261552"
 ---
 # <a name="dialog-box-classes"></a>Classes de boîte de dialogue
 
@@ -60,7 +61,7 @@ Encapsule les services fournis par la boîte de dialogue mise en page commune de
 OLE ajoute plusieurs boîtes de dialogue courantes à Windows. Ces classes encapsulent les boîtes de dialogue communes OLE.
 
 [COleDialog](reference/coledialog-class.md)<br/>
-Utilisé par l’infrastructure pour contenir des implémentations courantes pour toutes les boîtes de dialogue OLE. Toutes les classes de boîte de dialogue de la catégorie interface utilisateur sont dérivées de cette classe de base. `COleDialog`ne peut pas être utilisé directement.
+Utilisé par l’infrastructure pour contenir des implémentations courantes pour toutes les boîtes de dialogue OLE. Toutes les classes de boîte de dialogue de la catégorie interface utilisateur sont dérivées de cette classe de base. `COleDialog` ne peut pas être utilisé directement.
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 Affiche la boîte de dialogue Insérer un objet, l’interface utilisateur standard qui permet d’insérer de nouveaux éléments OLE liés ou incorporés.

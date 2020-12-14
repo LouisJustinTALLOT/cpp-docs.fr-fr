@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4152'
 title: Avertissement du compilateur (niveau 4) C4152
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4152
 ms.assetid: 6025ab70-d7cf-4730-913a-3ca0b1186a3a
-ms.openlocfilehash: 3f23026ea911c87498c148efbdcb6abb12ec215d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 518ee268f7f949d3fe6f23e8eecda4bab79be368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261773"
 ---
 # <a name="compiler-warning-level-4-c4152"></a>Avertissement du compilateur (niveau 4) C4152
 

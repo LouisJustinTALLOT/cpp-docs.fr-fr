@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de stockage'
 title: Classe de stockage
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 872a014dfc7c21b46f9af810f1cb3463016c7e09
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 87f53c38b2f71acc15499a496e98b1f9c7173210
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296730"
 ---
 # <a name="storage-class"></a>Classe de stockage
 
@@ -33,7 +34,7 @@ Le spécificateur de classe de stockage dans une définition de fonction donne �
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*Storage-Class-specifier*:/ \* pour les définitions de fonction\*/<br/>
+*Storage-Class-specifier*:/ \* pour les définitions de fonction \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`static`**
 
