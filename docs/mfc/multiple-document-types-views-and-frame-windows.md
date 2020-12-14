@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plusieurs types de documents, vues et fenêtres Frame'
 title: Types multidocuments, vues et fenêtres frame
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 873903aadc1596fbc56f9a0b0b98dbc5a948113d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05af9f0a86210804f7f83d82d9c18ddb80e47a4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275592"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 
@@ -36,7 +37,7 @@ La relation standard entre un document, sa vue et sa fenêtre frame est décrite
 
 - [Fenêtres fractionnées](#_core_splitter_windows)
 
-## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Types de documents multiples
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> Types de documents multiples
 
 L’Assistant Application MFC crée une classe de document unique pour vous. Cependant, dans certains cas, vous pouvez être amené à prendre en charge plusieurs types de document. Par exemple, votre application peut nécessiter des feuilles de calcul et des graphiques. Chaque type de document est représenté par sa propre classe de document et probablement par sa propre classe de vue. Quand l’utilisateur sélectionne la commande Fichier Nouveau, l’infrastructure affiche une boîte de dialogue qui répertorie les types de documents pris en charge. Elle crée ensuite un document du type sélectionné par l’utilisateur. Chaque type de document est géré par son propre objet modèle de document.
 
@@ -44,7 +45,7 @@ Pour créer des classes de document supplémentaires, consultez [Ajout d’une c
 
 Pour que l’infrastructure reconnaisse votre classe de document supplémentaire, vous devez ajouter un deuxième appel à [AddDocTemplate](reference/cwinapp-class.md#adddoctemplate) dans la substitution [InitInstance](reference/cwinapp-class.md#initinstance) de la classe d’application. Pour plus d’informations, consultez [Modèles de document](document-templates-and-the-document-view-creation-process.md).
 
-## <a name="multiple-views"></a><a name="_core_multiple_views"></a>Vues multiples
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a> Vues multiples
 
 Bon nombre de documents ne nécessitent qu’une seule vue, mais il est possible de prendre en charge plusieurs vues d’un même document. Pour vous aider à implémenter plusieurs vues, un objet document conserve une liste de ses vues, fournit des fonctions membres pour ajouter et supprimer des vues, et fournit la fonction membre [UpdateAllViews](reference/cdocument-class.md#updateallviews) pour prévenir plusieurs vues de la modification des données du document.
 
@@ -71,11 +72,11 @@ Pour proposer ces modèles, l’infrastructure implémente la commande Nouvelle 
 
 Pour plus d’informations sur `UpdateAllViews`, consultez la classe [CView](reference/cview-class.md) dans *Référence MFC* et [Exemple Scribble](../overview/visual-cpp-samples.md).
 
-## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Fenêtres Frame multiples
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> Fenêtres Frame multiples
 
 Vous pouvez utiliser la commande Nouvelle fenêtre du menu Fenêtre pour que les applications MDI créent une deuxième fenêtre frame du même document. Pour plus d’informations, consultez le premier modèle dans la figure Interfaces utilisateur à plusieurs vues.
 
-## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Fenêtres fractionnées
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> Fenêtres fractionnées
 
 Dans une fenêtre fractionnée, la fenêtre est, ou peut être, divisée en deux volets ou plus qu’il est possible de faire défiler. Un contrôle splitter (ou « curseur de fractionnement ») dans le frame de fenêtre à côté des barres de défilement permet à l’utilisateur d’ajuster les tailles relatives des volets. Chaque volet est une vue du même document. Dans les fenêtres fractionnées « dynamiques », les vues sont de la même classe, comme le montre la partie b de la figure Interfaces utilisateur à plusieurs vues. Dans les fenêtres fractionnées « statiques », les vues peuvent être de différentes classes. La classe [CSplitterWnd](reference/csplitterwnd-class.md)prend en charge les fenêtres fractionnées des deux types.
 

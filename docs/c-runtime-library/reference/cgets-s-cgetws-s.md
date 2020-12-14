@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _cgets_s, _cgetws_s'
 title: _cgets_s, _cgetws_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 827f3c8b155f58fe13396f5dc0c66e8999b5f942
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275085"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -77,7 +78,7 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
 *numberOfElements*<br/>
@@ -86,19 +87,19 @@ Taille de la mémoire tampon en caractères larges ou codés sur un octet, qui c
 *pSizeRead*<br/>
 Nombre de caractères véritablement lus.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est égale à zéro en cas de réussite ; sinon, un code d'erreur est retourné en cas de défaillance.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Renvoie|Contenu de la *mémoire tampon*|
+|*mémoire tampon*|*numberOfElements*|*pSizeRead*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|n/a|
+|**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|n/a|
 |non **null**|zéro|n'importe laquelle|**EINVAL**|non modifié|
-|non **null**|n'importe laquelle|**NUL**|**EINVAL**|chaîne de longueur nulle|
+|non **null**|n'importe laquelle|**NULL**|**EINVAL**|chaîne de longueur nulle|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_cgets_s** et **_cgetws_s** lire une chaîne à partir de la console et copier la chaîne (avec une marque de fin null) dans la *mémoire tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; en dehors de la taille des caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est transmise en tant que paramètre *NumberOfElements* . Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
 

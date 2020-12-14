@@ -1,5 +1,6 @@
 ---
-title: divides (struct)
+description: 'En savoir plus sur : divises struct'
+title: divides, struct
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::divides
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eae6054ea485a05747f8e282849b1fe282a89439
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232744"
 ---
-# <a name="divides-struct"></a>divides (struct)
+# <a name="divides-struct"></a>divides, struct
 
-Un objet de fonction prédéfini qui effectue l’opération de division (`operator/`) sur ses arguments.
+Objet de fonction prédéfini qui effectue l’opération de division ( `operator/` ) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +44,16 @@ struct divides<void>
 Tout type prenant en charge un `operator/` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left / Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator/`.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // functional_divides.cpp

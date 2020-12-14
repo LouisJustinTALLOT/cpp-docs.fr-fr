@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _cexit, _c_exit'
 title: _cexit, _c_exit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e901e7d7e37c8702efaae8b3b70e98a400f48ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275098"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -52,11 +53,11 @@ void _cexit( void );
 void _c_exit( void );
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_cexit** appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **atexit** et **_onexit**. Ensuite **_cexit** vide toutes les mémoires tampons d’e/s et ferme tous les flux ouverts avant de retourner. **_c_exit** est identique à **_exit** mais retourne au processus appelant sans traitement de **atexit** ou **_onexit** ou en vidant des tampons de flux. Le tableau suivant indique le comportement de **Exit**, **_exit**, **_cexit**et **_c_exit** .
+La fonction **_cexit** appelle, dans l’ordre LIFO (dernier entré, premier sorti), les fonctions inscrites par **atexit** et **_onexit**. Ensuite **_cexit** vide toutes les mémoires tampons d’e/s et ferme tous les flux ouverts avant de retourner. **_c_exit** est identique à **_exit** mais retourne au processus appelant sans traitement de **atexit** ou **_onexit** ou en vidant des tampons de flux. Le tableau suivant indique le comportement de **Exit**, **_exit**, **_cexit** et **_c_exit** .
 
-|Function|Comportement|
+|Fonction|Comportement|
 |--------------|--------------|
 |**exit**|Exécute les procédures d’arrêt complètes de la bibliothèque C, termine le processus et quitte avec le code d’état fourni.|
 |**_exit**|Exécute les procédures d’arrêt rapides de la bibliothèque C, termine le processus et quitte avec le code d’état fourni.|

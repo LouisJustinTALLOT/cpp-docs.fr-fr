@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des bibliothèques d’importation et exportation de fichiers'
 title: Utilisation de bibliothèques d'importation et de fichiers d'exportation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e1664aedf5fa87d269e0ff250e6c52d9d18259
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258796"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Utilisation de bibliothèques d'importation et de fichiers d'exportation
 
-Vous pouvez utiliser LIB avec l’option /DEF pour créer une bibliothèque d’importation et d’un fichier d’exportation. LINK utilise le fichier d’exportation pour générer un programme qui contienne des exportations (généralement une bibliothèque de liens dynamiques (DLL)), et il utilise la bibliothèque d’importation pour résoudre les références à ces exportations dans d’autres programmes.
+Vous pouvez utiliser LIB avec l’option/DEF pour créer une bibliothèque d’importation et un fichier d’exportation. LINK utilise le fichier d’exportation pour créer un programme qui contient des exportations (généralement une bibliothèque de liens dynamiques (DLL)) et utilise la bibliothèque d’importation pour résoudre les références à ces exportations dans d’autres programmes.
 
-Notez que si vous créez votre bibliothèque d’importation dans une étape préliminaire, avant de créer votre fichier .dll, vous devez passer le même ensemble de fichiers objets lors de la génération du fichier .dll que vous avez passé lors de la création de la bibliothèque d’importation.
+Notez que si vous créez votre bibliothèque d’importation à une étape préliminaire, avant de créer votre fichier. dll, vous devez passer le même ensemble de fichiers objets lors de la génération du fichier. dll, comme vous l’avez passé lors de la génération de la bibliothèque d’importation.
 
-Dans la plupart des cas, il est inutile d’utiliser LIB pour créer votre bibliothèque d’importation. Lorsque vous liez un programme (un fichier exécutable ou une DLL) qui contient des exportations, LINK crée automatiquement une bibliothèque d’importation décrivant les exportations. Plus tard, lorsque vous liez un programme qui fait référence à ces exportations, vous spécifiez la bibliothèque d’importation.
+Dans la plupart des cas, vous n’avez pas besoin d’utiliser LIB pour créer votre bibliothèque d’importation. Quand vous liez un programme (fichier exécutable ou DLL) qui contient des exportations, LINK crée automatiquement une bibliothèque d’importation qui décrit les exportations. Plus tard, lorsque vous lierez un programme qui référence ces exportations, vous spécifiez la bibliothèque d’importation.
 
-Toutefois, quand une DLL exporte vers un programme qu’il importe également à partir de, si directement ou indirectement, vous devez utiliser LIB pour créer une des bibliothèques d’importation. Quand LIB crée une bibliothèque d’importation, il crée également un fichier d’exportation. Vous devez utiliser le fichier d’exportation lors de la liaison d’une des DLL.
+Toutefois, lorsqu’une DLL exporte vers un programme à partir duquel elle importe également, que ce soit directement ou indirectement, vous devez utiliser LIB pour créer l’une des bibliothèques d’importation. Lorsque LIB crée une bibliothèque d’importation, il crée également un fichier d’exportation. Vous devez utiliser le fichier d’exportation lors de la liaison de l’une des dll.
 
 ## <a name="see-also"></a>Voir aussi
 

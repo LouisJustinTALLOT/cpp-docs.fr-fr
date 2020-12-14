@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classe filesystem_error'
 title: filesystem_error, classe
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: 1d142057859f1ca173f8953b34c07bbb3803ecba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8165bfbc0d59dbbdab17d910e2e2f7973988049d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232432"
 ---
 # <a name="filesystem_error-class"></a>filesystem_error, classe
 
@@ -33,7 +34,7 @@ La classe sert de classe de base pour toutes les exceptions levées pour signale
 |-|-|
 |[filesystem_error](#filesystem_error)|Construit un `filesystem_error` message.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -41,7 +42,7 @@ La classe sert de classe de base pour toutes les exceptions levées pour signale
 |[chemin2](#path2)|Retourne `mypval2`.|
 |[données](#what)|Retourne un pointeur vers `NTBS`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<filesystem>
 

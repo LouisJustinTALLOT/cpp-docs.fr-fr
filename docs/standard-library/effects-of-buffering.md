@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les effets de la mise en mémoire tampon
 title: Effets de la mise en mémoire tampon
 ms.date: 11/04/2016
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: 1f28748f1e7a837ad87ef1cfcebc56d3410d0fd2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dc46a5a7a390250be1872f9264235e133b9f58ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232718"
 ---
 # <a name="effects-of-buffering"></a>Effets de la mise en mémoire tampon
 
@@ -39,7 +40,7 @@ Pour que le programme fonctionne de manière logique, l’objet `cout` doit se v
 cout <<"Please wait..." <<flush;
 ```
 
-Cette étape vide la mémoire tampon, en s’assurant que le message s’affiche avant l’attente. Vous pouvez également utiliser le `endl` manipulateur, qui vide la mémoire tampon et génère un retour chariot-saut de ligne, ou vous pouvez utiliser `cin` l’objet. Cet objet (avec les objets `cerr` ou `clog` ) est généralement lié à l’objet `cout` . Ainsi, toute utilisation de `cin` (ou des objets `cerr` ou `clog` ) entraîne le vidage de l’objet `cout` .
+Cette étape vide la mémoire tampon, en s’assurant que le message s’affiche avant l’attente. Vous pouvez également utiliser le `endl` manipulateur, qui vide la mémoire tampon et génère un retour chariot-saut de ligne, ou vous pouvez utiliser l' `cin` objet. Cet objet (avec les objets `cerr` ou `clog` ) est généralement lié à l’objet `cout` . Ainsi, toute utilisation de `cin` (ou des objets `cerr` ou `clog` ) entraîne le vidage de l’objet `cout` .
 
 ## <a name="see-also"></a>Voir aussi
 

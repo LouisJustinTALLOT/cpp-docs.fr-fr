@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : constantes de type de données'
 title: Constantes de type de données
 ms.date: 06/25/2018
 f1_keywords:
@@ -139,12 +140,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb1c16cb730ea40a60a5929867fa8a36b17190ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258835"
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 
@@ -161,15 +162,15 @@ Ces constantes offrent les plages pour les types de données intégraux. Pour ut
 > [!NOTE]
 > L' [`/J`](../build/reference/j-default-char-type-is-unsigned.md) option de compilateur remplace le type par défaut par **`char`** **`signed char`** **`unsigned char`** .
 
-|Constant|Valeur|Description|
+|Constante|Valeur|Description|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Nombre de bits dans un**`char`**|
+|**CHAR_BIT**|8|Nombre de bits dans un **`char`**|
 |**SCHAR_MIN**|(-128)|**`signed char`** Valeur minimale|
 |**SCHAR_MAX**|127|**`signed char`** Valeur maximale|
 |**UCHAR_MAX**|255 (0xff)|**`unsigned char`** Valeur maximale|
 |**CHAR_MIN**|(-128) (0 si l' **`/J`** option est utilisée)|**`char`** Valeur minimale|
 |**CHAR_MAX**|127 (255 si l' **`/J`** option est utilisée)|**`char`** Valeur maximale|
-|**MB_LEN_MAX**|5|Nombre maximal d’octets en multioctets**`char`**|
+|**MB_LEN_MAX**|5|Nombre maximal d’octets en multioctets **`char`**|
 |**SHRT_MIN**|-32768|**`signed short`** Valeur minimale|
 |**SHRT_MAX**|32767|**`signed short`** Valeur maximale|
 |**USHRT_MAX**|65535 (0xffff)|**`unsigned short`** Valeur maximale|
@@ -208,7 +209,7 @@ Les constantes suivantes donnent la plage et d’autres caractéristiques des **
 #include <float.h>
 ```
 
-|Constant|Valeur|Description|
+|Constante|Valeur|Description|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Nombre de chiffres décimaux de précision de l’arrondi|
 |**DBL_DIG**|15|# de chiffres décimaux de précision|
