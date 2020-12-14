@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs de bits C'
 title: Opérateurs de bits C
 ms.date: 01/29/2018
 helpviewer_keywords:
@@ -12,24 +13,24 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8cbdb5309d5351f77306007e8acd1675be5e2a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211581"
 ---
 # <a name="c-bitwise-operators"></a>Opérateurs de bits C
 
-Les opérateurs au niveau du bit effectuent**&** des opérations au niveau du bit and (**^**), au niveau du bit exclusive-or () et au niveau du bit (**&#124;**).
+Les opérateurs au niveau du bit effectuent des opérations au niveau du bit and (), au niveau du **&** bit exclusive-or ( **^** ) et au niveau du bit (**&#124;**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*And-expression*: &nbsp; &nbsp; *égalité-expression* &nbsp; &nbsp; *et-* **&** expression d' *égalité* d’expression
+*And-expression*: &nbsp; &nbsp; *égalité-expression* &nbsp; &nbsp; *et-* **&**  expression d’égalité d’expression
 
-*exclusive-or-expression*: &nbsp; &nbsp; *and-expression* &nbsp; &nbsp; *exclusive-or-* **^** expression *et-expression*
+*exclusive-or-expression*: &nbsp; &nbsp; *and-expression* &nbsp; &nbsp; *exclusive-or-* expression **^** *et-expression*
 
-*inclusif-* or-expression &nbsp;: &nbsp; *exclusive-or-expression* &nbsp; &nbsp; *inclusive* -or-expression &#124; *exclusive-or-expression*
+*inclusif-* or-expression : &nbsp; &nbsp; *exclusive-or-expression* inclusive-or-expression &nbsp; &nbsp;  &#124; *exclusive-or-expression*
 
 Les opérandes des opérateurs de bits doivent avoir des types intégraux, mais leurs types peuvent être différents. Ces opérateurs exécutent les conversions arithmétiques habituelles ; le type du résultat est le type de l'opérande après conversion.
 

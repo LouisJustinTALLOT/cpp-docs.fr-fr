@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _free_locale'
 title: _free_locale
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 441686a1ee037097c164ae60b4ccc418f0d38ac8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211269"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -55,7 +56,7 @@ void _free_locale(
 *locale*<br/>
 Objet de paramètres régionaux à libérer.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_free_locale** est utilisée pour libérer l’objet de paramètres régionaux obtenu à partir d’un appel à **_get_current_locale** ou **_create_locale**.
 

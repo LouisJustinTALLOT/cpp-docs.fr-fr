@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : setbuf'
 title: setbuf
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 756cb09fb35ed6e8cf6369f20693e2f0f0b7acaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211061"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,12 +53,12 @@ void setbuf(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon allouée par l’utilisateur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **setbuf** contrôle la mise en mémoire tampon pour le *flux*. L’argument *Stream* doit faire référence à un fichier ouvert qui n’a pas été lu ou écrit. Si l’argument de *mémoire tampon* a la **valeur null**, le flux n’est pas mis en mémoire tampon. Si ce n’est pas le cas, la mémoire tampon doit pointer vers un tableau de caractères de longueur **BUFSIZ**, où **BUFSIZ** est la taille de la mémoire tampon telle qu’elle est définie dans stdio. Manutention. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le flux **stderr** n’est pas mis en mémoire tampon par défaut, mais vous pouvez utiliser **setbuf** pour assigner des mémoires tampons à **stderr**.
+La fonction **setbuf** contrôle la mise en mémoire tampon pour le *flux*. L’argument *Stream* doit faire référence à un fichier ouvert qui n’a pas été lu ou écrit. Si l’argument de *mémoire tampon* a la **valeur null**, le flux n’est pas mis en mémoire tampon. Si ce n’est pas le cas, la mémoire tampon doit pointer vers un tableau de caractères de longueur **BUFSIZ**, où **BUFSIZ** est la taille de la mémoire tampon telle qu’elle est définie dans stdio. H. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le flux **stderr** n’est pas mis en mémoire tampon par défaut, mais vous pouvez utiliser **setbuf** pour assigner des mémoires tampons à **stderr**.
 
 **setbuf** a été remplacé par [setvbuf](setvbuf.md), qui est la routine préférée pour le nouveau code. Contrairement à **setvbuf**, **setbuf** n’a aucun moyen de signaler des erreurs. **setvbuf** vous permet également de contrôler à la fois le mode de mise en mémoire tampon et la taille de la mémoire tampon. **setbuf** existe pour la compatibilité avec le code existant.
 

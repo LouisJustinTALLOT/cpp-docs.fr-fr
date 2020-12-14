@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __vectorcall'
 title: __vectorcall
 ms.date: 12/17/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: 313a5a1b3620120223fde6ab864dc36284e70fa1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 223576b7aec37434cb9574d744e9ebc1b9aa88f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210970"
 ---
 # <a name="__vectorcall"></a>__vectorcall
 
@@ -299,5 +300,5 @@ int __cdecl main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Réussite des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)<br/>
+[Passage des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

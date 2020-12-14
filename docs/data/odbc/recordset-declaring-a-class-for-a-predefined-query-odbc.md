@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Recordset : déclaration d’une classe pour une requête prédéfinie (ODBC)'
 title: "Recordset : déclaration de la classe d'une requête prédéfinie (ODBC)"
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2071270bbff92e56b7fc3a2064e7e2f99f2044b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210944"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset : déclaration de la classe d'une requête prédéfinie (ODBC)
 
@@ -25,7 +26,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 Cette rubrique explique comment créer une classe de recordset pour une requête prédéfinie (parfois appelée procédure stockée, comme dans Microsoft SQL Server).
 
 > [!NOTE]
-> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si la récupération de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les enregistrements qui implémentent la ligne en vrac et ceux qui ne le font pas, voir [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si la récupération de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les recordsets qui implémentent l’extraction de lignes en bloc et ceux qui ne le sont pas, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Certains systèmes de gestion de base de données (SGBD) vous permettent de créer une requête prédéfinie et de l’appeler de votre programme comme une fonction. La requête a toujours un nom, et elle peut éventuellement prendre des paramètres et retourner des enregistrements. La procédure dans cette rubrique décrit comment appeler une requête prédéfinie qui retourne des enregistrements (et prend éventuellement des paramètres).
 
@@ -66,7 +67,7 @@ Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une r
 
 1. Si la requête prend des paramètres, ajoutez un membre de données de paramètre pour chaque paramètre, ainsi qu’un appel de fonction RFX et une initialisation pour chacun.
 
-1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous avez incrémenté `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, voir [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous avez incrémenté `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Ajoutez manuellement une chaîne d’instruction SQL au format suivant :
 
@@ -156,6 +157,6 @@ Ce code construit un instantané, passe à cet instantané un paramètre obtenu 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Recordset : déclaration de la classe d'une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset : création d'une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : rerequête d’un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Recordset : déclaration d’une classe pour une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset : exécution d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

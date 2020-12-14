@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_SSE2_enable'
 title: _set_SSE2_enable
 ms.date: 04/05/2018
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-ms.openlocfilehash: 8838282db851c6811a3f24c75a03b31c5870e6d3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9c82b2f17d90bc158ac77b8d7ad9625491856aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211204"
 ---
 # <a name="_set_sse2_enable"></a>_set_SSE2_enable
 
-Active ou désactive l’utilisation des instructions SSE2 (streaming SIMD Extensions 2) dans les routines mathématiques CRT. (Cette fonction n’est pas disponible dans les architectures x64, car SSE2 est activé par défaut.)
+Active ou désactive l’utilisation d’instructions SSE2 (Streaming SIMD Extensions 2) dans les routines mathématiques CRT. (Cette fonction n’est pas disponible dans les architectures x64, car SSE2 est activé par défaut.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,7 +52,7 @@ int _set_SSE2_enable(
 *flag*<br/>
 1 pour activer l’implémentation SSE2 ; 0 pour désactiver l’implémentation SSE2. Par défaut, l’implémentation SSE2 est activée sur les processeurs qui la prennent en charge.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’implémentation SSE2 est activée ; zéro si l’implémentation SSE2 est désactivée.
 
@@ -67,28 +68,28 @@ Les fonctions suivantes ont des implémentations SSE2 qui peuvent être activée
 
 - [floor](floor-floorf-floorl.md)
 
-- [log](log-logf-log10-log10f.md)
+- [Sign](log-logf-log10-log10f.md)
 
 - [log10](log-logf-log10-log10f.md)
 
 - [modf](modf-modff-modfl.md)
 
-- [pow](pow-powf-powl.md)
+- [Poe](pow-powf-powl.md)
 
 Les implémentations SSE2 de ces fonctions peuvent donner des réponses légèrement différentes de celles apportées par les implémentations par défaut, car les valeurs intermédiaires SSE2 sont des quantités en virgule flottante de 64 bits, alors que les valeurs intermédiaires des implémentations par défaut sont des quantités en virgule flottante de 80 bits.
 
 > [!NOTE]
-> Si vous utilisez l’option du compilateur [/Oi (générer des fonctions intrinsèques)](../../build/reference/oi-generate-intrinsic-functions.md) pour compiler le projet, il peut sembler que **_set_SSE2_enable** n’ait aucun effet. L’option du compilateur **/OI** donne au compilateur l’autorité d’utiliser des fonctions intrinsèques pour remplacer les appels CRT. ce comportement remplace l’effet de **_set_SSE2_enable**. Si vous souhaitez garantir que **/OI** ne remplace pas **_set_SSE2_enable**, utilisez **/OI-** pour compiler votre projet. Cela peut également être une bonne pratique lorsque vous utilisez d’autres commutateurs de compilateur qui impliquent **/OI**.
+> Si vous utilisez l’option du compilateur [/Oi (générer des fonctions intrinsèques)](../../build/reference/oi-generate-intrinsic-functions.md) pour compiler le projet, cela peut sembler que **_set_SSE2_enable** n’a aucun effet. L’option du compilateur **/OI** donne au compilateur l’autorité d’utiliser des fonctions intrinsèques pour remplacer les appels CRT. ce comportement remplace l’effet de **_set_SSE2_enable**. Si vous souhaitez garantir que **/OI** ne remplace pas **_set_SSE2_enable**, utilisez **/OI-** pour compiler votre projet. Cela peut également être une bonne pratique lorsque vous utilisez d’autres commutateurs de compilateur qui impliquent **/OI**.
 
 L’implémentation SSE2 n’est utilisée que si toutes les exceptions sont masquées. Pour masquer les exceptions, utilisez [_control87, _controlfp](control87-controlfp-control87-2.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_set_SSE2_enable**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -115,4 +116,4 @@ SSE2 enabled.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md)<br/>
+[Fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md)<br/>

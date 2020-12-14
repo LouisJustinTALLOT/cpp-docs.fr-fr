@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN055 : migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC'
 title: 'TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC'
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d1afd599384bd6e5c3083abf661a7128c0154b22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214882"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055 : Migration des applications de classe de base de données ODBC MFC vers des classes DAO MFC
 
 > [!NOTE]
-> DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement C++ visuel et les assistants ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
+> DAO est utilisé avec les bases de données Access et est pris en charge via Office 2013. DAO 3,6 est la version finale et est considéré comme obsolète. L’environnement et les assistants de Visual C++ ne prennent pas en charge DAO (bien que les classes DAO soient incluses et vous puissiez toujours les utiliser). Microsoft vous recommande d’utiliser les [modèles OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous ne devez utiliser que DAO pour gérer les applications existantes.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Vue d’ensemble
 
 Dans de nombreux cas, il peut être souhaitable de migrer les applications qui utilisent les classes de la base de données ODBC de MFC vers les classes de bases de données DAO de MFC. Cette note technique détaillera la plupart des différences entre les classes ODBC et DAO de MFC. Avec les différences à l'esprit, il ne doit pas être très difficile de migrer des applications depuis les classes ODBC vers les classes de MFC si vous le souhaitez.
 
@@ -74,12 +75,12 @@ Les différences les plus évidentes entre les classes sont probablement les cha
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (basé sur`COleDateTime`)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` ( `COleDateTime` -based)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> la fonction `RFX_Date` est basée sur `CTime` et `TIMESTAMP_STRUCT`.
+<sup>1</sup> la `RFX_Date` fonction est basée sur `CTime` et `TIMESTAMP_STRUCT` .
 
 Les principales modifications apportées aux fonctionnalités qui peuvent affecter votre application et qui requièrent plus que de simples changements de nom sont répertoriées ci-dessous.
 
@@ -87,9 +88,9 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
    Avec les classes ODBC, MFC avait besoin de définir ces options via des macros ou des types énumérés.
 
-   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous pouvez utiliser la **capture instantanée** lors de la spécification du type de `CRecordset` dans ODBC, mais **DB_OPEN_SNAPSHOT** lors de la spécification du type de `CDaoRecordset`.
+   Avec les classes DAO, DAO fournit la définition de ces options dans un fichier d'en-tête (DBDAOINT.H). Ce type d'ensemble d'enregistrements est un membre énuméré de `CRecordset`, mais avec DAO il s'agit en fait d'une constante. Par exemple, vous pouvez utiliser l' **instantané** lors de la spécification du type de `CRecordset` dans ODBC, mais **DB_OPEN_SNAPSHOT** lors de la spécification du type de `CDaoRecordset` .
 
-- Le type de jeu d’enregistrements par défaut pour `CRecordset` est **snapshot** , tandis que le type de jeu d’enregistrements par défaut pour `CDaoRecordset` est **Dynaset** (voir la remarque ci-dessous pour obtenir un autre problème concernant les instantanés de classe ODBC).
+- Le type de jeu d’enregistrements par défaut pour `CRecordset` est **instantané** , tandis que le type de jeu d’enregistrements par défaut pour `CDaoRecordset` est **Dynaset** (voir la remarque ci-dessous pour obtenir un autre problème concernant les instantanés de classe ODBC).
 
 - La classe ODBC `CRecordset` comporte une option permettant de créer un type de jeu d'enregistrements basé sur le transfert uniquement. Dans la classe `CDaoRecordset`, le transfert uniquement n'est pas un type de jeu d'enregistrements, mais plutôt une propriété (ou option) de certains types de jeux d'enregistrements.
 
@@ -99,10 +100,10 @@ Les principales modifications apportées aux fonctionnalités qui peuvent affect
 
 - La classe d'exception a été modifiée. `CDBExceptions` sont levées dans les classes ODBC et `CDaoExceptions` dans les classes DAO.
 
-- `RFX_Date` utilise les objets `CTime` et `TIMESTAMP_STRUCT` quand `DFX_Date` utilise `COleDateTime`. La `COleDateTime` est quasiment identique à `CTime`, mais elle est basée sur une **Date** OLE de 8 octets plutôt que sur une **time_t** de 4 octets afin de pouvoir contenir une plus grande plage de données.
+- `RFX_Date` utilise `CTime` les `TIMESTAMP_STRUCT` objets et Pendant que `DFX_Date` utilise `COleDateTime` . Le `COleDateTime` est quasiment identique à `CTime` , mais il est basé sur une **Date** OLE de 8 octets plutôt que sur une **time_t** de 4 octets, de sorte qu’il peut contenir une plus grande plage de données.
 
    > [!NOTE]
-   > Les instantanés (`CDaoRecordset`) DAO sont en lecture seule alors que les instantanés (`CRecordset`) ODBC peuvent être modifiés selon le pilote et l'utilisation de la bibliothèque de curseurs ODBC. Si vous utilisez la bibliothèque de curseurs, les instantanés `CRecordset` sont modifiables. Si vous utilisez des pilotes Microsoft issus de Desktop Driver Pack 3.0 sans bibliothèque de curseurs ODBC, les instantanés `CRecordset` sont en lecture seule. Si vous utilisez un autre pilote, consultez la documentation du pilote pour savoir si les captures instantanées (`STATIC_CURSORS`) sont en lecture seule.
+   > Les instantanés (`CDaoRecordset`) DAO sont en lecture seule alors que les instantanés (`CRecordset`) ODBC peuvent être modifiés selon le pilote et l'utilisation de la bibliothèque de curseurs ODBC. Si vous utilisez la bibliothèque de curseurs, les instantanés `CRecordset` sont modifiables. Si vous utilisez des pilotes Microsoft issus de Desktop Driver Pack 3.0 sans bibliothèque de curseurs ODBC, les instantanés `CRecordset` sont en lecture seule. Si vous utilisez un autre pilote, consultez la documentation du pilote pour savoir si les instantanés ( `STATIC_CURSORS` ) sont en lecture seule.
 
 ## <a name="see-also"></a>Voir aussi
 

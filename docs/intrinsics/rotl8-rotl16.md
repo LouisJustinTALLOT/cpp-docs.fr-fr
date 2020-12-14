@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _rotl8, _rotl16'
 title: _rotl8, _rotl16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71ef10bb6af750fc08955fbdf82975b1ed32fa94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211906"
 ---
 # <a name="_rotl8-_rotl16"></a>_rotl8, _rotl16
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Faire pivoter les valeurs d'entrée vers la gauche pour le bit le plus significatif (MSB) d'un nombre spécifié de positions de bits.
 
@@ -36,24 +37,24 @@ unsigned short _rotl16(
 
 ### <a name="parameters"></a>Paramètres
 
-*value*\
+*ajoutée*\
 dans Valeur à faire pivoter.
 
 *majuscule*\
 dans Nombre de bits à faire pivoter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Valeur ayant fait l'objet d'une rotation.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_rotl8`|x86, ARM, x64, ARM64|
 |`_rotl16`|x86, ARM, x64, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -98,7 +99,7 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

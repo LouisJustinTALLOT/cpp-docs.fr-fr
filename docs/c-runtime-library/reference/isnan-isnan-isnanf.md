@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : isNaN, _isnan, _isnanf'
 title: isnan, _isnan, _isnanf
 ms.date: 01/31/2019
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: 5aebacd15000e0202a26f600614900390c1ba7a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 819b53740c6717f0ba8d18376a38c91c80ee03c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211243"
 ---
 # <a name="isnan-_isnan-_isnanf"></a>isnan, _isnan, _isnanf
 
@@ -72,7 +73,7 @@ bool isnan(
 *x*<br/>
 Valeur à virgule flottante à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En C, la macro **IsNaN** et les fonctions **_isnan** et **_isnanf** retournent une valeur différente de zéro si l’argument *x* est une valeur NaN ; Sinon, elles retournent 0.
 
@@ -101,5 +102,5 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf,](isinf.md)<br/>
 [isnormal](isnormal.md)<br/>

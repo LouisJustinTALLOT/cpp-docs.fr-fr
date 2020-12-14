@@ -1,5 +1,6 @@
 ---
-title: 'TN056 : Installation des composants MFC localisés'
+description: 'En savoir plus sur : TN056 : installation de composants MFC localisés'
+title: 'TN056 : installation de composants MFC localisés'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - components [MFC]
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - localization [MFC], resources
 - installing MFC components
 ms.assetid: 0b582615-3bb1-4fc0-b569-d127d6deccd3
-ms.openlocfilehash: df60bef3611d4e517998f6be5c769750c37f1f08
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: fc08d3213f0da24ee5c29cb8c8020977d647422d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214856"
 ---
-# <a name="tn056-installation-of-localized-mfc-components"></a>TN056 : Installation des composants MFC localisés
+# <a name="tn056-installation-of-localized-mfc-components"></a>TN056 : installation de composants MFC localisés
 
-Cette note technique, qui décrit l’installation de composants MFC localisés, est désormais obsolète.
+Cette note technique, qui a abordé l’installation des composants MFC localisés, est désormais obsolète.
 
-**Consultez** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) pour plus d’informations sur la localisation des applications MFC.
+Pour plus d’informations sur la localisation des applications MFC, **consultez** la page [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

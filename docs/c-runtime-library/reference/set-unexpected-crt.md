@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : set_unexpected (CRT)'
 title: set_unexpected (CRT)
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: f05eab14a53c8abc119a8014d5ac99dc076a9c25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b9665a73f87d64cd991ff8ce296a4c14957b30ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211074"
 ---
 # <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
@@ -47,7 +48,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 *unexpFunction*<br/>
 Pointeur vers une fonction que vous écrivez pour remplacer la fonction **inattendue** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la fonction d’arrêt précédente inscrite par **_set_unexpected** afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 

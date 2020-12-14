@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions d’espace de noms d’accès concurrentiel (AMP)'
 title: Concurrency, fonctions de l’espace de noms (AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: b03a6189d2205dff62d94f07bc597ca2e1013a28
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 65255f14acdc402003be46de5f978da6d9a8f8ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211815"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency, fonctions de l’espace de noms (AMP)
 

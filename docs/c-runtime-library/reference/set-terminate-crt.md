@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : set_terminate (CRT)'
 title: set_terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b25e141bc9299389c80e629ff6eb03d7deba23c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211100"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -50,7 +51,7 @@ terminate_function set_terminate( terminate_function termFunction );
 *termFunction*<br/>
 Pointeur désignant une fonction d’arrêt que vous écrivez.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la fonction précédente inscrite par **set_terminate** afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 

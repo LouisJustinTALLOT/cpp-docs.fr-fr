@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe value_compare'
 title: value_compare, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: d64d51869ca8db1ed42e9d33691f59da4473d8d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d77412b2d979ef4db84621df1b0c94191f3d2a5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211711"
 ---
 # <a name="value_compare-class"></a>value_compare, classe
 
@@ -39,7 +40,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Les critères de comparaison fournis par value_compare entre `value_types` d’éléments entiers contenus dans un hash_map sont induits d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
+Les critères de comparaison fournis par value_compare entre les `value_types` éléments entiers contenus dans une hash_map sont induits par la comparaison entre les clés des éléments respectifs et la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
 
 Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, value_compare équivaut à `key_compare` ; pour les objets hash_map et hash_multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -49,12 +50,12 @@ Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<hash_map >
+**En-tête :**\<hash_map>
 
 **Espace de noms :** stdext
 
 ## <a name="see-also"></a>Voir aussi
 
-[binary_function, struct](../standard-library/binary-function-struct.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)
+[Struct binary_function](../standard-library/binary-function-struct.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

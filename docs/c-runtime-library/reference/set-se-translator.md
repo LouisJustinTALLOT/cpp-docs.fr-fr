@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_se_translator'
 title: _set_se_translator
 ms.date: 02/21/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211230"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -50,7 +51,7 @@ _se_translator_function _set_se_translator(
 *seTransFunction*<br/>
 Pointeur vers une fonction de traduction d'exceptions structurées C que vous écrivez.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la précédente fonction de traduction enregistrée par **_set_se_translator**, afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **`nullptr`** .
 
@@ -76,7 +77,7 @@ Pour **_set_se_translator**, il existe des implications lors de la liaison dynam
 
 Lorsque vous utilisez **_set_se_translator** à partir du code managé (code compilé avec/CLR) ou du code natif et managé mixte, sachez que le traducteur affecte les exceptions générées uniquement en code natif. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquées par une exception système telle qu’une exception de division par zéro sont acheminées via le traducteur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -236,4 +237,4 @@ Caught SE_Exception, error c0000094
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [pire](terminate-crt.md)<br/>
-[inattendu](unexpected-crt.md)<br/>
+[erreur](unexpected-crt.md)<br/>

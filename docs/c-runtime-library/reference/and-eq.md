@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : and_eq'
 title: and_eq
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - and_eq macro
 ms.assetid: 11091772-e359-4c2b-95c6-00841ac04354
-ms.openlocfilehash: f505faa561dafc5ba0f929f94676e0ee81a32199
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7cf751368f578b1de501c58a01893fd76087af32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211373"
 ---
 # <a name="and_eq"></a>and_eq
 
@@ -72,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<ISO646. h >
+**En-tête :**\<iso646.h>

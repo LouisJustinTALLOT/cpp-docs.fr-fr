@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : asctime_s, _wasctime_s'
 title: asctime_s, _wasctime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d743aea81abdba2e1aa2b470f71081cb92e6fc64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211321"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -83,7 +84,7 @@ Taille de la mémoire tampon utilisée pour stocker le résultat.
 *tmSource*<br/>
 Structure date/heure. Cette fonction suppose un pointeur vers un **`struct`** objet **TM** valide.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans ERRNO.H. Pour plus d’informations, consultez [Constantes errno](../../c-runtime-library/errno-constants.md). Les codes d’erreur retournés pour chaque condition d’erreur sont répertoriés dans le tableau suivant.
 
@@ -102,7 +103,7 @@ Zéro si l’opération réussit. En cas d’échec, le gestionnaire de paramèt
 
 ## <a name="remarks"></a>Notes
 
-La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *tmSource* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**. Les deux fonctions peuvent être utilisées pour remplir une structure **TM** , comme défini dans Time. Manutention.
+La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *tmSource* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**. Les deux fonctions peuvent être utilisées pour remplir une structure **TM** , telle que définie dans Time. H.
 
 |Membre de timeptr|Valeur|
 |--------------------|-----------|
