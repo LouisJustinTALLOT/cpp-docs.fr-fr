@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3622'
 title: Erreur du compilateur C3622
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
-ms.openlocfilehash: 8775ff6fd78f1092ae931921a2b15ed2f8b166e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19c599fced524001f360a4ad462a9dbebbfb2fa3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223033"
 ---
 # <a name="compiler-error-c3622"></a>Erreur du compilateur C3622
 

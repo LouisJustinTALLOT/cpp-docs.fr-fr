@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _cgets, _cgetws'
 title: _cgets, _cgetws
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ac712c7ee51c3f06dfe1dd4e881630768a7e6b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221681"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -71,14 +72,14 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 `_cgets` et `_cgetws` retournent un pointeur vers le début de la chaîne, à l’emplacement `buffer[2]`. Si `buffer` a la valeur **NULL** ou est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à continuer, elles retournent **NULL** et définissent `errno` avec la valeur `EINVAL`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions lisent une chaîne de caractères à partir de la console, et stockent la chaîne et sa longueur à l’emplacement désigné par `buffer`. Le paramètre `buffer` doit être un pointeur vers un tableau de caractères. Le premier élément du tableau, `buffer[0]`, doit contenir la longueur maximale (en caractères) de la chaîne à lire. Le tableau doit contenir suffisamment d’éléments pour stocker la chaîne, un caractère null de fin (« \0 ») et 2 octets supplémentaires. La fonction lit les caractères jusqu’à une combinaison CRLF (retour chariot - saut de ligne) ou jusqu’à ce que le nombre de caractères spécifiés soit lu. La chaîne est stockée à partir de `buffer[2]`. Si la fonction lit un CRLF, elle stocke le caractère null (« \0 »). La fonction stocke ensuite la longueur réelle de la chaîne dans le deuxième élément du tableau, `buffer[1]`.
 

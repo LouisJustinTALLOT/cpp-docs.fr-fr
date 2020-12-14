@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDataRecoveryHandler'
 title: CDataRecoveryHandler, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72189916f4555152ccc8997600d8426e188bb65c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222136"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler, classe
 
@@ -148,7 +149,7 @@ Avant de pouvoir utiliser un `CDataRecoveryHandler` objet, vous devez appeler [C
 
 Étant donné que la `CDataRecoveryHandler` classe est étroitement connectée au gestionnaire de redémarrage, `CDataRecoveryHandler` dépend du paramètre global `m_dwRestartManagerSupportFlags` . Ce paramètre détermine les autorisations dont dispose le gestionnaire de redémarrage et comment il interagit avec votre application. Pour incorporer le gestionnaire de redémarrage dans une application existante, vous devez assigner `m_dwRestartManagerSupportFlags` la valeur appropriée dans le constructeur de votre application principale. Pour plus d’informations sur l’utilisation du gestionnaire de redémarrage, consultez [Comment : ajouter la prise en charge du gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdatarecovery. h
 
@@ -345,7 +346,7 @@ Nom du document à partir de *pDocument*.
 
 ### <a name="remarks"></a>Notes
 
-`CDataRecoveryHandler`Utilise le nom du document comme clé dans *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr*et *m_mapDocNameToRestoreBool*. Ces paramètres permettent au `CDataRecoveryHandler` de surveiller les `CDocument` objets, le nom du fichier d’enregistrement automatique et les paramètres d’enregistrement automatique.
+`CDataRecoveryHandler`Utilise le nom du document comme clé dans *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr* et *m_mapDocNameToRestoreBool*. Ces paramètres permettent au `CDataRecoveryHandler` de surveiller les `CDocument` objets, le nom du fichier d’enregistrement automatique et les paramètres d’enregistrement automatique.
 
 ## <a name="cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a> CDataRecoveryHandler::GetNormalDocumentTitle
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctionnel (STL/CLR)'
 title: functional (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -63,24 +64,24 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 48db11b7a30ae46eb52ff73cd961759e6be93fc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223566"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
 Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir le nombre de classes de modèle et les délégués et fonctions associés aux modèles.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 #include <functional>
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/functional>
 
@@ -150,7 +151,7 @@ Type du deuxième argument.
 *Résultat*<br/>
 Type de retour.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le délégué genereic décrit une fonction à deux arguments.
 
@@ -222,7 +223,7 @@ Type du premier argument.
 *Arg2*<br/>
 Type du deuxième argument.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le délégué genereic décrit une fonction à deux arguments qui retourne **`void`** .
 
@@ -324,7 +325,7 @@ Type de l’functor stocké.
 |operator()|Calcule la fonction souhaitée.|
 |opérateur delegate_type ^ ()|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments qui stocke un autre functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le not logique du functor stocké appelé avec les deux arguments.
 
@@ -390,7 +391,7 @@ int main()
 
 Génère un `binder1st` pour un argument et un functor.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<typename Fun,
@@ -415,7 +416,7 @@ Functor à encapsuler.
 *gauche*<br/>
 Premier argument à inclure dans un wrapper.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne [binder1st, (STL/CLR)](#binder1st) `<Fun>(functor, left)` . Vous l’utilisez comme un moyen pratique d’encapsuler un functor à deux arguments et son premier argument dans un functor à un argument qui l’appelle avec un deuxième argument.
 
@@ -471,7 +472,7 @@ int main()
 
 Génère un `binder2nd` pour un argument et un functor.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<typename Fun,
@@ -496,7 +497,7 @@ Functor à encapsuler.
 *Oui*<br/>
 Deuxième argument à inclure dans un wrapper.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne [binder2nd, (STL/CLR)](#binder2nd) `<Fun>(functor, right)` . Vous l’utilisez comme un moyen pratique d’encapsuler un functor à deux arguments et son deuxième argument dans un functor à un argument qui l’appelle avec un premier argument.
 
@@ -599,7 +600,7 @@ Type de l’functor stocké.
 |operator()|Calcule la fonction souhaitée.|
 |opérateur delegate_type ^ ()|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à un argument qui stocke un functor à deux arguments et un premier argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, retourne le résultat de l’appel de la fonction de functor stockée avec le premier argument stocké et le deuxième argument fourni.
 
@@ -704,7 +705,7 @@ Type de l’functor stocké.
 |operator()|Calcule la fonction souhaitée.|
 |opérateur delegate_type ^ ()|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à un argument qui stocke un functor à deux arguments et un second argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, retourne le résultat de l’appel de la fonction de functor stockée avec le premier argument fourni et le deuxième argument stocké.
 
@@ -808,7 +809,7 @@ Type des arguments et de la valeur de retour.
 |operator()|Calcule la fonction souhaitée.|
 |opérateur delegate_type ^ ()|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le premier argument divisé par le second.
 
@@ -909,7 +910,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |opérateur delegate_type ^ ()|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument est égal au second.
 
@@ -1010,7 +1011,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument est supérieur au second.
 
@@ -1111,7 +1112,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument est supérieur ou égal au second.
 
@@ -1212,7 +1213,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument est inférieur au second.
 
@@ -1313,7 +1314,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument est inférieur ou égal au second.
 
@@ -1414,7 +1415,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument et le deuxième test ont la valeur true.
 
@@ -1512,7 +1513,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à un argument. Elle définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé comme une fonction, elle retourne true uniquement si son argument teste la valeur false.
 
@@ -1605,7 +1606,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument ou le deuxième test a la valeur true.
 
@@ -1706,7 +1707,7 @@ Type des arguments et de la valeur de retour.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le premier argument moins le second.
 
@@ -1807,7 +1808,7 @@ Type des arguments et de la valeur de retour.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le premier argument modulo la seconde.
 
@@ -1908,7 +1909,7 @@ Type des arguments et de la valeur de retour.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le premier argument fois la seconde.
 
@@ -2006,7 +2007,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à un argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne son argument négatif.
 
@@ -2099,7 +2100,7 @@ Type des arguments.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne true uniquement si le premier argument n’est pas égal au second.
 
@@ -2154,7 +2155,7 @@ int main()
 
 Génère un `unary_negate` pour un functor.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<typename Fun>
@@ -2171,7 +2172,7 @@ Type du functor.
 *functor*<br/>
 Functor à encapsuler.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne [unary_negate (STL/CLR)](#unary_negate) `<Fun>(functor)` . Vous l’utilisez comme un moyen pratique d’encapsuler un functor à un argument dans un functor qui remet son NOT logique.
 
@@ -2226,7 +2227,7 @@ int main()
 
 Génère un `binary_negate` pour un functor.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<typename Fun>
@@ -2243,7 +2244,7 @@ Type du functor.
 *functor*<br/>
 Functor à encapsuler.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne [binary_negate (STL/CLR)](#negate) `<Fun>(functor)` . Vous l’utilisez comme un moyen pratique d’encapsuler un functor à deux arguments dans un functor qui remet son NOT logique.
 
@@ -2353,7 +2354,7 @@ Type des arguments et de la valeur de retour.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^ (opérateur)|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à deux arguments. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le premier argument et le second.
 
@@ -2424,7 +2425,7 @@ Type de l’argument.
 *Résultat*<br/>
 Type de retour.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le délégué genereic décrit une fonction à un argument.
 
@@ -2486,7 +2487,7 @@ generic<typename Arg>
 *Donnée*<br/>
 Type de l’argument.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le délégué genereic décrit une fonction à un argument qui retourne **`void`** .
 
@@ -2581,7 +2582,7 @@ Type de l’functor stocké.
 |operator()|Calcule la fonction souhaitée.|
 |delegate_type ^|Convertit le functor en un délégué.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe de modèle décrit un functor à un argument qui stocke un autre functor à un argument. Il définit l’opérateur membre `operator()` afin que, lorsque l’objet est appelé en tant que fonction, il retourne le not logique du functor stocké appelé avec l’argument.
 

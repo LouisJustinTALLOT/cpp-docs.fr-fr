@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _CrtDbgBreak'
 title: _CrtDbgBreak
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-ms.openlocfilehash: 9471b1a93abd9777c3a53c54c2517e59896d8160
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fa20e32ae02eab1b289878ad05826d8da0a85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221564"
 ---
 # <a name="_crtdbgbreak"></a>_CrtDbgBreak
 
@@ -48,11 +49,11 @@ Il n'y a pas de valeur de retour.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_CrtDbgBreak** définit un point d’arrêt de débogage sur la ligne de code spécifique où la fonction réside. Cette fonction est utilisée uniquement en mode débogage et dépend de **_ DEBUG** défini précédemment.
+La fonction **_CrtDbgBreak** définit un point d’arrêt de débogage sur la ligne de code spécifique où la fonction réside. Cette fonction est utilisée uniquement en mode débogage et dépend de **_DEBUG** déjà défini.
 
 Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de vos propres fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

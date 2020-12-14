@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : avertissement des outils Éditeur de liens LNK4221'
 title: Avertissement des outils Éditeur de liens LNK4221
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: f18224150232384adbf8ee7cc31af7bb7678eae5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d7aee041536afc1da0c4fd8a6e520ceb5e99e57a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222630"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Avertissement des outils Éditeur de liens LNK4221
 
@@ -33,7 +34,7 @@ int function()
 }
 ```
 
-Pour compiler les fichiers et créer deux fichiers objets, exécutez **cl/c a. cpp b. cpp** à l’invite de commandes. Si vous liez les fichiers objets en exécutant **link/lib/out : test. lib a. obj b. obj** , vous recevrez l’avertissement LNK4221. Si vous liez les objets en exécutant **link/lib/out : test. lib b. obj a. obj** , vous ne recevrez pas d’avertissement.
+Pour compiler les fichiers et créer deux fichiers objets, exécutez **cl/c a. cpp b. cpp** à l’invite de commandes. Si vous liez les fichiers objets en exécutant **link/lib/out : test. lib a. obj b. obj**, vous recevrez l’avertissement LNK4221. Si vous liez les objets en exécutant **link/lib/out : test. lib b. obj a. obj**, vous ne recevrez pas d’avertissement.
 
 Aucun avertissement n’est émis dans le deuxième scénario, car l’éditeur de liens fonctionne selon une méthode LIFO (dernier entré, premier sorti). Dans le premier scénario, b. obj est traité avant un. objet un. obj n’a aucun nouveau symbole à ajouter. En demandant à l’éditeur de liens de traiter d’abord un. obj, vous pouvez éviter l’avertissement.
 
@@ -49,4 +50,4 @@ Cette erreur est souvent due au fait que deux fichiers sources spécifient l’o
 
 ::: moniker-end
 
-Une façon de résoudre ce problème consiste à s’assurer que pour chaque en-tête précompilé, il n’y a qu’un seul fichier source qui l’inclut avec **/Yc** . Tous les autres fichiers sources doivent utiliser des en-têtes précompilés. Pour plus d’informations sur la modification de ce paramètre, consultez [/Yu (utiliser un fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md).
+Une façon de résoudre ce problème consiste à s’assurer que pour chaque en-tête précompilé, il n’y a qu’un seul fichier source qui l’inclut avec **/Yc**. Tous les autres fichiers sources doivent utiliser des en-têtes précompilés. Pour plus d’informations sur la modification de ce paramètre, consultez [/Yu (utiliser un fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md).

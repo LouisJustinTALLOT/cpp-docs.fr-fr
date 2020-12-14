@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : restreindre'
 title: restrict
 ms.date: 02/09/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-ms.openlocfilehash: a0108cff3d6b98fd929b7888d2ad718e7b6b3a64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2900e46d3b8e452661800c1c511418f936a5b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223709"
 ---
 # <a name="restrict"></a>restrict
 

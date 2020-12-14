@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : &lt; streambuf &gt; typedefs'
 title: '&lt;streambuf&gt;, typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: f08c08de0d6449714f953f5a65fadd2e0279ed44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ae5394213143b05704d452e38eaae0b3581849cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221967"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt;, typedefs
 

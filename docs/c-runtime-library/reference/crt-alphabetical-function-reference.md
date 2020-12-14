@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : référence des fonctions par ordre alphabétique UCRT'
 title: Référence de fonction alphabétique UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: af75a52dcc6659e80ae1155ffe4de2c8c1dee4bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221603"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>Référence de fonction alphabétique UCRT
 
 La documentation de référence sur la bibliothèque Runtime C universel (UCRT, souvent uniquement CRT) est classée par routine par ordre alphabétique. Pour rechercher une routine CRT basée sur les fonctionnalités, consultez [routines du runtime C universel par catégorie](../../c-runtime-library/run-time-routines-by-category.md).
 
-## <a name="a"></a>A
+## <a name="a"></a>Un
 
 [abort](abort.md)
 
@@ -165,7 +166,7 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 [_beginthreadex](beginthread-beginthreadex.md)
 
-[bitand](bitand.md)
+[BITAND](bitand.md)
 
 [bitor](bitor.md)
 
@@ -319,7 +320,7 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 [_clearfp](clear87-clearfp.md)
 
-[horloge](clock.md)
+[24x7](clock.md)
 
 [Clog](clog-clogf-clogl.md)
 
@@ -1967,7 +1968,7 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 ## <a name="n"></a>N
 
-[Nan](nan-nanf-nanl.md)
+[NaN](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -3487,7 +3488,7 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 ## <a name="x"></a>X
 
-[xor](xor.md)
+[XOR](xor.md)
 
 [xor_eq](xor-eq.md)
 
@@ -3499,7 +3500,7 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[Y1](y0-y1-yn.md)
+[y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3507,4 +3508,4 @@ La documentation de référence sur la bibliothèque Runtime C universel (UCRT, 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la bibliothèque Runtime C](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Référence de la bibliothèque de Run-Time C](../../c-runtime-library/c-run-time-library-reference.md)<br/>
