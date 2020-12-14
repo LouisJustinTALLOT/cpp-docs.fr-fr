@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe hash_compare'
 title: hash_compare, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 510de9901e58e130a53410b688c22324714b9962
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231938"
 ---
 # <a name="hash_compare-class"></a>hash_compare, classe
 
-Le modèle de classe décrit un objet qui peut être utilisé par l’un des conteneurs associatifs de hachage (hash_map, hash_multimap, hash_set ou hash_multiset) comme un objet de paramètre **traits** par défaut pour ordonner et hacher les éléments qu’ils contiennent.
+Le modèle de classe décrit un objet qui peut être utilisé par l’un des conteneurs associatifs de hachage (hash_map, hash_multimap, hash_set ou hash_multiset) comme objet de paramètre **traits** par défaut pour ordonner et hacher les éléments qu’ils contiennent.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,11 +24,11 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Notes
 
-Chaque conteneur associatif de hachage stocke un objet de caractéristiques de hachage de type `Traits` (un paramètre de modèle). Vous pouvez dériver une classe d’une spécialisation de hash_compare pour remplacer de manière sélective certaines fonctions et certains objets, ou vous pouvez fournir votre propre version de cette classe si vous répondez à certaines exigences minimales. En particulier, pour un objet hash_comp de type `hash_compare<Key, Traits>`, le comportement suivant est requis par les conteneurs ci-dessus :
+Chaque conteneur associatif de hachage stocke un objet de caractéristiques de hachage de type `Traits` (un paramètre de modèle). Vous pouvez dériver une classe d’une spécialisation de hash_compare pour remplacer de manière sélective certaines fonctions et certains objets, ou vous pouvez fournir votre propre version de cette classe si vous répondez à certaines exigences minimales. En particulier, pour un objet hash_comp de type `hash_compare<Key, Traits>` , le comportement suivant est requis par les conteneurs ci-dessus :
 
-- Pour toutes les valeurs `key` de type `Key`, l’appel de **hash_comp**(`key`) sert de fonction de hachage, ce qui produit une distribution des valeurs de type `size_t`. La fonction fournie par hash_compare retourne `key`.
+- Pour toutes les valeurs `key` de type `Key` , l’appel **hash_comp**( `key` ) sert de fonction de hachage, ce qui produit une distribution de valeurs de type `size_t` . La fonction fournie par hash_compare retourne `key`.
 
-- Pour toute valeur `key1` de type `Key` qui précède `key2` dans la séquence et qui a la même valeur de hachage (valeur retournée par la fonction de hachage), **hash_comp**(`key2`, `key1`) a la valeur false. La fonction doit imposer un classement total sur les valeurs de type `Key`. La fonction fournie par hash_compare retourne *COMP*(`key2`, `key1`) `,` où *COMP* est un objet stocké de type `Traits` que vous pouvez spécifier lors de la construction de l’objet hash_comp. Pour le type de paramètre `Traits` par défaut `less<Key>`, les clés de tri ne diminuent jamais la valeur.
+- Pour toute valeur `key1` de type `Key` précédée `key2` de la séquence et ayant la même valeur de hachage (valeur retournée par la fonction de hachage), **hash_comp**( `key2` , `key1` ) a la valeur false. La fonction doit imposer un classement total sur les valeurs de type `Key` . La fonction fournie par hash_compare retourne *COMP*( `key2` , `key1` ) `,` où *COMP* est un objet stocké de type `Traits` que vous pouvez spécifier lors de la construction de l’objet hash_comp. Pour le type de paramètre par défaut `Traits` `less<Key>` , les clés de tri ne diminuent jamais la valeur.
 
 - La constante entière `bucket_size` spécifie le nombre moyen d’éléments par « compartiment » (entrée de table de hachage) que le conteneur doit essayer de ne pas dépasser. La valeur doit être supérieure à zéro. La valeur fournie par hash_compare est 4.
 
@@ -37,13 +38,13 @@ Chaque conteneur associatif de hachage stocke un objet de caractéristiques de h
 
 Consultez les exemples pour [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) et [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset) pour voir comment déclarer et utiliser hash_compare.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<hash_map>
+**En-tête :**\<hash_map>
 
 **Espace de noms :** stdext
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

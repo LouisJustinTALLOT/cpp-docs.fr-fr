@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe gamma_distribution'
 title: gamma_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b010a5fc74f98d27c50377bf6b5f84fb84b7bb75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232094"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution, classe
 
@@ -180,7 +181,7 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

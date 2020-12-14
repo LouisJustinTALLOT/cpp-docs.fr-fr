@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; fonctionnel&gt;'
 title: '&lt;functional&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 9f1eaf69f49a449877b9013dca62ab49cb8a5b48
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232146"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Définit des fonctions de la bibliothèque standard C++ qui aident à construire des *objets de fonction*, également appelés *functors*, et leurs classeurs. Un objet de fonction est un objet d'un type qui définit `operator()`. Un objet de fonction peut être un pointeur fonction, mais en général il sert à stocker des informations supplémentaires accessibles pendant un appel de fonction.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<functional>
 
@@ -102,7 +103,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe qui encapsule une référence.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Modèle de classe fournissant une fonction membre qui inverse la valeur de retour d’une fonction unaire spécifiée.<br/> (Déconseillé dans C++ 17.)  |
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -140,7 +141,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[logical_not](../standard-library/logical-not-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération logique de négation sur des éléments d'un type valeur spécifié et teste si le résultat est vrai ou faux.|
 |[logical_or](../standard-library/logical-or-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération logique de disjonction sur des éléments d'un type valeur spécifié et teste si le résultat est vrai ou faux.|
 |[minus](../standard-library/minus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de soustraction sur des éléments d'un type valeur spécifié.|
-|[Young](../standard-library/modulus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de modulo sur des éléments d'un type valeur spécifié.|
+|[modulo](../standard-library/modulus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de modulo sur des éléments d'un type valeur spécifié.|
 |[multiplies](../standard-library/multiplies-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de multiplication sur des éléments d'un type valeur spécifié.|
 |[negate](../standard-library/negate-struct.md)|La classe fournit un objet de fonction prédéfini qui retourne la valeur négative d'une valeur d'élément.|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|Prédicat binaire qui teste si une valeur d’un type spécifié n’est pas égale à une autre valeur de ce type.|

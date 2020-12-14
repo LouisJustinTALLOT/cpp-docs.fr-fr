@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de fonction'
 title: function, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30e81e297791691ba5736b4e116fc08ab4229f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232172"
 ---
 # <a name="function-class"></a>function, classe
 
@@ -117,7 +118,7 @@ Un objet `function` vide ne contient pas d’objet pouvant être appelé ou de r
 |-|-|
 |[result_type](#result_type)|Type de retour de l’objet pouvant être appelé stocké.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

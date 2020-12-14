@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe forward_list'
 title: forward_list, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -79,12 +80,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: 16471f0986d58e38fed436b2921ce3f8a3e89325
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d9cb038123b093f81f5eb4fca49db77885ff1d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232406"
 ---
 # <a name="forward_list-class"></a>forward_list, classe
 
@@ -140,7 +141,7 @@ Des ajouts à la séquence contrôlée peuvent être effectués par des appels �
 |[size_type](#size_type)|Type qui représente la distance non signée entre deux éléments.|
 |[value_type](#value_type)|Type qui représente le type d'élément stocké dans un forward_list.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -909,11 +910,11 @@ Première position au-delà de la plage à insérer à partir de la liste forwar
 
 ### <a name="remarks"></a>Notes
 
-La première paire de fonctions membres insère la séquence contrôlée par la *source* juste après l’élément dans la séquence contrôlée vers *laquelle*pointe. Elle supprime également tous les éléments de la *source*. ( `&Source` ne doit pas être égal à **`this`** .)
+La première paire de fonctions membres insère la séquence contrôlée par la *source* juste après l’élément dans la séquence contrôlée vers *laquelle* pointe. Elle supprime également tous les éléments de la *source*. ( `&Source` ne doit pas être égal à **`this`** .)
 
-La deuxième paire de fonctions membres supprime l’élément juste après *ITER* dans la séquence contrôlée par la *source* et l’insère juste après l’élément dans la séquence contrôlée vers *laquelle*pointe. (Si `Where == Iter || Where == ++Iter`, aucune modification ne se produit.)
+La deuxième paire de fonctions membres supprime l’élément juste après *ITER* dans la séquence contrôlée par la *source* et l’insère juste après l’élément dans la séquence contrôlée vers *laquelle* pointe. (Si `Where == Iter || Where == ++Iter`, aucune modification ne se produit.)
 
-La troisième paire de fonctions membres (Splice étendue) insère la sous-plage désignée par `(First, Last)` à partir de la séquence contrôlée par la *source* juste après l’élément dans la séquence contrôlée vers *laquelle*pointe. Elle supprime également la sous-plage d’origine de la séquence contrôlée par la *source*. (Si `&Source == this` la valeur est, la plage `(First, Last)` ne doit pas inclure l’élément vers *lequel*pointe.)
+La troisième paire de fonctions membres (Splice étendue) insère la sous-plage désignée par `(First, Last)` à partir de la séquence contrôlée par la *source* juste après l’élément dans la séquence contrôlée vers *laquelle* pointe. Elle supprime également la sous-plage d’origine de la séquence contrôlée par la *source*. (Si `&Source == this` la valeur est, la plage `(First, Last)` ne doit pas inclure l’élément vers *lequel* pointe.)
 
 Si la méthode splice à plage insère `N` éléments et que `&Source != this`, un objet de classe [iterator](#iterator) est incrémenté `N` fois.
 

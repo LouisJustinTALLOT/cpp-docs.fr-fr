@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe independent_bits_engine'
 title: independent_bits_engine, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: f9c1c97795e6d4eeff64ba8be8f22602f4f3fbd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8da68469c266fae1f9c966b586ea66973d871dc3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231681"
 ---
 # <a name="independent_bits_engine-class"></a>independent_bits_engine, classe
 
@@ -50,7 +51,7 @@ Pour plus d’informations sur les membres du moteur, consultez [\<random>](../s
 
 Ce modèle de classe décrit un *adaptateur de moteur* qui produit des valeurs en reballant les bits à partir des valeurs retournées par son moteur de base, ce qui donne des valeurs de type *W*-bit.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

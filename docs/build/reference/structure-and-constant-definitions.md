@@ -1,17 +1,18 @@
 ---
+description: En savoir plus sur les définitions de structure et de constante
 title: Définitions des structures et constantes
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a9e372815e25883cf69497c77388002a7015572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230326"
 ---
 # <a name="structure-and-constant-definitions"></a>Définitions des structures et constantes
 
-La routine d’assistance par défaut utilise plusieurs structures pour communiquer avec les fonctions de raccordement et au cours de toutes les exceptions. Voici les valeurs de notification et d’échec, des structures d’informations et le type de pointeur de fonction de raccordement passé pour les raccordements :
+La routine d’assistance par défaut utilise plusieurs structures pour communiquer avec les fonctions de raccordement et Pendant toutes les exceptions. Voici les valeurs de notification et d’échec, les structures d’informations et le type de fonction pointeur vers Hook transmis aux Hooks :
 
 ```
 //
@@ -71,4 +72,4 @@ typedef struct ImgDelayDescr {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation de la fonction d’assistance](understanding-the-helper-function.md)
+[Fonctionnement de la fonction d’assistance](understanding-the-helper-function.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions fonctionnelles'
 title: '&lt;functional&gt;, fonctions'
 ms.date: 02/21/2019
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3ae9fca75801555c0341923d0fc42db94546cd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232159"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
@@ -177,7 +178,7 @@ Objet de fonction unaire qui résulte de la liaison du premier argument de l’o
 
 Les classeurs de fonction sont un type d’adaptateur de fonction. Comme elles retournent des objets de fonction, elles peuvent être utilisées dans certains types de composition de fonction pour construire des expressions plus complexes et plus puissantes.
 
-Si *Func* est un objet de type `Operation` et `c` est une constante, `bind1st( func, c )` est le même que le constructeur [binder1st](../standard-library/binder1st-class.md) de classe binder1st, `binder1st<Operation>(func, c)` et est plus pratique à utiliser.
+Si *Func* est un objet de type `Operation` et `c` est une constante, `bind1st( func, c )` est le même que le constructeur [](../standard-library/binder1st-class.md) de classe binder1st, `binder1st<Operation>(func, c)` et est plus pratique à utiliser.
 
 ### <a name="example"></a>Exemple
 
@@ -271,7 +272,7 @@ Objet de fonction unaire qui résulte de la liaison du deuxième argument de l�
 
 Les classeurs de fonction sont un type d’adaptateur de fonction. Comme elles retournent des objets de fonction, elles peuvent être utilisées dans certains types de composition de fonction pour construire des expressions plus complexes et plus puissantes.
 
-Si *Func* est un objet de type `Operation` et `c` est une constante, `bind2nd(func, c)` est le même que le constructeur [binder2nd](../standard-library/binder2nd-class.md) de classe binder2nd, `binder2nd<Operation>(func, c)` et est plus pratique à utiliser.
+Si *Func* est un objet de type `Operation` et `c` est une constante, `bind2nd(func, c)` est le même que le constructeur [](../standard-library/binder2nd-class.md) de classe binder2nd, `binder2nd<Operation>(func, c)` et est plus pratique à utiliser.
 
 ### <a name="example"></a>Exemple
 
@@ -407,7 +408,7 @@ struct bit_not<void>
 Type prenant en charge un `operator~` unaire.
 
 *Oui*\
-Opérande de l’opération de complément au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait d’un argument de référence lvalue ou rvalue de *type*déduit.
+Opérande de l’opération de complément au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait d’un argument de référence lvalue ou rvalue de *type* déduit.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -584,7 +585,7 @@ Arguments d'appel.
 
 ### <a name="remarks"></a>Notes
 
-Appelle l’objet appelé *FN* à l’aide des *arguments*Parameters. En réalité, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , où la Pseudo-fonction `INVOKE(f, t1, t2, ..., tN)` signifie l’une des choses suivantes :
+Appelle l’objet appelé *FN* à l’aide des *arguments* Parameters. En réalité, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , où la Pseudo-fonction `INVOKE(f, t1, t2, ..., tN)` signifie l’une des choses suivantes :
 
 - `(t1.*f)(t2, ..., tN)` quand `f` est un pointeur vers une fonction membre de classe `T` et `t1` est un objet de type `T` ou une référence à un objet de type `T` ou une référence à un objet d'un type dérivé de `T`. Autrement dit, lorsque `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` a la valeur true.
 

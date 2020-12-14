@@ -1,22 +1,23 @@
 ---
+description: En savoir plus sur les fonctions membres de flux d’entrée
 title: Fonctions membres de flux d'entrée
 ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: 8aa211a03bb6e9b1d910db360066b4a2ca76571a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b75470d39e5c376da497f721c725eaad8424b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231600"
 ---
 # <a name="input-stream-member-functions"></a>Fonctions membres de flux d'entrée
 
 Les fonctions membres de flux d’entrée sont utilisées pour l’entrée de disque.
 
-## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a>afficher
+## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> afficher
 
 Si vous utilisez un flux de fichier d’entrée ( `ifstream` ), vous devez associer ce flux à un fichier disque spécifique. Vous pouvez le faire dans le constructeur, ou vous pouvez utiliser la `open` fonction. Dans les deux cas, les arguments sont les mêmes.
 
@@ -31,7 +32,7 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a>Télécharger
+## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a> Télécharger
 
 La fonction membre non mise en forme `get` fonctionne comme l' `>>` opérateur avec deux exceptions. Tout d’abord, la `get` fonction inclut des espaces blancs, tandis que l’extracteur exclut les espaces blancs lorsque l' `skipws` indicateur est défini (valeur par défaut). Deuxièmement, la `get` fonction est moins susceptible de provoquer le vidage d’un flux de sortie lié ( `cout` , par exemple).
 
@@ -66,7 +67,7 @@ int main()
 1234
 ```
 
-## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a>getline
+## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline
 
 La `getline` fonction membre est semblable à la `get` fonction. Toutes deux autorisent un troisième argument qui spécifie le caractère de fin pour l’entrée. La valeur par défaut est le caractère de saut de ligne. Ces deux fonctions réservent un caractère pour le caractère de fin obligatoire. Toutefois, `get` conserve le caractère de fin dans le flux et `getline` supprime le caractère de fin.
 
@@ -93,7 +94,7 @@ int main( )
 test
 ```
 
-## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a>en lecture
+## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a> en lecture
 
 La `read` fonction membre lit les octets d’un fichier dans une zone de mémoire spécifiée. L’argument de longueur détermine le nombre d’octets lus. Si vous n’incluez pas cet argument, la lecture s’arrête quand la fin du fichier physique est atteinte ou, dans le cas d’un fichier en mode texte, quand un caractère `EOF` incorporé est lu.
 
@@ -125,7 +126,7 @@ int main()
 
 Le programme suppose que les enregistrements de données sont mis en forme exactement comme spécifié par la structure sans retour chariot ou caractère de saut de ligne de fin.
 
-## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg et tellg
+## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg et tellg
 
 Les flux de fichiers d’entrée conservent un pointeur interne vers la position suivante dans le fichier où les données doivent être lues. Vous définissez ce pointeur avec la fonction `seekg`, comme indiqué ici :
 
@@ -180,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a>plus
+## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> plus
 
 La `close` fonction membre ferme le fichier de disque associé à un flux de fichier d’entrée et libère le handle de fichier du système d’exploitation. Le [`ifstream`](../standard-library/basic-ifstream-class.md) destructeur ferme le fichier pour vous, mais vous pouvez utiliser la `close` fonction si vous devez ouvrir un autre fichier pour le même objet de flux.
 

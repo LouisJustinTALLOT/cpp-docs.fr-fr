@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct'
 title: minus (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fe9fb343a49fb8097322b687326d3c986ba25ee5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230495"
 ---
 # <a name="minus-struct"></a>minus (struct)
 
@@ -40,19 +41,19 @@ struct minus<void>
 ### <a name="parameters"></a>Paramètres
 
 *Type*, *T*, *U*\
-Tout type prenant en charge un `operator-` binaire qui accepte des opérandes des types spécifiés ou déduits.
+Tout type qui prend en charge un `operator-` binaire qui accepte des opérandes des types spécifiés ou déduits.
 
 *Gauche*\
-Opérande gauche de l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left - Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator-`.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // functional_minus.cpp

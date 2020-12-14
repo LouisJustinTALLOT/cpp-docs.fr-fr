@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : &lt; hash_set &gt;'
 title: '&lt;hash_set&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 1774b0b29c7750e716f1f56def5d29ac329abec0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7040325f3af26052306b1ebd90f1919d96dcbf19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845807"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231794"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set&gt;, fonctions
 

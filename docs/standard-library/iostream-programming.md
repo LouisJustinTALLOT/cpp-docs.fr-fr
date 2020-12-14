@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : la programmation iostream'
 title: iostream, programmation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4b9c4e889a8c63512a4df8891116ee8d99bbe50f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231379"
 ---
 # <a name="iostream-programming"></a>iostream, programmation
 
@@ -32,7 +33,7 @@ Vous trouverez également une discussion de la [Sécurité des threads dans la b
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Définition d’un flux](../standard-library/what-a-stream-is.md)
+[Présentation d’un flux](../standard-library/what-a-stream-is.md)
 
 [Flux de sortie](../standard-library/output-streams.md)
 
@@ -44,5 +45,5 @@ Vous trouverez également une discussion de la [Sécurité des threads dans la b
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
-[iostreams, conventions](../standard-library/iostreams-conventions.md)
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
+[Conventions iostreams](../standard-library/iostreams-conventions.md)

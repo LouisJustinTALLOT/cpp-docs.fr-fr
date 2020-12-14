@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : STACKSIZE'
 title: STACKSIZE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - STACKSIZE .def file statement
 ms.assetid: 4d8c79bd-1cb4-4e4d-90f2-b5a7a4d20e7a
-ms.openlocfilehash: 2d27b4fd596098f4abc5bb0d804d87bd08f70a60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5d52bccc09979084b9023d380e86fe90e4def32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230339"
 ---
 # <a name="stacksize"></a>STACKSIZE
 
@@ -23,10 +24,10 @@ STACKSIZE reserve[,commit]
 
 ## <a name="remarks"></a>Notes
 
-Pour définir la pile d’une manière équivalente est avec la [Allocations de la pile](stack-stack-allocations.md) (/Stack) option. Consultez la documentation sur cette option pour plus d’informations la *réserver* et `commit` arguments.
+Une méthode équivalente pour définir la pile est avec l’option [allocations](stack-stack-allocations.md) de la pile (/Stack). Pour plus d’informations sur la *réserve* et les arguments, consultez la documentation relative à cette option `commit` .
 
-Cette option n’a aucun effet sur les DLL.
+Cette option n’a aucun effet sur les dll.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Règles s’appliquant aux instructions de définition de module](rules-for-module-definition-statements.md)
+[Règles pour les instructions Module-Definition](rules-for-module-definition-statements.md)

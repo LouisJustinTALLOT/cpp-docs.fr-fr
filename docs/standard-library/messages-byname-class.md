@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe messages_byname'
 title: messages_byname, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 960db9dd411e4ac42f81a0027e91ae1001b7877d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230521"
 ---
 # <a name="messages_byname-class"></a>messages_byname, classe
 
@@ -39,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Paramètres
 
-*_Locname* \
+*_Locname*\
 Paramètres régionaux nommés.
 
-*_Refs* \
+*_Refs*\
 Nombre initial de références.
 
 ## <a name="remarks"></a>Notes
 
-Son comportement est déterminé par les paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Son comportement est déterminé par les paramètres régionaux nommés *_Locname*. Chaque constructeur initialise son objet de base avec des [messages](../standard-library/messages-class.md#messages) \<CharType> ( `_Refs` ).
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :**\<locale>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

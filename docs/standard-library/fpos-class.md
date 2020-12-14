@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe FPOS'
 title: fpos, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22b9a5e69b179ef4206a0664b51b92cc55d4320d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232328"
 ---
 # <a name="fpos-class"></a>fpos, classe
 
@@ -71,7 +72,7 @@ Informations d'état.
 
 **Espace de noms :** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>FPOS :: FPOS
+## <a name="fposfpos"></a><a name="fpos"></a> FPOS :: FPOS
 
 Créer un objet qui contient des informations sur une position (offset) dans un flux.
 
@@ -98,7 +99,7 @@ Le premier constructeur stocke l’offset *_OFF*, par rapport au début du fichi
 
 Le deuxième constructeur stocke un décalage de zéro et l’objet *_State*.
 
-## <a name="fposoperator"></a><a name="op_neq"></a>FPOS :: Operator ! =
+## <a name="fposoperator"></a><a name="op_neq"></a> FPOS :: Operator ! =
 
 Teste l'inégalité d'indicateurs de position de fichier.
 
@@ -111,7 +112,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 *Oui*\
 Indicateur de position de fichier à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les indicateurs de position de fichier ne sont pas égaux ; sinon, **`false`** .
 
@@ -171,7 +172,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>FPOS :: Operator +
+## <a name="fposoperator"></a><a name="op_add"></a> FPOS :: Operator +
 
 incrémente un indicateur de position de fichier.
 
@@ -184,7 +185,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 *_Off*\
 Décalage duquel vous voulez incrémenter l’indicateur de position de fichier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position dans le fichier.
 
@@ -196,7 +197,7 @@ La fonction membre retourne **fpos(\*this) +=** `_Off`.
 
 Consultez [operator!=](#op_neq) pour obtenir un exemple d’utilisation de `operator+`.
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>FPOS :: Operator + =
+## <a name="fposoperator"></a><a name="op_add_eq"></a> FPOS :: Operator + =
 
 incrémente un indicateur de position de fichier.
 
@@ -209,19 +210,19 @@ fpos<Statetype>& operator+=(streamoff _Off);
 *_Off*\
 Décalage duquel vous voulez incrémenter l’indicateur de position de fichier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position dans le fichier.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre ajoute *_OFF* à l’objet de membre de décalage stocké, puis retourne ** \* This**. Pour le positionnement dans un fichier, le résultat est généralement valide uniquement pour les flux binaires qui n’ont pas de codage dépendant de l’état.
+La fonction membre ajoute *_OFF* à l’objet de membre de décalage stocké, puis retourne **\* This**. Pour le positionnement dans un fichier, le résultat est généralement valide uniquement pour les flux binaires qui n’ont pas de codage dépendant de l’état.
 
 ### <a name="example"></a>Exemple
 
 Consultez [operator!=](#op_neq) pour obtenir un exemple d’utilisation de `operator+=`.
 
-## <a name="fposoperator-"></a><a name="operator-"></a>FPOS :: Operator-
+## <a name="fposoperator-"></a><a name="operator-"></a> FPOS :: Operator-
 
 Décrémente un indicateur de position de fichier.
 
@@ -239,7 +240,7 @@ Position du fichier.
 *_Off*\
 Décalage du flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne `(streamoff)*this - (streamoff) right`. La deuxième fonction membre retourne `fpos(*this) -= _Off`.
 
@@ -247,7 +248,7 @@ La première fonction membre retourne `(streamoff)*this - (streamoff) right`. La
 
 Consultez [operator!=](#op_neq) pour obtenir un exemple d’utilisation de `operator-`.
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>FPOS :: Operator-=
+## <a name="fposoperator-"></a><a name="operator-_eq"></a> FPOS :: Operator-=
 
 Décrémente un indicateur de position de fichier.
 
@@ -260,7 +261,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 *_Off*\
 Décalage du flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne `fpos(*this) -= _Off`.
 
@@ -272,7 +273,7 @@ Pour le positionnement dans un fichier, le résultat est généralement valide u
 
 Consultez [operator!=](#op_neq) pour obtenir un exemple d’utilisation de `operator-=`.
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>FPOS :: Operator = =
+## <a name="fposoperator"></a><a name="op_eq_eq"></a> FPOS :: Operator = =
 
 Teste l'égalité d'indicateurs de position de fichier.
 
@@ -285,7 +286,7 @@ bool operator==(const fpos<Statetype>& right) const;
 *Oui*\
 Indicateur de position de fichier à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les indicateurs de position de fichier sont égaux ; Sinon, **`false`** .
 
@@ -297,7 +298,7 @@ La fonction membre retourne `(streamoff)*this == (streamoff)right`.
 
 Consultez [operator!=](#op_neq) pour obtenir un exemple d’utilisation de `operator+=`.
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>FPOS :: Operator streamoff
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a> FPOS :: Operator streamoff
 
 Convertit un objet de type `fpos` en objet de type `streamoff`.
 
@@ -336,7 +337,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>FPOS :: seekpos
+## <a name="fposseekpos"></a><a name="seekpos"></a> FPOS :: seekpos
 
 Cette méthode est uniquement utilisée en interne par la bibliothèque C++ Standard. N'appelez pas cette méthode à partir de votre code.
 
@@ -344,7 +345,7 @@ Cette méthode est uniquement utilisée en interne par la bibliothèque C++ Stan
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>FPOS :: State
+## <a name="fposstate"></a><a name="state"></a> FPOS :: State
 
 Définit ou retourne l'état de la conversion.
 
@@ -359,7 +360,7 @@ void state(Statetype _State);
 *_State*\
 Nouvel état de conversion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État de conversion.
 
