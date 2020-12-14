@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : description d’argument'
 title: Description des arguments
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: dd973c96c9056f6156976698dfc3695b00ebbbb7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97a4bbd8c483f26aa43065cb14a567e1050116d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280195"
 ---
 # <a name="argument-description"></a>Description des arguments
 
@@ -29,7 +30,7 @@ Le dernier pointeur (`argv[argc]`) est **NULL**. (Consultez [getenv](../c-runtim
 
 **Spécifique à Microsoft**
 
-Le paramètre `envp` est un pointeur vers un tableau de chaînes terminées par le caractère NULL qui représentent les valeurs définies dans les variables d'environnement de l'utilisateur. Le `envp` paramètre peut être déclaré comme tableau de pointeurs vers **`char`** ( `char *envp[]` ) ou comme pointeur vers des pointeurs vers **`char`** ( `char **envp` ). Dans une fonction **wmain** , le `envp` paramètre peut être déclaré comme tableau de pointeurs vers **`wchar_t`** ( `wchar_t *envp[]` ) ou comme pointeur vers des pointeurs vers **`wchar_t`** ( `wchar_t **envp` ). La fin du tableau est affichée par un pointeur **NULL** \*. Notez que le bloc environnement passé à **main** ou **wmain** est une copie « figée » de l'environnement actuel. Si vous modifiez par la suite l’environnement via un appel à _**putenv** ou `_wputenv` , l’environnement actuel (tel que retourné par `getenv` / `_wgetenv` et les `_environ` `_wenviron` variables ou) sera modifié, mais le bloc pointé par `envp` ne changera pas. Le paramètre `envp` est compatible ANSI en C, mais pas en C++.
+Le paramètre `envp` est un pointeur vers un tableau de chaînes terminées par le caractère NULL qui représentent les valeurs définies dans les variables d'environnement de l'utilisateur. Le `envp` paramètre peut être déclaré comme tableau de pointeurs vers **`char`** ( `char *envp[]` ) ou comme pointeur vers des pointeurs vers **`char`** ( `char **envp` ). Dans une fonction **wmain** , le `envp` paramètre peut être déclaré comme tableau de pointeurs vers **`wchar_t`** ( `wchar_t *envp[]` ) ou comme pointeur vers des pointeurs vers **`wchar_t`** ( `wchar_t **envp` ). La fin du tableau est affichée par un pointeur **NULL** \*. Notez que le bloc environnement passé à **main** ou **wmain** est une copie « figée » de l'environnement actuel. Si vous modifiez par la suite l’environnement via un appel à _ **putenv** ou `_wputenv` , l’environnement actuel (tel que retourné par `getenv` / `_wgetenv` et les `_environ` `_wenviron` variables ou) sera modifié, mais le bloc pointé par `envp` ne changera pas. Le paramètre `envp` est compatible ANSI en C, mais pas en C++.
 
 **FIN spécifique à Microsoft**
 

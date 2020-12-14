@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Vector &lt; bool, &gt; classe'
 title: vector&lt;bool&gt;, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecc7c083825a92aca429f9418d35ff9d4cf7dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280506"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 
@@ -60,7 +61,7 @@ Les opérations qui gèrent le **`bool`** type correspondent aux valeurs dans le
 |-|-|
 |[\<bool>classe de référence Vector](#reference_class)|Classe qui sert de proxy pour simuler le comportement `bool&`, et dont les objets peuvent fournir des références aux éléments (bits uniques) au sein d'un objet `vector<bool>`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: \<vector>
 

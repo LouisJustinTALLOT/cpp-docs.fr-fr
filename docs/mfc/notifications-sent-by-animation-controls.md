@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : notifications envoyées par les contrôles d’animation'
 title: Notifications envoyées par les contrôles d'animation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: e9e5b94736de44d5cfeef81f5b78a759df3b8aa0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 17dbd041e1c22b8d6542e64fd8b99d86389ea2d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280558"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notifications envoyées par les contrôles d'animation
 
@@ -23,4 +24,4 @@ Le message [ACN_START](/windows/win32/Controls/acn-start) est envoyé lorsque le
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CAnimateCtrl](using-canimatectrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

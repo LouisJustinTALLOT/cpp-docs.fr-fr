@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : concepts MFC'
 title: Concepts MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: b6f5e6bf84900a17b10104dbe9baf4b580ae5396
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 13d5b0b1943eb68e7b73fc5e935b98b0d104ab07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280597"
 ---
 # <a name="mfc-concepts"></a>Concepts MFC
 
@@ -16,7 +17,7 @@ Cette section fournit des rubriques conceptuelles et basées sur des tâches pou
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Rubriques MFC générales](general-mfc-topics.md)<br/>
+[Rubriques générales sur MFC](general-mfc-topics.md)<br/>
 Présente les détails techniques de la bibliothèque MFC.
 
 [Utilisation de CObject](using-cobject.md)<br/>

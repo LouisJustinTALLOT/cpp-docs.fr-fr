@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : manipulation du contrôle Progress'
 title: Manipulation du contrôle Progress
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-ms.openlocfilehash: 3e3521a82854a85062f9b06bc33eb268d4b9c7a6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cfb89dee0047d910fb983546c71e4a1e4a618f56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281091"
 ---
 # <a name="manipulating-the-progress-control"></a>Manipulation du contrôle Progress
 
@@ -32,11 +33,11 @@ Il existe trois façons de modifier la position actuelle d’un contrôle Progre
 1. Utilisez la fonction membre [StepIt](reference/cprogressctrl-class.md#stepit) pour incrémenter la position. Le contrôle se redessine alors lui-même.
 
     > [!NOTE]
-    >  `StepIt`provoque l’encapsulation de la position. Par exemple, étant donné une plage de 1 -100, une étape de 20 et une position de 90, `StepIt` la position est définie sur 10.
+    >  `StepIt` provoque l’encapsulation de la position. Par exemple, étant donné une plage de 1 -100, une étape de 20 et une position de 90, `StepIt` la position est définie sur 10.
 
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Pour modifier la position d’une quantité arbitraire
 
-1. Utilisez la fonction membre [OffsetPos](reference/cprogressctrl-class.md#offsetpos) pour modifier la position. `OffsetPos`accepte les valeurs négatives.
+1. Utilisez la fonction membre [OffsetPos](reference/cprogressctrl-class.md#offsetpos) pour modifier la position. `OffsetPos` accepte les valeurs négatives.
 
     > [!NOTE]
     >  `OffsetPos`, contrairement à `StepIt` , n’encapsule pas la position. La nouvelle position est ajustée pour rester dans la plage.
@@ -50,4 +51,4 @@ En règle générale, le contrôle de progression est utilisé uniquement pour l
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CProgressCtrl](using-cprogressctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

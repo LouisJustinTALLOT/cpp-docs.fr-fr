@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __svm_invlpga'
 title: __svm_invlpga
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: e0f8ef02efdb64f70bb65f6f017449fcc03beca1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: dc976f535381fcfdfec0da5c1a280c4df281c114
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314748"
 ---
 # <a name="__svm_invlpga"></a>__svm_invlpga
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Invalide l’entrée de mappage d’adresse dans la mémoire tampon de recherche de la traduction de l’ordinateur. Les paramètres spécifient l’adresse virtuelle et l’identificateur de l’espace d’adressage de la page à invalider.
 
@@ -36,17 +37,17 @@ dans Identificateur de l’espace d’adressage (ASID) de la page à invalider.
 
 ## <a name="remarks"></a>Notes
 
-La fonction `__svm_invlpga` est équivalente à l’instruction machine `INVLPGA` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document «AMD64 architecture Programmer’s Manual volume 2: Programmation système, «document number 24593, Revision 3,11, sur le site [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
+La fonction `__svm_invlpga` est équivalente à l’instruction machine `INVLPGA` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document « AMD64 architecture Programmer’s Manual volume 2 : System Programming », numéro de document 24593, Revision 3,11, sur le site [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__svm_invlpga`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

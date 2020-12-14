@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : conformité ANSI'
 title: Conformité ANSI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ANSI [C++]
 - ANSI [C++], C standard
 ms.assetid: c3a188c8-42bc-41fb-a78d-637f3175ade0
-ms.openlocfilehash: 8eebf43877b7599cecd438b94d1d0e13ff956139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 367d09ebb8865ab46ed774a7fc3ca1794a553f00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280129"
 ---
 # <a name="ansi-conformance"></a>Conformité ANSI
 
@@ -20,4 +21,4 @@ Les extensions Microsoft de la norme C ANSI sont notées dans le texte et la sy
 
 ## <a name="see-also"></a>Voir aussi
 
-[Organisation de la référence du langage C](../c-language/organization-of-the-c-language-reference.md)
+[Organisation de la référence du langage C](../c-language/organization-of-the-c-language-reference.md)

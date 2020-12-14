@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les versions de bibliothèque MFC
 title: Versions de bibliothèque MFC
 ms.date: 05/08/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 26d17604ec201deffd5fd2d5e843269e67e3dd07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280584"
 ---
 # <a name="mfc-library-versions"></a>Versions de bibliothèque MFC
 
@@ -92,19 +93,19 @@ où les lettres en minuscules en italique sont des espaces réservés pour les s
 |Spécificateur|Valeurs et significations|
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) ou Unicode (U); omettre pour la version sans contrôles MFC dans les boîtes de dialogue|
-|*secteur*|Version avec des contrôles MFC dans les boîtes de dialogue (CW) ou sans (NMCD)|
+|*c*|Version avec des contrôles MFC dans les boîtes de dialogue (CW) ou sans (NMCD)|
 |*d*|Debug ou Release : D = debug ; spécificateur d’omission pour la mise en sortie|
 
 Toutes les bibliothèques répertoriées dans le tableau suivant sont incluses prégénérées dans le répertoire \atlmfc\lib pour les architectures de build prises en charge.
 
 |Bibliothèque|Description|
 |-------------|-----------------|
-|NAFXCW.LIB|Bibliothèque de liens statiques MFC, version Release|
-|NAFXCWD.LIB|Bibliothèque de liens statiques MFC, version de débogage|
-|UAFXCW. LIB|Bibliothèque de liens statiques MFC avec prise en charge Unicode, version Release|
-|UAFXCWD. LIB|Bibliothèque de liens statiques MFC avec prise en charge Unicode, version de débogage|
-|AFXNMCD. LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version Release|
-|AFXNMCDD. LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version de débogage|
+|NAFXCW.LIB|Bibliothèque de Static-Link MFC, version Release|
+|NAFXCWD.LIB|Bibliothèque de Static-Link MFC, version de débogage|
+|UAFXCW. LIB|Bibliothèque de Static-Link MFC avec prise en charge Unicode, version Release|
+|UAFXCWD. LIB|Bibliothèque de Static-Link MFC avec prise en charge Unicode, version de débogage|
+|AFXNMCD. LIB|Bibliothèque de Static-Link MFC sans contrôles de boîte de dialogue MFC, version Release|
+|AFXNMCDD. LIB|Bibliothèque de Static-Link MFC sans contrôles de boîte de dialogue MFC, version de débogage|
 
 Les fichiers du débogueur qui ont le même nom de base et une extension. pdb sont également disponibles pour chacune des bibliothèques statiques.
 
@@ -116,18 +117,18 @@ Les DLL MFC ont des numéros de *version* qui indiquent la compatibilité binair
 
 |DLL|Description|
 |---------|-----------------|
-|*Version*MFC. DLL|DLL MFC, version ANSI ou MBCS|
-|MFC*version*U. dll|DLL MFC, version de la version Unicode|
-|*Version*MFC D. dll|DLL MFC, version de débogage ANSI ou MBCS|
-|UD de*version*MFC. DLL|DLL MFC, version de débogage Unicode|
-|*Version*de MFCM. DLL|DLL MFC avec les contrôles Windows Forms, version ANSI ou MBCS|
-|MFCM*version*U. dll|DLL MFC avec contrôles de Windows Forms, version de version Unicode|
-|MFCM*version*D. dll|DLL MFC avec contrôles de Windows Forms, version de débogage ANSI ou MBCS|
-|MFCM*version*ud. DLL|DLL MFC avec contrôles de Windows Forms, version de débogage Unicode|
+|*Version* MFC. DLL|DLL MFC, version ANSI ou MBCS|
+|*Version* MFCU.DLL|DLL MFC, version de la version Unicode|
+|*Version* MFCD.DLL|DLL MFC, version de débogage ANSI ou MBCS|
+|*Version* MFCUD.DLL|DLL MFC, version de débogage Unicode|
+|*Version* de MFCM. DLL|DLL MFC avec les contrôles Windows Forms, version ANSI ou MBCS|
+|*Version* de MFCMU.DLL|DLL MFC avec contrôles de Windows Forms, version de version Unicode|
+|*Version* de MFCMD.DLL|DLL MFC avec contrôles de Windows Forms, version de débogage ANSI ou MBCS|
+|*Version* de MFCMUD.DLL|DLL MFC avec contrôles de Windows Forms, version de débogage Unicode|
 
-Les bibliothèques d’importation nécessaires pour générer des applications ou des dll d’extension MFC qui utilisent ces DLL partagées ont le même nom de base que la DLL, mais ont une extension de nom de fichier. lib. Lorsque vous utilisez les DLL partagées, une petite bibliothèque statique doit toujours être liée à votre code ; Cette bibliothèque est nommée MFCS*version*{U} {D}. lib.
+Les bibliothèques d’importation nécessaires pour générer des applications ou des dll d’extension MFC qui utilisent ces DLL partagées ont le même nom de base que la DLL, mais ont une extension de nom de fichier. lib. Lorsque vous utilisez les DLL partagées, une petite bibliothèque statique doit toujours être liée à votre code ; Cette bibliothèque est nommée MFCS *version*{U} {D}. lib.
 
-Si vous effectuez une liaison dynamique à la version DLL partagée de MFC, qu’il s’agisse d’une application ou d’une DLL d’extension MFC, vous devez inclure la*version*MFC correspondante. DLL ou MFC*version*U. dll lors du déploiement de votre produit.
+Si vous effectuez une liaison dynamique à la version DLL partagée de MFC, qu’il s’agisse d’une application ou d’une DLL d’extension MFC, vous devez inclure la *version* MFC correspondante. DLL ou *version* MFCU.DLL lorsque vous déployez votre produit.
 
 Pour obtenir la liste des DLL Visual C++ qui peuvent être distribuées avec vos applications, consultez le [code distribuable pour Microsoft Visual Studio 2017 et Microsoft Visual Studio 2017 SDK (y compris les utilitaires et les fichiers BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) ou le [code distribuable pour Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
@@ -135,10 +136,10 @@ Pour plus d’informations sur la prise en charge MBCS et Unicode dans MFC, cons
 
 ## <a name="dynamic-link-library-support"></a>Prise en charge des bibliothèques de liens dynamiques
 
-Vous pouvez utiliser les bibliothèques MFC dynamiques statiques ou partagées pour créer des dll qui peuvent être utilisées par les exécutables MFC et non-MFC. Celles-ci sont appelées « DLL normales » ou « DLL MFC standard » pour les distinguer des dll d’extension MFC qui peuvent uniquement être utilisées par les applications MFC et les DLL MFC. Une DLL générée à l’aide des bibliothèques statiques MFC est parfois appelée USRDLL dans des références plus anciennes, car les projets DLL MFC définissent le symbole de préprocesseur ** \_ USRDLL**. Une DLL qui utilise les DLL partagées MFC est parfois appelée AFXDLL dans des références plus anciennes, car elle définit le symbole de préprocesseur ** \_ AFXDLL**.
+Vous pouvez utiliser les bibliothèques MFC dynamiques statiques ou partagées pour créer des dll qui peuvent être utilisées par les exécutables MFC et non-MFC. Celles-ci sont appelées « DLL normales » ou « DLL MFC standard » pour les distinguer des dll d’extension MFC qui peuvent uniquement être utilisées par les applications MFC et les DLL MFC. Une DLL générée à l’aide des bibliothèques statiques MFC est parfois appelée USRDLL dans des références plus anciennes, car les projets DLL MFC définissent le symbole de préprocesseur **\_ USRDLL**. Une DLL qui utilise les DLL partagées MFC est parfois appelée AFXDLL dans des références plus anciennes, car elle définit le symbole de préprocesseur **\_ AFXDLL**.
 
-Lorsque vous créez votre projet DLL en établissant une liaison avec les bibliothèques statiques MFC, votre DLL peut être déployée sans les DLL partagées MFC. Lorsque votre projet DLL est lié à la*version*MFC des bibliothèques d’importation. LIB ou MFC*version*U. lib, vous devez déployer la*version*MFC partagée DLL MFC correspondante. DLL ou MFC*version*U. dll avec votre dll. Pour plus d’informations, consultez [dll](../build/dlls-in-visual-cpp.md).
+Lorsque vous créez votre projet DLL en établissant une liaison avec les bibliothèques statiques MFC, votre DLL peut être déployée sans les DLL partagées MFC. Lorsque votre projet DLL est lié à la *version* MFC des bibliothèques d’importation. LIB ou MFC *version* U. lib, vous devez déployer la *version* MFC partagée DLL MFC correspondante. DLL ou *version* MFCU.DLL avec votre dll. Pour plus d’informations, consultez [dll](../build/dlls-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](general-mfc-topics.md)
+[Rubriques générales sur MFC](general-mfc-topics.md)

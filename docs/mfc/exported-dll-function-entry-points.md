@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : points d’entrée de fonction DLL exportés'
 title: Points d'entrée de fonction DLL exportée
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: c521cad666864c728fd871b460cf0c92b815e414
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ea30a36507e22beed1f36727b8e7b582d51929b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314592"
 ---
 # <a name="exported-dll-function-entry-points"></a>Points d'entrée de fonction DLL exportée
 
