@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions postfix'
 title: Expressions suffixées
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 9a5c99c78623f2192b59a73f270f3ad5d2a34516
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6c38fee6b2b44ab9ff390eed8d178bf40653df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258523"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 
@@ -24,7 +25,7 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 |[Opérateur d’indice](../cpp/subscript-operator.md)|**[ ]**|
 |[Opérateur d'appel de fonction](../cpp/function-call-operator-parens.md)|**( )**|
 |[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **()**|
-|[Opérateur d’accès aux membres](../cpp/member-access-operators-dot-and.md)|**.** ni**->**|
+|[Opérateur d’accès aux membres](../cpp/member-access-operators-dot-and.md)|**.** ni **->**|
 |[Opérateur d'incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Opérateur de décrémentation suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 

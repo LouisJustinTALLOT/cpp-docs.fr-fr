@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Debug, classe (C++/CLI)'
 title: Classe de débogage (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 255fe306684928faf836cd550005eea820d64ce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258432"
 ---
 # <a name="debug-class-ccli"></a>Classe de débogage (C++/CLI)
 
@@ -49,7 +50,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
     Entering Main

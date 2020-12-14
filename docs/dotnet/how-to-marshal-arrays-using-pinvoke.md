@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Marshaler des tableaux à l’aide de PInvoke'
+description: 'En savoir plus sur : Comment : marshaler des tableaux à l’aide de PInvoke'
+title: 'Comment : marshaler des tableaux à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90fd7b2cbefe2fb3621f512d49fbc088240922a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258221"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procédure : Marshaler des tableaux à l’aide de PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Comment : marshaler des tableaux à l’aide de PInvoke
 
-Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées en utilisant le type de chaîne CLR <xref:System.String> à l’aide de la prise en charge de .NET Framework non managé. Les programmeurs Visual C++ sont encouragés à utiliser plutôt les fonctionnalités d’interopérabilité C++ (si possible), car P/Invoke peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieuse à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option (sinon, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
+Cette rubrique explique comment des fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l’aide du type de chaîne CLR <xref:System.String> à l’aide de la prise en charge de l’appel de plateforme .NET Framework. Visual C++ les programmeurs sont encouragés à utiliser les fonctionnalités d’interopérabilité C++ à la place (dans la mesure du possible), car P/Invoke fournit peu de rapports d’erreurs de compilation, n’est pas de type sécurisé et peut être fastidieux à implémenter. Si l’API non managée est empaquetée en tant que DLL et que le code source n’est pas disponible, P/Invoke est la seule option (sinon, consultez [utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 
 ## <a name="example"></a>Exemple
 
-Étant donné que les tableaux natifs et managés sont disposés différemment en mémoire, leur passage entre la limite managée/nécessite la conversion ou un marshaling. Cette rubrique montre comment un tableau d’éléments de simples (blittables) peut être passé aux fonctions natives à partir du code managé.
+Étant donné que les tableaux natifs et managés sont disposés différemment en mémoire, leur transmission réussie à travers la limite managée/non managée nécessite une conversion ou un marshaling. Cette rubrique montre comment un tableau d’éléments simples (blitable) peut être passé à des fonctions natives à partir de code managé.
 
-De même non managé de marshaling de données en général, le <xref:System.Runtime.InteropServices.DllImportAttribute> attribut est utilisé pour créer un point d’entrée managé pour chaque fonction native qui sera utilisé. Dans le cas des fonctions qui acceptent les tableaux en tant qu’arguments, le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut doit être utilisé pour spécifier au compilateur comment les données doivent être marshalées. Dans l’exemple suivant, le <xref:System.Runtime.InteropServices.UnmanagedType> énumération est utilisée pour indiquer que le tableau managé doit être marshalé en tant qu’un tableau de style C.
+Comme c’est le cas du marshaling de données managées/non managées en général, l' <xref:System.Runtime.InteropServices.DllImportAttribute> attribut est utilisé pour créer un point d’entrée managé pour chaque fonction native qui sera utilisée. Dans le cas de fonctions qui prennent des tableaux en tant qu’arguments, l' <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut doit être utilisé également pour indiquer au compilateur comment les données seront marshalées. Dans l’exemple suivant, l' <xref:System.Runtime.InteropServices.UnmanagedType> énumération est utilisée pour indiquer que le tableau managé sera marshalé en tant que tableau de style C.
 
-Le code suivant se compose d’une fonction non managée et un module managé. Le module non managé est une DLL qui définit une fonction qui accepte un tableau d’entiers. Le deuxième module est une application de ligne de commande managée qui importe cette fonction, mais il définit en termes d’un tableau managé et utilise le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut pour spécifier que le tableau doit être converti en un tableau natif lorsqu’elle est appelée.
+Le code suivant est constitué d’un module non managé et d’un module managé. Le module non managé est une DLL qui définit une fonction qui accepte un tableau d’entiers. Le deuxième module est une application de ligne de commande managée qui importe cette fonction, mais la définit en termes de tableau managé et utilise l' <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut pour spécifier que le tableau doit être converti en tableau natif lorsqu’il est appelé.
 
 Le module managé est compilé avec/CLR.
 
@@ -77,7 +78,7 @@ int main() {
 }
 ```
 
-Notez qu’aucune partie de la DLL est exposée au code managé via traditionnel #include, directive. En fait, étant donné que la DLL est accessible au moment de l’exécution, des problèmes avec les fonctions importées avec <xref:System.Runtime.InteropServices.DllImportAttribute> ne sont pas détectés au moment de la compilation.
+Notez qu’aucune partie de la DLL n’est exposée au code managé par le biais de la directive #include traditionnelle. En fait, étant donné que la DLL est accessible uniquement au moment de l’exécution, les problèmes liés aux fonctions importées avec <xref:System.Runtime.InteropServices.DllImportAttribute> ne sont pas détectés au moment de la compilation.
 
 ## <a name="see-also"></a>Voir aussi
 

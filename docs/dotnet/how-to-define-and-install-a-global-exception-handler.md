@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : Comment : définir et installer un gestionnaire d’exceptions global'
 title: "Comment : définir et installer un gestionnaire d'exceptions global"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6747e0bdf95ae4d87ed667576852c282e05a7d6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258328"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Comment : définir et installer un gestionnaire d'exceptions global
 
 L’exemple de code suivant montre comment les exceptions non gérées peuvent être capturées. L’exemple de formulaire contient un bouton qui, lorsqu’il est enfoncé, exécute une référence null, provoquant la levée d’une exception. Cette fonctionnalité représente un échec de code standard. L’exception résultante est interceptée par le gestionnaire d’exceptions au niveau de l’application installé par la fonction principale.
 
-Pour ce faire, vous devez lier un délégué à l’événement <xref:System.Windows.Forms.Application.ThreadException>. Dans ce cas, les exceptions suivantes sont ensuite envoyées à la méthode `App::OnUnhandled`.
+Pour ce faire, vous devez lier un délégué à l' <xref:System.Windows.Forms.Application.ThreadException> événement. Dans ce cas, les exceptions suivantes sont ensuite envoyées à la `App::OnUnhandled` méthode.
 
 ## <a name="example"></a>Exemple
 

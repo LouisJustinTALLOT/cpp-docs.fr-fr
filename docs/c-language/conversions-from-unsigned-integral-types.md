@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conversions de types intégraux non signés'
 title: Conversions depuis les types intégraux non signés
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb8f208a323083afeb4b5b88bc8d6514e1f8c99f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293142"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés
 
@@ -43,7 +44,7 @@ Le tableau suivant répertorie les conversions de types intégraux non signés.
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tableau des conversions des types intégraux non signés
 
-|À partir|À|Méthode|
+|Du|À|Méthode|
 |----------|--------|------------|
 |**`unsigned char`**|**`char`**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**`unsigned char`**|**`short`**|Extension zéro|
@@ -52,9 +53,9 @@ Le tableau suivant répertorie les conversions de types intégraux non signés.
 |**`unsigned char`**|**`unsigned short`**|Extension zéro|
 |**`unsigned char`**|**`unsigned long`**|Extension zéro|
 |**`unsigned char`**|**`unsigned long long`**|Extension zéro|
-|**`unsigned char`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en**`float`**|
-|**`unsigned char`**|**`double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
-|**`unsigned char`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
+|**`unsigned char`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en **`float`**|
+|**`unsigned char`**|**`double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
+|**`unsigned char`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
 |**`unsigned short`**|**`char`**|Conserver l'octet de poids faible|
 |**`unsigned short`**|**`short`**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**`unsigned short`**|**`long`**|Extension zéro|
@@ -62,9 +63,9 @@ Le tableau suivant répertorie les conversions de types intégraux non signés.
 |**`unsigned short`**|**`unsigned char`**|Conserver l'octet de poids faible|
 |**`unsigned short`**|**`unsigned long`**|Extension zéro|
 |**`unsigned short`**|**`unsigned long long`**|Extension zéro|
-|**`unsigned short`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en**`float`**|
-|**`unsigned short`**|**`double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
-|**`unsigned short`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
+|**`unsigned short`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en **`float`**|
+|**`unsigned short`**|**`double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
+|**`unsigned short`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
 |**`unsigned long`**|**`char`**|Conserver l'octet de poids faible|
 |**`unsigned long`**|**`short`**|Conserver le mot de poids faible|
 |**`unsigned long`**|**`long`**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
@@ -72,9 +73,9 @@ Le tableau suivant répertorie les conversions de types intégraux non signés.
 |**`unsigned long`**|**`unsigned char`**|Conserver l'octet de poids faible|
 |**`unsigned long`**|**`unsigned short`**|Conserver le mot de poids faible|
 |**`unsigned long`**|**`unsigned long long`**|Extension zéro|
-|**`unsigned long`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en**`float`**|
-|**`unsigned long`**|**`double`**|Convertir directement en**`double`**|
-|**`unsigned long`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
+|**`unsigned long`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en **`float`**|
+|**`unsigned long`**|**`double`**|Convertir directement en **`double`**|
+|**`unsigned long`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
 |**`unsigned long long`**|**`char`**|Conserver l'octet de poids faible|
 |**`unsigned long long`**|**`short`**|Conserver le mot de poids faible|
 |**`unsigned long long`**|**`long`**|Conserver le DWORD de poids faible|
@@ -82,9 +83,9 @@ Le tableau suivant répertorie les conversions de types intégraux non signés.
 |**`unsigned long long`**|**`unsigned char`**|Conserver l'octet de poids faible|
 |**`unsigned long long`**|**`unsigned short`**|Conserver le mot de poids faible|
 |**`unsigned long long`**|**`unsigned long`**|Conserver le DWORD de poids faible|
-|**`unsigned long long`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en**`float`**|
-|**`unsigned long long`**|**`double`**|Convertir directement en**`double`**|
-|**`unsigned long long`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en**`double`**|
+|**`unsigned long long`**|**`float`**|Convertir en **`long`** ; convertir **`long`** en **`float`**|
+|**`unsigned long long`**|**`double`**|Convertir directement en **`double`**|
+|**`unsigned long long`**|**`long double`**|Convertir en **`long`** ; convertir **`long`** en **`double`**|
 
 ## <a name="see-also"></a>Voir aussi
 

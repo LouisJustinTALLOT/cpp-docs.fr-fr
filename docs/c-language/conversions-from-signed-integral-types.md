@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conversions de types intégraux signés'
 title: Conversions depuis des types intégraux signés
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: d41d2fd205a87f9f2be2179ffd8e38256a96e4f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 25ee07f0b3bac9cd954bc217a4a71e579e4eacda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293155"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversions depuis des types intégraux signés
 
@@ -43,35 +44,35 @@ Dans le compilateur Microsoft, **`int`** et **`long`** sont distincts, mais des 
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tableau des conversions des types intégraux signés
 
-|À partir|À|Méthode|
+|Du|À|Méthode|
 |----------|--------|------------|
 |**`char`**<sup>1,0</sup>|**`short`**|Étendre le signe|
 |**`char`**|**`long`**|Étendre le signe|
 |**`char`**|**`long long`**|Étendre le signe|
 |**`char`**|**`unsigned char`**|Conserver le modèle. Le bit de poids fort perd sa fonction de bit de signe|
-|**`char`**|**`unsigned short`**|Étendre la signature à **`short`** ; convertir **`short`** en**`unsigned short`**|
-|**`char`**|**`unsigned long`**|Étendre la signature à **`long`** ; convertir **`long`** en**`unsigned long`**|
-|**`char`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en**`unsigned long long`**|
-|**`char`**|**`float`**|Étendre la signature à **`long`** ; convertir **`long`** en**`float`**|
-|**`char`**|**`double`**|Étendre la signature à **`long`** ; convertir **`long`** en**`double`**|
-|**`char`**|**`long double`**|Étendre la signature à **`long`** ; convertir **`long`** en**`double`**|
+|**`char`**|**`unsigned short`**|Étendre la signature à **`short`** ; convertir **`short`** en **`unsigned short`**|
+|**`char`**|**`unsigned long`**|Étendre la signature à **`long`** ; convertir **`long`** en **`unsigned long`**|
+|**`char`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en **`unsigned long long`**|
+|**`char`**|**`float`**|Étendre la signature à **`long`** ; convertir **`long`** en **`float`**|
+|**`char`**|**`double`**|Étendre la signature à **`long`** ; convertir **`long`** en **`double`**|
+|**`char`**|**`long double`**|Étendre la signature à **`long`** ; convertir **`long`** en **`double`**|
 |**`short`**|**`char`**|Conserver l'octet de poids faible|
 |**`short`**|**`long`**|Étendre le signe|
 |**`short`**|**`long long`**|Étendre le signe|
 |**`short`**|**`unsigned char`**|Conserver l'octet de poids faible|
 |**`short`**|**`unsigned short`**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
-|**`short`**|**`unsigned long`**|Étendre la signature à **`long`** ; convertir **`long`** en**`unsigned long`**|
-|**`short`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en**`unsigned long long`**|
-|**`short`**|**`float`**|Étendre la signature à **`long`** ; convertir **`long`** en**`float`**|
-|**`short`**|**`double`**|Étendre la signature à **`long`** ; convertir **`long`** en**`double`**|
-|**`short`**|**`long double`**|Étendre la signature à **`long`** ; convertir **`long`** en**`double`**|
+|**`short`**|**`unsigned long`**|Étendre la signature à **`long`** ; convertir **`long`** en **`unsigned long`**|
+|**`short`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en **`unsigned long long`**|
+|**`short`**|**`float`**|Étendre la signature à **`long`** ; convertir **`long`** en **`float`**|
+|**`short`**|**`double`**|Étendre la signature à **`long`** ; convertir **`long`** en **`double`**|
+|**`short`**|**`long double`**|Étendre la signature à **`long`** ; convertir **`long`** en **`double`**|
 |**`long`**|**`char`**|Conserver l'octet de poids faible|
 |**`long`**|**`short`**|Conserver le mot de poids faible|
 |**`long`**|**`long long`**|Étendre le signe|
 |**`long`**|**`unsigned char`**|Conserver l'octet de poids faible|
 |**`long`**|**`unsigned short`**|Conserver le mot de poids faible|
 |**`long`**|**`unsigned long`**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
-|**`long`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en**`unsigned long long`**|
+|**`long`**|**`unsigned long long`**|Étendre la signature à **`long long`** ; convertir **`long long`** en **`unsigned long long`**|
 |**`long`**|**`float`**|Représente comme **`float`** . Si **`long`** ne peut pas être représenté exactement, certaines précisions sont perdues.|
 |**`long`**|**`double`**|Représente comme **`double`** . Si **`long`** ne peut pas être représenté exactement comme un **`double`** , une certaine précision est perdue.|
 |**`long`**|**`long double`**|Représente comme **`double`** . Si **`long`** ne peut pas être représenté exactement comme un **`double`** , une certaine précision est perdue.|

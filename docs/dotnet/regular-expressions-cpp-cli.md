@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions régulières (C++/CLI)'
 title: Expressions régulières (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -28,22 +29,22 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 429a121ec7acad46437a344b089f5c6a1ce4243b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245809"
 ---
 # <a name="regular-expressions-ccli"></a>Expressions régulières (C++/CLI)
 
-Illustre diverses opérations de chaîne à l’aide des classes d’expressions régulières dans le .NET Framework.
+Illustre diverses opérations de chaîne utilisant des classes d’expressions régulières dans le .NET Framework.
 
-Les rubriques suivantes illustrent l’utilisation du .NET Framework <xref:System.Text.RegularExpressions> espace de noms (et dans un cas le <xref:System.String.Split%2A?displayProperty=fullName> méthode) pour rechercher, analyser et modifier des chaînes.
+Les rubriques suivantes illustrent l’utilisation de l' <xref:System.Text.RegularExpressions> espace de noms .NET Framework (et dans le cas de la <xref:System.String.Split%2A?displayProperty=fullName> méthode) pour rechercher, analyser et modifier des chaînes.
 
-## <a name="parse_regex"></a> Analyser des chaînes à l’aide d’Expressions régulières
+## <a name="parse-strings-using-regular-expressions"></a><a name="parse_regex"></a> Analyser des chaînes à l’aide d’expressions régulières
 
-L’exemple de code suivant illustre l’analyse de chaîne simple à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe dans le <xref:System.Text.RegularExpressions?displayProperty=fullName> espace de noms. Chaîne qui contient plusieurs types de délimiteurs de word est construite. Elle est analysée à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe conjointement avec la <xref:System.Text.RegularExpressions.Match> classe. Ensuite, chaque mot dans la phrase est affiché séparément.
+L’exemple de code suivant illustre l’analyse de chaîne simple à l’aide <xref:System.Text.RegularExpressions.Regex> de la classe dans l' <xref:System.Text.RegularExpressions?displayProperty=fullName> espace de noms. Une chaîne contenant plusieurs types de délimiteurs de mots est construite. La chaîne est ensuite analysée à l’aide <xref:System.Text.RegularExpressions.Regex> de la classe conjointement avec la <xref:System.Text.RegularExpressions.Match> classe. Ensuite, chaque mot de la phrase s’affiche séparément.
 
 ### <a name="example"></a>Exemple
 
@@ -79,9 +80,9 @@ int main( )
 }
 ```
 
-## <a name="parse_split"></a> Analyser des chaînes à l’aide de la méthode Split
+## <a name="parse-strings-using-the-split-method"></a><a name="parse_split"></a> Analyser des chaînes à l’aide de la méthode Split
 
-L’exemple de code suivant montre comment utiliser le <xref:System.String.Split%2A?displayProperty=fullName> méthode pour extraire chaque mot d’une chaîne. Chaîne qui contient plusieurs types de délimiteurs de word est construite, puis analysée en appelant <xref:System.String.Split%2A> avec une liste des délimiteurs des. Ensuite, chaque mot dans la phrase est affiché séparément.
+L’exemple de code suivant illustre l’utilisation de la <xref:System.String.Split%2A?displayProperty=fullName> méthode pour extraire chaque mot d’une chaîne. Une chaîne contenant plusieurs types de délimiteurs de mots est construite, puis analysée en appelant <xref:System.String.Split%2A> avec une liste de délimiteurs. Ensuite, chaque mot de la phrase s’affiche séparément.
 
 ### <a name="example"></a>Exemple
 
@@ -108,9 +109,9 @@ int main()
 }
 ```
 
-## <a name="regex_simple"></a> Utiliser des Expressions régulières pour la correspondance Simple
+## <a name="use-regular-expressions-for-simple-matching"></a><a name="regex_simple"></a> Utiliser des expressions régulières pour une correspondance simple
 
-L’exemple de code suivant utilise des expressions régulières pour rechercher des correspondances de sous-chaînes exactes. La recherche est effectuée par la méthode statique <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> (méthode), qui prend deux chaînes en tant qu’entrée. La première est la chaîne à rechercher, et le second est le modèle à rechercher.
+L’exemple de code suivant utilise des expressions régulières pour rechercher des correspondances de sous-chaînes exactes. La recherche est effectuée par la <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> méthode statique, qui prend deux chaînes comme entrée. La première est la chaîne à rechercher et la seconde est le modèle à rechercher.
 
 ### <a name="example"></a>Exemple
 
@@ -146,9 +147,9 @@ int main()
 }
 ```
 
-## <a name="regex_extract"></a> Utiliser des Expressions régulières pour extraire des champs de données
+## <a name="use-regular-expressions-to-extract-data-fields"></a><a name="regex_extract"></a> Utiliser des expressions régulières pour extraire des champs de données
 
-L’exemple de code suivant illustre l’utilisation d’expressions régulières pour extraire des données à partir d’une chaîne mise en forme. Le code suivant exemple utilise le <xref:System.Text.RegularExpressions.Regex> classe pour spécifier un modèle qui correspond à une adresse de messagerie. Ce modèle inclut des identificateurs de champ qui peuvent être utilisées pour récupérer les parties de nom d’hôte de chaque adresse de messagerie. Le <xref:System.Text.RegularExpressions.Match> classe est utilisée pour effectuer la correspondance de modèle réelle. Si l’adresse de messagerie donnée est valide, le nom d’utilisateur et les noms d’hôte sont extraites et affichées.
+L’exemple de code suivant illustre l’utilisation d’expressions régulières pour extraire des données d’une chaîne mise en forme. L’exemple de code suivant utilise la <xref:System.Text.RegularExpressions.Regex> classe pour spécifier un modèle qui correspond à une adresse de messagerie. Ce guide comprend des identificateurs de champ qui peuvent être utilisés pour récupérer les portions d’utilisateur et de nom d’hôte de chaque adresse de messagerie. La <xref:System.Text.RegularExpressions.Match> classe est utilisée pour effectuer les critères spéciaux réels. Si l’adresse de messagerie spécifiée est valide, le nom d’utilisateur et les noms d’hôte sont extraits et affichés.
 
 ### <a name="example"></a>Exemple
 
@@ -193,11 +194,11 @@ int main()
 }
 ```
 
-## <a name="regex_rearrange"></a> Réorganiser des données à l’aide d’Expressions régulières
+## <a name="use-regular-expressions-to-rearrange-data"></a><a name="regex_rearrange"></a> Utiliser des expressions régulières pour réorganiser des données
 
-L’exemple de code suivant montre comment la prise en charge des expressions régulières .NET Framework peut être utilisé pour les réorganiser ou reformater les données. Le code suivant exemple utilise le <xref:System.Text.RegularExpressions.Regex> et <xref:System.Text.RegularExpressions.Match> classes pour extraire les prénoms et noms d’une chaîne et afficher ces éléments dans l’ordre inverse.
+L’exemple de code suivant montre comment la prise en charge des expressions régulières .NET Framework peut être utilisée pour réorganiser ou reformater les données. L’exemple de code suivant utilise <xref:System.Text.RegularExpressions.Regex> les <xref:System.Text.RegularExpressions.Match> classes et pour extraire le prénom et le nom d’une chaîne, puis afficher ces éléments de nom dans l’ordre inverse.
 
-Le <xref:System.Text.RegularExpressions.Regex> classe est utilisée pour construire une expression régulière qui décrit le format actuel des données. Les deux noms sont supposés être séparés par une virgule et peuvent utiliser n’importe quel volume de l’espace blanc autour de la virgule. Le <xref:System.Text.RegularExpressions.Match> méthode est ensuite utilisée pour analyser chaque chaîne. En cas de réussite, les prénoms et noms sont récupérés à partir de la <xref:System.Text.RegularExpressions.Match> de l’objet et l’affiche.
+La <xref:System.Text.RegularExpressions.Regex> classe est utilisée pour construire une expression régulière qui décrit le format actuel des données. Les deux noms sont supposés être séparés par une virgule et peuvent utiliser n’importe quelle quantité d’espace blanc autour de la virgule. La <xref:System.Text.RegularExpressions.Match> méthode est ensuite utilisée pour analyser chaque chaîne. En cas de réussite, le prénom et le nom sont récupérés à partir de l' <xref:System.Text.RegularExpressions.Match> objet et affichés.
 
 ### <a name="example"></a>Exemple
 
@@ -237,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="regex_search"></a> Utiliser des Expressions régulières pour rechercher et remplacer
+## <a name="use-regular-expressions-to-search-and-replace"></a><a name="regex_search"></a> Utiliser des expressions régulières pour rechercher et remplacer
 
-L’exemple de code suivant montre comment la classe d’expression régulière <xref:System.Text.RegularExpressions.Regex> peut être utilisé pour effectuer la recherche et remplacement. Cette opération est effectuée avec la <xref:System.Text.RegularExpressions.Regex.Replace%2A> (méthode). La version utilisée prend deux chaînes comme entrée : la chaîne à modifier et la chaîne à insérer à la place les sections (le cas échéant) qui correspondent au modèle donné à la <xref:System.Text.RegularExpressions.Regex> objet.
+L’exemple de code suivant montre comment la classe d’expressions régulières <xref:System.Text.RegularExpressions.Regex> peut être utilisée pour effectuer des recherches et des remplacements. Cette opération s’effectue à l’aide de la <xref:System.Text.RegularExpressions.Regex.Replace%2A> méthode. La version utilisée prend deux chaînes comme entrée : la chaîne à modifier et la chaîne à insérer à la place des sections (le cas échéant) qui correspondent au modèle donné à l' <xref:System.Text.RegularExpressions.Regex> objet.
 
-Ce code remplace tous les chiffres dans une chaîne par des traits de soulignement (_), puis remplace les avec une chaîne vide, en les supprimant réellement. Le même effet peut être accompli en une seule étape, mais deux étapes sont utilisées ici à des fins de démonstration.
+Ce code remplace tous les chiffres d’une chaîne par des traits de soulignement (_), puis les remplace par une chaîne vide, en les supprimant efficacement. Le même effet peut être accompli en une seule étape, mais deux étapes sont utilisées ici à des fins de démonstration.
 
 ### <a name="example"></a>Exemple
 
@@ -269,9 +270,9 @@ int main()
 }
 ```
 
-## <a name="regex_validate"></a> Utiliser des Expressions régulières pour valider la mise en forme des données
+## <a name="use-regular-expressions-to-validate-data-formatting"></a><a name="regex_validate"></a> Utiliser des expressions régulières pour valider la mise en forme des données
 
-L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d{3}-\d{3}-\d{4}» pour indiquer que chaque champ représente un numéro de téléphone valide. « D » dans la chaîne indique un chiffre, et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre est nécessaire pour être séparés par des tirets.
+L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d {3} -\d {3} -\d {4} » pour indiquer que chaque champ représente un numéro de téléphone valide. La chaîne « d » indique un chiffre et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre doit être séparé par des tirets.
 
 ### <a name="example"></a>Exemple
 
@@ -312,10 +313,10 @@ int main()
 }
 ```
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
-[.NET Framework (expressions régulières)](/dotnet/standard/base-types/regular-expressions)
+[Expressions régulières du .NET Framework](/dotnet/standard/base-types/regular-expressions)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

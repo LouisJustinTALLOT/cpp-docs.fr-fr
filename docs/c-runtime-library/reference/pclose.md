@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _pclose'
 title: _pclose
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529af8ccdd1c6cc27f9039adef5d75c8b977aa54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258705"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -56,15 +57,15 @@ FILE *stream
 *train*<br/>
 Valeur de retour de l’appel précédent à **_popen**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’état de sortie du processeur de commandes de fin ou-1 si une erreur se produit. Le format de la valeur de retour est le même que pour **_cwait**, sauf que les octets de poids faible et de poids fort sont permutés. Si Stream a la **valeur null**, **_pclose** affecte à **errno** la valeur **EINVAL** et retourne-1.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_pclose** recherche l’ID de processus du processeur de commandes (cmd. exe) Démarré par l’appel de **_popen** associé, exécute un appel de [_cwait](cwait.md) sur le nouveau processeur de commandes et ferme le flux sur le canal associé.
+La fonction **_pclose** recherche l’ID de processus du processeur de commandes (Cmd.exe) Démarré par l’appel de **_popen** associé, exécute un appel [_cwait](cwait.md) sur le nouveau processeur de commandes et ferme le flux sur le canal associé.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

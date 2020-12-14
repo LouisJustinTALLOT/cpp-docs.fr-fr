@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création de votre classe de boîte de dialogue'
 title: Création de votre classe de boîte de dialogue
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d135d6acaefbc73f435e48db8f72add7081fdac2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309444"
 ---
 # <a name="creating-your-dialog-class"></a>Création de votre classe de boîte de dialogue
 

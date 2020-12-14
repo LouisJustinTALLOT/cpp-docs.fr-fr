@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _putch_nolock, _putwch_nolock'
 title: _putch_nolock, _putwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: df32b156d8c57d51ee81c4b4893bf11887915672
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a300b70cc128ef1cbefcf745a0ed113f452f6ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246355"
 ---
 # <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
@@ -66,14 +67,14 @@ wchar_t c
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à sortir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne *c* en cas de réussite. Si **_putch_nolock** échoue, la valeur **EOF** est retournée ; si **_putwch_nolock** échoue, la valeur retournée est **WEOF**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_putch_nolock** et **_putwch_nolock** sont identiques, respectivement, à **_putch** et **_putwch**, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 

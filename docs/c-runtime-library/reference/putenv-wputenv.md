@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _putenv, _wputenv'
 title: _putenv, _wputenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: a86b58b868c96b6f77af8bfa32036d1a56b2a7cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 117250553eba7b2c8c1249140b610dc064e6b1fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258601"
 ---
 # <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
@@ -70,11 +71,11 @@ int _wputenv(
 *envstring*<br/>
 Définition de chaîne d’environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 en cas de réussite ou-1 en cas d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_putenv** ajoute de nouvelles variables d’environnement ou modifie les valeurs des variables d’environnement existantes. Les variables d'environnement définissent l'environnement d'exécution d'un processus (par exemple, le chemin de recherche par défaut pour les bibliothèques à lier à un programme). **_wputenv** est une version à caractères larges de **_putenv**; l’argument *envstring* pour **_wputenv** est une chaîne de caractères larges.
 
@@ -86,9 +87,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-L’argument *envstring* doit être un pointeur vers une chaîne au format *varname*=*value_string*, où *varname* est le nom de la variable d’environnement à ajouter ou modifier et *value_string* est la valeur de la variable. Si *varname* fait déjà partie de l’environnement, sa valeur est remplacée par *value_string*; dans le cas contraire, la nouvelle variable *varname* et sa valeur *value_string* sont ajoutées à l’environnement. Vous pouvez supprimer une variable de l’environnement en spécifiant un *value_string*vide, ou en d’autres termes, en spécifiant uniquement *varname*=.
+L’argument *envstring* doit être un pointeur vers une chaîne au format *varname* = *value_string*, où *varname* est le nom de la variable d’environnement à ajouter ou modifier et *value_string* est la valeur de la variable. Si *varname* fait déjà partie de l’environnement, sa valeur est remplacée par *value_string*; dans le cas contraire, la nouvelle variable *varname* et sa valeur *value_string* sont ajoutées à l’environnement. Vous pouvez supprimer une variable de l’environnement en spécifiant un *value_string* vide, ou en d’autres termes, en spécifiant uniquement *varname*=.
 
-**_putenv** et **_wputenv** affectent uniquement l’environnement local au processus en cours ; vous ne pouvez pas les utiliser pour modifier l’environnement au niveau de la commande. Autrement dit, ces fonctions agissent uniquement sur les structures de données accessibles à la bibliothèque Runtime et non sur le segment d’environnement que le système d’exploitation a créé pour un processus. Quand le processus actif se termine, l’environnement repasse au niveau du processus appelant (dans la plupart des cas, celui du système d’exploitation). Toutefois, l’environnement modifié peut être passé aux nouveaux processus créés par **_spawn**, **_exec**ou **System**, et ces nouveaux processus obtiennent les nouveaux éléments ajoutés par **_putenv** et **_wputenv**.
+**_putenv** et **_wputenv** affectent uniquement l’environnement local au processus en cours ; vous ne pouvez pas les utiliser pour modifier l’environnement au niveau de la commande. Autrement dit, ces fonctions agissent uniquement sur les structures de données accessibles à la bibliothèque Runtime et non sur le segment d’environnement que le système d’exploitation a créé pour un processus. Quand le processus actif se termine, l’environnement repasse au niveau du processus appelant (dans la plupart des cas, celui du système d’exploitation). Toutefois, l’environnement modifié peut être passé aux nouveaux processus créés par **_spawn**, **_exec** ou **System**, et ces nouveaux processus obtiennent les nouveaux éléments ajoutés par **_putenv** et **_wputenv**.
 
 Ne modifiez pas directement une entrée d’environnement : utilisez à la place **_putenv** ou **_wputenv** pour la modifier. En particulier, la libération directe des éléments du tableau global **_environ []** peut entraîner une mémoire non valide.
 
@@ -106,7 +107,7 @@ Ne modifiez pas directement une entrée d’environnement : utilisez à la plac
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **_putenv**, consultez [getenv, _wgetenv](getenv-wgetenv.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme ::D étails :: IEquatable interface'
 title: Platform::Details::IEquatable (interface)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec808aae930ec0b1d382477cee5351cd97478271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274760"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interface)
 
@@ -32,12 +33,12 @@ Cette interface est fournie uniquement par souci d’exhaustivité, car elle peu
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-**Espace de noms :** Platform::Details
+**Espace de noms :** Platform::Details
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

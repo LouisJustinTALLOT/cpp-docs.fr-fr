@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _chmod, _wchmod'
 title: _chmod, _wchmod
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 601510c1f326282d48d2824b055ee3e80d9db0ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275033"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -55,17 +56,17 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier existant.
 
 *pmode*<br/>
 Paramètre d’autorisation pour le fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces fonctions retournent 0 si le paramètre d’autorisation a été correctement modifié. Une valeur de retour de-1 indique un échec. Si le fichier spécifié est introuvable, **errno** a la valeur **ENOENT**; Si un paramètre n’est pas valide, **errno** a la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_CHMOD** modifie le paramètre d’autorisation du fichier spécifié par *filename*. Le paramètre d’autorisation contrôle l’accès en lecture et écriture au fichier. L’expression entière *PMODE* contient l’une des constantes manifestes suivantes (ou les deux), définie dans SYS\Stat.h.
 
@@ -73,9 +74,9 @@ La fonction **_CHMOD** modifie le paramètre d’autorisation du fichier spécif
 |-|-|
 | **\_\_Iread** | Lecture autorisée uniquement. |
 | **\_\_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
-| **\_S\_Iread** &#124; ** \_s\_IWRITE** | Lecture et écriture autorisées. |
+| **\_ S \_ Iread** &#124; **\_ s \_ IWRITE** | Lecture et écriture autorisées. |
 
-Quand les deux constantes sont données, elles sont jointes avec l’opérateur or**\|** au niveau du bit (). Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Notez que tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Ainsi, les modes **_S_IWRITE** et **_S_IREAD** \| **_S_IWRITE** sont équivalents.
+Quand les deux constantes sont données, elles sont jointes avec l’opérateur or au niveau du bit ( **\|** ). Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Notez que tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Ainsi, les modes **_S_IWRITE** et **_S_IREAD** \| **_S_IWRITE** sont équivalents.
 
 **_wchmod** est une version à caractères larges de **_CHMOD**; l’argument de *nom de fichier* pour **_wchmod** est une chaîne de caractères larges. dans le cas contraire, **_wchmod** et **_CHMOD** se comportent de la même façon.
 

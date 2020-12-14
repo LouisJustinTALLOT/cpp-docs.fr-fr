@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : création du contrôle List'
 title: Création du contrôle de liste
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: c9ba379611c44b5eae8d02b908ba71e3dbd66481
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5be1a9ce7a2cd8279d576dfc41e44c810c433515
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309574"
 ---
 # <a name="creating-the-list-control"></a>Création du contrôle de liste
 
@@ -35,4 +36,4 @@ La façon dont le contrôle de liste ([CListCtrl](reference/clistctrl-class.md))
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _chsize'
 title: _chsize
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16a65c145e33a0fbafcc9d0f2b0fed3b9f2b516f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274890"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -58,13 +59,13 @@ Descripteur de fichier qui fait référence à un fichier ouvert.
 *size*<br/>
 Nouvelle longueur, en octets, du fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_chsize** retourne la valeur 0 si la taille du fichier a été modifiée avec succès. Une valeur de retour de-1 indique une erreur : **errno** a la valeur **EACCES** si le fichier spécifié est en lecture seule ou si le fichier spécifié est verrouillé contre l’accès, **EBADF** si le descripteur n’est pas valide, **ENOSPC** si aucun espace n’est laissé sur l’appareil, ou **EINVAL** si la *taille* est inférieure à zéro.
 
 Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_chsize** étend ou tronque le fichier associé à *FD* à la longueur spécifiée par *Size*. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.
 

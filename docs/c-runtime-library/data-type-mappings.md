@@ -1,5 +1,6 @@
 ---
-title: Mappages de type de données
+description: En savoir plus sur les mappages de types de données
+title: Mappages de types de données
 ms.date: 11/04/2016
 f1_keywords:
 - _TXCHAR
@@ -29,14 +30,14 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d76ecebc9bcb01e86cac2f199534ae2cda518c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258772"
 ---
-# <a name="data-type-mappings"></a>Mappages de type de données
+# <a name="data-type-mappings"></a>Mappages de types de données
 
 Ces mappages de types de données sont définis dans TCHAR.H et varient selon que la constante `_UNICODE` ou `_MBCS` a été définie dans votre programme.
 
@@ -61,5 +62,5 @@ Pour plus d’informations, consultez [Utilisation de types de données TCHAR.H 
 [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mappages de constantes et de variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mappages de routine](../c-runtime-library/routine-mappings.md)<br/>
-[Exemple de programme de texte générique](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Utilisation de mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md)
+[Exemple de programme Generic-Text](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Utilisation des mappages de Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les routines is, ISW'
 title: is, isw, routines
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 632bd371f8a6da4b57eeb1ce88e2a37eb6923355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9229d2437ea7a7e57178acc5fd40ba2afea043b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246701"
 ---
 # <a name="is-isw-routines"></a>is, isw, routines
 
@@ -217,7 +218,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 00            AS  C                              .
@@ -355,5 +356,5 @@ int main( void )
 [Classification des caractères](../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [à des fonctions](../c-runtime-library/to-functions.md)

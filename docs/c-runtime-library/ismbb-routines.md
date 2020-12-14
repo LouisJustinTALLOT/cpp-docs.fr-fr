@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les routines de _ismbb
 title: _ismbb, routines
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4eb82433c4ad7712c2d3ac40f9eeb0120e6fea07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246608"
 ---
 # <a name="_ismbb-routines"></a>_ismbb, routines
 

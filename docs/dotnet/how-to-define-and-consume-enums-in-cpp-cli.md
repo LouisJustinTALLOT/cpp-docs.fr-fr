@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : définir et consommer des énumérations en C++/CLI'
 title: 'Procédure : Définir et consommer des énumérateurs dans C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26b3c886ca34235f0567fc0f8e9d7df6bfe46814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258340"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Procédure : Définir et consommer des énumérateurs dans C++/CLI
 

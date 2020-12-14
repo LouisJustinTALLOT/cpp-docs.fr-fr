@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _iob'
 title: _iob
 ms.date: 11/04/2016
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - _iob global variable
 - iob global variable
 ms.assetid: 008ed376-8078-4bbd-bc6c-0677c63d0ff1
-ms.openlocfilehash: e33ad12035dc6aadace35581c7555ab85cc0445a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a76d32cc266267643b9352bafc701811c257736c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246717"
 ---
 # <a name="_iob"></a>_iob
 

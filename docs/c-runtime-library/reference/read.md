@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _read'
 title: _read
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f814c912c9f5d5e2dc7897cb3a2dcc8099503314
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274838"
 ---
 # <a name="_read"></a>_read
 
@@ -57,23 +58,23 @@ int _read(
 *FD*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
 *buffer_size*<br/>
 Nombre maximal d’octets à lire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_read** retourne le nombre d’octets lus, qui peut être inférieur à *buffer_size* s’il y a moins de *buffer_size* octets dans le fichier, ou si le fichier a été ouvert en mode texte. En mode texte, chaque paire `\r\n` retour chariot-saut de ligne est remplacée par un caractère `\n`de saut de ligne unique. Seul le caractère de saut de ligne unique est compté dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.
+**_read** retourne le nombre d’octets lus, qui peut être inférieur à *buffer_size* s’il y a moins de *buffer_size* octets dans le fichier, ou si le fichier a été ouvert en mode texte. En mode texte, chaque paire retour chariot-saut de ligne `\r\n` est remplacée par un caractère de saut de ligne unique `\n` . Seul le caractère de saut de ligne unique est compté dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.
 
 Si la fonction tente de lire à la fin du fichier, elle retourne 0. Si *FD* n’est pas valide, que le fichier n’est pas ouvert pour la lecture ou que le fichier est verrouillé, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et définit **errno** sur **EBADF**.
 
-Si *buffer* a la **valeur null**, ou si *buffer_size* > **INT_MAX**, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EINVAL**.
+Si *buffer* a la **valeur null**, ou si *buffer_size*  >  **INT_MAX**, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_read** lit un maximum de *buffer_size* octets dans la *mémoire tampon* à partir du fichier associé à *FD*. L’opération de lecture commence à la position actuelle du pointeur de fichier associé au fichier donné. À la fin de la l’opération de lecture, le pointeur de fichier pointe vers le caractère non lu suivant.
 
@@ -93,7 +94,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_read.c
@@ -148,7 +149,7 @@ Read 19 bytes from file
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fread](fread.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

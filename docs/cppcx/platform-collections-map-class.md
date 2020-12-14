@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme :: Collections :: Map, classe'
 title: Platform::Collections::Map, classe
 ms.date: 10/01/2019
 ms.topic: reference
@@ -15,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8414328a178e4f9e2cfd7c4d97cca07ce7efcd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839138"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258497"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
-Représente *une carte*qui est une collection de paires clé-valeur. Implémente [Windows :: Foundation :: Collections :: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) pour faciliter la [liaison de données](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Représente *une carte* qui est une collection de paires clé-valeur. Implémente [Windows :: Foundation :: Collections :: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) pour faciliter la [liaison de données](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,7 +99,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 `Map`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
@@ -131,7 +132,7 @@ Itérateur qui spécifie le premier élément de la carte.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myMap->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myMap->First();`.
 
 ## <a name="mapgetview-method"></a><a name="getview"></a> Map :: GetView, méthode
 
@@ -236,7 +237,7 @@ Nom de type de l'objet Map actuel.
 *comp*<br/>
 Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le Map.
 
-*lecteur*<br/>
+*m*<br/>
 Référence ou [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` utilisé pour initialiser le mappage actuel.
 
 *first*<br/>

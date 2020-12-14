@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: MapView'
 title: Platform::Collections::MapView, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 6011948bb3708329f7dcce0841f2bc34879760a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258484"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 
@@ -93,7 +94,7 @@ Itérateur qui spécifie le premier élément de la vue cartographique.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myMapView->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.
 
 ## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView :: Haskey,, méthode
 
@@ -111,7 +112,7 @@ bool HasKey(K key);
 *key*<br/>
 Clé utilisée pour rechercher l’élément MapView. Le type de *clé* est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la clé est trouvée ; Sinon, **`false`** .
 
@@ -130,7 +131,7 @@ V Lookup(K key);
 *key*<br/>
 Clé utilisée pour trouver un élément dans le MapView. Le type de `key` est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur associée à `key`. Le type de la valeur de retour est TypeName *V*.
 
@@ -165,7 +166,7 @@ Typename du MapView actif.
 *comp*<br/>
 Objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le MapView.
 
-*lecteur*<br/>
+*m*<br/>
 Une référence ou [lvalues et rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` utilisé pour initialiser le MapView actuel.
 
 *first*<br/>
