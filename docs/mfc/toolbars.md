@@ -1,34 +1,35 @@
 ---
+description: 'En savoir plus sur : barres d’outils'
 title: Barres d'outils
 ms.date: 11/04/2016
 helpviewer_keywords:
 - toolbars [MFC]
 - command bars [MFC], MFC toolbars
 ms.assetid: c22ecc5b-a84c-4979-8d1a-8e3e71d5ce33
-ms.openlocfilehash: fe294b42f6c149a32d3e96ee9e0e2dc18103fc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843fcd0da9cd2647af69f8b81e8d62f3e525a7db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264308"
 ---
 # <a name="toolbars"></a>Barres d'outils
 
-La famille de la barre d’outils d’articles décrit les barres d’outils MFC et comment créer et les utiliser.
+La famille d’Articles de la barre d’outils décrit les barres d’outils MFC et explique comment les créer et les utiliser.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Implémentation de barre d’outils MFC](../mfc/mfc-toolbar-implementation.md)
+- [Implémentation de la barre d'outils MFC](../mfc/mfc-toolbar-implementation.md)
 
-- [Principes de base de barre d’outils](../mfc/toolbar-fundamentals.md)
+- [Notions de base de barre d'outils](../mfc/toolbar-fundamentals.md)
 
-- [Comment les objets d’Interface utilisateur mise à jour (Activer/désactiver les boutons de barre d’outils)](../mfc/how-to-update-user-interface-objects.md)
+- [Comment mettre à jour des objets User-Interface (activer/désactiver les boutons de la barre d’outils)](../mfc/how-to-update-user-interface-objects.md)
 
-- Le [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes
+- Classes [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
 - [Exemple](../mfc/toolbar-sample-list.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
+[Éléments de l’interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
 [Éditeur de barres d’outils](../windows/toolbar-editor.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les traceurs'
 title: Dispositifs de suivi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-ms.openlocfilehash: b71eb0e5d46a790b01ec12f12043af783bdfcf27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82766ecfabf2b5ebb0147b9f2c462f3b4460869
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264245"
 ---
 # <a name="trackers"></a>Dispositifs de suivi
 
-Le [CRectTracker](../mfc/reference/crecttracker-class.md) classe fournit une interface utilisateur entre des éléments rectangulaires dans votre application et votre utilisateur en fournissant un ensemble de styles d’affichage. Ces styles comprennent des bordures pleine, hachurées ou en pointillés ; un motif hachuré qui recouvre l’élément ; et les poignées de redimensionnement qui peuvent se trouve à l’extérieur ou à l’intérieur d’une bordure. Dispositifs de suivi sont souvent utilisés conjointement avec les éléments OLE, autrement dit, les objets dérivés de `COleClientItem`. Les rectangles de dispositif de suivi donnent des indications sur l’état actuel de l’élément.
+La classe [CRectTracker](../mfc/reference/crecttracker-class.md) fournit une interface utilisateur entre les éléments rectangulaires de votre application et votre utilisateur en fournissant divers styles d’affichage. Ces styles incluent des bordures pleines, hachurées ou en pointillés ; modèle hachuré qui couvre l’élément ; et redimensionnez les poignées qui peuvent se trouver à l’extérieur ou à l’intérieur d’une bordure. Les suivis sont souvent utilisés conjointement avec les éléments OLE, autrement dit, les objets dérivés de `COleClientItem` . Les rectangles du dispositif de suivi donnent des indications visuelles sur l’état actuel de l’élément.
 
-L’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) montre une interface commune à l’aide de dispositifs de suivi et des éléments du client OLE à partir du point de vue d’une application conteneur. Pour une démonstration des différents styles et les capacités d’un objet de mise hors tension, consultez l’exemple général MFC [TRACKER](../overview/visual-cpp-samples.md).
+L’exemple MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) illustre une interface commune utilisant des dispositifs de suivi et des éléments de client OLE du point de vue d’une application de conteneur. Pour une démonstration des différents styles et capacités d’un objet Tracker, consultez l’exemple de [suivi](../overview/visual-cpp-samples.md)général MFC.
 
-Pour plus d’informations sur l’implémentation de dispositifs de suivi dans votre application OLE, consultez [dispositifs de suivi : Implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+Pour plus d’informations sur l’implémentation de dispositifs de suivi dans votre application OLE, consultez [traceurs : implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
-[COleClientItem, classe](../mfc/reference/coleclientitem-class.md)
+[COleClientItem (classe)](../mfc/reference/coleclientitem-class.md)

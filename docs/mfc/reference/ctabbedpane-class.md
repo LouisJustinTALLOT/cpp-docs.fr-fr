@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CTabbedPane'
 title: CTabbedPane, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: cfc0a3099b1d5ff9bd1093cc911745bd61cde64c
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a337a68cdeadfec229b24e10a615ba49145ec1ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264477"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane, classe
 
@@ -175,7 +176,7 @@ dans *pBar*<br/>
 
 dans *bHide*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -217,7 +218,7 @@ dans *nTabID*<br/>
 dans *dockMethod*<br/>
 dans *bHide*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -251,7 +252,7 @@ Substituez cette méthode dans une `CTabbedPane` classe dérivée de pour modifi
 CMFCTabCtrl* GetTabWnd() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -261,7 +262,7 @@ CMFCTabCtrl* GetTabWnd() const;
 virtual BOOL HasAutoHideMode() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -273,7 +274,7 @@ Détermine si les onglets sont situés au bas de la fenêtre.
 virtual BOOL IsTabLocationBottom() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la zone d’onglet est située en bas de la fenêtre à onglets ; Sinon, FALSe.
 

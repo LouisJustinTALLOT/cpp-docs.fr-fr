@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur les éléments suivants : mise en forme de CString et affichage des Message-Box'
 title: Mise en forme de CString et affichage des boîtes de message
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: e346fe6ed5235f98f9e1206e92cb53c2fd5c929f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3c91a2a8a6f80235a834811433467797d5a37a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831123"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264516"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Mise en forme de CString et affichage des boîtes de message
 
@@ -26,7 +27,7 @@ Ce groupe de fonctions comprend également une routine globale pour l’affichag
 |[AfxFormatString2](#afxformatstring2)|Remplace deux chaînes pour les caractères de format "%1" et "%2" dans une chaîne contenue dans la table de chaînes.|
 |[AfxMessageBox](#afxmessagebox)|Affiche une boîte de message.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXWIN. h
 
@@ -70,7 +71,7 @@ Cette fonction retourne FALSe si *lpszFullString* a la valeur null ou si la fonc
 
 [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXWIN. h
 
@@ -106,7 +107,7 @@ Si les caractères de format « %1 » apparaissent plusieurs fois dans la cha�
 
 [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXWIN. h
 
@@ -146,7 +147,7 @@ Si les caractères de format "%1" ou "%2" apparaissent plusieurs fois dans la ch
 
 [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXWIN. h
 
