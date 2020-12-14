@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des déclarations'
 title: Vue d'ensemble des déclarations
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 066c0fd307c7562d70c57c31dff23960a6305f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53b8c808771aa3bb455655e6e0c5b06ff1fa9acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256846"
 ---
 # <a name="overview-of-declarations"></a>Vue d'ensemble des déclarations
 
@@ -19,7 +20,7 @@ Une « déclaration » spécifie l'interprétation et les attributs d'un ensem
 ## <a name="syntax"></a>Syntaxe
 
 *`declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub> opt opt *`init-declarator-list`* <sub>opt</sub>**`;`**
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub></sub> opt opt *`init-declarator-list`* <sub></sub>**`;`**
 
 /\**`attribute-seq`* <sub>OPT</sub> est spécifique à Microsoft */
 
@@ -43,7 +44,7 @@ Les déclarations dans *`init-declarator-list`* contiennent les identificateurs 
 
 Les déclarations peuvent contenir un ou plusieurs des attributs facultatifs listés dans *`attribute-seq`* ; *`seq`* est une abréviation pour la séquence. Ces attributs spécifiques à Microsoft effectuent plusieurs fonctions, qui sont décrites en détail dans ce document.
 
-Sous la forme générale d’une déclaration de variable, *`type-specifier`* donne le type de données de la variable. *`type-specifier`* Peut être un composé, comme lorsque le type est modifié par **`const`** ou **`volatile`** . `declarator` donne le nom de la variable, éventuellement modifié pour déclarer un tableau ou un type de pointeur. Par exemple,
+Sous la forme générale d’une déclaration de variable, *`type-specifier`* donne le type de données de la variable. *`type-specifier`* Peut être un composé, comme lorsque le type est modifié par **`const`** ou **`volatile`** . `declarator` donne le nom de la variable, éventuellement modifié pour déclarer un tableau ou un type de pointeur. Par exemple :
 
 ```C
 int const *fp;
@@ -57,7 +58,7 @@ Toutes les définitions sont implicitement des déclarations, mais toutes les d�
 
 Une classe de stockage ou un type (ou les deux) sont requis dans les déclarations de variable. À l’exception de **`__declspec`** , un seul spécificateur de classe de stockage est autorisé dans une déclaration et tous les spécificateurs de classe de stockage ne sont pas autorisés dans chaque contexte. La **`__declspec`** classe de stockage est autorisée avec d’autres spécificateurs de classe de stockage et est autorisée plusieurs fois. Le spécificateur de classe de stockage d'une déclaration affecte la façon dont l'élément déclaré est stocké et initialisé, ainsi que les parties d'un programme qui peuvent référencer l'élément.
 
-Les *`storage-class-specifier`* terminaux définis en C incluent **`auto`** , **`extern`** , **`register`** , **`static`** et **`typedef`** . Microsoft C comprend également le *`storage-class-specifier`* Terminal **`__declspec`** . Tous les *`storage-class-specifier`* terminaux, à l’exception de **`typedef`** et, **`__declspec`** sont décrits dans [classes de stockage](../c-language/c-storage-classes.md). Pour plus d’informations sur **`typedef`** , consultez [ `typedef` déclarations](../c-language/typedef-declarations.md). Pour plus d’informations sur **`__declspec`** , consultez [attributs étendus de classe de stockage](../c-language/c-extended-storage-class-attributes.md).
+Les *`storage-class-specifier`* terminaux définis en C incluent **`auto`** , **`extern`** , **`register`** , **`static`** et **`typedef`** . Microsoft C comprend également le *`storage-class-specifier`* Terminal **`__declspec`** . Tous les *`storage-class-specifier`* terminaux, à l’exception de **`typedef`** et, **`__declspec`** sont décrits dans [classes de stockage](../c-language/c-storage-classes.md). Pour plus d’informations sur **`typedef`** , consultez [ `typedef` déclarations](../c-language/typedef-declarations.md). Pour plus d’informations sur **`__declspec`** , consultez [Extended Storage-Class Attributes](../c-language/c-extended-storage-class-attributes.md).
 
 L'emplacement de la déclaration dans le programme source et la présence ou l'absence d'autres déclarations de la variable sont des facteurs importants pour déterminer la durée de vie des variables. Il peut y avoir plusieurs redéclarations, mais une seule définition. Toutefois, une définition peut apparaître dans plusieurs unités de traduction. Pour les objets avec une liaison interne, cette règle s'applique séparément à chaque unité de traduction, car les objets liés de manière interne sont uniques pour une unité de traduction. Pour les objets avec une liaison externe, cette règle s'applique au programme entier. Pour plus d’informations sur la visibilité, consultez [durée de vie, portée, visibilité et liaison](../c-language/lifetime-scope-visibility-and-linkage.md).
 

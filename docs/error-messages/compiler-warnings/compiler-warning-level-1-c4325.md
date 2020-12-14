@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4325'
 title: Avertissement du compilateur (niveau 1) C4325
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 551680bc1d24097200a1e641bc4238f883ad94dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17e14d4909e4b76d6a0a71d6e77fad1d01e3f41b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311589"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Avertissement du compilateur (niveau 1) C4325
 

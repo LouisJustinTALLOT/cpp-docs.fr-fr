@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _msize'
 title: _msize
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e1a913f008037673bf8c10e73095a898610039d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256352"
 ---
 # <a name="_msize"></a>_msize
 
@@ -53,13 +54,13 @@ size_t _msize(
 *memblock*<br/>
 Pointeur désignant le bloc de mémoire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_msize** retourne la taille (en octets) sous la forme d’un entier non signé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_msize** retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**ou **realloc**.
+La fonction **_msize** retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc** ou **realloc**.
 
 Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **_msize** se résout en [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -79,7 +80,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [realloc](realloc.md).
 

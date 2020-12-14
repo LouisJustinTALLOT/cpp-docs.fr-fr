@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : GetChar, getwchar'
 title: getchar, getwchar
 ms.date: 06/23/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: d8480d179cc31d30d68c07fbe92bf389226ccd53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256755"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -55,9 +56,9 @@ wint_t getwchar();
 
 Retourne le caractère lu. Ces fonctions attendent une entrée et ne retournent pas tant que l’entrée n’est pas disponible.
 
-Pour indiquer une erreur de lecture ou une condition de fin de fichier, **GetChar** retourne **EOF**et **getwchar** retourne **WEOF**. Pour **GetChar**, utilisez l’option **feof** ou pour rechercher une **erreur ou la** fin du fichier.
+Pour indiquer une erreur de lecture ou une condition de fin de fichier, **GetChar** retourne **EOF** et **getwchar** retourne **WEOF**. Pour **GetChar**, utilisez l’option **feof** ou pour rechercher une **erreur ou la** fin du fichier.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Chaque routine lit un caractère unique à partir de **stdin** et incrémente le pointeur de fichier associé pour pointer vers le caractère suivant. **GetChar** est identique à [_fgetchar](fgetc-fgetwc.md), mais il est implémenté en tant que fonction et en tant que macro.
 
@@ -71,14 +72,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar**|**GetChar**|**GetChar**|**getwchar**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**GetChar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

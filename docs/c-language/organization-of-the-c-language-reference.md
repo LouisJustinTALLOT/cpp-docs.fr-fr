@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Organisation de la référence du langage C'
 title: Organisation de la référence du langage C
 ms.date: 11/04/2016
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
-ms.openlocfilehash: 864cef5fe7a6fc2a737d5cc0e850e3db760bddc6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7631b3dd115e0766895a958c966ead8ce7f89b11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256885"
 ---
 # <a name="organization-of-the-c-language-reference"></a>Organisation de la référence du langage C
 
@@ -23,7 +24,7 @@ ms.locfileid: "64343181"
 
 - [Fonctions](../c-language/functions-c.md)
 
-- [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md)
+- [Résumé de la syntaxe du langage C](../c-language/c-language-syntax-summary.md)
 
 - [Comportement défini par l’implémentation](../c-language/implementation-defined-behavior.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonction principale et exécution du programme'
 title: Fonction main et exécution du programme
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00fb10526b558631c024366c09a773363bd81683
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257080"
 ---
 # <a name="main-function-and-program-execution"></a>Fonction main et exécution du programme
 
@@ -39,4 +40,4 @@ Consultez [Utilisation de wmain](../c-language/using-wmain.md) pour obtenir une 
 ## <a name="see-also"></a>Voir aussi
 
 [fonction main et arguments de ligne de commande (C++)](../cpp/main-function-command-line-args.md)\
-[Analyse des arguments de ligne de commande C](../c-language/parsing-c-command-line-arguments.md)
+[Analyse des arguments du Command-Line C](../c-language/parsing-c-command-line-arguments.md)

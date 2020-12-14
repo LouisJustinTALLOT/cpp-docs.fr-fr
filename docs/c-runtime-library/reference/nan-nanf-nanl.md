@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Nan, nanf (, nanl'
 title: nan, nanf, nanl
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3fd5fcb004058baf8d216385cde023033f29f08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256326"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -55,14 +56,14 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Paramètres
 
-*entrée*<br/>
+*input*<br/>
 Valeur de chaîne.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **Nan** retournent une valeur NaN calme.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **Nan** retournent une valeur à virgule flottante qui correspond à une valeur NaN silencieuse (sans signalisation). La valeur *d’entrée* est ignorée. Pour plus d’informations sur la façon dont une valeur NaN est représentée pour la sortie, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -70,7 +71,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**Nan**, **nanf (**, **nanl**|\<math.h>|\<cmath> ou \<math.h>|
 

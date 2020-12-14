@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _rmdir, _wrmdir'
 title: _rmdir, _wrmdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17324d5d2125f4f664140684c4f082181742700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250306"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -66,7 +67,7 @@ int _wrmdir(
 *dirname*<br/>
 Chemin du répertoire à supprimer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une valeur de retour de-1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
 
@@ -78,7 +79,7 @@ Chacune de ces fonctions retourne 0 si le répertoire est bien supprimé. Une va
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_rmdir** supprime le répertoire spécifié par *dirname*. Le répertoire doit être vide et ne doit pas être le répertoire de travail actif ou le répertoire racine.
 
@@ -105,7 +106,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_mkdir](mkdir-wmkdir.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ismbbtrail, _ismbbtrail_l'
 title: _ismbbtrail, _ismbbtrail_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 08229b4a35634193810f7c24a3f8749fba034872
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4c9737cb0d4c3e4d1acf35e0c0cbea18ccba3f69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256430"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
@@ -59,17 +60,17 @@ int _ismbbtrail_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ismbbtrail** retourne une valeur différente de zéro si l’entier *c* est le deuxième octet d’un caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x40 à 0x7E et 0x80 à 0xFC.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_ismbbtrail** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. **_ismbbtrail_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

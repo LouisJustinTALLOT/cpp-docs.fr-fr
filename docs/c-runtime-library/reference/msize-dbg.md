@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _msize_dbg'
 title: _msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ead0257e990322e88e20ce6111ff590dbc71686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256391"
 ---
 # <a name="_msize_dbg"></a>_msize_dbg
 
@@ -48,37 +49,37 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*userData*<br/>
+*Permanence*<br/>
 Pointeur désignant le bloc de mémoire duquel déterminer la taille.
 
 *blockType*<br/>
-Type du bloc de mémoire spécifié : _ **client_block** ou **_NORMAL_BLOCK**.
+Type du bloc de mémoire spécifié : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **_msize_dbg** retourne la taille (en octets) du bloc de mémoire spécifié. Sinon, elle retourne la **valeur null**.
 
 ## <a name="remarks"></a>Notes
 
-**_msize_dbg** est une version de débogage de la fonction _[MSize](msize.md) . Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_msize_dbg** est réduit à un appel à **_msize**. **_Msize** et **_msize_dbg** calculent tous les deux la taille d’un bloc de mémoire dans le tas de base, mais **_msize_dbg** ajoute deux fonctionnalités de débogage : Il comprend les mémoires tampons de chaque côté de la partie utilisateur du bloc de mémoire dans la taille retournée et il autorise les calculs de taille pour des types de blocs spécifiques.
+**_msize_dbg** est une version de débogage de la fonction _ [MSize](msize.md) . Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_msize_dbg** est réduit à un appel à **_msize**. **_Msize** et **_msize_dbg** calculent la taille d’un bloc de mémoire dans le tas de base, mais **_msize_dbg** ajoute deux fonctionnalités de débogage : elle inclut les mémoires tampons de chaque côté de la partie utilisateur du bloc de mémoire dans la taille retournée et elle autorise les calculs de taille pour des types de bloc spécifiques.
 
-Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [types de blocs sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 Cette fonction valide son paramètre. Si *memblock* est un pointeur null, **_msize** appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_msize_dbg.c
@@ -130,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : paramètres'
 title: Paramètres
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68cd5934e597e486b00f2772e913f627e584ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256820"
 ---
 # <a name="parameters"></a>Paramètres
 
@@ -33,11 +34,11 @@ Les arguments sont les noms des valeurs passées à une fonction par un appel de
 *`declarator`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>OPT</sub>*`direct-declarator`*
 
-*`direct-declarator`*:/ \* Un déclarateur de fonction\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\*Déclarateur de style New\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub>opt</sub> **`)`**  / OPT \* Déclarateur de style obsolète\*/
+*`direct-declarator`*:/ \* Un déclarateur de fonction \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\* Déclarateur de style New \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub></sub> **`)`**  / OPT \* Déclarateur de style obsolète\*/
 
-*`parameter-type-list`*:/ \* La liste de paramètres\*/<br/>
+*`parameter-type-list`*:/ \* La liste de paramètres \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
