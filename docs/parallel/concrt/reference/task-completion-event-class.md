@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe task_completion_event'
 title: task_completion_event, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 791b68d6a67ea2f8a9697b69266e8744455f845c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188363"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event, classe
 
@@ -69,7 +70,7 @@ Si l'événement de fin de tâche n'est jamais signalé, toutes les tâches cré
 
 **Espace de noms :** concurrence
 
-## <a name="set"></a><a name="set"></a>définie
+## <a name="set"></a><a name="set"></a> définie
 
 Définit l'événement de fin de tâche.
 
@@ -84,7 +85,7 @@ bool set() const ;
 *_Result*<br/>
 Résultat avec lequel définir cet événement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La méthode retourne **`true`** si elle a réussi à définir l’événement. Elle retourne **`false`** si l’événement est déjà défini.
 
@@ -92,7 +93,7 @@ La méthode retourne **`true`** si elle a réussi à définir l’événement. E
 
 En présence de plusieurs ou appels simultanés à `set` , seul le premier appel aboutira et son résultat (le cas échéant) sera stocké dans l’événement d’achèvement de la tâche. Les jeux restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de cet événement se terminent immédiatement, et ses continuations, le cas échéant, sont planifiées. Les objets d’achèvement de tâche qui ont un `_ResultType` autre que **`void`** transmettent la valeur à leurs continuations.
 
-## <a name="set_exception"></a><a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a> set_exception
 
 Propage une exception à toutes les tâches associées à cet événement.
 
@@ -114,9 +115,9 @@ Exception à définir.
 *_ExceptionPtr*<br/>
 Pointeur d’exception à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a> task_completion_event
 
 Construit un objet `task_completion_event`.
 

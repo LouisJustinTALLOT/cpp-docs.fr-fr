@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe source_link_manager'
 title: source_link_manager, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 98f99bb5aec85a640eaf83a07fae3a1b667f7d91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 132dc2db07a1c9abeeb04672f97e262761764feb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188506"
 ---
 # <a name="source_link_manager-class"></a>source_link_manager, classe
 
@@ -86,7 +87,7 @@ Actuellement, les blocs sources sont décomptés par référence. Il s’agit d�
 
 **Espace de noms :** concurrence
 
-## <a name="add"></a><a name="add"></a>complémentaires
+## <a name="add"></a><a name="add"></a> complémentaires
 
 Ajoute un lien source à l' `source_link_manager` objet.
 
@@ -99,7 +100,7 @@ void add(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc à ajouter.
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Retourne un itérateur au premier élément de l' `source_link_manager` objet.
 
@@ -107,7 +108,7 @@ Retourne un itérateur au premier élément de l' `source_link_manager` objet.
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui traite le premier élément de l' `source_link_manager` objet.
 
@@ -115,7 +116,7 @@ Itérateur qui traite le premier élément de l' `source_link_manager` objet.
 
 L’état final de l’itérateur est indiqué par un `NULL` lien.
 
-## <a name="contains"></a><a name="contains"></a>comprend
+## <a name="contains"></a><a name="contains"></a> comprend
 
 Recherche `network_link_registry` dans cet `source_link_manager` objet un bloc spécifié.
 
@@ -128,11 +129,11 @@ bool contains(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc qui doit être recherché dans l' `source_link_manager` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le bloc spécifié a été trouvé ; **`false`** sinon,.
 
-## <a name="count"></a><a name="count"></a>saut
+## <a name="count"></a><a name="count"></a> saut
 
 Compte le nombre de blocs liés dans l' `source_link_manager` objet.
 
@@ -140,11 +141,11 @@ Compte le nombre de blocs liés dans l' `source_link_manager` objet.
 size_t count();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de blocs liés dans l' `source_link_manager` objet.
 
-## <a name="reference"></a><a name="reference"></a>faire
+## <a name="reference"></a><a name="reference"></a> faire
 
 Acquiert une référence sur l' `source_link_manager` objet.
 
@@ -152,7 +153,7 @@ Acquiert une référence sur l' `source_link_manager` objet.
 void reference();
 ```
 
-## <a name="register_target_block"></a><a name="register_target_block"></a>register_target_block
+## <a name="register_target_block"></a><a name="register_target_block"></a> register_target_block
 
 Inscrit le bloc cible qui contient cet `source_link_manager` objet.
 
@@ -165,7 +166,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 *_PTarget*<br/>
 Bloc cible contenant cet `source_link_manager` objet.
 
-## <a name="release"></a><a name="release"></a>3/05
+## <a name="release"></a><a name="release"></a> 3/05
 
 Libère la référence sur l' `source_link_manager` objet.
 
@@ -173,7 +174,7 @@ Libère la référence sur l' `source_link_manager` objet.
 void release();
 ```
 
-## <a name="remove"></a><a name="remove"></a>Installez
+## <a name="remove"></a><a name="remove"></a> Installez
 
 Supprime un lien de l' `source_link_manager` objet.
 
@@ -186,11 +187,11 @@ bool remove(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc à supprimer, s’il est trouvé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le lien a été trouvé et supprimé ; **`false`** sinon,.
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 Définit le nombre maximal de liens source qui peuvent être ajoutés à cet `source_link_manager` objet.
 
@@ -203,7 +204,7 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 Nombre maximal de liens.
 
-## <a name="source_link_manager"></a><a name="ctor"></a>source_link_manager
+## <a name="source_link_manager"></a><a name="ctor"></a> source_link_manager
 
 Construit un objet `source_link_manager`.
 
@@ -211,7 +212,7 @@ Construit un objet `source_link_manager`.
 source_link_manager();
 ```
 
-## <a name="source_link_manager"></a><a name="dtor"></a>~ source_link_manager
+## <a name="source_link_manager"></a><a name="dtor"></a> ~ source_link_manager
 
 Détruit l' `source_link_manager` objet.
 

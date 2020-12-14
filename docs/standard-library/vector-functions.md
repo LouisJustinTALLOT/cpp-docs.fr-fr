@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions vectorielles'
 title: '&lt;vector&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: bf28e44b4f603b1e4d6a87f0c28b42d6cc159980
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c59e2626a2062be90d2cb8201b058d5ee148ef55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187882"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vector&gt;, fonctions
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange les éléments de deux vecteurs.
 

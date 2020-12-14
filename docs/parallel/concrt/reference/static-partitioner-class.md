@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe static_partitioner'
 title: static_partitioner, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f75d2e620a66e0ed347d39d429f59e3e2715369a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188493"
 ---
 # <a name="static_partitioner-class"></a>static_partitioner, classe
 
@@ -29,10 +30,10 @@ class static_partitioner;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[static_partitioner](#ctor)|Construit un objet `static_partitioner`.|
-|[Destructeur ~ static_partitioner](#dtor)|Détruit un objet `static_partitioner`.|
+|[Destructeur ~ static_partitioner](#dtor)|Détruit un objet `static_partitioner` .|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -42,17 +43,17 @@ class static_partitioner;
 
 **En-tête :** ppl. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="dtor"></a>~ static_partitioner
+## <a name="static_partitioner"></a><a name="dtor"></a> ~ static_partitioner
 
-Détruit un objet `static_partitioner`.
+Détruit un objet `static_partitioner` .
 
 ```cpp
 ~static_partitioner();
 ```
 
-## <a name="ctor"></a>static_partitioner
+## <a name="static_partitioner"></a><a name="ctor"></a> static_partitioner
 
 Construit un objet `static_partitioner`.
 
@@ -62,4 +63,4 @@ static_partitioner();
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

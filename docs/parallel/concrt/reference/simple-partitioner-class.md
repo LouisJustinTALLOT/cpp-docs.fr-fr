@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe simple_partitioner'
 title: simple_partitioner, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: 503f36b90c5eb3319f9aa2d56528172ffa95bb11
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 76dcac6d7fc2dce5b69d0a9dbefaf01420f8bcde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188688"
 ---
 # <a name="simple_partitioner-class"></a>simple_partitioner, classe
 
@@ -29,10 +30,10 @@ class simple_partitioner;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[simple_partitioner](#ctor)|Construit un objet `simple_partitioner`.|
-|[Destructeur ~ simple_partitioner](#dtor)|Détruit un objet `simple_partitioner`.|
+|[Destructeur ~ simple_partitioner](#dtor)|Détruit un objet `simple_partitioner` .|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -42,17 +43,17 @@ class simple_partitioner;
 
 **En-tête :** ppl. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="dtor"></a>~ simple_partitioner
+## <a name="simple_partitioner"></a><a name="dtor"></a> ~ simple_partitioner
 
-Détruit un objet `simple_partitioner`.
+Détruit un objet `simple_partitioner` .
 
 ```cpp
 ~simple_partitioner();
 ```
 
-## <a name="ctor"></a>simple_partitioner
+## <a name="simple_partitioner"></a><a name="ctor"></a> simple_partitioner
 
 Construit un objet `simple_partitioner`.
 
@@ -67,4 +68,4 @@ Taille de partition minimale.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

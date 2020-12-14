@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : objets graphiques'
 title: Objets graphiques
 ms.date: 11/04/2016
 f1_keywords:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: a7d038a971fd1d280c100024f8af9a1ec74d8627
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7fbb4b6a4eb7586773eff309daddf60d98c7ec3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189247"
 ---
 # <a name="graphic-objects"></a>Objets graphiques
 
@@ -59,7 +60,7 @@ Cet article explique l'utilisation de ces classes d'objets graphiques :
 
 ### <a name="classes-for-windows-gdi-objects"></a>Classes pour objets Windows GDI
 
-|Class|Type de handle Windows|
+|Classe|Type de handle Windows|
 |-----------|-------------------------|
 |[CPen](reference/cpen-class.md)|`HPEN`|
 |[CBrush](reference/cbrush-class.md)|`HBRUSH`|
@@ -98,10 +99,10 @@ Le code suivant convertit un `CPen` objet en handle Windows :
 
 - [Exemple de construction d'un stylet en une ou deux étapes](one-stage-and-two-stage-construction-of-objects.md)
 
-- [Sélection d’un objet graphique dans un contexte d’appareil](selecting-a-graphic-object-into-a-device-context.md)
+- [Sélection d’un objet graphique dans un contexte de périphérique](selecting-a-graphic-object-into-a-device-context.md)
 
 - [Contextes de périphérique](device-contexts.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Objets fenêtres](window-objects.md)
+[Objets de fenêtre](window-objects.md)

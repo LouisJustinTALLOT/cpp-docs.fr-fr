@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de tâche (runtime d’accès concurrentiel)'
 title: task (Concurrency Runtime), classe
 ms.date: 07/30/2019
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 6a063f0bba9482824817e4efe21ae5b7bf3c0995
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b16c7e8f7ae97b35731916d6834367c228ce867c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188376"
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 
@@ -63,7 +64,7 @@ Type du résultat produit par la tâche.
 |[is_done](#is_done)|Détermine si la tâche est terminée.|
 |[planificateur](#scheduler)|Retourne le planificateur pour cette tâche.|
 |[Cliquez](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|
-|[qu'](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n’a pas déjà été sélectionnée pour être exécutée par un processus de travail d’arrière-plan.|
+|[wait](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n’a pas déjà été sélectionnée pour être exécutée par un processus de travail d’arrière-plan.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -87,7 +88,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 **Espace de noms :** concurrence
 
-## <a name="get"></a><a name="get"></a>Télécharger
+## <a name="get"></a><a name="get"></a> Télécharger
 
 Retourne le résultat produit par cette tâche. Si la tâche n’est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche avec un `result_type` de **`void`** .
 
@@ -97,7 +98,7 @@ _ResultType get() const;
 void get() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de la tâche.
 
@@ -108,7 +109,7 @@ Si la tâche est annulée, un appel à `get` lève une exception [task_canceled]
 > [!IMPORTANT]
 > Dans une application plateforme Windows universelle (UWP), n’appelez pas [Concurrency :: Task :: wait](#wait) ou `get` ( `wait` Calls `get` ) dans le code qui s’exécute sur le thread d’interface utilisateur. Sinon, le runtime lève [Concurrency :: invalid_operation](invalid-operation-class.md) , car ces méthodes bloquent le thread actuel et peuvent provoquer le blocage de l’application. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.
 
-## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a>is_apartment_aware
+## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a> is_apartment_aware
 
 Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime ou descend de cette tâche.
 
@@ -116,11 +117,11 @@ Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime
 bool is_apartment_aware() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la tâche désencapsule une `IAsyncInfo` interface ou est décroisée d’une telle tâche, **`false`** sinon.
 
-## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a>Task :: is_done, méthode (runtime d’accès concurrentiel)
+## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a> Task :: is_done, méthode (runtime d’accès concurrentiel)
 
 Détermine si la tâche est terminée.
 
@@ -128,7 +129,7 @@ Détermine si la tâche est terminée.
 bool is_done() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 True si la tâche est terminée ; sinon, false.
 
@@ -136,7 +137,7 @@ True si la tâche est terminée ; sinon, false.
 
 La fonction retourne la valeur true si la tâche est terminée ou annulée (avec ou sans exception utilisateur).
 
-## <a name="operator"></a><a name="operator_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="operator_neq"></a> opérateur ! =
 
 Détermine si deux objets `task` représentent différentes tâches internes.
 
@@ -151,11 +152,11 @@ bool operator!= (const task<void>& _Rhs) const;
 *_Rhs*<br/>
 Tâche à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets font référence à différentes tâches sous-jacentes, et dans le **`false`** cas contraire.
 
-## <a name="operator"></a><a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a> opérateur =
 
 Remplace le contenu d'un objet `task` par un autre.
 
@@ -170,13 +171,13 @@ task& operator= (task&& _Other);
 *_Other*<br/>
 Objet `task` source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
 Étant donné que `task` se comporte comme un pointeur intelligent, après une assignation de copie, cet objet `task` représente la même tâche réelle que `_Other`.
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> opérateur = =
 
 Détermine si deux objets `task` représentent la même tâche interne.
 
@@ -191,11 +192,11 @@ bool operator== (const task<void>& _Rhs) const;
 *_Rhs*<br/>
 Tâche à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets font référence à la même tâche sous-jacente, et dans le **`false`** cas contraire.
 
-## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>Task :: Scheduler, méthode (runtime d’accès concurrentiel)
+## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a> Task :: Scheduler, méthode (runtime d’accès concurrentiel)
 
 Retourne le planificateur pour cette tâche.
 
@@ -203,7 +204,7 @@ Retourne le planificateur pour cette tâche.
 scheduler_ptr scheduler() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le planificateur
 
@@ -259,7 +260,7 @@ Les surcharges de constructeur qui acceptent une interface Windows :: Foundatio
 
 Pour plus d’informations, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="then"></a><a name="then"></a>Cliquez
+## <a name="then"></a><a name="then"></a> Cliquez
 
 Ajoute une tâche de continuation à cette tâche.
 
@@ -313,7 +314,7 @@ Jeton d'annulation à associer à la tâche de continuation. Une tâche de conti
 *_ContinuationContext*<br/>
 Variable qui spécifie où la continuation doit s'exécuter. Cette variable est utile uniquement lorsqu’elle est utilisée dans une application UWP. Pour plus d’informations, consultez [task_continuation_context](task-continuation-context-class.md)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Tâche de continuation récemment créée. Le type de résultat de la tâche retournée est déterminé par l’élément retourné par `_Func`.
 
@@ -323,7 +324,7 @@ Les surcharges de `then` qui acceptent une expression lambda ou functor qui reto
 
 Pour plus d’informations sur l’utilisation des continuations de tâches pour composer un travail asynchrone, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="wait"></a><a name="wait"></a>qu'
+## <a name="wait"></a><a name="wait"></a> qu'
 
 Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n’a pas déjà été sélectionnée pour être exécutée par un processus de travail d’arrière-plan.
 
@@ -331,7 +332,7 @@ Attend que cette tâche atteigne un état terminal. Il est possible que `wait` e
 task_status wait() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur `task_status` qui peut être `completed` ou `canceled`. Si la tâche rencontre une exception pendant l‘exécution, ou si une exception y est propagée à partir d‘une tâche précédente, `wait` lèvera cette exception.
 

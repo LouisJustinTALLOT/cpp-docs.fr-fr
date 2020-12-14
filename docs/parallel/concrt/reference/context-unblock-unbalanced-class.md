@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe context_unblock_unbalanced'
 title: context_unblock_unbalanced, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d262ff52a675935f95664d2f7ddd69aa159aa0bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188961"
 ---
 # <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced, classe
 
@@ -29,13 +30,13 @@ class context_unblock_unbalanced : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[context_unblock_unbalanced](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|
 
 ## <a name="remarks"></a>Notes
 
-Les appels aux méthodes `Block` et `Unblock` d’un objet `Context` doivent toujours être couplés correctement. Le runtime d’accès concurrentiel permet aux opérations de se produire dans l’un ou l’autre ordre. Par exemple, un appel à `Block` peut être suivi d’un appel à `Unblock`, ou vice versa. Cette exception est levée si, par exemple, deux appels à la méthode `Unblock` ont été effectués dans une ligne, sur un objet `Context` qui n’a pas été bloqué.
+Les appels aux `Block` `Unblock` méthodes et d’un `Context` objet doivent toujours être couplés correctement. Le runtime d’accès concurrentiel permet aux opérations de se produire dans l’un ou l’autre ordre. Par exemple, un appel à `Block` peut être suivi d’un appel à `Unblock` , ou vice versa. Cette exception est levée si, par exemple, deux appels à la `Unblock` méthode ont été effectués dans une ligne, sur un `Context` objet qui n’a pas été bloqué.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -47,9 +48,9 @@ Les appels aux méthodes `Block` et `Unblock` d’un objet `Context` doivent tou
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>context_unblock_unbalanced
+## <a name="context_unblock_unbalanced"></a><a name="ctor"></a> context_unblock_unbalanced
 
 Construit un objet `context_unblock_unbalanced`.
 
@@ -66,4 +67,4 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

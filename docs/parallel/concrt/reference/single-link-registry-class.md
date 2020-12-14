@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe single_link_registry'
 title: single_link_registry, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 415dcaf8062eaf47a3e92cf4a949790eb364d0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188636"
 ---
 # <a name="single_link_registry-class"></a>single_link_registry, classe
 
@@ -67,7 +68,7 @@ Type de données de bloc stocké dans l' `single_link_registry` objet.
 
 **Espace de noms :** concurrence
 
-## <a name="add"></a><a name="add"></a>complémentaires
+## <a name="add"></a><a name="add"></a> complémentaires
 
 Ajoute un lien à l' `single_link_registry` objet.
 
@@ -84,7 +85,7 @@ Pointeur vers un bloc à ajouter.
 
 La méthode lève une exception [invalid_link_target](invalid-link-target-class.md) s’il existe déjà un lien dans ce registre.
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Retourne un itérateur au premier élément de l' `single_link_registry` objet.
 
@@ -92,7 +93,7 @@ Retourne un itérateur au premier élément de l' `single_link_registry` objet.
 virtual iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui traite le premier élément de l' `single_link_registry` objet.
 
@@ -100,7 +101,7 @@ Itérateur qui traite le premier élément de l' `single_link_registry` objet.
 
 L’état final est indiqué par un `NULL` lien.
 
-## <a name="contains"></a><a name="contains"></a>comprend
+## <a name="contains"></a><a name="contains"></a> comprend
 
 Recherche `single_link_registry` un bloc spécifié dans l’objet.
 
@@ -113,11 +114,11 @@ virtual bool contains(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc qui doit être recherché dans l' `single_link_registry` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le lien a été trouvé ; **`false`** sinon,.
 
-## <a name="count"></a><a name="count"></a>saut
+## <a name="count"></a><a name="count"></a> saut
 
 Compte le nombre d’éléments dans l' `single_link_registry` objet.
 
@@ -125,11 +126,11 @@ Compte le nombre d’éléments dans l' `single_link_registry` objet.
 virtual size_t count();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d'éléments de l'objet `single_link_registry`.
 
-## <a name="remove"></a><a name="remove"></a>Installez
+## <a name="remove"></a><a name="remove"></a> Installez
 
 Supprime un lien de l' `single_link_registry` objet.
 
@@ -142,11 +143,11 @@ virtual bool remove(_EType _Link);
 *_Link*<br/>
 Pointeur vers un bloc à supprimer, s’il est trouvé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le lien a été trouvé et supprimé ; **`false`** sinon,.
 
-## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a> single_link_registry
 
 Construit un objet `single_link_registry`.
 
@@ -154,7 +155,7 @@ Construit un objet `single_link_registry`.
 single_link_registry();
 ```
 
-## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a> ~ single_link_registry
 
 Détruit l' `single_link_registry` objet.
 

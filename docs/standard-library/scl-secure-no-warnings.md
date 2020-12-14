@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _SCL_SECURE_NO_WARNINGS'
 title: _SCL_SECURE_NO_WARNINGS
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-ms.openlocfilehash: d19d47fe7120301740e1431765fc6edbeaa48c60
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 383aeed0bdedc4830076248100c8cf0a1acf34b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187921"
 ---
-# <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
+# <a name="_scl_secure_no_warnings"></a>_SCL_SECURE_NO_WARNINGS
 
-L’appel de l’une des méthodes potentiellement dangereuses dans C++ la bibliothèque standard génère un [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Pour désactiver cet avertissement, définissez la macro _SCL_SECURE_NO_WARNINGS dans votre code:
+L’appel de l’une des méthodes potentiellement dangereuses dans la bibliothèque standard C++ entraîne l' [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Pour désactiver cet avertissement, définissez la macro _SCL_SECURE_NO_WARNINGS dans votre code :
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
@@ -43,7 +44,7 @@ Autres façons de désactiver l’avertissement C4996 :
    #pragma warning(disable:4996)
    ```
 
-Vous pouvez aussi modifier manuellement le niveau d’avertissement C4996 avec l’option de compilateur **/w\<l>\<n>** . Par exemple, pour définir l’avertissement C4996 au niveau 4 :
+En outre, vous pouvez modifier manuellement le niveau de l’avertissement C4996 avec l’option de compilateur **/w \<l> \<n>** . Par exemple, pour définir l’avertissement C4996 au niveau 4 :
 
 > CL/w44996 [autres options du compilateur] MyFile. cpp
 
@@ -51,4 +52,4 @@ Pour plus d’informations, consultez [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bibliothèques sécurisées : Bibliothèque C++ Standard](../standard-library/safe-libraries-cpp-standard-library.md)
+[Bibliothèques sécurisées : bibliothèque standard C++](../standard-library/safe-libraries-cpp-standard-library.md)

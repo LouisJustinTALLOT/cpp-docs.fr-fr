@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe critical_section'
 title: critical_section, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f7df639a879bad7af1b4de401460ff298e466c78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d781ce467123197521bf92dd4d932a665e55c6a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188935"
 ---
 # <a name="critical_section-class"></a>critical_section, classe
 
@@ -76,7 +77,7 @@ Pour plus d’informations, consultez [structures de données de synchronisation
 
 **Espace de noms :** concurrence
 
-## <a name="critical_section"></a><a name="ctor"></a>critical_section
+## <a name="critical_section"></a><a name="ctor"></a> critical_section
 
 Construit une nouvelle section critique.
 
@@ -84,7 +85,7 @@ Construit une nouvelle section critique.
 critical_section();
 ```
 
-## <a name="critical_section"></a><a name="dtor"></a>~ critical_section
+## <a name="critical_section"></a><a name="dtor"></a> ~ critical_section
 
 Détruit une section critique.
 
@@ -96,7 +97,7 @@ Détruit une section critique.
 
 Il est supposé que le verrou n’est plus maintenu lors de l’exécution du destructeur. Le fait d’autoriser la destruction de la section critique avec le verrou toujours maintenu entraîne un comportement indéfini.
 
-## <a name="lock"></a><a name="lock"></a>Lock
+## <a name="lock"></a><a name="lock"></a> Lock
 
 Acquiert cette section critique.
 
@@ -110,7 +111,7 @@ Il est souvent plus sûr d’utiliser la construction [scoped_lock](#critical_se
 
 Si le verrou est déjà détenu par le contexte d’appel, une exception [improper_lock](improper-lock-class.md) sera levée.
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Retourne un handle natif spécifique à la plateforme, s’il en existe un.
 
@@ -118,7 +119,7 @@ Retourne un handle natif spécifique à la plateforme, s’il en existe un.
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la section critique.
 
@@ -126,7 +127,7 @@ Référence à la section critique.
 
 Un `critical_section` objet n’est pas associé à un handle natif spécifique à une plateforme pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.
 
-## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section :: scoped_lock, classe
+## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a> critical_section :: scoped_lock, classe
 
 Wrapper RAII de sécurité d’exception pour un `critical_section` objet.
 
@@ -134,7 +135,7 @@ Wrapper RAII de sécurité d’exception pour un `critical_section` objet.
 class scoped_lock;
 ```
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock :: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a> scoped_lock :: scoped_lock
 
 Construit un `scoped_lock` objet et acquiert l' `critical_section` objet passé dans le `_Critical_section` paramètre. Si la section critique est détenue par un autre thread, cet appel sera bloqué.
 
@@ -147,7 +148,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Section critique à verrouiller.
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock :: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a> scoped_lock :: ~ scoped_lock
 
 Détruit un `scoped_lock` objet et libère la section critique fournie dans son constructeur.
 
@@ -155,7 +156,7 @@ Détruit un `scoped_lock` objet et libère la section critique fournie dans son 
 ~scoped_lock();
 ```
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Tente d’acquérir le verrou sans blocage.
 
@@ -163,11 +164,11 @@ Tente d’acquérir le verrou sans blocage.
 bool try_lock();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le verrou a été acquis, valeur **`true`** ; sinon, la valeur **`false`** .
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 Tente d’acquérir le verrou sans se bloquer pendant un nombre spécifique de millisecondes.
 
@@ -180,11 +181,11 @@ bool try_lock_for(unsigned int _Timeout);
 *_Timeout*<br/>
 Nombre de millisecondes à attendre avant l’expiration du délai d’attente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le verrou a été acquis, valeur **`true`** ; sinon, la valeur **`false`** .
 
-## <a name="unlock"></a><a name="unlock"></a>bloquer
+## <a name="unlock"></a><a name="unlock"></a> bloquer
 
 Déverrouille la section critique.
 

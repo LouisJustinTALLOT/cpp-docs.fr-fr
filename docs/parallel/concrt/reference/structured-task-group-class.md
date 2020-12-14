@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe structured_task_group'
 title: structured_task_group, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 44fd2a42f4c98a569e985449f0c55102a9cbc3a6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c553f0d0b9b5abeb6e6cbdb12d1d9da5d048a6d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188454"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group, classe
 
@@ -47,7 +48,7 @@ class structured_task_group;
 |[is_canceling](#is_canceling)|Informe l’appelant si le groupe de tâches est actuellement au milieu d’une annulation. Cela n’indique pas nécessairement que la `cancel` méthode a été appelée sur l' `structured_task_group` objet (bien que cela qualifie certainement cette méthode pour retourner **`true`** ). Cela peut être le cas lorsque l' `structured_task_group` objet est en cours d’exécution en ligne et qu’un groupe de tâches plus haut dans l’arborescence de travail a été annulé. Dans les cas tels que ceux où le runtime peut déterminer à l’avance que l’annulation passera par cet `structured_task_group` objet, **`true`** sera également retourné.|
 |[Utilisez](#run)|Surchargé. Planifie une tâche sur l' `structured_task_group` objet. L’appelant gère la durée de vie de l' `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui accepte le paramètre `_Placement` entraîne l’exécution de la tâche à l’emplacement spécifié par ce paramètre.|
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie l’exécution d’une tâche Inline sur le contexte appelant avec l’assistance de l' `structured_task_group` objet pour la prise en charge de l’annulation complète. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait` , l’appelant est responsable de la gestion de la durée de vie de l' `task_handle` objet. La fonction attend ensuite que tout le travail sur l' `structured_task_group` objet soit terminé ou a été annulé.|
-|[qu'](#wait)|Attend que tout le travail sur le soit `structured_task_group` terminé ou qu’il soit annulé.|
+|[wait](#wait)|Attend que tout le travail sur le soit `structured_task_group` terminé ou qu’il soit annulé.|
 
 ## <a name="remarks"></a>Notes
 
@@ -73,7 +74,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 **Espace de noms :** concurrence
 
-## <a name="cancel"></a><a name="cancel"></a>Annuler
+## <a name="cancel"></a><a name="cancel"></a> Annuler
 
 Tente d’annuler la sous-arborescence du travail enracinée dans ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches est annulée de manière transitive, si possible.
 
@@ -85,7 +86,7 @@ void cancel();
 
 Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-## <a name="is_canceling"></a><a name="is_canceling"></a>is_canceling
+## <a name="is_canceling"></a><a name="is_canceling"></a> is_canceling
 
 Informe l’appelant si le groupe de tâches est actuellement au milieu d’une annulation. Cela n’indique pas nécessairement que la `cancel` méthode a été appelée sur l' `structured_task_group` objet (bien que cela qualifie certainement cette méthode pour retourner **`true`** ). Cela peut être le cas lorsque l' `structured_task_group` objet est en cours d’exécution en ligne et qu’un groupe de tâches plus haut dans l’arborescence de travail a été annulé. Dans les cas tels que ceux où le runtime peut déterminer à l’avance que l’annulation passera par cet `structured_task_group` objet, **`true`** sera également retourné.
 
@@ -93,7 +94,7 @@ Informe l’appelant si le groupe de tâches est actuellement au milieu d’une 
 bool is_canceling();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique si l' `structured_task_group` objet est au milieu d’une annulation (ou s’il est garanti qu’il sera bientôt).
 
@@ -101,7 +102,7 @@ Indique si l' `structured_task_group` objet est au milieu d’une annulation (ou
 
 Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-## <a name="run"></a><a name="run"></a>Utilisez
+## <a name="run"></a><a name="run"></a> Utilisez
 
 Planifie une tâche sur l' `structured_task_group` objet. L’appelant gère la durée de vie de l' `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui accepte le paramètre `_Placement` entraîne l’exécution de la tâche à l’emplacement spécifié par ce paramètre.
 
@@ -135,7 +136,7 @@ Si le `structured_task_group` détruit à la suite d’un déroulement de pile �
 
 Lève une exception [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) si le handle de tâche donné par le `_Task_handle` paramètre a déjà été planifié sur un objet de groupe de tâches via la `run` méthode et qu’il n’y a aucun appel intermédiaire à la `wait` `run_and_wait` méthode ou sur ce groupe de tâches.
 
-## <a name="run_and_wait"></a><a name="run_and_wait"></a>run_and_wait
+## <a name="run_and_wait"></a><a name="run_and_wait"></a> run_and_wait
 
 Planifie l’exécution d’une tâche Inline sur le contexte appelant avec l’assistance de l' `structured_task_group` objet pour la prise en charge de l’annulation complète. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait` , l’appelant est responsable de la gestion de la durée de vie de l' `task_handle` objet. La fonction attend ensuite que tout le travail sur l' `structured_task_group` objet soit terminé ou a été annulé.
 
@@ -158,7 +159,7 @@ Handle vers la tâche qui est exécutée Inline sur le contexte d’appel. Notez
 *_Func*<br/>
 Fonction qui sera appelée pour appeler le corps du travail. Il peut s’agir d’une expression lambda ou d’un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique si l’attente a été satisfaite ou si le groupe de tâches a été annulé, en raison d’une opération d’annulation explicite ou d’une exception levée à partir de l’une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
 
@@ -172,7 +173,7 @@ Une fois que cette fonction a retourné une valeur, l' `structured_task_group` o
 
 Dans le chemin d’exécution non exceptionnel, vous avez l’autorisation d’appeler cette méthode ou la `wait` méthode avant le destructeur du `structured_task_group` s’exécute.
 
-## <a name="structured_task_group"></a><a name="ctor"></a>structured_task_group
+## <a name="structured_task_group"></a><a name="ctor"></a> structured_task_group
 
 Construit un nouvel objet `structured_task_group`.
 
@@ -191,7 +192,7 @@ Jeton d’annulation à associer à ce groupe de tâches structuré. Le groupe d
 
 Le constructeur qui prend un jeton d’annulation crée un `structured_task_group` qui sera annulé lorsque la source associée au jeton est annulée. Le fait de fournir un jeton d’annulation explicite isole également ce groupe de tâches structuré de participer à une annulation implicite d’un groupe parent avec un jeton différent ou aucun jeton.
 
-## <a name="structured_task_group"></a><a name="dtor"></a>~ structured_task_group
+## <a name="structured_task_group"></a><a name="dtor"></a> ~ structured_task_group
 
 Détruit un objet `structured_task_group` . Vous devez appeler la `wait` `run_and_wait` méthode ou sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute à la suite d’un déroulement de pile en raison d’une exception.
 
@@ -203,7 +204,7 @@ Détruit un objet `structured_task_group` . Vous devez appeler la `wait` `run_an
 
 Si le destructeur s’exécute à la suite d’une exécution normale (par exemple, pas de déroulement de pile en raison d’une exception) et que ni les `wait` `run_and_wait` méthodes ni n’ont été appelées, le destructeur peut lever une exception [missing_wait](missing-wait-class.md) .
 
-## <a name="wait"></a><a name="wait"></a>qu'
+## <a name="wait"></a><a name="wait"></a> qu'
 
 Attend que tout le travail sur le soit `structured_task_group` terminé ou qu’il soit annulé.
 
@@ -211,7 +212,7 @@ Attend que tout le travail sur le soit `structured_task_group` terminé ou qu’
 task_group_status wait();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique si l’attente a été satisfaite ou si le groupe de tâches a été annulé, en raison d’une opération d’annulation explicite ou d’une exception levée à partir de l’une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
 

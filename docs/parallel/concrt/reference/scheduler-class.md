@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Scheduler'
 title: Scheduler, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 2a509017c84f7f6c845c153c8c187f5885839035
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188896"
 ---
 # <a name="scheduler-class"></a>Scheduler, classe
 
@@ -75,7 +76,7 @@ Le runtime d’accès concurrentiel crée un planificateur par défaut par proce
 
 `Scheduler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt. h
 
@@ -112,7 +113,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 Stratégie du planificateur qui décrit le comportement du planificateur nouvellement créé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un planificateur nouvellement créé. `Scheduler`Un décompte de références initial est placé sur cet objet.
 
@@ -139,7 +140,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 *_Placement*<br/>
 Référence à un emplacement où les tâches au sein du groupe de planification sont biaisées pour s’exécuter à.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le groupe de planification nouvellement créé. `ScheduleGroup`Un décompte de références initial est placé sur cet objet.
 
@@ -157,7 +158,7 @@ Retourne le nombre actuel de processeurs virtuels pour le planificateur.
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre actuel de processeurs virtuels pour le planificateur.
 
@@ -169,7 +170,7 @@ Retourne une copie de la stratégie avec laquelle le planificateur a été cré�
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Copie de la stratégie avec laquelle le planificateur a été créé.
 
@@ -181,7 +182,7 @@ Retourne un identificateur unique pour le planificateur.
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur unique pour le planificateur.
 
@@ -198,7 +199,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 *_Placement*<br/>
 Référence à l’emplacement à propos duquel interroger le planificateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique si l’emplacement spécifié par l' `_Placement` argument est disponible ou non sur le planificateur.
 
@@ -214,7 +215,7 @@ Incrémente le nombre de références du planificateur.
 virtual unsigned int Reference() = 0 ;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de références récemment incrémentées.
 
@@ -245,7 +246,7 @@ Décrémente le nombre de références du planificateur.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le décompte de références qui vient d’être décrémenté.
 

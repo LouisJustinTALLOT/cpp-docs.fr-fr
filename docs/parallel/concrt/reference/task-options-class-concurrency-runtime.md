@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classe task_options (runtime d’accès concurrentiel)'
 title: task_options, classe (runtime d’accès concurrentiel)
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3752d23e68096df22d076afc5c07dc3d66cc881a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188207"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>task_options, classe (runtime d’accès concurrentiel)
 
@@ -47,11 +48,11 @@ class task_options;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** ppltasks.h
+**En-tête :** ppltasks. h
 
-**Namespace:** concurrence
+**Espace de noms :** concurrence
 
-## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options::get_cancellation_token Méthode (Concurrency Runtime)
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a> task_options :: get_cancellation_token, méthode (runtime d’accès concurrentiel)
 
 Retourne le jeton d'annulation
 
@@ -59,9 +60,9 @@ Retourne le jeton d'annulation
 cancellation_token get_cancellation_token() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options::get_continuation_context Méthode (Concurrency Runtime)
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a> task_options :: get_continuation_context, méthode (runtime d’accès concurrentiel)
 
 Retourne le contexte de continuation
 
@@ -69,9 +70,9 @@ Retourne le contexte de continuation
 task_continuation_context get_continuation_context() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options::get_scheduler Méthode (Concurrency Runtime)
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a> task_options :: get_scheduler, méthode (runtime d’accès concurrentiel)
 
 Retourne le planificateur
 
@@ -79,9 +80,9 @@ Retourne le planificateur
 scheduler_ptr get_scheduler() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options::has_cancellation_token Méthode (Concurrency Runtime)
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a> task_options :: has_cancellation_token, méthode (runtime d’accès concurrentiel)
 
 Indique si un jeton d'annulation a été spécifié par l'utilisateur
 
@@ -89,9 +90,9 @@ Indique si un jeton d'annulation a été spécifié par l'utilisateur
 bool has_cancellation_token() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options::has_scheduler Méthode (Concurrency Runtime)
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a> task_options :: has_scheduler, méthode (runtime d’accès concurrentiel)
 
 Indique si un planificateur n a été spécifié par l'utilisateur
 
@@ -99,9 +100,9 @@ Indique si un planificateur n a été spécifié par l'utilisateur
 bool has_scheduler() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options::set_cancellation_token Méthode (Concurrency Runtime)
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a> task_options :: set_cancellation_token, méthode (runtime d’accès concurrentiel)
 
 Définit le jeton donné dans les options
 
@@ -113,7 +114,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options::set_continuation_context Méthode (Concurrency Runtime)
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a> task_options :: set_continuation_context, méthode (runtime d’accès concurrentiel)
 
 Définit le contexte de continuation donné dans les options
 
@@ -125,7 +126,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options::task_options Constructeur (Concurrency Runtime)
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a> task_options :: task_options, constructeur (runtime d’accès concurrentiel)
 
 Liste des options de création de tâche par défaut
 
@@ -170,4 +171,4 @@ task_options(
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

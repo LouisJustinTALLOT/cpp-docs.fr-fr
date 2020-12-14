@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe scheduler_resource_allocation_error'
 title: scheduler_resource_allocation_error, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 50f84cbf76d30a415e2393797baa7d6cfa1e89f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143335"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188727"
 ---
 # <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error, classe
 
@@ -30,19 +31,19 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[scheduler_resource_allocation_error](#ctor)|Surchargé. Construit un objet `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Retourne le code d’erreur qui a provoqué l’exception.|
 
 ## <a name="remarks"></a>Notes
 
-Cette exception est généralement levée lorsqu’un appel au système d’exploitation à partir de l’runtime d’accès concurrentiel échoue. Code d’erreur qui serait normalement retourné à partir d’un appel à la méthode Win32 `GetLastError` est converti en une valeur de type `HRESULT` et peut être récupéré à l’aide de la méthode `get_error_code`.
+Cette exception est généralement levée lorsqu’un appel au système d’exploitation à partir de l’runtime d’accès concurrentiel échoue. Le code d’erreur qui serait normalement retourné à partir d’un appel à la méthode Win32 `GetLastError` est converti en une valeur de type `HRESULT` et peut être récupéré à l’aide de la `get_error_code` méthode.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -54,9 +55,9 @@ Cette exception est généralement levée lorsqu’un appel au système d’expl
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a> get_error_code
 
 Retourne le code d’erreur qui a provoqué l’exception.
 
@@ -64,11 +65,11 @@ Retourne le code d’erreur qui a provoqué l’exception.
 HRESULT get_error_code() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-`HRESULT` valeur de l’erreur qui a provoqué l’exception.
+`HRESULT`Valeur de l’erreur qui a provoqué l’exception.
 
-## <a name="ctor"></a>scheduler_resource_allocation_error
+## <a name="scheduler_resource_allocation_error"></a><a name="ctor"></a> scheduler_resource_allocation_error
 
 Construit un objet `scheduler_resource_allocation_error`.
 
@@ -87,8 +88,8 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Message descriptif de l'erreur.
 
 *_Hresult*<br/>
-`HRESULT` valeur de l’erreur qui a provoqué l’exception.
+`HRESULT`Valeur de l’erreur qui a provoqué l’exception.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

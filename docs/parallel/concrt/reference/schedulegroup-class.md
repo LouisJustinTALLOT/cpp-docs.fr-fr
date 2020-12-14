@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ScheduleGroup, classe'
 title: ScheduleGroup, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ca6678cd8d8c13c5d62b3d98b0a0bb1ab14e29c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417130"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188909"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup, classe
 
@@ -32,20 +33,20 @@ class ScheduleGroup;
 
 ### <a name="protected-constructors"></a>Constructeurs protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[~ ScheduleGroup, destructeur](#dtor)||
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Id](#id)|Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.|
 |[Référence](#reference)|Incrémente le nombre de références du groupe de planification.|
 |[Version release](#release)|Décrémente le nombre de références de groupe du planificateur.|
 |[ScheduleTask,](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `ScheduleGroup`
 
@@ -53,9 +54,9 @@ class ScheduleGroup;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="id"></a>Identifi
+## <a name="id"></a><a name="id"></a> Identifi
 
 Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.
 
@@ -63,13 +64,13 @@ Retourne un identificateur pour le groupe de planification qui est unique dans l
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur du groupe de planification qui est unique dans le planificateur auquel le groupe appartient.
 
-## <a name="operator_delete"></a>opérateur delete
+## <a name="operator-delete"></a><a name="operator_delete"></a> opérateur delete
 
-Un objet `ScheduleGroup` est détruit en interne par le runtime lorsque toutes les références externes à celui-ci sont libérées. Elle ne peut pas être supprimée explicitement.
+Un `ScheduleGroup` objet est détruit en interne par le runtime lorsque toutes les références externes à celui-ci sont libérées. Elle ne peut pas être supprimée explicitement.
 
 ```cpp
 void operator delete(
@@ -87,7 +88,7 @@ const char *,
 *_PObject*<br/>
 Pointeur vers l’objet à supprimer.
 
-## <a name="reference"></a>Faire
+## <a name="reference"></a><a name="reference"></a> Faire
 
 Incrémente le nombre de références du groupe de planification.
 
@@ -95,7 +96,7 @@ Incrémente le nombre de références du groupe de planification.
 virtual unsigned int Reference() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de références récemment incrémentées.
 
@@ -103,7 +104,7 @@ Nombre de références récemment incrémentées.
 
 Cette valeur est généralement utilisée pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le nombre de références d’un groupe de planifications est égal à zéro, le groupe de planification est supprimé par le Runtime. Un groupe de planification créé à l’aide de la méthode [CurrentScheduler :: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) ou de la méthode [Scheduler :: CreateScheduleGroup](scheduler-class.md#createschedulegroup) démarre avec un décompte de références d’un.
 
-## <a name="release"></a>3/05
+## <a name="release"></a><a name="release"></a> 3/05
 
 Décrémente le nombre de références de groupe du planificateur.
 
@@ -111,23 +112,23 @@ Décrémente le nombre de références de groupe du planificateur.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le décompte de références qui vient d’être décrémenté.
 
 ### <a name="remarks"></a>Notes
 
-Cette valeur est généralement utilisée pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le nombre de références d’un groupe de planifications est égal à zéro, le groupe de planification est supprimé par le Runtime. Une fois que vous avez appelé la méthode `Release` le nombre de fois spécifié pour supprimer le décompte de références de création et toute autre référence placée à l’aide de la méthode `Reference`, vous ne pouvez plus utiliser le groupe de planification. Cela entraînera un comportement indéfini.
+Cette valeur est généralement utilisée pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le nombre de références d’un groupe de planifications est égal à zéro, le groupe de planification est supprimé par le Runtime. Une fois que vous avez appelé la `Release` méthode le nombre de fois spécifié pour supprimer le décompte de références de création et toute autre référence placée à l’aide de la `Reference` méthode, vous ne pouvez plus utiliser le groupe de planification. Cela entraînera un comportement indéfini.
 
 Un groupe de planification est associé à une instance de planificateur particulière. Vous devez vous assurer que toutes les références au groupe de planification sont libérées avant que toutes les références au planificateur ne soient libérées, car ce dernier peut entraîner la destruction du planificateur. Sinon, le comportement n’est pas défini.
 
-## <a name="dtor"></a>~ ScheduleGroup
+## <a name="schedulegroup"></a><a name="dtor"></a> ~ ScheduleGroup
 
 ```cpp
 virtual ~ScheduleGroup();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask,
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask,
 
 Planifie une tâche légère dans le groupe de planification.
 
@@ -147,11 +148,11 @@ Pointeur void vers les données qui seront passées en tant que paramètre au co
 
 ### <a name="remarks"></a>Notes
 
-L’appel de la méthode `ScheduleTask` place implicitement un décompte de références sur le groupe de planification qui est supprimé par le runtime à un moment approprié après l’exécution de la tâche.
+L’appel de la `ScheduleTask` méthode place implicitement un décompte de références sur le groupe de planification qui est supprimé par le runtime à un moment approprié après l’exécution de la tâche.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [CurrentScheduler, classe](currentscheduler-class.md)<br/>
 [Scheduler, classe](scheduler-class.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestionnaires pour les commandes et les notifications de contrôle'
 title: Gestionnaires pour les commandes et les notifications de contrôle
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: cc89cbfde0a1eba5dc736b40c178d4a4fde37a4d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1e5e3284d5898d1e6349765dc7a1bcdc864c80ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189182"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Gestionnaires pour les commandes et les notifications de contrôle
 
@@ -25,7 +26,7 @@ La Convention suggère que vous nommez des gestionnaires dans les deux catégori
 
 [!code-cpp[NVC_MFCMessageHandling#4](codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-Étant donné que la commande Cut est si souvent implémentée dans les applications, l’infrastructure prédéfinit l’ID de commande pour la commande Cut comme **ID_EDIT_CUT**. Pour obtenir la liste de tous les ID de commande prédéfinis, consultez le fichier AFXRES. Manutention. Pour plus d’informations, consultez [commandes standard](standard-commands.md).
+Étant donné que la commande Cut est si souvent implémentée dans les applications, l’infrastructure prédéfinit l’ID de commande pour la commande Cut comme **ID_EDIT_CUT**. Pour obtenir la liste de tous les ID de commande prédéfinis, consultez le fichier AFXRES. H. Pour plus d’informations, consultez [commandes standard](standard-commands.md).
 
 En outre, la Convention suggère un gestionnaire pour le message de notification **BN_CLICKED** à partir d’un bouton intitulé « mon bouton » peut être nommé
 

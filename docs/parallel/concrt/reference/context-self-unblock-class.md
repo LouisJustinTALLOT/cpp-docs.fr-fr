@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe context_self_unblock'
 title: context_self_unblock, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 51fae67530e2836b92a6ab7a13e2b136f1d438c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188974"
 ---
 # <a name="context_self_unblock-class"></a>context_self_unblock, classe
 
@@ -29,7 +30,7 @@ class context_self_unblock : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[context_self_unblock](#ctor)|Surchargé. Construit un objet `context_self_unblock`.|
 
@@ -43,9 +44,9 @@ class context_self_unblock : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>context_self_unblock
+## <a name="context_self_unblock"></a><a name="ctor"></a> context_self_unblock
 
 Construit un objet `context_self_unblock`.
 
@@ -62,4 +63,4 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

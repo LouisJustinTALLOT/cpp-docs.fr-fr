@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs vectoriels'
 title: '&lt;vector&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7a03d3ef843c995970552201e63d2df3cb3161d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187895"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt;, opérateurs
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.
 
@@ -36,12 +37,12 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les vecteurs ne sont pas égaux ; **`false`** si les vecteurs sont égaux.
 
@@ -76,7 +77,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur à l’objet situé à droite.
 
@@ -87,12 +88,12 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur situé à gauche de l’opérateur est inférieur au vecteur situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -127,7 +128,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur ou égal à l’objet situé à droite.
 
@@ -138,12 +139,12 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur situé à gauche de l’opérateur est inférieur ou égal au vecteur situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -178,7 +179,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.
 
@@ -189,12 +190,12 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur situé à gauche de l’opérateur est égal au vecteur situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -229,7 +230,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur à l’objet situé à droite.
 
@@ -240,12 +241,12 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur situé à gauche de l’opérateur est supérieur au vecteur situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -281,7 +282,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur ou égal à l’objet situé à droite.
 
@@ -292,12 +293,12 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `vector`.
+Objet de type `vector`.
 
 *Oui*\
-Objet de type `vector`.
+Objet de type `vector`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur situé à gauche de l’opérateur est supérieur ou égal au vecteur situé à droite du vecteur ; Sinon, **`false`** .
 

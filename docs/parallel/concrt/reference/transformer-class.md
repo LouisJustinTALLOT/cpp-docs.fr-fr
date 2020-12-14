@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe transformer'
 title: Classe transformer
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: adc83ab2d8268460b3a35be44f5733c8b6fa1c43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34d937d1be1c3907ea75d0345bb52bcf359d4f34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188129"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -91,7 +92,7 @@ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../p
 
 **Espace de noms :** concurrence
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Accepte un message qui a été proposé par ce `transformer` bloc de messagerie, en transférant la propriété à l’appelant.
 
@@ -104,11 +105,11 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l’objet proposé `message` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Consomme un message précédemment offert par le `transformer` et réservé par la cible, en transférant la propriété à l’appelant.
 
@@ -121,7 +122,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet consommé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
@@ -129,7 +130,7 @@ Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
 Semblable à `accept` , mais est toujours précédé d’un appel à `reserve` .
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Rappel qui signale qu’une nouvelle cible a été liée à ce `transformer` bloc de messagerie.
 
@@ -137,7 +138,7 @@ Rappel qui signale qu’une nouvelle cible a été liée à ce `transformer` blo
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Passe de façon asynchrone un message d’un `ISource` bloc à ce `transformer` bloc de messagerie. Elle est appelée par la `propagate` méthode, quand elle est appelée par un bloc source.
 
@@ -155,11 +156,11 @@ Pointeur vers l'objet `message`.
 *_PSource*<br/>
 Pointeur vers le bloc source qui offre le message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Exécute la fonction transformateur sur les messages d’entrée.
 
@@ -167,7 +168,7 @@ Exécute la fonction transformateur sur les messages d’entrée.
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Libère une réservation de message précédente.
 
@@ -180,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet en cours de libération.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Réserve un message précédemment offert par ce `transformer` bloc de messagerie.
 
@@ -193,7 +194,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet qui est réservé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le message a été réservé avec succès ; **`false`** sinon,.
 
@@ -201,7 +202,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 Après `reserve` l’appel de, s’il retourne **`true`** , `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Reprend la propagation après la libération d’une réservation.
 
@@ -209,7 +210,7 @@ Reprend la propagation après la libération d’une réservation.
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Transmet de façon synchrone un message d’un `ISource` bloc à ce `transformer` bloc de messagerie. Elle est appelée par la `send` méthode, quand elle est appelée par un bloc source.
 
@@ -227,11 +228,11 @@ Pointeur vers l'objet `message`.
 *_PSource*<br/>
 Pointeur vers le bloc source qui offre le message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Substitue la `supports_anonymous_source` méthode pour indiquer que ce bloc peut accepter des messages qui lui sont offerts par une source qui n’est pas liée.
 
@@ -239,11 +240,11 @@ Substitue la `supports_anonymous_source` méthode pour indiquer que ce bloc peut
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** parce que le bloc n’ajourne pas les messages offerts.
 
-## <a name="transformer"></a><a name="ctor"></a>transformer
+## <a name="transformer"></a><a name="ctor"></a> transformer
 
 Construit un bloc de messagerie `transformer` .
 
@@ -305,7 +306,7 @@ Le type `_Transform_method` est un functor avec la signature `_Output (_Input co
 
 Le type `filter_method` est un functor avec la signature `bool (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour déterminer s’il doit ou non accepter un message proposé.
 
-## <a name="transformer"></a><a name="dtor"></a>~ transformateur
+## <a name="transformer"></a><a name="dtor"></a> ~ transformateur
 
 Détruit le `transformer` bloc de messagerie.
 

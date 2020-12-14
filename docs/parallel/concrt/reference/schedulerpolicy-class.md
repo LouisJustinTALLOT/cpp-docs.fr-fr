@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : SchedulerPolicy, classe'
 title: SchedulerPolicy, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: b7b99dae2ffb58123c05a65872e4c71e149ac12c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bb4c8961f46f077c203d1a49fb352171ad3f318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188701"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy, classe
 
@@ -65,7 +66,7 @@ Pour plus d’informations sur les stratégies qui peuvent être contrôlées à
 
 **Espace de noms :** concurrence
 
-## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue
+## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a> GetPolicyValue
 
 Récupère la valeur de la clé de stratégie fournie en tant que `key` paramètre.
 
@@ -78,7 +79,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 *key*<br/>
 Clé de stratégie pour laquelle récupérer une valeur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la clé spécifiée par le `key` paramètre est prise en charge, la valeur de stratégie pour la clé est castée en **`unsigned int`** .
 
@@ -86,7 +87,7 @@ Si la clé spécifiée par le `key` paramètre est prise en charge, la valeur de
 
 La méthode lève [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide.
 
-## <a name="operator"></a><a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a> opérateur =
 
 Affecte la stratégie de planificateur à partir d’une autre stratégie de planificateur.
 
@@ -99,7 +100,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 *_RhsPolicy*<br/>
 Stratégie à assigner à cette stratégie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la stratégie du planificateur.
 
@@ -107,7 +108,7 @@ Référence à la stratégie du planificateur.
 
 Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des `SetPolicyValue` `SetConcurrencyLimits` méthodes ou.
 
-## <a name="schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="ctor"></a> SchedulerPolicy
 
 Construit une nouvelle stratégie de planificateur et la remplit avec des valeurs pour les [clés de stratégie](concurrency-namespace-enums.md) prises en charge par les planificateurs Runtime d’accès concurrentiel et le gestionnaire des ressources.
 
@@ -138,7 +139,7 @@ Le deuxième constructeur crée une nouvelle stratégie de planificateur qui uti
 
 Le troisième constructeur est un constructeur de copie. Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des `SetPolicyValue` `SetConcurrencyLimits` méthodes ou.
 
-## <a name="schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="dtor"></a> ~ SchedulerPolicy
 
 Détruit une stratégie de planificateur.
 
@@ -146,7 +147,7 @@ Détruit une stratégie de planificateur.
 ~SchedulerPolicy();
 ```
 
-## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a> SetConcurrencyLimits
 
 Définit simultanément les `MinConcurrency` `MaxConcurrency` stratégies et sur l' `SchedulerPolicy` objet.
 
@@ -170,7 +171,7 @@ La méthode lève [invalid_scheduler_policy_thread_specification](invalid-schedu
 
 La méthode peut également lever [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pour d’autres valeurs non valides.
 
-## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue
+## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a> SetPolicyValue
 
 Définit la valeur de la clé de stratégie fournie en tant que `key` paramètre et retourne l’ancienne valeur.
 
@@ -188,7 +189,7 @@ Clé de stratégie pour laquelle définir une valeur.
 *value*<br/>
 Valeur à affecter à la clé de stratégie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la clé spécifiée par le `key` paramètre est prise en charge, l’ancienne valeur de stratégie pour la clé est castée en **`unsigned int`** .
 

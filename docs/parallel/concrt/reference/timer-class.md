@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Timer'
 title: Classe timer
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: 026aef03bb813585decb206c1691835330a4dd05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 460185f61be0dd33fe11dfa0f94e2147893089d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188168"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -88,7 +89,7 @@ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../p
 
 **Espace de noms :** concurrence
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Accepte un message qui a été proposé par ce `timer` bloc de messagerie, en transférant la propriété à l’appelant.
 
@@ -101,11 +102,11 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l’objet proposé `message` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Consomme un message précédemment offert par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.
 
@@ -118,7 +119,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet consommé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
@@ -126,7 +127,7 @@ Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
 Semblable à `accept` , mais est toujours précédé d’un appel à `reserve` .
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Rappel qui signale qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.
 
@@ -139,7 +140,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Pointeur vers la cible nouvellement liée.
 
-## <a name="pause"></a><a name="pause"></a>suspen
+## <a name="pause"></a><a name="pause"></a> suspen
 
 Arrête le `timer` bloc de messagerie. S’il s’agit d’un `timer` bloc de messagerie répétitif, il peut être redémarré avec un `start()` appel ultérieur. Pour les minuteurs qui ne se répètent pas, cela a le même effet qu’un `stop` appel.
 
@@ -147,7 +148,7 @@ Arrête le `timer` bloc de messagerie. S’il s’agit d’un `timer` bloc de me
 void pause();
 ```
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Tente d’offrir le message produit par le `timer` bloc à toutes les cibles liées.
 
@@ -155,7 +156,7 @@ Tente d’offrir le message produit par le `timer` bloc à toutes les cibles li�
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Libère une réservation de message précédente.
 
@@ -168,7 +169,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet en cours de libération.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Réserve un message précédemment offert par ce `timer` bloc de messagerie.
 
@@ -181,7 +182,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity`De l' `message` objet qui est réservé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le message a été réservé avec succès ; **`false`** sinon,.
 
@@ -189,7 +190,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 Après `reserve` l’appel de, s’il retourne **`true`** , `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Reprend la propagation après la libération d’une réservation.
 
@@ -197,7 +198,7 @@ Reprend la propagation après la libération d’une réservation.
 virtual void resume_propagation();
 ```
 
-## <a name="start"></a><a name="start"></a>activer
+## <a name="start"></a><a name="start"></a> activer
 
 Démarre le `timer` bloc de messagerie. Nombre de millisecondes spécifié après l’appel de, la valeur spécifiée est propagée en aval en tant que `message` .
 
@@ -205,7 +206,7 @@ Démarre le `timer` bloc de messagerie. Nombre de millisecondes spécifié aprè
 void start();
 ```
 
-## <a name="stop"></a><a name="stop"></a>erreur
+## <a name="stop"></a><a name="stop"></a> erreur
 
 Arrête le `timer` bloc de messagerie.
 
@@ -213,7 +214,7 @@ Arrête le `timer` bloc de messagerie.
 void stop();
 ```
 
-## <a name="timer"></a><a name="ctor"></a>minute
+## <a name="timer"></a><a name="ctor"></a> minute
 
 Construit un `timer` bloc de messagerie qui activera un message donné après un intervalle spécifié.
 
@@ -263,7 +264,7 @@ Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie
 
 Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_Scheduler` ou `_ScheduleGroup` .
 
-## <a name="timer"></a><a name="dtor"></a>~ minuterie
+## <a name="timer"></a><a name="dtor"></a> ~ minuterie
 
 Détruit un `timer` bloc de messagerie.
 

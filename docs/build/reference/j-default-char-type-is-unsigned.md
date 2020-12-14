@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/J (type de caractère par défaut non signé)
 title: /J (Type de caractère par défaut non signé)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: d95fed3d9af81d89ac03a52a1e6433786118430e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e6f09a05925fd0248f1e777d578570cd7b44946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191223"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Type de caractère par défaut non signé)
 
@@ -56,5 +57,5 @@ ANSI C et C++ n’ont pas besoin d’une implémentation spécifique du **`char`
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; Vector&gt;'
 title: '&lt;vector&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1f787afb00a3f94ba6b5148fe064badbc5d373ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187856"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -97,7 +98,7 @@ Deuxième vecteur (à droite) dans une opération de comparaison.
 |-|-|
 |[and! =](../standard-library/vector-operators.md#op_neq)|Vérifie si le vecteur situé à gauche de l'opérateur n'est pas égal au vecteur situé à droite.|
 |[<d’opérateur ](../standard-library/vector-operators.md#op_lt)|Vérifie si le vecteur situé à gauche de l'opérateur est inférieur au vecteur situé à droite.|
-|[and\<=](../standard-library/vector-operators.md#op_gt_eq)|Vérifie si le vecteur situé à gauche de l'opérateur est inférieur ou égal au vecteur situé à droite.|
+|[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Vérifie si le vecteur situé à gauche de l'opérateur est inférieur ou égal au vecteur situé à droite.|
 |[opérateur = =](../standard-library/vector-operators.md#op_eq_eq)|Vérifie si le vecteur situé à gauche de l'opérateur est égal au vecteur situé à droite.|
 |[>d’opérateur ](../standard-library/vector-operators.md#op_gt)|Vérifie si le vecteur situé à gauche de l'opérateur est supérieur au vecteur situé à droite.|
 |[>opérateur =](../standard-library/vector-operators.md#op_gt_eq)|Vérifie si le vecteur situé à gauche de l'opérateur est supérieur ou égal au vecteur situé à droite.|
@@ -115,7 +116,7 @@ Deuxième vecteur (à droite) dans une opération de comparaison.
 |Hachage|Retourne un hachage du vecteur.|
 |[Vector, \<bool> classe](../standard-library/vector-bool-class.md)|Spécialisation complète du vecteur de modèle de classe pour les éléments de type **`bool`** avec un allocateur pour le type sous-jacent utilisé par la spécialisation.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<vector>
 

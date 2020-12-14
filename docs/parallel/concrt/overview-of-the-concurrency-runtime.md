@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des runtime d’accès concurrentiel'
 title: Vue d'ensemble du runtime d'accès concurrentiel
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 11035f9e202d964ae91378560b9244cde6d1828b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b6ff531b1961b32056a7232b62eca05d7a8793b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189156"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 
 Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il décrit les avantages du runtime d'accès concurrentiel, quand l'utiliser et la façon dont ses composants interagissent entre eux et avec le système d'exploitation et les applications.
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Ce document contient les sections suivantes :
 
@@ -32,7 +33,7 @@ Ce document contient les sections suivantes :
 
 - [Configuration requise](#requirements)
 
-## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a>Historique d’implémentation runtime d’accès concurrentiel
+## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a> Historique d’implémentation runtime d’accès concurrentiel
 
 Dans Visual Studio 2010 à 2013, le runtime d’accès concurrentiel a été incorporé dans msvcr100.dll par le biais de msvcr120.dll.  Quand la refactorisation UCRT s’est produite dans Visual Studio 2015, cette DLL a été refactorie en trois parties :
 
@@ -44,7 +45,7 @@ Dans Visual Studio 2010 à 2013, le runtime d’accès concurrentiel a été inc
 
 Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d'accès concurrentiel n'est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows.
 
-## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a>Pourquoi un Runtime pour l’accès concurrentiel est-il important ?
+## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a> Pourquoi un Runtime pour l’accès concurrentiel est-il important ?
 
 Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Deux exemples des avantages du runtime d’accès concurrentiel sont la *planification des tâches coopératives* et le *blocage coopératif*.
 
@@ -103,7 +104,7 @@ Le gestionnaire des ressources sert d’abstraction sur les ressources informati
 
 [[Haut](#top)]
 
-## <a name="c-lambda-expressions"></a><a name="lambda"></a>Expressions lambda C++
+## <a name="c-lambda-expressions"></a><a name="lambda"></a> Expressions lambda C++
 
 La plupart des types et algorithmes définis par le runtime d'accès concurrentiel sont implémentés en tant que modèles C++. Certains de ces types et algorithmes prennent comme paramètre une routine qui effectue le travail. Ce paramètre peut être une fonction lambda, un objet de fonction ou un pointeur de fonction. Ces entités sont également appelées *fonctions de travail* ou *routines de travail*.
 

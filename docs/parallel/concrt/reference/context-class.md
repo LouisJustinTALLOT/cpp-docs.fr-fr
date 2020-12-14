@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de contexte'
 title: Context, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: d888c7ba3d4a6680b2f77fef98d91c64825cda6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4360b01f2261bd75a7db5bd7fab1bbce56a268ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189000"
 ---
 # <a name="context-class"></a>Context, classe
 
@@ -81,7 +82,7 @@ Le planificateur est coopératif par nature et un contexte d’exécution peut p
 
 **Espace de noms :** concurrence
 
-## <a name="block"></a><a name="block"></a>Plage
+## <a name="block"></a><a name="block"></a> Plage
 
 Bloque le contexte actuel.
 
@@ -99,13 +100,13 @@ Une fois que la `Block` méthode a été appelée ou sera appelée, vous devez l
 
 Cette méthode peut lever diverses exceptions, y compris [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
 
-## <a name="context"></a><a name="dtor"></a>~ Contexte
+## <a name="context"></a><a name="dtor"></a> ~ Contexte
 
 ```cpp
 virtual ~Context();
 ```
 
-## <a name="currentcontext"></a><a name="currentcontext"></a>CurrentContext
+## <a name="currentcontext"></a><a name="currentcontext"></a> CurrentContext
 
 Retourne un pointeur vers le contexte actuel.
 
@@ -113,7 +114,7 @@ Retourne un pointeur vers le contexte actuel.
 static Context* __cdecl CurrentContext();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contexte actuel.
 
@@ -121,7 +122,7 @@ Pointeur vers le contexte actuel.
 
 Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.
 
-## <a name="getid"></a><a name="getid"></a>GetId
+## <a name="getid"></a><a name="getid"></a> GetId
 
 Retourne un identificateur pour le contexte qui est unique dans le planificateur auquel le contexte appartient.
 
@@ -129,11 +130,11 @@ Retourne un identificateur pour le contexte qui est unique dans le planificateur
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur du contexte qui est unique dans le planificateur auquel le contexte appartient.
 
-## <a name="getschedulegroupid"></a><a name="getschedulegroupid"></a>GetScheduleGroupId
+## <a name="getschedulegroupid"></a><a name="getschedulegroupid"></a> GetScheduleGroupId
 
 Retourne un identificateur pour le groupe de planification sur lequel le contexte est actuellement utilisé.
 
@@ -141,7 +142,7 @@ Retourne un identificateur pour le groupe de planification sur lequel le context
 virtual unsigned int GetScheduleGroupId() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur du groupe de planification sur lequel le contexte est actuellement utilisé.
 
@@ -149,7 +150,7 @@ Identificateur du groupe de planification sur lequel le contexte est actuellemen
 
 La valeur de retour de cette méthode est un échantillonnage instantané du groupe de planification sur lequel s’exécute le contexte. Si cette méthode est appelée dans un contexte autre que le contexte actuel, la valeur peut être obsolète au moment où elle est retournée et ne peut pas être reposée. En général, cette méthode est utilisée à des fins de débogage ou de suivi uniquement.
 
-## <a name="getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a>GetVirtualProcessorId
+## <a name="getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a> GetVirtualProcessorId
 
 Retourne un identificateur pour le processeur virtuel sur lequel s’exécute actuellement le contexte.
 
@@ -157,7 +158,7 @@ Retourne un identificateur pour le processeur virtuel sur lequel s’exécute ac
 virtual unsigned int GetVirtualProcessorId() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le contexte est en cours d’exécution sur un processeur virtuel, il s’agit d’un identificateur pour le processeur virtuel sur lequel le contexte est actuellement exécuté ; Sinon, la valeur `-1` .
 
@@ -165,7 +166,7 @@ Si le contexte est en cours d’exécution sur un processeur virtuel, il s’agi
 
 La valeur de retour de cette méthode est un échantillonnage instantané du processeur virtuel sur lequel s’exécute le contexte. Cette valeur peut être obsolète au moment où elle est retournée et ne peut pas être invoquée. En général, cette méthode est utilisée à des fins de débogage ou de suivi uniquement.
 
-## <a name="id"></a><a name="id"></a>Identifi
+## <a name="id"></a><a name="id"></a> Identifi
 
 Retourne un identificateur pour le contexte actuel qui est unique dans le planificateur auquel le contexte actuel appartient.
 
@@ -173,11 +174,11 @@ Retourne un identificateur pour le contexte actuel qui est unique dans le planif
 static unsigned int __cdecl Id();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le contexte actuel est attaché à un planificateur, identificateur du contexte actuel qui est unique dans le planificateur auquel le contexte actuel appartient ; Sinon, la valeur `-1` .
 
-## <a name="iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling
+## <a name="iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling
 
 Retourne une indication précisant si la collection de tâches en cours d’exécution inline sur le contexte actuel est au milieu d’une annulation active (ou sera bientôt).
 
@@ -185,11 +186,11 @@ Retourne une indication précisant si la collection de tâches en cours d’exé
 static bool __cdecl IsCurrentTaskCollectionCanceling();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si un planificateur est attaché au contexte d’appel et qu’un groupe de tâches exécute une tâche Inline sur ce contexte, indiquant si ce groupe de tâches est au milieu d’une annulation active (ou sera bientôt); Sinon, la valeur **`false`** .
 
-## <a name="issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked
+## <a name="issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked
 
 Détermine si le contexte est bloqué de manière synchrone ou non. Un contexte est considéré comme bloqué de façon synchrone s’il a effectué explicitement une action qui a entraîné un blocage.
 
@@ -197,7 +198,7 @@ Détermine si le contexte est bloqué de manière synchrone ou non. Un contexte 
 virtual bool IsSynchronouslyBlocked() const = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique si le contexte est bloqué de manière synchrone.
 
@@ -207,7 +208,7 @@ Un contexte est considéré comme bloqué de façon synchrone s’il a effectué
 
 La valeur de retour de cette méthode est un exemple instantané indiquant si le contexte est bloqué de manière synchrone. Cette valeur peut être obsolète au moment où elle est retournée et ne peut être utilisée que dans des circonstances très spécifiques.
 
-## <a name="operator-delete"></a><a name="operator_delete"></a>opérateur delete
+## <a name="operator-delete"></a><a name="operator_delete"></a> opérateur delete
 
 Un `Context` objet est détruit en interne par le Runtime. Elle ne peut pas être supprimée explicitement.
 
@@ -220,7 +221,7 @@ void operator delete(void* _PObject);
 *_PObject*<br/>
 Pointeur vers l’objet à supprimer.
 
-## <a name="oversubscribe"></a><a name="oversubscribe"></a>Manquer
+## <a name="oversubscribe"></a><a name="oversubscribe"></a> Manquer
 
 Injecte un processeur virtuel supplémentaire dans un planificateur pour la durée d’un bloc de code lorsqu’il est appelé sur un contexte s’exécutant sur l’un des processeurs virtuels de ce planificateur.
 
@@ -233,7 +234,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 *_BeginOversubscription*<br/>
 Si **`true`** , indique qu’un processeur virtuel supplémentaire doit être ajouté pour la durée du surabonnement. Si **`false`** , indique que le surabonnement doit se terminer et que le processeur virtuel ajouté précédemment doit être supprimé.
 
-## <a name="schedulegroupid"></a><a name="schedulegroupid"></a>ScheduleGroupId
+## <a name="schedulegroupid"></a><a name="schedulegroupid"></a> ScheduleGroupId
 
 Retourne un identificateur pour le groupe de planification sur lequel le contexte actuel travaille.
 
@@ -241,11 +242,11 @@ Retourne un identificateur pour le groupe de planification sur lequel le context
 static unsigned int __cdecl ScheduleGroupId();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le contexte actuel est attaché à un planificateur et s’il travaille sur un groupe de planification, il s’agit d’un identificateur pour le groupe de planificateur sur lequel le contexte actuel travaille ; Sinon, la valeur `-1` .
 
-## <a name="unblock"></a><a name="unblock"></a>Verrouillage
+## <a name="unblock"></a><a name="unblock"></a> Verrouillage
 
 Débloque le contexte et le rend exécutable.
 
@@ -261,7 +262,7 @@ Il existe plusieurs exceptions qui peuvent être levées à partir de cette mét
 
 N’oubliez pas qu’il existe une période critique entre le moment où votre code publie son contexte pour qu’un autre thread soit en mesure d’appeler la `Unblock` méthode et le point où l’appel de méthode réel `Block` est effectué. Pendant cette période, vous ne devez pas appeler de méthode qui peut à son tour bloquer et débloquer pour ses propres raisons (par exemple, en acquérant un verrou). Les appels à `Block` la `Unblock` méthode et n’effectuent pas le suivi de la raison du blocage et du déblocage. Un seul objet doit avoir la propriété d' `Block` une `Unblock` paire et.
 
-## <a name="virtualprocessorid"></a><a name="virtualprocessorid"></a>VirtualProcessorId
+## <a name="virtualprocessorid"></a><a name="virtualprocessorid"></a> VirtualProcessorId
 
 Retourne un identificateur pour le processeur virtuel sur lequel s’exécute le contexte actuel.
 
@@ -269,7 +270,7 @@ Retourne un identificateur pour le processeur virtuel sur lequel s’exécute le
 static unsigned int __cdecl VirtualProcessorId();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le contexte actuel est attaché à un planificateur, un identificateur pour le processeur virtuel sur lequel le contexte actuel s’exécute ; Sinon, la valeur `-1` .
 
@@ -277,7 +278,7 @@ Si le contexte actuel est attaché à un planificateur, un identificateur pour l
 
 La valeur de retour de cette méthode est un échantillonnage instantané du processeur virtuel sur lequel s’exécute le contexte actuel. Cette valeur peut être obsolète au moment où elle est retournée et ne peut pas être invoquée. En général, cette méthode est utilisée à des fins de débogage ou de suivi uniquement.
 
-## <a name="yield"></a><a name="yield"></a>Génér
+## <a name="yield"></a><a name="yield"></a> Génér
 
 Produit l'exécution pour qu'un autre contexte puisse s'exécuter. Si aucun autre contexte n'est disponible pour la production, le planificateur peut produire dans un autre thread du système d'exploitation.
 
@@ -289,7 +290,7 @@ static void __cdecl Yield();
 
 Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.
 
-## <a name="yieldexecution"></a><a name="yieldexecution"></a>YieldExecution
+## <a name="yieldexecution"></a><a name="yieldexecution"></a> YieldExecution
 
 Produit l'exécution pour qu'un autre contexte puisse s'exécuter. Si aucun autre contexte n'est disponible pour la production, le planificateur peut produire dans un autre thread du système d'exploitation.
 
