@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l'
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 ms.date: 6/24/2020
 api_name:
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 8172a049c95f2ef7b436c23b94099c61cde96cde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288683"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -122,7 +123,7 @@ Pointe vers la mémoire utilisée pour stocker l’état interne de l’analyseu
 
 Retourne un pointeur vers le jeton suivant trouvé dans *strToken*. Les fonctions retournent **null** quand aucun jeton supplémentaire n’est trouvé. Chaque appel modifie *strToken* en substituant un caractère null au premier délimiteur qui se produit après le jeton retourné.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **strtok** recherche le jeton suivant dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes à caractères larges ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
@@ -131,7 +132,7 @@ La version à deux arguments de **wcstok** n’est pas standard. Si vous devez u
 > [!IMPORTANT]
 > Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Lors du premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur vers le premier jeton dans *strToken*, en terminant le jeton par un caractère null. Un plus grand nombre de jetons peuvent être décomposés du reste de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère null après le **jeton** retourné par cet appel. Pour lire le jeton suivant dans *strToken*, appelez **strtok** avec une valeur **null** pour l’argument *strToken* . L’argument *StrToken* **null** force **strtok** à rechercher le jeton suivant dans le *strToken*modifié. L’argument *strDelimit* peut prendre n’importe quelle valeur d’un appel à la fonction suivante, afin que l’ensemble de délimiteurs puisse varier.
+Lors du premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur vers le premier jeton dans *strToken*, en terminant le jeton par un caractère null. Un plus grand nombre de jetons peuvent être décomposés du reste de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère null après le **jeton** retourné par cet appel. Pour lire le jeton suivant dans *strToken*, appelez **strtok** avec une valeur **null** pour l’argument *strToken* . L’argument *StrToken* **null** force **strtok** à rechercher le jeton suivant dans le *strToken* modifié. L’argument *strDelimit* peut prendre n’importe quelle valeur d’un appel à la fonction suivante, afin que l’ensemble de délimiteurs puisse varier.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
 
@@ -210,6 +211,6 @@ tokens
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

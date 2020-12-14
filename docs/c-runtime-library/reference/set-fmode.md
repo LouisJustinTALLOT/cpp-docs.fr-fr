@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_fmode'
 title: _set_fmode
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8f33a0024ad2746974440166f564f8dd41756de5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288787"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -54,11 +55,11 @@ errno_t _set_fmode(
 *mode*<br/>
 Mode de traduction de fichier souhaité : **_O_TEXT** ou **_O_BINARY**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si l’opération a réussi et un code d’erreur en cas d’échec. Si le *mode* n’est pas **_O_TEXT** ou **_O_BINARY** ou **_O_WTEXT**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction définit la variable globale [_fmode](../../c-runtime-library/fmode.md). Cette variable spécifie le mode de traduction de fichier par défaut pour les opérations d’e/s de fichier **_open** et **_pipe**.
 

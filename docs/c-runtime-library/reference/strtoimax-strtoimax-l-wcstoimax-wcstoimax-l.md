@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l'
 title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 ms.date: 11/04/2016
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-ms.openlocfilehash: ea1ab72a361987d0ccdfe1f4b4a4efb6a0fb427e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9de1e03ef54b65d321e38f86a6f39bc014df7bf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288748"
 ---
 # <a name="strtoimax-_strtoimax_l-wcstoimax-_wcstoimax_l"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
@@ -88,11 +89,11 @@ Base numérique à utiliser.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**strtoimax** retourne la valeur représentée dans la chaîne *strSource*, sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, elle retourne **INTMAX_MAX** ou **INTMAX_MIN**, et **errno** a la valeur **ERANGE** . La fonction retourne 0 si aucune conversion ne peut être effectuée. **wcstoimax** retourne des valeurs de façon analogue à **strtoimax**.
+**strtoimax** retourne la valeur représentée dans la chaîne *strSource*, sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, elle retourne **INTMAX_MAX** ou **INTMAX_MIN**, et **errno** a la valeur **ERANGE**. La fonction retourne 0 si aucune conversion ne peut être effectuée. **wcstoimax** retourne des valeurs de façon analogue à **strtoimax**.
 
-**INTMAX_MAX** et **INTMAX_MIN** sont définis dans stdint. h.
+Les **INTMAX_MAX** et les **INTMAX_MIN** sont définis dans stdint. h.
 
 Si *strSource* a la **valeur null** ou si la *base* est différente de zéro et inférieure à 2 ou supérieure à 36, **errno** a la valeur **EINVAL**.
 
@@ -102,7 +103,7 @@ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno,
 
 La fonction **strtoimax** convertit *strSource* en **intmax_t**. La version à caractères larges de **strtoimax** est **wcstoimax**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique. Les deux fonctions cessent de lire la chaîne *strSource* au premier caractère qu’elles ne peuvent pas reconnaître dans le cadre d’un nombre. Il peut s’agir du caractère null de fin ou du premier caractère numérique supérieur ou égal à *base*.
 
-Le paramètre de catégorie **LC_NUMERIC** des paramètres régionaux détermine la reconnaissance du caractère de base dans *strSource*; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels. **_strtoimax_l** et **_wcstoimax_l** sont identiques aux fonctions correspondantes qui n’ont pas le suffixe **_L** , sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le paramètre de catégorie **LC_NUMERIC** des paramètres régionaux détermine la reconnaissance du caractère de base dans *strSource*; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels ; les **_strtoimax_l** et **_wcstoimax_l** sont identiques aux fonctions correspondantes qui n’ont pas le suffixe **_L** , sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stockée à l’emplacement désigné par *endptr*.
 
@@ -115,11 +116,11 @@ Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a a
 
 **strtoimax** attend que *strSource* pointe vers une chaîne au format suivant :
 
-> [*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres*  &#124; *lettres*]
 
 Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; les *chiffres* correspondent à un ou plusieurs chiffres décimaux ; les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -133,7 +134,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

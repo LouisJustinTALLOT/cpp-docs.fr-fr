@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strtold, _strtold_l, wcstold, _wcstold_l'
 title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c20550e93d45838c39e799a2ebf2f2cd368d059c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213487"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288657"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -80,7 +81,7 @@ Pointeur désignant le caractère qui arrête l’analyse.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **strtold** retourne la valeur du nombre à virgule flottante sous la forme d’un **`long double`** , sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, la fonction retourne +/-**HUGE_VALL**. Le signe de **HUGE_VALL** correspond au signe de la valeur qui ne peut pas être représentée. **strtold** retourne 0 si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
 
@@ -155,7 +156,7 @@ string = 3.1415926535898This stopped it
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
