@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : stockage local des threads (TLS)'
 title: Stockage local des threads (TLS)
 ms.date: 08/09/2019
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1259f0c3af84f90fcd82483d3891124d1553eeb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342320"
 ---
 # <a name="thread-local-storage-tls"></a>Stockage local des threads (TLS)
 
 Le stockage local des threads (TLS, \{i\&gt;Thread Local Storage\&lt;i\}) est une méthode où chaque thread d'un processus multithread donné peut allouer des emplacements de stockage de données propres au thread. Les données spécifiques aux threads à liaison dynamique (au moment de l’exécution) sont prises en charge par le biais de l’API TLS ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)). Win32 et le compilateur Microsoft C++ prennent désormais en charge les données par thread liées statiquement (au moment du chargement) en plus de l’implémentation d’API existante.
 
-## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>Implémentation du compilateur pour TLS
+## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a> Implémentation du compilateur pour TLS
 
 **C++ 11 :**  Le **`thread_local`** spécificateur de classe de stockage est la méthode recommandée pour spécifier le stockage local des threads pour les objets et les membres de classe. Pour plus d’informations, consultez [classes de stockage (C++)](../cpp/storage-classes-cpp.md).
 

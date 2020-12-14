@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Stack (STL/CLR)'
 title: stack (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2903af3bce3f4eba09324202dbb071b11e440573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335374"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -86,7 +87,7 @@ Type d'un élément dans la séquence contrôlée.
 *Conteneur*<br/>
 Type du conteneur sous-jacent.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/stack>
 
@@ -138,7 +139,7 @@ Type du conteneur sous-jacent.
 |<xref:System.ICloneable>|Dupliquer un objet.|
 |IStack\<Value, Container>|Gérer l’adaptateur de conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type *Container*, qui stocke des éléments de *valeur* et s’étend à la demande. L’objet restreint l’accès à l’envoi et au Push uniquement du dernier élément, en implémentant une file d’attente de dernier entré, premier sorti (également appelée file d’attente LIFO ou pile).
 
@@ -159,7 +160,7 @@ void assign(stack<Value, Container>% right);
 *Oui*<br/>
 Adaptateur de conteneur à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre est assignée `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la pile.
 
@@ -574,7 +575,7 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 *Oui*<br/>
 Adaptateur de conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -875,7 +876,7 @@ Objet à copier.
 *encapsulée*<br/>
 Conteneur encapsulé à utiliser.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -887,7 +888,7 @@ Le constructeur :
 
 `stack(stack<Value, Container>% right);`
 
-crée un conteneur encapsulé qui est une copie de `right.get_container()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de pile.
+crée un conteneur encapsulé qui est une copie de `right.get_container()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit* de l’objet de pile.
 
 Le constructeur :
 
@@ -1113,7 +1114,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *valeur*de paramètre de modèle.
+Le type est un synonyme de la *valeur* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1167,7 +1168,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux piles sont comparées élément par élément.
 
@@ -1238,7 +1239,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Sinon, elle retourne `left->` [Stack :: Size (STL/CLR).](#size) `() <` `right->size()` vous l’utilisez pour tester si *Left* est ordonné avant *le* moment où les deux piles sont comparées élément par élément.
 
@@ -1309,7 +1310,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux piles sont comparées élément par élément.
 
@@ -1380,7 +1381,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux piles sont comparées élément par élément.
 
@@ -1451,7 +1452,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est ordonné après *le* moment où les deux piles sont comparées élément par élément.
 
@@ -1522,7 +1523,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné *avant le moment où* les deux piles sont comparées élément par élément.
 

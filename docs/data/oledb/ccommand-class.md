@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CCommand'
 title: CCommand, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 150d543b666896964794503d185637680e6da8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335509"
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 
@@ -78,12 +79,12 @@ class CCommand :
 Type de classe d’accesseur (par exemple `CDynamicParameterAccessor` , `CDynamicStringAccessor` ou `CEnumeratorAccessor` ) que vous souhaitez que la commande utilise. La valeur par défaut est `CNoAccessor` , qui spécifie que la classe ne prend pas en charge les paramètres ou les colonnes de sortie.
 
 *TRowset*<br/>
-Type de classe d’ensemble de lignes (tel que `CArrayRowset` ou `CNoRowset` ) que la commande doit utiliser. La valeur par défaut est `CRowset`.
+Type de classe d’ensemble de lignes (tel que `CArrayRowset` ou `CNoRowset` ) que la commande doit utiliser. Par défaut, il s’agit de `CRowset`.
 
 *TMultiple*<br/>
 Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spécifiez [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Sinon, utilisez [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Pour plus d’informations, consultez [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -109,7 +110,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 |[SetParameterInfo](#setparameterinfo)|Spécifie le type natif de chaque paramètre de commande.|
 |[Unprepare](#unprepare)|Ignore le plan d’exécution de la commande en cours.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Utilisez cette classe lorsque vous devez effectuer une opération basée sur des paramètres ou exécuter une commande. Si vous avez simplement besoin d’ouvrir un ensemble de lignes simple, utilisez [CTable](../../data/oledb/ctable-class.md) à la place.
 
@@ -164,7 +165,7 @@ dans Spécifie si la commande doit être liée automatiquement après son exécu
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si un jeu de résultats a été récupéré précédemment, cette fonction libère le jeu de résultats précédent et dissocie les colonnes. Si *bBind* est **`true`** , il lie les nouvelles colonnes.
 
@@ -222,13 +223,13 @@ dans Identique à *wszCommand* , sauf que ce paramètre prend une chaîne de com
 dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) contenant des propriétés et des valeurs à définir. Consultez [jeux de propriétés et groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
 
 *pRowsAffected*<br/>
-[in/out] Pointeur vers la mémoire où le nombre de lignes affectées par une commande est retourné. Si * \* pRowsAffected* a la valeur null, aucun nombre de lignes n’est retourné. Sinon, `Open` définit * \* pRowsAffected* selon les conditions suivantes :
+[in/out] Pointeur vers la mémoire où le nombre de lignes affectées par une commande est retourné. Si *\* pRowsAffected* a la valeur null, aucun nombre de lignes n’est retourné. Sinon, `Open` définit *\* pRowsAffected* selon les conditions suivantes :
 
 |Si|Alors|
 |--------|----------|
-|L' `cParamSets` élément de `pParams` est supérieur à 1|* \* pRowsAffected* représente le nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l’exécution.|
-|Le nombre de lignes affectées n’est pas disponible|* \* pRowsAffected* a la valeur-1.|
-|La commande ne met pas à jour, supprime ou insère des lignes|* \* pRowsAffected* n’est pas défini.|
+|L' `cParamSets` élément de `pParams` est supérieur à 1|*\* pRowsAffected* représente le nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l’exécution.|
+|Le nombre de lignes affectées n’est pas disponible|*\* pRowsAffected* a la valeur-1.|
+|La commande ne met pas à jour, supprime ou insère des lignes|*\* pRowsAffected* n’est pas défini.|
 
 *guidCommand*<br/>
 dans GUID qui spécifie la syntaxe et les règles générales que le fournisseur doit utiliser pour analyser le texte de la commande. Pour plus d’informations, consultez [ICommandText :: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) et [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
@@ -243,7 +244,7 @@ dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms71436
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les trois premières formes de `Open` prendre une session, de créer une commande et d’exécuter la commande, en liant les paramètres si nécessaire.
 
@@ -292,7 +293,7 @@ dans GUID qui spécifie la syntaxe et les règles générales que le fournisseur
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première forme de `Create` prend une chaîne de commande Unicode. La seconde forme de `Create` prend une chaîne de commande ANSI (fournie pour la compatibilité descendante avec les applications ANSI existantes).
 
@@ -315,7 +316,7 @@ dans `CSession` Objet à associer à la nouvelle commande.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode crée une commande à l’aide de l’objet de session spécifié.
 
@@ -358,7 +359,7 @@ dans Nombre de fois où vous prévoyez d’exécuter la commande.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode encapsule la méthode OLE DB [ICommandPrepare ::P](/previous-versions/windows/desktop/ms718370(v=vs.85))restante.
 
@@ -410,7 +411,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode encapsule la méthode OLE DB [ICommandPrepare :: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 

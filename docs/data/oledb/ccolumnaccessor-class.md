@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Ccolumnaccessor,'
 title: CColumnAccessor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7551f39d34bb4f13b4ffae358db05aede2adb9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335518"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor, classe
 
@@ -31,21 +32,21 @@ Dans le code injecté, chaque colonne est liée comme un accesseur distinct. Vou
 
 `CColumnAccessor` implémente les méthodes stub suivantes, chacune d’elles correspondant à des fonctionnalités à d’autres méthodes de la classe d’accesseur :
 
-- `CColumnAccessor` le constructeur ; instancie et initialise l’objet `CColumnAccessor`.
+- `CColumnAccessor` Constructeur ; instancie et initialise l' `CColumnAccessor` objet.
 
-- `CreateAccessor` alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.
+- `CreateAccessor` Alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.
 
-- `BindColumns` lie les colonnes aux accesseurs.
+- `BindColumns` Lie des colonnes à des accesseurs.
 
-- `SetParameterBuffer` alloue des tampons pour les paramètres.
+- `SetParameterBuffer` Alloue des mémoires tampons pour les paramètres.
 
-- `AddParameter` ajoute une entrée de paramètre aux structures d’entrée de paramètre.
+- `AddParameter` Ajoute une entrée de paramètre aux structures d’entrée de paramètre.
 
-- `HasOutputColumns` détermine si l’accesseur a des colonnes de sortie
+- `HasOutputColumns` Détermine si l’accesseur a des colonnes de sortie
 
-- `HasParameters` détermine si l’accesseur a des paramètres.
+- `HasParameters` Détermine si l’accesseur a des paramètres.
 
-- `BindParameters` lie les paramètres créés aux colonnes.
+- `BindParameters` Lie les paramètres créés aux colonnes.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -53,5 +54,5 @@ Dans le code injecté, chaque colonne est liée comme un accesseur distinct. Vou
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

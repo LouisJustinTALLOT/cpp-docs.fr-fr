@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : exemple de programme multithread en langage C'
 title: Exemple de programme multithread en langage C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a46bd370a309a29c6877eacaea428ff9fc42902e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342333"
 ---
 # <a name="sample-multithread-c-program"></a>Exemple de programme multithread en langage C
 
@@ -21,9 +22,9 @@ Les programmes sont compilés en tant que multithread par défaut.
 
 ::: moniker range=">=msvc-160"
 
-1. Dans le menu **Fichier** , choisissez **Nouveau** > **Projet** .
+1. Dans le menu **Fichier**, choisissez **Nouveau** > **Projet**.
 
-1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application console** qui contient les balises **C++** , **Windows** et **console** . Choisissez **Suivant** pour continuer.
+1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application console** qui contient les balises **C++**, **Windows** et **console** . Choisissez **Suivant** pour continuer.
 
 1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez un nom pour votre projet, par exemple « Bounce ». Choisissez **créer** pour continuer.
 
@@ -31,7 +32,7 @@ Les programmes sont compilés en tant que multithread par défaut.
 
 1. Dans la fenêtre d’édition, supprimez le code source existant et remplacez-le par l’exemple de code.
 
-1. Dans le menu **Générer** , choisissez **Générer la solution** .
+1. Dans le menu **Générer** , choisissez **Générer la solution**.
 
 1. Appuyez sur **F5** pour démarrer le programme dans le débogueur.
 
@@ -39,7 +40,7 @@ Les programmes sont compilés en tant que multithread par défaut.
 
 ::: moniker range="<=msvc-150"
 
-1. Dans le menu **Fichier** , choisissez **Nouveau** > **Projet** .
+1. Dans le menu **Fichier**, choisissez **Nouveau** > **Projet**.
 
 1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **Visual C++** dans le volet gauche, puis sélectionnez **projet vide** dans le volet central.
 

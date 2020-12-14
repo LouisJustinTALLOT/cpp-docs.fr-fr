@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMDITabInfo'
 title: CMDITabInfo, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: 8e4053bf16672d693adc104c9e88bb46a67ba7dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4769bedc48e143e2dae6f35c50d2d1fef488e655
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336667"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo, classe
 
@@ -89,7 +90,7 @@ L’exemple suivant montre comment définir les valeurs des différentes variabl
 
 [CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmdiclientareawnd. h
 
@@ -159,7 +160,7 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur est TRUE, chaque fenêtre d’onglet affiche le bouton **Fermer** sur le bord droit de l’onglet. sinon, le bouton **Fermer** n’est pas affiché. La valeur par défaut est TRUE.
+Si la valeur est TRUE, chaque fenêtre d’onglet affiche le bouton **Fermer** sur le bord droit de l’onglet. Dans le cas contraire, le bouton **Fermer** n’est pas affiché. La valeur par défaut est TRUE.
 
 ## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a> CMDITabInfo :: m_bTabCustomTooltips
 
@@ -183,7 +184,7 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur est TRUE, les icônes s’affichent sous chaque onglet MDI. sinon, les icônes ne sont pas affichées sur les onglets. La valeur par défaut est FALSE.
+Si la valeur est TRUE, les icônes s’affichent sous chaque onglet MDI. Sinon, les icônes ne sont pas affichées sur les onglets. La valeur par défaut est FALSE.
 
 ## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a> CMDITabInfo :: m_nTabBorderSize
 
@@ -244,7 +245,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 dans Objet de [classe CArchive](../../mfc/reference/carchive-class.md) à sérialiser.
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3409'
 title: Erreur du compilateur C3409
 ms.date: 11/06/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: d3800998ded1758ab1de92af689d9d4613c2c61e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6d3ba602ab9f98526d2ddd6538e424b7879c7017
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316256"
 ---
 # <a name="compiler-error-c3409"></a>Erreur du compilateur C3409
 
 > bloc d’attributs vide non autorisé
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les crochets ont été interprétés par le compilateur comme un bloc d' [attributs](../../windows/attributes/attributes-alphabetical-reference.md) , mais aucun attribut n’a été trouvé.
 

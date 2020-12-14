@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMapWordToOb'
 title: CMapWordToOb, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da21902c3789f1547055baffae5650fcb6b8c789
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336711"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb, classe
 
@@ -93,7 +94,7 @@ par exemple, se traduit par
 
 ## <a name="remarks"></a>Notes
 
-`CMapWordToOb`incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit avec l’opérateur d’insertion () surchargé, soit **<<** avec la `Serialize` fonction membre.
+`CMapWordToOb` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit avec l’opérateur d’insertion () surchargé, soit **<<** avec la `Serialize` fonction membre.
 
 Si vous avez besoin d’un vidage d’éléments de mots individuels `CObject` , vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 

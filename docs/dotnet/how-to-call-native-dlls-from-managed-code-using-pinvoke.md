@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : appeler des DLL natives à partir de code managé à l’aide de PInvoke'
 title: "Comment : appeler des DLL natives à partir du code managé à l'aide de PInvoke"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: 1eb5d5669c49dd49a411c275f8845dbbab989df3
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 915601aa813f1c5c14977c1492d6c675125c47be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335394"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Comment : appeler des DLL natives à partir du code managé à l'aide de PInvoke
 
-Les fonctions implémentées dans des dll non managées peuvent être appelées à partir du code managé à l’aide de la fonctionnalité d’appel de code non managé (P/Invoke). Si le code source de la DLL n’est pas disponible, P/Invoke est la seule option pour l’interopérabilité. Toutefois, contrairement à d’autres langages C++ .net, Visual fournit une alternative à P/Invoke. Pour plus d’informations, [consultez C++ utilisation de l’interopérabilité (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Les fonctions implémentées dans des dll non managées peuvent être appelées à partir du code managé à l’aide de la fonctionnalité d’appel de code non managé (P/Invoke). Si le code source de la DLL n’est pas disponible, P/Invoke est la seule option pour l’interopérabilité. Toutefois, contrairement à d’autres langages .NET, Visual C++ fournit une alternative à P/Invoke. Pour plus d’informations, consultez [utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : hash_set (STL/CLR)'
 title: hash_set (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -95,12 +96,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: c6df41836433b952d7d2e0e7d744270174c5768a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0705dd674af21958b5d4f4b0a5a904eb42aff76a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335469"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
@@ -129,7 +130,7 @@ template<typename Key>
 *Clé*<br/>
 Type du composant clé d'un élément dans la séquence contrôlée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/hash_set>
 
@@ -200,7 +201,7 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
 |IHash\<Key, Value>|Conserver le conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste liée bidirectionnelle. Pour accélérer l’accès, l’objet gère également un tableau de longueurs variables de pointeurs dans la liste (table de hachage), en gérant efficacement la liste entière sous la forme d’une séquence de sous-listes ou de compartiments. Elle insère des éléments dans un compartiment qu’elle continue de trier en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants.
 
@@ -554,7 +555,7 @@ size_type count(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent avec la *clé*. Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
@@ -763,7 +764,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [hash_set :: lower_bound (STL/CLR)](#lower_bound) `(key),` [hash_set :: upper_bound (STL/CLR)](#upper_bound) `(key))` . Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
@@ -834,9 +835,9 @@ Fin de la plage à effacer.
 *where*<br/>
 Élément à effacer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [hash_set :: end (STL/CLR)](#end) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle* pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [hash_set :: end (STL/CLR)](#end) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
 
 La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [ `first` , `last` ) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
@@ -907,7 +908,7 @@ iterator find(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; Sinon, elle retourne [hash_set :: end (STL/CLR)](#end) `()` . Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
@@ -1260,7 +1261,7 @@ Prédicat de classement pour la séquence contrôlée.
 *Oui*<br/>
 Objet ou plage à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -1272,13 +1273,13 @@ Le constructeur :
 
 `explicit hash_set(key_compare^ pred);`
 
-Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit*et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit* et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
 
 Le constructeur :
 
 `hash_set(key_compare^ pred, hasher^ hashfn);`
 
-Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit*et avec la fonction de hachage *hashfn*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de classement et la fonction de hachage spécifiés.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit* et avec la fonction de hachage *hashfn*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de classement et la fonction de hachage spécifiés.
 
 Le constructeur :
 
@@ -1302,31 +1303,31 @@ Le constructeur :
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`
 
-Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit*et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit* et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
 
 Le constructeur :
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit*et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri et la fonction de hachage spécifiés.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit* et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri et la fonction de hachage spécifiés.
 
 Le constructeur :
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*de l’énumérateur, avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri par défaut et la fonction de hachage.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* de l’énumérateur, avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri par défaut et la fonction de hachage.
 
 Le constructeur :
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de classement *prédit*et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* d’énumérateur, avec le prédicat de classement *prédit* et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
 
 Le constructeur :
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de classement *prédit*, et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri et la fonction de hachage spécifiés.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* d’énumérateur, avec le prédicat de classement *prédit*, et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri et la fonction de hachage spécifiés.
 
 ### <a name="example"></a>Exemple
 
@@ -1526,11 +1527,11 @@ Valeur de clé à insérer.
 *where*<br/>
 Où dans le conteneur à insérer (hint uniquement).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.
 
-La première fonction membre s’efforce d’insérer un élément avec la valeur *Val*et retourne une paire de valeurs `X` . Si `X.second` a la valeur true, `X.first` désigne l’élément nouvellement inséré ; sinon, `X.first` désigne un élément avec un classement équivalent qui existe déjà et aucun nouvel élément n’est inséré. Vous l’utilisez pour insérer un élément unique.
+La première fonction membre s’efforce d’insérer un élément avec la valeur *Val* et retourne une paire de valeurs `X` . Si `X.second` a la valeur true, `X.first` désigne l’élément nouvellement inséré ; sinon, `X.first` désigne un élément avec un classement équivalent qui existe déjà et aucun nouvel élément n’est inséré. Vous l’utilisez pour insérer un élément unique.
 
 La deuxième fonction membre insère un élément avec la valeur *Val*, en utilisant *Where* comme indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
 
@@ -1784,7 +1785,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *clé*de paramètre de modèle.
+Le type est un synonyme de la *clé* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1906,7 +1907,7 @@ iterator lower_bound(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre détermine le premier élément `X` de la séquence contrôlée qui hache vers le même compartiment que la *clé* et a un ordonnancement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [hash_set :: end (STL/CLR)](#end) `()` ; sinon, il retourne un itérateur qui désigne `X` . Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
@@ -1963,7 +1964,7 @@ static value_type make_value(key_type key);
 *key*<br/>
 Valeur de clé à utiliser.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne un `value_type` objet dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
 
@@ -2010,7 +2011,7 @@ void max_load_factor(float new_factor);
 *new_factor*<br/>
 Nouveau facteur de charge maximal à stocker.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre retourne le facteur de charge maximale stockée actuel. Vous l’utilisez pour déterminer la taille de compartiment moyenne maximale.
 
@@ -2076,7 +2077,7 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 *Oui*<br/>
 Conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -2491,7 +2492,7 @@ void swap(hash_set<Key>% right);
 *Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les séquences contrôlées entre **`this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
@@ -2609,7 +2610,7 @@ iterator upper_bound(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre détermine le dernier élément `X` de la séquence contrôlée qui hache vers le même compartiment que la *clé* et a un ordonnancement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, il retourne [hash_set :: end (STL/CLR)](#end) `()` ; sinon, il retourne un itérateur qui désigne le premier élément au-delà de `X` . Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 

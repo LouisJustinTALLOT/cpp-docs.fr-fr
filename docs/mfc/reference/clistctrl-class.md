@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CListCtrl'
 title: CListCtrl (classe)
 ms.date: 06/13/2019
 f1_keywords:
@@ -264,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a1fa9f4bb7ba844dd2f0300cf007a786e8fde902
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333488"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -534,7 +535,7 @@ Dimensions proposées du contrôle, en pixels. Si les dimensions ne sont pas sp�
 *iCount*<br/>
 Nombre d’éléments à afficher dans le contrôle. Si ce paramètre a la valeur-1, l’infrastructure utilise le nombre total d’éléments actuellement dans le contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CSize`Objet qui contient la largeur et la hauteur approximatives requises pour afficher les éléments, en pixels.
 
@@ -563,7 +564,7 @@ Spécifie le style d’alignement pour les éléments. Ce peut être l’une des
 
 - LVA_SNAPTOGRID aligne toutes les icônes à la position de grille la plus proche.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -626,7 +627,7 @@ Spécifie la fenêtre parente du contrôle de liste, généralement `CDialog` . 
 *nID*<br/>
 Spécifie l’ID du contrôle de liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -674,7 +675,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -702,7 +703,7 @@ Index de l’élément dont la liste d’images à faire glisser doit être cré
 *lpPoint*<br/>
 Adresse d’une structure de [points](/windows/win32/api/windef/ns-windef-point) qui reçoit l’emplacement initial de l’angle supérieur gauche de l’image, dans les coordonnées de la vue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images de glissement en cas de réussite ; Sinon, NULL.
 
@@ -726,7 +727,7 @@ Supprime tous les éléments du contrôle List View.
 BOOL DeleteAllItems();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -751,7 +752,7 @@ BOOL DeleteColumn(int nCol);
 *nCol*<br/>
 Index de la colonne à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -780,7 +781,7 @@ BOOL DeleteItem(int nItem);
 *nItem*<br/>
 Spécifie l’index de l’élément à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -830,7 +831,7 @@ CEdit* EditLabel(int nItem);
 *nItem*<br/>
 Index de l’élément d’affichage de liste à modifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers l' `CEdit` objet qui est utilisé pour modifier le texte de l’élément ; sinon, null.
 
@@ -865,7 +866,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 *fEnable*<br/>
 Indique s’il faut activer un contrôle ListView pour regrouper les éléments affichés. TRUE pour activer le regroupement ; FALSe pour la désactiver.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Renvoie l'une des valeurs suivantes :
 
@@ -897,7 +898,7 @@ Index de l’élément d’affichage de liste qui doit être visible.
 *bPartialOK*<br/>
 Spécifie si la visibilité partielle est acceptable.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -932,7 +933,7 @@ Pointeur vers une structure [LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl
 *nStart*<br/>
 Index de l’élément avec lequel commencer la recherche, ou-1 pour démarrer à partir du début. L’élément à *nStart* est exclu de la recherche si *nStart* n’est pas égal à-1.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément en cas de réussite ou-1 dans le cas contraire.
 
@@ -964,7 +965,7 @@ Récupère la couleur d’arrière-plan d’un contrôle List View.
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur 32 bits utilisée pour spécifier une couleur RVB.
 
@@ -985,7 +986,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 *plvbkImage*<br/>
 Pointeur vers une `LVBKIMAGE` structure contenant l’image d’arrière-plan actuelle de la vue liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur différente de zéro en cas de réussite, ou zéro dans le cas contraire.
 
@@ -1016,7 +1017,7 @@ Récupère le masque de rappel pour un contrôle List View.
 UINT GetCallbackMask() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Masque de rappel du contrôle List View.
 
@@ -1041,7 +1042,7 @@ BOOL GetCheck(int nItem) const;
 *nItem*<br/>
 Index de base zéro d’un élément de contrôle de liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’élément est sélectionné ; sinon, 0.
 
@@ -1071,7 +1072,7 @@ Index de la colonne dont les attributs doivent être récupérés.
 *pColumn*<br/>
 Adresse d’une structure [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) qui spécifie les informations pour récupérer et recevoir des informations sur la colonne. Le `mask` membre spécifie les attributs de colonne à récupérer. Si le `mask` membre spécifie la valeur LVCF_TEXT, le `pszText` membre doit contenir l’adresse de la mémoire tampon qui reçoit le texte de l’élément et le `cchTextMax` membre doit spécifier la taille de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1112,7 +1113,7 @@ Pointeur vers une mémoire tampon qui contient les valeurs d’index des colonne
 *iCount*<br/>
 Nombre de colonnes dans le contrôle List View. Si ce paramètre a la valeur-1, le nombre de colonnes est automatiquement récupéré par l’infrastructure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1161,7 +1162,7 @@ int GetColumnWidth(int nCol) const;
 *nCol*<br/>
 Spécifie l’index de la colonne dont la largeur doit être récupérée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur, en pixels, de la colonne spécifiée par *Ncol*.
 
@@ -1181,7 +1182,7 @@ Calcule le nombre d’éléments qui peuvent s’ajuster verticalement dans la z
 int GetCountPerPage() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments qui peuvent s’ajuster verticalement dans la zone visible d’un contrôle d’affichage de liste en mode liste ou rapport.
 
@@ -1197,7 +1198,7 @@ Récupère le handle du contrôle d’édition utilisé pour modifier le texte d
 CEdit* GetEditControl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers l’objet [CEdit](cedit-class.md) utilisé pour modifier le texte de l’élément ; Sinon, NULL.
 
@@ -1224,7 +1225,7 @@ Récupère la chaîne à afficher si le contrôle d’affichage de liste actuel 
 CString GetEmptyText() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui contient le texte à afficher si le contrôle est vide.
 
@@ -1240,7 +1241,7 @@ Récupère les styles étendus actuels d’un contrôle List View.
 DWORD GetExtendedStyle();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Combinaison des styles étendus actuellement utilisés par le contrôle List View. Pour obtenir une liste descriptive de ces styles étendus, consultez l’article [styles de vue de liste étendue](/windows/win32/Controls/extended-list-view-styles) dans le SDK Windows.
 
@@ -1260,7 +1261,7 @@ Obtient la position du premier élément sélectionné dans le contrôle List Vi
 POSITION GetFirstSelectedItemPosition() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si aucun élément n’est sélectionné.
 
@@ -1293,7 +1294,7 @@ Récupère le groupe qui a le focus clavier dans le contrôle de vue de liste ac
 int GetFocusedGroup() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du groupe dont l’État est LVGS_FOCUSED, s’il s’agit d’un groupe de ce type ; Sinon,-1.
 
@@ -1309,7 +1310,7 @@ Récupère le nombre de groupes dans le contrôle List-View actuel.
 int GetGroupCount()const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de groupes dans le contrôle List-View.
 
@@ -1335,7 +1336,7 @@ Identificateur du groupe dont les informations doivent être récupérées.
 *pgrp*<br/>
 Pointeur vers le [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) contenant des informations sur le groupe spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’ID du groupe en cas de réussite, ou-1 dans le cas contraire.
 
@@ -1361,7 +1362,7 @@ dans Index de base zéro d’un groupe.
 *pGroup*\
 à Pointeur vers une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) qui reçoit des informations sur le groupe spécifié par le paramètre *iIndex* . L’appelant est chargé d’initialiser les membres de la structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) . Définissez le `cbSize` membre sur la taille de la structure et les indicateurs du `mask` membre pour spécifier les informations à récupérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1455,7 +1456,7 @@ dans Spécifie les coordonnées de rectangle à récupérer. Utilisez l’une de
 
 - LVGGR_SUBSETLINK-coordonnées du lien du sous-ensemble (sous-ensemble de balises).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1512,7 +1513,7 @@ dans Index de base zéro d’un groupe.
 *dwMask*\
 dans Masque qui spécifie la valeur d’État à récupérer pour le groupe spécifié. Pour plus d’informations, consultez le `mask` membre de la structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État demandé pour le groupe spécifié, ou 0 si le groupe est introuvable.
 
@@ -1530,7 +1531,7 @@ Récupère le contrôle d’en-tête d’un contrôle List View.
 CHeaderCtrl* GetHeaderCtrl();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle d’en-tête, utilisé par le contrôle List View.
 
@@ -1550,7 +1551,7 @@ Récupère le curseur utilisé lorsque la sélection à chaud est activée pour 
 HCURSOR GetHotCursor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de la ressource de curseur actif en cours d’utilisation par le contrôle List View.
 
@@ -1575,7 +1576,7 @@ Récupère l’élément d’affichage de liste actuellement sous le curseur.
 int GetHotItem();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément réactif actuel du contrôle List View.
 
@@ -1602,7 +1603,7 @@ Récupère le temps de survol actuel d’un contrôle List View.
 DWORD GetHoverTime() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le délai, en millisecondes, pendant lequel le curseur de la souris doit pointer sur un élément avant d’être sélectionné. Si la valeur de retour est-1, la durée de pointage est la durée de pointage par défaut.
 
@@ -1638,7 +1639,7 @@ Valeur spécifiant la liste d’images à récupérer. Il peut s'agir d'une des 
 
 - LVSIL_STATE liste d’images avec des images d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images utilisée pour le dessin des éléments de la vue liste.
 
@@ -1663,7 +1664,7 @@ BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 *plvim*<br/>
 Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) contenant les informations relatives à la marque d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, ou FALSe dans le cas contraire. La valeur FALSe est retournée si la taille du `cbSize` membre de la `LVINSERTMARK` structure n’est pas égale à la taille réelle de la structure.
 
@@ -1679,7 +1680,7 @@ Récupère la couleur actuelle de la marque d’insertion.
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une structure [COLORREF](/windows/win32/gdi/colorref) qui contient la couleur du point d’insertion.
 
@@ -1700,7 +1701,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 *pRect*<br/>
 Pointeur vers une `RECT` structure qui contient les coordonnées d’un rectangle qui délimite le point d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Renvoie l'une des valeurs suivantes :
 
@@ -1725,7 +1726,7 @@ BOOL GetItem(LVITEM* pItem) const;
 *pItem*<br/>
 Pointeur vers une structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) qui reçoit les attributs de l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1741,7 +1742,7 @@ Récupère le nombre d’éléments dans un contrôle List View.
 int GetItemCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans le contrôle List View.
 
@@ -1762,7 +1763,7 @@ DWORD_PTR GetItemData(int nItem) const;
 *nItem*<br/>
 Index de l’élément de liste dont les données doivent être récupérées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur spécifique à l’application 32 bits associée à l’élément spécifié.
 
@@ -1815,7 +1816,7 @@ dans Partie du sous-élément de vue de liste pour lequel le rectangle englobant
 *pRect*\
 à Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui reçoit des informations sur le rectangle englobant du sous-élément. L’appelant est chargé d’allouer la structure [Rect](/windows/win32/api/windef/ns-windef-rect) . Ce paramètre ne peut pas être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1869,7 +1870,7 @@ Index de l’élément dont la position doit être récupérée.
 *lpPoint*<br/>
 Adresse d’une structure de [points](/windows/win32/api/windef/ns-windef-point) qui reçoit la position de l’angle supérieur gauche de l’élément, dans les coordonnées de la vue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1917,7 +1918,7 @@ Partie de l’élément d’affichage de liste pour lequel récupérer le rectan
 
 - LVIR_LABEL retourne le rectangle englobant du texte de l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1985,7 +1986,7 @@ dans Vue pour laquelle récupérer l’espacement des éléments. Spécifiez TRU
 *pnVertSpacing*\
 à Contient l’espacement vertical entre les éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -2011,7 +2012,7 @@ Index de l’élément dont l’État doit être récupéré.
 *nMask*<br/>
 Masque spécifiant les indicateurs d’état de l’élément à retourner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indicateurs d’État pour l’élément d’affichage de liste spécifié.
 
@@ -2053,7 +2054,7 @@ Pointeur vers une chaîne qui doit recevoir le texte de l’élément.
 *nLen*<br/>
 Longueur de la mémoire tampon vers laquelle pointe *lpszText*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La version **`int`** qui retourne renvoie la longueur de la chaîne récupérée.
 
@@ -2101,7 +2102,7 @@ L’État peut être égal à zéro ou peut être une ou plusieurs des valeurs s
 
 Si tous les indicateurs d’état spécifiés ne sont pas définis pour un élément, la recherche se poursuit avec l’élément suivant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément suivant en cas de réussite, ou-1 dans le cas contraire.
 
@@ -2123,7 +2124,7 @@ BOOL GetNextItemIndex(
 *nFlags*\
 dans Combinaison de bits (OR) d’indicateurs qui spécifient comment effectuer la recherche. La recherche peut dépendre de l’index, de l’État ou de l’apparence de l’élément cible, ou de la position physique de l’élément cible par rapport à l’élément spécifié par le paramètre *pItemIndex* . Pour plus d’informations, consultez le paramètre *Flags* dans le message [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -2143,10 +2144,10 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Référence à une valeur de POSITION retournée par un appel précédent à `GetNextSelectedItem` ou `GetFirstSelectedItemPosition` . La valeur est mise à jour à la position suivante par cet appel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément de liste identifié par *pos*.
 
@@ -2185,7 +2186,7 @@ Récupère le nombre actuel de zones de travail pour un contrôle List View.
 UINT GetNumberOfWorkAreas() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Non utilisé pour l’instant.
 
@@ -2228,7 +2229,7 @@ Récupère la couleur de la bordure d’un contrôle List View.
 COLORREF GetOutlineColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une structure [COLORREF](/windows/win32/gdi/colorref) contenant la couleur de contour.
 
@@ -2249,7 +2250,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 *lpPoint*<br/>
 Adresse d’une structure de [point](/windows/win32/api/windef/ns-windef-point) qui reçoit l’origine de la vue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro. Toutefois, si le contrôle est en mode rapport, la valeur de retour est toujours égale à zéro.
 
@@ -2261,7 +2262,7 @@ Récupère l’index de la colonne actuellement sélectionnée dans le contrôle
 UINT GetSelectedColumn() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de la colonne sélectionnée.
 
@@ -2277,7 +2278,7 @@ Récupère le nombre d’éléments sélectionnés dans le contrôle List View.
 UINT GetSelectedCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments sélectionnés dans le contrôle List View.
 
@@ -2307,7 +2308,7 @@ Récupère la marque de sélection d’un contrôle List View.
 int GetSelectionMark();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Marque de sélection de base zéro, ou-1 s’il n’y a aucune marque de sélection.
 
@@ -2337,7 +2338,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 *lpsz*<br/>
 Adresse d’une chaîne se terminant par un caractère null dont la largeur doit être déterminée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur, en pixels, de la chaîne vers laquelle pointe *lpsz*.
 
@@ -2393,7 +2394,7 @@ Détermine la partie du rectangle englobant (du sous-élément d’affichage de 
 *ref*<br/>
 Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient les coordonnées du rectangle englobant du sous-élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -2409,7 +2410,7 @@ Récupère la couleur d’arrière-plan du texte d’un contrôle List View.
 COLORREF GetTextBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur 32 bits utilisée pour spécifier une couleur RVB.
 
@@ -2425,7 +2426,7 @@ Récupère la couleur de texte d’un contrôle List View.
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur 32 bits utilisée pour spécifier une couleur RVB.
 
@@ -2446,7 +2447,7 @@ BOOL GetTileInfo(PLVTILEINFO plvti) const;
 *plvti*<br/>
 Pointeur vers une structure [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo) qui reçoit les informations de la vignette.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -2467,7 +2468,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 *ptvi*<br/>
 Pointeur vers une structure [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo) qui reçoit les informations récupérées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -2483,7 +2484,7 @@ Récupère le contrôle ToolTip utilisé par le contrôle d’affichage de liste
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](ctooltipctrl-class.md) à utiliser par le contrôle de liste. Si la fonction membre [Create](#create) utilise le style LVS_NOTOOLTIPS, aucune info-bulle n’est utilisée et la valeur null est retournée.
 
@@ -2510,7 +2511,7 @@ Récupère l’index de l’élément le plus visible en mode liste ou rapport.
 int GetTopIndex() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément le plus visible.
 
@@ -2539,7 +2540,7 @@ Obtient la vue du contrôle List View.
 DWORD GetView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Affichage actuel du contrôle List View.
 
@@ -2560,7 +2561,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 *lpRect*<br/>
 Adresse d’une structure [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -2607,7 +2608,7 @@ BOOL HasGroup(int iGroupId) const;
 *iGroupId*<br/>
 Identificateur du groupe demandé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -2638,7 +2639,7 @@ Point à tester.
 *pFlags*<br/>
 Pointeur vers un entier qui reçoit des informations sur les résultats du test. Consultez l’explication du `flags` membre de la structure [LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément à la position spécifiée par *pHitTestInfo*, le cas échéant, ou-1 dans le cas contraire.
 
@@ -2707,7 +2708,7 @@ Largeur de la colonne, en pixels. Si ce paramètre a la valeur-1, la largeur de 
 *nSubItem*<br/>
 Index du sous-élément associé à la colonne. Si ce paramètre est défini sur-1, aucun sous-élément n’est associé à la colonne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de la nouvelle colonne en cas de réussite ou-1 dans le cas contraire.
 
@@ -2735,7 +2736,7 @@ Index de l’élément dans lequel le groupe doit être inséré.
 *pgrp*<br/>
 Pointeur vers une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) contenant le groupe à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’index de l’élément auquel le groupe a été ajouté, ou-1 si l’opération a échoué.
 
@@ -2756,7 +2757,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 *pStructInsert*<br/>
 Pointeur vers une structure [LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns-commctrl-lvinsertgroupsorted) qui contient le groupe à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -2816,7 +2817,7 @@ Indique les bits du membre d’État qui seront récupérés ou modifiés. Pour 
 *lParam*<br/>
 Valeur spécifique à l’application 32 bits associée à l’élément. Si ce paramètre est spécifié, vous devez définir l’attribut *nMask* LVIF_PARAM.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du nouvel élément en cas de réussite ou-1 dans le cas contraire.
 
@@ -2866,7 +2867,7 @@ Pointeur vers une structure de [points](/windows/win32/api/windef/ns-windef-poin
 *plvim*<br/>
 Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) qui spécifie le point d’insertion le plus proche des coordonnées définies par le paramètre point.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Point d’insertion le plus proche du point spécifié.
 
@@ -2882,7 +2883,7 @@ Détermine si la vue de groupe est activée pour un contrôle List View.
 BOOL IsGroupViewEnabled() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si la vue de groupe est activée, ou FALSe dans le cas contraire.
 
@@ -2900,10 +2901,10 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*évaluer*\
+*index*\
 dans Index de base zéro d’un élément dans le contrôle List-View actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’élément spécifié est visible ; Sinon, FALSe.
 
@@ -2924,7 +2925,7 @@ UINT MapIDToIndex(UINT id) const;
 *identifi*\
 dans ID unique d’un élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index actuel de l’ID spécifié.
 
@@ -2946,10 +2947,10 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*évaluer*\
+*index*\
 dans Index de base zéro d’un élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ID unique de l’élément spécifié.
 
@@ -3019,7 +3020,7 @@ Identificateur du groupe à déplacer.
 *toIndex*<br/>
 Index de base zéro où le groupe doit être déplacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -3070,7 +3071,7 @@ Index du premier élément à repeindre.
 *Ndernier*<br/>
 Index du dernier élément à repeindre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3103,7 +3104,7 @@ LRESULT RemoveGroup(int iGroupId);
 *iGroupId*<br/>
 Identificateur du groupe à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’index du groupe en cas de réussite, ou-1 dans le cas contraire.
 
@@ -3124,7 +3125,7 @@ BOOL Scroll(CSize size);
 *size*<br/>
 `CSize`Objet spécifiant la quantité de défilement horizontal et vertical, en pixels. Le `y` membre de *Size* est divisé par la hauteur, en pixels, de la ligne du contrôle d’affichage de liste, et le contrôle est défilé par le nombre de lignes résultant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3138,10 +3139,10 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Couleur d’arrière-plan à définir, ou valeur de CLR_NONE pour aucune couleur d’arrière-plan. Les contrôles d’affichage de liste avec des couleurs d’arrière-plan se redessinent beaucoup plus rapidement que ceux sans couleurs d’arrière-plan. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3194,7 +3195,7 @@ Offset, en pixels, du bord gauche de l’image, à partir de l’origine du cont
 *yOffsetPercent*<br/>
 Offset, en pixels, du bord supérieur de l’image, à partir de l’origine du contrôle List View.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur différente de zéro en cas de réussite, ou zéro dans le cas contraire.
 
@@ -3220,7 +3221,7 @@ BOOL SetCallbackMask(UINT nMask);
 *nMask*<br/>
 Nouvelle valeur du masque de rappel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3252,7 +3253,7 @@ Index de base zéro d’un élément de contrôle de liste.
 *Consultez*<br/>
 Spécifie si l’image d’état de l’élément doit être visible ou non. Par défaut, *consultez* a la valeur true et l’image d’État est visible. Si *consultez* a la valeur false, il n’est pas visible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’élément est activé ; sinon, 0.
 
@@ -3291,7 +3292,7 @@ Index de la colonne dont les attributs doivent être définis.
 *pColumn*<br/>
 Adresse d’une structure [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) qui contient les nouveaux attributs de colonne, comme décrit dans la SDK Windows. Le membre de la structure `mask` spécifie les attributs de colonne à définir. Si le `mask` membre spécifie la valeur LVCF_TEXT, le membre de la structure `pszText` est l’adresse d’une chaîne terminée par le caractère null et le membre de la structure `cchTextMax` est ignoré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3317,7 +3318,7 @@ Pointeur vers une mémoire tampon qui contient les valeurs d’index des colonne
 *iCount*<br/>
 Nombre de colonnes dans le contrôle List View.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3347,7 +3348,7 @@ Index de la colonne pour laquelle la largeur doit être définie. En mode liste,
 *adéquat*<br/>
 Nouvelle largeur de la colonne. Il peut s’agir de LVSCW_AUTOSIZE ou LVSCW_AUTOSIZE_USEHEADER, comme décrit dans [LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth) de la SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3364,7 +3365,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 *dwNewStyle*<br/>
 Combinaison de styles étendus à utiliser par le contrôle List View. Pour obtenir une liste descriptive de ces styles, consultez la rubrique [Extended List View styles](/windows/win32/Controls/extended-list-view-styles) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Combinaison des styles étendus précédents utilisée par le contrôle List View.
 
@@ -3398,7 +3399,7 @@ Identificateur du groupe dont les informations sont définies.
 *pgrp*<br/>
 Pointeur vers une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) qui contient les informations à définir. L’appelant est chargé d’allouer cette structure et de définir ses membres.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ID du groupe si la méthode réussit ; Sinon,-1.
 
@@ -3436,7 +3437,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 *hc*<br/>
 Handle d’une ressource de curseur, utilisé pour représenter le curseur actif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers la ressource de curseur actif précédente utilisée par le contrôle List View.
 
@@ -3463,7 +3464,7 @@ int SetHotItem(int iIndex);
 *iIndex*<br/>
 Index de base zéro de l’élément à définir comme élément réactif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de l’élément actif précédemment.
 
@@ -3488,7 +3489,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 *dwHoverTime*<br/>
 Nouveau délai, en millisecondes, pendant lequel le curseur de la souris doit pointer sur un élément avant d’être sélectionné. Si la valeur par défaut est passée, l’heure est définie sur la durée de pointage par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Durée de pointage précédente, en millisecondes.
 
@@ -3523,7 +3524,7 @@ Distance (en pixels) entre les icônes sur l’axe des y.
 *size*<br/>
 `CSize`Objet spécifiant la distance (en pixels) entre les icônes sur les axes x et y.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) contenant les valeurs précédentes pour l’espacement des icônes.
 
@@ -3562,7 +3563,7 @@ Type de liste d’images. Il peut s'agir d'une des valeurs suivantes :
 
 - LVSIL_STATE liste d’images avec des images d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images précédente.
 
@@ -3583,7 +3584,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 *plvInfoTip*<br/>
 Pointeur vers une structure [LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip) contenant les informations à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -3604,7 +3605,7 @@ BOOL SetInsertMark(LPLVINSERTMARK plvim);
 *plvim*<br/>
 Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) spécifiant où définir le point d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, ou FALSe dans le cas contraire. La valeur FALSe est retournée si la taille du `cbSize` membre de la `LVINSERTMARK` structure n’est pas égale à la taille réelle de la structure, ou lorsqu’un point d’insertion ne s’applique pas à la vue actuelle.
 
@@ -3625,7 +3626,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 *color*<br/>
 Structure [COLORREF](/windows/win32/gdi/colorref) spécifiant la couleur pour définir le point d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une `COLORREF` structure contenant la couleur précédente.
 
@@ -3694,7 +3695,7 @@ Valeur spécifique à l’application 32 bits à associer à l’élément.
 *nIndent*<br/>
 Largeur, en pixels, de la mise en retrait. Si *nIndent* est inférieur à la largeur minimale définie par le système, la nouvelle largeur est définie sur la valeur minimale définie par le système
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3766,11 +3767,11 @@ Nombre d’éléments que le contrôle contiendra finalement.
 *dwFlags*<br/>
 Spécifie le comportement du contrôle List View après la réinitialisation du nombre d’éléments. Cette valeur peut être une combinaison des éléments suivants :
 
-- LVSICF_NOINVALIDATEALL le contrôle List View ne redessine pas à moins que les éléments affectés soient actuellement en vue. Valeur par défaut.
+- LVSICF_NOINVALIDATEALL le contrôle List View ne redessine pas à moins que les éléments affectés soient actuellement en vue. Il s’agit de la valeur par défaut.
 
 - LVSICF_NOSCROLL le contrôle List View ne modifie pas la position de défilement lorsque le nombre d’éléments change.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3813,7 +3814,7 @@ Index de l’élément de liste dont les données doivent être définies.
 *dwData*<br/>
 Valeur 32 bits à associer à l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -3853,7 +3854,7 @@ dans État pour définir l’élément, qui est une combinaison d’opérations 
 *dwMask*\
 dans Masque des bits valides de l’état spécifié par le paramètre *dwState* . Spécifiez une combinaison au niveau du bit (ou) des [États des éléments d’affichage de liste](/windows/win32/Controls/list-view-item-states).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -3883,7 +3884,7 @@ Index de l’élément dont la position doit être définie.
 *pt*<br/>
 Structure de [points](/windows/win32/api/windef/ns-windef-point) spécifiant la nouvelle position, en coordonnées de vue, du coin supérieur gauche de l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3926,7 +3927,7 @@ Nouvelles valeurs pour les bits d’État. Pour obtenir la liste des valeurs pos
 *nMask*<br/>
 Masque spécifiant les bits d’État à modifier. Cette valeur correspond au membre stateMask de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3960,7 +3961,7 @@ Index du sous-élément, ou zéro pour définir l’étiquette de l’élément.
 *lpszText*<br/>
 Pointeur vers une chaîne qui contient le nouveau texte de l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -3985,7 +3986,7 @@ COLORREF SetOutlineColor(COLORREF color);
 *color*<br/>
 Nouvelle structure [COLORREF](/windows/win32/gdi/colorref) contenant la couleur de contour.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Structure précédente `COLORREF` contenant la couleur de contour
 
@@ -4006,7 +4007,7 @@ LRESULT SetSelectedColumn(int iCol);
 *iCol*<br/>
 Index de la colonne à sélectionner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -4027,7 +4028,7 @@ int SetSelectionMark(int iIndex);
 *iIndex*<br/>
 Index de base zéro du premier élément d’une sélection multiple.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La marque de sélection précédente, ou-1 s’il n’y avait aucune marque de sélection.
 
@@ -4049,10 +4050,10 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 COLORREF spécifiant la nouvelle couleur d’arrière-plan du texte. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -4075,10 +4076,10 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 COLORREF spécifiant la nouvelle couleur de texte. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -4105,7 +4106,7 @@ BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 *pTileInfo*<br/>
 Pointeur vers une structure [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo) contenant les informations à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -4126,7 +4127,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 *ptvi*<br/>
 Pointeur vers une structure [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo) contenant les informations à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -4147,7 +4148,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 *pWndTip*<br/>
 Pointeur vers un `CToolTipCtrl` objet qui sera utilisé par le contrôle de liste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](ctooltipctrl-class.md) contenant l’info-bulle précédemment utilisée par le contrôle, ou null si aucune info-bulle n’a été précédemment utilisée.
 
@@ -4170,7 +4171,7 @@ DWORD SetView(int iView);
 *iView*<br/>
 Vue à sélectionner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne 1 en cas de réussite, ou-1 dans le cas contraire. Par exemple,-1 est retourné si la vue n’est pas valide.
 
@@ -4225,7 +4226,7 @@ Pointeur vers la fonction de comparaison de groupes.
 *_plv*<br/>
 Pointeur void.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -4253,7 +4254,7 @@ L’opération de tri appelle la fonction de comparaison chaque fois que l’ord
 *dwData*<br/>
 dans Valeur définie par l’application qui est passée à la fonction de comparaison.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
@@ -4315,7 +4316,7 @@ dans Adresse de la fonction de comparaison définie par l’application. L’op�
 *dwData*\
 dans Valeur définie par l’application passée à la fonction de comparaison.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -4397,7 +4398,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 *pInfo*<br/>
 Pointeur vers la structure [LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base un de l’élément, ou sous-élément, testé (le cas échéant), ou-1 dans le cas contraire.
 
@@ -4438,7 +4439,7 @@ BOOL Update(int nItem);
 *nItem*<br/>
 Index de l’élément à mettre à jour.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
