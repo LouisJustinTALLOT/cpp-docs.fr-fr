@@ -138,6 +138,8 @@
           href: ../c-language/name-spaces.md
     - name: Déclarations et types
       items:
+        - name: Alignement (C11)
+          href: ../c-language/alignment-c.md
         - name: Déclarations et types
           href: ../c-language/declarations-and-types.md
         - name: Vue d’ensemble des déclarations
