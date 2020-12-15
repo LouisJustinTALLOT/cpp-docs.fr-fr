@@ -5,18 +5,18 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520951"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514562"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
 Cet article contient une liste par catégorie d'options du compilateur. Pour obtenir une liste alphabétique, consultez [Options du compilateur classées par ordre alphabétique](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>Optimisation
+## <a name="optimization"></a>Optimization
 
 | Option | Objectif |
 |--|--|
@@ -110,7 +110,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/u`](u-u-undefine-symbols.md) | Supprime toutes les macros prédéfinies. |
 | [`/X`](x-ignore-standard-include-paths.md) | Ignore le répertoire Include standard. |
 
-## <a name="language"></a>Langage
+## <a name="language"></a>Language
 
 | Option | Objectif |
 |--|--|
@@ -209,7 +209,7 @@ Les options expérimentales ne peuvent être prises en charge que par certaines 
 | Option | Objectif |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | Active la prise en charge des modules expérimentaux. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Active la prise en charge de préprocesseur conforme aux expérimentations. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Action déconseillée. Active la prise en charge de préprocesseur conforme aux expérimentations. Faites [`/Zc:preprocessor`](zc-preprocessor.md) |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Options du compilateur déconseillées et supprimées
 

@@ -2,7 +2,7 @@
 title: Macros prédéfinies
 description: Répertorie et décrit les macros de préprocesseur prédéfinies du compilateur Microsoft C++.
 ms.custom: update_every_version
-ms.date: 09/11/2020
+ms.date: 12/14/2020
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: b5e2b34357456c4937d8ed17dee5661d36b7b0c0
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: e4577f7b74c6057df8ebe795ffa0056dbdeae298
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448460"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514532"
 ---
 # <a name="predefined-macros"></a>Macros prédéfinies
 
@@ -279,7 +279,7 @@ Le compilateur prend en charge ces macros prédéfinies spécifiées par les nor
 
 - `__STDC__` Défini comme 1 uniquement lorsqu’il est compilé en tant que C et si l' [`/Za`](../build/reference/za-ze-disable-language-extensions.md) option de compilateur est spécifiée. Sinon, non défini.
 
-- `__STDC_HOSTED__` Défini comme 1 si l’implémentation est une *implémentation hébergée* , qui prend en charge l’intégralité de la bibliothèque standard requise. Dans le cas contraire, défini sur 0.
+- `__STDC_HOSTED__` Défini comme 1 si l’implémentation est une *implémentation hébergée*, qui prend en charge l’intégralité de la bibliothèque standard requise. Dans le cas contraire, défini sur 0.
 
 - `__STDC_NO_ATOMICS__` Défini comme 1 si l’implémentation ne prend pas en charge les atomices standard facultatives. L’implémentation MSVC la définit comme 1 quand elle est compilée en C et que l’une des [`/std`](../build/reference/std-specify-language-standard-version.md) options C11 ou C17 est spécifiée.
 
@@ -293,7 +293,7 @@ Le compilateur prend en charge ces macros prédéfinies spécifiées par les nor
 
 - `__STDCPP_THREADS__` Défini comme 1 si et seulement si un programme peut avoir plusieurs threads d’exécution et compilé en C++. Sinon, non défini.
 
-- `__TIME__` Heure de la traduction de l’unité de traduction prétraitée. L’heure est un littéral de chaîne de caractères au format *hh : mm : SS* , le même que le temps retourné par la fonction CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) . Cette macro est toujours définie.
+- `__TIME__` Heure de la traduction de l’unité de traduction prétraitée. L’heure est un littéral de chaîne de caractères au format *hh : mm : SS*, le même que le temps retourné par la fonction CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) . Cette macro est toujours définie.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Macros prédéfinies spécifiques à Microsoft
 
@@ -525,7 +525,9 @@ MSVC prend en charge ces macros prédéfinies supplémentaires.
 
 - `__MSVC_RUNTIME_CHECKS` Défini comme 1 lorsque l’une des [`/RTC`](../build/reference/rtc-run-time-error-checks.md) Options du compilateur est définie. Sinon, non défini.
 
-- `_MSVC_TRADITIONAL` Défini comme 0 lorsque l’option de compilateur du mode de conformité du préprocesseur [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) est définie. Défini comme 1 par défaut, ou lorsque l' [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md) option de compilateur est définie, pour indiquer que le préprocesseur traditionnel est en cours d’utilisation. L' `_MSVC_TRADITIONAL` option de compilateur macro et [ **`/experimental:preprocessor`** (activer le mode de conformité de préprocesseur)](../build/reference/experimental-preprocessor.md) est disponible à partir de Visual Studio 2017 version 15,8.
+- `_MSVC_TRADITIONAL`:
+    - Disponible à partir de Visual Studio 2017 version 15,8 : défini sur 0 lorsque l’option de compilateur de conformité du préprocesseur [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) est définie. Défini comme 1 par défaut, ou lorsque l' [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md) option de compilateur est définie, pour indiquer que le préprocesseur traditionnel est en cours d’utilisation.
+    - Disponible à partir de Visual Studio 2019 version 16,5 : défini sur 0 lorsque l’option de compilateur de conformité du préprocesseur [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) est définie. Défini comme 1 par défaut, ou lorsque l' `/Zc:preprocessor-` option de compilateur est définie, pour indiquer que le préprocesseur traditionnel est en cours d’utilisation (en d’autres cas, `/Zc:preprocessor` remplace le déconseillé `/experimental:preprocessor` ).
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL

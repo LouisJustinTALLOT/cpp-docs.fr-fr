@@ -4,12 +4,12 @@ description: Liste de références dans l’ordre alphabétique des options de l
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520860"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514553"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Options du compilateur classées par ordre alphabétique
 
@@ -40,7 +40,7 @@ Ce tableau contient une liste alphabétique des options du compilateur. Pour obt
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | Définir le jeu de caractères d’exécution. |
 | [`/experimental:module`](experimental-module.md) | Active la prise en charge des modules expérimentaux. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Active la prise en charge de préprocesseur conforme aux expérimentations. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Action déconseillée. Active la prise en charge de préprocesseur conforme aux expérimentations. Faites [`/Zc:preprocessor`](zc-preprocessor.md) |
 | [`/F`](f-set-stack-size.md) | Définit la taille de la pile. |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | Produit du code optimisé pour une architecture x64 spécifique. Ou, pour les micro-architectures spécifiques dans les architectures AMD64 et EM64T. |
 | [`/FA`](fa-fa-listing-file.md) | Crée un fichier listing. |
@@ -119,7 +119,7 @@ Ce tableau contient une liste alphabétique des options du compilateur. Pour obt
 | [`/Qspectre`](qspectre.md) | Spécifie la génération par le compilateur d’instructions pour atténuer certaines failles de sécurité Spectre Variant 1. |
 | [`/Qspectre-load`](qspectre-load.md) | Spécifie la génération par le compilateur des instructions de sérialisation pour atténuer les vulnérabilités de sécurité spectre en fonction des instructions de chargement. |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | Spécifie la génération par le compilateur des instructions de sérialisation pour atténuer les vulnérabilités de sécurité spectre en fonction des instructions de workflow de contrôle qui chargent la mémoire. |
-| [`/Qvec-report`(Niveau de rapport de vectoriseur automatique)](qvec-report-auto-vectorizer-reporting-level.md) | Active les niveaux de création de rapports pour le vectorisation automatique. |
+| [`/Qvec-report` (Niveau de rapport de vectoriseur automatique)](qvec-report-auto-vectorizer-reporting-level.md) | Active les niveaux de création de rapports pour le vectorisation automatique. |
 | [`/RTC`](rtc-run-time-error-checks.md) | Active les vérifications des erreurs au moment de l'exécution. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Active des fonctionnalités de sécurité et ses avertissements supplémentaires. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Affiche une liste des fichiers Include pendant la compilation. |

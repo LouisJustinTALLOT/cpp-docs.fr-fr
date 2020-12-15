@@ -1,20 +1,19 @@
 ---
 description: 'En savoir plus sur : options du compilateur'
 title: Options du compilateur MSVC
-ms.date: 05/06/2019
+ms.date: 12/14/2020
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
 - ARM MSVC compiler
 - compiler options, C++
 - x64 MSVC compiler
-ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f89695b00be4ed67a00f947c6b76943bfa5eaf59
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197021"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514576"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
@@ -25,7 +24,7 @@ cl.exe est un outil qui contrôle les compilateurs et l’éditeur de liens Micr
 
 Les compilateurs produisent des fichiers objets COFF (Common Object File Format) (. obj). L’éditeur de liens produit des fichiers exécutables (. exe) ou des bibliothèques de liens dynamiques (dll).
 
-Notez que toutes les options du compilateur respectent la casse. Vous pouvez utiliser une barre oblique ( `/` ) ou un tiret ( `-` ) pour spécifier une option de compilateur.
+Toutes les options du compilateur respectent la casse. Vous pouvez utiliser une barre oblique ( `/` ) ou un tiret ( `-` ) pour spécifier une option de compilateur.
 
 Pour compiler sans liaison, utilisez l’option [/c](c-compile-without-linking.md) .
 
