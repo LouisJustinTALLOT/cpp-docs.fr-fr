@@ -1,7 +1,7 @@
 ---
 title: '`main` fonction et arguments de ligne de commande (C++)'
 description: La `main` fonction est le point d’entrée d’un programme C++.
-ms.date: 11/19/2020
+ms.date: 12/16/2020
 no-loc:
 - main
 - wmain
@@ -18,16 +18,16 @@ no-loc:
 - char
 - wchar_t
 - extern
-ms.openlocfilehash: 8a5ed43bdacf5d9d6dd2cbc5d1c56783c82b8e9a
-ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
+ms.openlocfilehash: a9c68f199d4169c02260542a9730472e4ab397bd
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95483215"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645070"
 ---
 # <a name="no-locmain-function-and-command-line-arguments"></a>`main` arguments de ligne de commande et de fonction
 
-Tous les programmes C++ doivent avoir une `main` fonction. Si vous essayez de compiler un programme C++ sans `main` fonction, le compilateur génère une erreur. (Les bibliothèques de liens dynamiques et les static bibliothèques n’ont pas de `main` fonction.) La `main` fonction est l’emplacement où votre code source commence à s’exécuter, mais avant qu’un programme n’entre dans la `main` fonction, tous les static membres de classe sans initialiseurs explicites sont définis à zéro. Dans Microsoft C++, static les objets globaux sont également initialisés avant l’entrée dans `main` . Plusieurs restrictions s’appliquent à la `main` fonction qui ne s’applique pas à d’autres fonctions C++. La `main` fonction :
+Tous les programmes C++ doivent avoir une `main` fonction. Si vous essayez de compiler un programme C++ sans `main` fonction, le compilateur génère une erreur. (Les bibliothèques de liens dynamiques et les static bibliothèques n’ont pas de `main` fonction.) La `main` fonction est l’emplacement où votre code source commence à s’exécuter, mais avant qu’un programme n’entre dans la `main` fonction, tous les static membres de classe sans initialiseurs explicites sont définis à zéro. Dans Microsoft C++, static les objets globaux sont également initialisés avant l’entrée dans `main` . Plusieurs restrictions s’appliquent à la `main` fonction qui ne s’applique pas à d’autres fonctions C++. La fonction `main` :
 
 - Ne peut pas être surchargé (consultez [surcharge de fonction](./function-overloading.md)).
 - Ne peut pas être déclaré comme **`inline`** .
@@ -109,19 +109,21 @@ L’exemple suivant montre comment utiliser les *`argc`* arguments, *`argv`* et 
 #include <string.h>
 
 using namespace std;
-int main( int argc, char *argv[], char *envp[] ) {
-    int iNumberLines = 0;    // Default is no line numbers.
+int main( int argc, char *argv[], char *envp[] )
+{
+    bool numberLines = false;    // Default is no line numbers.
 
     // If /n is passed to the .exe, display numbered listing
     // of environment variables.
-
     if ( (argc == 2) && _stricmp( argv[1], "/n" ) == 0 )
-         iNumberLines = 1;
+         numberLines = true;
 
     // Walk through list of strings until a NULL is encountered.
-    for( int i = 0; envp[i] != NULL; ++i ) {
-        if( iNumberLines )
-            cout << i << ": " << envp[i] << "\n";
+    for ( int i = 0; envp[i] != NULL; ++i )
+    {
+        if ( numberLines )
+            cout << i << ": "; // Prefix with numbers if /n specified
+        cout << envp[i] << "\n";
     }
 }
 ```

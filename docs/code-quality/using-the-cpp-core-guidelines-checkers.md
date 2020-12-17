@@ -1,16 +1,16 @@
 ---
 title: Utilisation des vérificateurs C++ Core Guidelines
 description: Comment configurer et utiliser les règles d’analyse du code Microsoft C++ pour C++ Core Guidelines.
-ms.date: 07/27/2020
+ms.date: 12/16/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
-ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
+ms.openlocfilehash: 93b69839bc9e5ffd45a08da12e84028eea10aef4
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334141"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645161"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Utiliser les vérificateurs de C++ Core Guidelines
 
@@ -116,43 +116,43 @@ Les C++ Core Guidelines sont là pour vous aider à écrire du code plus sécuri
 
 À mesure que de nouvelles règles sont ajoutées à l’outil de vérification de C++ Core Guidelines, le nombre d’avertissements produits pour le code préexistant peut augmenter. Vous pouvez utiliser des ensembles de règles prédéfinis pour filtrer les genres de règles à activer. Vous trouverez des Articles de référence pour la plupart des règles sous [Visual Studio C++ Core Check référence](code-analysis-for-cpp-corecheck.md).
 
-- **Règles arithmétiques** : règles de détection des [dépassements](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)arithmétiques, [des opérations non](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)signées et des [manipulations de bits](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
+- **Règles arithmétiques**: règles de détection des [dépassements](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)arithmétiques, [des opérations non](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)signées et des [manipulations de bits](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
 
-- **Règles de limites** : appliquez le [profil de limites de l’C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
+- **Règles de limites**: appliquez le [profil de limites de l’C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
 
-- **Règles de classe** : quelques règles qui se concentrent sur l’utilisation correcte des fonctions membres spéciales et des spécifications virtuelles. Il s’agit d’un sous-ensemble des vérifications recommandées pour les [classes et les hiérarchies](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)de classes. <sup>15,5</sup>
+- **Règles de classe**: quelques règles qui se concentrent sur l’utilisation correcte des fonctions membres spéciales et des spécifications virtuelles. Il s’agit d’un sous-ensemble des vérifications recommandées pour les [classes et les hiérarchies](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)de classes. <sup>15,5</sup>
 
-- **Règles de concurrence** : une seule règle, qui intercepte les déclarations d’objet de protection incorrectes. Pour plus d’informations, consultez [instructions relatives à l’accès concurrentiel](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
+- **Règles de concurrence**: une seule règle, qui intercepte les déclarations d’objet de protection incorrectes. Pour plus d’informations, consultez [instructions relatives à l’accès concurrentiel](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
 
-- **Règles const** : appliquez [les vérifications liées à const à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
+- **Règles const**: appliquez [les vérifications liées à const à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
 
-- **Règles de déclaration** : deux règles des instructions des [interfaces](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) qui se concentrent sur la façon dont les variables globales sont déclarées. <sup>15,5</sup>
+- **Règles de déclaration**: deux règles des instructions des [interfaces](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) qui se concentrent sur la façon dont les variables globales sont déclarées. <sup>15,5</sup>
 
-- **Règles d’énumération** : ces règles appliquent [des vérifications relatives aux énumérations à partir du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
+- **Règles d’énumération**: ces règles appliquent [des vérifications relatives aux énumérations à partir du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
 - **Règles expérimentales** Il s’agit de règles de C++ Core Check expérimentales qui sont utiles, mais qui ne sont pas prêtes pour une utilisation quotidienne. Essayez-les et [fournissez vos commentaires](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
-- **Règles de fonction** : deux contrôles qui facilitent l’adoption du **`noexcept`** spécificateur. Elles font partie des instructions relatives à la conception et à l’implémentation de la [fonction Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
+- **Règles de fonction**: deux contrôles qui facilitent l’adoption du **`noexcept`** spécificateur. Elles font partie des instructions relatives à la conception et à l’implémentation de la [fonction Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
-- **Règles GSL** : ces règles appliquent les vérifications liées à la [bibliothèque de prise en charge des instructions à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
+- **Règles GSL**: ces règles appliquent les vérifications liées à la [bibliothèque de prise en charge des instructions à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
 
-- **Règles de durée de vie** : ces règles appliquent le [profil de durée de vie du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
+- **Règles de durée de vie**: ces règles appliquent le [profil de durée de vie du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
 
-- **Règles du pointeur propriétaire** : applique [les vérifications de gestion des ressources liées au propriétaire \<T> à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup> 15,3</sup>
+- **Règles du pointeur propriétaire**: applique [les vérifications de gestion des ressources liées au propriétaire \<T> à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).<sup> 15,3</sup>
 
-- **Règles de pointeur brut** : appliquez [les vérifications de gestion des ressources liées aux pointeurs bruts à partir du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Règles de pointeur brut**: appliquez [les vérifications de gestion des ressources liées aux pointeurs bruts à partir du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Règles de pointeur partagé** : elles font partie de l’application des instructions de [gestion des ressources](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> nous avons ajouté quelques règles spécifiques à la façon dont les pointeurs partagés sont passés dans des fonctions ou utilisés localement.
+- **Règles de pointeur partagé**: elles font partie de l’application des instructions de [gestion des ressources](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> nous avons ajouté quelques règles spécifiques à la façon dont les pointeurs partagés sont passés dans des fonctions ou utilisés localement.
 
-- **Règles STL** : ces règles appliquent les vérifications liées à la [bibliothèque standard C++ (STL) à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
+- **Règles STL**: ces règles appliquent les vérifications liées à la [bibliothèque standard C++ (STL) à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
 
-- **Règles de style** : un contrôle simple mais important, qui interdit l’utilisation de [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> il s’agit de la première étape pour améliorer votre style de codage et l’utilisation des expressions et des instructions en C++.
+- **Règles de style**: un contrôle simple mais important, qui interdit l’utilisation de [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> il s’agit de la première étape pour améliorer votre style de codage et l’utilisation des expressions et des instructions en C++.
 
-- **Règles de type** : appliquez le [profil de type du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
+- **Règles de type**: appliquez le [profil de type du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
 
-- **Règles de pointeur uniques** : appliquez [les vérifications de gestion des ressources liées aux types avec une sémantique de pointeur unique à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Règles de pointeur uniques**: appliquez [les vérifications de gestion des ressources liées aux types avec une sémantique de pointeur unique à partir de la C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Règles de C++ Core Check** : cet ensemble de règles contient toutes les vérifications actuellement implémentées du [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), à l’exception des règles expérimentales.
+- **Règles de C++ Core Check**: cet ensemble de règles contient toutes les vérifications actuellement implémentées du [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), à l’exception des règles expérimentales.
 
 <sup>15,3</sup> ces règles sont d’abord apparues dans Visual Studio 2017 version 15,3 \
 <sup>15,5</sup> ces règles sont d’abord apparues dans Visual Studio 2017 version 15,5 \
@@ -165,7 +165,7 @@ Vous pouvez choisir de limiter les avertissements à un seul ou à quelques grou
 
 ::: moniker range="<=msvc-150"
 
-Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** général de l'  >  **analyse du code**  >  **General** . Ensuite, ouvrez la liste déroulante de la zone de liste déroulante **ensembles de règles** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles**. La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** général de l'  >  **analyse du code**  >   . Ensuite, ouvrez la liste déroulante de la zone de liste déroulante **ensembles de règles** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles**. La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
@@ -226,11 +226,11 @@ Au lieu de #pragmas, vous pouvez utiliser les options de ligne de commande dans 
 
 1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le fichier et choisissez **Propriétés**.
 
-1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Dans la zone d’édition **options supplémentaires** , ajoutez *`/wd26400`* .
 
-Vous pouvez utiliser l’option de ligne de commande pour désactiver temporairement l’ensemble de l’analyse du code pour un fichier en spécifiant **`/analyze-`** . Vous verrez un avertissement *D9025 remplaçant'/Analyze’par'/Analyze-'* , ce qui vous rappelle de réactiver l’analyse du code ultérieurement.
+Vous pouvez utiliser l’option de ligne de commande pour désactiver temporairement l’ensemble de l’analyse du code pour un fichier en spécifiant **`/analyze-`** . Vous verrez un avertissement *D9025 remplaçant'/Analyze’par'/Analyze-'*, ce qui vous rappelle de réactiver l’analyse du code ultérieurement.
 
 ## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a> Activer le vérificateur de C++ Core Guidelines sur des fichiers de projet spécifiques
 
@@ -246,9 +246,9 @@ Il est parfois utile d’effectuer une analyse du code ciblé tout en continuant
 
 1. Accédez au fichier que vous souhaitez analyser à l’aide de l’outil de vérification des C++ Core Guidelines et ouvrez ses propriétés.
 
-1. Choisir les **Propriétés de configuration**  >  ligne de commande **C/C++**  >  **Command Line**  >  **options supplémentaires** et ajouter *`/analyze:plugin EspXEngine.dll`*
+1. Choisir les **Propriétés de configuration**  >  ligne de commande **C/C++**  >    >  **options supplémentaires** et ajouter *`/analyze:plugin EspXEngine.dll`*
 
-1. Désactivez l’utilisation de l’en-tête précompilé ( **Propriétés de configuration**  >  **C/C++**  >  **en-têtes précompilés** C/C++). C’est nécessaire, car le moteur d’extensions peut tenter de lire ses informations internes à partir de l’en-tête précompilé (PCH). Si le PCH a été compilé avec les options de projet par défaut, il ne sera pas compatible.
+1. Désactivez l’utilisation de l’en-tête précompilé (**Propriétés de configuration**  >    >  **en-têtes précompilés** C/C++). C’est nécessaire, car le moteur d’extensions peut tenter de lire ses informations internes à partir de l’en-tête précompilé (PCH). Si le PCH a été compilé avec les options de projet par défaut, il ne sera pas compatible.
 
 1. Regénérez le projet. Les vérifications prérapides courantes doivent s’exécuter sur tous les fichiers. Étant donné que l’outil de vérification de C++ Core Guidelines n’est pas activé par défaut, il ne doit s’exécuter que sur le fichier configuré pour l’utiliser.
 
@@ -308,7 +308,7 @@ L’analyse du code requiert quelques variables d’environnement et des options
 
 ## <a name="use-the-guideline-support-library"></a>Utiliser la bibliothèque de prise en charge des instructions
 
-La bibliothèque de prise en charge des instructions (GSL) est conçue pour vous aider à suivre les instructions principales. Le portail GSL comprend des définitions qui vous permettent de remplacer des constructions sujettes aux erreurs par des alternatives plus sûres. Par exemple, vous pouvez remplacer une `T*, length` paire de paramètres par le `span<T>` type. Le portail GSL est disponible à l’adresse [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl) . La bibliothèque étant Open source, vous pouvez afficher les sources, créer des commentaires ou contribuer. Le projet se trouve à l’adresse [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) .
+La bibliothèque de prise en charge des instructions (GSL) est conçue pour vous aider à suivre les instructions principales. Le portail GSL comprend des définitions qui vous permettent de remplacer des constructions sujettes aux erreurs par des alternatives plus sûres. Par exemple, vous pouvez remplacer une `T*, length` paire de paramètres par le `span<T>` type. Le projet GSL est disponible sur GitHub à l’adresse [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) . La bibliothèque étant Open source, vous pouvez afficher les sources, créer des commentaires ou contribuer. Vous pouvez également utiliser le gestionnaire de package [vcpkg](../build/vcpkg.md) pour télécharger et installer la bibliothèque localement.
 
 ::: moniker range="msvc-140"
 
@@ -322,7 +322,7 @@ En raison de la façon dont les règles d’analyse du code sont chargées dans 
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Pour ajouter le package Microsoft. CppCoreCheck à votre projet dans Visual Studio 2015
 
-1. Dans **Explorateur de solutions** , cliquez avec le bouton droit pour ouvrir le menu contextuel de votre projet dans la solution à laquelle vous souhaitez ajouter le package. Sélectionnez **gérer les packages NuGet** pour ouvrir le **Gestionnaire de package NuGet**.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit pour ouvrir le menu contextuel de votre projet dans la solution à laquelle vous souhaitez ajouter le package. Sélectionnez **gérer les packages NuGet** pour ouvrir le **Gestionnaire de package NuGet**.
 
 1. Dans la fenêtre **Gestionnaire de package NuGet** , recherchez Microsoft. CppCoreCheck.
 

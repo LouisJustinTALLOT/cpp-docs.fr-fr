@@ -1,15 +1,15 @@
 ---
 title: Configurer des sessions de débogage CMake dans Visual Studio
 description: Décrit comment utiliser Visual Studio pour configurer les paramètres du débogueur CMake.
-ms.date: 12/07/2020
+ms.date: 12/16/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
-ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
+ms.openlocfilehash: 36a4d64b987c1468caa06ed8670dfaf7d44abad3
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862566"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645104"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -21,7 +21,7 @@ La prise en charge native de CMake est disponible dans Visual Studio 2017 et ver
 
 ::: moniker range=">=msvc-150"
 
-Toutes les cibles CMake exécutables figurent dans la liste déroulante **Élément de démarrage** dans la barre d’outils **Général**. Sélectionnez-en un pour démarrer une session de débogage et lancer le débogueur.
+Toutes les cibles CMake exécutables sont affichées dans la liste déroulante **élément de démarrage** de la barre d’outils. Sélectionnez-en un pour démarrer une session de débogage et lancer le débogueur.
 
 ![Liste déroulante d’élément de démarrage CMake](media/cmake-startup-item-dropdown.png "Liste déroulante d’élément de démarrage CMake")
 
@@ -112,8 +112,10 @@ Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configurat
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Options supplémentaires autorisées avec la `gdbserver` Configuration (16,7 ou version ultérieure)
 
 - `program`: La valeur par défaut est `"${debugInfo.fullTargetPath}"` . Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
-> [!TIP]
-> Le déploiement n’est pas encore pris en charge pour les scénarios de compilation croisée locale. Si vous effectuez une compilation croisée sur Windows (par exemple, à l’aide d’un compilateur croisé sur Windows pour créer un fichier exécutable ARM Linux), vous devez copier manuellement le fichier binaire à l’emplacement spécifié par `program` sur l’ordinateur ARM distant avant le débogage.
+
+  > [!TIP]
+  > Le déploiement n’est pas encore pris en charge pour les scénarios de compilation croisée locale. Si vous effectuez une compilation croisée sur Windows (par exemple, à l’aide d’un compilateur croisé sur Windows pour créer un fichier exécutable ARM Linux), vous devez copier manuellement le fichier binaire à l’emplacement spécifié par `program` sur l’ordinateur ARM distant avant le débogage.
+
 - `remoteMachineName`: La valeur par défaut est `"${debugInfo.remoteMachineName}"` . Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
 - `cwd`: La valeur par défaut est `"${debugInfo.defaultWorkingDirectory}"` . Chemin d’accès UNIX complet au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
 - `gdbPath`: La valeur par défaut est `${debugInfo.vsInstalledGdb}` . Chemin Windows complet du `gdb` utilisé pour le débogage. La valeur par défaut est le `gdb` installé avec le développement Linux avec la charge de travail C/C++.
@@ -163,7 +165,7 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `cwd`: La valeur par défaut est `"${debugInfo.defaultWorkingDirectory}"` . Chemin d’accès UNIX complet au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
 
-- `environment`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple :
+- `environment`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple,
 
   ```json
     "environment": [

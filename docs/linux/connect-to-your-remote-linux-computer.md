@@ -2,12 +2,12 @@
 title: Connexion à votre système Linux cible dans Visual Studio
 description: Comment se connecter à une machine Linux distante ou à un sous-système Windows pour Linux à partir d’un projet Visual Studio C++.
 ms.date: 01/17/2020
-ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921787"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645213"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connexion à votre système Linux cible dans Visual Studio
 
@@ -86,7 +86,7 @@ Si ssh n’est pas déjà configuré et en cours d’exécution sur votre systè
    | **Type d’authentification** | Le mot de passe et la clé privée sont pris en charge
    | **Mot de passe**            | Mot de passe du nom d’utilisateur entré
    | **Fichier de clé privée**    | Fichier de clé privée créé pour la connexion ssh
-   | **Risquent**          | Phrase secrète utilisée avec la clé privée sélectionnée ci-dessus
+   | **Passphrase**          | Phrase secrète utilisée avec la clé privée sélectionnée ci-dessus
 
    Vous pouvez utiliser un mot de passe ou un fichier de clé et une phrase secrète pour l’authentification. Pour de nombreux scénarios de développement, l’authentification par mot de passe est suffisante, mais les fichiers clés sont plus sécurisés. Si vous disposez déjà d’une paire de clés, il est possible de la réutiliser. Actuellement, Visual Studio ne prend en charge que les clés RSA et DSA pour les connexions à distance.
 
@@ -106,7 +106,7 @@ Si ssh n’est pas déjà configuré et en cours d’exécution sur votre systè
 
 ## <a name="logging-for-remote-connections"></a>Journalisation des connexions à distance
 
-   Vous pouvez activer la journalisation pour aider à résoudre les problèmes de connexion. Dans la barre de menus, sélectionnez **outils > options** . Dans la boîte de dialogue **options** , sélectionnez **multiplateforme > la journalisation** :
+   Vous pouvez activer la journalisation pour aider à résoudre les problèmes de connexion. Dans la barre de menus, sélectionnez **outils > options**. Dans la boîte de dialogue **options** , sélectionnez **multiplateforme > la journalisation**:
 
    ![Journalisation à distance](media/remote-logging-vs2019.png)
 
@@ -116,7 +116,7 @@ Si ssh n’est pas déjà configuré et en cours d’exécution sur votre systè
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>Utilitaire de ligne de commande pour le gestionnaire de connexions  
 
-**Visual studio 2019 version 16,5 ou ultérieure** : ConnectionManager.exe est un utilitaire de ligne de commande permettant de gérer les connexions de développement à distance en dehors de Visual Studio. Elle est utile pour des tâches telles que la configuration d’un nouvel ordinateur de développement. Ou vous pouvez l’utiliser pour configurer Visual Studio pour une intégration continue. Pour obtenir des exemples et une référence complète à la commande ConnectionManager, consultez [référence ConnectionManager](connectionmanager-reference.md).  
+**Visual studio 2019 version 16,5 ou ultérieure**: ConnectionManager.exe est un utilitaire de ligne de commande permettant de gérer les connexions de développement à distance en dehors de Visual Studio. Elle est utile pour des tâches telles que la configuration d’un nouvel ordinateur de développement. Ou vous pouvez l’utiliser pour configurer Visual Studio pour une intégration continue. Pour obtenir des exemples et une référence complète à la commande ConnectionManager, consultez [référence ConnectionManager](connectionmanager-reference.md).  
 
 ::: moniker-end
 
@@ -124,9 +124,9 @@ Si ssh n’est pas déjà configuré et en cours d’exécution sur votre systè
 
 ## <a name="tcp-port-forwarding"></a>Réacheminement de port TCP
 
-Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et les **gdbserver** sont affectés si le transfert de port TCP est désactivé sur votre système distant. Si vous êtes concerné par cette dépendance, vous pouvez voter ce ticket de [suggestion](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sur la communauté des développeurs.
+Le support Linux de Visual Studio dépend de la réacheminement de port TCP. La **synchronisation** et les **gdbserver** sont affectés si le transfert de port TCP est désactivé sur votre système distant. Si vous êtes concerné par cette dépendance, vous pouvez voter ce ticket de [suggestion](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62) sur la communauté des développeurs.
 
-la synchronisation est utilisée par les projets Linux basés sur MSBuild et les projets CMake pour [copier les en-têtes de votre système distant vers Windows en vue d’une utilisation par IntelliSense](configure-a-linux-project.md#remote_intellisense). Lorsque vous ne pouvez pas activer le transfert de port TCP, désactivez le téléchargement automatique des en-têtes distants. Pour le désactiver, utilisez **outils > Options > multiplateforme > gestionnaire de connexions > en-têtes distants gestionnaire IntelliSense** . Si le réacheminement de port TCP n’est pas activé sur le système distant, vous voyez cette erreur lorsque le téléchargement des en-têtes distants pour IntelliSense commence :
+la synchronisation est utilisée par les projets Linux basés sur MSBuild et les projets CMake pour [copier les en-têtes de votre système distant vers Windows en vue d’une utilisation par IntelliSense](configure-a-linux-project.md#remote_intellisense). Lorsque vous ne pouvez pas activer le transfert de port TCP, désactivez le téléchargement automatique des en-têtes distants. Pour le désactiver, utilisez **outils > Options > multiplateforme > gestionnaire de connexions > en-têtes distants gestionnaire IntelliSense**. Si le réacheminement de port TCP n’est pas activé sur le système distant, vous voyez cette erreur lorsque le téléchargement des en-têtes distants pour IntelliSense commence :
 
 ![Erreur en-têtes](media/port-forwarding-headers-error.png)
 
@@ -142,7 +142,7 @@ gdbserver peut être utilisé pour le débogage sur des appareils intégrés. Si
 
 ::: moniker range="msvc-150"
 
-Dans Visual Studio 2017, vous utilisez la même procédure pour vous connecter à WSL que pour une machine Linux distante. Utilisez **localhost** pour le **Nom d’hôte** .
+Dans Visual Studio 2017, vous utilisez la même procédure pour vous connecter à WSL que pour une machine Linux distante. Utilisez **localhost** pour le **Nom d’hôte**.
 
 ::: moniker-end
 

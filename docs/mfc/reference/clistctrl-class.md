@@ -265,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8466d8436aaf76a3acdfc6e50682745c9ad4fcc2
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333488"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645226"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -423,7 +423,7 @@ class CListCtrl : public CWnd
 |[CListCtrl :: SubItemHitTest](#subitemhittest)|Détermine l’élément d’affichage de liste, le cas échéant, à une position donnée.|
 |[CListCtrl :: Update](#update)|Force le contrôle à redessiner un élément spécifié.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Outre une icône et une étiquette, chaque élément peut contenir des informations affichées dans les colonnes à droite de l’icône et de l’étiquette. Ce contrôle (et par conséquent la `CListCtrl` classe) est uniquement disponible pour les programmes qui s’exécutent sous windows 95/98 et Windows NT version 3,51 et versions ultérieures.
 
@@ -513,7 +513,7 @@ Par défaut, un contrôle List View détruit les listes d’images qui lui sont 
 
 `CListCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -533,13 +533,13 @@ CSize ApproximateViewRect(
 Dimensions proposées du contrôle, en pixels. Si les dimensions ne sont pas spécifiées, l’infrastructure utilise les valeurs de largeur ou de hauteur actuelles du contrôle.
 
 *iCount*<br/>
-Nombre d’éléments à afficher dans le contrôle. Si ce paramètre a la valeur-1, l’infrastructure utilise le nombre total d’éléments actuellement dans le contrôle.
+Nombre d’éléments à afficher dans le contrôle. Pass-1 pour utiliser le nombre total d’éléments actuellement dans le contrôle.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
 `CSize`Objet qui contient la largeur et la hauteur approximatives requises pour afficher les éléments, en pixels.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect), comme décrit dans le SDK Windows.
 
@@ -568,7 +568,7 @@ Spécifie le style d’alignement pour les éléments. Ce peut être l’une des
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le paramètre *nCode* spécifie le style d’alignement.
 
@@ -589,7 +589,7 @@ Annule l’opération de modification du texte de l’élément.
 void CancelEditLabel();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_CANCELEDITLABEL](/windows/win32/Controls/lvm-canceleditlabel) , comme décrit dans le SDK Windows.
 
@@ -631,7 +631,7 @@ Spécifie l’ID du contrôle de liste.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Vous construisez un `CListCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis appelez `Create` , qui crée le contrôle List View et l’attache à l' `CListCtrl` objet.
 
@@ -679,7 +679,7 @@ ID de la fenêtre enfant du contrôle.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Utilisez `CreateEx` au lieu de [Create](#create) pour appliquer des styles Windows étendus, spécifiés par la préversion de style étendu Windows **WS_EX_**.
 
@@ -707,7 +707,7 @@ Adresse d’une structure de [points](/windows/win32/api/windef/ns-windef-point)
 
 Pointeur vers la liste d’images de glissement en cas de réussite ; Sinon, NULL.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L' `CImageList` objet est permanent et vous devez le supprimer une fois l’opération terminée. Par exemple :
 
@@ -810,7 +810,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Pointeur long vers une `DRAWITEMSTRUCT` structure qui contient des informations sur le type de dessin requis.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le `itemAction` membre de la structure [drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct) définit l’action de dessin à effectuer.
 
@@ -835,7 +835,7 @@ Index de l’élément d’affichage de liste à modifier.
 
 En cas de réussite, pointeur vers l' `CEdit` objet qui est utilisé pour modifier le texte de l’élément ; sinon, null.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un contrôle d’affichage de liste avec le style de fenêtre LVS_EDITLABELS permet à un utilisateur de modifier des étiquettes d’élément sur place. L’utilisateur commence la modification en cliquant sur l’étiquette d’un élément qui a le focus.
 
@@ -876,7 +876,7 @@ Renvoie l'une des valeurs suivantes :
 
 - **-1** L’opération a échoué.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview) , comme décrit dans le SDK Windows.
 
@@ -902,7 +902,7 @@ Spécifie si la visibilité partielle est acceptable.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le contrôle List View est défilant si nécessaire. Si le paramètre *bPartialOK* est différent de zéro, aucun défilement ne se produit si l’élément est partiellement visible.
 
@@ -937,7 +937,7 @@ Index de l’élément avec lequel commencer la recherche, ou-1 pour démarrer �
 
 Index de l’élément en cas de réussite ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le paramètre *pFindInfo* pointe vers une `LVFINDINFO` structure qui contient des informations utilisées pour rechercher un élément de la vue liste.
 
@@ -990,7 +990,7 @@ Pointeur vers une `LVBKIMAGE` structure contenant l’image d’arrière-plan ac
 
 Retourne une valeur différente de zéro en cas de réussite, ou zéro dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode implémente le comportement de la macro Win32, [ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage), comme décrit dans le SDK Windows.
 
@@ -1021,7 +1021,7 @@ UINT GetCallbackMask() const;
 
 Masque de rappel du contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un « élément de rappel » est un élément de la vue liste pour lequel l’application, plutôt que le contrôle, stocke le texte, l’icône ou les deux. Bien qu’un contrôle List View puisse stocker ces attributs pour vous, vous souhaiterez peut-être utiliser des éléments de rappel si votre application gère déjà certaines de ces informations. Le masque de rappel spécifie les bits d’état d’élément qui sont gérés par l’application, et s’applique à l’ensemble du contrôle plutôt qu’à un élément spécifique. Par défaut, le masque de rappel est égal à zéro, ce qui signifie que le contrôle effectue le suivi de tous les États des éléments. Si une application utilise des éléments de rappel ou spécifie un masque de rappel différent de zéro, elle doit être en mesure de fournir des attributs d’élément de vue de liste à la demande.
 
@@ -1046,7 +1046,7 @@ Index de base zéro d’un élément de contrôle de liste.
 
 Différent de zéro si l’élément est sélectionné ; sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate), comme décrit dans le SDK Windows.
 
@@ -1076,7 +1076,7 @@ Adresse d’une structure [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvc
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La `LVCOLUMN` structure contient des informations sur une colonne dans la vue rapport.
 
@@ -1117,7 +1117,7 @@ Nombre de colonnes dans le contrôle List View. Si ce paramètre a la valeur-1, 
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray), comme décrit dans le SDK Windows.
 
@@ -1229,7 +1229,7 @@ CString GetEmptyText() const;
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui contient le texte à afficher si le contrôle est vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext) , qui est décrit dans le SDK Windows.
 
@@ -1245,7 +1245,7 @@ DWORD GetExtendedStyle();
 
 Combinaison des styles étendus actuellement utilisés par le contrôle List View. Pour obtenir une liste descriptive de ces styles étendus, consultez l’article [styles de vue de liste étendue](/windows/win32/Controls/extended-list-view-styles) dans le SDK Windows.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle), comme décrit dans le SDK Windows.
 
@@ -1298,7 +1298,7 @@ int GetFocusedGroup() const;
 
 Index du groupe dont l’État est LVGS_FOCUSED, s’il s’agit d’un groupe de ce type ; Sinon,-1.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup) , qui est décrit dans le SDK Windows. Pour plus d’informations, consultez la valeur LVGS_FOCUSED du `state` membre de la structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
@@ -1314,7 +1314,7 @@ int GetGroupCount()const;
 
 Nombre de groupes dans le contrôle List-View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount) , qui est décrit dans la SDK Windows-->.
 
@@ -1340,7 +1340,7 @@ Pointeur vers le [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) cont
 
 Retourne l’ID du groupe en cas de réussite, ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo) , comme décrit dans le SDK Windows.
 
@@ -1366,7 +1366,7 @@ dans Index de base zéro d’un groupe.
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex) , qui est décrit dans la SDK Windows-->.
 
@@ -1424,7 +1424,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 *pGroupMetrics*<br/>
 Pointeur vers un [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics) contenant les informations de métriques de groupe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics) , comme décrit dans le SDK Windows.
 
@@ -1460,7 +1460,7 @@ dans Spécifie les coordonnées de rectangle à récupérer. Utilisez l’une de
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’appelant est chargé d’allouer la structure [Rect](/windows/win32/api/windef/ns-windef-rect) vers laquelle pointe le paramètre *pRect* .
 
@@ -1517,7 +1517,7 @@ dans Masque qui spécifie la valeur d’État à récupérer pour le groupe spé
 
 État demandé pour le groupe spécifié, ou 0 si le groupe est introuvable.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La valeur de retour est le résultat d’une opération and au niveau du bit sur le paramètre *dwMask* et de la valeur du `state` membre d’une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) qui représente le contrôle List-View actuel.
 
@@ -1535,7 +1535,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 Pointeur vers le contrôle d’en-tête, utilisé par le contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader), comme décrit dans le SDK Windows.
 
@@ -1555,7 +1555,7 @@ HCURSOR GetHotCursor();
 
 Handle de la ressource de curseur actif en cours d’utilisation par le contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor), comme décrit dans le SDK Windows. Le curseur actif, visible uniquement lorsque la sélection de survol est activée, apparaît lorsque le curseur passe sur un élément de la vue liste. La sélection de survol est activée en définissant le LVS_EX_TRACKSELECT style étendu.
 
@@ -1580,7 +1580,7 @@ int GetHotItem();
 
 Index de l’élément réactif actuel du contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem), comme décrit dans le SDK Windows. L’élément réactif est défini en tant qu’élément actuellement sélectionné lors de l’activation de la sélection active.
 
@@ -1607,7 +1607,7 @@ DWORD GetHoverTime() const;
 
 Retourne le délai, en millisecondes, pendant lequel le curseur de la souris doit pointer sur un élément avant d’être sélectionné. Si la valeur de retour est-1, la durée de pointage est la durée de pointage par défaut.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime), comme décrit dans le SDK Windows.
 
@@ -1668,7 +1668,7 @@ Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commct
 
 Retourne la valeur TRUE en cas de réussite, ou FALSe dans le cas contraire. La valeur FALSe est retournée si la taille du `cbSize` membre de la `LVINSERTMARK` structure n’est pas égale à la taille réelle de la structure.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark) , comme décrit dans le SDK Windows.
 
@@ -1684,7 +1684,7 @@ COLORREF GetInsertMarkColor() const;
 
 Retourne une structure [COLORREF](/windows/win32/gdi/colorref) qui contient la couleur du point d’insertion.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor) , comme décrit dans le SDK Windows.
 
@@ -1709,7 +1709,7 @@ Renvoie l'une des valeurs suivantes :
 
 - **1** point d’insertion trouvé.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETINSERTMARKRECT](/windows/win32/Controls/lvm-getinsertmarkrect) , comme décrit dans le SDK Windows.
 
@@ -1730,7 +1730,7 @@ Pointeur vers une structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvi
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La `LVITEM` structure spécifie ou reçoit les attributs d’un élément de la vue liste.
 
@@ -1767,7 +1767,7 @@ Index de l’élément de liste dont les données doivent être récupérées.
 
 Valeur spécifique à l’application 32 bits associée à l’élément spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette valeur est le `lParam` membre de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , comme décrit dans le SDK Windows
 
@@ -1820,7 +1820,7 @@ dans Partie du sous-élément de vue de liste pour lequel le rectangle englobant
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect) , qui est décrit dans le SDK Windows. Pour plus d’informations, consultez [ListView_GetItemIndexRect macro](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect).
 
@@ -1990,7 +1990,7 @@ dans Vue pour laquelle récupérer l’espacement des éléments. Spécifiez TRU
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing) , qui est décrit dans le SDK Windows.
 
@@ -2016,7 +2016,7 @@ Masque spécifiant les indicateurs d’état de l’élément à retourner.
 
 Indicateurs d’État pour l’élément d’affichage de liste spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’état d’un élément est spécifié par le `state` membre de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , comme décrit dans la SDK Windows. Lorsque vous spécifiez ou modifiez l’état d’un élément, le `stateMask` membre spécifie les bits d’État que vous souhaitez modifier.
 
@@ -2060,7 +2060,7 @@ La version **`int`** qui retourne renvoie la longueur de la chaîne récupérée
 
 La version qui retourne un `CString` retourne le texte de l’élément.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si *nSubItem* est égal à zéro, cette fonction récupère l’étiquette de l’élément ; Si *nSubItem* est différent de zéro, il récupère le texte du sous-élément. Pour plus d’informations sur l’argument de sous-élément, consultez la description de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) dans le SDK Windows.
 
@@ -2128,7 +2128,7 @@ dans Combinaison de bits (OR) d’indicateurs qui spécifient comment effectuer 
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’appelant est chargé d’allouer et de définir les membres de la `LVITEMINDEX` structure vers laquelle pointe le paramètre *pItemIndex* .
 
@@ -2151,7 +2151,7 @@ Référence à une valeur de POSITION retournée par un appel précédent à `Ge
 
 Index de l’élément de liste identifié par *pos*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Vous pouvez utiliser `GetNextSelectedItem` dans une boucle d’itération directe si vous établissez la position initiale avec un appel à `GetFirstSelectedItemPosition` .
 
@@ -2190,7 +2190,7 @@ UINT GetNumberOfWorkAreas() const;
 
 Non utilisé pour l’instant.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas), comme décrit dans le SDK Windows.
 
@@ -2233,7 +2233,7 @@ COLORREF GetOutlineColor() const;
 
 Retourne une structure [COLORREF](/windows/win32/gdi/colorref) contenant la couleur de contour.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor) , comme décrit dans le SDK Windows.
 
@@ -2266,7 +2266,7 @@ UINT GetSelectedColumn() const;
 
 Index de la colonne sélectionnée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn) , comme décrit dans le SDK Windows.
 
@@ -2312,7 +2312,7 @@ int GetSelectionMark();
 
 Marque de sélection de base zéro, ou-1 s’il n’y a aucune marque de sélection.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark), comme décrit dans le SDK Windows.
 
@@ -2342,7 +2342,7 @@ Adresse d’une chaîne se terminant par un caractère null dont la largeur doit
 
 Largeur, en pixels, de la chaîne vers laquelle pointe *lpsz*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La largeur retournée prend en compte la police actuelle du contrôle et les marges de colonne, mais pas la largeur d’une petite icône.
 
@@ -2398,7 +2398,7 @@ Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) q
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect), comme décrit dans le SDK Windows.
 
@@ -2451,7 +2451,7 @@ Pointeur vers une structure [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl
 
 La valeur de retour n’est pas utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo) , comme décrit dans le SDK Windows.
 
@@ -2472,7 +2472,7 @@ Pointeur vers une structure [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-comm
 
 La valeur de retour n’est pas utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo) , comme décrit dans le SDK Windows.
 
@@ -2488,7 +2488,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Pointeur vers un objet [CToolTipCtrl](ctooltipctrl-class.md) à utiliser par le contrôle de liste. Si la fonction membre [Create](#create) utilise le style LVS_NOTOOLTIPS, aucune info-bulle n’est utilisée et la valeur null est retournée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la [LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)de message Win32, comme décrit dans le SDK Windows. L’implémentation MFC de `GetToolTips` retourne un `CToolTipCtrl` objet, qui est utilisé par le contrôle de liste, plutôt qu’un handle vers un contrôle ToolTip.
 
@@ -2544,7 +2544,7 @@ DWORD GetView() const;
 
 Affichage actuel du contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_GETVIEW](/windows/win32/Controls/lvm-getview) , comme décrit dans le SDK Windows.
 
@@ -2565,7 +2565,7 @@ Adresse d’une structure [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La vue liste doit être en mode icône ou petite icône.
 
@@ -2587,7 +2587,7 @@ Nombre de `RECT` structures contenues dans le tableau *pRect* .
 *pRect*<br/>
 Pointeur vers un tableau de `RECT` structures (ou objets [CRect](../../atl-mfc-shared/reference/crect-class.md) ) qui reçoivent les zones de travail du contrôle List View. Les valeurs de ces structures sont exprimées en coordonnées clientes.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas), comme décrit dans le SDK Windows.
 
@@ -2612,7 +2612,7 @@ Identificateur du groupe demandé.
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup) , comme décrit dans le SDK Windows.
 
@@ -2643,7 +2643,7 @@ Pointeur vers un entier qui reçoit des informations sur les résultats du test.
 
 Index de l’élément à la position spécifiée par *pHitTestInfo*, le cas échéant, ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Vous pouvez utiliser les valeurs LVHT_ABOVE, LVHT_BELOW, LVHT_TOLEFT et LVHT_TORIGHT du membre de la structure `flag` pour déterminer s’il faut faire défiler le contenu d’un contrôle List View. Deux de ces indicateurs peuvent être combinés, par exemple, si la position est au-dessus et à gauche de la zone cliente.
 
@@ -2712,7 +2712,7 @@ Index du sous-élément associé à la colonne. Si ce paramètre est défini sur
 
 Index de la nouvelle colonne en cas de réussite ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La colonne la plus à gauche dans un contrôle List View doit être alignée à gauche.
 
@@ -2740,7 +2740,7 @@ Pointeur vers une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lv
 
 Retourne l’index de l’élément auquel le groupe a été ajouté, ou-1 si l’opération a échoué.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup) , comme décrit dans le SDK Windows.
 
@@ -2761,7 +2761,7 @@ Pointeur vers une structure [LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns
 
 La valeur de retour n’est pas utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted) , comme décrit dans le SDK Windows.
 
@@ -2821,7 +2821,7 @@ Valeur spécifique à l’application 32 bits associée à l’élément. Si ce 
 
 Index du nouvel élément en cas de réussite ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’appel de cette méthode peut entraîner l’envoi du message LVM_INSERTITEM à votre fenêtre de contrôle. Le gestionnaire de messages associé pour le contrôle peut ne pas réussir à définir le texte de l’élément sous certaines conditions (par exemple, en utilisant des styles de fenêtre tels que LVS_OWNERDRAW). Pour plus d’informations sur ces conditions, consultez [LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) dans le SDK Windows.
 
@@ -2871,7 +2871,7 @@ Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commct
 
 Point d’insertion le plus proche du point spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest) , comme décrit dans le SDK Windows.
 
@@ -2887,7 +2887,7 @@ BOOL IsGroupViewEnabled() const;
 
 Retourne la valeur TRUE si la vue de groupe est activée, ou FALSe dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled) , comme décrit dans le SDK Windows.
 
@@ -2908,7 +2908,7 @@ dans Index de base zéro d’un élément dans le contrôle List-View actuel.
 
 TRUE si l’élément spécifié est visible ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible) , qui est décrit dans le SDK Windows.
 
@@ -2929,7 +2929,7 @@ dans ID unique d’un élément.
 
 Index actuel de l’ID spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un contrôle List-View effectue le suivi interne des éléments par index. Cela peut présenter des problèmes, car les index peuvent changer pendant la durée de vie du contrôle. Le contrôle List-View peut baliser un élément avec un ID lors de la création de l’élément et vous pouvez utiliser cet ID pour garantir l’unicité pendant la durée de vie du contrôle List-View.
 
@@ -2954,7 +2954,7 @@ dans Index de base zéro d’un élément.
 
 ID unique de l’élément spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un contrôle List-View effectue le suivi interne des éléments par index. Cela peut présenter des problèmes, car les index peuvent changer pendant la durée de vie du contrôle. Le contrôle List-View peut baliser un élément avec un ID lors de la création de l’élément. Vous pouvez utiliser cet ID pour accéder à un élément spécifique pendant la durée de vie du contrôle List-View.
 
@@ -3024,7 +3024,7 @@ Index de base zéro où le groupe doit être déplacé.
 
 La valeur de retour n’est pas utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup) , comme décrit dans le SDK Windows.
 
@@ -3046,7 +3046,7 @@ dans Index de l’élément à déplacer.
 *idGroupTo*<br/>
 dans Identificateur du groupe vers lequel l’élément sera déplacé.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 > [!NOTE]
 > Cette méthode n’est pas implémentée actuellement.
@@ -3075,7 +3075,7 @@ Index du dernier élément à repeindre.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les éléments spécifiés ne sont pas réellement repeints tant que la fenêtre d’affichage de liste n’a pas reçu de message de WM_PAINT. Pour redessiner immédiatement, appelez la fonction [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) de Windows après avoir utilisé cette fonction.
 
@@ -3087,7 +3087,7 @@ Supprime tous les groupes d’un contrôle List View.
 void RemoveAllGroups();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups) , comme décrit dans le SDK Windows.
 
@@ -3108,7 +3108,7 @@ Identificateur du groupe à supprimer.
 
 Retourne l’index du groupe en cas de réussite, ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_REMOVEGROUP](/windows/win32/Controls/lvm-removegroup) , comme décrit dans le SDK Windows.
 
@@ -3139,7 +3139,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*cr*<br/>
+*CR*<br/>
 Couleur d’arrière-plan à définir, ou valeur de CLR_NONE pour aucune couleur d’arrière-plan. Les contrôles d’affichage de liste avec des couleurs d’arrière-plan se redessinent beaucoup plus rapidement que ceux sans couleurs d’arrière-plan. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -3199,7 +3199,7 @@ Offset, en pixels, du bord supérieur de l’image, à partir de l’origine du 
 
 Retourne une valeur différente de zéro en cas de réussite, ou zéro dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 > [!NOTE]
 > Étant donné que utilise `CListCtrl::SetBkImage` la fonctionnalité com OLE, les bibliothèques OLE doivent être initialisées avant d’utiliser `SetBkImage` . Il est préférable d’initialiser les bibliothèques COM lorsque l’application est initialisée et de ne pas initialiser les bibliothèques lorsque l’application se termine. Cela s’effectue automatiquement dans les applications MFC qui utilisent la technologie ActiveX, OLE Automation, la liaison/incorporation OLE ou les opérations ODBC/DAO.
@@ -3322,7 +3322,7 @@ Nombre de colonnes dans le contrôle List View.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray), comme décrit dans le SDK Windows.
 
@@ -3369,7 +3369,7 @@ Combinaison de styles étendus à utiliser par le contrôle List View. Pour obte
 
 Combinaison des styles étendus précédents utilisée par le contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle), comme décrit dans le SDK Windows.
 
@@ -3403,7 +3403,7 @@ Pointeur vers une structure [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lv
 
 ID du groupe si la méthode réussit ; Sinon,-1.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo) , qui est décrit dans le SDK Windows.
 
@@ -3420,7 +3420,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 *pGroupMetrics*<br/>
 Pointeur vers une structure [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics) contenant les informations de métriques de groupe à définir.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics) , comme décrit dans le SDK Windows.
 
@@ -3441,7 +3441,7 @@ Handle d’une ressource de curseur, utilisé pour représenter le curseur actif
 
 Handle vers la ressource de curseur actif précédente utilisée par le contrôle List View.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor), comme décrit dans le SDK Windows.
 
@@ -3468,7 +3468,7 @@ Index de base zéro de l’élément à définir comme élément réactif.
 
 Index de base zéro de l’élément actif précédemment.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem), comme décrit dans le SDK Windows.
 
@@ -3493,7 +3493,7 @@ Nouveau délai, en millisecondes, pendant lequel le curseur de la souris doit po
 
 Durée de pointage précédente, en millisecondes.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime), comme décrit dans le SDK Windows.
 
@@ -3528,7 +3528,7 @@ Distance (en pixels) entre les icônes sur l’axe des y.
 
 Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) contenant les valeurs précédentes pour l’espacement des icônes.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing), comme décrit dans le SDK Windows.
 
@@ -3588,7 +3588,7 @@ Pointeur vers une structure [LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commc
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip) , comme décrit dans le SDK Windows.
 
@@ -3609,7 +3609,7 @@ Pointeur vers une structure [LVINSERTMARK](/windows/win32/api/commctrl/ns-commct
 
 Retourne la valeur TRUE en cas de réussite, ou FALSe dans le cas contraire. La valeur FALSe est retournée si la taille du `cbSize` membre de la `LVINSERTMARK` structure n’est pas égale à la taille réelle de la structure, ou lorsqu’un point d’insertion ne s’applique pas à la vue actuelle.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark) , comme décrit dans le SDK Windows.
 
@@ -3630,7 +3630,7 @@ Structure [COLORREF](/windows/win32/gdi/colorref) spécifiant la couleur pour d�
 
 Retourne une `COLORREF` structure contenant la couleur précédente.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor) , comme décrit dans le SDK Windows.
 
@@ -3699,7 +3699,7 @@ Largeur, en pixels, de la mise en retrait. Si *nIndent* est inférieur à la lar
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les `iItem` `iSubItem` membres et de la `LVITEM` structure et les paramètres *nItem* et *nSubItem* identifient l’élément et le sous-élément dont les attributs doivent être définis.
 
@@ -3726,11 +3726,11 @@ void SetItemCount(int nItems);
 *nItems*<br/>
 Nombre d’éléments que le contrôle contiendra finalement.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour définir le nombre d’éléments d’un contrôle List View virtuel, consultez [CListCtrl :: SetItemCountEx](#setitemcountex).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount), comme décrit dans le SDK Windows.
 
@@ -3775,7 +3775,7 @@ Spécifie le comportement du contrôle List View après la réinitialisation du 
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex), comme décrit dans Windows SDKand doit uniquement être appelé pour les vues de liste virtuelle.
 
@@ -3818,7 +3818,7 @@ Valeur 32 bits à associer à l’élément.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette valeur est le `lParam` membre de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , comme décrit dans la SDK Windows.
 
@@ -3858,7 +3858,7 @@ dans Masque des bits valides de l’état spécifié par le paramètre *dwState*
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour plus d’informations sur le paramètre *dwState* , consultez États de l' [élément d’affichage de liste](/windows/win32/Controls/list-view-item-states).
 
@@ -3888,7 +3888,7 @@ Structure de [points](/windows/win32/api/windef/ns-windef-point) spécifiant la 
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le contrôle doit être affiché en mode icône ou petite icône.
 
@@ -3916,7 +3916,7 @@ BOOL SetItemState(
 ### <a name="parameters"></a>Paramètres
 
 *nItem*<br/>
-Index de l’élément dont l’État doit être défini.
+Index de l’élément dont l’État doit être défini. Passez-1 pour appliquer la modification d’État à tous les éléments.
 
 *pItem*<br/>
 Adresse d’une structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , comme décrit dans la SDK Windows. Le membre de la structure `stateMask` spécifie les bits d’État à modifier, et le membre de la structure `state` contient les nouvelles valeurs pour ces bits. Les autres membres sont ignorés.
@@ -3931,7 +3931,7 @@ Masque spécifiant les bits d’État à modifier. Cette valeur correspond au me
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’état d’un élément est une valeur qui spécifie la disponibilité de l’élément, indique les actions de l’utilisateur ou reflète l’état de l’élément. Un contrôle d’affichage de liste modifie certains bits d’État, par exemple lorsque l’utilisateur sélectionne un élément. Une application peut modifier d’autres bits d’État pour désactiver ou masquer l’élément, ou pour spécifier une image de superposition ou une image d’État.
 
@@ -3965,7 +3965,7 @@ Pointeur vers une chaîne qui contient le nouveau texte de l’élément.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode n’est pas destinée à être utilisée avec les contrôles contenant le style de fenêtre LVS_OWNERDATA (en fait, cela entraîne une assertion dans les versions Debug). Pour plus d’informations sur ce style de contrôle de liste, consultez [vue d’ensemble des contrôles de liste](/windows/win32/Controls/list-view-controls-overview).
 
@@ -3990,7 +3990,7 @@ Nouvelle structure [COLORREF](/windows/win32/gdi/colorref) contenant la couleur 
 
 Structure précédente `COLORREF` contenant la couleur de contour
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor) , comme décrit dans le SDK Windows.
 
@@ -4011,7 +4011,7 @@ Index de la colonne à sélectionner.
 
 La valeur de retour n’est pas utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETSELECTEDCOLUMN](/windows/win32/Controls/lvm-setselectedcolumn) , comme décrit dans le SDK Windows.
 
@@ -4032,7 +4032,7 @@ Index de base zéro du premier élément d’une sélection multiple.
 
 La marque de sélection précédente, ou-1 s’il n’y avait aucune marque de sélection.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark), comme décrit dans le SDK Windows.
 
@@ -4050,7 +4050,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*cr*<br/>
+*CR*<br/>
 COLORREF spécifiant la nouvelle couleur d’arrière-plan du texte. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -4076,7 +4076,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*cr*<br/>
+*CR*<br/>
 COLORREF spécifiant la nouvelle couleur de texte. Pour plus d’informations, consultez [COLORREF](/windows/win32/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -4110,7 +4110,7 @@ Pointeur vers une structure [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo) , comme décrit dans le SDK Windows.
 
@@ -4131,7 +4131,7 @@ Pointeur vers une structure [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-comm
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo) , comme décrit dans le SDK Windows.
 
@@ -4152,7 +4152,7 @@ Pointeur vers un `CToolTipCtrl` objet qui sera utilisé par le contrôle de list
 
 Pointeur vers un objet [CToolTipCtrl](ctooltipctrl-class.md) contenant l’info-bulle précédemment utilisée par le contrôle, ou null si aucune info-bulle n’a été précédemment utilisée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la [LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips)de message Win32, comme décrit dans le SDK Windows.
 
@@ -4175,7 +4175,7 @@ Vue à sélectionner.
 
 Retourne 1 en cas de réussite, ou-1 dans le cas contraire. Par exemple,-1 est retourné si la vue n’est pas valide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SETVIEW](/windows/win32/Controls/lvm-setview) , comme décrit dans le SDK Windows.
 
@@ -4197,7 +4197,7 @@ Nombre de `RECT` structures (ou d’objets [CRect](../../atl-mfc-shared/referenc
 *lpRect*<br/>
 Adresse d’un tableau de `RECT` structures (ou d' `CRect` objets) qui spécifient les nouvelles zones de travail du contrôle d’affichage de liste. Ces zones doivent être spécifiées dans les coordonnées clientes. Si ce paramètre a la valeur NULL, la zone de travail est définie sur la zone cliente du contrôle.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas), comme décrit dans le SDK Windows.
 
@@ -4230,7 +4230,7 @@ Pointeur void.
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups) , comme décrit dans le SDK Windows.
 
@@ -4258,7 +4258,7 @@ dans Valeur définie par l’application qui est passée à la fonction de compa
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode modifie l’index de chaque élément pour refléter la nouvelle séquence.
 
@@ -4320,7 +4320,7 @@ dans Valeur définie par l’application passée à la fonction de comparaison.
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode modifie l’index de chaque élément pour refléter la nouvelle séquence.
 
@@ -4402,7 +4402,7 @@ Pointeur vers la structure [LVHITTESTINFO](/windows/win32/api/commctrl/ns-commct
 
 Index de base un de l’élément, ou sous-élément, testé (le cas échéant), ou-1 dans le cas contraire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre implémente le comportement de la macro Win32, [ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest), comme décrit dans le SDK Windows.
 
@@ -4443,7 +4443,7 @@ Index de l’élément à mettre à jour.
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction organise également le contrôle List View s’il a le style LVS_AUTOARRANGE.
 
