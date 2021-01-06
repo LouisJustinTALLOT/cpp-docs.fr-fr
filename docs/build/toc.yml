@@ -68,7 +68,18 @@
     - name: Informations de référence sur le schéma de configuration prédéfinie de CMake
       href: ../build/cmake-predefined-configuration-reference.md
 - name: "vcpkg\_: Gestionnaire de package pour C++"
-  href: ../build/vcpkg.md
+  expanded: false
+  items:
+    - name: "vcpkg\_: Gestionnaire de package pour C++"
+      href: ../build/vcpkg.md
+    - name: Installer vcpkg
+      href: ../build/install-vcpkg.md
+    - name: Intégrer vcpkg
+      href: ../build/integrate-vcpkg.md
+    - name: Gérer les bibliothèques avec vcpkg
+      href: ../build/manage-libraries-with-vcpkg.md
+    - name: Informations de référence sur la ligne de commande vcpkg
+      href: ../build/vcpkg-command-line-reference.md
 - name: C++ Build Insights
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: Fichiers d’en-tête précompilés
