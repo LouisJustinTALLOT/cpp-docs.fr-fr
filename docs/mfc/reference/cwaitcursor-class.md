@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5d2323e3be78154c6a9d3ded55ab9e1a951d78b7
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97318466"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951492"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor, classe
 
@@ -32,17 +32,17 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWaitCursor::CWaitCursor](#cwaitcursor)|Construit un `CWaitCursor` objet et affiche le curseur d’attente.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWaitCursor :: Restore](#restore)|Restaure le curseur d’attente après qu’il a été modifié.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `CWaitCursor` n’a pas de classe de base.
 
@@ -66,7 +66,7 @@ Une autre façon d’afficher un curseur d’attente consiste à utiliser la com
 
 `CWaitCursor`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -82,7 +82,7 @@ Pour afficher un curseur d’attente, il vous suffit de déclarer un `CWaitCurso
 CWaitCursor();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le constructeur provoque automatiquement l’affichage du curseur d’attente.
 
@@ -105,7 +105,7 @@ Pour restaurer le curseur d’attente, appelez cette fonction après avoir effec
 void Restore();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Vous pouvez appeler `Restore` même lorsque le curseur d’attente est actuellement affiché.
 
@@ -122,4 +122,4 @@ Si vous devez restaurer le curseur d’attente dans une fonction différente de 
 [CCmdTarget :: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget :: RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp ::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[Comment faire : modifier le curseur de la souris dans une application Microsoft Foundation Class](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[Modifier le pointeur de la souris pour une fenêtre dans MFC à l’aide de Visual C++](/troubleshoot/cpp/change-mouse-pointer-window-mfc)

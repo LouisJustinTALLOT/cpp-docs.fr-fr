@@ -3,12 +3,12 @@ description: 'En savoir plus sur : gestion des exceptions ARM'
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: d37d0ad65f436d1ff67677032f378a30b44e32a3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 74c915eeee90e0689881621b562f143b7d313941
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97157124"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951491"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -16,13 +16,13 @@ Windows on ARM utilise le même mécanisme de gestion des exceptions structurée
 
 ## <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
-Windows on ARM utilise des *codes de déroulement* pour contrôler le déroulement de la pile pendant la [gestion structurée des exceptions](/windows/win32/debug/structured-exception-handling) (SEH). Les codes de déroulement consistent en une séquence d’octets stockés dans la section .xdata de l’image exécutable. Ils décrivent le fonctionnement du code de prologue et de épilogue d’une fonction de manière abstraite, de sorte que les effets du prologue d’une fonction peuvent être annulés en préparation du déroulement du frame de pile de l’appelant.
+Windows on ARM utilise des *codes de déroulement* pour contrôler le déroulement de la pile pendant la [gestion structurée des exceptions](/windows/win32/debug/structured-exception-handling) (SEH). Les codes de déroulement sont une séquence d’octets stockés dans la `.xdata` section de l’image exécutable. Ils décrivent le fonctionnement du code de prologue et de épilogue d’une fonction de manière abstraite, de sorte que les effets du prologue d’une fonction peuvent être annulés en préparation du déroulement du frame de pile de l’appelant.
 
 L'interface EABI (Embedded Application Binary Interface) ARM spécifie un modèle de déroulement d'exception qui utilise les codes de déroulement, mais cela n'est pas suffisant pour le déroulement SEH dans Windows, qui doit gérer les cas asynchrones où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. De même, Windows sépare le contrôle du déroulement en déroulement au niveau de la fonction et en déroulement de portée propre au langage, qui est unifié dans l'interface EABI ARM. Pour ces raisons, Windows on ARM spécifie plus de détails pour les données et la procédure de déroulement.
 
 ### <a name="assumptions"></a>Hypothèses
 
-Les images exécutables pour Windows on ARM utilisent le format PE (Portable Executable). Pour plus d’informations, consultez [spécification Microsoft PE et COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). Les informations de gestion des exceptions sont stockées dans les sections .pdata et .xdata de l'image.
+Les images exécutables pour Windows on ARM utilisent le format PE (Portable Executable). Pour plus d’informations, consultez [format PE](/windows/win32/debug/pe-format). Les informations de gestion des exceptions sont stockées dans les `.pdata` `.xdata` sections et de l’image.
 
 Le mécanisme de gestion des exceptions établit certaines hypothèses concernant le code qui suit l'interface ABI pour Windows on ARM :
 
@@ -52,133 +52,133 @@ Le mécanisme de gestion des exceptions établit certaines hypothèses concernan
 
   - analyser l'un des quelques types de frame bien définis.
 
-### <a name="pdata-records"></a>Enregistrements .pdata
+### <a name="pdata-records"></a>`.pdata` Documents
 
-Les enregistrements .pdata d'une image au format PE consistent en un tableau ordonné d'éléments de longueur fixe qui décrivent chaque fonction de manipulation de pile. Les fonctions terminales, qui sont des fonctions qui n'appellent pas d'autres fonctions, n'ont pas besoin d'enregistrements .pdata quand elles ne manipulent pas la pile. (Autrement dit, elles n'ont besoin ni de stockage local ni d'enregistrer ou restaurer des registres non volatils.) Les enregistrements liés à ces fonctions peuvent être omis dans la section .pdata pour économiser de l'espace. Une opération de déroulement de l'une de ces fonctions peut simplement copier l'adresse de retour du registre de liaison (ou LR, Link Register) dans le compteur de programme (ou PC, Program Counter) à déplacer vers l'appelant.
+Les `.pdata` enregistrements d’une image au format PE sont un tableau ordonné d’éléments de longueur fixe qui décrivent chaque fonction de manipulation de pile. Les fonctions feuilles, qui sont des fonctions qui n’appellent pas d’autres fonctions, ne nécessitent pas d' `.pdata` enregistrement quand elles ne manipulent pas la pile. (Autrement dit, elles n'ont besoin ni de stockage local ni d'enregistrer ou restaurer des registres non volatils.) Les enregistrements de ces fonctions peuvent être omis dans la `.pdata` section pour économiser de l’espace. Une opération de déroulement de l'une de ces fonctions peut simplement copier l'adresse de retour du registre de liaison (ou LR, Link Register) dans le compteur de programme (ou PC, Program Counter) à déplacer vers l'appelant.
 
-Chaque enregistrement .pdata pour ARM a une longueur de 8 octets. Dans le format général d'un enregistrement, l'adresse virtuelle relative (ou RVA, Relative Virtual Address) du début de la fonction est placée dans le premier mot de 32 bits, qui est suivi d'un deuxième mot contenant soit un pointeur vers un bloc .xdata de longueur variable, soit un mot compressé qui décrit une séquence de déroulement de fonction canonique, comme dans le tableau suivant :
+Chaque `.pdata` enregistrement pour ARM a une longueur de 8 octets. Le format général d’un enregistrement place l’adresse virtuelle relative (RVA) de la fonction Start dans le premier mot de 32 bits, suivi d’un second mot qui contient soit un pointeur vers un bloc de longueur variable `.xdata` , soit un mot compressé qui décrit une séquence de déroulement de fonction canonique, comme indiqué dans le tableau suivant :
 
 |Décalage de mot|Bits|Objectif|
 |-----------------|----------|-------------|
-|0|0-31|*RVA Start Function* est l’adresse RVA 32 bits du début de la fonction. Si la fonction contient du code thumb, le bit inférieur de cette adresse doit être défini.|
-|1|0-1|L' *indicateur* est un champ de 2 bits qui indique comment interpréter les 30 bits restants du deuxième mot. pData. Si l' *indicateur* a la valeur 0, les bits restants forment un *RVA d’informations sur l’exception* (avec les deux bits de poids faible implicitement 0). Si l' *indicateur* est différent de zéro, les bits restants forment une structure de *données de déroulement compressées* .|
-|1|2-31|*Informations d’exception RVA* ou *données de déroulement compressées*.<br /><br /> Les *informations d’exception RVA* sont l’adresse de la structure d’informations sur les exceptions de longueur variable, stockée dans la section. XData. Ces données doivent être alignées sur 4 octets.<br /><br /> Les *données de déroulement* compressées sont une description compressée des opérations requises pour se dérouler à partir d’une fonction, en supposant une forme canonique. Dans ce cas, aucun enregistrement .xdata n'est nécessaire.|
+|0|0-31|*`Function Start RVA`* est l’adresse RVA 32 bits du début de la fonction. Si la fonction contient du code thumb, le bit inférieur de cette adresse doit être défini.|
+|1|0-1|*`Flag`* est un champ de 2 bits qui indique comment interpréter les 30 bits restants du deuxième `.pdata` mot. Si *`Flag`* a la valeur 0, les bits restants forment un *RVA d’informations sur l’exception* (avec les deux bits de poids faible implicitement 0). Si *`Flag`* est différent de zéro, les bits restants forment une structure de *données de déroulement compressées* .|
+|1|2-31|*Informations d’exception RVA* ou *données de déroulement compressées*.<br /><br /> Les *informations d’exception RVA* sont l’adresse de la structure d’informations d’exception de longueur variable, stockée dans la `.xdata` section. Ces données doivent être alignées sur 4 octets.<br /><br /> Les *données de déroulement* compressées sont une description compressée des opérations requises pour se dérouler à partir d’une fonction, en supposant une forme canonique. Dans ce cas, aucun `.xdata` enregistrement n’est requis.|
 
 ### <a name="packed-unwind-data"></a>Données de déroulement compressées
 
-Pour les fonctions dont les prologues et les épilogues suivent la forme canonique décrite ci-dessous, il est possible d'utiliser des données de déroulement compressées. Cela permet de se passer d'un enregistrement .xdata tout en réduisant considérablement l'espace nécessaire pour fournir les données de déroulement. Les prologues et épilogues canoniques visent à répondre aux besoins courants d'une fonction simple qui ne nécessite pas de gestionnaire d'exceptions et qui effectue ses opérations de configuration et de démontage dans un ordre normal.
+Pour les fonctions dont les prologues et les épilogues suivent la forme canonique décrite ci-dessous, il est possible d'utiliser des données de déroulement compressées. Cela élimine la nécessité d’un `.xdata` enregistrement et réduit considérablement l’espace requis pour fournir les données de déroulement. Les prologues et épilogues canoniques visent à répondre aux besoins courants d'une fonction simple qui ne nécessite pas de gestionnaire d'exceptions et qui effectue ses opérations de configuration et de démontage dans un ordre normal.
 
-Ce tableau présente le format d'un enregistrement .pdata qui contient des données de déroulement compressées :
+Ce tableau montre le format d’un `.pdata` enregistrement qui contient des données de déroulement compressées :
 
 |Décalage de mot|Bits|Objectif|
 |-----------------|----------|-------------|
-|0|0-31|*RVA Start Function* est l’adresse RVA 32 bits du début de la fonction. Si la fonction contient du code thumb, le bit inférieur de cette adresse doit être défini.|
-|1|0-1|L' *indicateur* est un champ de 2 bits qui a les significations suivantes :<br /><br />-00 = données de déroulement compressées non utilisées ; les bits restants pointent vers un enregistrement. XData.<br />-01 = données de déroulement compressées.<br />-10 = données de déroulement compressées pour lesquelles la fonction est supposée ne pas avoir de prologue. Ceci est utile pour décrire les fragments de fonction discontinus par rapport au début de la fonction.<br />-11 = réservé.|
-|1|2-12|La *longueur de fonction* est un champ de 11 bits qui fournit la longueur de la fonction entière en octets divisée par 2. Si la longueur de la fonction est supérieure à 4 K octets, un enregistrement .xdata complet doit être utilisé à la place.|
-|1|13-14|*RET* est un champ de 2 bits qui indique le mode de retour de la fonction :<br /><br />-00 = retour via pop {PC} (le bit de l’indicateur *l* doit être défini sur 1 dans ce cas).<br />-01 = Retour à l’aide d’une branche 16 bits.<br />-10 = retour à l’aide d’une branche 32 bits.<br />-11 = aucun épilogue. Ceci est utile pour décrire un fragment de fonction discontinu qui peut ne contenir qu'un prologue, mais dont l'épilogue se trouve ailleurs.|
-|1|15|*H* est un indicateur de 1 bit qui indique si la fonction « maisons » les registres de paramètres entiers (R0-R3) en les envoyant au début de la fonction et libère les 16 octets de la pile avant de retourner. (0 = n'héberge pas les registres, 1 = héberge les registres.)|
-|1|16-18|*Reg* est un champ de 3 bits qui indique l’index du dernier Registre non volatile enregistré. Si le bit *R* est 0, seuls les registres d’entiers sont enregistrés et sont supposés être dans la plage de R4-RN, où N est égal à 4 + *reg*. Si le bit *R* est 1, seuls les registres à virgule flottante sont enregistrés et sont supposés être dans la plage de D8-DN, où N est égal à 8 + *reg*. La combinaison spéciale de *R* = 1 et de *reg* = 7 indique qu’aucun registre n’est enregistré.|
-|1|19|*R* est un indicateur de 1 bit qui indique si les registres non volatiles enregistrés sont des registres d’entiers (0) ou des registres à virgule flottante (1). Si *R* est défini sur 1 et que le champ *reg* a la valeur 7, aucun registre non volatil n’a fait l’objet d’un push.|
-|1|20|*L* est un indicateur de 1 bit qui indique si la fonction enregistre/restaure la valeur LR, ainsi que les autres registres indiqués par le champ *reg* . (0 = n'enregistre/ne restaure pas, 1 = enregistre/restaure.)|
-|1|21|*C* est un indicateur de 1 bit qui indique si la fonction comprend des instructions supplémentaires pour configurer une chaîne de frame pour le parcours de pile rapide (1) ou non (0). Si ce bit est défini, le registre r11 est ajouté implicitement à la liste des registres non volatils d'entiers enregistrés. (Voir les restrictions ci-dessous si l’indicateur *C* est utilisé.)|
-|1|22-31|L' *ajustement de pile* est un champ de 10 bits qui indique le nombre d’octets de la pile alloués pour cette fonction, divisé par 4. Cependant, seules les valeurs comprises entre 0x000 et 0x3F3 peuvent être directement encodées. Les fonctions qui allouent plus de 4 044 octets de pile doivent utiliser un enregistrement .xdata complet. Si le champ de réglage de la *pile* est égal à 0x3f4 ou supérieur, les 4 bits de poids faible ont une signification particulière :<br /><br />-Bits 0-1 indiquent le nombre de mots de l’ajustement de pile (1-4) moins 1.<br />-Le bit 2 a la valeur 1 si le prologue a combiné cet ajustement dans son opération push.<br />-Bit 3 a la valeur 1 si le épilogue a combiné cet ajustement dans son opération pop.|
+|0|0-31|*`Function Start RVA`* est l’adresse RVA 32 bits du début de la fonction. Si la fonction contient du code thumb, le bit inférieur de cette adresse doit être défini.|
+|1|0-1|*`Flag`* est un champ de 2 bits qui a les significations suivantes :<br /><br />-00 = données de déroulement compressées non utilisées ; point des bits restants à `.xdata` Enregistrer.<br />-01 = données de déroulement compressées.<br />-10 = données de déroulement compressées pour lesquelles la fonction est supposée ne pas avoir de prologue. Ceci est utile pour décrire les fragments de fonction discontinus par rapport au début de la fonction.<br />-11 = réservé.|
+|1|2-12|*`Function Length`* est un champ de 11 bits qui fournit la longueur de la fonction entière en octets divisée par 2. Si la fonction est supérieure à 4 Ko, un `.xdata` enregistrement complet doit être utilisé à la place.|
+|1|13-14|*`Ret`* est un champ de 2 bits qui indique le mode de retour de la fonction :<br /><br />-00 = retour via pop {PC} (le *`L`* bit de l’indicateur doit être défini sur 1 dans ce cas).<br />-01 = Retour à l’aide d’une branche 16 bits.<br />-10 = retour à l’aide d’une branche 32 bits.<br />-11 = aucun épilogue. Ceci est utile pour décrire un fragment de fonction discontinu qui peut ne contenir qu'un prologue, mais dont l'épilogue se trouve ailleurs.|
+|1|15|*`H`* est un indicateur de 1 bit qui indique si la fonction « maisons » les registres de paramètres entiers (R0-R3) en les envoyant au début de la fonction et libère les 16 octets de la pile avant de retourner. (0 = n'héberge pas les registres, 1 = héberge les registres.)|
+|1|16-18|*`Reg`* est un champ de 3 bits qui indique l’index du dernier Registre non volatile enregistré. Si le *`R`* bit est 0, seuls les registres d’entiers sont enregistrés et sont supposés être dans la plage de R4-RN, où N est égal à 4 + *`Reg`* . Si le *`R`* bit a la valeur 1, seuls les registres à virgule flottante sont enregistrés et sont supposés être dans la plage de D8-DN, où N est égal à 8 + *`Reg`* . La combinaison spéciale de *`R`* = 1 et *`Reg`* = 7 indique qu’aucun registre n’est enregistré.|
+|1|19|*`R`* est un indicateur de 1 bit qui indique si les registres non volatiles enregistrés sont des registres d’entiers (0) ou des registres à virgule flottante (1). Si *`R`* a la valeur 1 et que le *`Reg`* champ a la valeur 7, aucun registre non volatil n’a fait l’objet d’un push.|
+|1|20|*`L`* est un indicateur de 1 bit qui indique si la fonction enregistre/restaure la valeur LR, ainsi que les autres registres indiqués par le *`Reg`* champ. (0 = n'enregistre/ne restaure pas, 1 = enregistre/restaure.)|
+|1|21|*`C`* est un indicateur de 1 bit qui indique si la fonction comprend des instructions supplémentaires pour configurer une chaîne de frames pour le parcours de pile rapide (1) ou non (0). Si ce bit est défini, le registre r11 est ajouté implicitement à la liste des registres non volatils d'entiers enregistrés. (Voir les restrictions ci-dessous si l' *`C`* indicateur est utilisé.)|
+|1|22-31|*`Stack Adjust`* est un champ de 10 bits qui indique le nombre d’octets de la pile alloués pour cette fonction, divisé par 4. Cependant, seules les valeurs comprises entre 0x000 et 0x3F3 peuvent être directement encodées. Les fonctions qui allouent plus de 4044 octets de pile doivent utiliser un `.xdata` enregistrement complet. Si le *`Stack Adjust`* champ est égal à 0x3f4 ou supérieur, les 4 bits de poids faible ont une signification particulière :<br /><br />-Bits 0-1 indiquent le nombre de mots de l’ajustement de pile (1-4) moins 1.<br />-Le bit 2 a la valeur 1 si le prologue a combiné cet ajustement dans son opération push.<br />-Bit 3 a la valeur 1 si le épilogue a combiné cet ajustement dans son opération pop.|
 
 Du fait des redondances possibles dans les encodages précédents, les restrictions suivantes s'appliquent :
 
-- Si l’indicateur *C* a la valeur 1 :
+- Si l' *`C`* indicateur a la valeur 1 :
 
-  - L’indicateur *l* doit également avoir la valeur 1, car le chaînage de trames nécessitait à la fois R11 et LR.
+  - L' *`L`* indicateur doit également avoir la valeur 1, car la chaîne de frames exige à la fois R11 et LR.
 
-  - R11 ne doit pas être inclus dans l’ensemble de registres décrit par *reg*. Autrement dit, si R4-R11 fait l’objet d’un push, *reg* doit uniquement décrire R4-R10, car l’indicateur *C* implique R11.
+  - R11 ne doit pas être inclus dans l’ensemble de registres décrit par *`Reg`* . Autrement dit, si R4-R11 fait l’objet d’un push, *`Reg`* doit uniquement décrire R4-R10, car l' *`C`* indicateur implique R11.
 
-- Si le champ *RET* a la valeur 0, l’indicateur *l* doit avoir la valeur 1.
+- Si le *`Ret`* champ a la valeur 0, l' *`L`* indicateur doit avoir la valeur 1.
 
 La violation de ces restrictions donne lieu à une séquence non prise en charge.
 
-Dans le cadre de la discussion ci-dessous, deux Pseudo-indicateurs sont dérivés de l' *ajustement de pile*:
+Dans le cadre de la discussion ci-dessous, deux Pseudo-indicateurs sont dérivés de *`Stack Adjust`* :
 
-- *PF* ou « repli de prologue » indique que la taille de la *pile* est égal à 0x3f4 ou supérieure et que le bit 2 est défini.
+- *`PF`* ou « repli de prologue » indique que *`Stack Adjust`* est égal à 0x3f4 ou supérieur et que le bit 2 est défini.
 
-- *EF* ou « repli épilogue » indique que la taille de la *pile* est égal à 0x3f4 ou supérieure et que le bit 3 est défini.
+- *`EF`* ou « épilogue repli » indique que *`Stack Adjust`* est égal à 0x3f4 ou supérieur et que le bit 3 est défini.
 
 Les prologues des fonctions canoniques peuvent avoir jusqu'à 5 instructions (à noter que les instructions 3a et 3b s'excluent mutuellement) :
 
 |Instruction|Un opcode est considéré être présent si :|Taille|Opcode|Codes de déroulement|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*= = 1|16|`push {r0-r3}`|04|
-|2|*C*= = 1 ou *L*= = 1 ou *R*= = 0 ou PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
-|3a|*C*= = 1 et (*L*= = 0 et *R*= = 1 et PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
-|3b|*C*= = 1 et (*L*= = 1 ou *R*= = 0 ou PF = = 1)|32|`add r11,sp,#xx`|FC|
-|4|*R*= = 1 et *reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
-|5|*Ajuster la pile* ! = 0 et PF = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
+|1|*`H`*= = 1|16|`push {r0-r3}`|04|
+|2|*`C`*= = 1 ou *`L`* = = 1 ou *`R`* = = 0 ou *`PF`* = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|3a|*`C`*= = 1 et ( *`L`* = = 0 et *`R`* = = 1 et *`PF`* = = 0)|16|`mov r11,sp`|C0-CF/FB|
+|3b|*`C`*= = 1 et ( *`L`* = = 1 ou *`R`* = = 0 ou *`PF`* = = 1)|32|`add r11,sp,#xx`|FC|
+|4|*`R`*= = 1 et *`Reg`* ! = 7|32|`vpush {d8-dE}`|E0-E7|
+|5|*`Stack Adjust`* ! = 0 et *`PF`* = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
-L’instruction 1 est toujours présente si le bit *H* a la valeur 1.
+L’instruction 1 est toujours présente si le *`H`* bit a la valeur 1.
 
-Pour configurer le chaînage de frames, l’instruction 3A ou 3b est présente si le bit *C* est défini. Il s'agit d'un `mov` de 16 bits si aucun autre registre que r11 et LR ne fait l'objet d'un push ; sinon, il s'agit d'un `add` de 32 bits.
+Pour configurer le chaînage de frames, l’instruction 3A ou 3b est présente si le *`C`* bit est défini. Il s'agit d'un `mov` de 16 bits si aucun autre registre que r11 et LR ne fait l'objet d'un push ; sinon, il s'agit d'un `add` de 32 bits.
 
 Si un ajustement non plié est spécifié, l'instruction 5 est l'ajustement de pile explicite.
 
-Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. Ce tableau récapitule les registres enregistrés en fonction des champs *C*, *L*, *R* et *PF* . Dans tous les cas, *N* est égal *à Reg* + 4, *E* est égal à *reg* + 8, et *S* est égal à (~ ajuster de la *pile*) & 3.
+Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. Ce tableau récapitule les registres enregistrés en fonction des *`C`* *`L`* champs,, *`R`* et *`PF`* . Dans tous les cas, *`N`* est égal à *`Reg`* + 4, *`E`* est égal à *`Reg`* + 8, et *`S`* est égal à (~ *`Stack Adjust`* ) & 3.
 
 |C|L|R|PF|Registres d'entiers faisant l'objet d'un push|Registres VFP faisant l'objet d'un push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r *N*|aucun|
-|0|0|0|1|r *S*-r *N*|aucun|
-|0|0|1|0|Aucun|D8-d *E*|
-|0|0|1|1|r *S*-R3|D8-d *E*|
-|0|1|0|0|R4-r *N*, LR|aucun|
-|0|1|0|1|r *S*-r *N*, LR|aucun|
-|0|1|1|0|LR|D8-d *E*|
-|0|1|1|1|r *-* R3, LR|D8-d *E*|
-|1|0|0|0|R4-r *N*, R11|aucun|
-|1|0|0|1|r *S*-r *N*, R11|aucun|
-|1|0|1|0|r11|D8-d *E*|
-|1|0|1|1|r *-* R3, R11|D8-d *E*|
-|1|1|0|0|R4-r *N*, R11, LR|aucun|
-|1|1|0|1|r *S*-r *N*, R11, LR|aucun|
-|1|1|1|0|r11, LR|D8-d *E*|
-|1|1|1|1|r *-R3*, R11, LR|D8-d *E*|
+|0|0|0|0|R4-r *`N`*|aucun|
+|0|0|0|1|r *`S`* -r *`N`*|aucun|
+|0|0|1|0|Aucun|D8-d *`E`*|
+|0|0|1|1|r *`S`* -R3|D8-d *`E`*|
+|0|1|0|0|R4-r *`N`* , LR|aucun|
+|0|1|0|1|r *`S`* -r *`N`* , LR|aucun|
+|0|1|1|0|LR|D8-d *`E`*|
+|0|1|1|1|r *`S`* -R3, LR|D8-d *`E`*|
+|1|0|0|0|R4-r *`N`* , R11|aucun|
+|1|0|0|1|r *`S`* -r *`N`* , R11|aucun|
+|1|0|1|0|r11|D8-d *`E`*|
+|1|0|1|1|r *`S`* -R3, R11|D8-d *`E`*|
+|1|1|0|0|R4-r *`N`* , R11, LR|aucun|
+|1|1|0|1|r *`S`* -r *`N`* , R11, LR|aucun|
+|1|1|1|0|r11, LR|D8-d *`E`*|
+|1|1|1|1|r *`S`* -R3, R11, LR|D8-d *`E`*|
 
 Les épilogues des fonctions canoniques suivent une forme analogue, mais en sens inverse et avec quelques options supplémentaires. L'épilogue peut compter jusqu'à 5 instructions et sa forme est strictement dictée par celle du prologue.
 
 |Instruction|Un opcode est considéré être présent si :|Taille|Opcode|
 |-----------------|-----------------------------------|----------|------------|
-|6|*Ajuster la pile*! = 0 et *EF*= = 0|16/32|`add   sp,sp,#xx`|
-|7|*R*= = 1 et *reg*! = 7|32|`vpop  {d8-dE}`|
-|8|*C*= = 1 ou (*L*= = 1 et *H*= = 0) ou *R*= = 0 ou *EF*= = 1|16/32|`pop   {registers}`|
-|9a|*H*= = 1 et *L*= = 0|16|`add   sp,sp,#0x10`|
-|9b|*H*= = 1 et *L*= = 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*RET*= = 1|16|`bx    reg`|
-|10b|*RET*= = 2|32|`b     address`|
+|6|*`Stack Adjust`*! = 0 et *`EF`* = = 0|16/32|`add   sp,sp,#xx`|
+|7|*`R`*= = 1 et *`Reg`* ! = 7|32|`vpop  {d8-dE}`|
+|8|*`C`*= = 1 ou ( *`L`* = = 1 et *`H`* = = 0) ou *`R`* = = 0 ou *`EF`* = = 1|16/32|`pop   {registers}`|
+|9a|*`H`*= = 1 et *`L`* = = 0|16|`add   sp,sp,#0x10`|
+|9b|*`H`*= = 1 et *`L`* = = 1|32|`ldr   pc,[sp],#0x14`|
+|10a|*`Ret`*= = 1|16|`bx    reg`|
+|10b|*`Ret`*= = 2|32|`b     address`|
 
-L’instruction 6 est l’ajustement de pile explicite si un ajustement non plié est spécifié. Comme *PF* est indépendant d' *EF*, l’instruction 5 peut être présente sans l’instruction 6, ou vice versa.
+L’instruction 6 est l’ajustement de pile explicite si un ajustement non plié est spécifié. Étant donné que *`PF`* est indépendant de *`EF`* , il est possible que l’instruction 5 soit présente sans l’instruction 6, ou vice-versa.
 
-Les instructions 7 et 8 utilisent la même logique que le prologue pour déterminer quels registres sont restaurés à partir de la pile, mais avec ces deux modifications : tout d’abord, *EF* est utilisé à la place de *PF*; Deuxièmement, si *RET* = 0, LR est remplacé par PC dans la liste de registres et le épilogue se termine immédiatement.
+Les instructions 7 et 8 utilisent la même logique que le prologue pour déterminer quels registres sont restaurés à partir de la pile, mais avec ces deux modifications : tout d’abord, *`EF`* est utilisé à la place de *`PF`* ; second, si *`Ret`* = 0, LR est remplacé par PC dans la liste de registres et le épilogue se termine immédiatement.
 
-Si *H* est défini, l’instruction 9A ou 9B est présente. L’instruction 9A est utilisée lorsque *L* est égal à 0, pour indiquer que la valeur LR n’est pas sur la pile. Dans ce cas, la pile est ajustée manuellement et *RET* doit avoir la valeur 1 ou 2 pour spécifier un retour explicite. L’instruction 9B est utilisée lorsque *L* est égal à 1, pour indiquer une extrémité précoce du épilogue, et pour retourner et ajuster la pile en même temps.
+Si *`H`* est défini, l’instruction 9A ou 9B est présente. L’instruction 9A est utilisée lorsque *`L`* a la valeur 0, pour indiquer que la valeur LR n’est pas sur la pile. Dans ce cas, la pile est ajustée manuellement et *`Ret`* doit avoir la valeur 1 ou 2 pour spécifier un retour explicite. L’instruction 9B est utilisée lorsque *`L`* a la valeur 1, pour indiquer une fin précoce au épilogue, et pour retourner et ajuster la pile en même temps.
 
-Si le épilogue n’est pas déjà terminé, l’instruction 10A ou 10 est présente, pour indiquer une branche 16 bits ou 32 bits, en fonction de la valeur de *RET*.
+Si le épilogue n’est pas déjà terminé, l’instruction 10A ou 10 est présente, pour indiquer une branche 16 bits ou 32 bits, en fonction de la valeur de *`Ret`* .
 
-### <a name="xdata-records"></a>Enregistrements .xdata
+### <a name="xdata-records"></a>`.xdata` Documents
 
-Quand le format de déroulement compressé ne suffit pas à décrire le déroulement d'une fonction, un enregistrement .xdata de longueur variable doit être créé. L'adresse de cet enregistrement est stockée dans le deuxième mot de l'enregistrement .pdata. Le format de l'enregistrement .xdata est un ensemble de mots compressé de longueur variable qui compte quatre sections :
+Lorsque le format compressé est insuffisant pour décrire le déroulement d’une fonction, vous devez créer un enregistrement de longueur variable `.xdata` . L’adresse de cet enregistrement est stockée dans le deuxième mot de l' `.pdata` enregistrement. Le format de `.xdata` est un ensemble de mots de longueur variable condensé qui comporte quatre sections :
 
-1. Un en-tête de 1 ou 2 mots qui décrit la taille globale de la structure .xdata et fournit des données de fonction clés. Le deuxième mot est présent uniquement si les champs *nombre épilogue* et *mots de code* ont tous les deux la valeur 0. Les champs sont décrits en détail dans ce tableau :
+1. En-tête 1 ou 2-Word qui décrit la taille globale de la `.xdata` structure et fournit les données de fonction clés. Le deuxième mot est présent uniquement si les champs *nombre épilogue* et *mots de code* ont tous les deux la valeur 0. Les champs sont décrits en détail dans ce tableau :
 
    |Word|Bits|Objectif|
    |----------|----------|-------------|
-   |0|0-17|La *longueur de fonction* est un champ de 18 bits qui indique la longueur totale de la fonction en octets, divisée par 2. Si une fonction dépasse 512 Ko, plusieurs enregistrements .pdata et .xdata doivent être utilisés pour décrire la fonction. Pour plus de détails, consultez la section Grandes fonctions dans ce document.|
-   |0|18-19|*Vers* est un champ de 2 bits qui décrit la version des XData restantes. Seule la version 0 est actuellement définie ; les valeurs 1 à 3 sont réservées.|
+   |0|0-17|*`Function Length`* est un champ de 18 bits qui indique la longueur totale de la fonction en octets, divisée par 2. Si une fonction est supérieure à 512 Ko, plusieurs `.pdata` enregistrements et `.xdata` doivent être utilisés pour décrire la fonction. Pour plus de détails, consultez la section Grandes fonctions dans ce document.|
+   |0|18-19|*Vers* est un champ de 2 bits qui décrit la version restante `.xdata` . Seule la version 0 est actuellement définie ; les valeurs 1 à 3 sont réservées.|
    |0|20|*X* est un champ de 1 bit qui indique la présence (1) ou l’absence (0) de données d’exception.|
-   |0|21|*E* est un champ de 1 bit qui indique que les informations qui décrivent un seul épilogue sont empaquetées dans l’en-tête (1) au lieu d’exiger des mots d’étendue supplémentaires plus tard (0).|
+   |0|21|*`E`* est un champ de 1 bit qui indique que les informations qui décrivent un seul épilogue sont empaquetées dans l’en-tête (1) au lieu d’exiger des mots d’étendue supplémentaires plus tard (0).|
    |0|22|*F* est un champ de 1 bit qui indique que cet enregistrement décrit un fragment de fonction (1) ou une fonction complète (0). Un fragment implique l'absence de prologue et que tout le traitement des prologues doit être ignoré.|
-   |0|23-27|Le *nombre de épilogue* est un champ de 5 bits qui a deux significations, en fonction de l’état du bit *E* :<br /><br /> -Si *E* est égal à 0, ce champ est le nombre total d’étendues d’exception décrites dans la section 3. S’il existe plus de 31 portées dans la fonction, ce champ et le champ *code Word* doivent tous deux avoir la valeur 0 pour indiquer qu’un mot d’extension est nécessaire.<br />-Si *E* est 1, ce champ spécifie l’index du premier code de déroulement qui décrit le seul épilogue.|
+   |0|23-27|Le *nombre de épilogue* est un champ de 5 bits qui a deux significations, en fonction de l’état du *`E`* bit :<br /><br /> -Si *`E`* a la valeur 0, ce champ est le nombre total d’étendues d’exception décrites dans la section 3. S’il existe plus de 31 portées dans la fonction, ce champ et le champ *code Word* doivent tous deux avoir la valeur 0 pour indiquer qu’un mot d’extension est nécessaire.<br />-Si *`E`* est 1, ce champ spécifie l’index du premier code de déroulement qui décrit le seul épilogue.|
    |0|28-31|Les *mots de code* sont un champ de 4 bits qui spécifie le nombre de mots de 32 bits requis pour contenir tous les codes de déroulement de la section 4. Si plus de 15 mots sont requis pour plus de 63 octets de code de déroulement, ce champ et le champ *épilogue Count* doivent tous deux avoir la valeur 0 pour indiquer qu’un mot d’extension est nécessaire.|
    |1|0-15|Le *nombre de épilogue étendus* est un champ de 16 bits qui fournit plus d’espace pour l’encodage d’un nombre anormalement élevé de épilogues. Le mot d’extension qui contient ce champ n’est présent que si les champs *épilogue Count* et *code* Words dans le premier mot d’en-tête ont tous les deux la valeur 0.|
    |1|16-23|Les *mots de code étendus* sont un champ de 8 bits qui fournit plus d’espace pour l’encodage d’un nombre anormalement élevé de mots de code de déroulement. Le mot d’extension qui contient ce champ n’est présent que si les champs *épilogue Count* et *code* Words dans le premier mot d’en-tête ont tous les deux la valeur 0.|
    |1|24-31|Réservé|
 
-1. Une fois les données d’exception (si le bit *E* dans l’en-tête a été défini sur 0), une liste d’informations sur les étendues de épilogue, qui sont empaquetées dans un mot, est stockée dans l’ordre de l’offset de début d’incrémentation. Chaque portée contient ces champs :
+1. Une fois les données d’exception (si le *`E`* bit dans l’en-tête a la valeur 0), une liste d’informations sur les étendues de épilogue, qui sont empaquetées dans un mot et stockées dans l’ordre de l’offset de début d’incrémentation. Chaque portée contient ces champs :
 
    |Bits|Objectif|
    |----------|-------------|
@@ -191,30 +191,30 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
 
 1. Si le champ *X* dans l’en-tête est 1, les octets de code de déroulement sont suivis par les informations du gestionnaire d’exceptions. Cela se compose d’un *RVA de gestionnaire d’exceptions* qui contient l’adresse du gestionnaire d’exceptions, suivi immédiatement de la quantité de données (de longueur variable) requise par le gestionnaire d’exceptions.
 
-L'enregistrement .xdata est conçu pour permettre la récupération des 8 premiers octets et le calcul de la taille complète de l'enregistrement, à l'exclusion de la longueur des données d'exception de taille variable qui suivent. Cet extrait de code permet de calculer la taille de l'enregistrement :
+L' `.xdata` enregistrement est conçu de sorte qu’il est possible de récupérer les 8 premiers octets et de calculer la taille complète de l’enregistrement, à l’exclusion de la longueur des données d’exception de taille variable qui suivent. Cet extrait de code permet de calculer la taille de l'enregistrement :
 
 ```cpp
-ULONG ComputeXdataSize(PULONG *Xdata)
+ULONG Comput`.xdata`Size(PULONG `.xdata`)
 {
     ULONG EpilogueScopes;
     ULONG Size;
     ULONG UnwindWords;
 
-    if ((Xdata[0] >> 23) != 0) {
+    if (`.xdata`[0] >> 23) != 0) {
         Size = 4;
-        EpilogueScopes = (Xdata[0] >> 23) & 0x1f;
-        UnwindWords = (Xdata[0] >> 28) & 0x0f;
+        EpilogueScopes = `.xdata`[0] >> 23) & 0x1f;
+        UnwindWords = `.xdata`[0] >> 28) & 0x0f;
     } else {
         Size = 8;
-        EpilogueScopes = Xdata[1] & 0xffff;
-        UnwindWords = (Xdata[1] >> 16) & 0xff;
+        EpilogueScopes =`.xdata`[1] & 0xffff;
+        UnwindWords = `.xdata`[1] >> 16) & 0xff;
     }
 
-    if (!(Xdata[0] & (1 << 21))) {
+    if (!`.xdata`[0] & (1 << 21))) {
         Size += 4 * EpilogueScopes;
     }
     Size += 4 * UnwindWords;
-    if (Xdata[0] & (1 << 20)) {
+    if `.xdata`[0] & (1 << 20)) {
         Size += 4;
     }
     return Size;
@@ -315,7 +315,7 @@ Les codes de déroulement du prologue doivent toujours être les premiers dans l
 
 ### <a name="function-fragments"></a>Fragments de fonction
 
-Pour l'optimisation de code, il peut être utile de scinder une fonction en plusieurs parties discontinues. Dès lors, chaque fragment de fonction nécessite son propre enregistrement .pdata (et éventuellement .xdata) distinct.
+Pour l'optimisation de code, il peut être utile de scinder une fonction en plusieurs parties discontinues. Lorsque cela est fait, chaque fragment de fonction requiert son propre `.pdata` enregistrement distinct (et éventuellement `.xdata` ).
 
 En supposant que le prologue de la fonction se trouve au début de la fonction et qu'il ne peut pas être scindé, il existe quatre cas de fragments de fonction :
 
@@ -327,21 +327,21 @@ En supposant que le prologue de la fonction se trouve au début de la fonction e
 
 - des épilogues uniquement ; un prologue et éventuellement des épilogues supplémentaires dans d'autres fragments.
 
-Dans le premier cas, seul le prologue doit être décrit. Cela peut être fait sous forme compact. pdata en décrivant le prologue normalement et en spécifiant une valeur *RET* de 3 pour indiquer l’absence de épilogue. Dans la forme .xdata complète, cela peut se faire en fournissant les codes de déroulement du prologue à l'index 0 comme d'habitude, et en spécifiant un nombre d'épilogues égal à 0.
+Dans le premier cas, seul le prologue doit être décrit. Cela peut être fait sous forme compacte `.pdata` en décrivant le prologue normalement et en spécifiant la *`Ret`* valeur 3 pour indiquer qu’il n’y a pas de épilogue. Dans la `.xdata` forme complète, vous pouvez effectuer cette opération en fournissant les codes de déroulement du prologue à l’index 0 comme d’habitude, et en spécifiant un nombre de épilogue égal à 0.
 
-Le deuxième cas s'apparente tout simplement à une fonction normale. S’il n’existe qu’un seul épilogue dans le fragment et qu’il se trouve à la fin du fragment, un enregistrement. pdata compact peut être utilisé. Sinon, il convient d'utiliser un enregistrement .xdata complet. Gardez à l'esprit que les décalages spécifiés pour le début de l'épilogue sont fonction du début du fragment, et non du début initial de la fonction.
+Le deuxième cas s'apparente tout simplement à une fonction normale. S’il n’existe qu’un seul épilogue dans le fragment et qu’il se trouve à la fin du fragment, un `.pdata` enregistrement compact peut être utilisé. Dans le cas contraire, un `.xdata` enregistrement complet doit être utilisé. Gardez à l'esprit que les décalages spécifiés pour le début de l'épilogue sont fonction du début du fragment, et non du début initial de la fonction.
 
 Les troisième et quatrième cas sont des variantes du premier et du deuxième cas, respectivement, sauf qu’ils ne contiennent pas de prologue. Dans ces situations, du code est censé précéder l'épilogue et est considéré comme faisant partie du corps de la fonction, dont le déroulement procède normalement de l'annulation des effets du prologue. Ces cas doivent ainsi être encodés avec un pseudo-prologue, qui décrit la façon dont le déroulement s'opère à partir du corps, mais qui est considéré comme étant de longueur nulle au moment de déterminer si un déroulement partiel doit être effectué au début du fragment. Ce pseudo-prologue peut aussi être décrit en utilisant les mêmes codes de déroulement que l'épilogue, car on peut supposer qu'ils effectuent des opérations équivalentes.
 
-Dans les troisième et quatrième cas, la présence d’un Pseudo-prologue est spécifiée en définissant le champ *indicateur* de l’enregistrement compact. pdata sur la valeur 2, ou en affectant la valeur 1 à l’indicateur *F* dans l’en-tête. XData. Dans les deux cas, la recherche d'un déroulement de prologue partiel est ignorée et tous les déroulements non liés aux épilogues sont considérés comme complets.
+Dans les troisième et quatrième cas, la présence d’un Pseudo-prologue est spécifiée soit en définissant le *`Flag`* champ de l' `.pdata` enregistrement compact sur 2, soit en affectant la valeur 1 à l’indicateur *F* dans l' `.xdata` en-tête. Dans les deux cas, la recherche d'un déroulement de prologue partiel est ignorée et tous les déroulements non liés aux épilogues sont considérés comme complets.
 
 #### <a name="large-functions"></a>Grandes fonctions
 
-Les fragments permettent de décrire les fonctions dont la taille dépasse la limite de 512 Ko imposée par les champs de bit de l'en-tête .xdata. Pour décrire une fonction très volumineuse, il suffit de la décomposer en fragments inférieurs à 512 Ko. Chaque fragment doit être ajusté afin qu'il ne divise pas un épilogue en plusieurs parties.
+Les fragments peuvent être utilisés pour décrire des fonctions supérieures à la limite de 512 Ko imposée par les champs de bits dans l' `.xdata` en-tête. Pour décrire une fonction très volumineuse, il suffit de la décomposer en fragments inférieurs à 512 Ko. Chaque fragment doit être ajusté afin qu'il ne divise pas un épilogue en plusieurs parties.
 
 Seul le premier fragment de la fonction contient un prologue ; tous les autres fragments sont marqués comme n'ayant pas de prologue. Selon le nombre d'épilogues, chaque fragment peut contenir aucun ou plusieurs épilogues. Ne perdez pas de vue que chaque portée d'épilogue d'un fragment spécifie son décalage de départ par rapport au début du fragment, et non au début de la fonction.
 
-Si un fragment ne contient ni prologue ni épilogue, il a toujours besoin de son propre enregistrement .pdata (et éventuellement .xdata) pour décrire le mode de déroulement à partir du corps de la fonction.
+Si un fragment n’a pas de prologue ni de épilogue, il requiert toujours son propre `.pdata` (et éventuellement `.xdata` ) enregistrement pour décrire comment se dérouler à partir du corps de la fonction.
 
 #### <a name="shrink-wrapping"></a>Emballage par rétraction
 
@@ -363,15 +363,15 @@ ShrinkWrappedFunction
 
 Les fonctions emballées par rétractation sont en principe censées préallouer l'espace pour les enregistrements de registre supplémentaires dans le prologue normal et procéder ensuite aux enregistrements de registres à l'aide de `str` ou `stm` à la place de `push`. Cela permet de conserver toutes les manipulations de pointeur de pile dans le prologue d’origine de la fonction.
 
-La fonction emballée par rétraction prise pour exemple doit être divisée en trois régions, qui correspondent aux lettres A, B et C dans les commentaires. La première région A s'étend du début de la fonction jusqu'à la fin des enregistrements non volatifs supplémentaires. Un enregistrement .pdata ou .xdata doit être construit pour indiquer la présence d'un prologue et l'absence d'épilogues dans ce fragment.
+La fonction emballée par rétraction prise pour exemple doit être divisée en trois régions, qui correspondent aux lettres A, B et C dans les commentaires. La première région A s'étend du début de la fonction jusqu'à la fin des enregistrements non volatifs supplémentaires. Un `.pdata` `.xdata` enregistrement ou doit être construit pour décrire ce fragment comme ayant un prologue et aucun épilogues.
 
-La région B intermédiaire obtient son propre enregistrement .pdata ou .xdata qui décrit un fragment qui n'a ni prologue ni épilogue. Cependant, des codes de déroulement doivent toujours être présents pour cette région, car elle est considérée comme un corps de fonction. Les codes doivent décrire un prologue composite qui représente à la fois les registres initiaux enregistrés dans le prologue de la région A et les registres supplémentaires enregistrés avant d'entrer dans la région B, comme s'ils étaient générés par une même séquence d'opérations.
+La région B du milieu obtient son propre `.pdata` ou `.xdata` enregistrement qui décrit un fragment qui n’a pas de prologue ni de épilogue. Cependant, des codes de déroulement doivent toujours être présents pour cette région, car elle est considérée comme un corps de fonction. Les codes doivent décrire un prologue composite qui représente à la fois les registres initiaux enregistrés dans le prologue de la région A et les registres supplémentaires enregistrés avant d'entrer dans la région B, comme s'ils étaient générés par une même séquence d'opérations.
 
 Les enregistrements de registres de la région B ne peuvent pas être considérés comme un « prologue interne », car le prologue composite décrit pour la région B doit décrire à la fois le prologue de la région A et les registres supplémentaires enregistrés. S’il était indiqué que le fragment B contenait un prologue, la taille de ce prologue serait aussi induite par les codes de déroulement. Or, il n’existe aucun moyen de décrire le prologue composite qui autorise un mappage un-à-un avec les opcodes qui enregistrent uniquement les registres supplémentaires.
 
 Les enregistrements de registres supplémentaires doivent être considérés comme faisant partie de la région A, car tant qu'ils n'ont pas été menés à bien, le prologue composite ne décrit pas avec précision l'état de la pile.
 
-La dernière région C obtient son propre enregistrement .pdata ou .xdata, décrivant un fragment sans prologue, mais avec un épilogue.
+La dernière région C obtient son propre `.pdata` ou `.xdata` enregistrement, décrivant un fragment qui n’a pas de prologue mais qui a un épilogue.
 
 Une autre approche peut aussi fonctionner si les manipulations de la pile réalisées avant l'entrée dans la région B peuvent être réduites à une seule instruction :
 
@@ -391,21 +391,21 @@ Ce qui importe ici, c'est qu'à chaque limite d'instruction, la pile est entièr
 
 ### <a name="encoding-optimizations"></a>Encodage d'optimisations
 
-Du fait de la richesse des codes de déroulement et de leur aptitude à exploiter des formes de données compactes et développées, il est possible d'optimiser l'encodage de diverses manières afin de réduire davantage l'espace. En ayant largement recours à ces techniques, la surcharge nette induite par la description des fonctions et des fragments à l'aide de codes de déroulement peut être assez minime.
+En raison de la richesse des codes de déroulement et de la possibilité d’exploiter des formes compactes et étendues de données, il existe de nombreuses opportunités d’optimiser l’encodage pour réduire davantage l’espace. Avec une utilisation intensive de ces techniques, la surcharge nette de description des fonctions et des fragments à l’aide de codes de déroulement peut être réduite.
 
 L'optimisation la plus importante consiste à faire attention à ne pas confondre les limites de prologue/épilogue en vue d'un déroulement avec les limites de prologue/épilogue du point de vue du compilateur. Les limites de déroulement peuvent être réduites et resserrées pour améliorer l'efficacité. Par exemple, un prologue peut contenir du code après la configuration de la pile pour effectuer des vérifications supplémentaires. Mais une fois que toutes les manipulations de pile ont été réalisées, il n'est pas utile d'encoder d'autres opérations et tout ce qui se trouve au-delà peut être supprimé du prologue de déroulement.
 
-La même règle s'applique à la longueur des fonctions. Si des données (par exemple, un pool de littéraux) suivent l'épilogue d'une fonction, elles ne doivent pas être prises en compte dans la longueur de la fonction. En réduisant la fonction au seul code intégré à la fonction, il y a bien plus de chances que l'épilogue se trouve à la toute fin et compact. Un enregistrement pdata peut être utilisé.
+La même règle s'applique à la longueur des fonctions. S’il y a des données (par exemple, un pool de littéraux) qui suivent un épilogue dans une fonction, elle ne doit pas être incluse dans le cadre de la longueur de la fonction. En réduisant la fonction à la seule partie du code qui fait partie de la fonction, il est plus probable que le épilogue se trouve à la fin et un `.pdata` enregistrement compact peut être utilisé.
 
-Dans un prologue, dès lors que le pointeur de pile est enregistré dans un autre registre, il n’y a généralement pas besoin d’enregistrer d’autres opcodes. Pour dérouler la fonction, la première chose à faire est de récupérer le pointeur de pile auprès du registre enregistré, ce qui évite que les opérations ultérieures aient un impact sur le déroulement.
+Dans un prologue, une fois que le pointeur de pile est enregistré dans un autre registre, il n’est généralement pas nécessaire d’enregistrer d’autres OpCodes. Pour dérouler la fonction, la première chose à faire est de récupérer le SP à partir du Registre enregistré, et les autres opérations n’ont aucun impact sur le déroulement.
 
-Les épilogues à une instruction n'ont pas du tout besoin d'être encodées, ni en tant que portées ni en tant que codes de déroulement. Si un déroulement se produit avant que l'instruction soit exécutée, on peut supposer qu'elle provient du corps de la fonction et que la simple exécution des codes de déroulement de prologue suffit. Si le déroulement se produit après l'exécution de l'instruction unique, elle se produit de fait dans une autre région.
+Les épilogues à instruction unique n’ont pas besoin d’être encodés, que ce soit comme étendues ou comme codes de déroulement. Si un déroulement se produit avant l’exécution de cette instruction, il peut être supposé être de l’intérieur du corps de la fonction ; Il suffit d’exécuter les codes de déroulement du prologue. Si le déroulement se produit après l'exécution de l'instruction unique, elle se produit de fait dans une autre région.
 
-Les épilogues à plusieurs instructions n'ont pas besoin d'encoder la première instruction de l'épilogue, pour la même raison que précédemment : si le déroulement se produit avant l'exécution de l'instruction, un déroulement de prologue complet suffit. Si le déroulement se produit après cette instruction, seules les opérations suivantes doivent être prises en considération.
+Les épilogues à plusieurs instructions n’ont pas besoin d’encoder la première instruction du épilogue, pour la même raison que le point précédent : si le déroulement a lieu avant l’exécution de cette instruction, un déroulement de prologue complet est suffisant. Si le déroulement se produit après cette instruction, seules les opérations suivantes doivent être prises en considération.
 
-La réutilisation de code de déroulement doit être insistante. L'index spécifié par chaque portée d'épilogue pointe vers un point de départ arbitraire dans le tableau des codes de déroulement. Il ne doit pas nécessairement pointer vers le début d'une séquence précédente ; il peut pointer vers le milieu. La meilleure approche ici consiste à générer la séquence de codes souhaitée et de rechercher une correspondance d'octets exacte dans le pool de séquences déjà encodé et à utiliser une correspondance exacte comme point de départ de la réutilisation.
+La réutilisation du code de déroulement doit être agressive. L'index spécifié par chaque portée d'épilogue pointe vers un point de départ arbitraire dans le tableau des codes de déroulement. Il ne doit pas nécessairement pointer vers le début d'une séquence précédente ; il peut pointer vers le milieu. La meilleure approche consiste à générer la séquence de code souhaitée, puis à rechercher une correspondance exacte d’octets dans le pool de séquences déjà encodé. Utilisez n’importe quelle correspondance parfaite comme point de départ pour la réutilisation.
 
-Si, une fois que les épilogues à une instruction ont été ignorés, il ne reste plus aucun épilogue, envisagez d'utiliser un formulaire .pdata compact ; cela devient bien plus probable en l'absence d'épilogue.
+Une fois les épiloguess à instruction unique ignorés, s’il n’y a pas de épilogues restants, envisagez d’utiliser un `.pdata` format compact ; il devient bien plus probable en l’absence d’un épilogue.
 
 ## <a name="examples"></a>Exemples
 
@@ -425,25 +425,25 @@ Epilogue:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x000535F8 (= 0x004535F8-0x00400000)
+  - *`Function Start RVA`* = 0x000535F8 (= 0x004535F8-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 1, indiquant les formats canoniques prologue et épilogue
+  - *`Flag`* = 1, ce qui indique les formats canoniques prologue et épilogue
 
-  - *Longueur de fonction* = 0x31 (= 0x62/2)
+  - *`Function Length`* = 0x31 (= 0x62/2)
 
-  - *RET* = 1, ce qui indique un retour de branche de 16 bits
+  - *`Ret`* = 1, ce qui indique un retour de branche de 16 bits
 
-  - *H* = 0, indiquant que les paramètres n’ont pas été hébergés
+  - *`H`* = 0, ce qui indique que les paramètres n’ont pas été hébergés
 
-  - *R*= 0 et *reg* = 1, indiquant un push/pop de R4-R5
+  - *`R`*= 0 et *`Reg`* = 1, indiquant push/pop de R4-R5
 
-  - *L* = 0, ce qui indique l’absence d’enregistrement/restauration LR
+  - *`L`* = 0, ce qui indique l’absence d’enregistrement/restauration LR
 
-  - *C* = 0, ce qui indique qu’il n’y a pas de chaînage de trames
+  - *`C`* = 0, ce qui indique qu’il n’y a pas de chaînage de frame
 
-  - *Ajuster la pile* = 0, ce qui indique aucun ajustement de la pile
+  - *`Stack Adjust`* = 0, ce qui indique aucun ajustement de la pile
 
 ### <a name="example-2-nested-function-with-local-allocation"></a>Exemple 2 : fonction imbriquée avec allocation locale
 
@@ -460,25 +460,25 @@ Epilogue:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x000533AC (= 0x004533AC-0x00400000)
+  - *`Function Start RVA`* = 0x000533AC (= 0x004533AC-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 1, indiquant les formats canoniques prologue et épilogue
+  - *`Flag`* = 1, ce qui indique les formats canoniques prologue et épilogue
 
-  - *Longueur de fonction* = 0x35 (= 0x6A/2)
+  - *`Function Length`* = 0x35 (= 0x6A/2)
 
-  - *RET* = 0, ce qui indique un retour de {PC} pop
+  - *`Ret`* = 0, ce qui indique un retour de {PC} pop
 
-  - *H* = 0, indiquant que les paramètres n’ont pas été hébergés
+  - *`H`* = 0, ce qui indique que les paramètres n’ont pas été hébergés
 
-  - *R*= 0 et *reg* = 3, indiquant un push/pop de R4-R7
+  - *`R`*= 0 et *`Reg`* = 3, ce qui indique un push/pop de R4-R7
 
-  - *L* = 1, indiquant que le GD a été enregistré/restauré
+  - *`L`* = 1, indiquant que le GD a été enregistré/restauré
 
-  - *C* = 0, ce qui indique qu’il n’y a pas de chaînage de trames
+  - *`C`* = 0, ce qui indique qu’il n’y a pas de chaînage de frame
 
-  - *Ajustement de pile* = 3 (= 0x0C/4)
+  - *`Stack Adjust`* = 3 (= 0x0C/4)
 
 ### <a name="example-3-nested-variadic-function"></a>Exemple 3 : fonction variadique imbriquée
 
@@ -495,25 +495,25 @@ Epilogue:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x00053988 (= 0x00453988-0x00400000)
+  - *`Function Start RVA`* = 0x00053988 (= 0x00453988-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 1, indiquant les formats canoniques prologue et épilogue
+  - *`Flag`* = 1, ce qui indique les formats canoniques prologue et épilogue
 
-  - *Longueur de fonction* = 0x2a (= 0x54/2)
+  - *`Function Length`* = 0x2A (= 0x54/2)
 
-  - *RET* = 0, ce qui indique un retour de style pop {PC} (dans le cas présent, un PC LDR, [SP], #0x14 retour)
+  - *`Ret`* = 0, ce qui indique un retour de style pop {PC} (dans ce cas, un `ldr pc,[sp],#0x14` retour)
 
-  - *H* = 1, indiquant que les paramètres ont été hébergés
+  - *`H`* = 1, indiquant que les paramètres ont été hébergés
 
-  - *R*= 0 et *reg* = 2, indiquant un push/pop de R4-R6
+  - *`R`*= 0 et *`Reg`* = 2, ce qui indique un push/pop de R4-R6
 
-  - *L* = 1, indiquant que le GD a été enregistré/restauré
+  - *`L`* = 1, indiquant que le GD a été enregistré/restauré
 
-  - *C* = 0, ce qui indique qu’il n’y a pas de chaînage de trames
+  - *`C`* = 0, ce qui indique qu’il n’y a pas de chaînage de frame
 
-  - *Ajuster la pile* = 0, ce qui indique aucun ajustement de la pile
+  - *`Stack Adjust`* = 0, ce qui indique aucun ajustement de la pile
 
 ### <a name="example-4-function-with-multiple-epilogues"></a>Exemple 4 : fonction avec plusieurs épilogues
 
@@ -541,25 +541,25 @@ Epilogues:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x000592F4 (= 0x004592F4-0x00400000)
+  - *`Function Start RVA`* = 0x000592F4 (= 0x004592F4-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 0, indiquant la présence d’un enregistrement. XData (obligatoire en raison de plusieurs épilogues)
+  - *`Flag`* = 0, indiquant que l' `.xdata` enregistrement est présent (requis pour plusieurs épilogues)
 
-  - *. XData, adresse* -0x00400000
+  - *`.xdata` adresse* -0x00400000
 
-.xdata (variable, 6 mots) :
+`.xdata` (variable, 6 mots) :
 
 - Mot 0
 
-  - *Longueur de fonction* = 0x0001A3 (= 0x000346/2)
+  - *`Function Length`* = 0x0001A3 (= 0x000346/2)
 
-  - *Vers* = 0, indiquant la première version de XData
+  - *Vers* = 0, indiquant la première version de`.xdata`
 
   - *X* = 0, ce qui n’indique aucune donnée d’exception
 
-  - *E* = 0, indiquant une liste d’étendues de épilogue
+  - *`E`* = 0, ce qui indique une liste d’étendues de épilogue
 
   - *F* = 0, indiquant une description complète de la fonction, y compris le prologue
 
@@ -601,25 +601,25 @@ Epilogue:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x00085A20 (= 0x00485A20-0x00400000)
+  - *`Function Start RVA`* = 0x00085A20 (= 0x00485A20-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 0, indiquant la présence d’un enregistrement. XData (nécessaire en raison de plusieurs épilogues)
+  - *`Flag`* = 0, ce qui indique que l' `.xdata` enregistrement est présent (nécessaire pour plusieurs épilogues)
 
-  - *. XData, adresse* -0x00400000
+  - *`.xdata` adresse* -0x00400000
 
-.xdata (variable, 3 mots) :
+`.xdata` (variable, 3 mots) :
 
 - Mot 0
 
-  - *Longueur de fonction* = 0x0001A3 (= 0x000346/2)
+  - *`Function Length`* = 0x0001A3 (= 0x000346/2)
 
-  - *Vers* = 0, indiquant la première version de XData
+  - *Vers* = 0, indiquant la première version de`.xdata`
 
   - *X* = 0, ce qui n’indique aucune donnée d’exception
 
-  - *E* = 0, indiquant une liste d’étendues de épilogue
+  - *`E`* = 0, ce qui indique une liste d’étendues de épilogue
 
   - *F* = 0, indiquant une description complète de la fonction, y compris le prologue
 
@@ -659,25 +659,25 @@ Epilogue:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x00088C24 (= 0x00488C24-0x00400000)
+  - *`Function Start RVA`* = 0x00088C24 (= 0x00488C24-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 0, indiquant la présence d’un enregistrement. XData (nécessaire en raison de plusieurs épilogues)
+  - *`Flag`* = 0, ce qui indique que l' `.xdata` enregistrement est présent (nécessaire pour plusieurs épilogues)
 
-  - *. XData, adresse* -0x00400000
+  - *`.xdata` adresse* -0x00400000
 
-.xdata (variable, 5 mots) :
+`.xdata` (variable, 5 mots) :
 
 - Mot 0
 
-  - *Longueur de fonction* = 0x000027 (= 0x00004E/2)
+  - *`Function Length`* = 0x000027 (= 0x00004E/2)
 
-  - *Vers* = 0, indiquant la première version de XData
+  - *Vers* = 0, indiquant la première version de`.xdata`
 
   - *X* = 1, indiquant les données d’exception présentes
 
-  - *E* = 1, indiquant une seule épilogue
+  - *`E`* = 1, ce qui indique un seul épilogue
 
   - *F* = 0, indiquant une description complète de la fonction, y compris le prologue
 
@@ -718,25 +718,25 @@ Function:
 
 - Mot 0
 
-  - *Adresse RVA de début de fonction* = 0x00088C72 (= 0x00488C72-0x00400000)
+  - *`Function Start RVA`* = 0x00088C72 (= 0x00488C72-0x00400000)
 
 - Mot 1
 
-  - *Indicateur* = 1, indiquant les formats canoniques prologue et épilogue
+  - *`Flag`* = 1, ce qui indique les formats canoniques prologue et épilogue
 
-  - *Longueur de fonction* = 0x0B (= 0x16/2)
+  - *`Function Length`* = 0x0B (= 0x16/2)
 
-  - *RET* = 0, ce qui indique un retour de {PC} pop
+  - *`Ret`* = 0, ce qui indique un retour de {PC} pop
 
-  - *H* = 0, indiquant que les paramètres n’ont pas été hébergés
+  - *`H`* = 0, ce qui indique que les paramètres n’ont pas été hébergés
 
-  - *R*= 0 et *reg* = 7, ce qui indique qu’aucun registre n’a été enregistré/restauré
+  - *`R`*= 0 et *`Reg`* = 7, ce qui indique qu’aucun registre n’a été enregistré/restauré
 
-  - *L* = 1, indiquant que le GD a été enregistré/restauré
+  - *`L`* = 1, indiquant que le GD a été enregistré/restauré
 
-  - *C* = 0, ce qui indique qu’il n’y a pas de chaînage de trames
+  - *`C`* = 0, ce qui indique qu’il n’y a pas de chaînage de frame
 
-  - *Ajuster la pile* = 1, ce qui indique un ajustement de pile de 1 × 4 octets
+  - *`Stack Adjust`* = 1, ce qui indique un ajustement de pile de 1 × 4 octets
 
 ## <a name="see-also"></a>Voir aussi
 

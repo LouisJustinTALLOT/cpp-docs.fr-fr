@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ac6afbbc2bfef3793e9685a7c9e1054b7d677bd8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97172425"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951517"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Outils de diagnostic parallèles (runtime d'accès concurrentiel)
 
@@ -28,13 +28,13 @@ Les outils de profilage fournissent trois vues de données qui affichent des inf
 
 Le runtime d’accès concurrentiel utilise [suivi d’v nements pour Windows](/windows/win32/ETW/event-tracing-portal) (ETW) pour notifier les outils d’instrumentation, tels que les profileurs, lorsque divers événements se produisent. Ces événements incluent le moment où un planificateur est activé ou désactivé, quand un contexte commence, se termine, se bloque ou produit, et quand un algorithme parallèle commence ou se termine.
 
-Les outils, tels que le [visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer) , utilisent cette fonctionnalité. par conséquent, vous n’avez généralement pas besoin de travailler directement avec ces événements. Toutefois, ces événements sont utiles quand vous développez un profileur personnalisé ou lorsque vous utilisez des outils de suivi d’événements tels que [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
+Les outils, tels que le [visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer) , utilisent cette fonctionnalité. par conséquent, vous n’avez généralement pas besoin de travailler directement avec ces événements. Toutefois, ces événements sont utiles quand vous développez un profileur personnalisé ou lorsque vous utilisez des outils de suivi d’événements tels que [Windows performance Toolkit](/windows-hardware/test/wpt/).
 
 Le runtime d’accès concurrentiel déclenche ces événements uniquement lorsque le suivi est activé. Appelez la fonction [Concurrency :: EnableTracing,](reference/concurrency-namespace-functions.md#enabletracing) pour activer le suivi d’événements et la fonction [concurrency ::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) pour désactiver le suivi.
 
 Le tableau suivant décrit les événements déclenchés par le runtime lorsque le suivi d’événements est activé :
 
-|Événement|Description|Valeur|
+|Événement|Description|Value|
 |-----------|-----------------|-----------|
 |[concurrence :: ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identificateur du fournisseur ETW pour le runtime d’accès concurrentiel.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrence :: ContextEventGuid,](reference/concurrency-namespace-constants1.md#contexteventguid)|Marque les événements liés aux contextes.|`5727a00f-50be-4519-8256-f7699871fecb`|

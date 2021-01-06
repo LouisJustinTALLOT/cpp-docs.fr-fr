@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b5ca521bdddb78c3cd7c5dd41f8999b99cb92e20
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97119406"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951435"
 ---
 # <a name="project-build-error-prj0003"></a>Erreur de génération de projet PRJ0003
 
@@ -22,7 +22,7 @@ La commande de *ligne de commande* formée à partir d’une entrée dans la bo�
 
 Les raisons possibles de cette erreur sont les suivantes :
 
-- Votre projet dépend de ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans Visual Studio, mais il a été publié en tant que projet de source partagée sur CodePlex. Pour télécharger le code source et les outils ATL Server, accédez à [bibliothèque et outils ATL Server](https://go.microsoft.com/fwlink/p/?linkid=81979).
+- Votre projet dépend de ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans Visual Studio, mais il a été publié en tant que projet de source partagée sur CodePlex. Pour télécharger le code source et les outils ATL Server, accédez à [bibliothèque et outils ATL Server](https://archive.codeplex.com/?p=atlserver).
 
 - Ressources système insuffisantes. Fermez certaines applications pour résoudre ce qui se passe.
 

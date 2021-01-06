@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5aa5377315d526102f6358f36cb9ed6a60a133be
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97184658"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951539"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -34,24 +34,24 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CException :: CException](#cexception)|Construit un objet `CException`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CException ::D supprim](#delete)|Supprime un `CException` objet.|
 |[CException :: ReportError](#reporterror)|Signale un message d’erreur dans une boîte de message à l’utilisateur.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Étant donné que `CException` est une classe de base abstraite, vous ne pouvez pas créer `CException` d’objets directement ; vous devez créer des objets de classes dérivées. Si vous avez besoin de créer votre propre `CException` classe de style, utilisez l’une des classes dérivées listées ci-dessus comme modèle. Assurez-vous que votre classe dérivée utilise également `IMPLEMENT_DYNAMIC` .
 
 Les classes dérivées et leurs descriptions sont répertoriées ci-dessous :
 
-|Nom|Description|
+|Name|Description|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe de base pour les exceptions MFC critiques pour les ressources|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condition d’exception d’argument non valide|
@@ -81,7 +81,7 @@ Si une exception est interceptée par l’une des macros, l' `CException` objet 
 
 `CException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
@@ -98,7 +98,7 @@ explicit CException(BOOL bAutoDelete);
 *b_AutoDelete*<br/>
 Spécifiez TRUE si la mémoire de l' `CException` objet a été allouée sur le tas. Cela entraîne la suppression de l' `CException` objet lorsque la `Delete` fonction membre est appelée pour supprimer l’exception. Spécifiez FALSe si l' `CException` objet se trouve sur la pile ou s’il s’agit d’un objet global. Dans ce cas, l' `CException` objet n’est pas supprimé lorsque la `Delete` fonction membre est appelée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Normalement, vous n’avez jamais besoin d’appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’une `CException` classe dérivée de et appeler son constructeur, ou elle doit utiliser l’une des fonctions de levée MFC, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), pour lever un type prédéfini. Cette documentation n’est fournie qu’à des fins d’exhaustivité.
 
@@ -110,7 +110,7 @@ Cette fonction vérifie si l' `CException` objet a été créé sur le tas et, s
 void Delete();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Lors de la suppression d’un `CException` objet, utilisez la `Delete` fonction membre pour supprimer l’exception. N’utilisez pas l' **`delete`** opérateur directement, car il `CException` peut s’agir d’un objet global ou créé sur la pile.
 
@@ -187,7 +187,7 @@ Spécifie le style de la boîte de message. Applique une combinaison de [styles 
 *nMessageID*<br/>
 Spécifie l’ID de ressource (entrée de table de chaînes) d’un message à afficher si l’objet exception n’a pas de message d’erreur. Si la valeur est 0, le message « aucun message d’erreur n’est disponible » s’affiche.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 `AfxMessageBox`Valeur ; sinon, 0 s’il n’y a pas assez de mémoire pour afficher la boîte de message. Consultez [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) pour connaître les valeurs de retour possibles.
 
@@ -231,5 +231,4 @@ else
 
 [CObject (classe)](cobject-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
-[Traitement des exceptions](exception-processing.md)<br/>
-[Comment faire : créer mes propres classes d’exceptions personnalisées](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Traitement des exceptions](exception-processing.md)
