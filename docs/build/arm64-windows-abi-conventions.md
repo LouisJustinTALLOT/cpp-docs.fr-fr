@@ -2,12 +2,12 @@
 description: 'En savoir plus sur : vue d’ensemble des conventions ABI ARM64'
 title: Vue d’ensemble des conventions ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d597a50b771524b69ef2f2091082d7ca4d19d453
+ms.sourcegitcommit: e71b8da6c8a357aa06bb6b36936a8f4ecae082ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97157111"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97976334"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM64
 
@@ -72,7 +72,7 @@ Alignement de la disposition par défaut pour les valeurs globales et statiques�
 
 L’architecture AArch64 prend en charge les registres d’entiers 32 :
 
-| S’inscrire | Volatil ? | Rôle |
+| S’inscrire | Volatil ? | Role |
 | - | - | - |
 | x0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
 | x1-x 7 | Volatil | Paramètre/Registre de travail 2-8 |
@@ -95,7 +95,7 @@ Le pointeur de frame (x29) est requis pour la compatibilité avec le parcours de
 
 L’architecture AArch64 prend également en charge les registres à virgule flottante 32/SIMD, résumés ci-dessous :
 
-| S’inscrire | Volatil ? | Rôle |
+| S’inscrire | Volatil ? | Role |
 | - | - | - |
 | v0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
 | v1-v7 | Volatil | Registres de paramètres/Scratch 2-8 |
@@ -106,7 +106,7 @@ Chaque registre est accessible en tant que valeur 128 bits complète (via v0-V31
 
 Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur les différents champs de bits qu’il contient :
 
-| Bits | Signification | Volatil ? | Rôle |
+| Bits | Signification | Volatil ? | Role |
 | - | - | - | - |
 | 26 | AHP | Non volatile | Autre contrôle à demi-précision. |
 | 25 | DN | Non volatile | Contrôle en mode NaN par défaut. |
@@ -118,7 +118,7 @@ Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur l
 
 Comme AArch32, la spécification AArch64 fournit trois registres « ID de thread » contrôlés par le système :
 
-| S’inscrire | Rôle |
+| S’inscrire | Role |
 | - | - |
 | TPIDR_EL0 | Réservé. |
 | TPIDRRO_EL0 | Contient le nombre de processeurs pour le processeur actuel. |
@@ -204,7 +204,13 @@ Les valeurs intégrales sont retournées dans x0.
 
 Les valeurs à virgule flottante sont retournées dans S0, D0 ou v0, selon le cas.
 
-Les valeurs HFA et HVA sont retournées dans S0-S3, D0-D3 ou v0-v3, selon le cas.
+Un type est considéré comme un HFA ou un HVA si tous les éléments suivants sont pris en compte :
+
+- Elle n’est pas vide,
+- Elle n’a aucun constructeur par défaut ou de copie, aucun destructeur ou opérateur d’assignation non trivial.
+- Tous ses membres ont le même type HFA ou HVA, ou les types float, double ou néon qui correspondent aux types HFA ou HVA des autres membres.
+
+Les valeurs HFA et HVA avec quatre éléments ou moins sont retournées dans S0-S3, D0-D3 ou v0-v3, selon le cas.
 
 Les types retournés par valeur sont gérés différemment selon qu’ils ont certaines propriétés et que la fonction est une fonction membre non statique. Types qui ont toutes ces propriétés,
 
