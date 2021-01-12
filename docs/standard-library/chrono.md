@@ -3,20 +3,20 @@ description: 'En savoir plus sur : &lt; Chrono&gt;'
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
+- <chrono>
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
 - chrono/std::chrono::seconds
-- <chrono>
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cc425d99d41d23fe25d2f66888240f9ea9a93cfb
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325139"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126661"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -67,11 +67,11 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 |[and](../standard-library/chrono-operators.md#op_star)|Opérateur de multiplication pour les objets `duration`.|
 |[and](../standard-library/chrono-operators.md#op_div)|Opérateur de division pour les objets `duration`.|
 |[opérateur +](../standard-library/chrono-operators.md#op_add)|Ajoute des objets `duration` et `time_point`.|
-|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Détermine si un objet `duration` ou `time_point` est inférieur à un autre objet `duration` ou `time_point`.|
-|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Détermine si un objet `duration` ou `time_point` est inférieur ou égal à un autre objet `duration` ou `time_point`.|
+|[and&lt;](../standard-library/chrono-operators.md#op_lt)|Détermine si un objet `duration` ou `time_point` est inférieur à un autre objet `duration` ou `time_point`.|
+|[and&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Détermine si un objet `duration` ou `time_point` est inférieur ou égal à un autre objet `duration` ou `time_point`.|
 |[opérateur = =](../standard-library/chrono-operators.md#op_eq_eq)|Détermine si deux objets `duration` représentent des intervalles de temps de même longueur ou si deux objets `time_point` représentent le même point dans le temps.|
-|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Détermine si un objet `duration` ou `time_point` est supérieur à un autre objet `duration` ou `time_point`.|
-|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Détermine si un objet `duration` ou `time_point` est supérieur ou égal à un autre objet `duration` ou `time_point`.|
+|[and&gt;](../standard-library/chrono-operators.md#op_gt)|Détermine si un objet `duration` ou `time_point` est supérieur à un autre objet `duration` ou `time_point`.|
+|[and&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Détermine si un objet `duration` ou `time_point` est supérieur ou égal à un autre objet `duration` ou `time_point`.|
 
 ### <a name="typedefs-predefined-duration-types"></a>Typedefs (types de durée prédéfinis)
 

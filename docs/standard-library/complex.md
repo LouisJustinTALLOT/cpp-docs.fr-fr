@@ -4,16 +4,15 @@ title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <complex>
-- std::<complex>
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4019b32a6bb53c2fbf820c1a3d3d70824ccc6b7f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97233836"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126627"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -43,7 +42,7 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
    (*a*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z*  =  *a*  +  *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées à l’ensemble de nombres complexes et à leurs composants. Par exemple :
+En représentant un nombre complexe *z* = (*a*, *b*) sous la forme *z*  =  *a*  +  *bi*, où *i*<sup>2</sup> =-1, les règles de l’algèbre de l’ensemble des nombres réels peuvent être appliquées à l’ensemble de nombres complexes et à leurs composants. Exemple :
 
    (1 + 2 *i*) \* (2 + 3 *i*) = 1 \* (2 + 3 *i*) + 2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 

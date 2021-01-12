@@ -4,16 +4,15 @@ title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iterator>
-- iterator/std::<iterator>
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9376f26acef4cfb5feda4644881d43511b3b77f6
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97112061"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126505"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -78,7 +77,7 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 |[opérateur ! =](../standard-library/iterator-operators.md#op_neq)|Teste si l'objet itérateur situé à gauche de l'opérateur n'est pas égal à l'objet itérateur situé à droite.|
 |[opérateur = =](../standard-library/iterator-operators.md#op_eq_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est égal à l'objet itérateur situé à droite.|
 |[<d’opérateur ](../standard-library/iterator-operators.md#op_lt)|Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur à l'objet itérateur situé à droite.|
-|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur ou égal à l'objet itérateur situé à droite.|
+|[and\<=](../standard-library/iterator-operators.md#op_gt_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur ou égal à l'objet itérateur situé à droite.|
 |[>d’opérateur ](../standard-library/iterator-operators.md#op_gt)|Teste si l'objet itérateur situé à gauche de l'opérateur est supérieur à l'objet itérateur situé à droite.|
 |[>opérateur =](../standard-library/iterator-operators.md#op_gt_eq)|Teste si l'objet itérateur situé à gauche de l'opérateur est supérieur ou égal à l'objet itérateur situé à droite.|
 |[opérateur +](../standard-library/iterator-operators.md#op_add)|Ajoute un décalage à un itérateur et retourne le nouvel `reverse_iterator` qui se rapporte à l'élément inséré à la nouvelle position décalée.|

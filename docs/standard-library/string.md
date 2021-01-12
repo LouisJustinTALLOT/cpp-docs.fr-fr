@@ -3,17 +3,16 @@ description: 'En savoir plus sur : &lt; chaîne&gt;'
 title: '&lt;string&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- string/std::<string>
 - <string>
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d0c685eae1bb05faaac55aae614fc10e60472759
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183540"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126544"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 

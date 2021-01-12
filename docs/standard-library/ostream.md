@@ -4,17 +4,15 @@ title: '&lt;ostream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ostream>
-- ostream/std::<ostream>
-- std::<ostream>
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 3b17ff221e08b9fc709f1d2c32c5862f6075e451
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a31ffe801fca16e3b7fc1037c59613150e383933
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193030"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126427"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 

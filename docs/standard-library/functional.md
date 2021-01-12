@@ -4,18 +4,16 @@ title: '&lt;functional&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <functional>
-- functional/std::<functional>
-- std::<functional>
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fe9a42c2992557bd9cf1237a6fe66c4fbfcc232d
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97232146"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126128"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -141,7 +139,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |[logical_not](../standard-library/logical-not-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération logique de négation sur des éléments d'un type valeur spécifié et teste si le résultat est vrai ou faux.|
 |[logical_or](../standard-library/logical-or-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération logique de disjonction sur des éléments d'un type valeur spécifié et teste si le résultat est vrai ou faux.|
 |[minus](../standard-library/minus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de soustraction sur des éléments d'un type valeur spécifié.|
-|[modulo](../standard-library/modulus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de modulo sur des éléments d'un type valeur spécifié.|
+|[Young](../standard-library/modulus-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de modulo sur des éléments d'un type valeur spécifié.|
 |[multiplies](../standard-library/multiplies-struct.md)|La classe fournit un objet de fonction prédéfini qui effectue l'opération arithmétique de multiplication sur des éléments d'un type valeur spécifié.|
 |[negate](../standard-library/negate-struct.md)|La classe fournit un objet de fonction prédéfini qui retourne la valeur négative d'une valeur d'élément.|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|Prédicat binaire qui teste si une valeur d’un type spécifié n’est pas égale à une autre valeur de ce type.|

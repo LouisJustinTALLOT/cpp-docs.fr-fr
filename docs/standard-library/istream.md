@@ -3,18 +3,16 @@ description: 'En savoir plus sur : &lt; IStream&gt;'
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- istream/std::<istream>
 - <istream>
-- std::<istream>
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9b9b647b044cd0333349931285c4bffce000d062
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277815"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126531"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 

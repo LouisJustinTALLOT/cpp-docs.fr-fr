@@ -4,16 +4,15 @@ title: '&lt;ios&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
-- ios/std::<ios>
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9904c91c46eb34bc278a0ce877e157f01a6f9a26
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231405"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126037"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -32,7 +31,7 @@ Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet
 
 Un grand nombre de fonctions sont des manipulateurs. Un manipulateur déclaré dans \<ios> modifie les valeurs stockées dans son objet d’argument de la classe [ios_base](../standard-library/ios-base-class.md). D’autres manipulateurs effectuent des actions sur des flux contrôlés par des objets d’un type dérivé de cette classe, comme une spécialisation de l’un des modèles de classe [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Par exemple, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) efface l’indicateur `ios_base::skipws` de format dans l’objet `str` , qui peut être de l’un de ces types.
 
-Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Par exemple :
+Vous pouvez également appeler un manipulateur en l'insérant dans un flux de sortie ou en l'extrayant d'un flux d'entrée, grâce à des opérations d'insertion et d'extraction spéciales fournies pour les classes dérivées de `ios_base`. Exemple :
 
 ```cpp
 istr>> noskipws;
@@ -61,7 +60,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[decembre](../standard-library/ios-functions.md#dec)|Indique que les variables de type entier sont affichées en notation de base 10.|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configure les indicateurs d'un objet `ios_base` pour utiliser un format d'affichage par défaut pour les valeurs de type float.|
 |[des](../standard-library/ios-functions.md#fixed)|Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.|
-|[séquence](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
+|[hex](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[intérieurs](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
 |[gauche](../standard-library/ios-functions.md#left)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.|
@@ -73,7 +72,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Fait en sorte que la sortie soit mise en mémoire tampon et traitée quand la mémoire tampon est pleine.|
 |[nouppercase](../standard-library/ios-functions.md#nouppercase)|Spécifie que les chiffres hexadécimaux et l'exposant en notation scientifique apparaissent en minuscules.|
 |[personnalisation](../standard-library/ios-functions.md#oct)|Indique que les variables de type entier sont affichées en notation de base 8.|
-|[Oui](../standard-library/ios-functions.md#right)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de droite.|
+|[droite](../standard-library/ios-functions.md#right)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de droite.|
 |[nature](../standard-library/ios-functions.md#scientific)|Fait en sorte que les nombres à virgule flottante soient affichés à l'aide de la notation scientifique.|
 |[showbase](../standard-library/ios-functions.md#showbase)|Indique la base de notation dans laquelle un nombre est affiché.|
 |[showpoint](../standard-library/ios-functions.md#showpoint)|Affiche la partie entière d'un nombre à virgule flottante et les chiffres à droite de la virgule décimale même quand la partie fractionnaire est égale à zéro.|

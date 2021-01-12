@@ -4,15 +4,14 @@ title: '&lt;production&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
-- std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 7603bc6a78671482f691f15f83f51439a5002870
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324407"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126570"
 ---
 # <a name="ltexecutiongt"></a>&lt;production&gt;
 
