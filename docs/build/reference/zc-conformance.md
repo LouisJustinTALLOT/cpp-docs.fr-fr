@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 15027182d632c1076c78e2e8a1335e1059ac7e3b
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041521"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104763"
 ---
 # <a name="zc-conformance"></a>`/Zc` Conformité
 
@@ -23,7 +23,7 @@ Vous pouvez utiliser les **`/Zc`** Options du compilateur pour spécifier le com
 
 > **`/Zc:`**_option_{,_option_}
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Lorsque Visual Studio a implémenté une extension en C ou C++ qui n’est pas compatible avec la norme, vous pouvez utiliser une **`/Zc`** option de conformité pour spécifier un comportement conforme ou spécifique à Microsoft. Pour certaines options, le comportement spécifique à Microsoft est la valeur par défaut, pour empêcher les modifications importantes à grande échelle du code existant. Dans d’autres cas, la valeur par défaut est le comportement standard, où les améliorations de la sécurité, des performances ou de la compatibilité l’emportent sur les coûts des modifications avec rupture. Le paramètre par défaut de chaque option de conformité peut changer dans les versions plus récentes de Visual Studio. Pour plus d’informations sur chaque option de conformité, consultez la rubrique relative à l’option spécifique. L' [`/permissive-`](permissive-standards-conformance.md) option de compilateur définit implicitement les options de conformité qui ne sont pas définies par défaut sur leur paramètre conforme.
 
@@ -33,10 +33,10 @@ Voici les **`/Zc`** Options du compilateur :
 |--|--|
 | [`/Zc:alignedNew`](zc-alignednew.md) | Activez l’allocation dynamique sur-alignée C++ 17 (activé par défaut dans C++ 17). |
 | [`/Zc:auto`](zc-auto-deduce-variable-type.md) | Appliquer la nouvelle signification C++ standard pour **`auto`** (activé par défaut). |
-| [`/Zc__cplusplus`](zc-cplusplus.md) | Activez la `__cplusplus` macro pour signaler le standard pris en charge (désactivé par défaut). |
+| [`/Zc:__cplusplus`](zc-cplusplus.md) | Activez la `__cplusplus` macro pour signaler le standard pris en charge (désactivé par défaut). |
 | [`/Zc:externConstexpr`](zc-externconstexpr.md) | Activez la liaison externe pour les **`constexpr`** variables (désactivé par défaut). |
 | [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | Appliquer les **`for`** règles de portée C++ standard (activé par défaut). |
-| [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Activez implicite **`noexcept`** sur les fonctions requises (activé par défaut). |
+| [`/Zc:implicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Activez implicite **`noexcept`** sur les fonctions requises (activé par défaut). |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | Supprimez la fonction ou les données non référencées si elle est COMDAT ou si elle a uniquement une liaison interne (désactivée par défaut). |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | Appliquer les règles C++ 17 **`noexcept`** (activé par défaut dans c++ 17 ou version ultérieure). |
 | [`/Zc:preprocessor`](zc-preprocessor.md) | Utilisez le nouveau préprocesseur conforme (désactivé par défaut, sauf dans C11/C17). |
@@ -56,4 +56,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

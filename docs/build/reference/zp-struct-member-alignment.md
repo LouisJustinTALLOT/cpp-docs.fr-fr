@@ -1,7 +1,7 @@
 ---
 description: En savoir plus sur:/ZP (alignement des membres de la structure)
 title: /Zp (Alignement des membres de la structure)
-ms.date: 04/04/2019
+ms.date: 01/08/2021
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8d29c442726aff9503a42378fce6a7b8b09526ed
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224307"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104776"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Alignement des membres de la structure)
 
@@ -44,9 +44,9 @@ Les valeurs de compression disponibles sont décrites dans le tableau suivant :
 N’utilisez pas cette option, sauf si vous avez des exigences d’alignement spécifiques.
 
 > [!WARNING]
-> Les en-têtes C++ dans le SDK Windows définis et partent du principe de l' **`/Zp8`** empaquetage en interne. Une altération de la mémoire peut se produire si le **`/Zp`** paramètre est modifié à l’intérieur des en-têtes de SDK Windows. Les en-têtes ne sont pas affectés par les **`/Zp`** options que vous définissez sur la ligne de commande.
+> Les en-têtes C/C++ du SDK Windows supposent de les **`/Zp8`** compresser en interne. Ne modifiez pas la valeur par défaut lorsque vous incluez les en-têtes SDK Windows, à l’aide **`/Zp`** de sur la ligne de commande ou à l’aide de `#pragma pack` . Dans le cas contraire, votre application risque de provoquer une altération de la mémoire au moment de l’exécution.
 
-Vous pouvez également utiliser [`pack`](../../preprocessor/pack.md) pour contrôler la compression de structure. Pour plus d'informations sur l'alignement, consultez :
+Vous pouvez également utiliser le [ `pack` pragma](../../preprocessor/pack.md) pour contrôler la compression de structure. Pour plus d'informations sur l'alignement, consultez :
 
 - [`align`](../../cpp/align-cpp.md)
 

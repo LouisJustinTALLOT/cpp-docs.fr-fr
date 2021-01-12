@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 061ddac33af4b8e1587b2ab1035d9f96ba18b108
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319467"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104750"
 ---
 # <a name="auto-c"></a>`auto` C++
 
@@ -50,7 +50,16 @@ Cas de conversion dans lesquels vous ne souhaitez peut-être pas utiliser **`aut
 
 Pour utiliser le **`auto`** mot clé, utilisez-le à la place d’un type pour déclarer une variable et spécifiez une expression d’initialisation. En outre, vous pouvez modifier le **`auto`** mot clé à l’aide de spécificateurs et de déclarateurs tels que **`const`** , **`volatile`** , pointeur ( **`*`** ), référence ( **`&`** ) et référence rvalue ( **`&&`** ). Le compilateur évalue l'expression d'initialisation et utilise ensuite ces informations pour déduire le type de la variable.
 
-L’expression d’initialisation peut être une assignation (syntaxe avec signe égal), une initialisation directe (syntaxe de style fonction), une [`operator new`](new-operator-cpp.md) expression ou l’expression d’initialisation peut être le paramètre *de déclaration for-Range* dans une instruction d' [instruction basée sur une plage `for` (C++)](../cpp/range-based-for-statement-cpp.md) . Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et exemples de code plus loin dans ce document.
+L' **`auto`** expression d’initialisation peut prendre plusieurs formes :
+
+- Syntaxe d’initialisation universelle, telle que `auto a { 42 };` .
+- Syntaxe d’affectation, telle que `auto b = 0;` .
+- La syntaxe d’affectation universelle, qui combine les deux formes précédentes, telles que `auto c = { 3.14156 };` .
+- Initialisation directe, ou syntaxe de style constructeur, telle que `auto d( 1.41421f );` .
+
+Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et exemples de code plus loin dans ce document.
+
+Lorsque **`auto`** est utilisé pour déclarer le paramètre de boucle dans une instruction basée sur une plage **`for`** , il utilise une syntaxe d’initialisation différente, par exemple `for (auto& i : iterable) do_action(i);` . Pour plus d’informations, consultez [instruction basée sur une plage `for` (C++)](../cpp/range-based-for-statement-cpp.md).
 
 Le **`auto`** mot clé est un espace réservé pour un type, mais il n’est pas lui-même un type. Par conséquent, le **`auto`** mot clé ne peut pas être utilisé dans les casts ou les opérateurs tels que [`sizeof`](../cpp/sizeof-operator.md) et (pour C++/CLI) [`typeid`](../extensions/typeid-cpp-component-extensions.md) .
 
