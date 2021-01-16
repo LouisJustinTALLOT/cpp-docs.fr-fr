@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : memcmp, wmemcmp'
 title: memcmp, wmemcmp
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - memcmp
 - wmemcmp
@@ -18,6 +18,7 @@ api_location:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 52f770cd2f5fee5c7d8e016682d80e81672588b8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97239985"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243149"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -70,17 +71,17 @@ Nombre de caractères à comparer. (Compare les octets pour **memcmp**, les cara
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
-|Valeur retournée|Relation des premiers caractères *Count* de buf1 et buf2|
+|Valeur de retour|Relation des premiers caractères *Count* de buf1 et buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*Buffer1* inférieur à *buffer2*|
 |0|*Buffer1* identique à *buffer2*|
 |> 0|*Buffer1* supérieur à *buffer2*|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **`unsigned char`** pour **memcmp** et comme **`wchar_t`** pour **wmemcmp**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

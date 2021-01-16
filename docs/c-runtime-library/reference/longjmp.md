@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : longjmp'
 title: longjmp
-ms.date: 08/14/2018
+ms.date: 1/14/2021
 api_name:
 - longjmp
 api_location:
@@ -16,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: bfcbac2ea54e167f65f0d303e08d6450e53ff0e1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 80d5c547be3e620329939297066a4101cef46789
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299980"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243071"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -54,7 +55,7 @@ Variable dans laquelle l’environnement est stocké.
 *value*<br/>
 Valeur à retourner à l’appel `setjmp`.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction **longjmp** restaure un environnement de pile et les paramètres régionaux d’exécution précédemment enregistrés dans *env* by `setjmp` . `setjmp` et **longjmp** offrent un moyen d’exécuter un non local **`goto`** ; ils sont généralement utilisés pour passer le contrôle d’exécution au code de gestion des erreurs ou de récupération dans une routine appelée précédemment sans utiliser les conventions d’appel et de retour normales.
 
@@ -83,7 +84,7 @@ Respectez les restrictions suivantes lors de l’utilisation de **longjmp**:
 
 Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : wctype'
 title: wctype
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - wctype
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,15 +25,14 @@ f1_keywords:
 helpviewer_keywords:
 - wctype function
 - wide characters
-ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 0791d4f048dfa5d6804db14d577b1370ffbf8754
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d0afd2bd163af967b11d0df58c84b62521ca6c2a
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97254194"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242927"
 ---
-# <a name="wctype"></a>wctype
+# `wctype`
 
 Détermine une règle de classification pour les codes à caractères larges.
 
@@ -46,40 +46,40 @@ wctype_t wctype(
 
 ### <a name="parameters"></a>Paramètres
 
-*property*<br/>
+*`property`*\
 Chaîne de propriété.
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-Si la catégorie **LC_CTYPE** des paramètres régionaux actifs ne définit pas une règle de classification dont le nom correspond à la *propriété* de chaîne de propriété, la fonction retourne la valeur zéro. Sinon, elle retourne une valeur différente de zéro qui peut être utilisée comme deuxième argument dans un appel ultérieur à [towctrans](towctrans.md).
+Si la **`LC_CTYPE`** catégorie des paramètres régionaux actuels ne définit pas une règle de classification dont le nom correspond à la chaîne de propriété *`property`* , la fonction retourne la valeur zéro. Sinon, elle retourne une valeur différente de zéro pouvant être utilisée comme deuxième argument pour un appel ultérieur à [`towctrans`](towctrans.md) .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction détermine une règle de classification pour les codes à caractères larges. Les paires d’appels suivantes présentent le même comportement dans tous les paramètres régionaux (mais une implémentation peut définir des règles de classification supplémentaires même dans les paramètres régionaux « C ») :
 
 |Fonction|Identique à|
 |--------------|-------------|
-|iswalnum (c)|iswctype (c, wctype ("alnum"))|
-|iswalpha (c)|iswctype (c, wctype ("alpha"))|
-|iswcntrl (c)|iswctype (c, wctype ("Ctrl"))|
-|iswdigit (c)|iswctype (c, wctype ("digit"))|
-|iswgraph (c)|iswctype (c, wctype ("Graph"))|
-|iswlower (c)|iswctype (c, wctype (« Lower »))|
-|iswprint (c)|iswctype (c, wctype (« imprimer »))|
-|iswpunct (c)|iswctype (c, wctype ("punct"))|
-|iswspace (c)|iswctype (c, wctype ("Space"))|
-|iswupper (c)|iswctype (c, wctype ("Upper"))|
-|iswxdigit (c)|iswctype (c, wctype ("xdigit"))|
+|`iswalnum(c)`|`iswctype(c, wctype( "alnum" ))`|
+|`iswalpha(c)`|`iswctype(c, wctype( "alpha" ))`|
+|`iswcntrl(c)`|`iswctype(c, wctype( "cntrl" ))`|
+|`iswdigit(c)`|`iswctype(c, wctype( "digit" ))`|
+|`iswgraph(c)`|`iswctype(c, wctype( "graph" ))`|
+|`iswlower(c)`|`iswctype(c, wctype( "lower" ))`|
+|`iswprint(c)`|`iswctype(c, wctype( "print" ))`|
+|`iswpunct(c)`|`iswctype(c, wctype( "punct" ))`|
+|`iswspace(c)`|`iswctype(c, wctype( "space" ))`|
+|`iswupper(c)`|`iswctype(c, wctype( "upper" ))`|
+|`iswxdigit(c)`|`iswctype(c, wctype( "xdigit" ))`|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**wctype**|\<wctype.h>|
+|`wctype`|`<wctype.h>`|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[Conversion de données](../../c-runtime-library/data-conversion.md)\
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)

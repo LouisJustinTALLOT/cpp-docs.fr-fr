@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : memchr, wmemchr'
 title: memchr, wmemchr
-ms.date: 03/31/2019
+ms.date: 1/14/2021
 api_name:
 - wmemchr
 - memchr
@@ -17,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f9643dd9c84244916dfdf151efbec1b0014b42e3
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97239998"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243162"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -89,13 +90,13 @@ Nombre de caractères à vérifier.
 
 En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans la *mémoire tampon*. Sinon, elle retourne la valeur NULL.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `memchr`et `wmemchr` recherchez la première occurrence de *c* dans les premiers caractères  de la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
 
 En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . Les \_ \_ \_ surcharges correctes de la macro CRT const sont \_ définies si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges c++ en c++, définissez le retour de symbole \_ const \_ .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -139,7 +140,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Sortie
 
 ```Output
 String to be searched:

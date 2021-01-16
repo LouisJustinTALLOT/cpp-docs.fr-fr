@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : _get_unexpected'
 title: _get_unexpected
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - _get_unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-ms.openlocfilehash: 9c8f21815aa465e1325ef0519ba21abb1e506db3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fb23aa9eee66a4ed981e5575e5a36ad4bbb39f84
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97338940"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242616"
 ---
-# <a name="_get_unexpected"></a>_get_unexpected
+# `_get_unexpected`
 
-Retourne la routine d’arrêt à appeler par **inattendue**.
+Retourne la routine d’arrêt à appeler par **`unexpected`** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,20 +48,20 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant la fonction enregistrée par [set_unexpected](set-unexpected-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
+Retourne un pointeur vers la fonction inscrite par [`set_unexpected`](set-unexpected-crt.md) . Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **`NULL`** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_get_unexpected**|\<eh.h>|
+|**`_get_unexpected`**|\<eh.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Routines de gestion des exceptions](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[pire](terminate-crt.md)<br/>
-[erreur](unexpected-crt.md)<br/>
+[`abort`](abort.md)<br/>
+[`set_terminate`](set-terminate-crt.md)<br/>
+[`terminate`](terminate-crt.md)<br/>
+[`unexpected`](unexpected-crt.md)<br/>

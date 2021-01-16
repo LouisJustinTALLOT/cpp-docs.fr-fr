@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : ___lc_codepage_func'
 title: ___lc_codepage_func
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - ___lc_codepage_func
 - _o____lc_codepage_func
@@ -14,6 +14,7 @@ api_location:
 - msvcr110.dll
 - msvcrt.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: b59443b8b448eb91e54548700ba7171fc0c00fd9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: afe49a10498f65c01b501874b602079e79af3be8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246537"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242980"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -45,7 +46,7 @@ UINT ___lc_codepage_func(void);
 
 Page de code active du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `___lc_codepage_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
@@ -55,7 +56,7 @@ Les fonctions CRT internes sont spécifiques à l'implémentation et sont suscep
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

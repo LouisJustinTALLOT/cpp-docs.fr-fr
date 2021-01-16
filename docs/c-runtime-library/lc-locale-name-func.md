@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : ___lc_locale_name_func'
 title: ___lc_locale_name_func
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - ___lc_locale_name_func
 - _o____lc_locale_name_func
@@ -14,6 +14,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 3431318608516fda908cd3c8ab9562c5044d20ae
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4747b64c0fc61e0f5d77eacb92c04c9f6d2e2759
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246550"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242863"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -44,7 +45,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 Pointeur vers une chaîne qui contient le nom de paramètres régionaux actuel du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `___lc_locale_name_func` est une fonction CRT interne qui est utilisée par d'autres fonctions CRT pour obtenir le nom de paramètres régionaux actuel du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide des fonctions [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) ou [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
@@ -52,7 +53,7 @@ Les fonctions CRT internes sont spécifiques à l'implémentation et sont suscep
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

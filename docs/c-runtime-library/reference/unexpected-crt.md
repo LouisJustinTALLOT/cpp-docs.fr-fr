@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : inattendu (CRT)'
 title: unexpected (CRT)
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 73c632c4dd5bfedbb1c3724e60786b348f77f0be
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 098d686e7c33d17020990b1db168d95c327d5112
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97186634"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242902"
 ---
-# <a name="unexpected-crt"></a>unexpected (CRT)
+# <a name="unexpected-crt"></a>`unexpected` Ecran
 
-Appelle **Terminate** ou Function que vous spécifiez à l’aide de **set_unexpected**.
+Appelle **`terminate`** ou la fonction que vous spécifiez à l’aide de **`set_unexpected`** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,15 +44,15 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Notes
 
-La routine **inattendue** n’est pas utilisée avec l’implémentation actuelle de la gestion des exceptions C++. les appels **inattendus** **se terminent** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée et en appelant **set_unexpected** avec le nom de votre fonction comme argument. appel **inattendu** de la dernière fonction donnée comme argument pour **set_unexpected**.
+La **`unexpected`** routine n’est pas utilisée avec l’implémentation actuelle de la gestion des exceptions C++. **`unexpected`** appelle **`terminate`** par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée. Appelez **`set_unexpected`** avec le nom de votre fonction comme argument. **`unexpected`** appelle la dernière fonction passée à **`set_unexpected`** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**erreur**|\<eh.h>|
+|**`unexpected`**|`<eh.h>`|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

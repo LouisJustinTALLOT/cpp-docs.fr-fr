@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : __RTDynamicCast'
 title: __RTDynamicCast
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - __RTDynamicCast
 api_location:
@@ -12,6 +12,7 @@ api_location:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: 8e9cb906468c02ac065601e8f093b0e97c1b70bd
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cefd5248e0409b72f97c959d08aa30b1c0167e26
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97284484"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243110"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -69,11 +70,11 @@ Pointeur vers le sous-objet approprié, en cas de réussite ; Sinon, **null**.
 
 `bad_cast()` si l’entrée de `dynamic_cast<>` est une référence et que le cast échoue.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Convertit `inptr` en objet de type `TargetType`. Le type de `inptr` doit être un pointeur si `TargetType` est un pointeur ou une l-value si `TargetType` est une référence. `TargetType` doit être un pointeur ou une référence à un type de classe précédemment défini, ou un pointeur vers void.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

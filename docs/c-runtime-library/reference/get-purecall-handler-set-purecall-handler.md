@@ -1,7 +1,7 @@
 ---
 description: 'En savoir plus sur : _get_purecall_handler, _set_purecall_handler'
 title: _get_purecall_handler, _set_purecall_handler
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -17,6 +17,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 7971847c4ce0861db272ea3c722666b0ba0318d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d46e5848f440449cedaaa66c591d2814dbac0745
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97339014"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242603"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -68,7 +69,7 @@ Fonction à appeler quand une fonction virtuelle pure est appelée. Une fonction
 
 **_Purecall_handler** précédent. Retourne **`nullptr`** s’il n’y avait pas de gestionnaire précédent.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les fonctions **_get_purecall_handler** et **_set_purecall_handler** sont spécifiques à Microsoft et s’appliquent uniquement au code C++.
 
@@ -78,7 +79,7 @@ Un appel à une fonction virtuelle pure est une erreur, car il n’a aucune impl
 
 Pour restaurer le comportement par défaut, appelez **_set_purecall_handler** à l’aide d’un **`nullptr`** argument.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
