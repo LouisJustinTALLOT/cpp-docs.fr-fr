@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 81428295f79d71227bf0fdf72e18f2fde30ac763
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503578"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564106"
 ---
 # <a name="unordered_map-class"></a>unordered_map, classe
 
@@ -196,7 +196,7 @@ Classe allocator.
 |[key_type](#key_type)|Type d'une clé de tri.|
 |[local_iterator](#local_iterator)|Type d'un itérateur de compartiment pour la séquence contrôlée.|
 |[mapped_type](#mapped_type)|Type d'une valeur mappée associée à chaque clé.|
-|[dirigé](#pointer)|Type d'un pointeur vers un élément.|
+|[pointeur](#pointer)|Type d'un pointeur vers un élément.|
 |[reference](#reference)|Type d'une référence à un élément.|
 |[size_type](#size_type)|Type d'une distance non signée entre deux éléments.|
 |[value_type](#value_type)|Type d’un élément.|
@@ -205,7 +205,7 @@ Classe allocator.
 |-|-|
 |[at](#at)|Recherche un élément avec la clé spécifiée.|
 |[commencer](#begin)|Désigne le début de la séquence contrôlée.|
-|[Compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[plage](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -323,7 +323,6 @@ Si la valeur de clé de l'argument est introuvable, la fonction lève un objet d
 #include <iostream>
 
 typedef std::unordered_map<char, int> Mymap;
-typedef std::unordered_map<char, int> Mymap;
 int main()
 {
     Mymap c1;
@@ -369,7 +368,7 @@ Les deux premières fonctions membres retournent un itérateur vers l'avant qui 
 #include <unordered_map>
 #include <iostream>
 
-#typedef std::unordered_map<char, int> Mymap;
+typedef std::unordered_map<char, int> Mymap;
 int main()
 {
     Mymap c1;
@@ -2726,7 +2725,7 @@ Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour
 
 le nombre minimal de compartiments est l’argument *Bucket_count*, le cas échéant ; dans le cas contraire, il s’agit d’une valeur par défaut décrite ici comme valeur définie par l’implémentation `N0` .
 
-l’objet de fonction de hachage est le *hachage*d’argument, s’il existe ; dans le cas contraire, il s’agit de `Hash()` .
+l’objet de fonction de hachage est le *hachage* d’argument, s’il existe ; dans le cas contraire, il s’agit de `Hash()` .
 
 L’objet de fonction de comparaison est l’argument *COMP*, s’il est présent ; dans le cas contraire, il s’agit de `Pred()` .
 

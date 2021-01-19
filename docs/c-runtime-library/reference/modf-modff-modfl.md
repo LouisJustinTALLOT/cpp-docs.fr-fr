@@ -1,12 +1,13 @@
 ---
 title: modf, modff, modfl
 description: Informations de référence sur les API pour modf,, modff, et modfl ; qui fractionnent une valeur à virgule flottante en une partie fractionnaire et une partie entière.
-ms.date: 4/2/2020
+ms.date: 1/15/2021
 api_name:
 - modff
 - modf
 - modfl
 - _o_modf
+- _o_modff
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
-ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: fbc68c3369e8b992350534e3baa5f19b0f2a5e39
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556760"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564016"
 ---
-# <a name="modf-modff-modfl"></a>modf, modff, modfl
+# <a name="modf-modff-modfl"></a>`modf`, `modff`, `modfl`
 
 Scinde une valeur à virgule flottante en une partie fractionnaire et une partie entière.
 
@@ -63,33 +63,33 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*`x`*\
 Valeur à virgule flottante.
 
-*IntPtr*<br/>
+*`intptr`*\
 Pointeur désignant la partie entière stockée.
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-Cette fonction retourne la partie fractionnaire signée de *x*. Il n’y a pas d’erreur de retour.
+Cette fonction retourne la partie fractionnaire signée de *`x`* . Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Les fonctions **modf,** décomposent la valeur à virgule flottante *x* en parties fractionnaires et entières, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retournée. La partie entière est stockée sous la forme d’une valeur à virgule flottante à *IntPtr*.
+Les fonctions **modf,** décomposent la valeur à virgule flottante *`x`* en parties fractionnaires et entières, chacune ayant le même signe que *`x`* . La partie fractionnaire signée de *`x`* est retournée. La partie entière est stockée sous la forme d’une valeur à virgule flottante à *`intptr`* .
 
-**modf,** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**modf,** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). [`_set_SSE2_enable`](set-sse2-enable.md)Pour obtenir des informations et des restrictions sur l’utilisation de l’implémentation SSE2, consultez.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf,** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, **modf,** accepte toujours deux valeurs de type double et retourne une valeur double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **`modf`** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, **`modf`** accepte toujours deux valeurs doubles et retourne une valeur double.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**modf,**, **modff,**, **modfl**|Secteur \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|
+|**`modf`**, **`modff`**, **`modfl`**|Secteur `<math.h>`<br /><br /> C++ : `<cmath>` ou `<math.h>`|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -117,6 +117,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[frexp](frexp.md)<br/>
-[ldexp](ldexp.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[`frexp`](frexp.md)\
+[`ldexp`](ldexp.md)

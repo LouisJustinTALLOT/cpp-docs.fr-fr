@@ -227,6 +227,7 @@ api_name:
 - __std_exception_copy
 - __std_exception_destroy
 - __std_type_info_destroy_list
+- __std_type_info_name
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -271,6 +272,7 @@ api_name:
 - _W_Getdays
 - _W_Getmonths
 - _W_Getnames
+- _W_Gettnames
 - _wassert
 - _Wcsftime
 - __wcsncnt
@@ -931,23 +933,22 @@ helpviewer_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 9087998c91a3da5022fd3fe559e5d535416eeff5
-ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
+ms.openlocfilehash: 05d9666ce77c593c6b6fa366f43f8a593cb7a4a9
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98243175"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563950"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Fonctions et variables globales CRT internes
 
-La bibliothèque Runtime C (CRT) contient des fonctions et des variables globales qui sont utilisées uniquement pour prendre en charge l’interface de bibliothèque publique. Certaines d'entre elles sont exposées dans des en-têtes publics comme détails relatifs à l'implémentation. Même si ces fonctions et variables globales sont accessibles via des exportations publiques, elles ne sont pas destinées à être utilisées par votre code. Nous vous conseillons de modifier tout code qui utilise ces fonctions et variables pour employer des équivalents de bibliothèque publique à la place. Ces fonctions peuvent changer d'une version à l'autre. Elles sont répertoriées ici pour vous aider à les identifier. Des liens sont fournis quand il existe une documentation supplémentaire, mais en général ces détails d’implémentation ne sont pas documentés.
+La bibliothèque Runtime C (CRT) contient des fonctions et des variables globales qui sont utilisées uniquement pour prendre en charge l’interface de bibliothèque publique. Certaines d'entre elles sont exposées dans des en-têtes publics comme détails relatifs à l'implémentation. Bien que ces fonctions et variables globales soient accessibles par le biais des exportations publiques, elles ne sont pas destinées à être utilisées par votre code. Nous vous conseillons de modifier tout code qui utilise ces fonctions et variables pour employer des équivalents de bibliothèque publique à la place. Ces fonctions peuvent changer d'une version à l'autre. Elles sont répertoriées ici pour vous aider à les identifier. Des liens sont fournis lorsque d’autres documents existent, mais en général, ces détails d’implémentation ne sont pas documentés.
 
 ## <a name="internal-crt-globals-and-value-macros"></a>Macros de valeurs et variables globales CRT internes
 
 Ces variables globales et définitions de macro permettent d'implémenter la bibliothèque CRT.
 
-|Nom|
+|Name|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -966,7 +967,7 @@ Ces variables globales et définitions de macro permettent d'implémenter la bib
 
 Ces macros de fonctions et fonctions permettent d’implémenter la bibliothèque CRT et la bibliothèque C++ Standard.
 
-|Nom|
+|Name|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -1219,6 +1220,7 @@ Ces macros de fonctions et fonctions permettent d’implémenter la bibliothèqu
 |__std_exception_copy|
 |__std_exception_destroy|
 |__std_type_info_destroy_list|
+|__std_type_info_name|
 |__stdio_common_vfprintf|
 |__stdio_common_vfprintf_p|
 |__stdio_common_vfprintf_s|
@@ -1264,6 +1266,7 @@ Ces macros de fonctions et fonctions permettent d’implémenter la bibliothèqu
 |_W_Getdays|
 |_W_Getmonths|
 |_W_Getnames|
+|_W_Gettnames|
 |_wassert|
 |_Wcsftime|
 |__wcsncnt|

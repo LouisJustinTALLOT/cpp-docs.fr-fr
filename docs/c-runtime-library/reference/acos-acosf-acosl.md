@@ -1,12 +1,13 @@
 ---
 title: acos, acosf, acosl
-description: Référence d’API pour `acos` , `acosf` et, `acosl` qui calcule l’arc cosinus d’une valeur à virgule flottante.
-ms.date: 08/31/2020
+description: Informations de référence sur l’API pour ACOS, acosf et acosl ; qui calcule l’arc cosinus d’une valeur à virgule flottante.
+ms.date: 1/15/2021
 api_name:
 - acosf
 - acos
 - acosl
 - _o_acos
+- _o_acosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - acosf function
 - trigonometric functions
 - arccosine function
-ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 63a9c9577e252c506191b7a49ec9da6502968095
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555096"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563833"
 ---
-# <a name="acos-acosf-acosl"></a>acos, acosf, acosl
+# <a name="acos-acosf-acosl"></a>`acos`, `acosf`, `acosl`
 
 Calcule l’arc cosinus.
 
@@ -62,35 +62,35 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*\
+*`x`*\
 Valeur comprise entre-1 et 1, pour laquelle calculer l’arccosinus (cosinus inverse).
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-La fonction **ACOS** retourne l’arc cosinus de *x* dans la plage de 0 à π radians.
+La **`acos`** fonction retourne l’arc cosinus de *x* dans la plage comprise entre 0 et π radians.
 
-Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un indéfini.
+Par défaut, si *`x`* est inférieur à-1 ou supérieur à 1, **`acos`** retourne un indéfini.
 
-|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
+|Entrée|`SEH` titre|`Matherr` titre|
 |-----------|-------------------|-----------------------|
-|± ∞|NON VALIDE|_DOMAIN|
-|± QNAN,IND|aucun|_DOMAIN|
-|&#124;x&#124;>1|NON VALIDE|_DOMAIN|
+|`± ∞`|`INVALID`|`_DOMAIN`|
+|`± QNAN, IND`|aucun|`_DOMAIN`|
+|&#124;`x`&#124;>1|`INVALID`|`_DOMAIN`|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **ACOS** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **`acos`** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la `<tgmath.h>` macro pour appeler cette fonction, **`acos`** accepte et retourne toujours un **`double`** .
 
-Si vous utilisez la \<tgmath.h> `acos()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
+Si vous utilisez la `<tgmath.h>` `acos()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
-|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
-|**ACOS () (macro)** | \<tgmath.h> ||
+|**`acos`**, **`acosf`**, **`acosl`**|`<math.h>`|`<errno.h>`|
+|**`acos()`** macrovirus | `<tgmath.h>` ||
 
 ## <a name="example"></a>Exemple
 
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[`asin`, `asinf`, `asinl`](asin-asinf-asinl.md)\
+[`atan`, `atanf`, `atanl`, `atan2`, `atan2f`, `atan2l`](atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+[`cos`, `cosf`, `cosl`](cos-cosf-cosl.md)\
+[`_matherr`](matherr.md)\
+[`sin`, `sinf`, `sinl`](sin-sinf-sinl.md)\
+[`tan`, `tanf`, `tanl`](tan-tanf-tanl.md)

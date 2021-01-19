@@ -1,11 +1,12 @@
 ---
 description: 'En savoir plus sur : _scalb, _scalbf'
 title: _scalb, _scalbf
-ms.date: 4/2/2020
+ms.date: 1/15/2021
 api_name:
 - _scalb
 - _scalbf
 - _o__scalb
+- _o__scalbf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -32,15 +33,14 @@ helpviewer_keywords:
 - _scalb function
 - _scalbf function
 - scalb function
-ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: d118fc19c4635f0f0b6d93b1528308e9b31ee45a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: da5a33bd6ed24ba0a3a58f789a9c8900910454d1
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97268910"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564080"
 ---
-# <a name="_scalb-_scalbf"></a>_scalb, _scalbf
+# <a name="_scalb-_scalbf"></a>`_scalb`, `_scalbf`
 
 Met à l’échelle un argument par une puissance de 2.
 
@@ -59,33 +59,33 @@ float _scalbf(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*`x`*\
 Valeur à virgule flottante double précision.
 
-*exp*<br/>
+*`exp`*\
 Exposant entier long.
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-Retourne une valeur exponentielle en cas de réussite. En cas de dépassement (selon le signe de *x*), **_scalb** retourne +/- **HUGE_VAL**; la variable **errno** est définie sur **ERANGE**.
+Retourne une valeur exponentielle en cas de réussite. En cas de dépassement (selon le signe de *`x`* ), **`_scalb`** retourne +/- **`HUGE_VAL`** ; la **`errno`** variable a la valeur **`ERANGE`** .
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-La fonction **_scalb** calcule la valeur de *x* \* 2 <sup>*exp*</sup>.
+La **`_scalb`** fonction calcule la valeur de *`x`* \* 2 <sup>*`exp`*</sup> .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_scalb**, **_scalbf**|\<float.h>|
+|**`_scalb`**, **`_scalbf`**|`<float.h>`|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[ldexp](ldexp.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[`ldexp`](ldexp.md)
