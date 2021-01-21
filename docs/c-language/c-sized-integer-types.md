@@ -25,7 +25,7 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Les trois premiers types d’entiers dimensionnés sont des synonymes des types ANSI qui ont la même taille. Elles sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le **`__int8`** type de données est synonyme de type, **`char`** **`__int16`** est synonyme de type **`short`** , **`__int32`** est synonyme de type **`int`** et **`__int64`** est synonyme de type **`long long`** .
+Les trois premiers types d’entiers dimensionnés sont des synonymes des types ANSI qui ont la même taille. Elles sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le **`__int8`** type de données est synonyme de type **`char`**, **`__int16`** est synonyme de type **`short`**, **`__int32`** est synonyme de type **`int`** et **`__int64`** est synonyme de type **`long long`** .
 
 **FIN spécifique à Microsoft**
 
